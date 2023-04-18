@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/oasisswag/static/css/main.d7296632.css",
+    "main.js": "/oasisswag/static/js/main.c956ad7f.js",
+    "index.html": "/oasisswag/index.html",
+    "main.d7296632.css.map": "/oasisswag/static/css/main.d7296632.css.map",
+    "main.c956ad7f.js.map": "/oasisswag/static/js/main.c956ad7f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d7296632.css",
+    "static/js/main.c956ad7f.js"
+  ]
+}
