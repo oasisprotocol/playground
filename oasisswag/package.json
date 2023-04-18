@@ -1,0 +1,43 @@
+{
+  "name": "oasisswag",
+  "version": "1.0.0",
+  "description": "Dapp for getting Oasis swag at Consensus 2023",
+  "scripts": {
+    "lint": "prettier --cache --plugin-search-dir=. --check *.cjs test/**.ts scripts/**.ts contracts/**.sol && solhint contracts/**.sol",
+    "format": "prettier --cache --plugin-search-dir=. --write *.cjs test/**.ts scripts/**.ts contracts/**.sol && solhint --fix contracts/**.sol",
+    "build": "hardhat compile && tsc -b",
+    "watch": "hardhat watch",
+    "test": "hardhat test"
+  },
+  "dependencies": {
+    "@ethersproject/abi": "^5.5.0",
+    "@ethersproject/bytes": "^5.5.0",
+    "@ethersproject/providers": "^5.4.7",
+    "@nomiclabs/hardhat-ethers": "^2.0.0",
+    "@oasisprotocol/sapphire-hardhat": "^1.0.3",
+    "@openzeppelin/contracts": "^4.4.2",
+    "ethers": "^5.4.7",
+    "hardhat": "^2.8.3",
+    "lodash": "^4.17.21",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.4"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-chai-matchers": "^1.0.0",
+    "@nomicfoundation/hardhat-network-helpers": "^1.0.0",
+    "@nomiclabs/hardhat-etherscan": "^3.0.0",
+    "@oasisprotocol/sapphire-contracts": "^0.2.1",
+    "@typechain/ethers-v5": "^10.1.0",
+    "@typechain/hardhat": "^6.1.2",
+    "@types/chai": "^4.2.0",
+    "@types/mocha": ">=9.1.0",
+    "chai": "^4.2.0",
+    "hardhat-gas-reporter": "^1.0.8",
+    "hardhat-watcher": "^2.1.1",
+    "prettier": "^2.5.1",
+    "prettier-plugin-solidity": "^1.0.0-beta.19",
+    "solhint": "^3.3.7",
+    "solidity-coverage": "^0.8.1",
+    "typechain": "^8.1.0"
+  }
+}
