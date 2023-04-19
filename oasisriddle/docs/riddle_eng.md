@@ -14,7 +14,7 @@ Don't worry! If you have some programming basics in Javascript, Python, C, or ot
 Generally, blockchains are not easy to understand and developing dApps has
 some limitations compared to desktop or web apps. That is why one needs 
 an open mind while also having understanding of the algorithms, 
-data structures, writting efficient code, bug hunting skills, thorough
+data structures, writing efficient code, bug hunting skills, thorough
 understanding of the programs from a cryptographic and security point of view, etc. 🤓
 
 ## OK. What do I need to do?
