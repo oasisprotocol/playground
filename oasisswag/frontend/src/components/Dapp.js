@@ -237,6 +237,10 @@ export class Dapp extends React.Component {
     this.setState({ swag: { name: s[0], image: s[1] } });
   }
 
+  async _claimSwag() {
+    const s = await this._swagWrite.claimSwag();
+  }
+
   // This method sends an ethereum transaction to transfer tokens.
   // While this action is specific to this application, it illustrates how to
   // send a transaction.

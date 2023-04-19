@@ -23,7 +23,13 @@ export function Swag({ drawSwag, swag }) {
               <div style={{marginTop:"-300px"}}>
                 <h4>Congratulations!</h4>
                 <h5>{swag.name}</h5>
-                <img src={"data:"+swag.image} alt={swag.name} />
+                <img src={swag.image} alt={swag.name} />
+                  <button
+                      type="button"
+                      onClick={claimSwag}
+                  >
+                      Add Swag to your NFT collection
+                  </button>
               </div>
           )}
       </div>
