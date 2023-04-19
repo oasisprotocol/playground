@@ -119,6 +119,7 @@ contract RandomSwag is ERC721 {
     }
 
     function tokenURI(uint256 tokenId) public view override returns (string memory) {
+        require(tokenId < _tokenIds.length, errCountMismatch);
         uint i = _tokenIds[tokenId];
         string memory json = Base64.encode(bytes(string(abi.encodePacked('{"name": "', _swags[i].name, '", "description": "Oasis Consensus 2023 Swag", "image_data": "', bytes(_swags[i].image), '"}'))));
         return string(abi.encodePacked('data:application/json;base64,', json));
