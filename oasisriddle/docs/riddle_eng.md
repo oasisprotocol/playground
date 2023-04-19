@@ -4,7 +4,7 @@ Developers at [Oasis Network][oasis-network] have created a short riddle
 that unlocks the path to a ROSE treasure. They hid it on the [Oasis Sapphire][oasis-explorer]
 blockchain and your job now is to write a script connecting to the
 smart contracts already deployed on Sapphire that will enable you to obtain
-the secret questions. If you manage to answer all the questions correctly, 
+a random secret question. If you manage to answer it correctly, 
 you'll be able to collect your ROSE treasure! 🌹
 
 ## I like blockchains, but I'm not a skilled programmer and  I haven't really written any smart contract yet
