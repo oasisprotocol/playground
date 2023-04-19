@@ -40,7 +40,7 @@ function submitAnswer(string memory coupon, string memory answer) external
 function claimReward(string memory coupon) external view returns (string memory)
 ```
 
-5. Your task is to write a script with the help of the newly obtained skills and tolls, 
+5. Your task is to write a script with the help of the newly obtained skills and tools, 
    that communicates with the riddle's smart contract. First use a confidential call
    `getQuestion()` to get the secret questions tied to your unique ID. Then create
    a secret answer and send it back with a confidential transaciton via 
