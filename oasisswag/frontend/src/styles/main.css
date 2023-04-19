@@ -4,6 +4,8 @@
     --red: #721c24;
     --red-light: #f8d7da;
     ---dark-blue: #3333C9;
+    --gray-light: #e4edf4;
+    --gray: #aaa;
 }
 
 html, body {

@@ -2,7 +2,7 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    min-height: 600px;
+    min-height: 500px;
     padding: 20px;
     overflow: hidden;
 }
@@ -46,6 +46,12 @@
 @media (min-width: 768px) {
     .header {
         padding: 60px 120px;
+        min-height: 700px;
+    }
+
+    .header::before {
+        border-bottom-left-radius: 200px;
+        border-bottom-right-radius: 200px;
     }
 
     .headerContent {

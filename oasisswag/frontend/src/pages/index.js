@@ -2,6 +2,7 @@ import {Header} from "../components/Header";
 import {Wheel} from "../components/Wheel";
 import {useWeb3} from "../providers/Web3Provider";
 import {useEffect} from "react";
+import {Footer} from "../components/Footer";
 
 export const LandingPage = () => {
   const {init} = useWeb3()
@@ -16,7 +17,7 @@ export const LandingPage = () => {
       <Header/>
       <Wheel/>
       <main></main>
-      <footer></footer>
+      <Footer />
     </>
   )
 }

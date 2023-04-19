@@ -74,3 +74,10 @@
         transform: rotate(-720deg)
     }
 }
+
+@media (min-width: 768px) {
+    .wheelContainer {
+        width: 50%;
+        margin: -140px auto 0;
+    }
+}
