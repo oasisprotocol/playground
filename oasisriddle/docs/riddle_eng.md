@@ -29,7 +29,7 @@ understanding of the programs from a cryptographic and security point of view, e
 3. When you're ready to move further, check out our 
    [quickstart guide to Sapphire confidential smart contracs][oasis-sapphire-quickstart]. 💎
 
-4. After you're done with both tutorials, it's time to solve the riddle. You can find it at
+4. After you're done with both tutorials, it's time to solve the riddle! You can find it at
    `0xTODO` on [Oasis Sapphire Testnet][oasis-explorer-testnet]. 
    
    The ABI of the contract is:
