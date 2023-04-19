@@ -48,7 +48,7 @@ function claimReward(string memory coupon) external view returns (string memory)
    `claimReward()` call in the next block to obtain the private key 
    to your ROSE treasure on [Oasis Sapphire Mainnet][oasis-explorer]. 🎉
 
-6. Congratulations, you've unlocked your ROSE treasure! You can now use your ROSE coins 
+6. Congratulations, you've unlocked your ROSE treasure! You can now use your ROSE
    to create new dApps on Oasis and be among the first to utilize confidential smart contracts. 
    Or you can try to cash them in for a beer with your friends! 🍻
 
