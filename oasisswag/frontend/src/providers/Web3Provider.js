@@ -270,8 +270,6 @@ export const Web3ContextProvider = ({children}) => {
 
     await _initialize(selectedAddress);
 
-    // _updateSwagData();
-
     // We reinitialize it whenever the user changes their account.
     window.ethereum.on("accountsChanged", ([newAddress]) => {
       _stopPollingData();

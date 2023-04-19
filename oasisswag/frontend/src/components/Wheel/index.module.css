@@ -1,7 +1,7 @@
 .wheelContainer {
     width: 100%;
     padding: 20px;
-    margin-top: -40px;
+    margin-top: -15%;
     overflow: hidden;
 }
 
@@ -10,6 +10,7 @@
     width: 100%;
     padding-top: 100%;
     cursor: pointer;
+    margin-bottom: 40px;
 }
 
 .wheelOuter {
@@ -41,8 +42,38 @@
     left: 50%;
     top: 50%;
     transform: translate3d(-50%, -50%, 0);
-    width: 100px;
+    width: 50%;
     user-select: none;
+}
+
+.wheelWonItemContainer {
+    position: relative;
+    height: 150px;
+    margin: 0 auto;
+}
+
+.wheelWonItem {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    user-select: none;
+}
+
+.wheelWonItemText {
+    display: block;
+    width: 75%;
+    margin: 0 auto;
+}
+
+.collectMessage {
+    font-family: 'Euclid Circular B', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 130%;
+    text-align: center;
+    color: var(--gray-dark);
 }
 
 .fadeIn {
@@ -78,6 +109,6 @@
 @media (min-width: 768px) {
     .wheelContainer {
         width: 50%;
-        margin: -140px auto 0;
+        margin: -10% auto 0;
     }
 }
