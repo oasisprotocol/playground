@@ -1,7 +1,7 @@
 import React from "react";
 import {TransactionErrorMessage} from "./TransactionErrorMessage";
 
-export function Swag({ drawSwag, swag }) {
+export function Swag({ addr, claimSwag, drawSwag, swag, swagTokenId }) {
   return (
     <div className="text-center">
       <h4>Get Oasis Swag!</h4>
@@ -20,16 +20,25 @@ export function Swag({ drawSwag, swag }) {
             className={swag ? "blur" : ""}
         />
           {swag && (
-              <div style={{marginTop:"-300px"}}>
+              <div /*style={{marginTop:"-300px"}}*/>
                 <h4>Congratulations!</h4>
                 <h5>{swag.name}</h5>
                 <img src={swag.image} alt={swag.name} />
-                  <button
-                      type="button"
-                      onClick={claimSwag}
-                  >
-                      Add Swag to your NFT collection
-                  </button>
+              </div>
+          )}
+          {swag && (<button
+              className="btn btn-warning"
+              type="button"
+              onClick={claimSwag}
+          >
+              Add Swag to your NFT collection
+          </button>)}
+          {swagTokenId && (
+              <div>
+                  <h4>NFT claimed</h4>
+                  If it doesn't show up in your wallet, add it manually:
+                  <p>Contract address: {addr}</p>
+                  <p>Token ID: {swagTokenId}</p>
               </div>
           )}
       </div>

@@ -45,6 +45,7 @@ export class Dapp extends React.Component {
       // The user's address and balance
       selectedAddress: undefined,
       swag: undefined,
+      swagTokenId: undefined,
       // The ID about transactions being sent, and any possible error with them
       txBeingSent: undefined,
       transactionError: undefined,
@@ -107,7 +108,7 @@ export class Dapp extends React.Component {
 
         <div className="row">
           <div className="col-12">
-            <Swag drawSwag={() => this._drawSwag()} swag={this.state.swag}/>
+            <Swag addr={contractAddress.Token} drawSwag={() => this._drawSwag()} claimSwag={() => this._claimSwag()} swag={this.state.swag} swagTokenId={this.state.swagTokenId} />
           </div>
         </div>
       </div>
@@ -233,12 +234,15 @@ export class Dapp extends React.Component {
   async _drawSwag() {
     document.getElementById('wheel').className = "rotateFast";
     const s = await this._swagWrite.drawSwag();
-    console.log(s);
     this.setState({ swag: { name: s[0], image: s[1] } });
   }
 
   async _claimSwag() {
     const s = await this._swagWrite.claimSwag();
+    await s.wait();
+    const tokenId = await this._swag.totalSupply();
+    // XXX: Total supply may change, if more than one NFT request is done per block!
+    this.setState({ swagTokenId: tokenId.toNumber()-1 });
   }
 
   // This method sends an ethereum transaction to transfer tokens.
