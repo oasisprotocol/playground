@@ -1,0 +1,21 @@
+.Button {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    background-color: var(--white);
+    border-radius: 44px;
+    border: 0;
+    box-shadow: none;
+    cursor: pointer;
+    font-family: 'Euclid Circular B', sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    letter-spacing: -0.04em;
+    line-height: 111%;
+    outline: none;
+    padding: 10px 15px;
+    text-decoration: none;
+    user-select: none;
+}

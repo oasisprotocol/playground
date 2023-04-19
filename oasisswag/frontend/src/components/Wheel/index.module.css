@@ -1,0 +1,76 @@
+.wheelContainer {
+    width: 100%;
+    padding: 20px;
+    margin-top: -40px;
+    overflow: hidden;
+}
+
+.wheel {
+    position: relative;
+    width: 100%;
+    padding-top: 100%;
+    cursor: pointer;
+}
+
+.wheelOuter {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    user-select: none;
+}
+
+.animateOuter {
+    animation: rotate-reverse 3s ease-in-out 1;
+    animation-delay: 500ms;
+}
+
+.wheelInner {
+    position: absolute;
+    inset: 2.5%;
+    width: 95%;
+    user-select: none;
+}
+
+.animateInner {
+    animation: rotate 3s ease-in-out 1;
+    animation-delay: 500ms;
+}
+
+.wheelText {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    width: 100px;
+    user-select: none;
+}
+
+.fadeIn {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 500ms linear;
+}
+
+.fadeOut {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 500ms, opacity 500ms linear;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg)
+    }
+    100% {
+        transform: rotate(720deg)
+    }
+}
+
+@keyframes rotate-reverse {
+    0% {
+        transform: rotate(0deg)
+    }
+    100% {
+        transform: rotate(-720deg)
+    }
+}
