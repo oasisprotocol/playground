@@ -1,6 +1,6 @@
 # Oasis Riddle
 
-Developers at [Oasis Network][oasis-network] have created a short riddle
+Developers at [Oasis Network][oasis-network] prepared a short riddle
 that unlocks the path to a ROSE treasure. They hid it on the [Oasis Sapphire][oasis-explorer]
 blockchain and your job now is to write a script connecting to the
 smart contracts already deployed on Sapphire that will enable you to obtain
