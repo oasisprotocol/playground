@@ -32,7 +32,7 @@ understanding of the programs from a cryptographic and security point of view, e
 4. After you're done with both tutorials, it's time to solve the riddle! You can find it at
    `0xTODO` on [Oasis Sapphire Testnet][oasis-explorer-testnet]. 
    
-   The ABI of the contract is:
+   Use the following contract ABI:
 
 ```solidity
 function getQuestion(string memory coupon) external view returns (string memory)
