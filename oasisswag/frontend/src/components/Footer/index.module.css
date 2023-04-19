@@ -24,7 +24,7 @@
     color: var(--gray);
     text-align: center;
     letter-spacing: 0;
-    font-family: Euclidcircularb,sans-serif;
+    font-family: 'Euclid Circular B',sans-serif;
     font-size: 13px;
     font-weight: 300;
     line-height: 108%;
@@ -34,7 +34,7 @@
 .footerText {
     color: var(--gray);
     letter-spacing: 0;
-    font-family: Euclidcircularb,sans-serif;
+    font-family: 'Euclid Circular B',sans-serif;
     font-size: 13px;
     font-weight: 300;
     line-height: 108%;

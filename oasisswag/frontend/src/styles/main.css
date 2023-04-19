@@ -3,9 +3,11 @@
     --aqua: #00ffff;
     --red: #721c24;
     --red-light: #f8d7da;
+    --blue: #33c;
     ---dark-blue: #3333C9;
     --gray-light: #e4edf4;
     --gray: #aaa;
+    --gray-dark: #445e77;
 }
 
 html, body {

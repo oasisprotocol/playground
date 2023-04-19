@@ -12,9 +12,11 @@ export const Footer = () => {
                alt="Footer logo"/>
         </div>
         <div className={classes.dividerVertical}/>
-        <a href="https://oasisprotocol.org/terms-of-use" className={classes.footerLink}>Terms of Use</a>
+        <a href="https://oasisprotocol.org/terms-of-use" target="_blank" rel="noopener noreferrer"
+           className={classes.footerLink}>Terms of Use</a>
         <div className={classes.dividerVertical}/>
-        <a href="https://oasisprotocol.org/privacy-policy" className={classes.footerLink}>Privacy Policy</a>
+        <a href="https://oasisprotocol.org/privacy-policy" target="_blank" rel="noopener noreferrer"
+           className={classes.footerLink}>Privacy Policy</a>
         <div className={classes.dividerVertical}/>
         <div className={classes.footerText}>Copyright © 2023 Oasis Protocol Foundation. All rights reserved.</div>
       </div>
