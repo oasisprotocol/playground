@@ -3,11 +3,13 @@ import logo from "../../images/logo.svg"
 import wallet from "./images/wallet.svg"
 import {Button} from "../Button";
 import {useWeb3} from "../../providers/Web3Provider";
+import {ErrorMessage} from "../ErrorMessage";
 
 export const Header = () => {
-  const {connectWallet, addSapphireNetworkToMetamask, state: {isMetamaskInstalled}} = useWeb3()
+  const {connectWallet, addSapphireNetworkToMetamask, state} = useWeb3()
+  const {isMetamaskInstalled, networkError, selectedAddress} = state;
 
-  const installMetamask = () => {
+  const navigateToMetamask = () => {
     window.open("https://metamask.io/");
   }
 
@@ -20,15 +22,20 @@ export const Header = () => {
           Spin the wheel and our Sapphire native RNG will determine which swag item you won.
         </h2>
         {!isMetamaskInstalled &&
-          <Button onClick={installMetamask}>
+          <Button onClick={navigateToMetamask}>
             <>
               <img src={wallet} alt="Wallet"/>
               <span>Install metamask</span>
             </>
           </Button>
         }
-        {isMetamaskInstalled &&
+        {isMetamaskInstalled && !selectedAddress &&
           <>
+            <Button onClick={addSapphireNetworkToMetamask}>
+              Add network
+            </Button>
+            <br/>
+            <br/>
             <Button onClick={connectWallet}>
               <>
                 <img src={wallet} alt="Wallet"/>
@@ -36,10 +43,7 @@ export const Header = () => {
               </>
             </Button>
             <br/>
-            <br/>
-            <Button onClick={addSapphireNetworkToMetamask}>
-              Add network
-            </Button>
+            {networkError && <ErrorMessage>{networkError}</ErrorMessage>}
           </>
         }
       </div>

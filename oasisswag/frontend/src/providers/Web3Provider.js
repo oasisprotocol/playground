@@ -91,13 +91,20 @@ export const Web3ContextProvider = ({children}) => {
 
   // The next two methods just read from the contract and store the results
   // in the component state.
-  const _drawSwag = async () => {
-    document.getElementById('wheel').className = "rotateFast";
-    const s = await state._swagWrite.drawSwag();
-    console.log(s);
-    setState((prevState) => ({
-      ...prevState, swag: {name: s[0], image: s[1]}
-    }));
+  const drawSwag = async () => {
+    try {
+      _dismissNetworkError()
+
+      const s = await state._swagWrite.drawSwag();
+      console.log(s);
+      setState((prevState) => ({
+        ...prevState, swag: {name: s[0], image: s[1]}
+      }));
+    } catch (e) {
+      setState((prevState) => ({
+        ...prevState, networkError: e.reason
+      }));
+    }
   }
 
   // This method sends an ethereum transaction to transfer tokens.
@@ -196,7 +203,12 @@ export const Web3ContextProvider = ({children}) => {
   }
 
   const _initializeEthers = async () => {
+    // We first initialize ethers by creating a provider using window.ethereum
     const _provider = sapphire.wrap(new ethers.providers.Web3Provider(window.ethereum))
+
+    // Then, we initialize two contract instances:
+    // - _token: Used for query transactions (e.g. balanceOf, name, symbol)
+    // - _tokenWrite: Used for on-chain write transactions (e.g. transfer)
     const _swag = new ethers.Contract(
       contractAddress.Token,
       RandomSwagArtifact.abi,
@@ -210,13 +222,7 @@ export const Web3ContextProvider = ({children}) => {
 
     setState(prevState => ({
       ...prevState,
-
-      // We first initialize ethers by creating a provider using window.ethereum
       _provider,
-
-      // Then, we initialize two contract instances:
-      // - _token: Used for query transactions (e.g. balanceOf, name, symbol)
-      // - _tokenWrite: Used for on-chain write transactions (e.g. transfer)
       _swag,
       _swagWrite
     }))
@@ -322,6 +328,7 @@ export const Web3ContextProvider = ({children}) => {
     init,
     connectWallet,
     addSapphireNetworkToMetamask,
+    drawSwag
   };
 
   return (

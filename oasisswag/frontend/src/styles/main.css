@@ -1,6 +1,9 @@
 :root {
     --white: #fff;
     --aqua: #00ffff;
+    --red: #721c24;
+    --red-light: #f8d7da;
+    ---dark-blue: #3333C9;
 }
 
 html, body {

@@ -20,7 +20,7 @@
 }
 
 .animateOuter {
-    animation: rotate-reverse 3s ease-in-out 1;
+    animation: rotate-reverse 3s ease-in-out infinite;
     animation-delay: 500ms;
 }
 
@@ -32,7 +32,7 @@
 }
 
 .animateInner {
-    animation: rotate 3s ease-in-out 1;
+    animation: rotate 3s ease-in-out infinite;
     animation-delay: 500ms;
 }
 
