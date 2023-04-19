@@ -7,7 +7,7 @@ smart contract deployed on Sapphire and obtain
 a secret question. If you manage to answer it correctly, 
 you'll be able to collect your ROSE treasure! 🌹
 
-## I like blockchains, but I'm not a skilled programmer and  I haven't really written any smart contract yet
+## I like blockchains, but I'm not a skilled programmer and  I haven't really written any smart contracts yet
 
 Don't worry! If you have some programming basics in Javascript, Python, C, or other programming languages, you have all the basics covered. You'll quickly learn everything else on the go 🎓
 
