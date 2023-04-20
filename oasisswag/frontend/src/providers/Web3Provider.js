@@ -24,6 +24,8 @@ const web3ProviderInitialState = {
   txBeingSent: undefined,
   transactionError: undefined,
   networkError: undefined,
+  contractAddressToken: contractAddress.Token,
+  claimSwagLoading: false
 };
 
 export const Web3Context = createContext(
@@ -96,7 +98,6 @@ export const Web3ContextProvider = ({children}) => {
       _dismissNetworkError()
 
       const s = await state._swagWrite.drawSwag();
-      console.log(s);
       setState((prevState) => ({
         ...prevState, swag: {name: s[0], image: s[1]}
       }));
@@ -106,6 +107,26 @@ export const Web3ContextProvider = ({children}) => {
       }));
     }
   }
+
+  const claimSwag = async () => {
+    if (state.claimSwagLoading) {
+      return
+    }
+
+    setState(prevState => ({...prevState, claimSwagLoading: true}));
+
+    try {
+      const s = await state._swagWrite.claimSwag();
+      await s.wait();
+      const tokenId = await state._swag.totalSupply();
+
+      // XXX: Total supply may change, if more than one NFT request is done per block!
+      setState(prevState => ({...prevState, swagTokenId: tokenId.toNumber() - 1, claimSwagLoading: false}));
+    } catch (e) {
+      setState(prevState => ({...prevState, claimSwagError: e.message, claimSwagLoading: false}));
+    }
+  }
+
 
   // This method sends an ethereum transaction to transfer tokens.
   // While this action is specific to this application, it illustrates how to
@@ -326,7 +347,8 @@ export const Web3ContextProvider = ({children}) => {
     init,
     connectWallet,
     addSapphireNetworkToMetamask,
-    drawSwag
+    drawSwag,
+    claimSwag
   };
 
   return (

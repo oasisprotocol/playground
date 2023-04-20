@@ -9,9 +9,15 @@ import classes from "./index.module.css"
 import {useWeb3} from "../../providers/Web3Provider";
 import {InfoMessage} from "../InfoMessage";
 import {ErrorMessage} from "../ErrorMessage";
+import {Button} from "../Button";
+import {Spinner} from "../Spinner";
 
 export const Wheel = () => {
-  const {drawSwag, state: {selectedAddress, networkError, swag}} = useWeb3()
+  const {
+    drawSwag,
+    claimSwag,
+    state: {selectedAddress, networkError, swag, contractAddressToken, swagTokenId, claimSwagLoading, claimSwagError}
+  } = useWeb3()
   const [spin, setSpin] = useState(false)
 
   const startSpin = () => {
@@ -66,6 +72,21 @@ export const Wheel = () => {
     {selectedAddress && swag && <>
       <InfoMessage>Congratulations, you won {swag.name}!</InfoMessage>
       <p className={classes.collectMessage}>Please collect it at our Oasis booth (923) at Consensus</p>
+      <br/>
+      <br/>
+      {!swagTokenId && <Button disabled={claimSwagLoading} className={classes.addSwagToYourCollection} onClick={claimSwag}>
+        {claimSwagLoading && <Spinner />}
+        Add Swag to your NFT collection
+      </Button>}
+      {claimSwagError && <ErrorMessage>{claimSwagError}!</ErrorMessage>}
+      {swagTokenId &&
+        <>
+          <InfoMessage>NFT claimed!</InfoMessage>
+          <p className={classes.collectMessage}>If it doesn't show up in your wallet, add it manually:</p>
+          <p className={classes.collectMessage}>Contract address: <b>{contractAddressToken}</b></p>
+          <p className={classes.collectMessage}>Token ID: <b>{swagTokenId}</b></p>
+        </>
+      }
     </>}
   </div>)
 }
