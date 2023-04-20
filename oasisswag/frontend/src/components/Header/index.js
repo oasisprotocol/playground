@@ -17,7 +17,7 @@ export const Header = () => {
     <header className={classes.header}>
       <img className={classes.logo} src={logo} alt="Logo"/>
       <div className={classes.headerContent}>
-        <h1 className={classes.headerTitle}>OASIS SWAG LOTTERY</h1>
+        <h1 className={classes.headerTitle}>OASIS SWAG WHEEL</h1>
         <h2 className={classes.headerSubTitle}>
           Spin the wheel and our Sapphire native RNG will determine which swag item you won.
         </h2>
