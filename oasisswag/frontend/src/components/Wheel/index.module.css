@@ -109,6 +109,7 @@
 @media (min-width: 768px) {
     .wheelContainer {
         width: 50%;
+        max-width: 600px;
         margin: -10% auto 0;
     }
 }
