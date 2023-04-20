@@ -2,15 +2,12 @@
     font-family: 'Euclid Circular B', sans-serif;
     font-style: normal;
     font-weight: 600;
-    font-size: 28px;
+    font-size: 42px;
     line-height: 106%;
-    letter-spacing: -0.04em;
-    color: var(--white);
-    padding: 15px 20px;
-    margin-bottom: 20px;
-    background-color: var(---dark-blue);
-    border-radius: 50px;
     text-align: center;
+    letter-spacing: -0.04em;
+    color: var(--dark-blue);
+    margin-bottom: 20px;
 }
 
 .InfoMessage:first-letter {

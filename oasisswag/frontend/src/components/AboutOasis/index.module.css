@@ -8,7 +8,7 @@
 }
 
 .AboutOasisBg {
-    background-image: linear-gradient(90deg, var(--blue-light), var(---dark-blue) 53%);
+    background-image: linear-gradient(90deg, var(--blue-light), var(--dark-blue) 53%);
     border-radius: 15px;
     padding-top: 54px;
     padding-bottom: 54px;

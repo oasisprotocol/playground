@@ -53,12 +53,16 @@ export const Wheel = () => {
             <img className={classes.wheelWonItem} draggable={false} src={wheelSpinWonCircle} alt={swag.name}/>
             <img className={classes.wheelWonItem} draggable={false} src={swag.image} alt={swag.name}/>
           </div>
-          <img  className={classes.wheelWonItemText} draggable={false} src={wheelSpinWonText} alt="won!"/>
+          <img className={classes.wheelWonItemText} draggable={false} src={wheelSpinWonText} alt="won!"/>
         </div>
       }
     </div>
 
-    {selectedAddress && networkError && <ErrorMessage>{networkError}!</ErrorMessage>}
+    {selectedAddress && networkError && <>
+      <InfoMessage pointer onClick={() => startSpin()}>Spin the wheel again</InfoMessage>
+      <ErrorMessage>{networkError}!</ErrorMessage>
+    </>
+    }
     {selectedAddress && swag && <>
       <InfoMessage>Congratulations, you won {swag.name}!</InfoMessage>
       <p className={classes.collectMessage}>Please collect it at our Oasis booth (923) at Consensus</p>
