@@ -34,18 +34,27 @@
     text-align: center;
 }
 
+.headerContentLeft {
+
+}
+
+.headerContentRight {
+    display: none;
+}
+
 .headerTitle {
     color: var(--white);
 }
 
 .headerSubTitle {
-    margin-bottom: 40px;
     color: var(--aqua);
+    max-width: 500px;
+    margin: 0 auto 40px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1280px) {
     .header {
-        padding: 60px 120px;
+        padding: 60px 120px 0;
         min-height: 700px;
     }
 
@@ -57,5 +66,29 @@
     .headerContent {
         text-align: left;
         margin-top: 80px;
+        display: flex;
+        flex-direction: row;
+        gap: 10%;
+    }
+
+    .headerContentLeft {
+        flex: 0 0 40%;
+    }
+
+    .headerContentRight {
+        display: block;
+        flex: 0 0 50%;
+        position: relative;
+        overflow: visible;
+        z-index: -1;
+        min-height: 510px;
+    }
+
+    .headerContentRight::before {
+        position: absolute;
+        inset: 0;
+        content: " ";
+        background: url('../../images/coat.png') no-repeat;
+        background-size: cover;
     }
 }
