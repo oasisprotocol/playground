@@ -15,10 +15,12 @@ export const Header = () => {
 
   return (
     <header className={classes.header}>
-      <img className={classes.logo} src={logo} alt="Logo"/>
+      <div className={classes.logoContainer}>
+        <img className={classes.logo} src={logo} alt="Logo"/>
+      </div>
       <div className={classes.headerContent}>
         <div className={classes.headerContentLeft}>
-          <h1 className={classes.headerTitle}>OASIS<br /> SWAG WHEEL</h1>
+          <h1 className={classes.headerTitle}>OASIS<br/> SWAG WHEEL</h1>
           <h2 className={classes.headerSubTitle}>
             Spin the wheel and our Sapphire native RNG will determine which swag item you won.
           </h2>
@@ -32,16 +34,16 @@ export const Header = () => {
           }
           {isMetamaskInstalled && !selectedAddress &&
             <>
-              <Button onClick={addSapphireNetworkToMetamask}>
-                Add network
-              </Button>
-              <br/>
-              <br/>
               <Button onClick={connectWallet}>
                 <>
                   <img src={wallet} alt="Wallet"/>
                   <span>Connect Wallet</span>
                 </>
+              </Button>
+              <br/>
+              <br/>
+              <Button onClick={addSapphireNetworkToMetamask}>
+                Add network
               </Button>
               <br/>
               {networkError && <ErrorMessage>{networkError}</ErrorMessage>}

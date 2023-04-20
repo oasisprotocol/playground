@@ -29,9 +29,18 @@
     height: auto;
 }
 
+.logoContainer {
+    width: 100%;
+    max-width: 1039px;
+    margin: 0 auto;
+}
+
 .headerContent {
     padding-top: 20px;
     text-align: center;
+    width: 100%;
+    max-width: 1039px;
+    margin: 0 auto;
 }
 
 .headerContentLeft {
