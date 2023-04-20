@@ -113,7 +113,7 @@ export const Web3ContextProvider = ({children}) => {
       return
     }
 
-    setState(prevState => ({...prevState, claimSwagLoading: true}));
+    setState(prevState => ({...prevState, claimSwagLoading: true, claimSwagError: undefined}));
 
     try {
       const s = await state._swagWrite.claimSwag();
