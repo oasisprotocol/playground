@@ -317,29 +317,16 @@ export const Web3ContextProvider = ({children}) => {
       return alert('Have you installed MetaMask yet? If not, please do so.\n\nComputer: Once it is installed, you will be able to add the ParaTime to your MetaMask.\n\nPhone: Open the website through your MetaMask Browser to add the ParaTime.')
     }
 
-    if (state.isDevelopment) {
-      window.ethereum.request({
-        method: 'wallet_addEthereumChain',
-        params: [{
-          chainId: '0x5aff',
-          chainName: 'Oasis Sapphire Testnet',
-          nativeCurrency: {name: 'TEST', symbol: 'TEST', decimals: 18,},
-          rpcUrls: ['https://testnet.sapphire.oasis.dev/', 'wss://testnet.sapphire.oasis.dev/ws'],
-          blockExplorerUrls: ['https://testnet.explorer.sapphire.oasis.dev'],
-        },],
-      })
-    } else {
-      window.ethereum.request({
-        method: 'wallet_addEthereumChain',
-        params: [{
-          chainId: '0x5afe',
-          chainName: 'Oasis Sapphire',
-          nativeCurrency: {name: 'ROSE', symbol: 'ROSE', decimals: 18,},
-          rpcUrls: ['https://sapphire.oasis.io/', 'wss://sapphire.oasis.io/ws'],
-          blockExplorerUrls: ['https://explorer.sapphire.oasis.io'],
-        },],
-      })
-    }
+    window.ethereum.request({
+      method: 'wallet_addEthereumChain',
+      params: [{
+        chainId: '0x5aff',
+        chainName: 'Oasis Sapphire Testnet',
+        nativeCurrency: {name: 'TEST', symbol: 'TEST', decimals: 18,},
+        rpcUrls: ['https://testnet.sapphire.oasis.dev/', 'wss://testnet.sapphire.oasis.dev/ws'],
+        blockExplorerUrls: ['https://testnet.explorer.sapphire.oasis.dev'],
+      },],
+    })
   }
 
   const providerState = {
