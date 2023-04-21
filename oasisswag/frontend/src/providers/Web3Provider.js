@@ -10,7 +10,7 @@ import contractAddress from "../contracts/contract-address.json";
 const isDevelopment = process.env.NODE_ENV !== 'production'
 
 // This is an error code that indicates that the user canceled a transaction
-const ERROR_CODE_TX_REJECTED_BY_USER = 4001;
+// const ERROR_CODE_TX_REJECTED_BY_USER = 4001;
 
 const web3ProviderInitialState = {
   isMetamaskInstalled: undefined,
@@ -71,12 +71,12 @@ export const Web3ContextProvider = ({children}) => {
   // Note that if you don't need it to update in near real time, you probably
   // don't need to poll it. If that's the case, you can just fetch it when you
   // initialize the app, as we do with the token data.
-  const _startPollingData = () => {
+  /* const _startPollingData = () => {
     //_pollDataInterval = setInterval(() => _updateBalance(), 1000);
 
     // We run it once immediately so we don't have to wait for it
     _updateBalance();
-  }
+  } */
 
   const _stopPollingData = () => {
     clearInterval(state._pollDataInterval);
@@ -86,10 +86,10 @@ export const Web3ContextProvider = ({children}) => {
     }))
   }
 
-  const _updateBalance = async () => {
+  /* const _updateBalance = async () => {
 //    const balance = await _token.balanceOf(state.selectedAddress);
 //    setState({ swag });
-  }
+  } */
 
   // The next two methods just read from the contract and store the results
   // in the component state.
@@ -131,7 +131,7 @@ export const Web3ContextProvider = ({children}) => {
   // This method sends an ethereum transaction to transfer tokens.
   // While this action is specific to this application, it illustrates how to
   // send a transaction.
-  const _transferTokens = async (to, amount) => {
+  /*const _transferTokens = async (to, amount) => {
     // Sending a transaction is a complex operation:
     //   - The user can reject it
     //   - It can fail before reaching the ethereum network (i.e. if the user
@@ -192,14 +192,14 @@ export const Web3ContextProvider = ({children}) => {
         ...prevState, txBeingSent: undefined
       }));
     }
-  }
+  }*/
 
   // This method just clears part of the state.
-  const _dismissTransactionError = () => {
+  /* const _dismissTransactionError = () => {
     setState((prevState) => ({
       ...prevState, transactionError: undefined
     }));
-  }
+  } */
 
   // This method just clears part of the state.
   const _dismissNetworkError = () => {
@@ -210,13 +210,13 @@ export const Web3ContextProvider = ({children}) => {
 
   // This is an utility method that turns an RPC error into a human readable
   // message.
-  const _getRpcErrorMessage = (error) => {
+  /* const getRpcErrorMessage = (error) => {
     if (error.data) {
       return error.data.message;
     }
 
     return error.message;
-  }
+  } */
 
   // This method resets the state
   const _resetState = () => {
