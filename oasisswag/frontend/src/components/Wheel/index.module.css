@@ -1,0 +1,121 @@
+.wheelContainer {
+    width: 100%;
+    padding: 20px;
+    margin-top: -15%;
+    overflow: hidden;
+}
+
+.wheel {
+    position: relative;
+    width: 100%;
+    padding-top: 100%;
+    cursor: pointer;
+    margin-bottom: 40px;
+}
+
+.wheelOuter {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    user-select: none;
+}
+
+.animateOuter {
+    animation: rotate-reverse 3s ease-in-out infinite;
+    animation-delay: 500ms;
+}
+
+.wheelInner {
+    position: absolute;
+    inset: 2.5%;
+    width: 95%;
+    user-select: none;
+}
+
+.animateInner {
+    animation: rotate 3s ease-in-out infinite;
+    animation-delay: 500ms;
+}
+
+.wheelText {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    width: 50%;
+    user-select: none;
+}
+
+.wheelWonItemContainer {
+    position: relative;
+    height: 150px;
+    margin: 0 auto;
+}
+
+.wheelWonItem {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    user-select: none;
+}
+
+.wheelWonItemText {
+    display: block;
+    width: 75%;
+    margin: 0 auto;
+}
+
+.collectMessage {
+    font-family: 'Euclid Circular B', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 130%;
+    text-align: center;
+    color: var(--gray-dark);
+}
+
+.fadeIn {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 500ms linear;
+}
+
+.fadeOut {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 500ms, opacity 500ms linear;
+}
+
+.addSwagToYourCollection.addSwagToYourCollection {
+    display: flex;
+    margin: 0 auto;
+    border: 1px solid var(--dark-blue);
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg)
+    }
+    100% {
+        transform: rotate(720deg)
+    }
+}
+
+@keyframes rotate-reverse {
+    0% {
+        transform: rotate(0deg)
+    }
+    100% {
+        transform: rotate(-720deg)
+    }
+}
+
+@media (min-width: 768px) {
+    .wheelContainer {
+        width: 50%;
+        max-width: 600px;
+        margin: -10% auto 0;
+    }
+}

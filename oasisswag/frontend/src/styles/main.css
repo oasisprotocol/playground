@@ -1,0 +1,38 @@
+:root {
+    --white: #fff;
+    --aqua: #00ffff;
+    --red: #721c24;
+    --red-light: #f8d7da;
+    --blue-light: #39f;
+    --blue: #33c;
+    --dark-blue: #3333C9;
+    --gray-light: #e4edf4;
+    --gray: #aaa;
+    --gray-dark: #445e77;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: 'Euclid Circular B', sans-serif;
+    font-weight: 600;
+    font-size: 58px;
+    line-height: 101%;
+}
+
+h2 {
+    font-family: 'Euclid Circular B', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 120%;
+}

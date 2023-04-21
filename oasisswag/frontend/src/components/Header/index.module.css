@@ -1,0 +1,136 @@
+.header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 800px;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.header::before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -5%;
+    right: -5%;
+    width: 110%;
+    height: 100%;
+    content: " ";
+    background: url('../../images/hero-banner-bg.svg') no-repeat;
+    background-size: cover;
+    z-index: -1;
+    border-radius: 30px;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+}
+
+.logo {
+    width: 241px;
+    height: auto;
+}
+
+.logoContainer {
+    width: 100%;
+    max-width: 1039px;
+    margin: 0 auto;
+}
+
+.headerContent {
+    display: flex;
+    flex-direction: column-reverse;
+    padding-top: 20px;
+    text-align: center;
+    width: 100%;
+    max-width: 1039px;
+    margin: 0 auto;
+}
+
+.headerContentLeft {
+    margin-top: -85px;
+}
+
+.headerContentRight {
+    width: 272px;
+    max-width: 272px;
+    padding-top: 60%;
+}
+
+.headerContentRightMobile {
+    position: relative;
+    max-height: 302px;
+}
+
+.headerContentRight::before {
+    position: absolute;
+    inset: 0;
+    content: " ";
+    background: url('../../images/coat-mobile.png') no-repeat;
+    background-position: center center;
+    background-size: contain;
+    left: 50%;
+    transform: translateX(-50%)
+}
+
+.headerTitle {
+    color: var(--white);
+}
+
+.headerSubTitle {
+    color: var(--aqua);
+    max-width: 500px;
+    margin: 0 auto 40px;
+}
+
+.connected.connected {
+    border: 1px solid var(--aqua);
+}
+
+@media (min-width: 1280px) {
+    .header {
+        padding: 60px 120px 0;
+        min-height: 700px;
+    }
+
+    .header::before {
+        border-bottom-left-radius: 200px;
+        border-bottom-right-radius: 200px;
+    }
+
+    .headerContent {
+        text-align: left;
+        margin-top: 80px;
+        display: flex;
+        flex-direction: row;
+        gap: 10%;
+    }
+
+    .headerContentLeft {
+        margin-top: unset;
+        flex: 0 0 40%;
+    }
+
+    .headerContentRightDesktop {
+        display: block;
+        flex: 0 0 50%;
+        position: relative;
+        overflow: visible;
+        z-index: -1;
+        min-height: 510px;
+        width: auto;
+        max-width: initial;
+    }
+
+    .headerContentRightDesktop::before {
+        position: absolute;
+        inset: 0;
+        content: " ";
+        background: url('../../images/coat.png') no-repeat;
+        background-size: cover;
+        left: 0;
+        transform: unset;
+    }
+
+    .headerContentRightMobile {
+        display: none;
+    }
+}

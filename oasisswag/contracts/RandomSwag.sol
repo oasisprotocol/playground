@@ -7,6 +7,9 @@ pragma solidity ^0.8.9;
 // We import this library to be able to use console.log
 import "hardhat/console.sol";
 import "@oasisprotocol/sapphire-contracts/contracts/Sapphire.sol";
+import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
+import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
+import "@openzeppelin/contracts/utils/Base64.sol";
 
 struct Swag {
     // Printable swag name.
@@ -18,7 +21,7 @@ struct Swag {
 
 // Smart contract for registering a swag and then offering users to get their unique swag based
 // on their address.
-contract RandomSwag {
+contract RandomSwag is ERC721 {
     string constant errProbabilityMismatch = "Probabilities should add up to 100";
     string constant errCountMismatch = "Swag/Probability count mismatch";
     string constant errForbidden = "Access forbidden by contract policy";
@@ -35,7 +38,10 @@ contract RandomSwag {
     // Owner of the contract with admin privileges.
     address _owner;
 
-    constructor() {
+    // Mapping of unique swag token ID -> swag.
+    uint[] private _tokenIds;
+
+    constructor() ERC721("OasisSwag", "SWG") {
         _mask = uint256(bytes32(Sapphire.randomBytes(32, "")));
         _owner = msg.sender;
     }
@@ -74,10 +80,9 @@ contract RandomSwag {
         return (names, images, _probabilities);
     }
 
-    // Gets a swag based on the user's Ethereum address. Returns a name of a
-    // swag and a Base64-encoded image.
+    // Gets a swag based on the user's Ethereum address. Returns the drawn swag index.
     // Requires signed call.
-    function drawSwag() external view returns (string memory, string memory) {
+    function _drawSwagType() private view returns (uint) {
         require(msg.sender != address(0), errForbidden);
 
         uint p = uint256(keccak256(abi.encodePacked(_mask, msg.sender))) % 100;
@@ -90,6 +95,37 @@ contract RandomSwag {
             }
         }
 
+        return i;
+    }
+
+    // Gets a swag based on the user's Ethereum address. Returns the name of a
+    // swag and a Base64-encoded image.
+    // Requires signed call.
+    function drawSwag() external view returns (string memory, string memory) {
+        uint i = _drawSwagType();
+
         return (_swags[i].name, _swags[i].image);
+    }
+
+    // Claims the Swag as NFT to the user's wallet.
+    function claimSwag() public returns (uint256) {
+        uint i = _drawSwagType();
+        _tokenIds.push(i);
+
+        uint256 newItemId = _tokenIds.length;
+        _mint(msg.sender, newItemId);
+
+        return newItemId;
+    }
+
+    function tokenURI(uint256 tokenId) public view virtual override returns (string memory) {
+        require(tokenId < _tokenIds.length, errCountMismatch);
+        uint i = _tokenIds[tokenId];
+        string memory json = Base64.encode(bytes(string(abi.encodePacked('{"name": "', _swags[i].name, '", "description": "Oasis Consensus 2023 Swag", "image": "', bytes(_swags[i].image), '"}'))));
+        return string(abi.encodePacked('data:application/json;base64,', json));
+    }
+
+    function totalSupply() external view returns (uint256) {
+        return _tokenIds.length;
     }
 }

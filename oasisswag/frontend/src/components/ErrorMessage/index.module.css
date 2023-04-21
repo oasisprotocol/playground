@@ -1,0 +1,15 @@
+.ErrorMessage {
+    font-family: 'Euclid Circular B', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 106%;
+    text-align: center;
+    letter-spacing: -0.04em;
+    color: var(--red);
+    margin-bottom: 20px;
+}
+
+.ErrorMessage:first-letter {
+    text-transform: capitalize;
+}
