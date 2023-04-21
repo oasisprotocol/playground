@@ -46,9 +46,14 @@ export const Header = () => {
                 Add network
               </Button>
               <br/>
+              <br/>
               {networkError && <ErrorMessage>{networkError}</ErrorMessage>}
+              <br/>
             </>
           }
+          {selectedAddress && <Button disabled className={classes.connected} showArrow={false}>
+            Connected
+          </Button>}
         </div>
         <div className={classes.headerContentRightDesktop}></div>
         <div className={classes.headerContentRightMobile}>

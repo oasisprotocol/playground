@@ -275,6 +275,8 @@ export const Web3ContextProvider = ({children}) => {
   }
 
   const connectWallet = async () => {
+    _dismissNetworkError()
+
     // This method is run when the user clicks the Connect. It connects the
     // dapp to the user's wallet, and initializes it.
 

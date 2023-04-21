@@ -81,6 +81,12 @@
     margin: 0 auto 40px;
 }
 
+.connected.connected {
+    display: flex;
+    margin: 0 auto;
+    border: 1px solid var(--aqua);
+}
+
 @media (min-width: 1280px) {
     .header {
         padding: 60px 120px 0;
