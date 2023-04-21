@@ -2,7 +2,7 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    min-height: 650px;
+    min-height: 800px;
     padding: 20px;
     overflow: hidden;
 }
@@ -36,6 +36,8 @@
 }
 
 .headerContent {
+    display: flex;
+    flex-direction: column-reverse;
     padding-top: 20px;
     text-align: center;
     width: 100%;
@@ -44,11 +46,29 @@
 }
 
 .headerContentLeft {
-
+    margin-top: -85px;
 }
 
 .headerContentRight {
-    display: none;
+    width: 272px;
+    max-width: 272px;
+    padding-top: 60%;
+}
+
+.headerContentRightMobile {
+    position: relative;
+    max-height: 302px;
+}
+
+.headerContentRight::before {
+    position: absolute;
+    inset: 0;
+    content: " ";
+    background: url('../../images/coat-mobile.png') no-repeat;
+    background-position: center center;
+    background-size: contain;
+    left: 50%;
+    transform: translateX(-50%)
 }
 
 .headerTitle {
@@ -81,23 +101,32 @@
     }
 
     .headerContentLeft {
+        margin-top: unset;
         flex: 0 0 40%;
     }
 
-    .headerContentRight {
+    .headerContentRightDesktop {
         display: block;
         flex: 0 0 50%;
         position: relative;
         overflow: visible;
         z-index: -1;
         min-height: 510px;
+        width: auto;
+        max-width: initial;
     }
 
-    .headerContentRight::before {
+    .headerContentRightDesktop::before {
         position: absolute;
         inset: 0;
         content: " ";
         background: url('../../images/coat.png') no-repeat;
         background-size: cover;
+        left: 0;
+        transform: unset;
+    }
+
+    .headerContentRightMobile {
+        display: none;
     }
 }

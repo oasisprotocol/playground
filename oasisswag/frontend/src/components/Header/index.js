@@ -50,7 +50,10 @@ export const Header = () => {
             </>
           }
         </div>
-        <div className={classes.headerContentRight}></div>
+        <div className={classes.headerContentRightDesktop}></div>
+        <div className={classes.headerContentRightMobile}>
+          <div className={classes.headerContentRight}></div>
+        </div>
       </div>
     </header>
   )
