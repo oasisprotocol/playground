@@ -78,7 +78,7 @@ export const Wheel = () => {
         {claimSwagLoading && <Spinner />}
         Add Swag to your NFT collection
       </Button>}
-      {claimSwagError && <ErrorMessage>{claimSwagError}!</ErrorMessage>}
+      {claimSwagError && <ErrorMessage>Something went wrong! Try again!</ErrorMessage>}
       {swagTokenId &&
         <>
           <InfoMessage>NFT claimed!</InfoMessage>
