@@ -1,0 +1,23 @@
+.ConsensusInfo {
+    padding: 50px 23px 23px;
+}
+
+.ConsensusInfoContainer {
+    max-width: 1039px;
+    margin: 0 auto;
+}
+
+.divider {
+    width: 100%;
+    height: 1px;
+    background-color: var(--white);
+    border-top: 1px solid var(--gray-light);
+    margin-top: 54px;
+    margin-bottom: 15px;
+}
+
+.secondary.secondary {
+    display: flex;
+    margin: 0 auto;
+    border: 1px solid var(--dark-blue);
+}

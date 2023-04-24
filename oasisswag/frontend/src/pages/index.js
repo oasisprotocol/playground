@@ -5,6 +5,7 @@ import {useEffect} from "react";
 import {Footer} from "../components/Footer";
 import {FooterLinks} from "../components/FooterLinks";
 import {AboutOasis} from "../components/AboutOasis";
+import {ConsensusInfo} from "../components/ConsensusInfo";
 
 export const LandingPage = () => {
   const {init} = useWeb3()
@@ -18,6 +19,7 @@ export const LandingPage = () => {
     <>
       <Header/>
       <Wheel/>
+      <ConsensusInfo />
       <AboutOasis />
       <FooterLinks />
       <Footer />

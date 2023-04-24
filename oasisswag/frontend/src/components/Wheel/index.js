@@ -74,7 +74,7 @@ export const Wheel = () => {
       <p className={classes.collectMessage}>Please collect it at our Oasis booth (923) at Consensus</p>
       <br/>
       <br/>
-      {!swagTokenId && <Button disabled={claimSwagLoading} className={classes.addSwagToYourCollection} onClick={claimSwag}>
+      {!swagTokenId && <Button disabled={claimSwagLoading} className={classes.secondary} onClick={claimSwag}>
         {claimSwagLoading && <Spinner />}
         Add Swag to your NFT collection
       </Button>}
