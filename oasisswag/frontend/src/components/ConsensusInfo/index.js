@@ -15,7 +15,7 @@ export const ConsensusInfo = () => {
           <InfoMessage>Are you attending Consensus 2023?</InfoMessage>
           <InfoMessage small>Get a coupon at our booth, solve the blockchain riddle and earn ROSE!</InfoMessage>
           <Button className={classes.secondary} onClick={navigateToRiddle}>
-            Solve riddle and earn ROSE!
+            Solve the riddle and earn ROSE!
           </Button>
         </div>
       </div>
