@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/oasisswag/static/css/main.d0a8822f.css",
-    "main.js": "/oasisswag/static/js/main.687d3d20.js",
+    "main.css": "/oasisswag/static/css/main.22a5e7a5.css",
+    "main.js": "/oasisswag/static/js/main.c5ddc230.js",
     "static/media/wheel.png": "/oasisswag/static/media/wheel.1eb33ed35dd0dc01374d.png",
     "static/media/coat.png": "/oasisswag/static/media/coat.06eb2e8bb4c8a3c5f46f.png",
     "static/media/about-oasis.png": "/oasisswag/static/media/about-oasis.b6e85352a46f90be31ae.png",
@@ -19,14 +19,15 @@
     "static/media/logo.svg": "/oasisswag/static/media/logo.4163c8c0cc26fbe9ffcc0cf077714383.svg",
     "static/media/wheel-won-text.svg": "/oasisswag/static/media/wheel-won-text.20c78d7a27af7c77c11d9217649d12bf.svg",
     "static/media/wheel-spin-won-circle.svg": "/oasisswag/static/media/wheel-spin-won-circle.a67dd8945ae5bb8ce056da2d1a5e181e.svg",
+    "static/media/github-mark.svg": "/oasisswag/static/media/github-mark.6fa18895f6e6c7772cab7049f7e05f59.svg",
     "static/media/hero-banner-bg.svg": "/oasisswag/static/media/hero-banner-bg.1e138794c42787536d5d.svg",
     "index.html": "/oasisswag/index.html",
     "static/media/arrow-left.svg": "/oasisswag/static/media/arrow-left.8549ef5809c9150cbb01d6398df7c507.svg",
-    "main.d0a8822f.css.map": "/oasisswag/static/css/main.d0a8822f.css.map",
-    "main.687d3d20.js.map": "/oasisswag/static/js/main.687d3d20.js.map"
+    "main.22a5e7a5.css.map": "/oasisswag/static/css/main.22a5e7a5.css.map",
+    "main.c5ddc230.js.map": "/oasisswag/static/js/main.c5ddc230.js.map"
   },
   "entrypoints": [
-    "static/css/main.d0a8822f.css",
-    "static/js/main.687d3d20.js"
+    "static/css/main.22a5e7a5.css",
+    "static/js/main.c5ddc230.js"
   ]
 }
