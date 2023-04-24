@@ -11,7 +11,7 @@ export const Header = () => {
   const {isMetamaskInstalled, networkError, selectedAddress} = state;
 
   const navigateToMetamask = () => {
-    window.open("https://metamask.app.link/dapp/playground.oasis.io/oasisswag/");
+    window.open("https://metamask.io/download/");
   }
 
   return (
