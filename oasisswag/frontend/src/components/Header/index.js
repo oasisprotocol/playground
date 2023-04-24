@@ -1,5 +1,6 @@
 import classes from "./index.module.css"
 import logo from "../../images/logo.svg"
+import githubLink from "./images/github-mark.svg"
 import wallet from "./images/wallet.svg"
 import {Button} from "../Button";
 import {useWeb3} from "../../providers/Web3Provider";
@@ -17,6 +18,9 @@ export const Header = () => {
     <header className={classes.header}>
       <div className={classes.logoContainer}>
         <img className={classes.logo} src={logo} alt="Logo"/>
+        <a className={classes.githubLink} target="_blank" rel="noopener noreferrer" href="https://github.com/oasisprotocol/playground/tree/main/oasisswag">
+          <img src={githubLink} alt="GitHub source"/>
+        </a>
       </div>
       <div className={classes.headerContent}>
         <div className={classes.headerContentLeft}>
