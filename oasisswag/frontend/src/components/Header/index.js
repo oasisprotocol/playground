@@ -32,7 +32,7 @@ export const Header = () => {
             <Button onClick={navigateToMetamask}>
               <>
                 <img src={wallet} alt="Wallet"/>
-                <span>Install metamask</span>
+                <span>Install MetaMask</span>
               </>
             </Button>
           }
