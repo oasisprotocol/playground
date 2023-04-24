@@ -28,13 +28,17 @@ export const Header = () => {
           <h2 className={classes.headerSubTitle}>
             Spin the wheel and our Sapphire native RNG will determine which swag item you won.
           </h2>
-          {!isMetamaskInstalled &&
+          {!isMetamaskInstalled && <>
             <Button onClick={navigateToMetamask}>
               <>
                 <img src={wallet} alt="Wallet"/>
                 <span>Install MetaMask</span>
               </>
             </Button>
+            <h2 className={[classes.headerSubTitle, classes.headerSubTitleSmall].join(' ')}>
+              Copy the URL in the MetaMask browser
+            </h2>
+          </>
           }
           {isMetamaskInstalled && !selectedAddress &&
             <>
