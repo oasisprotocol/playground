@@ -1,6 +1,6 @@
 import React, {createContext, useContext, useState} from "react";
 import * as sapphire from "@oasisprotocol/sapphire-paratime";
-import {ethers} from "ethers";
+import {ethers,utils} from "ethers";
 
 // We import the contract's artifacts and address here, as we are going to be
 // using them with ethers
@@ -116,12 +116,19 @@ export const Web3ContextProvider = ({children}) => {
     setState(prevState => ({...prevState, claimSwagLoading: true, claimSwagError: undefined}));
 
     try {
+      state._swagWrite.on({
+        address: contractAddress.Token,
+        topics: [
+          utils.id("Transfer(address,address,uint256)"),
+          null,
+          utils.hexZeroPad(state.selectedAddress, 32),
+        ]
+      }, (from, to, tokenId) => {
+        setState(prevState => ({...prevState, swagTokenId: tokenId.toNumber(), claimSwagLoading: false}));
+      });
+
       const s = await state._swagWrite.claimSwag();
       await s.wait();
-      const tokenId = await state._swag.totalSupply();
-
-      // XXX: Total supply may change, if more than one NFT request is done per block!
-      setState(prevState => ({...prevState, swagTokenId: tokenId.toNumber() - 1, claimSwagLoading: false}));
     } catch (e) {
       setState(prevState => ({...prevState, claimSwagError: e.message, claimSwagLoading: false}));
     }
