@@ -5,7 +5,7 @@
 pragma solidity ^0.8.9;
 
 // We import this library to be able to use console.log
-import "hardhat/console.sol";
+// import "hardhat/console.sol";
 import "@oasisprotocol/sapphire-contracts/contracts/Sapphire.sol";
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
