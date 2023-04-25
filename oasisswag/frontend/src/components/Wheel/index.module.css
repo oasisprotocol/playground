@@ -47,9 +47,21 @@
 }
 
 .wheelWonItemContainer {
-    position: relative;
-    height: 150px;
-    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    width: 70%;
+    user-select: none;
+}
+
+.wheelWonItemInner {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    width: 100%;
+    user-select: none;
 }
 
 .wheelWonItem {
@@ -59,6 +71,10 @@
     transform: translate3d(-50%, -50%, 0);
     user-select: none;
     border-radius: 50%;
+}
+
+.w-100 {
+    width: 100%;
 }
 
 .wheelWonItemText {
