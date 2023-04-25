@@ -29,7 +29,7 @@ describe("RandomSwag", function () {
     expect(p.length).to.equal(2);
   });
 
-  it("Should draw swag", async function () {
+  it("Should set probability", async function () {
     const { rs } = await loadFixture(deployRandomSwagFixture);
 
     const [_owner, addr1, addr2, addr3, addr4, addr5, addr6] = await ethers.getSigners();
@@ -62,16 +62,16 @@ describe("RandomSwag", function () {
     expect(nrs6[0]).to.equal("ROSE");
   });
 
-  it("Should draw swag", async function () {
+  it("Should mint NFT", async function () {
     const {rs} = await loadFixture(deployRandomSwagFixture);
 
     const [_owner, addr1, _addr2, _addr3, _addr4, _addr5, addr6] = await ethers.getSigners();
     const rs1 = await rs.connect(addr1);
     await rs1.claimSwag();
-    expect(await rs1.tokenURI(0)).to.equal("data:application/json;base64,eyJuYW1lIjogImNhcCIsICJkZXNjcmlwdGlvbiI6ICJPYXNpcyBDb25zZW5zdXMgMjAyMyBTd2FnIiwgImltYWdlX2RhdGEiOiAiczBNM2I0NTM2NDMxYzBkM2RcMW00RzMifQ==");
+    expect(await rs1.tokenURI(1)).to.equal("data:application/json;base64,eyJuYW1lIjogImNhcCIsICJkZXNjcmlwdGlvbiI6ICJPYXNpcyBDb25zZW5zdXMgMjAyMyBTd2FnIiwgImltYWdlIjogInMwTTNiNDUzNjQzMWMwZDNkXDFtNEczIn0=");
 
     const rs6 = await rs.connect(addr6);
     await rs6.claimSwag();
-    expect(await rs6.tokenURI(1)).to.equal("data:application/json;base64,eyJuYW1lIjogIlJPU0UiLCAiZGVzY3JpcHRpb24iOiAiT2FzaXMgQ29uc2Vuc3VzIDIwMjMgU3dhZyIsICJpbWFnZV9kYXRhIjogIiJ9");
+    expect(await rs6.tokenURI(2)).to.equal("data:application/json;base64,eyJuYW1lIjogIlJPU0UiLCAiZGVzY3JpcHRpb24iOiAiT2FzaXMgQ29uc2Vuc3VzIDIwMjMgU3dhZyIsICJpbWFnZSI6ICIifQ==");
   });
 });
