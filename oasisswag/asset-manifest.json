@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/oasisswag/static/css/main.784da551.css",
-    "main.js": "/oasisswag/static/js/main.82711407.js",
+    "main.css": "/oasisswag/static/css/main.6fadbce9.css",
+    "main.js": "/oasisswag/static/js/main.0871042b.js",
     "static/media/wheel.png": "/oasisswag/static/media/wheel.1eb33ed35dd0dc01374d.png",
     "static/media/coat.png": "/oasisswag/static/media/coat.06eb2e8bb4c8a3c5f46f.png",
     "static/media/about-oasis.png": "/oasisswag/static/media/about-oasis.b6e85352a46f90be31ae.png",
@@ -22,11 +22,11 @@
     "static/media/hero-banner-bg.svg": "/oasisswag/static/media/hero-banner-bg.1e138794c42787536d5d.svg",
     "index.html": "/oasisswag/index.html",
     "static/media/arrow-left.svg": "/oasisswag/static/media/arrow-left.8549ef5809c9150cbb01d6398df7c507.svg",
-    "main.784da551.css.map": "/oasisswag/static/css/main.784da551.css.map",
-    "main.82711407.js.map": "/oasisswag/static/js/main.82711407.js.map"
+    "main.6fadbce9.css.map": "/oasisswag/static/css/main.6fadbce9.css.map",
+    "main.0871042b.js.map": "/oasisswag/static/js/main.0871042b.js.map"
   },
   "entrypoints": [
-    "static/css/main.784da551.css",
-    "static/js/main.82711407.js"
+    "static/css/main.6fadbce9.css",
+    "static/js/main.0871042b.js"
   ]
 }
