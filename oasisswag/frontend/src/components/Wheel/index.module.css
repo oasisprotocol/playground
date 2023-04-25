@@ -50,7 +50,6 @@
     position: relative;
     height: 150px;
     margin: 0 auto;
-    transform: scale(1.25)
 }
 
 .wheelWonItem {
@@ -59,6 +58,7 @@
     top: 50%;
     transform: translate3d(-50%, -50%, 0);
     user-select: none;
+    border-radius: 50%;
 }
 
 .wheelWonItemText {
@@ -75,6 +75,7 @@
     line-height: 130%;
     text-align: center;
     color: var(--gray-dark);
+    overflow-wrap: break-word;
 }
 
 .fadeIn {
@@ -118,5 +119,9 @@
         width: 50%;
         max-width: 600px;
         margin: -10% auto 0;
+    }
+
+    .wheelWonItemContainer {
+        transform: scale(1.25)
     }
 }
