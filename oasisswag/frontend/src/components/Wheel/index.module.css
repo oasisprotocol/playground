@@ -51,7 +51,7 @@
     left: 50%;
     top: 50%;
     transform: translate3d(-50%, -50%, 0);
-    width: 70%;
+    width: 75%;
     user-select: none;
 }
 
@@ -91,6 +91,17 @@
     line-height: 130%;
     text-align: center;
     color: var(--gray-dark);
+    overflow-wrap: break-word;
+}
+
+.claimTestTokens {
+    font-family: 'Euclid Circular B', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 130%;
+    text-align: center;
+    color: var(--dark-blue);
     overflow-wrap: break-word;
 }
 
@@ -135,9 +146,5 @@
         width: 50%;
         max-width: 600px;
         margin: -10% auto 0;
-    }
-
-    .wheelWonItemContainer {
-        transform: scale(1.25)
     }
 }

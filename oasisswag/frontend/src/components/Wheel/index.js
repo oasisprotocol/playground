@@ -55,7 +55,8 @@ export const Wheel = () => {
       {selectedAddress && swag &&
         <div className={[classes.wheelWonItemContainer, classes.fadeIn].join(' ')}>
           <div className={classes.wheelWonItemInner}>
-            <img className={[classes.wheelWonItem, classes['w-100']].join(' ')} draggable={false} src={wheelSpinWonCircle} alt={swag.name}/>
+            <img className={[classes.wheelWonItem, classes['w-100']].join(' ')} draggable={false}
+                 src={wheelSpinWonCircle} alt={swag.name}/>
             <img className={classes.wheelWonItem} draggable={false} src={swag.image} alt={swag.name}/>
           </div>
         </div>
@@ -72,10 +73,20 @@ export const Wheel = () => {
       <p className={classes.collectMessage}>Please collect it at our Oasis booth (923) at Consensus</p>
       <br/>
       <br/>
-      {!swagTokenId && <Button disabled={claimSwagLoading} className={classes.secondary} onClick={claimSwag}>
-        {claimSwagLoading && <Spinner />}
-        Add Swag to your NFT collection
-      </Button>}
+      {!swagTokenId && (
+        <>
+          <Button disabled={claimSwagLoading} className={classes.secondary} onClick={claimSwag}>
+            {claimSwagLoading && <Spinner/>}
+            Add Swag to your NFT collection
+          </Button>
+          <br/>
+          <p className={classes.claimTestTokens}>
+            Don't have any TEST tokens on Sapphire? Get some from our{' '}
+            <a href="https://faucet.testnet.oasis.dev/?paratime=sapphire" target="_blank" rel="noopener noreferrer"
+               className={classes.link}>Testnet faucet</a>
+          </p>
+        </>
+      )}
       {claimSwagError && <ErrorMessage>Something went wrong! Try again!</ErrorMessage>}
       {swagTokenId &&
         <>
