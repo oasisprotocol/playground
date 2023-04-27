@@ -83,7 +83,7 @@
     margin: 0 auto;
 }
 
-.collectMessage {
+.collectMessage, .claimTestTokens {
     font-family: 'Euclid Circular B', sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -91,17 +91,6 @@
     line-height: 130%;
     text-align: center;
     color: var(--gray-dark);
-    overflow-wrap: break-word;
-}
-
-.claimTestTokens {
-    font-family: 'Euclid Circular B', sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 21px;
-    line-height: 130%;
-    text-align: center;
-    color: var(--dark-blue);
     overflow-wrap: break-word;
 }
 

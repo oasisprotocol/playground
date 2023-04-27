@@ -81,7 +81,7 @@ export const Wheel = () => {
           </Button>
           <br/>
           <p className={classes.claimTestTokens}>
-            Don't have any TEST tokens on Sapphire? Get some from our{' '}
+            Don't have any TEST tokens on Sapphire to claim your NFT? Get some from our{' '}
             <a href="https://faucet.testnet.oasis.dev/?paratime=sapphire" target="_blank" rel="noopener noreferrer"
                className={classes.link}>Testnet faucet</a>
           </p>
