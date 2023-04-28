@@ -2,7 +2,7 @@
 
 Random swag drawer/picker based on the user's Ethereum address.
 
-Demo: https://matevz.github.io/oasisswag
+Demo: https://playground.oasis.io/oasisswag
 
 To run backend tests locally:
 
