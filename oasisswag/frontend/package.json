@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "/oasisswag",
   "dependencies": {
+    "@metamask/detect-provider": "^2.0.0",
     "@oasisprotocol/sapphire-paratime": "^1.0.15",
     "bootstrap": "^4.4.1",
     "ethers": "^5.4.7",

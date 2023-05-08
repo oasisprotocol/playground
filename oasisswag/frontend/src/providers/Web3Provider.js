@@ -1,6 +1,7 @@
 import React, {createContext, useContext, useState} from "react";
 import * as sapphire from "@oasisprotocol/sapphire-paratime";
 import {ethers,utils} from "ethers";
+import detectEthereumProvider from '@metamask/detect-provider';
 
 // We import the contract's artifacts and address here, as we are going to be
 // using them with ethers
@@ -37,8 +38,10 @@ export const Web3ContextProvider = ({children}) => {
     ...web3ProviderInitialState,
   });
 
-  const init = () => {
-    if (window.ethereum === undefined) {
+  const init = async () => {
+    const provider = await detectEthereumProvider();
+
+    if (!window.ethereum || provider !== window.ethereum) {
       setState(prevState => ({
         ...prevState,
         isMetamaskInstalled: false

@@ -3,7 +3,6 @@ import wheel from './images/wheel.png'
 import wheelOuter from './images/wheel-outer.svg'
 import wheelSpinText from './images/wheel-spin-text.svg'
 import wheelSpinFailedText from './images/wheel-failed-text.svg'
-import wheelSpinWonText from './images/wheel-won-text.svg'
 import wheelSpinWonCircle from './images/wheel-spin-won-circle.svg'
 import classes from "./index.module.css"
 import {useWeb3} from "../../providers/Web3Provider";
@@ -54,12 +53,12 @@ export const Wheel = () => {
                                                className={[classes.wheelText, classes.fadeIn].join(' ')}
                                                src={wheelSpinFailedText} alt="failed."/>}
       {selectedAddress && swag &&
-        <div className={[classes.wheelText, classes.fadeIn].join(' ')}>
-          <div className={classes.wheelWonItemContainer}>
-            <img className={classes.wheelWonItem} draggable={false} src={wheelSpinWonCircle} alt={swag.name}/>
+        <div className={[classes.wheelWonItemContainer, classes.fadeIn].join(' ')}>
+          <div className={classes.wheelWonItemInner}>
+            <img className={[classes.wheelWonItem, classes['w-100']].join(' ')} draggable={false}
+                 src={wheelSpinWonCircle} alt={swag.name}/>
             <img className={classes.wheelWonItem} draggable={false} src={swag.image} alt={swag.name}/>
           </div>
-          <img className={classes.wheelWonItemText} draggable={false} src={wheelSpinWonText} alt="won!"/>
         </div>
       }
     </div>
@@ -70,14 +69,24 @@ export const Wheel = () => {
     </>
     }
     {selectedAddress && swag && <>
-      <InfoMessage>Congratulations, you won {swag.name}!</InfoMessage>
+      <InfoMessage>Congratulations, you won a {swag.name}!</InfoMessage>
       <p className={classes.collectMessage}>Please collect it at our Oasis booth (923) at Consensus</p>
       <br/>
       <br/>
-      {!swagTokenId && <Button disabled={claimSwagLoading} className={classes.addSwagToYourCollection} onClick={claimSwag}>
-        {claimSwagLoading && <Spinner />}
-        Add Swag to your NFT collection
-      </Button>}
+      {!swagTokenId && (
+        <>
+          <Button disabled={claimSwagLoading} className={classes.secondary} onClick={claimSwag}>
+            {claimSwagLoading && <Spinner/>}
+            Add Swag to your NFT collection
+          </Button>
+          <br/>
+          <p className={classes.claimTestTokens}>
+            Don't have any TEST tokens on Sapphire to claim your NFT? Get some from our{' '}
+            <a href="https://faucet.testnet.oasis.dev/?paratime=sapphire" target="_blank" rel="noopener noreferrer"
+               className={classes.link}>Testnet faucet</a>
+          </p>
+        </>
+      )}
       {claimSwagError && <ErrorMessage>Something went wrong! Try again!</ErrorMessage>}
       {swagTokenId &&
         <>

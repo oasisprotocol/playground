@@ -47,9 +47,21 @@
 }
 
 .wheelWonItemContainer {
-    position: relative;
-    height: 150px;
-    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    width: 75%;
+    user-select: none;
+}
+
+.wheelWonItemInner {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    width: 100%;
+    user-select: none;
 }
 
 .wheelWonItem {
@@ -58,6 +70,11 @@
     top: 50%;
     transform: translate3d(-50%, -50%, 0);
     user-select: none;
+    border-radius: 50%;
+}
+
+.w-100 {
+    width: 100%;
 }
 
 .wheelWonItemText {
@@ -66,7 +83,7 @@
     margin: 0 auto;
 }
 
-.collectMessage {
+.collectMessage, .claimTestTokens {
     font-family: 'Euclid Circular B', sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -74,6 +91,7 @@
     line-height: 130%;
     text-align: center;
     color: var(--gray-dark);
+    overflow-wrap: break-word;
 }
 
 .fadeIn {
@@ -88,7 +106,7 @@
     transition: visibility 0s 500ms, opacity 500ms linear;
 }
 
-.addSwagToYourCollection.addSwagToYourCollection {
+.secondary.secondary {
     display: flex;
     margin: 0 auto;
     border: 1px solid var(--dark-blue);

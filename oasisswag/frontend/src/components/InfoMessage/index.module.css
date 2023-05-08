@@ -13,3 +13,8 @@
 .InfoMessage:first-letter {
     text-transform: capitalize;
 }
+
+.small {
+    font-weight: 500;
+    font-size: 21px;
+}
