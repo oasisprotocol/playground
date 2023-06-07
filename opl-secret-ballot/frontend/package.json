@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "@oasislabs/secret-ballot-frontend",
+  "name": "@oasisprotocol/secret-ballot-frontend",
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {

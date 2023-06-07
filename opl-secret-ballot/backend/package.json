@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "@oasislabs/secret-ballot-backend",
+  "name": "@oasisprotocol/secret-ballot-backend",
   "version": "1.0.0",
   "license": "MIT",
   "main": "./lib/cjs/src/index.js",
