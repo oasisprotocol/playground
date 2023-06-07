@@ -1,0 +1,35 @@
+{
+  "type": "object",
+  "properties": {
+    "poll": {
+      "type": "object",
+      "properties": {
+        "creator": { "type": "string" },
+        "name": { "type": "string" },
+        "snapshot": { "type": "string" },
+        "description": { "type": "string" },
+        "choices": { "type": "array", "items": { "type": "string" } },
+        "options": {
+          "type": "object",
+          "properties": {
+            "publishVotes": { "type": "boolean" }
+          },
+          "required": ["publishVotes"]
+        }
+      },
+      "required": [
+        "creator",
+        "name",
+        "description",
+        "snapshot",
+        "choices",
+        "termination",
+        "options"
+      ],
+      "additionalProperties": false
+    },
+    "turnstile": { "type": "string", "nullable": true }
+  },
+  "required": ["poll"],
+  "additionalProperties": false
+}
