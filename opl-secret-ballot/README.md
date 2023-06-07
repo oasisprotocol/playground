@@ -22,17 +22,17 @@ pnpm run build
 Install dependencies
 
 ```sh
-npm install
+pnpm install
 ```
 
 Compile and Hot-Reload for Development
 ```sh
-npm run dev
+pnpm run dev
 ```
 
 Build assets for deployment
 ```sh
-npm run build
+pnpm run build
 ```
 
 ### Local Development
