@@ -2,12 +2,12 @@ import { ethers } from 'ethers';
 import type { ComputedRef } from 'vue';
 import { computed } from 'vue';
 
-import type { BallotBoxV1, DAOv1 } from '@oasislabs/secret-ballot-backend';
-import { BallotBoxV1__factory, DAOv1__factory } from '@oasislabs/secret-ballot-backend';
+import type { BallotBoxV1, DAOv1 } from '@oasisprotocol/secret-ballot-backend';
+import { BallotBoxV1__factory, DAOv1__factory } from '@oasisprotocol/secret-ballot-backend';
 
 import { Network, useEthereumStore } from './stores/ethereum';
 
-export type { BallotBoxV1, DAOv1 } from '@oasislabs/secret-ballot-backend';
+export type { BallotBoxV1, DAOv1 } from '@oasisprotocol/secret-ballot-backend';
 
 const hostProvider = new ethers.providers.JsonRpcProvider(
   import.meta.env.VITE_HOST_WEB3_GATEWAY,
