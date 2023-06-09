@@ -1,8 +1,8 @@
 ROOT_DIR := $(dir $(realpath $(lastword $(MAKEFILE_LIST))))
 
-DOCKER=docker run --rm -it --hostname=opl -u `id -u`:`id -g` -e HISTFILESIZE=0 -e HOME=/src --network=host -w /src -v $(ROOT_DIR):/src node:latest
+DOCKER=docker run --rm -it --hostname=opl -u `id -u`:`id -g` -e HISTFILESIZE=0 -e HOME=/src --network=host -w /src -v $(ROOT_DIR):/src node:lts
 
-PNPM=$(DOCKER) .local/share/pnpm/pnpm
+PNPM=$(DOCKER) /src/.local/share/pnpm/pnpm
 
 all: pnpm-install build
 
@@ -10,11 +10,24 @@ pnpm-install:
 	$(DOCKER) bash -c 'curl -fsSL https://get.pnpm.io/install.sh | SHELL=bash sh -'
 	$(PNPM) install
 
-build:
+build: build-backend build-frontend
+
+build-backend:
 	$(PNPM) run -C /src/backend build:compile
 	$(PNPM) run -C /src/backend build:cjs
 	$(PNPM) run -C /src/backend build:esm
+
+build-frontend:
 	$(PNPM) run -C /src/frontend build
+
+frontend-dev:
+	$(PNPM) run -C /src/frontend dev
+
+backend-deploy:
+	$(DOCKER) bash -c 'cd /src/backend && /src/.local/share/pnpm/pnpm hardhat deploy-local --network localhost'
+
+backend-node:
+	$(DOCKER) bash -c 'cd /src/backend && /src/.local/share/pnpm/pnpm hardhat node'
 
 shell:
 	$(DOCKER) bash

@@ -74,4 +74,21 @@ npm run dev
 
 Navigate to http://localhost:5173, and you should be able to create a new poll.
 
-You can use one of the deployed test accounts and associated private key with MetaMask.
+You can use one of the pre-funded test accounts and associated private key with MetaMask, use 'Add a network manually' with these parameters to connect to your local Hardhat node:
+
+ * Network name: `Hardhat`
+ * New RPC URL: `http://127.0.0.1:8545/`
+ * Chain ID: `1337` (or leave blank to auto-detect)
+ * Currency symbol: `ETH` (or leave blank)
+
+### Docker + Makefile
+
+If you prefer to run everything safely inside inside a Docker container, a Makefile is provided for your convenience:
+
+```
+make pnpm-install    # Install pnpm and all frontend+backend dependencies
+make backend-node &  # Run local Hardhat node
+make backend-deploy  # Deploy contracts to local node
+make frontend-dev &  # Run VITE development server
+make shell           # Bash shell inside container
+```
