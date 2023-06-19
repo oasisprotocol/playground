@@ -86,9 +86,10 @@ You can use one of the pre-funded test accounts and associated private key with 
 If you prefer to run everything safely inside inside a Docker container, a Makefile is provided for your convenience:
 
 ```
-make pnpm-install    # Install pnpm and all frontend+backend dependencies
-make backend-node &  # Run local Hardhat node
-make backend-deploy  # Deploy contracts to local node
-make frontend-dev &  # Run VITE development server
-make shell           # Bash shell inside container
+make docker-pnpm-install         # Install pnpm & package.json dependencies inside the Docker container
+make shell                       # Bash shell inside container
+node@opl:~$ make build
+node@opl:~$ make backend-node &  # Run local Hardhat node
+node@opl:~$ make backend-deploy  # Deploy contracts to local node
+node@opl:~$ make frontend-dev &  # Run VITE development server
 ```
