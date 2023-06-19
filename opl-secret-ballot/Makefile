@@ -1,37 +1,57 @@
 ROOT_DIR := $(dir $(realpath $(lastword $(MAKEFILE_LIST))))
 
+# Runs a local ephemeral docker instance, with current dir bind-mounted to /src
 DOCKER=docker run --rm -it --hostname=opl -u `id -u`:`id -g` -e HISTFILESIZE=0 -e HOME=/src --network=host -w /src -v $(ROOT_DIR):/src node:lts
 
-PNPM=$(DOCKER) /src/.local/share/pnpm/pnpm
+DOCKER_PNPM=$(DOCKER) /src/.local/share/pnpm/pnpm
 
-all: pnpm-install build
+PNPM=pnpm
+
+all:
+	@echo If you\'re not using docker, run:
+	@echo
+	@echo  $$ make pnpm-install
+	@echo  $$ make build
+	@echo
+	@echo To install PNPM + package.json dependencies inside a container, run:
+	@echo
+	@echo 	$$ make docker-pnpm-install
+	@echo
+	@echo Then to open a shell inside the container:
+	@echo
+	@echo   $$ make docker-shell
+	@echo
 
 pnpm-install:
-	$(DOCKER) bash -c 'curl -fsSL https://get.pnpm.io/install.sh | SHELL=bash sh -'
 	$(PNPM) install
+
+docker-pnpm-install:
+	$(DOCKER) bash -c 'curl -fsSL https://get.pnpm.io/install.sh | SHELL=bash sh -'
+	$(DOCKER_PNPM) install
 
 build: build-backend build-frontend
 
 build-backend:
-	$(PNPM) run -C /src/backend build:compile
-	$(PNPM) run -C /src/backend build:cjs
-	$(PNPM) run -C /src/backend build:esm
+	$(PNPM) run -C backend build:compile
+	$(PNPM) run -C backend build:cjs
+	$(PNPM) run -C backend build:esm
 
 build-frontend:
-	$(PNPM) run -C /src/frontend build
+	$(PNPM) run -C frontend build
 
 frontend-dev:
-	$(PNPM) run -C /src/frontend dev
+	$(PNPM) run -C frontend dev
 
 backend-deploy:
-	$(DOCKER) bash -c 'cd /src/backend && /src/.local/share/pnpm/pnpm hardhat deploy-local --network localhost'
+	cd backend && $(PNPM) hardhat deploy-local --network localhost
 
 backend-node:
-	$(DOCKER) bash -c 'cd /src/backend && /src/.local/share/pnpm/pnpm hardhat node'
+	cd backend && $(PNPM) hardhat node
 
-shell:
+docker-shell:
 	$(DOCKER) bash
 
+.PHONY: clean
 clean:
 	rm -rf .bash_history .npm package-lock.json package.json .local .cache .bashrc .bash_history
 	rm -rf node_modules functions/node_modules frontend/node_modules backend/node_modules
