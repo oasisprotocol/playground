@@ -83,11 +83,11 @@ You can use one of the pre-funded test accounts and associated private key with 
 
 ### Docker + Makefile
 
-If you prefer to run everything safely inside inside a Docker container, a Makefile is provided for your convenience:
+If you prefer to run everything safely inside inside a Docker container,
+a Makefile is provided for your convenience:
 
 ```
-make docker-pnpm-install         # Install pnpm & package.json dependencies inside the Docker container
-make shell                       # Bash shell inside container
+make docker-shell                # Bash shell inside container
 node@opl:~$ make build
 node@opl:~$ make backend-node &  # Run local Hardhat node
 node@opl:~$ make backend-deploy  # Deploy contracts to local node
