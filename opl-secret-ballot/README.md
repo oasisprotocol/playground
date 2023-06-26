@@ -79,7 +79,7 @@ You can use one of the pre-funded test accounts and associated private key with 
  * Network name: `Hardhat`
  * New RPC URL: `http://127.0.0.1:8545/`
  * Chain ID: `1337` (or leave blank to auto-detect)
- * Currency symbol: `ETH` (or leave blank)
+ * Currency symbol: `TEST` (or leave blank)
 
 ### Docker + Makefile
 
