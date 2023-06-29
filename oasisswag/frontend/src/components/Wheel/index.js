@@ -10,6 +10,7 @@ import {InfoMessage} from "../InfoMessage";
 import {ErrorMessage} from "../ErrorMessage";
 import {Button} from "../Button";
 import {Spinner} from "../Spinner";
+import {LocationLink} from "../LocationLink";
 
 export const Wheel = () => {
   const {
@@ -70,12 +71,12 @@ export const Wheel = () => {
     }
     {selectedAddress && swag && <>
       <InfoMessage>Congratulations, you won a {swag.name}!</InfoMessage>
-      <p className={classes.collectMessage}>Please collect it at our Oasis booth at EthCC</p>
+      <p className={classes.collectMessage}>Please collect it at <br /><LocationLink/></p>
       <br/>
       <br/>
       {!swagTokenId && (
         <>
-          <Button disabled={claimSwagLoading} className={classes.secondary} onClick={claimSwag}>
+          <Button disabled={claimSwagLoading} className={classes.secondary} variant="secondary" onClick={claimSwag}>
             {claimSwagLoading && <Spinner/>}
             Add Swag to your NFT collection
           </Button>

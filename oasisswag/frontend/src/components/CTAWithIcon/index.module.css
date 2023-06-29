@@ -1,0 +1,44 @@
+.ctaWithIcon {
+    display: inline-flex;
+    gap: 25px;
+    justify-content: flex-start;
+}
+
+.icon {
+    min-width: 82px;
+    display: inline-flex;
+    justify-content: center;
+}
+
+.header {
+    font-family: 'Euclid Circular B', sans-serif;
+    color: var(--blue);
+    letter-spacing: -.04em;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 106%;
+}
+
+.content {
+    font-family: 'Euclid Circular B', sans-serif;
+    color: var(--blue);
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 130%;
+}
+
+@media (min-width: 1280px) {
+    .icon {
+        min-width: unset;
+    }
+
+    .header {
+        font-size: 42px;
+    }
+
+    .content {
+        font-size: 22px;
+    }
+}

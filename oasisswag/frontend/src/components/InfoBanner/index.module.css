@@ -1,22 +1,46 @@
 .InfoBanner {
-    padding: 50px 23px 23px;
+    background-image: linear-gradient(#fff 53%,transparent);
+    background-clip: border-box;
+    border-bottom: 0 #000;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 40px 110px;
 }
 
 .InfoBannerContainer {
-    max-width: 1039px;
+    max-width: 802px;
     margin: 0 auto;
-}
-
-.divider {
-    width: 100%;
-    height: 1px;
-    background-color: var(--white);
-    border-top: 1px solid var(--gray-light);
-    margin-top: 54px;
-    margin-bottom: 15px;
 }
 
 .secondary.secondary {
     display: flex;
     margin: 0 auto;
+}
+
+.infoBannerInfoMessage {
+    line-height: 150%;
+}
+
+.inlineDivider {
+    display: block;
+    width: 95%;
+    height: 1px;
+    border-bottom: 3px dotted #39f;
+    margin: 25px auto;
+}
+
+.ctas {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+@media (min-width: 1280px) {
+    .ctas {
+        flex-direction: row;
+        padding: 0 40px;
+    }
 }
