@@ -1,2 +1,8 @@
 node_modules/
 *.log
+.cache
+.bashrc
+.local
+.bash_history
+.npm
+.bashrc

@@ -1,7 +1,8 @@
 ## Secret Ballot Lite
 This is a demo or light weight version of [opl-secret-ballot](https://github.com/oasislabs/opl-secret-ballot).
 
-There are two key smart contracts that we will deploy, one interacting with a host chain such as Binance and one interacting with OPL or an enclave on Sapphire.
+There are two key smart contracts that we will deploy, one interacting with a host chain
+such as Binance and one interacting with OPL or an enclave on Sapphire.
 
 ### Backend
 
@@ -37,7 +38,8 @@ pnpm run build
 
 ### Local Development
 
-We will use [Hardhat](https://hardhat.org/hardhat-runner/docs/getting-started#overview) and [Hardhat-deploy](https://github.com/wighawag/hardhat-deploy) to simplify development.
+We will use [Hardhat](https://hardhat.org/hardhat-runner/docs/getting-started#overview)
+and [Hardhat-deploy](https://github.com/wighawag/hardhat-deploy) to simplify development.
 
 Start local Hardhat network
 ```sh
@@ -60,8 +62,8 @@ and
 VITE_DAO_V1_ADDR=0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512
 ```
 
-Additionally, we will need a [Pinata](https://www.pinata.cloud) API [key](https://docs.pinata.cloud/pinata-api/authentication) to access the pinning
-service with which we store our ballots as JSON.
+Additionally, we will need a [Pinata](https://www.pinata.cloud) API [key](https://docs.pinata.cloud/pinata-api/authentication)
+to access the pinning service with which we store our ballots as JSON.
 
 ```yaml
 VITE_PINATA_JWT=
@@ -74,4 +76,23 @@ npm run dev
 
 Navigate to http://localhost:5173, and you should be able to create a new poll.
 
-You can use one of the deployed test accounts and associated private key with MetaMask.
+You can use one of the pre-funded test accounts and associated private key with MetaMask,
+use 'Add a network manually' with these parameters to connect to your local Hardhat node:
+
+ * Network name: `Hardhat`
+ * New RPC URL: `http://127.0.0.1:8545/`
+ * Chain ID: `1337` (or leave blank to auto-detect)
+ * Currency symbol: `TEST` (or leave blank)
+
+### Docker + Makefile
+
+If you prefer to run everything safely inside inside a Docker container,
+a Makefile is provided for your convenience:
+
+```
+make docker-shell                # Bash shell inside container
+node@opl:~$ make build
+node@opl:~$ make backend-node &  # Run local Hardhat node
+node@opl:~$ make backend-deploy  # Deploy contracts to local node
+node@opl:~$ make frontend-dev &  # Run VITE development server
+```
