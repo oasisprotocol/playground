@@ -70,7 +70,7 @@ export const Wheel = () => {
     }
     {selectedAddress && swag && <>
       <InfoMessage>Congratulations, you won a {swag.name}!</InfoMessage>
-      <p className={classes.collectMessage}>Please collect it at our Oasis booth (923) at Consensus</p>
+      <p className={classes.collectMessage}>Please collect it at our Oasis booth at EthCC</p>
       <br/>
       <br/>
       {!swagTokenId && (

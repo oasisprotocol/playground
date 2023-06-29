@@ -1,8 +1,8 @@
-.ConsensusInfo {
+.InfoBanner {
     padding: 50px 23px 23px;
 }
 
-.ConsensusInfoContainer {
+.InfoBannerContainer {
     max-width: 1039px;
     margin: 0 auto;
 }

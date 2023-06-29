@@ -2,7 +2,7 @@ import classes from "./index.module.css"
 import {InfoMessage} from "../InfoMessage";
 import {Button} from "../Button";
 
-export const ConsensusInfo = () => {
+export const InfoBanner = () => {
   const navigateToRiddle = () => {
     window.open("https://oasisprotocol.org/riddle");
   }
@@ -10,9 +10,9 @@ export const ConsensusInfo = () => {
   return (
     <>
       <div className={classes.divider}/>
-      <div className={classes.ConsensusInfo}>
-        <div className={classes.ConsensusInfoContainer}>
-          <InfoMessage>Are you attending Consensus 2023?</InfoMessage>
+      <div className={classes.InfoBanner}>
+        <div className={classes.InfoBannerContainer}>
+          <InfoMessage>Are you attending EthCC 6?</InfoMessage>
           <InfoMessage small>Get a coupon at our booth, solve the blockchain riddle and earn ROSE!</InfoMessage>
           <Button className={classes.secondary} onClick={navigateToRiddle}>
             Solve the riddle and earn ROSE!
