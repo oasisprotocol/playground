@@ -1,11 +1,15 @@
 import classes from "./index.module.css"
-import arrowLeft from "./images/arrow-left.svg"
+import {ArrowLeftIcon} from "./ArrowLeftIcon";
 
-export const Button = ({ className, onClick, children, disabled, showArrow = true }) => {
-  return (
-    <button className={[className, classes.Button, ...(disabled ? [classes.ButtonDisabled] : [])].join(' ')} onClick={onClick}>
-      {children}
-      {showArrow && <img src={arrowLeft} alt="Arrow left" />}
-    </button>
-  )
+const variantMap = {
+  'primary': classes.ButtonPrimary,
+  'secondary': classes.ButtonSecondary
 }
+
+export const Button = ({className, onClick, children, disabled, showArrow = true, variant = 'primary'}) =>
+  <button
+    className={[className, classes.Button, ...(disabled ? [classes.ButtonDisabled] : []), variantMap[variant]].join(' ')}
+    onClick={onClick}>
+    {children}
+    {showArrow && <ArrowLeftIcon/>}
+  </button>

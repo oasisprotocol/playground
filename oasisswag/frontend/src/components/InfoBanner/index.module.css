@@ -19,5 +19,4 @@
 .secondary.secondary {
     display: flex;
     margin: 0 auto;
-    border: 1px solid var(--dark-blue);
 }
