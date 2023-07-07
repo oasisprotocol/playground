@@ -5,6 +5,7 @@ import {useEffect} from "react";
 import {Footer} from "../components/Footer";
 import {AboutOasis} from "../components/AboutOasis";
 import {InfoBanner} from "../components/InfoBanner";
+import {SolveRiddleBanner} from "../components/SolveRiddleBanner";
 
 export const LandingPage = () => {
   const {init} = useWeb3()
@@ -19,6 +20,7 @@ export const LandingPage = () => {
       <Header/>
       <Wheel/>
       <InfoBanner />
+      <SolveRiddleBanner />
       <AboutOasis />
       <Footer />
     </>

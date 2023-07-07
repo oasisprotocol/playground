@@ -2,6 +2,7 @@
     margin-left: auto;
     margin-right: auto;
     padding: 20px 20px 30px;
+    border-radius: 12px;
 }
 
 .infoBannerContainer {
@@ -9,7 +10,7 @@
     max-width: 1064px;
     margin: 0 auto;
     background: linear-gradient(180deg, #D2E9FF 0%, #D2E9FF 100%);
-    border-radius: 14px;
+    border-radius: 12px;
 }
 
 .infoBannerContent {
@@ -35,6 +36,7 @@
     background: url('../../images/info-banner-bg.png') no-repeat;
     background-size: cover;
     z-index: 0;
+    border-radius: 12px;
 }
 
 .header {
