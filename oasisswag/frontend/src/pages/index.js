@@ -3,7 +3,6 @@ import {Wheel} from "../components/Wheel";
 import {useWeb3} from "../providers/Web3Provider";
 import {useEffect} from "react";
 import {Footer} from "../components/Footer";
-import {FooterLinks} from "../components/FooterLinks";
 import {AboutOasis} from "../components/AboutOasis";
 import {InfoBanner} from "../components/InfoBanner";
 
@@ -21,7 +20,6 @@ export const LandingPage = () => {
       <Wheel/>
       <InfoBanner />
       <AboutOasis />
-      <FooterLinks />
       <Footer />
     </>
   )
