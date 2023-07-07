@@ -6,8 +6,8 @@ export const CTAWithIcon = ({icon = 'location', header, children}) => {
   return (
     <div className={classes.ctaWithIcon}>
       <div className={classes.icon}>
-        {icon === 'location' && <LocationIcon/>}
-        {icon === 'event' && <EventIcon/>}
+        {icon === 'location' && <LocationIcon className={classes.locationIcon}/>}
+        {icon === 'event' && <EventIcon className={classes.eventIcon}/>}
       </div>
       <div>
         <div className={classes.header}>

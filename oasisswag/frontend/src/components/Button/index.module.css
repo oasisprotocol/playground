@@ -33,3 +33,7 @@
     user-select: none;
     cursor: not-allowed;
 }
+
+.FullWidth {
+    width: 100%;
+}
