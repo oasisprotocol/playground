@@ -42,9 +42,20 @@
     line-height: 130%;
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 768px) {
     .icon {
-        min-width: unset;
+        min-width: 82px;
+    }
+
+    .locationIcon {
+        width: 38px;
+        height: 55.73px;
+        margin-top: -6px;
+    }
+
+    .eventIcon {
+        width: 82px;
+        height: 82px;
     }
 
     .header {

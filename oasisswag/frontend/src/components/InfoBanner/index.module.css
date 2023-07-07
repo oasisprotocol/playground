@@ -1,6 +1,4 @@
 .infoBanner {
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
     margin-left: auto;
     margin-right: auto;
     padding: 20px 20px 30px;
@@ -8,15 +6,23 @@
 
 .infoBannerContainer {
     position: relative;
-    max-width: 802px;
+    max-width: 1064px;
     margin: 0 auto;
     background: linear-gradient(180deg, #D2E9FF 0%, #D2E9FF 100%);
+    border-radius: 14px;
 }
 
 .infoBannerContent {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
     position: inherit;
     z-index: 1;
     padding: 170px 24px 22px;
+}
+
+.infoBannerCol {
+    flex: 1 0 100%;
 }
 
 .infoBannerContainer::before {
@@ -39,13 +45,13 @@
 .secondary.secondary {
     display: flex;
     margin: 0 auto;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
+    border-radius: 0 0 5px 5px;
     justify-content: center;
 }
 
 .ctas {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     justify-content: space-between;
     gap: 20px;
@@ -86,9 +92,57 @@
     margin-bottom: 0;
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 768px) {
+    .header {
+        font-size: 42px;
+        text-align: left;
+        padding: 0;
+    }
+
+    .infoMessage {
+        font-size: 22px;
+        text-align: left;
+        margin-bottom: 40px;
+    }
+
+    .infoBannerContent {
+        flex-direction: row;
+        padding: 90px 60px 100px 90px;
+        gap: 34px;
+    }
+
+    .infoBannerContainer::before {
+        background: url('../../images/info-banner-lg-bg.png') no-repeat;
+        background-size: cover;
+    }
+
+    .infoBannerCol {
+        flex: 1 0;
+    }
+
     .ctas {
         flex-direction: row;
-        padding: 0 40px;
+        margin-left: -30px;
+    }
+
+    .ctas > * {
+        flex: 0 0 100%;
+    }
+
+    .buttonCaption {
+        margin-top: 30px;
+        font-size: 20px;
+    }
+
+    .secondary.secondary {
+        font-size: 34px;
+    }
+
+    .paris {
+        position: inherit;
+        width: 427px;
+        height: auto;
+        transform: none;
+        margin-top: -130px;
     }
 }
