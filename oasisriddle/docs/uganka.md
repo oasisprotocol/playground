@@ -61,7 +61,7 @@ function claimReward(string memory coupon) external view returns (string memory)
    [bližnjem kripto lokalu][bitcoin-map]. 🍻
 
 [oasis-network]: https://oasisprotocol.org
-[oasis-discord]: https://discord.gg/oasisprotocol
+[oasis-discord]: https://oasis.io/discord
 [ethereum-tutorial]: https://ethereum.org/en/developers/tutorials/hello-world-smart-contract-fullstack/
 [oasis-sapphire-quickstart]: https://docs.oasis.io/dapp/sapphire/quickstart
 [oasis-explorer-testnet]: https://testnet.explorer.sapphire.oasis.dev/
