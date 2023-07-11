@@ -1,9 +1,9 @@
 .AboutOasis {
-    padding: 50px 23px 23px;
+    padding: 0 20px 0;
 }
 
 .AboutOasisContainer {
-    max-width: 1039px;
+    max-width: 1064px;
     margin: 0 auto;
 }
 
@@ -60,7 +60,7 @@
 
 @media (min-width: 1039px) {
     .AboutOasis {
-        padding: 54px;
+        padding: 0 54px;
     }
 
     .AboutOasisContent {

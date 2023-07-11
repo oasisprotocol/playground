@@ -1,4 +1,4 @@
-# Oasis Consensus 2023 Swag picker
+# Confidential Oasis Swag Wheel
 
 Random swag drawer/picker based on the user's Ethereum address.
 

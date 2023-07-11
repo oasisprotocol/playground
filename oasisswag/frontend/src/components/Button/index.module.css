@@ -3,8 +3,7 @@
     justify-content: space-between;
     align-items: center;
     gap: 20px;
-    background-color: var(--white);
-    border-radius: 44px;
+    border-radius: 7px;
     border: 0;
     box-shadow: none;
     cursor: pointer;
@@ -15,12 +14,26 @@
     letter-spacing: -0.04em;
     line-height: 111%;
     outline: none;
-    padding: 10px 15px;
+    padding: 8px 24px;
     text-decoration: none;
     user-select: none;
+}
+
+.ButtonPrimary {
+    background-color: var(--white);
+    color: var(--dark-blue)
+}
+
+.ButtonSecondary {
+    background-color: var(--dark-blue);
+    color: var(--white)
 }
 
 .ButtonDisabled {
     user-select: none;
     cursor: not-allowed;
+}
+
+.FullWidth {
+    width: 100%;
 }

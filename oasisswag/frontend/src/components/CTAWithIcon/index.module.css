@@ -1,0 +1,68 @@
+.ctaWithIcon {
+    display: inline-flex;
+    gap: 10px;
+    justify-content: flex-start;
+    padding-left: 15px;
+}
+
+.icon {
+    min-width: 40px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.locationIcon {
+    width: 17px;
+    height: 24.93px;
+}
+
+.eventIcon {
+    width: 36px;
+    height: 36px;
+    margin-top: -6px;
+}
+
+.header {
+    font-family: 'Euclid Circular B', sans-serif;
+    color: var(--blue);
+    letter-spacing: -.04em;
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 106%;
+}
+
+.content {
+    font-family: 'Euclid Circular B', sans-serif;
+    color: var(--blue);
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 130%;
+}
+
+@media (min-width: 768px) {
+    .icon {
+        min-width: 82px;
+    }
+
+    .locationIcon {
+        width: 38px;
+        height: 55.73px;
+        margin-top: -6px;
+    }
+
+    .eventIcon {
+        width: 82px;
+        height: 82px;
+    }
+
+    .header {
+        font-size: 42px;
+    }
+
+    .content {
+        font-size: 22px;
+    }
+}

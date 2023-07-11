@@ -55,7 +55,7 @@ export const Header = () => {
               </Button>
               <br/>
               <br/>
-              {networkError && <ErrorMessage>{networkError}</ErrorMessage>}
+              {networkError && <ErrorMessage className={classes.errorMessage}>{networkError}</ErrorMessage>}
               <br/>
             </>
           }

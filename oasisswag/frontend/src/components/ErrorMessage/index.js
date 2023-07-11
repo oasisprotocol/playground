@@ -1,8 +1,8 @@
 import classes from "./index.module.css"
 
-export const ErrorMessage = ({ children }) => {
+export const ErrorMessage = ({children, className}) => {
   return (
-    <div className={classes.ErrorMessage}>
+    <div className={[...(className ? [className] : []), classes.ErrorMessage].join(' ')}>
       {children}
     </div>
   )

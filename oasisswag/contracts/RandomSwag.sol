@@ -41,7 +41,7 @@ contract RandomSwag is ERC721 {
     // Mapping of unique swag token ID -> swag.
     uint[] private _tokenIds;
 
-    constructor() ERC721("OasisSwag", "SWG") {
+    constructor() ERC721("Oasis Swag EthCC 6", "SWG") {
         _mask = uint256(bytes32(Sapphire.randomBytes(32, "")));
         _owner = msg.sender;
     }

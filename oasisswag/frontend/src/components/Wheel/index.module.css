@@ -87,7 +87,7 @@
     font-family: 'Euclid Circular B', sans-serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 22px;
+    font-size: 16px;
     line-height: 130%;
     text-align: center;
     color: var(--gray-dark);
@@ -109,7 +109,6 @@
 .secondary.secondary {
     display: flex;
     margin: 0 auto;
-    border: 1px solid var(--dark-blue);
 }
 
 @keyframes rotate {
@@ -135,5 +134,12 @@
         width: 50%;
         max-width: 600px;
         margin: -10% auto 0;
+    }
+}
+
+
+@media (min-width: 1024px) {
+    .collectMessage, .claimTestTokens {
+        font-size: 22px;
     }
 }
