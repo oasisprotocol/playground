@@ -3,13 +3,13 @@ import { ethers } from 'ethers';
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
 
-import { staticBallotBox, useDAOv1 } from '../contracts';
+import { staticBallotBox, useDAOV1 } from '../contracts';
 import { Network, useEthereumStore } from '../stores/ethereum';
 import type { Poll } from '../../../functions/api/types';
 
 const router = useRouter();
 const eth = useEthereumStore();
-const dao = useDAOv1();
+const dao = useDAOV1();
 
 const pinBody = async (jwt: string, poll: Poll) => {
   const res = await fetch('https://api.pinata.cloud/pinning/pinJSONToIPFS', {

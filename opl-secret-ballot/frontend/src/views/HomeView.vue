@@ -3,25 +3,25 @@ import { reactive } from 'vue';
 import { ContentLoader } from 'vue-content-loader';
 
 import type { Poll } from '../../../functions/api/types';
-import type { DAOv1 } from '../contracts';
-import { useDAOv1 } from '../contracts';
+import type { DAOV1 } from '../contracts';
+import { useDAOV1 } from '../contracts';
 import { Network, useEthereumStore } from '../stores/ethereum';
 
 const eth = useEthereumStore();
-const dao = useDAOv1();
+const dao = useDAOV1();
 
-type FullProposal = DAOv1.ProposalWithIdStructOutput & { params: Poll };
+type FullProposal = DAOV1.ProposalWithIdStructOutput & { params: Poll };
 const activePolls = reactive<Record<string, FullProposal>>({});
 const pastPolls = reactive<Record<string, FullProposal>>({});
 
 async function fetchProposals(
-  fetcher: (offset: number, batchSize: number) => Promise<DAOv1.ProposalWithIdStructOutput[]>,
+  fetcher: (offset: number, batchSize: number) => Promise<DAOV1.ProposalWithIdStructOutput[]>,
   destination: Record<string, FullProposal>,
 ): Promise<void> {
   await eth.switchNetwork(Network.Host);
   const batchSize = 100;
   for (let offset = 0; ; offset += batchSize) {
-    let proposals: DAOv1.ProposalWithIdStructOutput[] = [];
+    let proposals: DAOV1.ProposalWithIdStructOutput[] = [];
     try {
       proposals = await fetcher(offset, batchSize);
     } catch (e: any) {

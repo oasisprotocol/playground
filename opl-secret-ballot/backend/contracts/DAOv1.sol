@@ -6,7 +6,7 @@ import {EnumerableSet} from "@openzeppelin/contracts/utils/structs/EnumerableSet
 
 import "./Types.sol"; // solhint-disable-line no-global-import
 
-contract DAOv1 is Host {
+contract DAOV1 is Host {
     using EnumerableSet for EnumerableSet.Bytes32Set;
 
     error AlreadyExists();

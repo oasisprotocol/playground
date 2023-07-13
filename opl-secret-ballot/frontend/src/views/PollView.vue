@@ -4,20 +4,20 @@ import { computed, ref } from 'vue';
 import { ContentLoader } from 'vue-content-loader';
 
 import type { Poll } from '../../../functions/api/types';
-import type { DAOv1 } from '../contracts';
-import { staticDAOv1, useDAOv1, useBallotBoxV1 } from '../contracts';
+import type { DAOV1 } from '../contracts';
+import { staticDAOV1, useDAOV1, useBallotBoxV1 } from '../contracts';
 import { Network, useEthereumStore } from '../stores/ethereum';
 
 const props = defineProps<{ id: string }>();
 const proposalId = `0x${props.id}`;
 
-const daoV1 = useDAOv1();
+const daoV1 = useDAOV1();
 const ballotBoxV1 = useBallotBoxV1();
 const eth = useEthereumStore();
 
 const error = ref('');
 const isTransacting = ref(false);
-const poll = ref<{ proposal: DAOv1.ProposalWithIdStructOutput; ipfsParams: Poll } | undefined>(
+const poll = ref<{ proposal: DAOV1.ProposalWithIdStructOutput; ipfsParams: Poll } | undefined>(
   undefined,
 );
 const winningChoice = ref<number | undefined>(undefined);
@@ -107,7 +107,7 @@ async function doVote(): Promise<void> {
   let hasClosed = false;
   while (!hasClosed) {
     console.log('checking if ballot has been closed on BSC');
-    hasClosed = !(await staticDAOv1.callStatic.proposals(proposalId)).active;
+    hasClosed = !(await staticDAOV1.callStatic.proposals(proposalId)).active;
     await new Promise((resolve) => setTimeout(resolve, 1000));
   }
 }
