@@ -1,0 +1,1 @@
+{"version":3,"file":"404View.07b83725.js","sources":["../../src/views/404View.vue"],"sourcesContent":["<template>\n  <div class=\"404\">\n    <h1>Page not found</h1>\n  </div>\n</template>\n"],"names":["_hoisted_1","_hoisted_3","_sfc_render","_ctx","_cache"],"mappings":"mEAEIA,EAAA,CAAA,MAAA,KAAA,qCAAuBC,EAAA,IADzB,SAAAC,EAAAC,EAAAC,EAAA"}
