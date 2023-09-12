@@ -1,8 +1,7 @@
 .infoBanner {
-    margin-left: auto;
-    margin-right: auto;
     padding: 20px 20px 30px;
     border-radius: 12px;
+    margin: 100px auto 0;
 }
 
 .infoBannerContainer {
@@ -46,8 +45,7 @@
 
 .secondary.secondary {
     display: flex;
-    margin: 0 auto;
-    border-radius: 0 0 5px 5px;
+    margin: 24px auto 0;
     justify-content: center;
 }
 
@@ -59,13 +57,13 @@
     gap: 20px;
 }
 
-.paris {
+.berlin {
     position: absolute;
     width: 180px;
     height: auto;
     left: 50%;
     transform: translateX(-50%);
-    top: -30px;
+    top: -130px;
 }
 
 .infoMessage {
@@ -78,23 +76,11 @@
     line-height: 130%;
 }
 
-.buttonCaption {
-    width: 100%;
-    color: var(--dark-blue);
-    text-align: center;
-    font-family: Euclid Circular B, sans-serif;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: 140%;
-    border-radius: 3.465px 3.465px 0 0;
-    background: linear-gradient(180deg, #9DCEFF 0%, #78DFFF 100%);
-    padding: 12px 0 10px 0;
-    margin-top: 20px;
-    margin-bottom: 0;
-}
-
 @media (min-width: 768px) {
+    .infoBanner {
+        margin-top: 200px;
+    }
+
     .header {
         font-size: 42px;
         text-align: left;
@@ -131,20 +117,15 @@
         flex: 0 0 100%;
     }
 
-    .buttonCaption {
-        margin-top: 30px;
-        font-size: 20px;
-    }
-
     .secondary.secondary {
         font-size: 34px;
     }
 
-    .paris {
+    .berlin {
         position: inherit;
         width: 427px;
         height: auto;
         transform: none;
-        margin-top: -130px;
+        margin-top: -300px;
     }
 }
