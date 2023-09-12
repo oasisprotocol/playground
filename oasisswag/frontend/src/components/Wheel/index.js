@@ -71,7 +71,7 @@ export const Wheel = () => {
     }
     {selectedAddress && swag && <>
       <InfoMessage>Congratulations, you won a {swag.name}!</InfoMessage>
-      <p className={classes.collectMessage}>Please collect it at <br /><LocationLink/></p>
+      <p className={classes.collectMessage}>Please collect it at <br /><LocationLink className={classes.locationLink} withIcon/></p>
       <br/>
       <br/>
       {!swagTokenId && (

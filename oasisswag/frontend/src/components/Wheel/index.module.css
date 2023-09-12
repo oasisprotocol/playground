@@ -5,6 +5,10 @@
     overflow: hidden;
 }
 
+.locationLink {
+    margin-left: -58px;
+}
+
 .wheel {
     position: relative;
     width: 100%;
