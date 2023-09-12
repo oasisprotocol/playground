@@ -1,13 +1,12 @@
 {
   "files": {
-    "main.css": "/oasisswag/static/css/main.0bc665ee.css",
-    "main.js": "/oasisswag/static/js/main.6e1b8943.js",
+    "main.css": "/oasisswag/static/css/main.16757fde.css",
+    "main.js": "/oasisswag/static/js/main.2916e014.js",
     "static/media/info-banner-lg-bg.png": "/oasisswag/static/media/info-banner-lg-bg.4bdaa4d5bd65446583f5.png",
     "static/media/wheel.png": "/oasisswag/static/media/wheel.1eb33ed35dd0dc01374d.png",
     "static/media/coat.png": "/oasisswag/static/media/coat.06eb2e8bb4c8a3c5f46f.png",
     "static/media/info-banner-bg.png": "/oasisswag/static/media/info-banner-bg.503048bccafeedca24a6.png",
     "static/media/about-oasis.png": "/oasisswag/static/media/about-oasis.b6e85352a46f90be31ae.png",
-    "static/media/paris.png": "/oasisswag/static/media/paris.55941160bc991cd07e6c.png",
     "static/media/computer.png": "/oasisswag/static/media/computer.c420e70387b3dbbd6361.png",
     "static/media/coat-mobile.png": "/oasisswag/static/media/coat-mobile.f475ae92be7953fece73.png",
     "static/media/EuclidCircularB-Medium.woff": "/oasisswag/static/media/EuclidCircularB-Medium.f28d7b92fda1e2d7b18a.woff",
@@ -15,6 +14,7 @@
     "static/media/EuclidCircularB-Regular.woff": "/oasisswag/static/media/EuclidCircularB-Regular.4e9cf618d58d09ad4e64.woff",
     "static/media/EuclidCircularB-Bold.woff": "/oasisswag/static/media/EuclidCircularB-Bold.49d8e7bdcf27ff9fb67d.woff",
     "static/media/EuclidCircularB-Light.woff": "/oasisswag/static/media/EuclidCircularB-Light.426a17c048818b7de742.woff",
+    "static/media/berlin.svg": "/oasisswag/static/media/berlin.1935464936c035146c371db93970b38b.svg",
     "static/media/wheel-outer.svg": "/oasisswag/static/media/wheel-outer.ac353548e63c2b94d49e4940512b9e8b.svg",
     "static/media/wheel-failed-text.svg": "/oasisswag/static/media/wheel-failed-text.178f29d5e3efaf885315abb4b2a23aa9.svg",
     "static/media/wheel-spin-text.svg": "/oasisswag/static/media/wheel-spin-text.fe44fb456e6aceb93dcfdfec60b664af.svg",
@@ -25,11 +25,11 @@
     "static/media/github-mark.svg": "/oasisswag/static/media/github-mark.6fa18895f6e6c7772cab7049f7e05f59.svg",
     "static/media/hero-banner-bg.svg": "/oasisswag/static/media/hero-banner-bg.1e138794c42787536d5d.svg",
     "index.html": "/oasisswag/index.html",
-    "main.0bc665ee.css.map": "/oasisswag/static/css/main.0bc665ee.css.map",
-    "main.6e1b8943.js.map": "/oasisswag/static/js/main.6e1b8943.js.map"
+    "main.16757fde.css.map": "/oasisswag/static/css/main.16757fde.css.map",
+    "main.2916e014.js.map": "/oasisswag/static/js/main.2916e014.js.map"
   },
   "entrypoints": [
-    "static/css/main.0bc665ee.css",
-    "static/js/main.6e1b8943.js"
+    "static/css/main.16757fde.css",
+    "static/js/main.2916e014.js"
   ]
 }
