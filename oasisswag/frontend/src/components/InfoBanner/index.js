@@ -2,11 +2,12 @@ import classes from "./index.module.css"
 import {InfoMessage} from "../InfoMessage";
 import {Button} from "../Button";
 import {CTAWithIcon} from "../CTAWithIcon";
-import paris from "./images/paris.png";
+import berlin from "./images/berlin.svg";
+import {LocationLink} from "../LocationLink";
 
 export const InfoBanner = () => {
   const navigateToClaimYourSpot = () => {
-    window.open("https://www.eventbrite.com/e/oasis-rendezvous-coffee-croissants-and-privacy-tickets-661091541597?aff=website");
+    window.open("https://www.dappcon.io/livestream");
   }
 
   return (
@@ -15,38 +16,27 @@ export const InfoBanner = () => {
         <div className={classes.infoBannerContainer}>
           <div className={classes.infoBannerContent}>
             <div className={classes.infoBannerCol}>
-              <InfoMessage className={classes.header}>Are you attending EthCC 6?</InfoMessage>
+              <InfoMessage className={classes.header}>Are you attending Dappcon 2023?</InfoMessage>
               <p className={classes.infoMessage}>
-                Join leaders in Web3 at the Oasis Rendezvous during the conference! Experience the launch of new Oasis
-                technologies, networking with developers, and the Privacy4Web3 hackathon!
+                Join us in Berlin for a week of privacy workshops, fireside chats, and networking events with thousands
+                of crypto developers, creators and advocates.
               </p>
               <div className={classes.ctas}>
                 <CTAWithIcon header="When?" icon="event">
             <span>
-              July 19, 2023
-              <br/>
-              9 AM to 7 PM
+              September 10 to 15
             </span>
                 </CTAWithIcon>
                 <CTAWithIcon header="Where?">
-            <span>
-              Level Coworking Cafe
-              <br/>
-              11 Rue de l'École Polytechnique,
-              <br/>
-              75005 Paris, France
-            </span>
+                  <LocationLink />
                 </CTAWithIcon>
               </div>
             </div>
             <div className={classes.infoBannerCol}>
-              <img className={classes.paris} src={paris} alt="Paris"/>
-              <p className={classes.buttonCaption}>
-                All attendees <b>must</b> register in advance.
-              </p>
-              <Button variant="secondary" className={classes.secondary} onClick={navigateToClaimYourSpot} fullWidth
+              <img className={classes.berlin} src={berlin} alt="Berlin"/>
+              <Button variant="secondary" className={classes.secondary} onClick={navigateToClaimYourSpot}
                       showArrow={false}>
-                Claim Your Spot
+                Tune in Live
               </Button>
             </div>
           </div>
