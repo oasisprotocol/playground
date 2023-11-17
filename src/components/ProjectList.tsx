@@ -63,9 +63,6 @@ const ProjectList: React.FC = () => {
 
   return (
     <div>
-      <Typography variant="h5" gutterBottom>
-        dApps List
-      </Typography>
       <TextField
         label="Search by Title/Description"
         variant="outlined"
