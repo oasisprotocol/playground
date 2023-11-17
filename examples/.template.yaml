@@ -1,0 +1,24 @@
+---
+name: My Fancy dApp
+authors:
+  - John Smith: https://johnsmith.com
+description: |
+  This is a simple dApp which allows you to purchase food online without
+  revealing any personal information.
+paratimes: # sapphire, emerald, cipher, consensus
+  - sapphire
+languages: # see https://prismjs.com/#supported-languages
+  - solidity
+  - typescript
+license: Apache-2.0 # see https://spdx.org/licenses/
+tags: # order is important
+  - Online Shopping
+  - Gasless
+codeUrl: https://github.com/johnsmith/my-fancy-dapp
+demoUrl: https://johnsmith.com/my-fancy-dapp
+tutorials:
+  - Three Steps to build a Confidential Online Shop:
+    https://docs.oasis.io/dapp/sapphire/gasless
+created: 2023-08-15
+lastUpdated: 2023-09-18
+maintainedByOasis: false

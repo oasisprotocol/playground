@@ -1,0 +1,28 @@
+---
+name: Oasis Swag
+authors:
+  - Oasis Protocol Foundation: https://oasisprotocol.org
+description: |
+  A wheel of fortune tailored towards the swag picking at the conference booth.
+  
+  The swag is selected based on the user's Ethereum address. The randomization
+  seed is generated when the contract is initially created and is kept
+  confidential on Oasis Sapphire. The user can also add the elected swag to
+  their NFT collection.
+paratimes:
+  - sapphire
+languages:
+  - solidity
+  - typescript
+  - javascript
+license: Apache-2.0
+tags:
+  - RNG
+  - NFT
+  - Consensus 2023
+  - EthCC 2023
+codeUrl: https://github.com/oasisprotocol/demo-oasisswag
+demoUrl: https://playground.oasis.io/oasisswag
+created: 2023-04-18
+lastUpdated: 2023-09-13
+maintainedByOasis: true
