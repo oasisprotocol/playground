@@ -1,7 +1,0 @@
-{
-  "compilerOptions": {
-    "lib": ["es2020"],
-    "types": ["@cloudflare/workers-types"],
-    "strictNullChecks": true
-  }
-}

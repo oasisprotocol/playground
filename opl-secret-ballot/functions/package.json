@@ -1,9 +1,0 @@
-{
-  "dependencies": {
-    "web3.storage": "^4.4.0"
-  },
-  "devDependencies": {
-    "@cloudflare/workers-types": "^4.20221111.1",
-    "typescript": "^4.9.5"
-  }
-}
