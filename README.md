@@ -15,7 +15,7 @@ Playground!**
 
 ## Disclaimer
 
-Projects listed in this repository are not audited nor endorsed by the Oasis
-Protocol Foundation or Oasis Labs Inc. The code in this repository may contain
+Projects listed in this repository are neither audited nor endorsed by the Oasis
+Protocol Foundation or Oasis Labs, Inc. The code in this repository may contain
 critical vulnerabilities and should not be used in mission critical environments
 without careful investigation!
