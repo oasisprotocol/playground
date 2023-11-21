@@ -1,6 +1,6 @@
 # Contributing to the Oasis Playground
 
-Developers are encouraged to add their dApp to the Oasis Playground. In order
+Developers are encouraged to add their dApps to the Oasis Playground. In order
 to list your dApp, follow the steps:
 
 1. Make sure your dApp is licensed under the one of the [OSI-approved]
@@ -15,7 +15,7 @@ to list your dApp, follow the steps:
    page.
 5. Create a Pull Request and wait for a member of the Oasis engineering team to
    review it.
-6. Once the Pull Request is approved and merged, your dApp will be listed at
+6. Once your Pull Request is approved and merged, your dApp will be listed at
    https://playground.oasis.io.
 
 [OSI-approved]: https://opensource.org/licenses/
