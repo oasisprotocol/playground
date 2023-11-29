@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Button, Grid, Switch, Typography } from '@mui/material';
+import { Box, Button, Checkbox, FormControlLabel, Grid, Switch, Typography } from '@mui/material';
 import Tags from './Tags';
 
 interface FiltersProps {
@@ -50,71 +50,81 @@ const Filters: React.FC<FiltersProps> = ({
 
       {/* Licenses */}
       <Grid item xs={12} md={3}>
-        <Box>
-          <Typography variant="h6" gutterBottom>
-            Licenses
-          </Typography>
-          <div>
-            <label>
-              <input
-                type="checkbox"
-                checked={selectedLicenses.includes('Apache-2.0')}
-                onChange={() => handleLicenseChange('Apache-2.0')}
-              />
-              Apache-2.0
-            </label>
-          </div>
-          <div>
-            <label>
-              <input
-                type="checkbox"
-                checked={selectedLicenses.includes('MIT')}
-                onChange={() => handleLicenseChange('MIT')}
-              />
-              MIT
-            </label>
-          </div>
-        </Box>
-      </Grid>
+       <Box>
+        <Typography variant="h6" gutterBottom sx={{ paddingLeft: '-12px' }}>
+          Licenses
+        </Typography>
+        <Box sx={{marginBottom: '-10px'}}>
+        <FormControlLabel
+      control={
+        <Checkbox
+          checked={selectedLicenses.includes('Apache-2.0')}
+          onChange={() => handleLicenseChange('Apache-2.0')}
+          color="primary"
+        />
+      }
+      label="Apache-2.0"
+    />
+      </Box>
+      <Box sx={{marginBottom: '-10px'}}>
+      <FormControlLabel
+      control={
+        <Checkbox
+          checked={selectedLicenses.includes('MIT')}
+          onChange={() => handleLicenseChange('MIT')}
+          color="primary"
+        />
+      }
+      label="MIT"
+    />
+      </Box>
+    </Box>
+  </Grid>
 
       {/* Sources */}
       <Grid item xs={12} md={3}>
-        <Box>
-          <Typography variant="h6" gutterBottom>
-            Sources
-          </Typography>
-          <div>
-            <label>
-              <input
-                type="checkbox"
-                checked={selectedSources.includes('Demo')}
-                onChange={() => handleSourcesChange('Demo')}
-              />
-              Demo
-            </label>
-          </div>
-          <div>
-            <label>
-              <input
-                type="checkbox"
-                checked={selectedSources.includes('Code')}
-                onChange={() => handleSourcesChange('Code')}
-              />
-              Code
-            </label>
-          </div>
-          <div>
-            <label>
-              <input
-                type="checkbox"
-                checked={selectedSources.includes('Tutorial')}
-                onChange={() => handleSourcesChange('Tutorial')}
-              />
-              Tutorial
-            </label>
-          </div>
-        </Box>
-      </Grid>
+  <Box>
+    <Typography variant="h6" gutterBottom sx={{ paddingLeft: '-12px' }}>
+      Sources
+    </Typography>
+    <Box sx={{marginBottom: '-10px'}}>
+    <FormControlLabel
+      control={
+        <Checkbox
+          checked={selectedSources.includes('Demo')}
+          onChange={() => handleSourcesChange('Demo')}
+        />
+      }
+      label="Demo"
+      sx={{ marginBottom: '-10px' }}
+    />
+    </Box>
+    <Box sx={{marginBottom: '-10px'}}>
+    <FormControlLabel
+      control={
+        <Checkbox
+          checked={selectedSources.includes('Code')}
+          onChange={() => handleSourcesChange('Code')}
+        />
+      }
+      label="Code"
+      sx={{ marginBottom: '-10px' }}
+    />
+    </Box>
+    <Box sx={{marginBottom: '-10px'}}>
+    <FormControlLabel
+      control={
+        <Checkbox
+          checked={selectedSources.includes('Tutorial')}
+          onChange={() => handleSourcesChange('Tutorial')}
+        />
+      }
+      label="Tutorial"
+      sx={{ marginBottom: '-10px' }}
+    />
+    </Box>
+  </Box>
+</Grid>
 
       {/* Maintained By Oasis */}
       <Grid item xs={12} md={3}>

@@ -54,6 +54,15 @@ export const playgroundTheme = createTheme({
         },
       },
     },
+    MuiCheckbox: {
+      styleOverrides: {
+        root: {
+          '&.Mui-checked': {
+            color: '#3431AC',
+          },
+        },
+      },
+    },
     MuiChip: {
         styleOverrides: {
           root: {
