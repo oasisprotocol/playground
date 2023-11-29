@@ -1,10 +1,10 @@
-import { Dialog, IconButton, Typography } from '@mui/material';
+import { Box, Dialog, Grid, IconButton, Typography } from '@mui/material';
 import { Close } from '@mui/icons-material';
 import TagsList from './TagsList';
 import { Project } from '../types';
 import Carousel from 'react-bootstrap/Carousel';
 import { SetStateAction, useState } from 'react';
-
+import OasisApprovedIcon from '../assets/OasisApprovedIcon.svg';
 
 interface ProjectDialogProps {
   open: boolean;
@@ -13,6 +13,8 @@ interface ProjectDialogProps {
   selectedTags: string[];
   handleTagClick: (tag: string) => void;
 }
+
+
 
 const ProjectDialog: React.FC<ProjectDialogProps> = ({
   open,
@@ -26,10 +28,14 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
     setIndex(selectedIndex);
   };
   const combinedTags = project ? [...project.tags, ...project.languages] : [];
+
+  
   return (
     <Dialog open={open} onClose={onClose} maxWidth="lg"
     sx={{
-      padding: '24px'
+      padding: '24px',
+      maxWidth: '878px',
+      margin: 'auto'
     }}
     >
       <IconButton
@@ -40,78 +46,134 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
       >
         <Close />
       </IconButton>
+   
       {project && (
         <div style={{ padding: '32px'}}>
-              <Carousel activeIndex={index} onSelect={handleSelect}>
-                <Carousel.Item>
-                <img
-          src={project.screenshots[0]}
-          alt={project.name}
-          width="100%"
-          height="300px"
-          style={{
-            borderTopLeftRadius: '14px',
-            borderTopRightRadius: '14px',
-            width: '100%',
-            height: '190px',
-            objectFit: 'cover',
-            marginBottom: '8px',
-            boxShadow: '0px 3px 15px rgba(0,0,0,0.2)'
-          }}
-        ></img>
-                  <Carousel.Caption>
-                    <h3>First slide label</h3>
-                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                  </Carousel.Caption>
-                </Carousel.Item>
-                <Carousel.Item>
-                <img
-          src={project.screenshots[1]}
-          alt={project.name}
-          width="100%"
-          height="300px"
-          style={{
-            borderTopLeftRadius: '14px',
-            borderTopRightRadius: '14px',
-            width: '100%',
-            height: '190px',
-            objectFit: 'cover',
-            marginBottom: '8px',
-            boxShadow: '0px 3px 15px rgba(0,0,0,0.2)'
-          }}
-        ></img>
-                  <Carousel.Caption>
-                    <h3>Second slide label</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                  </Carousel.Caption>
-                </Carousel.Item>
-                <Carousel.Item>
-                <img
-          src={project.screenshots[2]}
-          alt={project.name}
-          width="100%"
-          height="300px"
-          style={{
-            borderTopLeftRadius: '14px',
-            borderTopRightRadius: '14px',
-            width: '100%',
-            height: '190px',
-            objectFit: 'cover',
-            marginBottom: '8px',
-            boxShadow: '0px 3px 15px rgba(0,0,0,0.2)'
-          }}
-        ></img>
-                  <Carousel.Caption>
-                    <h3>Third slide label</h3>
-                    <p>
-                      Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-                    </p>
-                  </Carousel.Caption>
-                </Carousel.Item>
+                 <Typography variant="h2" sx={{ fontSize: '34px', letterSpacing: '-1.5px'}}>{project.name}</Typography>
+              <Carousel activeIndex={index} onSelect={handleSelect}
+              style={{backgroundColor: 'lightgrey', marginTop: '24px', borderRadius: '8px', color: '#0D09E3',  border: '1px solid blue'}}
+              >
+
+              {project.screenshots.map((screenshot) => (
+                   <Carousel.Item key={screenshot}>
+                   <img
+                    src={screenshot}
+                    alt={project.name}
+                    width="100%"
+                    height="424px"
+                    style={{
+                      width: '100%',
+                      objectFit: 'cover',
+                      marginBottom: '0',
+                      borderRadius: '8px',
+                      height: "424px",
+                      boxShadow: '2px 4px 15px rgba(0,0,0,0.2)',
+
+                    }}
+                  ></img>
+                   </Carousel.Item>
+        ))}
               </Carousel>
-          <Typography variant="h6">{project.name}</Typography>
-          <Typography>{project.description}</Typography>
-          <TagsList tags={combinedTags} selectedTags={selectedTags} />
+
+             <Grid container spacing={3} sx={{marginBottom: '32px', marginTop: '32px'}}>
+                   <Grid item xs={12} md={6}> 
+                      <Typography
+                      sx={{color: '#445E77', letterSpacing: '-0.5px', marginBottom: '24px'}}
+                      >{project.description}</Typography>
+
+                      <Typography sx={{ color: '#445E77', letterSpacing: '-0.5px' }}>
+                        Last Updated: { new Date(project.lastUpdated).toLocaleDateString()}
+                      </Typography>
+                      <Typography sx={{ color: '#445E77', letterSpacing: '-0.5px', marginBottom: '24px' }}>
+                        Created: {new Date(project.created).toLocaleDateString()}
+                      </Typography>
+                      <TagsList tags={combinedTags} selectedTags={selectedTags} />
+                   
+                     
+                   </Grid>
+                   <Grid item xs={12} md={6}>
+                     <Typography
+                      sx={{color: '#445E77', letterSpacing: '-0.5px', fontSize: '14px'}}
+                      >Authors:
+                      </Typography>
+                      <Typography
+                      sx={{color: '#3431AC', letterSpacing: '-0.5px', marginBottom: '10px'}}>
+                        <a target='_blank' href={Object.values(project.authors[0])[0]}>
+                          {Object.keys(project.authors[0])[0]}
+                        </a>
+                      </Typography>
+
+                      <Typography
+                      sx={{color: '#445E77', letterSpacing: '-0.5px', fontSize: '14px'}}
+                      >Code:
+                      </Typography>
+                      <Typography
+                       sx={{color: '#3431AC', letterSpacing: '-0.5px', marginBottom: '10px'}}>
+                        <a target='_blank' href={project.codeUrl}>
+                          Link to GitHub
+                        </a>
+                      </Typography>
+
+                      <Typography
+                      sx={{color: '#445E77', letterSpacing: '-0.5px', fontSize: '14px'}}
+                      >Demo:
+                      </Typography>
+                      <Typography
+                       sx={{color: '#3431AC', letterSpacing: '-0.5px', marginBottom: '10px'}}>
+                        <a target='_blank' href={project.demoUrl}>
+                          {project.name}
+                        </a>
+                      </Typography>
+
+                      <Typography
+                      sx={{color: '#445E77', letterSpacing: '-0.5px', fontSize: '14px'}}
+                      >Demo:
+                      </Typography>
+                      <Typography
+                     sx={{color: '#3431AC', letterSpacing: '-0.5px', marginBottom: '10px'}}>
+                        <a target='_blank' href={project.demoUrl}>
+                          {project.name}
+                        </a>
+                      </Typography>
+
+                      {project.tutorials &&
+                        <>
+                           <Typography
+                            sx={{color: '#445E77', letterSpacing: '-0.5px', fontSize: '14px'}}
+                            >Tutorials:
+                            </Typography>
+                            <Typography
+                            sx={{color: '#3431AC', letterSpacing: '-0.5px', marginBottom: '10px'}}>
+                              <a target='_blank' href={Object.values(project.tutorials[0])[0]}>
+                              {Object.keys(project.tutorials[0])[0]}
+                            </a>
+                            </Typography>
+                        </>
+                      }
+
+                      <Typography
+                      sx={{color: '#445E77', letterSpacing: '-0.5px', fontSize: '14px'}}
+                      >Licence:
+                      </Typography>
+                      <Typography
+                        sx={{color: '#3431AC', letterSpacing: '-0.5px', marginBottom: '10px'}}>
+                              {project.license}
+                      </Typography>
+
+                      {project.maintainedByOasis && (
+                        <Box sx={{display: 'flex', alignItems: 'center', marginTop: '24px'}}>
+                           <img
+                            src={OasisApprovedIcon}
+                            alt="Maintained by Oasis Badge"
+                            width='48px'
+                          />
+                           <Typography
+                          sx={{color: '#445E77', letterSpacing: '-0.5px', paddingLeft: '16px', maxWidth: '210px', lineHeight: '1.3'}}
+                          >Officially approved by the Oasis Protocol Foundation</Typography>
+                        </Box>
+                      )}
+                   </Grid>
+            </Grid>
         </div>
       )}
     </Dialog>
