@@ -13,6 +13,9 @@ export const playgroundTheme = createTheme({
       fontWeight: 500,
       color: 'white',
       letterSpacing: '-2.84px',
+      '@media (max-width:600px)': {
+        fontSize: '40px',
+      },
     },
     h2: {
         fontSize: '24px',

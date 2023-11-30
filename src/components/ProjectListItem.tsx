@@ -82,9 +82,11 @@ const ProjectListItem: React.FC<ProjectListItemProps> = ({
             <Grid item xs={12} md={2}>
               {project.maintainedByOasis && (
                 <img
+                  width='48px'
                   src={OasisApprovedIcon}
                   alt="Maintained by Oasis Badge"
                 />
+
               )}
             </Grid>
           </Grid>

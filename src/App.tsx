@@ -2,9 +2,15 @@ import { Container, Typography, Box, ThemeProvider } from '@mui/material';
 import ProjectList from './components/ProjectList';
 import backgroundImg from './assets/PlaygroundBg.webp'
 import { playgroundTheme } from './styles/playgroundTheme';
+import { useTheme } from '@mui/material/styles';
+import { useMediaQuery } from '@mui/material';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
+const theme = useTheme();
+const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+
+const paddingValue = isMobile ? '42px' : '120px';
   return (
     <ThemeProvider theme={playgroundTheme}>
     <Box
@@ -19,7 +25,7 @@ function App() {
       backgroundRepeat: 'no-repeat',
       backgroundColor: '#1421F8',
     }}>
-      <Container maxWidth="lg" sx={{ padding: '120px'}}>
+      <Container maxWidth="lg" sx={{ paddingTop: paddingValue }}>
       <Typography variant="h1" gutterBottom>
       Oasis Playground
       </Typography>

@@ -12,6 +12,8 @@ import Filters from './Filters';
 import Sorting from './Sorting';
 import ProjectListItem from './ProjectListItem';
 import { SelectChangeEvent } from '@mui/material/Select';
+import { useTheme } from '@mui/material/styles';
+import { useMediaQuery } from '@mui/material';
 
 
 
@@ -24,6 +26,11 @@ const ProjectList: React.FC = () => {
   const [maintainedByOasis, setMaintainedByOasis] = useState<boolean>(false); // Step 1
   const [selectedLicenses, setSelectedLicenses] = useState<string[]>(['Apache-2.0', 'MIT']); // Licenses filter
   const [selectedSources, setSelectedSources] = useState<string[]>(['Demo', 'Code', 'Tutorial']); // Sources filter
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm')); 
+
+
+  const paddingValue = isMobile ? '24px' : '34px 46px'; 
 
   const handleClearTags = () => {
     setSelectedTags([]);
@@ -168,8 +175,8 @@ const ProjectList: React.FC = () => {
       </Grid>
     </Grid>
 
-    <Container sx={{ backgroundColor: '#F7F2FE', padding: '34px 46px', borderRadius: '19px'}}>
-      <Container>
+    <Container sx={{ backgroundColor: '#F7F2FE', padding: paddingValue, borderRadius: '19px'}}>
+      <Container sx={{padding: '0'}}>
          <Filters
            allTags={allTags}
             selectedTags={selectedTags}
