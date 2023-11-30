@@ -1,6 +1,11 @@
 import { createTheme } from '@mui/material/styles';
 
 export const playgroundTheme = createTheme({
+  palette: {
+    primary: {
+      main: '#3431AC',
+    },
+  },
   typography: {
     fontFamily: 'Figtree, sans-serif',
     h1: {

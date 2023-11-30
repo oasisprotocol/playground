@@ -55,7 +55,7 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
         <div style={{ padding: '32px'}}>
                  <Typography variant="h2" sx={{ fontSize: '34px', letterSpacing: '-1.5px'}}>{project.name}</Typography>
               <Carousel activeIndex={index} onSelect={handleSelect}
-              style={{backgroundColor: 'lightgrey', marginTop: '24px', borderRadius: '8px', color: '#0D09E3',  border: '1px solid blue'}}
+              style={{backgroundColor: 'lightgrey', marginTop: '24px', borderRadius: '8px', color: '#0D09E3',  boxShadow: '0px 3px 15px rgba(0,0,0,0.2)'}}
               >
 
               {project.screenshots.map((screenshot) => (
