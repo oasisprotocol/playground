@@ -5,6 +5,7 @@ import { Project } from '../types';
 import Carousel from 'react-bootstrap/Carousel';
 import { SetStateAction, useState } from 'react';
 import OasisApprovedIcon from '../assets/OasisApprovedIcon.svg';
+import '../App.css'; 
 
 interface ProjectDialogProps {
   open: boolean;
@@ -90,7 +91,7 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
                       <Typography sx={{ color: '#445E77', letterSpacing: '-0.5px', marginBottom: '24px' }}>
                         Created: {new Date(project.created).toLocaleDateString()}
                       </Typography>
-                      <TagsList tags={combinedTags} selectedTags={selectedTags} />
+                      <TagsList tags={combinedTags} selectedTags={selectedTags} isLarge={true} />
                    
                      
                    </Grid>
@@ -99,7 +100,7 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
                       sx={{color: '#445E77', letterSpacing: '-0.5px', fontSize: '14px'}}
                       >Authors:
                       </Typography>
-                      <Typography sx={{ color: '#3431AC', letterSpacing: '-0.5px', marginBottom: '10px' }}>
+                      <Typography sx={{ color: '#3431AC', letterSpacing: '-0.5px', marginBottom: '16px' }}>
                       <Link href={Object.values(project.authors[0])[0]} target="_blank" underline="always"  sx={linkStyles}>
                       {Object.keys(project.authors[0])[0]}
                       </Link>
@@ -109,7 +110,7 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
                       sx={{color: '#445E77', letterSpacing: '-0.5px', fontSize: '14px'}}
                       >Code:
                       </Typography>
-                        <Typography sx={{ color: '#3431AC', letterSpacing: '-0.5px', marginBottom: '10px' }}>
+                        <Typography sx={{ color: '#3431AC', letterSpacing: '-0.5px', marginBottom: '16px' }}>
                       <Link href={project.codeUrl} target="_blank" underline="always"  sx={linkStyles}>
                       Link to GitHub
                       </Link>
@@ -121,7 +122,7 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
                       sx={{color: '#445E77', letterSpacing: '-0.5px', fontSize: '14px'}}
                       >Demo:
                       </Typography>
-                      <Typography sx={{ color: '#3431AC', letterSpacing: '-0.5px', marginBottom: '10px' }}>
+                      <Typography sx={{ color: '#3431AC', letterSpacing: '-0.5px', marginBottom: '16px' }}>
                       <Link href={project.demoUrl} target="_blank" underline="always"  sx={linkStyles}>
                         {project.name}
                       </Link>
@@ -134,7 +135,7 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
                             >Tutorials:
                             </Typography>
                            
-                            <Typography sx={{ color: '#3431AC', letterSpacing: '-0.5px', marginBottom: '10px' }}>
+                            <Typography sx={{ color: '#3431AC', letterSpacing: '-0.5px', marginBottom: '16px' }}>
                               <Link
                                     href={Object.values(project.tutorials[0])[0]}
                                     target="_blank"
@@ -152,7 +153,7 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
                       >Licence:
                       </Typography>
                       <Typography
-                        sx={{color: '#3431AC', letterSpacing: '-0.5px', marginBottom: '10px'}}>
+                        sx={{color: '#3431AC', letterSpacing: '-0.5px', marginBottom: '16px'}}>
                               {project.license}
                       </Typography>
                       

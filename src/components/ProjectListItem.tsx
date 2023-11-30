@@ -77,7 +77,7 @@ const ProjectListItem: React.FC<ProjectListItemProps> = ({
             sx={{ marginBottom: '24px', marginTop: '16px' }}
           >
             <Grid item xs={12} sm={6} md={10} sx={{ minHeight: '80px' }}>
-              <TagsList tags={combinedTags} selectedTags={selectedTags} />
+              <TagsList tags={combinedTags} selectedTags={selectedTags} isLarge={false} />
             </Grid>
             <Grid item xs={12} md={2}>
               {project.maintainedByOasis && (
