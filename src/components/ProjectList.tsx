@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import {
   Grid,
   Container,
@@ -14,23 +14,38 @@ import ProjectListItem from './ProjectListItem';
 import { SelectChangeEvent } from '@mui/material/Select';
 import { useTheme } from '@mui/material/styles';
 import { useMediaQuery } from '@mui/material';
+import { KeyboardArrowDown } from '@mui/icons-material';
+import FilterAltIcon from '@mui/icons-material/FilterAlt';
 
 
 
 const ProjectList: React.FC = () => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm')); 
+  const isLargeScreen = useMediaQuery(theme.breakpoints.up('lg'));
+
   const [search, setSearch] = useState<string>('');
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const [openProjectDialog, setOpenProjectDialog] = useState<boolean>(false);
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
-  const [selectedParatime, setSelectedParatime] = useState<string>('All'); // Step 1
-  const [maintainedByOasis, setMaintainedByOasis] = useState<boolean>(false); // Step 1
-  const [selectedLicenses, setSelectedLicenses] = useState<string[]>(['Apache-2.0', 'MIT']); // Licenses filter
-  const [selectedSources, setSelectedSources] = useState<string[]>(['Demo', 'Code', 'Tutorial']); // Sources filter
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('sm')); 
+  const [selectedParatime, setSelectedParatime] = useState<string>('All');
+  const [maintainedByOasis, setMaintainedByOasis] = useState<boolean>(false); 
+  const [selectedLicenses, setSelectedLicenses] = useState<string[]>(['Apache-2.0', 'MIT']); 
+  const [selectedSources, setSelectedSources] = useState<string[]>(['Demo', 'Code', 'Tutorial']); 
+  const [showFilters, setShowFilters] = useState(isLargeScreen);
+  
+
+  useEffect(() => {
+    setShowFilters(isLargeScreen);
+  }, [isLargeScreen]);
 
 
   const paddingValue = isMobile ? '24px' : '34px 46px'; 
+
+
+  const handleToggleFilters = () => {
+    setShowFilters((prevShowFilters) => !prevShowFilters);
+  };
 
   const handleClearTags = () => {
     setSelectedTags([]);
@@ -164,6 +179,8 @@ const ProjectList: React.FC = () => {
 
   const filteredAndSortedProjects = sortProjects(filteredProjects);
 
+  
+
   return (
     <div>
      <Grid container spacing={2} sx={{marginBottom: '32px', marginTop: '32px'}}>
@@ -175,27 +192,50 @@ const ProjectList: React.FC = () => {
       </Grid>
     </Grid>
 
-    <Container sx={{ backgroundColor: '#F7F2FE', padding: paddingValue, borderRadius: '19px'}}>
-      <Container sx={{padding: '0'}}>
-         <Filters
-           allTags={allTags}
-            selectedTags={selectedTags}
-            handleTagClick={handleTagClick}
-            selectedLicenses={selectedLicenses}
-            handleLicenseChange={handleLicenseChange}
-            selectedSources={selectedSources}
-            handleSourcesChange={handleSourcesChange}
-            maintainedByOasis={maintainedByOasis}
-            handleMaintainedByOasisToggle={handleMaintainedByOasisToggle}
+    <Container sx={{ backgroundColor: '#F7F2FE', padding: paddingValue, borderRadius: '19px', position: 'relative'}}>
+    <Container sx={{ padding: '0', paddingTop: '20px' }}>
+          <div
+            style={{
+              position: 'relative',
+              overflow: 'hidden',
+              transition: 'max-height 0.5s ease',
+              maxHeight: showFilters ? '500px' : '0',
+            }}
+          >
+            <Filters
+              allTags={allTags}
+              selectedTags={selectedTags}
+              handleTagClick={handleTagClick}
+              selectedLicenses={selectedLicenses}
+              handleLicenseChange={handleLicenseChange}
+              selectedSources={selectedSources}
+              handleSourcesChange={handleSourcesChange}
+              maintainedByOasis={maintainedByOasis}
+              handleMaintainedByOasisToggle={handleMaintainedByOasisToggle}
             handleClearTags={handleClearTags}
-       />
-
-      <Sorting
-        filteredAndSortedProjectsLength={filteredAndSortedProjects.length}
-        sortOption={sortOption}
-        handleSortChange={handleSortChange}
-      />
-    </Container>
+              />
+          </div>
+          <Sorting
+            filteredAndSortedProjectsLength={filteredAndSortedProjects.length}
+            sortOption={sortOption}
+            handleSortChange={handleSortChange}
+          />
+         
+         
+          <div
+            style={{
+              position: 'absolute',
+              top: '20px',
+              right: '40px',
+             
+            }}
+          > <FilterAltIcon sx={{color: 'navy'}} />
+           <KeyboardArrowDown style={{ fontSize: '35px' }}  onClick={handleToggleFilters} sx={{ marginLeft: '-5px',color: 'navy', cursor: 'pointer',
+              transform: showFilters ? 'rotate(180deg)' : 'rotate(0deg)',
+              transition: 'transform 0.4s ease-out',}}
+            />
+          </div>
+        </Container>
       
     <Grid container spacing={1} justifyContent="start">
         {filteredAndSortedProjects.map((project) => (

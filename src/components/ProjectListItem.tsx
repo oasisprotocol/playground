@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Grid, Paper, Typography } from '@mui/material';
+import { Box, Grid, Paper, Typography, useMediaQuery, useTheme } from '@mui/material';
 import { Project } from '../types';
 import OasisApprovedIcon from '../assets/OasisApprovedIcon.svg';
 import TagsList from './TagsList';
@@ -24,13 +24,16 @@ const ProjectListItem: React.FC<ProjectListItemProps> = ({
   handleProjectClick,
   selectedTags,
 }) => {
+  const theme = useTheme();
+  const isMobileScreen = useMediaQuery(theme.breakpoints.down('sm'));
+
   const combinedTags = [...project.tags, ...project.languages];
   return (
     <Grid item xs={12} sm={6} md={4}>
       <Paper
         elevation={3}
-        style={{
-          margin: 16,
+        sx={{
+          margin: isMobileScreen ? '16px 0' : '16px',
           cursor: 'pointer',
           borderRadius: '15px',
           minHeight: '500px',
@@ -76,7 +79,7 @@ const ProjectListItem: React.FC<ProjectListItemProps> = ({
             spacing={2}
             sx={{ marginBottom: '24px', marginTop: '16px' }}
           >
-            <Grid item xs={12} sm={6} md={10} sx={{ minHeight: '80px' }}>
+            <Grid item xs={12} md={10} sx={{ minHeight: '80px' }}>
               <TagsList tags={combinedTags} selectedTags={selectedTags} isLarge={false} />
             </Grid>
             <Grid item xs={12} md={2}>

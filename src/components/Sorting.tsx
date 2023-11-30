@@ -28,7 +28,7 @@ const Sorting: React.FC<SortingProps> = ({
       sx={{ marginTop: '0', marginBottom: '10px' }}
     >
       {filteredAndSortedProjectsLength > 0 && (
-        <Grid item xs={12} md={3}>
+        <Grid item xs={6} md={3}>
           <Grid container spacing={1} justifyContent="start" alignItems="center">
             <Grid item xs={12} md={8}>
               <Select
@@ -89,7 +89,7 @@ const Sorting: React.FC<SortingProps> = ({
         </Grid>
       )}
 
-      <Grid item xs={12} md={3}>
+      <Grid item xs={6} md={3}>
         {filteredAndSortedProjectsLength ? (
           <Typography gutterBottom color={'grey'} align="right">
             Showing {filteredAndSortedProjectsLength} {filteredAndSortedProjectsLength === 1 ? 'result' : 'results'}
