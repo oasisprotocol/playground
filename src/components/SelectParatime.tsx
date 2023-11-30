@@ -1,3 +1,4 @@
+import { KeyboardArrowDown } from '@mui/icons-material';
 import { MenuItem, Select } from '@mui/material';
 
 interface SelectParatimeProps {
@@ -12,6 +13,7 @@ const SelectParatime: React.FC<SelectParatimeProps> = ({ selectedParatime, handl
       fullWidth
       value={selectedParatime}
       onChange={(e) => handleParatimeChange(e.target.value as string)}
+      IconComponent={KeyboardArrowDown}
       sx={{
         backgroundColor: 'white',
         borderRadius: '50px',
@@ -23,6 +25,9 @@ const SelectParatime: React.FC<SelectParatimeProps> = ({ selectedParatime, handl
           '&:focus': {
             outline: 'none',
           },
+        },
+        '& .MuiSelect-icon': {
+          right: '20px', 
         },
       }}
       MenuProps={{
@@ -48,7 +53,7 @@ const SelectParatime: React.FC<SelectParatimeProps> = ({ selectedParatime, handl
         },
       }}
     >
-      <MenuItem value="All" disabled>
+      <MenuItem value="All">
         All Paratimes
       </MenuItem>
       <MenuItem value="Sapphire">Sapphire</MenuItem>

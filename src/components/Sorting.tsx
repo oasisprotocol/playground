@@ -39,13 +39,20 @@ const Sorting: React.FC<SortingProps> = ({
                 IconComponent={KeyboardArrowDown}
                 sx={{
                   borderRadius: '20px',
+                  paddingLeft: '20px',
+                  width: '170px',
+                  paddingRight: '0',
                   '& .MuiSelect-root': {
                     color: '#3431AC',
                     border: 'none',
                     outline: 'none',
+                   
                     '&:focus': {
                       outline: 'none',
                     },
+                  },
+                  '& .MuiSelect-icon': {
+                    left: '7px', 
                   },
                 }}
                 MenuProps={{

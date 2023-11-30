@@ -39,12 +39,15 @@ export const playgroundTheme = createTheme({
     MuiOutlinedInput: {
       styleOverrides: {
         root: {
+          paddingLeft: '12px', 
           '& .MuiOutlinedInput-notchedOutline': {
             borderColor: 'grey',
             borderRadius: '40px', 
+            
           },
           '&:hover .MuiOutlinedInput-notchedOutline': {
             borderColor: 'grey',
+      
           },
         },
       },
