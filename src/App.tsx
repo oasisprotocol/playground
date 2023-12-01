@@ -1,5 +1,6 @@
 import { Container, Typography } from '@mui/material';
 import ProjectList from './components/ProjectList';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
