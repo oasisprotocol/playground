@@ -1,5 +1,6 @@
-import { Grid, Typography, Select, MenuItem, SelectChangeEvent } from '@mui/material';
+import { Grid, Typography, Select, MenuItem, SelectChangeEvent, useTheme, useMediaQuery } from '@mui/material';
 import { KeyboardArrowDown } from '@mui/icons-material';
+
 
 enum SortingOptions {
   TITLE = 'Order By',
@@ -19,6 +20,8 @@ const Sorting: React.FC<SortingProps> = ({
   sortOption,
   handleSortChange,
 }) => {
+  const theme = useTheme();
+  const isMobileScreen = useMediaQuery(theme.breakpoints.down('sm'));
   return (
     <Grid
       container
@@ -92,11 +95,13 @@ const Sorting: React.FC<SortingProps> = ({
       <Grid item xs={6} md={3}>
         {filteredAndSortedProjectsLength ? (
           <Typography gutterBottom color={'grey'} align="right">
-            Showing {filteredAndSortedProjectsLength} {filteredAndSortedProjectsLength === 1 ? 'result' : 'results'}
+            {isMobileScreen ? null : 'Showing '}
+            {filteredAndSortedProjectsLength}{' '}
+            {filteredAndSortedProjectsLength === 1 ? 'result' : 'results'}
           </Typography>
         ) : (
           <Typography gutterBottom color={'grey'} align="left">
-            No Results found
+            No Results {isMobileScreen ? null : 'found'}
           </Typography>
         )}
       </Grid>

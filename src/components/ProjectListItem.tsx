@@ -77,7 +77,10 @@ const ProjectListItem: React.FC<ProjectListItemProps> = ({
           <Grid
             container
             spacing={2}
-            sx={{ marginBottom: '24px', marginTop: '16px' }}
+                       sx={{
+              marginBottom: isMobileScreen ? '4px' : '24px', 
+              marginTop: isMobileScreen ? '8px' : '16px',
+            }}
           >
             <Grid item xs={12} md={10} sx={{ minHeight: '80px' }}>
               <TagsList tags={combinedTags} selectedTags={selectedTags} isLarge={false} />
@@ -89,7 +92,6 @@ const ProjectListItem: React.FC<ProjectListItemProps> = ({
                   src={OasisApprovedIcon}
                   alt="Maintained by Oasis Badge"
                 />
-
               )}
             </Grid>
           </Grid>
