@@ -29,7 +29,7 @@ const paddingValue = isMobile ? '42px' : '120px';
       <Typography variant="h1" gutterBottom>
       Oasis Playground
       </Typography>
-      <Typography gutterBottom sx={{color: 'white', fontSize: '20px'}} >
+      <Typography gutterBottom sx={{color: 'white', fontSize: '20px', width: '100%', maxWidth: '750px', marginBottom: '24px'}} >
       Discover the frontier of Web3 privacy through the projects and applications that are powered by the Oasis Network’s cutting-edge production-ready confidentiality technology. Become a contributor by adding your dApp to the Playground <Link href='https://github.com/oasisprotocol/playground/blob/main/CONTRIBUTING.md' sx={{color:'white', textDecorationColor: 'white'}} target="_blank" underline="always">here</Link>.
       </Typography>
       <Box>

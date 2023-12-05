@@ -42,15 +42,18 @@ export const playgroundTheme = createTheme({
     MuiOutlinedInput: {
       styleOverrides: {
         root: {
-          paddingLeft: '12px', 
+         outline: 0,
+          height: '46px', 
+          borderRadius: '40px', 
           '& .MuiOutlinedInput-notchedOutline': {
-            borderColor: 'grey',
+            borderColor: 'transparent',
             borderRadius: '40px', 
-            
           },
           '&:hover .MuiOutlinedInput-notchedOutline': {
-            borderColor: 'grey',
-      
+            borderColor: 'transparent',
+          },
+          '&:focus-within .MuiOutlinedInput-notchedOutline': {
+            borderColor: 'transparent',
           },
         },
       },
@@ -58,13 +61,39 @@ export const playgroundTheme = createTheme({
     MuiSelect: {
       styleOverrides: {
         select: {
+          borderColor: 'transparent',
+          backgroundColor: 'transparent',
+          outline: 'none',
+            border: 'none',
           '&.MuiSelect-select.MuiSelect-outlined.MuiInputBase-input.MuiOutlinedInput-input': {
             paddingTop: '6px',
-            paddingBottom: '6px',
+            paddingBottom: '6px'
+          },
+          '&:focus': {
+            outline: 'none',
+            border: 'none',
+            borderColor: 'transparent',
+            backgroundColor: 'transparent'
+          },
+          '&:hover': {
+            outline: 'none',
+            border: 'none',
+            borderColor: 'transparent',
+          },
+          '&:focus-within': {
+            outline: 'none',
+            border: 'none',
+            borderColor: 'transparent',
+            '& .MuiSelect-root': {
+              outline: 'none',
+              border: 'none',
+              borderColor: 'transparent',
+            },
           },
         },
       },
     },
+    
     MuiCheckbox: {
       styleOverrides: {
         root: {

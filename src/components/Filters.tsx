@@ -9,7 +9,9 @@ interface FiltersProps {
   selectedLicenses: string[];
   handleLicenseChange: (license: string) => void;
   selectedSources: string[];
+  selectedParatimes: string[];
   handleSourcesChange: (source: string) => void;
+  handleParatimesChange: (source: string) => void;
   maintainedByOasis: boolean;
   handleMaintainedByOasisToggle: () => void;
   handleClearTags: () => void;
@@ -23,6 +25,8 @@ const Filters: React.FC<FiltersProps> = ({
   handleLicenseChange,
   selectedSources,
   handleSourcesChange,
+  selectedParatimes,
+  handleParatimesChange,
   handleMaintainedByOasisToggle,
   handleClearTags,
 }) => {
@@ -47,7 +51,7 @@ const Filters: React.FC<FiltersProps> = ({
       </Grid>
 
       {/* Licenses */}
-      <Grid item xs={12} md={3}>
+      <Grid item xs={12} md={2}>
        <Box>
         <Typography variant="h6" gutterBottom sx={{ paddingLeft: '-12px' }}>
           Licenses
@@ -80,7 +84,7 @@ const Filters: React.FC<FiltersProps> = ({
   </Grid>
 
       {/* Sources */}
-      <Grid item xs={12} md={3}>
+      <Grid item xs={12} md={2}>
   <Box>
     <Typography variant="h6" gutterBottom sx={{ paddingLeft: '-12px' }}>
       Sources
@@ -122,7 +126,52 @@ const Filters: React.FC<FiltersProps> = ({
     />
     </Box>
   </Box>
-</Grid>
+      </Grid>
+
+      {/* Paratimes */}
+      <Grid item xs={12} md={2}>
+  <Box>
+    <Typography variant="h6" gutterBottom sx={{ paddingLeft: '-12px' }}>
+      Paratimes
+    </Typography>
+    <Box sx={{marginBottom: '-7px'}}>
+    <FormControlLabel
+      control={
+        <Checkbox
+          checked={selectedParatimes.includes('Sapphire')}
+          onChange={() => handleParatimesChange('Sapphire')}
+        />
+      }
+      label="Sapphire"
+      sx={{ marginBottom: '-7px' }}
+    />
+    </Box>
+    <Box sx={{marginBottom: '-7px'}}>
+    <FormControlLabel
+      control={
+        <Checkbox
+          checked={selectedParatimes.includes('Emerald')}
+          onChange={() => handleParatimesChange('Emerald')}
+        />
+      }
+      label="Emerald"
+      sx={{ marginBottom: '-7px' }}
+    />
+    </Box>
+    <Box sx={{marginBottom: '-7px'}}>
+    <FormControlLabel
+      control={
+        <Checkbox
+          checked={selectedParatimes.includes('Cipher')}
+          onChange={() => handleParatimesChange('Cipher')}
+        />
+      }
+      label="Cipher"
+      sx={{ marginBottom: '-7px' }}
+    />
+    </Box>
+  </Box>
+      </Grid>
 
       {/* Maintained By Oasis */}
       <Grid item xs={12} md={3}>

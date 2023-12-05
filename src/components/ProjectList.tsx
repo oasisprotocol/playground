@@ -2,18 +2,25 @@ import { useState } from 'react';
 import {
   Grid,
   Container,
+  Button,
+  Box,
 } from '@mui/material';
 import { projects } from '../projectData';
 import ProjectDialog from './ProjectDialog';
 import { Project } from '../types';
 import SearchFilter from './SearchFilter';
-import SelectParatime from './SelectParatime';
 import Filters from './Filters';
 import Sorting from './Sorting';
 import ProjectListItem from './ProjectListItem';
 import { SelectChangeEvent } from '@mui/material/Select';
 import { useTheme } from '@mui/material/styles';
 import { useMediaQuery } from '@mui/material';
+import '../App.css'; 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSliders } from '@fortawesome/free-solid-svg-icons';
+
+
+
 
 const ProjectList: React.FC = () => {
   const theme = useTheme();
@@ -23,10 +30,13 @@ const ProjectList: React.FC = () => {
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const [openProjectDialog, setOpenProjectDialog] = useState<boolean>(false);
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
-  const [selectedParatime, setSelectedParatime] = useState<string>('All');
   const [maintainedByOasis, setMaintainedByOasis] = useState<boolean>(false); 
   const [selectedLicenses, setSelectedLicenses] = useState<string[]>(['Apache-2.0', 'MIT']); 
   const [selectedSources, setSelectedSources] = useState<string[]>(['Demo', 'Code', 'Tutorial']); 
+  const [selectedParatimes, setSelectedParatimes] = useState<string[]>(['Sapphire', 'Emerald', 'Cipher']);
+  const [showFilters, setShowFilters] = useState<boolean>(false);
+
+
 
   const paddingValue = isMobile ? '24px' : '34px 46px'; 
   
@@ -48,10 +58,6 @@ const ProjectList: React.FC = () => {
     setOpenProjectDialog(false);
   };
 
-  const handleParatimeChange = (value: string) => {
-    setSelectedParatime(value);
-  };
-
   const handleLicenseChange = (license: string) => {
     const updatedLicenses = selectedLicenses.includes(license)
       ? selectedLicenses.filter((l) => l !== license)
@@ -64,6 +70,21 @@ const ProjectList: React.FC = () => {
       ? selectedSources.filter((s) => s !== source)
       : [...selectedSources, source];
     setSelectedSources(updatedSources);
+  };
+
+  const handleParatimesChange = (paratime: string) => {
+    let updatedParatimes;
+    if (selectedParatimes.includes(paratime)) {
+      updatedParatimes = selectedParatimes.filter((p) => p !== paratime);
+    } else {
+      updatedParatimes = [...selectedParatimes, paratime];
+    }
+  
+    setSelectedParatimes(updatedParatimes);
+  };
+
+  const handleToggleFilters = () => {
+    setShowFilters(!showFilters);
   };
 
   const allTags: string[] = Array.from(
@@ -83,9 +104,6 @@ const ProjectList: React.FC = () => {
     const tagsMatch: boolean =
       selectedTags.length === 0 ||
       selectedTags.every((tag) => project.tags.includes(tag) || project.languages.includes(tag));
-  
-    const paratimeMatch: boolean =
-      selectedParatime === 'All' || project.paratimes.some((paratime: string) => paratime === selectedParatime.toLowerCase());
   
     const maintainedByOasisMatch: boolean =
       !maintainedByOasis || project.maintainedByOasis;
@@ -112,8 +130,16 @@ const ProjectList: React.FC = () => {
             }
             return false;
           });
+
+
+    const paratimeMatch: boolean =
+        selectedParatimes.length === 0 ||
+        selectedParatimes.includes('Sapphire') ||
+        selectedParatimes.includes('Emerald') ||
+        selectedParatimes.includes('Cipher') ||
+        selectedParatimes.every((paratime) => project.paratimes?.includes(paratime));
   
-    return searchMatch && tagsMatch && paratimeMatch && maintainedByOasisMatch && licenseMatch && sourcesMatch;
+    return searchMatch && tagsMatch  && paratimeMatch &&maintainedByOasisMatch && licenseMatch && sourcesMatch;
   });
 
   const handleTagClick = (tag: string) => {
@@ -155,15 +181,7 @@ const ProjectList: React.FC = () => {
 
   return (
     <div>
-     <Grid container spacing={2} sx={{marginBottom: '32px', marginTop: '32px'}}>
-      <Grid item xs={12} md={6}> 
-      <SearchFilter search={search} setSearch={setSearch} />
-      </Grid>
-      <Grid item xs={12} md={6}> 
-      <SelectParatime selectedParatime={selectedParatime} handleParatimeChange={handleParatimeChange} />
-      </Grid>
-    </Grid>
-    <Container sx={{ backgroundColor: '#F7F2FE', padding: paddingValue, borderRadius: '19px', position: 'relative'}}>
+    <Container sx={{ backgroundColor: 'white', padding: paddingValue, borderRadius: '19px', position: 'relative'}}>
     <Container sx={{ padding: '0', paddingTop: '20px' }}>
           <div
             style={{
@@ -172,18 +190,75 @@ const ProjectList: React.FC = () => {
               transition: 'max-height 0.5s ease',
             }}
           >
-            <Filters
-              allTags={allTags}
-              selectedTags={selectedTags}
-              handleTagClick={handleTagClick}
-              selectedLicenses={selectedLicenses}
-              handleLicenseChange={handleLicenseChange}
-              selectedSources={selectedSources}
-              handleSourcesChange={handleSourcesChange}
-              maintainedByOasis={maintainedByOasis}
-              handleMaintainedByOasisToggle={handleMaintainedByOasisToggle}
-            handleClearTags={handleClearTags}
-              />
+  
+                <Box
+                  sx={{
+                    display: 'flex',
+                    justifyContent: 'space-between',
+                    flexWrap: isMobile ? 'wrap' : 'nowrap'
+                  }}
+                > 
+                <SearchFilter search={search} setSearch={setSearch} />
+
+                  <Box
+                    sx={{
+                      borderLeft: isMobile ? 'none' : '2px solid #3431AC',
+                      paddingLeft: isMobile ? '0' :'30px',
+                      width: isMobile ? '100%' : 'auto'
+                    }}
+                  >
+                    <Button
+  onClick={handleToggleFilters}
+  startIcon={<FontAwesomeIcon icon={faSliders} />} 
+  variant='outlined'
+  sx={{
+    borderRadius: '50px',
+    height: '43px',
+    textTransform: 'capitalize',
+    padding: '0 25px',
+    fontWeight: '500',
+    maxWidth: isMobile ? '100%' :  '116px',
+    marginLeft: 'auto',
+    border: '2px solid #3431AC',
+    width: isMobile ? '100%' : 'auto',
+    backgroundColor: showFilters ? '#3431AC' : 'transparent',
+    color: showFilters ? 'white' : '#3431AC',
+    marginTop: isMobile ? '16px' : '0',
+    '&:hover': {
+      backgroundColor: showFilters ? '#3431AC' : 'transparent',
+      color: showFilters ? 'white' : '#3431AC',
+    },
+  }}
+>
+  Filters
+</Button>
+                  </Box>
+                  </Box>
+
+            <div
+              style={{
+                position: 'relative',
+                overflow: 'hidden',
+                transition: 'all 0.7s cubic-bezier(.17,.67,.83,.67)',
+                maxHeight: showFilters ? '1000px' : '0px',
+                paddingTop: '24px'
+              }}
+            >
+              <Filters
+                allTags={allTags}
+                selectedTags={selectedTags}
+                handleTagClick={handleTagClick}
+                selectedLicenses={selectedLicenses}
+                handleLicenseChange={handleLicenseChange}
+                selectedSources={selectedSources}
+                selectedParatimes={selectedParatimes}
+                handleSourcesChange={handleSourcesChange}
+                handleParatimesChange={handleParatimesChange}
+                maintainedByOasis={maintainedByOasis}
+                handleMaintainedByOasisToggle={handleMaintainedByOasisToggle}
+              handleClearTags={handleClearTags}
+                />
+            </div>
           </div>
           <Sorting
             filteredAndSortedProjectsLength={filteredAndSortedProjects.length}

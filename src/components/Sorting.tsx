@@ -30,9 +30,22 @@ const Sorting: React.FC<SortingProps> = ({
       alignItems="center"
       sx={{ marginTop: '0', marginBottom: '10px' }}
     >
+            <Grid item xs={6} md={3}>
+        {filteredAndSortedProjectsLength ? (
+          <Typography gutterBottom color={'grey'} align="left">
+            {isMobileScreen ? null : 'Showing '}
+            {filteredAndSortedProjectsLength}{' '}
+            {filteredAndSortedProjectsLength === 1 ? 'result' : 'results'}
+          </Typography>
+        ) : (
+          <Typography gutterBottom color={'grey'} align="left">
+            No Results {isMobileScreen ? null : 'found'}
+          </Typography>
+        )}
+      </Grid>
       {filteredAndSortedProjectsLength > 0 && (
         <Grid item xs={6} md={3}>
-          <Grid container spacing={1} justifyContent="start" alignItems="center">
+          <Grid container spacing={1} justifyContent="end" alignItems="center">
             <Grid item xs={12} md={8}>
               <Select
                 fullWidth
@@ -45,17 +58,30 @@ const Sorting: React.FC<SortingProps> = ({
                   paddingLeft: '20px',
                   width: '170px',
                   paddingRight: '0',
+                  textAlign: 'right',
+                  borderColor: 'transparent',
+                  border: 'none',
+                  outline: 'none',
+                  paddingflexBasis: '0',Top: '0',
+                  marginLeft: 'auto',
+                  display: 'flex',
                   '& .MuiSelect-root': {
                     color: '#3431AC',
                     border: 'none',
                     outline: 'none',
-                   
+                    borderColor: 'transparent',
+                    '&[aria-expended=true]': {
+                      border: 'none',
+                      borderColor: 'transparent',
+                    },
                     '&:focus': {
                       outline: 'none',
+                      border: 'none',
+                      borderColor: 'transparent',
                     },
                   },
                   '& .MuiSelect-icon': {
-                    left: '7px', 
+                    right: '7px', 
                   },
                 }}
                 MenuProps={{
@@ -91,19 +117,7 @@ const Sorting: React.FC<SortingProps> = ({
           </Grid>
         </Grid>
       )}
-      <Grid item xs={6} md={3}>
-        {filteredAndSortedProjectsLength ? (
-          <Typography gutterBottom color={'grey'} align="right">
-            {isMobileScreen ? null : 'Showing '}
-            {filteredAndSortedProjectsLength}{' '}
-            {filteredAndSortedProjectsLength === 1 ? 'result' : 'results'}
-          </Typography>
-        ) : (
-          <Typography gutterBottom color={'grey'} align="left">
-            No Results {isMobileScreen ? null : 'found'}
-          </Typography>
-        )}
-      </Grid>
+
     </Grid>
   );
 };

@@ -3,6 +3,12 @@ body {
   font-family: 'Figtree', sans-serif;
 }
 
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
 .carousel-indicators {
     :is(li){
       background-color: #3431AC;
@@ -30,6 +36,33 @@ body {
     margin-bottom: -2.4rem;
 }
 
+.transition-height {
+    transition: height 0.5s ease, opacity 0.5s ease;
+    height: auto;
+    opacity: 1;
+  }
+  
+  .hidden {
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+  }
+
+
+  input:-internal-autofill-selected{
+    background-color: transparent!important;
+  }
+
+  .MuiInputBase-root.MuiOutlinedInput-root.MuiInputBase-colorPrimary.MuiInputBase-fullWidth.MuiInputBase-formControl.css-1phv4hy-MuiInputBase-root-MuiOutlinedInput-root:focus-visible{
+    outline: 0;
+    background-color: white!important;
+  }
+
+  .css-17cvodc-MuiInputBase-input-MuiOutlinedInput-input:-webkit-autofill {
+    border-radius: 40px;
+    height: 12px;
+    width: 100%;
+}
 
 
 @media only screen and (max-width: 600px) {
