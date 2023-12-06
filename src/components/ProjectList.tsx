@@ -16,6 +16,7 @@ import { SelectChangeEvent } from '@mui/material/Select';
 import { useTheme } from '@mui/material/styles';
 import { useMediaQuery } from '@mui/material';
 import '../App.css'; 
+import { LanguageMappings } from '../languageUtils';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSliders } from '@fortawesome/free-solid-svg-icons';
 
@@ -87,14 +88,23 @@ const ProjectList: React.FC = () => {
     setShowFilters(!showFilters);
   };
 
+  const getMappedLanguages = (languages: string[]): string[] => {
+    return languages.map((language) => {
+      const mappedLanguage = LanguageMappings[language.toLowerCase() as keyof typeof LanguageMappings];
+      return mappedLanguage ? mappedLanguage : language.substring(0, 1).toUpperCase() + language.substring(1);
+    });
+  };
+
+
   const allTags: string[] = Array.from(
     new Set(
       projects.flatMap((project) => [
         ...project.tags,
-        ...project.languages,
+        ...getMappedLanguages(project.languages), // Use getMappedLanguages here
       ])
     )
   );
+
 
   const filteredProjects: Project[] = projects.filter((project) => {
     const searchMatch: boolean =

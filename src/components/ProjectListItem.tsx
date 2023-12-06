@@ -3,6 +3,7 @@ import { Box, Grid, Paper, Typography, useMediaQuery, useTheme } from '@mui/mate
 import { Project } from '../types';
 import OasisApprovedIcon from '../assets/OasisApprovedIcon.svg';
 import TagsList from './TagsList';
+import { LanguageMappings } from '../languageUtils';
 
 interface ProjectListItemProps {
   project: Project;
@@ -27,7 +28,18 @@ const ProjectListItem: React.FC<ProjectListItemProps> = ({
   const theme = useTheme();
   const isMobileScreen = useMediaQuery(theme.breakpoints.down('sm'));
 
-  const combinedTags = [...project.tags, ...project.languages];
+  const getMappedLanguages = (languages: string[]): string[] => {
+    return languages.map((language) => {
+      const mappedLanguage = LanguageMappings[language.toLowerCase() as keyof typeof LanguageMappings];
+      return mappedLanguage ? mappedLanguage : language.substring(0, 1).toUpperCase() + language.substring(1);
+    });
+  };
+  
+
+  const mappedLanguages = getMappedLanguages(project.languages);
+  const combinedTags = [...project.tags, ...mappedLanguages];
+
+  
   return (
     <Grid item xs={12} sm={6} md={4}>
       <Paper

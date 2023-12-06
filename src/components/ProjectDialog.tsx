@@ -8,6 +8,7 @@ import OasisApprovedIcon from '../assets/OasisApprovedIcon.svg';
 import '../App.css'; 
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
+import { LanguageMappings } from '../languageUtils';
 
 
 interface ProjectDialogProps {
@@ -41,8 +42,19 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
   const handleSelect = (selectedIndex: SetStateAction<number>) => {
     setIndex(selectedIndex);
   };
-  const combinedTags = project ? [...project.tags, ...project.languages] : [];
 
+  const getMappedLanguages = (languages: string[]): string[] => {
+    return languages.map((language) => {
+      const mappedLanguage = LanguageMappings[language.toLowerCase() as keyof typeof LanguageMappings];
+      return mappedLanguage ? mappedLanguage : language.substring(0, 1).toUpperCase() + language.substring(1);
+    });
+  };
+  let combinedTags: string[] = [];
+  if (project && project.languages && project.tags) {
+    const mappedLanguages = getMappedLanguages(project.languages);
+    combinedTags = [...project.tags, ...mappedLanguages];
+  }
+  
   return (
     <Dialog open={open} onClose={onClose} maxWidth="lg"
     sx={{

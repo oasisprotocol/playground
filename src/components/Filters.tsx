@@ -32,7 +32,6 @@ const Filters: React.FC<FiltersProps> = ({
 }) => {
   return (
     <Grid container spacing={2} sx={{ borderBottom: '2px solid #CBC8EC', paddingBottom: '32px', paddingTop: '24px'}}>
-      {/* Tags */}
       <Grid item xs={12} md={3}>
         <Box>
           <Typography variant="h6" gutterBottom>
@@ -41,7 +40,7 @@ const Filters: React.FC<FiltersProps> = ({
           <Tags tags={allTags} selectedTags={selectedTags} handleTagClick={handleTagClick} />
           {selectedTags.length > 0 && (
             <Button
-              onClick={handleClearTags} // Use the new function for clearing tags
+              onClick={handleClearTags}
               sx={{ textDecoration: 'underline', textTransform: 'none' }}
             >
               Clear Tags
