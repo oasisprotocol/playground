@@ -49,38 +49,27 @@ const Filters: React.FC<FiltersProps> = ({
         </Box>
       </Grid>
 
-      {/* Licenses */}
       <Grid item xs={12} md={2}>
-       <Box>
-        <Typography variant="h6" gutterBottom sx={{ paddingLeft: '-12px' }}>
-          Licenses
-        </Typography>
-        <Box sx={{marginBottom: '-13px'}}>
-        <FormControlLabel
-      control={
-        <Checkbox
-          checked={selectedLicenses.includes('Apache-2.0')}
-          onChange={() => handleLicenseChange('Apache-2.0')}
-          color="primary"
-        />
-      }
-      label="Apache-2.0"
-    />
-      </Box>
-      <Box sx={{marginBottom: '-7px'}}>
-      <FormControlLabel
-      control={
-        <Checkbox
-          checked={selectedLicenses.includes('MIT')}
-          onChange={() => handleLicenseChange('MIT')}
-          color="primary"
-        />
-      }
-      label="MIT"
-    />
-      </Box>
-    </Box>
-  </Grid>
+        <Box>
+          <Typography variant="h6" gutterBottom sx={{ paddingLeft: '-12px' }}>
+            Licenses
+          </Typography>
+          {selectedLicenses.map((license) => (
+            <Box key={license} sx={{ marginBottom: '-7px' }}>
+              <FormControlLabel
+                control={
+                  <Checkbox
+                    checked={selectedLicenses.includes(license)}
+                    onChange={() => handleLicenseChange(license)}
+                    color="primary"
+                  />
+                }
+                label={license}
+              />
+            </Box>
+          ))}
+        </Box>
+      </Grid>
 
       {/* Sources */}
       <Grid item xs={12} md={2}>

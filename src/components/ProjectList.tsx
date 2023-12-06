@@ -32,10 +32,14 @@ const ProjectList: React.FC = () => {
   const [openProjectDialog, setOpenProjectDialog] = useState<boolean>(false);
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [maintainedByOasis, setMaintainedByOasis] = useState<boolean>(false); 
-  const [selectedLicenses, setSelectedLicenses] = useState<string[]>(['Apache-2.0', 'MIT']); 
   const [selectedSources, setSelectedSources] = useState<string[]>(['Demo', 'Code', 'Tutorial']); 
   const [selectedParatimes, setSelectedParatimes] = useState<string[]>(['Sapphire', 'Emerald', 'Cipher']);
   const [showFilters, setShowFilters] = useState<boolean>(false);
+
+  const Licenses = Array.from(
+    new Set(projects.map((project) => project.license))
+  );
+  const [selectedLicenses, setSelectedLicenses] = useState<string[]>(Licenses); 
 
 
 
