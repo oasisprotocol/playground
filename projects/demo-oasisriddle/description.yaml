@@ -1,0 +1,35 @@
+---
+name: Oasis Riddle
+authors:
+  - Oasis Protocol Foundation: https://oasisprotocol.org
+description: |
+  This dApp demonstrates the power of the Sapphire confidential storage and
+  tries to empower new developers to start building. The dApp stores a set of
+  questions and expected answers on Sapphire. It also stores a set of coupon
+  codes together with the private key unlocking the reward—ROSE or other tokens
+  on a production chain.
+  
+  Usage:
+  Coupon codes are handed over to potential developers on different occasions
+  such as the blockchain conferences, hackathons, programming competitions etc.
+  The developer needs to set up local Sapphire development environment, query
+  for the question passing their coupon code and finally submit the answer.
+  Then, they can reclaim the rewarding private key.
+paratimes:
+  - sapphire
+languages:
+  - solidity
+  - typescript
+license: Apache-2.0
+tags:
+  - Confidential State
+  - CLI
+  - RTK 2023
+  - EthCC 2023
+  - Consensus 2023
+codeUrl: https://github.com/oasisprotocol/demo-oasisriddle
+tutorials:
+  - Riddle instructions: https://oasisprotocol.org/riddle
+created: 2023-03-25
+lastUpdated: 2023-11-20
+maintainedByOasis: true

@@ -1,0 +1,27 @@
+---
+name: Hello World on Cipher
+authors:
+  - Oasis Protocol Foundation: https://oasisprotocol.org
+description: |
+  Minimal non-confidential smart contract written in rust which uses the Oasis
+  Contracts SDK.<br/>
+  The contract code can be uploaded to Cipher Mainnet, Testnet or Localnet,
+  instantiated and transacted with the
+  <a href="https://github.com/oasisprotocol/cli">Oasis CLI</a>.<br/>
+  This example is part of the official <a href="https://github.com/oasisprotocol/oasis-sdk">Oasis SDK</a>
+  codebase tests.
+paratimes:
+  - cipher
+languages:
+  - rust
+license: Apache-2.0
+tags:
+  - Oasis Wasm
+  - Oasis CLI
+  - CLI
+codeUrl: https://github.com/oasisprotocol/oasis-sdk/tree/main/examples/contract-sdk/hello-world
+tutorials:
+  - Cipher Hello World: https://docs.oasis.io/dapp/cipher/hello-world
+created: 2022-10-03
+lastUpdated: 2023-12-21
+maintainedByOasis: true

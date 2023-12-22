@@ -1,0 +1,23 @@
+---
+name: OPL Secret Ballot
+authors:
+  - Oasis Protocol Foundation: https://oasisprotocol.org
+description: |
+  This is a simple dApp demonstrating Oasis Privacy Layer functionality for
+  cross-chain confidential voting.
+paratimes:
+  - sapphire
+languages:
+  - solidity
+  - typescript
+license: Apache-2.0
+tags:
+  - OPL
+  - Vue
+  - Pinata
+codeUrl: https://github.com/oasisprotocol/demo-opl-secret-ballot
+tutorials:
+  - Oasis Privacy Layer: https://docs.oasis.io/dapp/opl
+created: 2023-01-15
+lastUpdated: 2023-06-29
+maintainedByOasis: true

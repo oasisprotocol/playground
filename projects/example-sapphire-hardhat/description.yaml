@@ -1,0 +1,26 @@
+---
+name: Hardhat Sapphire Example
+authors:
+  - Oasis Protocol Foundation: https://oasisprotocol.org
+description: |
+  A simple example which uses Hardhat for connecting to Sapphire and use its
+  confidential state to implement a
+  <a href="https://en.wikipedia.org/wiki/Dead_man%27s_switch">dead-man switch</a>
+  app which stores a <i>secret ingredient</i>.<br/>
+  This example is part of the official <a href="https://github.com/oasisprotocol/sapphire">sapphire-paratime</a>
+  codebase tests.
+paratimes:
+  - sapphire
+languages:
+  - solidity
+  - typescript
+license: Apache-2.0
+tags:
+  - Confidential Store
+  - CLI
+codeUrl: https://github.com/oasisprotocol/sapphire-paratime/tree/main/examples/hardhat
+tutorials:
+  - Sapphire Quickstart: https://docs.oasis.io/dapp/sapphire/quickstart
+created: 2022-09-07
+lastUpdated: 2023-11-21
+maintainedByOasis: true

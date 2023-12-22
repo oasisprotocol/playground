@@ -1,0 +1,41 @@
+---
+name: Oasis Authenticator
+authors:
+  - Oasis Protocol Foundation: https://oasisprotocol.org
+description: |
+  This project demonstrates how to use WebAuthN on Oasis Sapphire.
+  This allows users to use strong device-level authentication, such as TouchID,
+  YubiKey, Android biometric, Windows Hello etc.<br/>
+  
+  Currently it only supports SEC P256 R1 credentials, and additional work will
+  be needed to adapt it to your specific use-case.<br/>
+  
+  Also includes the code for TOTP authentication.<br/>
+  
+  Usage:<br/><ol>
+  <li>Register at the Oasis Authenticator by using one of the strong device-level
+  authentication methods.</li>
+  <li>Your ID will be stored on the Sapphire chain.</li>
+  <li>Log in to one of the services which support the Oasis Authenticator (for
+  example the <a href="https://playground.oasis.io/authzn-demo/">Authzn Demo app
+  </a>)</li>
+  <li>The app will receive a valid token from the smart contract, if the logging
+  in via the Oasis Authenticator is successful.</li>
+  </ol>
+paratimes:
+  - sapphire
+languages:
+  - solidity
+  - typescript
+license: Apache-2.0
+tags:
+  - AuthZN
+  - On-Chain Encryption
+  - React
+codeUrl: https://github.com/oasisprotocol/demo-authzn
+demoUrl: https://playground.oasis.io/authzn
+tutorials:
+  - View-Call Authentication: https://docs.oasis.io/dapp/sapphire/authentication
+created: 2023-06-17
+lastUpdated: 2023-08-07
+maintainedByOasis: true

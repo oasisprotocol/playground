@@ -1,0 +1,28 @@
+---
+name: E2E Proxy
+authors:
+  - Oasis Protocol Foundation: https://oasisprotocol.org
+description: |
+  A short example of how a contract can relay an end-to-end encrypted
+  transactions on Oasis Sapphire, so the relayer cannot see which contract is
+  being invoked or what the parameters are. This is usefull for services such
+  as the gas station network or other gasless services.<br/>
+  By using the <a href="https://www.npmjs.com/package/@oasisprotocol/sapphire-contracts">
+  @oasis-protocol/sapphire-contracts</a> library the E2EProxy contract
+  generates a long-term X25519 keypair which allows users to submit a Deoxys-II
+  encrypted payload (with forward secrecy) containing the contract address to
+  invoke and the calldata to pass.
+paratimes:
+  - sapphire
+languages:
+  - solidity
+license: CC-PDDC
+tags:
+  - On-Chain Encryption
+  - CLI
+codeUrl: https://github.com/oasisprotocol/demo-e2eproxy
+tutorials:
+  - Gasless Transactions: https://docs.oasis.io/dapp/sapphire/gasless
+created: 2023-06-17
+lastUpdated: 2023-12-02
+maintainedByOasis: true
