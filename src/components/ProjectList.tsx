@@ -241,21 +241,21 @@ const ProjectList: React.FC = () => {
     '&:hover': {
       backgroundColor: showFilters ? '#3431AC' : 'transparent',
       color: showFilters ? 'white' : '#3431AC',
+      border: '2px solid #3431AC'
     },
   }}
 >
   Filters
+  
 </Button>
                   </Box>
                   </Box>
-
             <div
               style={{
                 position: 'relative',
                 overflow: 'hidden',
                 transition: 'all 0.7s cubic-bezier(.17,.67,.83,.67)',
                 maxHeight: showFilters ? '1000px' : '0px',
-                paddingTop: '24px'
               }}
             >
               <Filters

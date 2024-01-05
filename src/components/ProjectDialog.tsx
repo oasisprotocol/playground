@@ -92,12 +92,28 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
                       <Typography
                       sx={{color: '#445E77', letterSpacing: '-0.5px', marginBottom: '24px'}}
                       >{project.description}</Typography>
-                      <Typography sx={{ color: '#445E77', letterSpacing: '-0.5px' }}>
-                        Last Updated: { new Date(project.lastUpdated).toLocaleDateString()}
+
+                      <Typography
+                      sx={{color: '#445E77', letterSpacing: '-0.5px', fontSize: '14px'}}
+                      >Last Updated: 
                       </Typography>
-                      <Typography sx={{ color: '#445E77', letterSpacing: '-0.5px', marginBottom: '24px' }}>
-                        Created: {new Date(project.created).toLocaleDateString()}
+                      <Typography sx={{ color: '#3431AC', letterSpacing: '-0.5px', marginBottom: '16px' }}>
+                      <Typography  sx={linkStyles}>
+                      { new Date(project.lastUpdated).toLocaleDateString()}
                       </Typography>
+                    </Typography>
+
+                    <Typography
+                      sx={{color: '#445E77', letterSpacing: '-0.5px', fontSize: '14px', marginTop: '16px'}}
+                      >Created: 
+                      </Typography>
+                      <Typography sx={{ color: '#3431AC', letterSpacing: '-0.5px', marginBottom: '24px' }}>
+                      <Typography  sx={linkStyles}>
+                      {new Date(project.created).toLocaleDateString()}
+                      </Typography>
+                    </Typography>
+
+
                       <TagsList tags={combinedTags} selectedTags={selectedTags} isLarge={true} />
                    </Grid>
                    <Grid item xs={12} md={6}>
