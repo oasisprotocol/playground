@@ -91,7 +91,6 @@ const Sorting: React.FC<SortingProps> = ({
           </Grid>
         </Grid>
       )}
-
       <Grid item xs={6} md={3}>
         {filteredAndSortedProjectsLength ? (
           <Typography gutterBottom color={'grey'} align="right">

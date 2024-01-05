@@ -42,8 +42,6 @@ const Filters: React.FC<FiltersProps> = ({
             >
               Clear Tags
             </Button>
-
-            
           )}
         </Box>
       </Grid>
@@ -54,7 +52,7 @@ const Filters: React.FC<FiltersProps> = ({
         <Typography variant="h6" gutterBottom sx={{ paddingLeft: '-12px' }}>
           Licenses
         </Typography>
-        <Box sx={{marginBottom: '-10px'}}>
+        <Box sx={{marginBottom: '-13px'}}>
         <FormControlLabel
       control={
         <Checkbox
@@ -66,7 +64,7 @@ const Filters: React.FC<FiltersProps> = ({
       label="Apache-2.0"
     />
       </Box>
-      <Box sx={{marginBottom: '-10px'}}>
+      <Box sx={{marginBottom: '-7px'}}>
       <FormControlLabel
       control={
         <Checkbox
@@ -87,7 +85,7 @@ const Filters: React.FC<FiltersProps> = ({
     <Typography variant="h6" gutterBottom sx={{ paddingLeft: '-12px' }}>
       Sources
     </Typography>
-    <Box sx={{marginBottom: '-10px'}}>
+    <Box sx={{marginBottom: '-7px'}}>
     <FormControlLabel
       control={
         <Checkbox
@@ -96,10 +94,10 @@ const Filters: React.FC<FiltersProps> = ({
         />
       }
       label="Demo"
-      sx={{ marginBottom: '-10px' }}
+      sx={{ marginBottom: '-7px' }}
     />
     </Box>
-    <Box sx={{marginBottom: '-10px'}}>
+    <Box sx={{marginBottom: '-7px'}}>
     <FormControlLabel
       control={
         <Checkbox
@@ -108,10 +106,10 @@ const Filters: React.FC<FiltersProps> = ({
         />
       }
       label="Code"
-      sx={{ marginBottom: '-10px' }}
+      sx={{ marginBottom: '-7px' }}
     />
     </Box>
-    <Box sx={{marginBottom: '-10px'}}>
+    <Box sx={{marginBottom: '-7px'}}>
     <FormControlLabel
       control={
         <Checkbox
@@ -120,7 +118,7 @@ const Filters: React.FC<FiltersProps> = ({
         />
       }
       label="Tutorial"
-      sx={{ marginBottom: '-10px' }}
+      sx={{ marginBottom: '-7px' }}
     />
     </Box>
   </Box>

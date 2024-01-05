@@ -6,6 +6,9 @@ import Carousel from 'react-bootstrap/Carousel';
 import { SetStateAction, useState } from 'react';
 import OasisApprovedIcon from '../assets/OasisApprovedIcon.svg';
 import '../App.css'; 
+import { useTheme } from '@mui/material/styles';
+import useMediaQuery from '@mui/material/useMediaQuery';
+
 
 interface ProjectDialogProps {
   open: boolean;
@@ -27,19 +30,26 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
   selectedTags,
 }) => {
   const [index, setIndex] = useState(0);
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+
+  const dialogPaperStyles = {
+    margin: isMobile ? '0' : '32px',
+    padding: isMobile ? '0' : '32px',
+  };
 
   const handleSelect = (selectedIndex: SetStateAction<number>) => {
     setIndex(selectedIndex);
   };
   const combinedTags = project ? [...project.tags, ...project.languages] : [];
 
-  
   return (
     <Dialog open={open} onClose={onClose} maxWidth="lg"
     sx={{
       padding: '24px',
       maxWidth: '878px',
-      margin: 'auto'
+      margin: 'auto',
+      '& .css-1fu2e3p-MuiPaper-root-MuiDialog-paper': dialogPaperStyles,
     }}
     >
       <IconButton
@@ -52,39 +62,34 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
       </IconButton>
    
       {project && (
-        <div style={{ padding: '32px'}}>
-                 <Typography variant="h2" sx={{ fontSize: '34px', letterSpacing: '-1.5px'}}>{project.name}</Typography>
+        <div style={{ padding: isMobile ? '32px 20px' : '32px' }}>
+              <Typography variant="h2" sx={{ fontSize: '34px', letterSpacing: '-1.5px', paddingRight: '24px'}}>{project.name}</Typography>
               <Carousel activeIndex={index} onSelect={handleSelect}
               style={{backgroundColor: 'lightgrey', marginTop: '24px', borderRadius: '8px', color: '#0D09E3',  boxShadow: '0px 3px 15px rgba(0,0,0,0.2)'}}
               >
-
               {project.screenshots.map((screenshot) => (
                    <Carousel.Item key={screenshot}>
-                   <img
-                    src={screenshot}
-                    alt={project.name}
-                    width="100%"
-                    height="424px"
-                    style={{
-                      width: '100%',
-                      objectFit: 'cover',
-                      marginBottom: '0',
-                      borderRadius: '8px',
-                      height: "424px",
-                      boxShadow: '2px 4px 15px rgba(0,0,0,0.2)',
-
-                    }}
-                  ></img>
-                   </Carousel.Item>
+                  <img
+        src={screenshot}
+        alt={project.name}
+        width="100%"
+        style={{
+          width: '100%',
+          objectFit: 'cover',
+          marginBottom: '0',
+          borderRadius: '8px',
+          height: isMobile ? '190px' : '424px',
+          boxShadow: '2px 4px 15px rgba(0,0,0,0.2)',
+        }}
+      />
+      </Carousel.Item>
         ))}
               </Carousel>
-
              <Grid container spacing={3} sx={{marginBottom: '32px', marginTop: '32px'}}>
                    <Grid item xs={12} md={6}> 
                       <Typography
                       sx={{color: '#445E77', letterSpacing: '-0.5px', marginBottom: '24px'}}
                       >{project.description}</Typography>
-
                       <Typography sx={{ color: '#445E77', letterSpacing: '-0.5px' }}>
                         Last Updated: { new Date(project.lastUpdated).toLocaleDateString()}
                       </Typography>
@@ -92,8 +97,6 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
                         Created: {new Date(project.created).toLocaleDateString()}
                       </Typography>
                       <TagsList tags={combinedTags} selectedTags={selectedTags} isLarge={true} />
-                   
-                     
                    </Grid>
                    <Grid item xs={12} md={6}>
                      <Typography
@@ -105,7 +108,6 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
                       {Object.keys(project.authors[0])[0]}
                       </Link>
                     </Typography>
-
                       <Typography
                       sx={{color: '#445E77', letterSpacing: '-0.5px', fontSize: '14px'}}
                       >Code:

@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import {
   Grid,
   Container,
@@ -14,15 +14,10 @@ import ProjectListItem from './ProjectListItem';
 import { SelectChangeEvent } from '@mui/material/Select';
 import { useTheme } from '@mui/material/styles';
 import { useMediaQuery } from '@mui/material';
-import { KeyboardArrowDown } from '@mui/icons-material';
-import FilterAltIcon from '@mui/icons-material/FilterAlt';
-
-
 
 const ProjectList: React.FC = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm')); 
-  const isLargeScreen = useMediaQuery(theme.breakpoints.up('lg'));
 
   const [search, setSearch] = useState<string>('');
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
@@ -32,26 +27,13 @@ const ProjectList: React.FC = () => {
   const [maintainedByOasis, setMaintainedByOasis] = useState<boolean>(false); 
   const [selectedLicenses, setSelectedLicenses] = useState<string[]>(['Apache-2.0', 'MIT']); 
   const [selectedSources, setSelectedSources] = useState<string[]>(['Demo', 'Code', 'Tutorial']); 
-  const [showFilters, setShowFilters] = useState(isLargeScreen);
-  
-
-  useEffect(() => {
-    setShowFilters(isLargeScreen);
-  }, [isLargeScreen]);
-
 
   const paddingValue = isMobile ? '24px' : '34px 46px'; 
-
-
-  const handleToggleFilters = () => {
-    setShowFilters((prevShowFilters) => !prevShowFilters);
-  };
-
+  
   const handleClearTags = () => {
     setSelectedTags([]);
     setSearch('');
   };
-
 
   const handleMaintainedByOasisToggle = () => {
     setMaintainedByOasis(!maintainedByOasis);
@@ -84,9 +66,6 @@ const ProjectList: React.FC = () => {
     setSelectedSources(updatedSources);
   };
 
-
-
-
   const allTags: string[] = Array.from(
     new Set(
       projects.flatMap((project) => [
@@ -106,7 +85,7 @@ const ProjectList: React.FC = () => {
       selectedTags.every((tag) => project.tags.includes(tag) || project.languages.includes(tag));
   
     const paratimeMatch: boolean =
-      selectedParatime === 'All' || project.paratimes.some((paratime) => paratime === selectedParatime.toLowerCase());
+      selectedParatime === 'All' || project.paratimes.some((paratime: string) => paratime === selectedParatime.toLowerCase());
   
     const maintainedByOasisMatch: boolean =
       !maintainedByOasis || project.maintainedByOasis;
@@ -145,9 +124,6 @@ const ProjectList: React.FC = () => {
     }
   };
 
-
-  
-
   enum SortingOptions {
     TITLE = 'Order By',
     NAME = 'Name',
@@ -169,17 +145,13 @@ const ProjectList: React.FC = () => {
     }
   };
 
-
   const handleSortChange = (event: React.ChangeEvent<{ value: unknown }> | SelectChangeEvent<SortingOptions>) => {
     if ('target' in event) {
       setSortOption(event.target.value as SortingOptions);
     }
   };
 
-
   const filteredAndSortedProjects = sortProjects(filteredProjects);
-
-  
 
   return (
     <div>
@@ -191,7 +163,6 @@ const ProjectList: React.FC = () => {
       <SelectParatime selectedParatime={selectedParatime} handleParatimeChange={handleParatimeChange} />
       </Grid>
     </Grid>
-
     <Container sx={{ backgroundColor: '#F7F2FE', padding: paddingValue, borderRadius: '19px', position: 'relative'}}>
     <Container sx={{ padding: '0', paddingTop: '20px' }}>
           <div
@@ -199,7 +170,6 @@ const ProjectList: React.FC = () => {
               position: 'relative',
               overflow: 'hidden',
               transition: 'max-height 0.5s ease',
-              maxHeight: showFilters ? '500px' : '0',
             }}
           >
             <Filters
@@ -220,23 +190,7 @@ const ProjectList: React.FC = () => {
             sortOption={sortOption}
             handleSortChange={handleSortChange}
           />
-         
-         
-          <div
-            style={{
-              position: 'absolute',
-              top: '20px',
-              right: '40px',
-             
-            }}
-          > <FilterAltIcon sx={{color: 'navy'}} />
-           <KeyboardArrowDown style={{ fontSize: '35px' }}  onClick={handleToggleFilters} sx={{ marginLeft: '-5px',color: 'navy', cursor: 'pointer',
-              transform: showFilters ? 'rotate(180deg)' : 'rotate(0deg)',
-              transition: 'transform 0.4s ease-out',}}
-            />
-          </div>
         </Container>
-      
     <Grid container spacing={1} justifyContent="start">
         {filteredAndSortedProjects.map((project) => (
               <ProjectListItem
@@ -249,7 +203,6 @@ const ProjectList: React.FC = () => {
               />
         ))}
       </Grid>
-
       <ProjectDialog
         open={openProjectDialog}
         onClose={handleProjectDialogClose}
