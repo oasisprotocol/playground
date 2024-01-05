@@ -10,30 +10,19 @@ body {
 }
 
 .carousel-indicators {
-    :is(li){
-      background-color: #3431AC;
-    }
-  }
+  display: none!important;
+}
 
 .carousel-control-next-icon,
 .carousel-control-prev-icon {
     background-color: navy;
     padding: 4px;
     border-radius: 17px;
-    background-size: 65%;
-
+    background-size: 65%!important;
 }
 
 .carousel-control-next, .carousel-control-prev {
     width: 9%;
-}
-
-.carousel-indicators [data-bs-target] {
-    background-color: navy;
-}
-
-.carousel-indicators {
-    margin-bottom: -2.4rem;
 }
 
 .transition-height {
@@ -63,7 +52,6 @@ body {
     height: 12px;
     width: 100%;
 }
-
 
 @media only screen and (max-width: 600px) {
     .carousel-control-next, .carousel-control-prev {
