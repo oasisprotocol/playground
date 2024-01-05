@@ -34,11 +34,6 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
-  const dialogPaperStyles = {
-    margin: isMobile ? '0' : '32px',
-    padding: isMobile ? '0' : '32px',
-  };
-
   const handleSelect = (selectedIndex: SetStateAction<number>) => {
     setIndex(selectedIndex);
   };
@@ -57,12 +52,6 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
   
   return (
     <Dialog open={open} onClose={onClose} maxWidth="lg"
-    sx={{
-      padding: '24px',
-      maxWidth: '878px',
-      margin: 'auto',
-      '& .css-1fu2e3p-MuiPaper-root-MuiDialog-paper': dialogPaperStyles,
-    }}
     >
       <IconButton
         edge="end"
@@ -82,18 +71,19 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
               {project.screenshots.map((screenshot) => (
                    <Carousel.Item key={screenshot}>
                   <img
-        src={screenshot}
-        alt={project.name}
-        width="100%"
-        style={{
-          width: '100%',
-          objectFit: 'cover',
-          marginBottom: '0',
-          borderRadius: '8px',
-          height: isMobile ? '190px' : '424px',
-          boxShadow: '2px 4px 15px rgba(0,0,0,0.2)',
-        }}
-      />
+                  src={screenshot}
+                  alt={project.name}
+                  width="100%"
+                  style={{
+                    width: '100%',
+                    objectFit: 'contain',
+                    marginBottom: '0',
+                    borderRadius: '8px',
+                    height: isMobile ? '263px' : '464px',
+                    boxShadow: '2px 4px 15px rgba(0,0,0,0.2)',
+                    padding: '0'
+                  }}
+              />
       </Carousel.Item>
         ))}
               </Carousel>

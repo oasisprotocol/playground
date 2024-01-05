@@ -27,7 +27,6 @@ export const playgroundTheme = createTheme({
         fontSize: '18px',
         color: '#3431AC',
         letterSpacing: '-0.5px',
-
     }
   },
   components: {
@@ -93,7 +92,15 @@ export const playgroundTheme = createTheme({
         },
       },
     },
-    
+    MuiDialog: {
+      styleOverrides: {
+        paper: {
+          padding: '24px',
+          maxWidth: '878px',
+          margin: 'auto',
+        },
+      },
+    },
     MuiCheckbox: {
       styleOverrides: {
         root: {
