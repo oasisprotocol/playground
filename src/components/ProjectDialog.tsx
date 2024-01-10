@@ -98,7 +98,7 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
                       >Last Updated: 
                       </Typography>
                       <Typography sx={{ color: '#3431AC', letterSpacing: '-0.5px', marginBottom: '16px' }}>
-                      <Typography  sx={linkStyles}>
+                      <Typography component="span" sx={linkStyles}>
                       { new Date(project.lastUpdated).toLocaleDateString()}
                       </Typography>
                     </Typography>
@@ -108,7 +108,7 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
                       >Created: 
                       </Typography>
                       <Typography sx={{ color: '#3431AC', letterSpacing: '-0.5px', marginBottom: '24px' }}>
-                      <Typography  sx={linkStyles}>
+                      <Typography component="span" sx={linkStyles}>
                       {new Date(project.created).toLocaleDateString()}
                       </Typography>
                     </Typography>
