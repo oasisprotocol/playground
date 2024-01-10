@@ -64,7 +64,7 @@ export const playgroundTheme = createTheme({
           backgroundColor: 'transparent',
           outline: 'none',
             border: 'none',
-          '&.MuiSelect-select.MuiSelect-outlined.MuiInputBase-input.MuiOutlinedInput-input': {
+          '&.MuiSelect-outlined': {
             paddingTop: '6px',
             paddingBottom: '6px'
           },
