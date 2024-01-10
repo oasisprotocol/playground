@@ -32,12 +32,12 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
   selectedTags,
   selectedLangs,
 }) => {
-  const [index, setIndex] = useState(0);
+  const [carouselIndex, setCarouselIndex] = useState(0);
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
-  const handleSelect = (selectedIndex: SetStateAction<number>) => {
-    setIndex(selectedIndex);
+  const handleSelectCarouselSlide = (selectedIndex: SetStateAction<number>) => {
+    setCarouselIndex(selectedIndex);
   };
 
   return (
@@ -55,7 +55,7 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
       {project && (
         <div style={{ padding: isMobile ? '32px 20px' : '32px' }}>
               <Typography variant="h2" sx={{ fontSize: '34px', letterSpacing: '-1.5px', paddingRight: '24px'}}>{project.name}</Typography>
-              <Carousel activeIndex={index} onSelect={handleSelect}
+              <Carousel activeIndex={carouselIndex} onSelect={handleSelectCarouselSlide}
               style={{backgroundColor: 'lightgrey', marginTop: '24px', borderRadius: '8px', color: '#0D09E3',  boxShadow: '0px 3px 15px rgba(0,0,0,0.2)'}}
               >
               {project.screenshots.map((screenshot) => (
