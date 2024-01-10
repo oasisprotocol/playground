@@ -19,9 +19,7 @@ import '../App.css';
 import { LanguageMappings } from '../languageUtils';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSliders } from '@fortawesome/free-solid-svg-icons';
-
-
-
+import { SortingOptions } from './Sorting';
 
 const ProjectList: React.FC = () => {
   const theme = useTheme();
@@ -163,13 +161,6 @@ const ProjectList: React.FC = () => {
       setSelectedTags([...selectedTags, tag]);
     }
   };
-
-  enum SortingOptions {
-    TITLE = 'Order By',
-    NAME = 'Name',
-    LAST_UPDATED = 'Last Updated',
-    CREATED_DATE = 'Created',
-  }
 
   const [sortOption, setSortOption] = useState<SortingOptions>(SortingOptions.TITLE);
 

@@ -2,7 +2,7 @@ import { Grid, Typography, Select, MenuItem, SelectChangeEvent, useTheme, useMed
 import { KeyboardArrowDown } from '@mui/icons-material';
 
 
-enum SortingOptions {
+export enum SortingOptions {
   TITLE = 'Order By',
   NAME = 'Name',
   LAST_UPDATED = 'Last Updated',
