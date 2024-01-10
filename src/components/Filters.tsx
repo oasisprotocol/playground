@@ -193,7 +193,7 @@ const Filters: React.FC<FiltersProps> = ({
       <Grid item xs={12} md={3}>
         <Box sx={{ display: 'flex', alignItems: 'center'}}>
           <Typography variant="h6" gutterBottom>
-            Only OPF Approved
+            Only OPF maintained
           </Typography>
           <Switch onClick={handleMaintainedByOasisToggle} />
         </Box>

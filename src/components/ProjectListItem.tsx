@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Grid, Paper, Typography, useMediaQuery, useTheme } from '@mui/material';
 import { Project } from '../types';
-import OasisApprovedIcon from '../assets/OasisApprovedIcon.svg';
+import MaintainedByOasisIcon from '../assets/MaintainedByOasisIcon.svg';
 import TagsList from './TagsList';
 import LanguagesList from './LanguagesList';
 
@@ -96,7 +96,7 @@ const ProjectListItem: React.FC<ProjectListItemProps> = ({
               {project.maintainedByOasis && (
                 <img
                   width='48px'
-                  src={OasisApprovedIcon}
+                  src={MaintainedByOasisIcon}
                   alt="Maintained by Oasis Badge"
                 />
               )}

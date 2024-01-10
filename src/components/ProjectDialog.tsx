@@ -4,7 +4,7 @@ import TagsList from './TagsList';
 import { Project } from '../types';
 import Carousel from 'react-bootstrap/Carousel';
 import { SetStateAction, useState } from 'react';
-import OasisApprovedIcon from '../assets/OasisApprovedIcon.svg';
+import MaintainedByOasisIcon from '../assets/MaintainedByOasisIcon.svg';
 import '../App.css'; 
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
@@ -183,13 +183,13 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
                       {project.maintainedByOasis && (
                         <Box sx={{display: 'flex', alignItems: 'center', marginTop: '24px'}}>
                            <img
-                            src={OasisApprovedIcon}
+                            src={MaintainedByOasisIcon}
                             alt="Maintained by Oasis Badge"
                             width='48px'
                           />
                            <Typography
                           sx={{color: '#445E77', letterSpacing: '-0.5px', paddingLeft: '16px', maxWidth: '210px', lineHeight: '1.3'}}
-                          >Officially approved by the Oasis Protocol Foundation</Typography>
+                          >Maintained by the Oasis Protocol Foundation</Typography>
                         </Box>
                       )}
                    </Grid>
