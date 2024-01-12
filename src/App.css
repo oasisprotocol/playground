@@ -1,6 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600&family=Fondamento&display=swap');
+@import '@fontsource-variable/figtree';
+
 body {
-  font-family: 'Figtree', sans-serif;
+  font-family: 'Figtree Variable', sans-serif;
 }
 
 *,
@@ -13,7 +14,7 @@ body {
   display: none!important;
 }
 
-.carousel-control-next-icon,
+.carousel-control-next-icon, 
 .carousel-control-prev-icon {
     background-color: navy;
     padding: 4px;
