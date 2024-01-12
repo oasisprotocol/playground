@@ -1,11 +1,16 @@
 import React from 'react';
 import { Box, Button, Checkbox, FormControlLabel, Grid, Switch, Typography } from '@mui/material';
 import Tags from './Tags';
+import Languages from './Languages';
 
 interface FiltersProps {
-  allTags: string[];
+  // allTags: string[];
+  tags: string[];
+  langs: string[];
   selectedTags: string[];
+  selectedLangs: string[];
   handleTagClick: (tag: string) => void;
+  handleLanguageClick: (tag: string) => void;
   selectedLicenses: string[];
   handleLicenseChange: (license: string) => void;
   selectedSources: string[];
@@ -15,12 +20,16 @@ interface FiltersProps {
   maintainedByOasis: boolean;
   handleMaintainedByOasisToggle: () => void;
   handleClearTags: () => void;
+  handleClearLangs: () => void;
 }
 
 const Filters: React.FC<FiltersProps> = ({
-  allTags,
+  langs,
+  tags,
   selectedTags,
+  selectedLangs,
   handleTagClick,
+  handleLanguageClick,
   selectedLicenses,
   handleLicenseChange,
   selectedSources,
@@ -29,27 +38,46 @@ const Filters: React.FC<FiltersProps> = ({
   handleParatimesChange,
   handleMaintainedByOasisToggle,
   handleClearTags,
+  handleClearLangs,
 }) => {
   return (
     <Grid container spacing={2} sx={{ borderBottom: '2px solid #CBC8EC', paddingBottom: '32px', paddingTop: '24px'}}>
-      <Grid item xs={12} md={3}>
-        <Box>
-          <Typography variant="h6" gutterBottom>
-            Tags
-          </Typography>
-          <Tags tags={allTags} selectedTags={selectedTags} handleTagClick={handleTagClick} />
-          {selectedTags.length > 0 && (
-            <Button
-              onClick={handleClearTags}
-              sx={{ textDecoration: 'underline', textTransform: 'none' }}
-            >
-              Clear Tags
-            </Button>
-          )}
-        </Box>
-      </Grid>
+        <Grid item xs={12} md={3}>
+    <Box>
+      <Typography variant="h6" gutterBottom>
+        Tags
+      </Typography>
+      <Tags tags={tags} selectedTags={selectedTags} handleTagClick={handleTagClick} />
+      {selectedTags.length > 0 && (
+        <Button
+          onClick={handleClearTags}
+          sx={{ textDecoration: 'underline', textTransform: 'none' }}
+        >
+          Clear
+        </Button>
+      )}
+    </Box>
+    <Box
+      sx={{
+        marginTop: '16px'
+      }}
+    >
+      <Typography variant="h6" gutterBottom>
+        Languages
+      </Typography>
+      <Languages languages={langs} selectedLanguages={selectedLangs} handleLanguageClick={handleLanguageClick} />
+      {selectedLangs.length > 0 && (
+        <Button
+          onClick={handleClearLangs}
+          sx={{ textDecoration: 'underline', textTransform: 'none' }}
+        >
+          Clear
+        </Button>
+      )}
+    </Box>
+  </Grid>
 
-      <Grid item xs={12} md={2}>
+  <Grid item xs={12} md={2}>
         <Box>
           <Typography variant="h6" gutterBottom sx={{ paddingLeft: '-12px' }}>
             Licenses

@@ -16,7 +16,6 @@ import { SelectChangeEvent } from '@mui/material/Select';
 import { useTheme } from '@mui/material/styles';
 import { useMediaQuery } from '@mui/material';
 import '../App.css'; 
-import { LanguageMappings } from '../languageUtils';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSliders } from '@fortawesome/free-solid-svg-icons';
 import { SortingOptions } from './Sorting';
@@ -27,6 +26,7 @@ const ProjectList: React.FC = () => {
 
   const [search, setSearch] = useState<string>('');
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
+  const [selectedLangs, setSelectedLangs] = useState<string[]>([]);
   const [openProjectDialog, setOpenProjectDialog] = useState<boolean>(false);
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [maintainedByOasis, setMaintainedByOasis] = useState<boolean>(false); 
@@ -45,6 +45,11 @@ const ProjectList: React.FC = () => {
   
   const handleClearTags = () => {
     setSelectedTags([]);
+    setSearch('');
+  };
+
+  const handleClearLangs = () => {
+    setSelectedLangs([]);
     setSearch('');
   };
 
@@ -90,23 +95,10 @@ const ProjectList: React.FC = () => {
     setShowFilters(!showFilters);
   };
 
-  const getMappedLanguages = (languages: string[]): string[] => {
-    return languages.map((language) => {
-      const mappedLanguage = LanguageMappings[language.toLowerCase() as keyof typeof LanguageMappings];
-      return mappedLanguage ? mappedLanguage : language.substring(0, 1).toUpperCase() + language.substring(1);
-    });
-  };
+  const tags: string[] = Array.from(new Set(projects.flatMap((project) => project.tags)));
+  const langs: string[] = Array.from(new Set(projects.flatMap((project) => project.languages)));
 
-
-  const allTags: string[] = Array.from(
-    new Set(
-      projects.flatMap((project) => [
-        ...project.tags,
-        ...getMappedLanguages(project.languages), // Use getMappedLanguages here
-      ])
-    )
-  );
-
+ 
 
   const filteredProjects: Project[] = projects.filter((project) => {
     const searchMatch: boolean =
@@ -115,8 +107,12 @@ const ProjectList: React.FC = () => {
   
     const tagsMatch: boolean =
       selectedTags.length === 0 ||
-      selectedTags.every((tag) => project.tags.includes(tag) || project.languages.includes(tag));
-  
+      selectedTags.every((tag) => project.tags.includes(tag));
+      
+    const langsMatch: boolean =
+      selectedLangs.length === 0 ||
+      selectedLangs.every((lang) => project.languages.includes(lang));
+
     const maintainedByOasisMatch: boolean =
       !maintainedByOasis || project.maintainedByOasis;
   
@@ -151,7 +147,7 @@ const ProjectList: React.FC = () => {
         selectedParatimes.includes('Cipher') ||
         selectedParatimes.every((paratime) => project.paratimes?.includes(paratime));
   
-    return searchMatch && tagsMatch  && paratimeMatch &&maintainedByOasisMatch && licenseMatch && sourcesMatch;
+    return searchMatch && tagsMatch && langsMatch  && paratimeMatch &&maintainedByOasisMatch && licenseMatch && sourcesMatch;
   });
 
   const handleTagClick = (tag: string) => {
@@ -159,6 +155,14 @@ const ProjectList: React.FC = () => {
       setSelectedTags(selectedTags.filter((t) => t !== tag));
     } else {
       setSelectedTags([...selectedTags, tag]);
+    }
+  };
+
+  const handleLangClick = (lang: string) => {
+    if (selectedLangs.includes(lang)) {
+      setSelectedLangs(selectedLangs.filter((l) => l !== lang));
+    } else {
+      setSelectedLangs([...selectedLangs, lang]);
     }
   };
 
@@ -250,9 +254,12 @@ const ProjectList: React.FC = () => {
               }}
             >
               <Filters
-                allTags={allTags}
+                tags={tags}
+                langs={langs}
                 selectedTags={selectedTags}
+                selectedLangs={selectedLangs}
                 handleTagClick={handleTagClick}
+                handleLanguageClick={handleLangClick}
                 selectedLicenses={selectedLicenses}
                 handleLicenseChange={handleLicenseChange}
                 selectedSources={selectedSources}
@@ -261,7 +268,8 @@ const ProjectList: React.FC = () => {
                 handleParatimesChange={handleParatimesChange}
                 maintainedByOasis={maintainedByOasis}
                 handleMaintainedByOasisToggle={handleMaintainedByOasisToggle}
-              handleClearTags={handleClearTags}
+                handleClearTags={handleClearTags}
+                handleClearLangs={handleClearLangs}
                 />
             </div>
           </div>
@@ -278,8 +286,11 @@ const ProjectList: React.FC = () => {
               project={project}
               handleProjectClick={handleProjectClick}
               selectedTags={selectedTags}
+              selectedLangs={selectedLangs}
               handleTagClick={handleTagClick}
-              allTags={allTags}
+              handleLangClick={handleLangClick}
+              langs={project.languages}
+              tags={project.tags}
               />
         ))}
       </Grid>
@@ -288,6 +299,7 @@ const ProjectList: React.FC = () => {
         onClose={handleProjectDialogClose}
         project={selectedProject}
         selectedTags={selectedTags}
+        selectedLangs={selectedLangs}
         handleTagClick={handleTagClick}
       />
   </Container>

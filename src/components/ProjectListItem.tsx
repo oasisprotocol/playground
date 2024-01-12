@@ -3,14 +3,17 @@ import { Box, Grid, Paper, Typography, useMediaQuery, useTheme } from '@mui/mate
 import { Project } from '../types';
 import OasisApprovedIcon from '../assets/OasisApprovedIcon.svg';
 import TagsList from './TagsList';
-import { LanguageMappings } from '../languageUtils';
+import LanguagesList from './LanguagesList';
 
 interface ProjectListItemProps {
   project: Project;
   handleProjectClick: (project: Project) => void;
   selectedTags: string[];
+  selectedLangs: string[];
   handleTagClick: (tag: string) => void;
-  allTags: string[];
+  handleLangClick: (tag: string) => void;
+  tags: string[];
+  langs: string[];
 }
 
 const truncateText = (text: string, maxLength: number) => {
@@ -24,20 +27,12 @@ const ProjectListItem: React.FC<ProjectListItemProps> = ({
   project,
   handleProjectClick,
   selectedTags,
+  selectedLangs,
+  tags,
+  langs
 }) => {
   const theme = useTheme();
   const isMobileScreen = useMediaQuery(theme.breakpoints.down('sm'));
-
-  const getMappedLanguages = (languages: string[]): string[] => {
-    return languages.map((language) => {
-      const mappedLanguage = LanguageMappings[language.toLowerCase() as keyof typeof LanguageMappings];
-      return mappedLanguage ? mappedLanguage : language.substring(0, 1).toUpperCase() + language.substring(1);
-    });
-  };
-  
-
-  const mappedLanguages = getMappedLanguages(project.languages);
-  const combinedTags = [...project.tags, ...mappedLanguages];
 
   
   return (
@@ -81,7 +76,7 @@ const ProjectListItem: React.FC<ProjectListItemProps> = ({
             sx={{
               color: '#445E77',
               lineHeight: '130%',
-              minHeight: '84px',
+              minHeight: '60px',
             }}
           >
             {truncateText(project.description, 108)}
@@ -94,8 +89,8 @@ const ProjectListItem: React.FC<ProjectListItemProps> = ({
               marginTop: isMobileScreen ? '8px' : '16px',
             }}
           >
-            <Grid item xs={12} md={10} sx={{ minHeight: '80px' }}>
-              <TagsList tags={combinedTags} selectedTags={selectedTags} isLarge={false} />
+            <Grid item xs={12} md={10} sx={{ minHeight: isMobileScreen ? '50px' : '80px' }}>
+              <TagsList tags={tags} selectedTags={selectedTags} isLarge={false} />
             </Grid>
             <Grid item xs={12} md={2}>
               {project.maintainedByOasis && (
@@ -105,7 +100,11 @@ const ProjectListItem: React.FC<ProjectListItemProps> = ({
                   alt="Maintained by Oasis Badge"
                 />
               )}
+            </Grid> 
+            <Grid item xs={12} >
+              <LanguagesList langs={langs} selectedLangs={selectedLangs} isLarge={false} isInListItem={true} />
             </Grid>
+            
           </Grid>
         </Box>
       </Paper>

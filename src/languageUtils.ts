@@ -279,7 +279,7 @@ export const LanguageMappings = {
 };
 
 export const getCorrectLanguageName = (languageId: string) => {
-  const officialName = (LanguageMappings as Record<string, string>)[languageId];
+  const officialName = (LanguageMappings as Record<string, string>)[languageId.toLowerCase()];
   if (officialName) {
     return officialName;
   }

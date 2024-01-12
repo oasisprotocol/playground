@@ -8,7 +8,7 @@ import OasisApprovedIcon from '../assets/OasisApprovedIcon.svg';
 import '../App.css'; 
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import { LanguageMappings } from '../languageUtils';
+import LanguagesList from './LanguagesList';
 
 
 interface ProjectDialogProps {
@@ -16,6 +16,7 @@ interface ProjectDialogProps {
   onClose: () => void;
   project: Project | null;
   selectedTags: string[];
+  selectedLangs: string[];
   handleTagClick: (tag: string) => void;
 }
 
@@ -29,6 +30,7 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
   onClose,
   project,
   selectedTags,
+  selectedLangs,
 }) => {
   const [index, setIndex] = useState(0);
   const theme = useTheme();
@@ -38,18 +40,6 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
     setIndex(selectedIndex);
   };
 
-  const getMappedLanguages = (languages: string[]): string[] => {
-    return languages.map((language) => {
-      const mappedLanguage = LanguageMappings[language.toLowerCase() as keyof typeof LanguageMappings];
-      return mappedLanguage ? mappedLanguage : language.substring(0, 1).toUpperCase() + language.substring(1);
-    });
-  };
-  let combinedTags: string[] = [];
-  if (project && project.languages && project.tags) {
-    const mappedLanguages = getMappedLanguages(project.languages);
-    combinedTags = [...project.tags, ...mappedLanguages];
-  }
-  
   return (
     <Dialog open={open} onClose={onClose} maxWidth="lg"
     >
@@ -113,8 +103,20 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
                       </Typography>
                     </Typography>
 
+                    <Typography
+                      sx={{color: '#445E77', letterSpacing: '-0.5px', fontSize: '14px', marginTop: '16px'}}
+                      >Languages:
+                    </Typography>
+                    <Box sx={{ color: '#3431AC', letterSpacing: '-0.5px', marginBottom: '24px' }}>
+                    <LanguagesList langs={project.languages} selectedLangs={selectedLangs} isLarge={false} />
+                    </Box>
 
-                      <TagsList tags={combinedTags} selectedTags={selectedTags} isLarge={true} />
+                    <Typography
+                      sx={{color: '#445E77', letterSpacing: '-0.5px', fontSize: '14px', marginTop: '16px', marginBottom: '6px'}}
+                      >Tags:
+                    </Typography>
+                    <TagsList tags={project.tags} selectedTags={selectedTags} isLarge={true} />
+                   
                    </Grid>
                    <Grid item xs={12} md={6}>
                      <Typography
