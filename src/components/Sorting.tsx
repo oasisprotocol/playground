@@ -62,7 +62,8 @@ const Sorting: React.FC<SortingProps> = ({
                   borderColor: 'transparent',
                   border: 'none',
                   outline: 'none',
-                  paddingflexBasis: '0',Top: '0',
+                  paddingTop: '0',
+                  flexBasis: '0',
                   marginLeft: 'auto',
                   display: 'flex',
                   '& .MuiSelect-root': {
