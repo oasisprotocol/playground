@@ -21,15 +21,12 @@
     "@mui/material": "^5.14.16",
     "@mui/styled-engine-sc": "^6.0.0-alpha.4",
     "@types/js-yaml": "^4.0.9",
-    "add": "^2.0.6",
     "bootstrap": "5.3.0",
     "js-yaml": "^4.1.0",
-    "prismjs": "^1.29.0",
     "react": "^18.2.0",
     "react-bootstrap": "^2.9.1",
     "react-dom": "^18.2.0",
-    "styled-components": "^6.1.0",
-    "yarn": "^1.22.21"
+    "styled-components": "^6.1.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",
