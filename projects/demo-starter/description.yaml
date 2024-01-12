@@ -4,29 +4,26 @@ authors:
   - Oasis Protocol Foundation: https://oasisprotocol.org
 description: |
   Skeleton monorepo for a typical modern EVM-compatible confidential dApp built
-  on Oasis.<br/>
+  on Oasis.
   
-  Contains the <b>backend</b> package which:
-  <ul>
-  <li>includes a simple solidity message box smart contract with tests written
-  in TypeScript</li>
-  <li>imports the <a href="https://www.npmjs.com/package/@oasisprotocol/sapphire-contracts">@oasisprotocol/sapphire-contracts</a
-  solidity package for on-chain encryption and other Sapphire-specific
-  primitives</li>
-  <li>imports the <a href="https://www.npmjs.com/package/@oasisprotocol/sapphire-hardhat">@oasisprotocol/sapphire-hardhat</a
-  package for connecting to Mainnet, Testnet or Localnet Sapphire networks and
-  deploying the contract</li>
-  </ul>
+  Contains the **backend** package which:
+
+    - includes a simple solidity message box smart contract with tests written
+      in TypeScript,
+    - imports the [@oasisprotocol/sapphire-contracts](https://www.npmjs.com/package/@oasisprotocol/sapphire-contracts)
+      solidity package for on-chain encryption and other Sapphire-specific primitives,
+    - imports the [@oasisprotocol/sapphire-hardhat](https://www.npmjs.com/package/@oasisprotocol/sapphire-hardhat)
+      package for connecting to Mainnet, Testnet or Localnet Sapphire networks
+      and deploying the contract.
   
-  The <b>frontend</b> package is:
-  <ul>
-  <li>written in TypeScript and Vue</li>
-  <li>imports the <a href="https://www.npmjs.com/package/@oasisprotocol/sapphire-paratime">@oasisprotocol/sapphire-paratime</a
-  package for encrypting the transactions and signing the contract view calls</li>
-  <li>supports MetaMask, Brave or other EIP-1193-compatible wallet</li>
-  </ul>
+  The **frontend** package:
+
+    - is written in TypeScript and Vue,
+    - imports the [@oasisprotocol/sapphire-paratime](https://www.npmjs.com/package/@oasisprotocol/sapphire-paratime)
+      package for encrypting the transactions and signing the contract view calls,
+    - supports MetaMask, Brave or other EIP-1193-compatible wallet.
   
-  Uses <pre>pnpm</pre> to manage the monorepo.
+  Uses `pnpm` to manage the monorepo.
 paratimes:
   - sapphire
 languages:

@@ -3,13 +3,14 @@ name: Confidential Hello World on Cipher
 authors:
   - Oasis Protocol Foundation: https://oasisprotocol.org
 description: |
-  Minimal <b>confidential</b> smart contract written in rust which uses the
+  Minimal **confidential** smart contract written in rust which uses the
   Oasis Contracts SDK including the contract encryption of specific fields and
-  transaction end-to-end encryption.<br/>
+  transaction end-to-end encryption.
+
   The contract code can be uploaded to Cipher Mainnet, Testnet or Localnet,
-  instantiated and transacted with the
-  <a href="https://github.com/oasisprotocol/cli">Oasis CLI</a>.<br/>
-  This example is part of the official <a href="https://github.com/oasisprotocol/oasis-sdk">Oasis SDK</a>
+  instantiated and transacted with the [Oasis CLI](https://github.com/oasisprotocol/cli).
+
+  This example is part of the official [Oasis SDK](https://github.com/oasisprotocol/oasis-sdk)
   codebase tests.
 paratimes:
   - cipher
