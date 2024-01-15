@@ -34,11 +34,11 @@ const ProjectList: React.FC = () => {
   const [selectedParatimes, setSelectedParatimes] = useState<string[]>(['Sapphire', 'Emerald', 'Cipher']);
   const [showFilters, setShowFilters] = useState<boolean>(false);
 
-  const Licenses = Array.from(
+  const licenses = Array.from(
     new Set(projects.map((project) => project.license))
   );
-  const [selectedLicenses, setSelectedLicenses] = useState<string[]>(Licenses); 
 
+  const [selectedLicenses, setSelectedLicenses] = useState<string[]>(licenses); 
 
 
   const paddingValue = isMobile ? '24px' : '34px 46px'; 
@@ -117,7 +117,7 @@ const ProjectList: React.FC = () => {
       !maintainedByOasis || project.maintainedByOasis;
   
     const licenseMatch: boolean =
-      selectedLicenses.length === 0 || selectedLicenses.includes(project.license);
+     selectedLicenses.includes(project.license);
   
     const sourcesMatch: boolean =
       selectedSources.length === 0
@@ -146,9 +146,11 @@ const ProjectList: React.FC = () => {
         selectedParatimes.includes('Emerald') ||
         selectedParatimes.includes('Cipher') ||
         selectedParatimes.every((paratime) => project.paratimes?.includes(paratime));
+
   
     return searchMatch && tagsMatch && langsMatch  && paratimeMatch &&maintainedByOasisMatch && licenseMatch && sourcesMatch;
   });
+
 
   const handleTagClick = (tag: string) => {
     if (selectedTags.includes(tag)) {
@@ -260,6 +262,7 @@ const ProjectList: React.FC = () => {
                 selectedLangs={selectedLangs}
                 handleTagClick={handleTagClick}
                 handleLanguageClick={handleLangClick}
+                licenses={licenses}
                 selectedLicenses={selectedLicenses}
                 handleLicenseChange={handleLicenseChange}
                 selectedSources={selectedSources}

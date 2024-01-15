@@ -11,6 +11,7 @@ interface FiltersProps {
   selectedLangs: string[];
   handleTagClick: (tag: string) => void;
   handleLanguageClick: (tag: string) => void;
+  licenses: string[];
   selectedLicenses: string[];
   handleLicenseChange: (license: string) => void;
   selectedSources: string[];
@@ -30,6 +31,7 @@ const Filters: React.FC<FiltersProps> = ({
   selectedLangs,
   handleTagClick,
   handleLanguageClick,
+  licenses,
   selectedLicenses,
   handleLicenseChange,
   selectedSources,
@@ -82,7 +84,7 @@ const Filters: React.FC<FiltersProps> = ({
           <Typography variant="h6" gutterBottom sx={{ paddingLeft: '-12px' }}>
             Licenses
           </Typography>
-          {selectedLicenses.map((license) => (
+          {licenses.map((license) => (
             <Box key={license} sx={{ marginBottom: '-7px' }}>
               <FormControlLabel
                 control={
@@ -95,6 +97,7 @@ const Filters: React.FC<FiltersProps> = ({
                 label={license}
               />
             </Box>
+            
           ))}
         </Box>
       </Grid>
