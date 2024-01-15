@@ -7,7 +7,7 @@ interface ProjectItemLanguagesProps {
   isInListItem?: boolean;
 }
 
-const ProjectItemLanguages: React.FC<ProjectItemLanguagesProps> = ({ langs, selectedLangs, isLarge, isInListItem }) => {
+const LanguagesList: React.FC<ProjectItemLanguagesProps> = ({ langs, selectedLangs, isLarge, isInListItem }) => {
 
   return (
     <Box
@@ -36,4 +36,4 @@ const ProjectItemLanguages: React.FC<ProjectItemLanguagesProps> = ({ langs, sele
   );
 };
 
-export default ProjectItemLanguages;
+export default LanguagesList;

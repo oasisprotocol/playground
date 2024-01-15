@@ -156,8 +156,8 @@ const Filters: React.FC<FiltersProps> = ({
     <FormControlLabel
       control={
         <Checkbox
-          checked={selectedParatimes.includes('Sapphire')}
-          onChange={() => handleParatimesChange('Sapphire')}
+          checked={selectedParatimes.includes('sapphire')}
+          onChange={() => handleParatimesChange('sapphire')}
         />
       }
       label="Sapphire"
@@ -168,8 +168,8 @@ const Filters: React.FC<FiltersProps> = ({
     <FormControlLabel
       control={
         <Checkbox
-          checked={selectedParatimes.includes('Emerald')}
-          onChange={() => handleParatimesChange('Emerald')}
+          checked={selectedParatimes.includes('emerald')}
+          onChange={() => handleParatimesChange('emerald')}
         />
       }
       label="Emerald"
@@ -180,8 +180,8 @@ const Filters: React.FC<FiltersProps> = ({
     <FormControlLabel
       control={
         <Checkbox
-          checked={selectedParatimes.includes('Cipher')}
-          onChange={() => handleParatimesChange('Cipher')}
+          checked={selectedParatimes.includes('cipher')}
+          onChange={() => handleParatimesChange('cipher')}
         />
       }
       label="Cipher"

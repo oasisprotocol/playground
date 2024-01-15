@@ -31,7 +31,7 @@ const ProjectList: React.FC = () => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [maintainedByOasis, setMaintainedByOasis] = useState<boolean>(false); 
   const [selectedSources, setSelectedSources] = useState<string[]>(['Demo', 'Code', 'Tutorial']); 
-  const [selectedParatimes, setSelectedParatimes] = useState<string[]>(['Sapphire', 'Emerald', 'Cipher']);
+  const [selectedParatimes, setSelectedParatimes] = useState<string[]>(['sapphire', 'emerald', 'cipher']);
   const [showFilters, setShowFilters] = useState<boolean>(false);
 
   const licenses = Array.from(
@@ -139,16 +139,15 @@ const ProjectList: React.FC = () => {
             return false;
           });
 
+          const paratimeMatch: boolean =
+          selectedParatimes.length > 0 &&
+          (selectedParatimes.length === 0 ||
+            selectedParatimes.some((paratime) =>
+              project.paratimes ? project.paratimes.includes(paratime) : false
+            ));
 
-    const paratimeMatch: boolean =
-        selectedParatimes.length === 0 ||
-        selectedParatimes.includes('Sapphire') ||
-        selectedParatimes.includes('Emerald') ||
-        selectedParatimes.includes('Cipher') ||
-        selectedParatimes.every((paratime) => project.paratimes?.includes(paratime));
 
-  
-    return searchMatch && tagsMatch && langsMatch  && paratimeMatch &&maintainedByOasisMatch && licenseMatch && sourcesMatch;
+    return searchMatch && tagsMatch && langsMatch  && paratimeMatch && maintainedByOasisMatch && licenseMatch && sourcesMatch;
   });
 
 
