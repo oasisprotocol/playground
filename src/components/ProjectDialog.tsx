@@ -1,6 +1,6 @@
 import { Box, Dialog, Grid, IconButton, Typography, Link } from '@mui/material';
 import { Close } from '@mui/icons-material';
-import TagsList from './TagsList';
+import ProjectItemTags from './ProjectItemTags';
 import { Project } from '../types';
 import Carousel from 'react-bootstrap/Carousel';
 import { SetStateAction, useState } from 'react';
@@ -8,7 +8,7 @@ import MaintainedByOasisIcon from '../assets/MaintainedByOasisIcon.svg';
 import '../App.css'; 
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import LanguagesList from './LanguagesList';
+import ProjectItemLanguages from './ProjectItemLanguages';
 
 
 interface ProjectDialogProps {
@@ -108,14 +108,14 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
                       >Languages:
                     </Typography>
                     <Box sx={{ color: '#3431AC', letterSpacing: '-0.5px', marginBottom: '24px' }}>
-                    <LanguagesList langs={project.languages} selectedLangs={selectedLangs} isLarge={false} />
+                    <ProjectItemLanguages langs={project.languages} selectedLangs={selectedLangs} isLarge={false} />
                     </Box>
 
                     <Typography
                       sx={{color: '#445E77', letterSpacing: '-0.5px', fontSize: '14px', marginTop: '16px', marginBottom: '6px'}}
                       >Tags:
                     </Typography>
-                    <TagsList tags={project.tags} selectedTags={selectedTags} isLarge={true} />
+                    <ProjectItemTags tags={project.tags} selectedTags={selectedTags} isLarge={true} />
                    
                    </Grid>
                    <Grid item xs={12} md={6}>

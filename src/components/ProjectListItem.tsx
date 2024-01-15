@@ -2,8 +2,8 @@ import React from 'react';
 import { Box, Grid, Paper, Typography, useMediaQuery, useTheme } from '@mui/material';
 import { Project } from '../types';
 import MaintainedByOasisIcon from '../assets/MaintainedByOasisIcon.svg';
-import TagsList from './TagsList';
-import LanguagesList from './LanguagesList';
+import ProjectItemTags from './ProjectItemTags';
+import ProjectItemLanguages from './ProjectItemLanguages';
 
 interface ProjectListItemProps {
   project: Project;
@@ -90,7 +90,7 @@ const ProjectListItem: React.FC<ProjectListItemProps> = ({
             }}
           >
             <Grid item xs={12} md={10} sx={{ minHeight: isMobileScreen ? '50px' : '80px' }}>
-              <TagsList tags={tags} selectedTags={selectedTags} isLarge={false} />
+              <ProjectItemTags tags={tags} selectedTags={selectedTags} isLarge={false} />
             </Grid>
             <Grid item xs={12} md={2}>
               {project.maintainedByOasis && (
@@ -102,7 +102,7 @@ const ProjectListItem: React.FC<ProjectListItemProps> = ({
               )}
             </Grid> 
             <Grid item xs={12} >
-              <LanguagesList langs={langs} selectedLangs={selectedLangs} isLarge={false} isInListItem={true} />
+              <ProjectItemLanguages langs={langs} selectedLangs={selectedLangs} isLarge={false} isInListItem={true} />
             </Grid>
             
           </Grid>

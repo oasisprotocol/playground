@@ -1,12 +1,12 @@
 import { Chip } from '@mui/material';
 
-interface LanguagesProps {
+interface LanguageFilterListProps {
   languages: string[];
   selectedLanguages: string[];
   handleLanguageClick: (tag: string) => void;
 }
 
-const Languages: React.FC<LanguagesProps> = ({ languages, selectedLanguages, handleLanguageClick }) => {
+const LanguageFilterList: React.FC<LanguageFilterListProps> = ({ languages, selectedLanguages, handleLanguageClick }) => {
   return (
     <div>
       {languages.map((language: string) => (
@@ -22,4 +22,4 @@ const Languages: React.FC<LanguagesProps> = ({ languages, selectedLanguages, han
   );
 };
 
-export default Languages;
+export default LanguageFilterList;

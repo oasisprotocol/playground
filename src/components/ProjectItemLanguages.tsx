@@ -1,13 +1,13 @@
 import { Typography, Box } from '@mui/material';
 
-interface LanguagesProps {
+interface ProjectItemLanguagesProps {
   langs: string[];
   selectedLangs: string[];
   isLarge: boolean;
   isInListItem?: boolean;
 }
 
-const LanguagesList: React.FC<LanguagesProps> = ({ langs, selectedLangs, isLarge, isInListItem }) => {
+const ProjectItemLanguages: React.FC<ProjectItemLanguagesProps> = ({ langs, selectedLangs, isLarge, isInListItem }) => {
 
   return (
     <Box
@@ -36,4 +36,4 @@ const LanguagesList: React.FC<LanguagesProps> = ({ langs, selectedLangs, isLarge
   );
 };
 
-export default LanguagesList;
+export default ProjectItemLanguages;
