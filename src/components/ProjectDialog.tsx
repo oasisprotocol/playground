@@ -1,4 +1,4 @@
-import { Box, Dialog, Grid, IconButton, Typography, Link } from '@mui/material';
+import { Box, Dialog, Grid, IconButton, Typography, Link as MuiLink } from '@mui/material';
 import ReactMarkdown from 'react-markdown';
 import { Close } from '@mui/icons-material';
 import ProjectItemTags from './ProjectItemTags';
@@ -43,6 +43,19 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
     setCarouselIndex(selectedIndex);
   };
 
+
+  const modifyLinkTarget = (url?: string, title?: string, text?: React.ReactNode) => {
+    const target = url && url.startsWith('http') ? '_blank' : undefined;
+    const linkText = typeof text === 'string' ? text : '';
+  
+    return (
+      <MuiLink href={url} target={target} title={title} sx={linkStyles}>
+        {linkText}
+      </MuiLink>
+    );
+  };
+
+
   return (
     <Dialog open={open} onClose={onClose} maxWidth="lg"
     >
@@ -85,9 +98,9 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
                       <Box
                           sx={{color: '#445E77', letterSpacing: '-0.5px', marginBottom: '24px', fontFamily: "'Figtree Variable',sans-serif"}}
                           >
-                      <ReactMarkdown>
-                        {project.description}
-                      </ReactMarkdown>
+                             <ReactMarkdown components={{ a: ({ node, ...props }) => modifyLinkTarget(props.href, props.title, props.children) }}>
+                              {project.description}
+                            </ReactMarkdown>
                       </Box>
 
                       <Typography
@@ -131,18 +144,18 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
                       >Authors:
                       </Typography>
                       <Typography sx={{ color: '#3431AC', letterSpacing: '-0.5px', marginBottom: '16px' }}>
-                      <Link href={Object.values(project.authors[0])[0]} target="_blank" underline="always"  sx={linkStyles}>
+                      <MuiLink href={Object.values(project.authors[0])[0]} target="_blank" underline="always"  sx={linkStyles}>
                       {Object.keys(project.authors[0])[0]}
-                      </Link>
+                      </MuiLink>
                     </Typography>
                       <Typography
                       sx={{color: '#445E77', letterSpacing: '-0.5px', fontSize: '14px'}}
                       >Code:
                       </Typography>
                         <Typography sx={{ color: '#3431AC', letterSpacing: '-0.5px', marginBottom: '16px' }}>
-                      <Link href={project.codeUrl} target="_blank" underline="always"  sx={linkStyles}>
+                      <MuiLink href={project.codeUrl} target="_blank" underline="always"  sx={linkStyles}>
                       Link to GitHub
-                      </Link>
+                      </MuiLink>
                     </Typography>
 
 
@@ -153,9 +166,9 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
                       >Demo:
                       </Typography>
                       <Typography sx={{ color: '#3431AC', letterSpacing: '-0.5px', marginBottom: '16px' }}>
-                      <Link href={project.demoUrl} target="_blank" underline="always"  sx={linkStyles}>
+                      <MuiLink href={project.demoUrl} target="_blank" underline="always"  sx={linkStyles}>
                         {project.name}
-                      </Link>
+                      </MuiLink>
                     </Typography>
                     </>
                     }
@@ -169,14 +182,14 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
                             </Typography>
                            
                             <Typography sx={{ color: '#3431AC', letterSpacing: '-0.5px', marginBottom: '16px' }}>
-                              <Link
+                              <MuiLink
                                     href={Object.values(project.tutorials[0])[0]}
                                     target="_blank"
                                     underline="always"
                                     sx={linkStyles}
                               >
                               {Object.keys(project.tutorials[0])[0]}
-                              </Link>
+                              </MuiLink>
                             </Typography>
                         </>
                       }
