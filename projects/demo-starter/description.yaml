@@ -1,0 +1,42 @@
+---
+name: Starter Project
+authors:
+  - Oasis Protocol Foundation: https://oasisprotocol.org
+description: |
+  Skeleton monorepo for a typical modern EVM-compatible confidential dApp built
+  on Oasis.
+  
+  Contains the **backend** package which:
+
+    - includes a simple solidity message box smart contract with tests written
+      in TypeScript,
+    - imports the [@oasisprotocol/sapphire-contracts](https://www.npmjs.com/package/@oasisprotocol/sapphire-contracts)
+      solidity package for on-chain encryption and other Sapphire-specific primitives,
+    - imports the [@oasisprotocol/sapphire-hardhat](https://www.npmjs.com/package/@oasisprotocol/sapphire-hardhat)
+      package for connecting to Mainnet, Testnet or Localnet Sapphire networks
+      and deploying the contract.
+  
+  The **frontend** package:
+
+    - is written in TypeScript and Vue,
+    - imports the [@oasisprotocol/sapphire-paratime](https://www.npmjs.com/package/@oasisprotocol/sapphire-paratime)
+      package for encrypting the transactions and signing the contract view calls,
+    - supports MetaMask, Brave or other EIP-1193-compatible wallet.
+  
+  Uses `pnpm` to manage the monorepo.
+paratimes:
+  - sapphire
+languages:
+  - solidity
+  - typescript
+license: Apache-2.0
+tags:
+  - pnpm
+  - Vue
+  - SmartCon 2023
+codeUrl: https://github.com/oasisprotocol/demo-starter
+tutorials:
+  - Sapphire Quickstart: https://docs.oasis.io/dapp/sapphire/quickstart
+created: 2023-09-29
+lastUpdated: 2023-10-06
+maintainedByOasis: true
