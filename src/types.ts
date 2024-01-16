@@ -7,7 +7,7 @@ export interface Project {
   screenshots: string[];
   license: string;
   tags: string[];
-  codeUrl: string;
+  codeUrl?: string;
   demoUrl: string;
   tutorials?: { [tutorial: string]: string }[]; 
   created: string; 

@@ -139,8 +139,9 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
                     </Typography>
 
 
-             
-                      <Typography
+                    {project.demoUrl &&
+                    <>
+                    <Typography
                       sx={{color: '#445E77', letterSpacing: '-0.5px', fontSize: '14px'}}
                       >Demo:
                       </Typography>
@@ -149,6 +150,9 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
                         {project.name}
                       </Link>
                     </Typography>
+                    </>
+                    }
+           
 
                       {project.tutorials &&
                         <>
