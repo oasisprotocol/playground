@@ -71,9 +71,6 @@ const ProjectListItem: React.FC<ProjectListItemProps> = ({
           <Typography variant="h2" gutterBottom>
             {project.name}
           </Typography>
-          <Typography variant="h2" gutterBottom>
-            {project.paratimes}
-          </Typography>
           <Typography
             gutterBottom
             sx={{
