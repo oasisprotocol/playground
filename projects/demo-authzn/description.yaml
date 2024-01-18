@@ -5,6 +5,8 @@ authors:
 description: |
   A short demo which connects to the Oasis Authenticator and obtains the user
   ID stored on Sapphire, if the authentication is successful.
+paratimes:
+  - sapphire
 languages:
   - typescript
 license: Apache-2.0
