@@ -1,4 +1,5 @@
 import { Box, Dialog, Grid, IconButton, Typography, Link } from '@mui/material';
+import ReactMarkdown from 'react-markdown';
 import { Close } from '@mui/icons-material';
 import ProjectItemTags from './ProjectItemTags';
 import { Project } from '../types';
@@ -24,6 +25,8 @@ const linkStyles = {
   color: '#3431AC',
   textDecorationColor: '#3431AC',
 };
+
+
 
 const ProjectDialog: React.FC<ProjectDialogProps> = ({
   open,
@@ -79,9 +82,13 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
               </Carousel>
              <Grid container spacing={3} sx={{marginBottom: '32px', marginTop: '32px'}}>
                    <Grid item xs={12} md={6}> 
-                      <Typography
-                      sx={{color: '#445E77', letterSpacing: '-0.5px', marginBottom: '24px'}}
-                      >{project.description}</Typography>
+                      <Box
+                          sx={{color: '#445E77', letterSpacing: '-0.5px', marginBottom: '24px', fontFamily: "'Figtree Variable',sans-serif"}}
+                          >
+                      <ReactMarkdown>
+                        {project.description}
+                      </ReactMarkdown>
+                      </Box>
 
                       <Typography
                       sx={{color: '#445E77', letterSpacing: '-0.5px', fontSize: '14px'}}
