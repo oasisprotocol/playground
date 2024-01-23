@@ -140,11 +140,10 @@ const ProjectList: React.FC = () => {
           });
 
           const paratimeMatch: boolean =
-          selectedParatimes.length > 0 &&
-          (selectedParatimes.length === 0 ||
-            selectedParatimes.some((paratime) =>
-              project.paratimes ? project.paratimes.includes(paratime) : false
-            ));
+            selectedParatimes.length > 0 &&
+            selectedParatimes.some(paratime =>
+              project.paratimes?.includes(paratime)
+            );
 
 
     return searchMatch && tagsMatch && langsMatch  && paratimeMatch && maintainedByOasisMatch && licenseMatch && sourcesMatch;
