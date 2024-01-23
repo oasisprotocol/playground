@@ -4,6 +4,7 @@ import { Project } from '../types';
 import MaintainedByOasisIcon from '../assets/MaintainedByOasisIcon.svg';
 import ProjectItemTags from './ProjectItemTags';
 import ProjectItemLanguages from './ProjectItemLanguages';
+import ReactMarkdown from 'react-markdown';
 
 interface ProjectListItemProps {
   project: Project;
@@ -79,7 +80,9 @@ const ProjectListItem: React.FC<ProjectListItemProps> = ({
               minHeight: '60px',
             }}
           >
-            {truncateText(project.description, 108)}
+             <ReactMarkdown
+                      >{truncateText(project.description, 108)}</ReactMarkdown>  
+            
           </Typography>
           <Grid
             container

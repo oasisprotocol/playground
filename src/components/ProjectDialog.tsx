@@ -1,4 +1,5 @@
 import { Box, Dialog, Grid, IconButton, Typography, Link } from '@mui/material';
+import ReactMarkdown from 'react-markdown';
 import { Close } from '@mui/icons-material';
 import ProjectItemTags from './ProjectItemTags';
 import { Project } from '../types';
@@ -80,8 +81,12 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
              <Grid container spacing={3} sx={{marginBottom: '32px', marginTop: '32px'}}>
                    <Grid item xs={12} md={6}> 
                       <Typography
+                      variant='body1'
                       sx={{color: '#445E77', letterSpacing: '-0.5px', marginBottom: '24px'}}
-                      >{project.description}</Typography>
+                      >
+                      <ReactMarkdown
+                      >{project.description}</ReactMarkdown>  
+                      </Typography>
 
                       <Typography
                       sx={{color: '#445E77', letterSpacing: '-0.5px', fontSize: '14px'}}
