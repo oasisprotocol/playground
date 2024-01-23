@@ -1,6 +1,6 @@
 import { Container, Typography, Box, ThemeProvider, Link } from '@mui/material';
 import ProjectList from './components/ProjectList';
-import backgroundImg from './assets/PlaygroundBg.webp'
+import backgroundImg from './assets/PlaygroundBgGradient.webp'
 import { playgroundTheme } from './styles/playgroundTheme';
 import { useTheme } from '@mui/material/styles';
 import { useMediaQuery } from '@mui/material';
@@ -20,8 +20,7 @@ const paddingValue = isMobile ? '42px' : '80px';
       height: '100%',
       minHeight: '100vh',
       backgroundImage: `url(${backgroundImg})`,
-      backgroundPosition: 'top left',
-      backgroundSize: 'cover',
+      backgroundSize: 'contain',
       backgroundRepeat: 'no-repeat',
       backgroundColor: '#1421F8',
     }}>
