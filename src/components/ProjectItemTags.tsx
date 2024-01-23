@@ -1,12 +1,12 @@
 import { Chip } from '@mui/material';
 
-interface TagsProps {
+interface ProjectItemTagsProps {
   tags: string[];
   selectedTags: string[];
   isLarge: boolean;
 }
 
-const TagsList: React.FC<TagsProps> = ({ tags, selectedTags, isLarge }) => {
+const ProjectItemTags: React.FC<ProjectItemTagsProps> = ({ tags, selectedTags, isLarge }) => {
   return (
     <div>
       {tags.map((tag: string) => (
@@ -34,4 +34,4 @@ const TagsList: React.FC<TagsProps> = ({ tags, selectedTags, isLarge }) => {
   );
 };
 
-export default TagsList;
+export default ProjectItemTags;

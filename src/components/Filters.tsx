@@ -1,11 +1,16 @@
 import React from 'react';
 import { Box, Button, Checkbox, FormControlLabel, Grid, Switch, Typography } from '@mui/material';
-import Tags from './Tags';
+import TagsSelector from './TagsSelector';
+import LanguagesSelector from './LanguagesSelector';
 
 interface FiltersProps {
-  allTags: string[];
+  tags: string[];
+  langs: string[];
   selectedTags: string[];
+  selectedLangs: string[];
   handleTagClick: (tag: string) => void;
+  handleLanguageClick: (tag: string) => void;
+  licenses: string[];
   selectedLicenses: string[];
   handleLicenseChange: (license: string) => void;
   selectedSources: string[];
@@ -15,12 +20,17 @@ interface FiltersProps {
   maintainedByOasis: boolean;
   handleMaintainedByOasisToggle: () => void;
   handleClearTags: () => void;
+  handleClearLangs: () => void;
 }
 
 const Filters: React.FC<FiltersProps> = ({
-  allTags,
+  langs,
+  tags,
   selectedTags,
+  selectedLangs,
   handleTagClick,
+  handleLanguageClick,
+  licenses,
   selectedLicenses,
   handleLicenseChange,
   selectedSources,
@@ -29,32 +39,51 @@ const Filters: React.FC<FiltersProps> = ({
   handleParatimesChange,
   handleMaintainedByOasisToggle,
   handleClearTags,
+  handleClearLangs,
 }) => {
   return (
     <Grid container spacing={2} sx={{ borderBottom: '2px solid #CBC8EC', paddingBottom: '32px', paddingTop: '24px'}}>
-      <Grid item xs={12} md={3}>
-        <Box>
-          <Typography variant="h6" gutterBottom>
-            Tags
-          </Typography>
-          <Tags tags={allTags} selectedTags={selectedTags} handleTagClick={handleTagClick} />
-          {selectedTags.length > 0 && (
-            <Button
-              onClick={handleClearTags}
-              sx={{ textDecoration: 'underline', textTransform: 'none' }}
-            >
-              Clear Tags
-            </Button>
-          )}
-        </Box>
-      </Grid>
+        <Grid item xs={12} md={3}>
+    <Box>
+      <Typography variant="h6" gutterBottom>
+        Tags
+      </Typography>
+      <TagsSelector tags={tags} selectedTags={selectedTags} handleTagClick={handleTagClick} />
+      {selectedTags.length > 0 && (
+        <Button
+          onClick={handleClearTags}
+          sx={{ textDecoration: 'underline', textTransform: 'none' }}
+        >
+          Clear
+        </Button>
+      )}
+    </Box>
+    <Box
+      sx={{
+        marginTop: '16px'
+      }}
+    >
+      <Typography variant="h6" gutterBottom>
+        Languages
+      </Typography>
+      <LanguagesSelector languages={langs} selectedLanguages={selectedLangs} handleLanguageClick={handleLanguageClick} />
+      {selectedLangs.length > 0 && (
+        <Button
+          onClick={handleClearLangs}
+          sx={{ textDecoration: 'underline', textTransform: 'none' }}
+        >
+          Clear
+        </Button>
+      )}
+    </Box>
+  </Grid>
 
-      <Grid item xs={12} md={2}>
+  <Grid item xs={12} md={2}>
         <Box>
           <Typography variant="h6" gutterBottom sx={{ paddingLeft: '-12px' }}>
             Licenses
           </Typography>
-          {selectedLicenses.map((license) => (
+          {licenses.map((license) => (
             <Box key={license} sx={{ marginBottom: '-7px' }}>
               <FormControlLabel
                 control={
@@ -67,6 +96,7 @@ const Filters: React.FC<FiltersProps> = ({
                 label={license}
               />
             </Box>
+            
           ))}
         </Box>
       </Grid>
@@ -126,8 +156,8 @@ const Filters: React.FC<FiltersProps> = ({
     <FormControlLabel
       control={
         <Checkbox
-          checked={selectedParatimes.includes('Sapphire')}
-          onChange={() => handleParatimesChange('Sapphire')}
+          checked={selectedParatimes.includes('sapphire')}
+          onChange={() => handleParatimesChange('sapphire')}
         />
       }
       label="Sapphire"
@@ -138,8 +168,8 @@ const Filters: React.FC<FiltersProps> = ({
     <FormControlLabel
       control={
         <Checkbox
-          checked={selectedParatimes.includes('Emerald')}
-          onChange={() => handleParatimesChange('Emerald')}
+          checked={selectedParatimes.includes('emerald')}
+          onChange={() => handleParatimesChange('emerald')}
         />
       }
       label="Emerald"
@@ -150,8 +180,8 @@ const Filters: React.FC<FiltersProps> = ({
     <FormControlLabel
       control={
         <Checkbox
-          checked={selectedParatimes.includes('Cipher')}
-          onChange={() => handleParatimesChange('Cipher')}
+          checked={selectedParatimes.includes('cipher')}
+          onChange={() => handleParatimesChange('cipher')}
         />
       }
       label="Cipher"
@@ -165,7 +195,7 @@ const Filters: React.FC<FiltersProps> = ({
       <Grid item xs={12} md={3}>
         <Box sx={{ display: 'flex', alignItems: 'center'}}>
           <Typography variant="h6" gutterBottom>
-            Only OPF Approved
+            Only OPF maintained
           </Typography>
           <Switch onClick={handleMaintainedByOasisToggle} />
         </Box>

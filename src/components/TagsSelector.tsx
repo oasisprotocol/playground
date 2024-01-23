@@ -1,12 +1,12 @@
 import { Chip } from '@mui/material';
 
-interface TagsProps {
+interface TagsSelectorProps {
   tags: string[];
   selectedTags: string[];
   handleTagClick: (tag: string) => void;
 }
 
-const Tags: React.FC<TagsProps> = ({ tags, selectedTags, handleTagClick }) => {
+const TagsSelector: React.FC<TagsSelectorProps> = ({ tags, selectedTags, handleTagClick }) => {
   return (
     <div>
       {tags.map((tag: string) => (
@@ -22,4 +22,4 @@ const Tags: React.FC<TagsProps> = ({ tags, selectedTags, handleTagClick }) => {
   );
 };
 
-export default Tags;
+export default TagsSelector;

@@ -41,6 +41,9 @@ const paddingValue = isMobile ? '42px' : '80px';
       <Box>
       <ProjectList />
       </Box>
+      <Typography gutterBottom sx={{color: 'white', textAlign: 'center', fontSize: '20px', width: '100%', marginBottom: '24px', marginTop: '20px'}} >
+      Copyright © 2024 Oasis Protocol Foundation. All rights reserved.
+      </Typography>
       </Container>
     </Box>    
     </ThemeProvider>

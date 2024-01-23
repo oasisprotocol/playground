@@ -2,7 +2,7 @@ import { Grid, Typography, Select, MenuItem, SelectChangeEvent, useTheme, useMed
 import { KeyboardArrowDown } from '@mui/icons-material';
 
 
-enum SortingOptions {
+export enum SortingOptions {
   TITLE = 'Order By',
   NAME = 'Name',
   LAST_UPDATED = 'Last Updated',
@@ -62,7 +62,8 @@ const Sorting: React.FC<SortingProps> = ({
                   borderColor: 'transparent',
                   border: 'none',
                   outline: 'none',
-                  paddingflexBasis: '0',Top: '0',
+                  paddingTop: '0',
+                  flexBasis: '0',
                   marginLeft: 'auto',
                   display: 'flex',
                   '& .MuiSelect-root': {

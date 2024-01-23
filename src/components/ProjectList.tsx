@@ -16,12 +16,9 @@ import { SelectChangeEvent } from '@mui/material/Select';
 import { useTheme } from '@mui/material/styles';
 import { useMediaQuery } from '@mui/material';
 import '../App.css'; 
-import { LanguageMappings } from '../languageUtils';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSliders } from '@fortawesome/free-solid-svg-icons';
-
-
-
+import { SortingOptions } from './Sorting';
 
 const ProjectList: React.FC = () => {
   const theme = useTheme();
@@ -29,24 +26,30 @@ const ProjectList: React.FC = () => {
 
   const [search, setSearch] = useState<string>('');
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
+  const [selectedLangs, setSelectedLangs] = useState<string[]>([]);
   const [openProjectDialog, setOpenProjectDialog] = useState<boolean>(false);
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [maintainedByOasis, setMaintainedByOasis] = useState<boolean>(false); 
   const [selectedSources, setSelectedSources] = useState<string[]>(['Demo', 'Code', 'Tutorial']); 
-  const [selectedParatimes, setSelectedParatimes] = useState<string[]>(['Sapphire', 'Emerald', 'Cipher']);
+  const [selectedParatimes, setSelectedParatimes] = useState<string[]>(['sapphire', 'emerald', 'cipher']);
   const [showFilters, setShowFilters] = useState<boolean>(false);
 
-  const Licenses = Array.from(
+  const licenses = Array.from(
     new Set(projects.map((project) => project.license))
   );
-  const [selectedLicenses, setSelectedLicenses] = useState<string[]>(Licenses); 
 
+  const [selectedLicenses, setSelectedLicenses] = useState<string[]>(licenses); 
 
 
   const paddingValue = isMobile ? '24px' : '34px 46px'; 
   
   const handleClearTags = () => {
     setSelectedTags([]);
+    setSearch('');
+  };
+
+  const handleClearLangs = () => {
+    setSelectedLangs([]);
     setSearch('');
   };
 
@@ -92,23 +95,10 @@ const ProjectList: React.FC = () => {
     setShowFilters(!showFilters);
   };
 
-  const getMappedLanguages = (languages: string[]): string[] => {
-    return languages.map((language) => {
-      const mappedLanguage = LanguageMappings[language.toLowerCase() as keyof typeof LanguageMappings];
-      return mappedLanguage ? mappedLanguage : language.substring(0, 1).toUpperCase() + language.substring(1);
-    });
-  };
+  const tags: string[] = Array.from(new Set(projects.flatMap((project) => project.tags)));
+  const langs: string[] = Array.from(new Set(projects.flatMap((project) => project.languages)));
 
-
-  const allTags: string[] = Array.from(
-    new Set(
-      projects.flatMap((project) => [
-        ...project.tags,
-        ...getMappedLanguages(project.languages), // Use getMappedLanguages here
-      ])
-    )
-  );
-
+ 
 
   const filteredProjects: Project[] = projects.filter((project) => {
     const searchMatch: boolean =
@@ -117,13 +107,17 @@ const ProjectList: React.FC = () => {
   
     const tagsMatch: boolean =
       selectedTags.length === 0 ||
-      selectedTags.every((tag) => project.tags.includes(tag) || project.languages.includes(tag));
-  
+      selectedTags.every((tag) => project.tags.includes(tag));
+      
+    const langsMatch: boolean =
+      selectedLangs.length === 0 ||
+      selectedLangs.every((lang) => project.languages.includes(lang));
+
     const maintainedByOasisMatch: boolean =
       !maintainedByOasis || project.maintainedByOasis;
   
     const licenseMatch: boolean =
-      selectedLicenses.length === 0 || selectedLicenses.includes(project.license);
+     selectedLicenses.includes(project.license);
   
     const sourcesMatch: boolean =
       selectedSources.length === 0
@@ -145,16 +139,16 @@ const ProjectList: React.FC = () => {
             return false;
           });
 
+          const paratimeMatch: boolean =
+            selectedParatimes.length > 0 &&
+            selectedParatimes.some(paratime =>
+              project.paratimes?.includes(paratime)
+            );
 
-    const paratimeMatch: boolean =
-        selectedParatimes.length === 0 ||
-        selectedParatimes.includes('Sapphire') ||
-        selectedParatimes.includes('Emerald') ||
-        selectedParatimes.includes('Cipher') ||
-        selectedParatimes.every((paratime) => project.paratimes?.includes(paratime));
-  
-    return searchMatch && tagsMatch  && paratimeMatch &&maintainedByOasisMatch && licenseMatch && sourcesMatch;
+
+    return searchMatch && tagsMatch && langsMatch  && paratimeMatch && maintainedByOasisMatch && licenseMatch && sourcesMatch;
   });
+
 
   const handleTagClick = (tag: string) => {
     if (selectedTags.includes(tag)) {
@@ -164,12 +158,13 @@ const ProjectList: React.FC = () => {
     }
   };
 
-  enum SortingOptions {
-    TITLE = 'Order By',
-    NAME = 'Name',
-    LAST_UPDATED = 'Last Updated',
-    CREATED_DATE = 'Created',
-  }
+  const handleLangClick = (lang: string) => {
+    if (selectedLangs.includes(lang)) {
+      setSelectedLangs(selectedLangs.filter((l) => l !== lang));
+    } else {
+      setSelectedLangs([...selectedLangs, lang]);
+    }
+  };
 
   const [sortOption, setSortOption] = useState<SortingOptions>(SortingOptions.TITLE);
 
@@ -259,9 +254,13 @@ const ProjectList: React.FC = () => {
               }}
             >
               <Filters
-                allTags={allTags}
+                tags={tags}
+                langs={langs}
                 selectedTags={selectedTags}
+                selectedLangs={selectedLangs}
                 handleTagClick={handleTagClick}
+                handleLanguageClick={handleLangClick}
+                licenses={licenses}
                 selectedLicenses={selectedLicenses}
                 handleLicenseChange={handleLicenseChange}
                 selectedSources={selectedSources}
@@ -270,7 +269,8 @@ const ProjectList: React.FC = () => {
                 handleParatimesChange={handleParatimesChange}
                 maintainedByOasis={maintainedByOasis}
                 handleMaintainedByOasisToggle={handleMaintainedByOasisToggle}
-              handleClearTags={handleClearTags}
+                handleClearTags={handleClearTags}
+                handleClearLangs={handleClearLangs}
                 />
             </div>
           </div>
@@ -287,8 +287,11 @@ const ProjectList: React.FC = () => {
               project={project}
               handleProjectClick={handleProjectClick}
               selectedTags={selectedTags}
+              selectedLangs={selectedLangs}
               handleTagClick={handleTagClick}
-              allTags={allTags}
+              handleLangClick={handleLangClick}
+              langs={project.languages}
+              tags={project.tags}
               />
         ))}
       </Grid>
@@ -297,6 +300,7 @@ const ProjectList: React.FC = () => {
         onClose={handleProjectDialogClose}
         project={selectedProject}
         selectedTags={selectedTags}
+        selectedLangs={selectedLangs}
         handleTagClick={handleTagClick}
       />
   </Container>
