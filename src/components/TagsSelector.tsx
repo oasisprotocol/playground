@@ -1,12 +1,12 @@
 import { Chip } from '@mui/material';
 
-interface TagFilterListProps {
+interface TagsSelectorProps {
   tags: string[];
   selectedTags: string[];
   handleTagClick: (tag: string) => void;
 }
 
-const TagFilterList: React.FC<TagFilterListProps> = ({ tags, selectedTags, handleTagClick }) => {
+const TagsSelector: React.FC<TagsSelectorProps> = ({ tags, selectedTags, handleTagClick }) => {
   return (
     <div>
       {tags.map((tag: string) => (
@@ -22,4 +22,4 @@ const TagFilterList: React.FC<TagFilterListProps> = ({ tags, selectedTags, handl
   );
 };
 
-export default TagFilterList;
+export default TagsSelector;

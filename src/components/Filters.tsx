@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Button, Checkbox, FormControlLabel, Grid, Switch, Typography } from '@mui/material';
-import TagFilterList from './TagFilterList';
-import LanguageFilterList from './LanguageFilterList';
+import TagsSelector from './TagsSelector';
+import LanguagesSelector from './LanguagesSelector';
 
 interface FiltersProps {
   tags: string[];
@@ -48,7 +48,7 @@ const Filters: React.FC<FiltersProps> = ({
       <Typography variant="h6" gutterBottom>
         Tags
       </Typography>
-      <TagFilterList tags={tags} selectedTags={selectedTags} handleTagClick={handleTagClick} />
+      <TagsSelector tags={tags} selectedTags={selectedTags} handleTagClick={handleTagClick} />
       {selectedTags.length > 0 && (
         <Button
           onClick={handleClearTags}
@@ -66,7 +66,7 @@ const Filters: React.FC<FiltersProps> = ({
       <Typography variant="h6" gutterBottom>
         Languages
       </Typography>
-      <LanguageFilterList languages={langs} selectedLanguages={selectedLangs} handleLanguageClick={handleLanguageClick} />
+      <LanguagesSelector languages={langs} selectedLanguages={selectedLangs} handleLanguageClick={handleLanguageClick} />
       {selectedLangs.length > 0 && (
         <Button
           onClick={handleClearLangs}
