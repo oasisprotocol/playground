@@ -17,12 +17,6 @@ interface ProjectListItemProps {
   langs: string[];
 }
 
-const truncateText = (text: string, maxLength: number) => {
-  if (text.length > maxLength) {
-    return text.slice(0, maxLength) + '…';
-  }
-  return text;
-};
 
 const ProjectListItem: React.FC<ProjectListItemProps> = ({
   project,
@@ -72,18 +66,18 @@ const ProjectListItem: React.FC<ProjectListItemProps> = ({
           <Typography variant="h2" gutterBottom>
             {project.name}
           </Typography>
-          <Typography
-            gutterBottom
+          <Box
             sx={{
               color: '#445E77',
               lineHeight: '130%',
               minHeight: '60px',
+              fontFamily: "'Figtree Variable',sans-serif"
             }}
           >
-             <ReactMarkdown
-                      >{truncateText(project.description, 108)}</ReactMarkdown>  
-            
-          </Typography>
+            <ReactMarkdown className='markdown-line-clamp'>
+              {project.description}
+            </ReactMarkdown>
+          </Box>
           <Grid
             container
             spacing={2}

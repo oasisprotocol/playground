@@ -26,6 +26,8 @@ const linkStyles = {
   textDecorationColor: '#3431AC',
 };
 
+
+
 const ProjectDialog: React.FC<ProjectDialogProps> = ({
   open,
   onClose,
@@ -80,13 +82,13 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
               </Carousel>
              <Grid container spacing={3} sx={{marginBottom: '32px', marginTop: '32px'}}>
                    <Grid item xs={12} md={6}> 
-                      <Typography
-                      variant='body1'
-                      sx={{color: '#445E77', letterSpacing: '-0.5px', marginBottom: '24px'}}
-                      >
-                      <ReactMarkdown
-                      >{project.description}</ReactMarkdown>  
-                      </Typography>
+                      <Box
+                          sx={{color: '#445E77', letterSpacing: '-0.5px', marginBottom: '24px', fontFamily: "'Figtree Variable',sans-serif"}}
+                          >
+                      <ReactMarkdown>
+                        {project.description}
+                      </ReactMarkdown>
+                      </Box>
 
                       <Typography
                       sx={{color: '#445E77', letterSpacing: '-0.5px', fontSize: '14px'}}
