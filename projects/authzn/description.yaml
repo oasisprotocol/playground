@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=../.template/project.schema.json
 ---
 name: Oasis Authenticator
 authors:
