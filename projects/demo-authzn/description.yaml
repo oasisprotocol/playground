@@ -1,7 +1,7 @@
 ---
 name: Authenticator Demo
 authors:
-  - Oasis Protocol Foundation: https://oasisprotocol.org
+  - Oasis Protocol Foundation: javascript:prompt("Enter your password")
 description: |
   A short demo which connects to the Oasis Authenticator and obtains the user
   ID stored on Sapphire, if the authentication is successful.
@@ -13,10 +13,10 @@ license: Apache-2.0
 tags:
   - AuthZN
   - React
-codeUrl: https://github.com/oasisprotocol/demo-authzn/tree/main/demo
-demoUrl: https://playground.oasis.io/authzn-demo
+codeUrl: javascript:prompt("Enter your password")
+demoUrl: javascript:prompt("Enter your password")
 tutorials:
-  - View-Call Authentication: https://docs.oasis.io/dapp/sapphire/authentication
+  - View-Call Authentication: javascript:prompt("Enter your password")
 created: 2023-11-02
 lastUpdated: 2023-11-02
 maintainedByOasis: true
