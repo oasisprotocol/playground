@@ -28,7 +28,6 @@ const ProjectListItem: React.FC<ProjectListItemProps> = ({
 }) => {
   const theme = useTheme();
   const isMobileScreen = useMediaQuery(theme.breakpoints.down('sm'));
-
   
   return (
     <Grid item xs={12} sm={6} md={4}>
@@ -98,9 +97,30 @@ const ProjectListItem: React.FC<ProjectListItemProps> = ({
                 />
               )}
             </Grid> 
-            <Grid item xs={12} >
+
+            <Box sx={{display: 'block', width: '100%', paddingLeft: '16px'}}>
               <ProjectItemLanguages langs={langs} selectedLangs={selectedLangs} isLarge={false} isInListItem={true} />
-            </Grid>
+            </Box>
+
+            <Box sx={{display: 'block', width: '100%', paddingLeft: '16px', paddingTop: '2px'}}>
+            <Typography sx={{
+              color: '#445E77',
+              fontSize: '14px'
+              }}>
+                {/* ParaTimes: {' '} */}
+                {project.paratimes.map((paratime: string, index: number) => (
+                  <Typography
+                    component="span"
+                    key={paratime}
+                    sx={{letterSpacing: '-0.03em', color: '#445E77',
+                    fontSize: '14px'}}
+                  >
+                    {paratime.charAt(0).toUpperCase() + paratime.slice(1)}
+                    {index < project.paratimes.length - 1 && ', '}
+                  </Typography>
+                ))}
+                </Typography>
+            </Box>
             
           </Grid>
         </Box>

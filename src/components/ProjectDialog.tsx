@@ -90,40 +90,69 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
                       </ReactMarkdown>
                       </Box>
 
-                      <Typography
-                      sx={{color: '#445E77', letterSpacing: '-0.5px', fontSize: '14px'}}
-                      >Last Updated: 
-                      </Typography>
-                      <Typography sx={{ color: '#3431AC', letterSpacing: '-0.5px', marginBottom: '16px' }}>
-                      <Typography component="span" sx={linkStyles}>
-                      { new Date(project.lastUpdated).toLocaleDateString()}
-                      </Typography>
-                    </Typography>
+                      <Grid container spacing={3}>
+                        <Grid item xs={6}>
+                          <Typography sx={{ color: '#445E77', letterSpacing: '-0.5px', fontSize: '14px' }}>
+                            Last Updated:
+                          </Typography>
+                          <Typography sx={{ color: '#3431AC', letterSpacing: '-0.5px', marginBottom: '16px' }}>
+                            <Typography component="span" sx={linkStyles}>
+                              {new Date(project.lastUpdated).toLocaleDateString()}
+                            </Typography>
+                          </Typography>
+                        </Grid>
 
-                    <Typography
-                      sx={{color: '#445E77', letterSpacing: '-0.5px', fontSize: '14px', marginTop: '16px'}}
-                      >Created: 
-                      </Typography>
-                      <Typography sx={{ color: '#3431AC', letterSpacing: '-0.5px', marginBottom: '24px' }}>
-                      <Typography component="span" sx={linkStyles}>
-                      {new Date(project.created).toLocaleDateString()}
-                      </Typography>
-                    </Typography>
+                        <Grid item xs={6}>
+                          <Typography sx={{ color: '#445E77', letterSpacing: '-0.5px', fontSize: '14px' }}>
+                            Created:
+                          </Typography>
+                          <Typography sx={{ color: '#3431AC', letterSpacing: '-0.5px', marginBottom: '24px' }}>
+                            <Typography component="span" sx={linkStyles}>
+                              {new Date(project.created).toLocaleDateString()}
+                            </Typography>
+                          </Typography>
+                        </Grid>
+                      </Grid>
 
-                    <Typography
-                      sx={{color: '#445E77', letterSpacing: '-0.5px', fontSize: '14px', marginTop: '16px'}}
-                      >Languages:
-                    </Typography>
-                    <Box sx={{ color: '#3431AC', letterSpacing: '-0.5px', marginBottom: '24px' }}>
-                    <ProjectItemLanguages langs={project.languages} selectedLangs={selectedLangs} isLarge={false} />
-                    </Box>
+                      <Grid container spacing={3}>
+                        <Grid item xs={6}>
+                          <Typography sx={{ color: '#445E77', letterSpacing: '-0.5px', fontSize: '14px', marginTop: '16px' }}>
+                            Languages:
+                          </Typography>
+                          <Box sx={{ color: '#3431AC', marginBottom: '24px' }}>
+                            <ProjectItemLanguages langs={project.languages} selectedLangs={selectedLangs} isLarge={false} />
+                          </Box>
+                        </Grid>
 
-                    <Typography
-                      sx={{color: '#445E77', letterSpacing: '-0.5px', fontSize: '14px', marginTop: '16px', marginBottom: '6px'}}
-                      >Tags:
-                    </Typography>
-                    <ProjectItemTags tags={project.tags} selectedTags={selectedTags} isLarge={true} />
-                   
+                        <Grid item xs={6}>
+                          <Typography sx={{ color: '#445E77', letterSpacing: '-0.5px', fontSize: '14px', marginTop: '16px' }}>
+                            ParaTimes:
+                          </Typography>
+                          <Box sx={{ color: '#3431AC', marginBottom: '24px' }}>
+                            <Typography component="span">
+                            {project.paratimes.map((paratime: string, index: number) => (
+                              <Typography
+                                component="span"
+                                key={paratime}
+                                sx={{letterSpacing: '-0.03em'}}
+                              >
+                                {paratime.charAt(0).toUpperCase() + paratime.slice(1)}
+                                {index < project.paratimes.length - 1 && ', '}
+                              </Typography>
+                            ))}
+                            </Typography>
+                          </Box>
+                        </Grid>
+                      </Grid>
+
+                      <Grid container spacing={3}>
+                        <Grid item xs={12}>
+                          <Typography sx={{ color: '#445E77', letterSpacing: '-0.5px', fontSize: '14px', marginTop: '16px', marginBottom: '6px' }}>
+                            Tags:
+                          </Typography>
+                          <ProjectItemTags tags={project.tags} selectedTags={selectedTags} isLarge={true} />
+                        </Grid>
+                      </Grid>
                    </Grid>
                    <Grid item xs={12} md={6}>
                      <Typography
