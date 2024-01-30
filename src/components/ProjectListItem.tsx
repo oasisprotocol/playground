@@ -41,7 +41,7 @@ const ProjectListItem: React.FC<ProjectListItemProps> = ({
         }}
         onClick={() => handleProjectClick(project)}
       >
-        <img
+         <img
           src={project.screenshots[0]}
           alt={project.name}
           width="100%"
@@ -121,7 +121,6 @@ const ProjectListItem: React.FC<ProjectListItemProps> = ({
                 ))}
                 </Typography>
             </Box>
-            
           </Grid>
         </Box>
       </Paper>
