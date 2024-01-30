@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import {
   Grid,
   Container,
@@ -19,10 +19,31 @@ import '../App.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSliders } from '@fortawesome/free-solid-svg-icons';
 import { SortingOptions } from './Sorting';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 const ProjectList: React.FC = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm')); 
+  const navigate = useNavigate(); 
+  const location = useLocation();
+
+  useEffect(() => {
+    const projectNameFromUrl = window.location.hash.substring(1);
+    const projectName = projectNameFromUrl.toLowerCase().replace(/\s/g, '-');
+  
+    const openProjectFromUrl = () => {
+      if (projectName && location.hash === `#${projectName}`) {
+        const projectToOpen = projects.find((project) => project.name.toLowerCase().replace(/\s/g, '-') === projectName);
+  
+        if (projectToOpen) {
+          setSelectedProject(projectToOpen);
+          setOpenProjectDialog(true);
+        }
+      }
+    };
+  
+    openProjectFromUrl();
+  }, [location.hash]);
 
   const [search, setSearch] = useState<string>('');
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
@@ -60,10 +81,12 @@ const ProjectList: React.FC = () => {
   const handleProjectClick = (project: Project) => {
     setSelectedProject(project);
     setOpenProjectDialog(true);
+    navigate(`/#${project.name.toLowerCase().replace(/\s/g, '-')}`);
   };
 
   const handleProjectDialogClose = () => {
     setOpenProjectDialog(false);
+    navigate('.', { replace: true });
   };
 
   const handleLicenseChange = (license: string) => {
@@ -282,7 +305,7 @@ const ProjectList: React.FC = () => {
         </Container>
     <Grid container spacing={1} justifyContent="start">
         {filteredAndSortedProjects.map((project) => (
-              <ProjectListItem
+            <ProjectListItem
               key={project.name}
               project={project}
               handleProjectClick={handleProjectClick}
@@ -292,7 +315,7 @@ const ProjectList: React.FC = () => {
               handleLangClick={handleLangClick}
               langs={project.languages}
               tags={project.tags}
-              />
+            />
         ))}
       </Grid>
       <ProjectDialog
