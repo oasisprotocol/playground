@@ -1,4 +1,4 @@
-import { Container, Typography, Box, ThemeProvider, Link } from '@mui/material';
+import { Container, Typography, Box, ThemeProvider, Link, Grid, Button } from '@mui/material';
 import ProjectList from './components/ProjectList';
 import backgroundImg from './assets/PlaygroundBgGradient.webp'
 import { playgroundTheme } from './styles/playgroundTheme';
@@ -28,16 +28,45 @@ const paddingValue = isMobile ? '42px' : '80px';
       <Typography variant="h1" gutterBottom>
       Oasis Playground
       </Typography>
-      <Typography gutterBottom sx={{color: 'white', fontSize: '20px', width: '100%', maxWidth: '750px', marginBottom: '24px'}} >
-      Discover the frontier of Web3 privacy through the projects and applications that are powered by the Oasis Network’s cutting-edge production-ready confidentiality technology. Become a contributor by adding your dApp to the Playground <Link href='https://github.com/oasisprotocol/playground/blob/main/CONTRIBUTING.md'  sx={{
-    color: 'white',
-    textDecorationColor: 'white',
-    '&:hover': {
-      color: 'white',
-    },
-  }} target="_blank" underline="always">here</Link>.
-      </Typography>
-      <Box>
+      <Grid container spacing={2} justifyContent="space-between" alignItems="flex-start" marginBottom={isMobile ? '36px' : '0'}>
+        <Grid item xs={12} md={9}>
+          <Typography gutterBottom sx={{ color: 'white', fontSize: '20px', width: '100%', maxWidth: '750px', marginBottom: isMobile ? '16px' : '24px' }}>
+            Discover the frontier of Web3 privacy through the projects and applications that are powered by the Oasis Network’s cutting-edge production-ready confidentiality technology. Become a contributor by adding your dApp to the Playground {' '}
+            <Link href='https://github.com/oasisprotocol/playground/blob/main/CONTRIBUTING.md' sx={{
+              color: 'white',
+              textDecorationColor: 'white',
+              '&:hover': {
+                color: 'white',
+              },
+            }} target="_blank" underline="always">
+              here
+            </Link>.
+          </Typography>
+        </Grid>
+        <Grid item>
+          <Button
+            href='https://github.com/oasisprotocol/playground/blob/main/CONTRIBUTING.md'
+            target='_blank'
+            color='inherit'
+            variant='outlined'
+            sx={{borderRadius: '30px',
+            color: 'white',
+            borderColor: 'white',
+            textTransform: 'none',
+            fontSize: '16px',
+            fontWeight: '600',
+            '&:hover': {
+              backgroundColor: 'white',
+              color: '#3431AC',
+              borderColor: 'white'
+            },
+          }}
+          >
+            Add your dApp
+          </Button>
+        </Grid>
+      </Grid>
+      <Box>    
       <ProjectList />
       </Box>
       <Typography gutterBottom sx={{color: 'white', textAlign: 'center', fontSize: '20px', width: '100%', marginBottom: '24px', marginTop: '20px'}} >
