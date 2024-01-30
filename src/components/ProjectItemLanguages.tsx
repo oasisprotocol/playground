@@ -1,4 +1,4 @@
-import { Typography, Box } from '@mui/material';
+import { Typography, Box, useTheme, useMediaQuery } from '@mui/material';
 
 interface ProjectItemLanguagesProps {
   langs: string[];
@@ -7,12 +7,19 @@ interface ProjectItemLanguagesProps {
   isInListItem?: boolean;
 }
 
-const LanguagesList: React.FC<ProjectItemLanguagesProps> = ({ langs, selectedLangs, isLarge, isInListItem }) => {
 
+
+const LanguagesList: React.FC<ProjectItemLanguagesProps> = ({ langs, selectedLangs, isLarge, isInListItem }) => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+  
   return (
     <Box
       sx={{
-        borderTop: isInListItem ? '1px solid #3431AC': 'none'
+        borderBottom: isInListItem ? '1px solid #3431AC': 'none',
+        paddingBottom: '2px',
+        paddingTop: isMobile ? '12px' : '0'
+        
       }}
     >
       {langs.map((lang: string, index: number) => (
