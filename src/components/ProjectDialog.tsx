@@ -43,6 +43,19 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
     setCarouselIndex(selectedIndex);
   };
 
+
+  const modifyLinkTarget = (url?: string, title?: string, text?: React.ReactNode) => {
+    const target = url && url.startsWith('http') ? '_blank' : undefined;
+    const linkText = typeof text === 'string' ? text : '';
+  
+    return (
+      <Link href={url} target={target} title={title} sx={linkStyles}>
+        {linkText}
+      </Link>
+    );
+  };
+
+
   return (
     <Dialog open={open} onClose={onClose} maxWidth="lg"
     >
@@ -85,9 +98,9 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
                       <Box
                           sx={{color: '#445E77', letterSpacing: '-0.5px', marginBottom: '24px', fontFamily: "'Figtree Variable',sans-serif"}}
                           >
-                      <ReactMarkdown>
-                        {project.description}
-                      </ReactMarkdown>
+                             <ReactMarkdown components={{ a: ({ node, ...props }) => modifyLinkTarget(props.href, props.title, props.children) }}>
+                              {project.description}
+                            </ReactMarkdown>
                       </Box>
 
                       <Grid container spacing={3}>
