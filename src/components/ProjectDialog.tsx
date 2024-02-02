@@ -167,16 +167,35 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
                         </Grid>
                       </Grid>
                    </Grid>
-                   <Grid item xs={12} md={6}>
-                     <Typography
-                      sx={{color: '#445E77', letterSpacing: '-0.5px', fontSize: '14px'}}
-                      >Authors:
+                   <Grid item xs={12} md={6}>                    
+                    <Box sx={{ marginBottom: '16px'}}>
+                      <Typography
+                        sx={{ color: '#445E77', letterSpacing: '-0.5px', fontSize: '14px' }}
+                      >
+                        Authors:
                       </Typography>
-                      <Typography sx={{ color: '#3431AC', letterSpacing: '-0.5px', marginBottom: '16px' }}>
-                      <Link href={Object.values(project.authors[0])[0]} target="_blank" underline="always"  sx={linkStyles}>
-                      {Object.keys(project.authors[0])[0]}
-                      </Link>
-                    </Typography>
+                      {project.authors.map((authorObj: { [key: string]: string }, index: number) => {
+                        const authorKey = Object.keys(authorObj)[0];
+                        const authorValue = Object.values(authorObj)[0];
+                        return (
+                          <Typography
+                            sx={{ color: '#3431AC', letterSpacing: '-0.5px'}}
+                            key={authorKey}
+                          >
+                            <Link
+                              href={authorValue}
+                              target="_blank"
+                              underline="always"
+                              sx={linkStyles}
+                            >
+                              {authorKey}
+                              {index < (project.authors?.length ?? 0) - 1 && ', '}
+                            </Link>
+                          </Typography>
+                        );
+                      })}
+                    </Box>
+  
                       <Typography
                       sx={{color: '#445E77', letterSpacing: '-0.5px', fontSize: '14px'}}
                       >Code:
@@ -203,25 +222,35 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
                     }
            
 
-                      {project.tutorials &&
-                        <>
-                           <Typography
-                            sx={{color: '#445E77', letterSpacing: '-0.5px', fontSize: '14px'}}
-                            >Tutorials:
-                            </Typography>
-                           
-                            <Typography sx={{ color: '#3431AC', letterSpacing: '-0.5px', marginBottom: '16px' }}>
-                              <Link
-                                    href={Object.values(project.tutorials[0])[0]}
-                                    target="_blank"
-                                    underline="always"
-                                    sx={linkStyles}
-                              >
-                              {Object.keys(project.tutorials[0])[0]}
-                              </Link>
-                            </Typography>
-                        </>
-                      }
+           {project.tutorials && (
+              <Box sx={{ marginBottom: '16px'}}>
+                <Typography
+                  sx={{ color: '#445E77', letterSpacing: '-0.5px', fontSize: '14px' }}
+                >
+                  Tutorials:
+                </Typography>
+                {project.tutorials.map((tutorialObj: { [key: string]: string }, index: number) => {
+                  const tutorialKey = Object.keys(tutorialObj)[0];
+                  const tutorialValue = Object.values(tutorialObj)[0];
+                  return (
+                    <Typography
+                      sx={{ color: '#3431AC', letterSpacing: '-0.5px' }}
+                      key={tutorialKey}
+                    >
+                      <Link
+                        href={tutorialValue}
+                        target="_blank"
+                        underline="always"
+                        sx={linkStyles}
+                      >
+                        {tutorialKey}
+                        {index < (project.tutorials?.length ?? 0) - 1 && ', '}
+                      </Link>
+                    </Typography>
+                  );
+                })}
+              </Box>
+            )}
 
                       <Typography
                       sx={{color: '#445E77', letterSpacing: '-0.5px', fontSize: '14px'}}
