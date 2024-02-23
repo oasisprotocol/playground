@@ -8,7 +8,7 @@ export interface Project {
   license: string;
   tags: string[];
   codeUrl?: string;
-  demoUrl: string;
+  demoUrl?: string;
   tutorials?: { [tutorial: string]: string }[]; 
   created: string; 
   lastUpdated: string;

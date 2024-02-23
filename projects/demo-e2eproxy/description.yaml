@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=../.template/project.schema.json
 ---
 name: E2E Proxy
 authors:

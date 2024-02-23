@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=../.template/project.schema.json
 ---
 name: My Fancy dApp
 authors:
@@ -18,7 +19,7 @@ codeUrl: https://github.com/johnsmith/my-fancy-dapp
 demoUrl: https://johnsmith.com/my-fancy-dapp
 tutorials:
   - Three Steps to build a Confidential Online Shop:
-    https://docs.oasis.io/dapp/sapphire/gasless
+      https://docs.oasis.io/dapp/sapphire/gasless
 created: 2023-08-15
 lastUpdated: 2023-09-18
 maintainedByOasis: false
