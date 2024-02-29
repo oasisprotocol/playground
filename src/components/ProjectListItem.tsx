@@ -30,14 +30,13 @@ const ProjectListItem: React.FC<ProjectListItemProps> = ({
   const isMobileScreen = useMediaQuery(theme.breakpoints.down('sm'));
   
   return (
-    <Grid item xs={12} sm={6} md={4}>
+    <Grid item xs={12} sm={6} md={4} sx={{ display: 'flex' }}>
       <Paper
         elevation={3}
         sx={{
           margin: isMobileScreen ? '16px 0' : '16px',
           cursor: 'pointer',
-          borderRadius: '15px',
-          minHeight: '500px',
+          borderRadius: '15px'
         }}
         onClick={() => handleProjectClick(project)}
       >
