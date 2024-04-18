@@ -96,7 +96,7 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
              <Grid container spacing={3} sx={{marginBottom: '32px', marginTop: '32px'}}>
                    <Grid item xs={12} md={6}> 
                       <Box
-                          sx={{color: '#445E77', letterSpacing: '-0.5px', marginBottom: '24px', fontFamily: "'Figtree Variable',sans-serif"}}
+                          sx={{color: '#445E77', letterSpacing: '-0.5px', marginBottom: '24px', fontFamily: "'Roboto Flex Variable',sans-serif"}}
                           >
                              <ReactMarkdown components={{ a: ({ node, ...props }) => modifyLinkTarget(props.href, props.title, props.children) }}>
                               {project.description}

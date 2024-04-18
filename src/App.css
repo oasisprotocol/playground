@@ -1,7 +1,7 @@
-@import '@fontsource-variable/figtree';
+@import '@fontsource-variable/roboto-flex';
 
 body {
-  font-family: 'Figtree Variable', sans-serif;
+  font-family: 'Roboto Flex Variable', sans-serif;
 }
 
 *,
