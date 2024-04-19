@@ -7,7 +7,7 @@ export const playgroundTheme = createTheme({
     },
   },
   typography: {
-    fontFamily: "'Figtree Variable', sans-serif",
+    fontFamily: "'Roboto Flex Variable', sans-serif",
     h1: {
       fontSize: '56px',
       fontWeight: 500,

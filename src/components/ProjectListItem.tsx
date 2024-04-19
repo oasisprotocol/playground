@@ -69,7 +69,7 @@ const ProjectListItem: React.FC<ProjectListItemProps> = ({
               color: '#445E77',
               lineHeight: '130%',
               minHeight: '60px',
-              fontFamily: "'Figtree Variable',sans-serif"
+              fontFamily: "'Roboto Flex Variable',sans-serif"
             }}
           >
             <ReactMarkdown className='markdown-line-clamp'>
