@@ -7,6 +7,7 @@ import { useMediaQuery } from '@mui/material';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import logo from "./assets/Playground Logo White.svg"
 import { styled } from '@mui/material/styles'
+import { ArrowForward } from '@mui/icons-material';
 
 const StyledImage = styled('img')({
   maxWidth: '360px',
@@ -50,26 +51,48 @@ const paddingValue = isMobile ? '42px' : '80px';
           </Typography>
         </Grid>
         <Grid item>
+          <Box
+          sx={{position: 'relative'}}
+          >
           <Button
             href='https://github.com/oasisprotocol/playground/blob/main/CONTRIBUTING.md'
             target='_blank'
             color='inherit'
             variant='outlined'
-            sx={{borderRadius: '30px',
-            color: 'white',
-            borderColor: 'white',
-            textTransform: 'none',
-            fontSize: '16px',
-            fontWeight: '600',
-            '&:hover': {
-              backgroundColor: 'white',
-              color: '#3431AC',
-              borderColor: 'white'
-            },
-          }}
+            endIcon={<ArrowForward />}
+            sx={{
+              color: '#000000',
+              border: '3px solid #000000',
+              borderRadius: '0',
+              textTransform: 'none',
+              fontSize: '16px',
+              fontFamily: '"Roboto Mono", monospace',
+              letterSpacing: '-0.025rem',
+              backgroundColor: '#6EFFFA',
+              marginLeft: isMobile ? '0' : '-16px',
+              position: 'relative',
+              zIndex: '1',
+              '&:hover': {
+                backgroundColor: '#00BCFF',
+                color: '#000000',
+              }
+            }}
           >
             Add your dApp
           </Button>
+          <Box
+            sx={{
+                position: 'absolute',
+                height: '44px',
+                width: isMobile ? '100%' : '108%',
+                bottom: '-9px',
+                right: '-8px',
+                border: '3px solid #000000',
+                zIndex: '0',
+            }}
+          >
+          </Box>
+          </Box>
         </Grid>
       </Grid>
       <Box>    

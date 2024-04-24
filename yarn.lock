@@ -513,6 +513,11 @@
   resolved "https://registry.yarnpkg.com/@fontsource-variable/roboto-flex/-/roboto-flex-5.0.14.tgz#b54d0f8397926b2e4fe2357a40e4cfa839c56990"
   integrity sha512-8zW1gdBzYp2jUzeN8JcUL4keOnrNLfcqYoXQZ+HTmHd3GmCYmwb2VBfpDBadkeCbxloVjghxbYaNbJ40fbt1Rg==
 
+"@fontsource/roboto-mono@^5.0.18":
+  version "5.0.18"
+  resolved "https://registry.yarnpkg.com/@fontsource/roboto-mono/-/roboto-mono-5.0.18.tgz#f5d8f5a5059f7bffcce1f9c14e68e73087192e1f"
+  integrity sha512-hKuwk/cy3i6fWPzazT5xjgWq4YNqZWDHVbJh2Wwj3KYvWGi2v3ToBw/4LKQ+ggEkPLcIG6VU8GpCT3Xtf+mbbA==
+
 "@fortawesome/fontawesome-common-types@6.5.1":
   version "6.5.1"
   resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-common-types/-/fontawesome-common-types-6.5.1.tgz#fdb1ec4952b689f5f7aa0bffe46180bb35490032"
