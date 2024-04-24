@@ -1,6 +1,6 @@
 import { Container, Typography, Box, ThemeProvider, Link, Grid, Button } from '@mui/material';
 import ProjectList from './components/ProjectList';
-import backgroundImg from './assets/PlaygroundBgGradient.webp'
+import backgroundImg from './assets/PlayGroundBackground.webp'
 import { playgroundTheme } from './styles/playgroundTheme';
 import { useTheme } from '@mui/material/styles';
 import { useMediaQuery } from '@mui/material';
@@ -29,9 +29,10 @@ const paddingValue = isMobile ? '42px' : '80px';
       height: '100%',
       minHeight: '100vh',
       backgroundImage: `url(${backgroundImg})`,
-      backgroundSize: 'auto',
+      backgroundSize: 'contain',
       backgroundRepeat: 'no-repeat',
-      backgroundColor: '#1421F8',
+      backgroundColor: '#0500E1',
+      backgrdoundPosition: '0% 15%'
     }}>
       <Container maxWidth="lg" sx={{ paddingTop: paddingValue, paddingBottom: paddingValue }}>
       <StyledImage src={logo} alt="Oasis Playground"/>
