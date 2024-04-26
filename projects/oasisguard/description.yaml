@@ -1,0 +1,58 @@
+---
+name: OasisGuard
+authors:
+  - Utku Ömer Kılıç: https://x.com/utmrklc
+  - Farhad Asgarov: https://x.com/asgarovf
+  - Eylül Şahin: https://x.com/eylllsh
+  - Selim Çetiner: https://x.com/selim_jpeg
+description: |
+  Your private vault on the blockchain, ensuring your secrets remain exclusively
+  yours, with no leaks and complete control!
+  
+  Can you imagine the chaos if all your passwords & private keys & seed phrases
+  or any recovery code(i.e. 2FA Secret) disappeared tomorrow? 🤯
+  
+  Today, we manage countless account details, passwords, and private keys, often
+  needing to create new ones every day. Typically, we rely on centralized
+  platforms like traditional password managers.😕
+  
+  But what if these systems were to suddenly shut down? How would we secure our
+  data?🤔
+  
+  That's where OasisGuard steps in. This browser extension safeguards your
+  passwords within a confidential smart contract, accessible only through your unique Passkey(Webauthn). By leveraging Sapphire's Confidential EVM, we've placed all passwords into a 'black box' that’s accessed using commonly used Passkeys, verified through r1 curve signatures on Oasis.
+  
+  Do I need to pay gas fees for each account detail I add?
+  
+  No, you don't need to pay gas fees for that. We've integrated Paymaster. We
+  handle this using the EIP155Signer.sign() method to broadcast the transactions
+  you send, through our Gasless Proxy contract. This ensures that you won’t have
+  to pay any gas fees.
+  
+  But there's more—OASISGUARD also allows for the secure sharing of passwords
+  with others via Semaphore, enabling group creation and seamless collaboration,
+  whether it's with one person or an entire team.
+  
+  Moreover, it's worth noting that we have implemented this entirely with an
+  Externally Owned Account (EOA). With the upcoming **EIP-3074**, EOAs will be
+  able to perform some operations currently only possible with Smart Accounts,
+  making the integration of a passkey with an EOA even more valuable.
+  
+  Check out the [YouTube video](https://www.youtube.com/watch?v=muluwPB6a9w).
+paratimes:
+  - sapphire
+languages:
+  - solidity
+  - typescript
+tags:
+  - ETHDam 2024
+  - Hackathon
+  - Browser extension
+  - Password manager
+codeUrl: https://github.com/itublockchain/ethdam-oasis-guard
+demoUrl: https://oasisguard.xyz/
+tutorials:
+  - Video demo: https://www.youtube.com/watch?v=muluwPB6a9w
+created: 2024-04-12
+lastUpdated: 2024-04-14
+maintainedByOasis: false
