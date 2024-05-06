@@ -1,0 +1,38 @@
+---
+name: Rose Derby
+authors:
+  - Joe Petrakovich: https://joe.ptrkv.ch/
+description: |
+  A horse betting "game", similar to real-world horse betting, except with
+  simulated races using Sapphire RNG to determine the race results. What makes
+  it interesting is that the participants are all completely private but the
+  statistics and game activity is public, so it's obvious people are playing
+  (and winning), but no one knows who is playing.
+  
+  Players are incentivized to schedule and find participants for races by
+  setting a % organizer "take" which awards them a percentage of the total
+  betting pool on a race. Then once the betting window has ended, players are
+  then further incentivized to call the "determine race results" function to
+  compute the results with Sapphire RNG and receive an additional percentage of
+  the pool.
+  
+  I believe this project would be a great starter project for more serious web3
+  on-chain gaming or even for casinos.
+paratimes:
+  - sapphire
+languages:
+  - typescript
+  - solidity
+license: MIT
+tags:
+  - P4W3
+  - Hackathon
+  - RNG
+  - Svelte
+codeUrl: https://github.com/joepetrakovich/rose-derby
+demoUrl: https://derby.brosette.dev/
+tutorials:
+  - Video demo: https://youtu.be/E3C2YK5TNbA
+created: 2023-08-16
+lastUpdated: 2024-01-03
+maintainedByOasis: false

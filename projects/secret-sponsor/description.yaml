@@ -1,0 +1,37 @@
+---
+name: Secret Sponsor
+authors:
+  - Taiju Sanagi: https://github.com/taijusanagi
+description: |
+  Secret Sponsor offers a mechanism for anonymous gas-sponsoring, incorporating
+  account abstraction and the Oasis Privacy Layer.
+
+  Users can stay anonymous by:
+
+  - Initiate encrypted funding transactions in Sapphire.
+  - Bridge these funds to the Goerli account abstraction paymaster.
+  - Execute transactions without incurring gas fees.
+  
+  Moreover, because the system focuses solely on gas-sponsoring, it becomes
+  difficult to associate it with illicit actions such as money laundering. This
+  is optimal privacy tailored for smaller users, particularly NFT artists.
+paratimes:
+  - sapphire
+languages:
+  - typescript
+  - solidity
+license: MIT
+tags:
+  - P4W3
+  - Hackathon
+  - OPL
+  - Gasless
+  - Account abstraction
+  - React
+codeUrl: https://github.com/taijusanagi/opl-secret-sponsor
+demoUrl: https://opl-secret-sponsor.vercel.app/
+tutorials:
+  - Video demo: https://youtu.be/JnP3FGQu4ds
+created: 2023-09-04
+lastUpdated: 2023-09-06
+maintainedByOasis: false
