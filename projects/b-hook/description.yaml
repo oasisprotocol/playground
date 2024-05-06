@@ -1,0 +1,28 @@
+---
+name: B-Hook
+authors:
+  - Régis Graptin: https://github.com/RegisGraptin
+  - Martin Leclercq: https://github.com/akugone
+  - Florian Truchot: https://github.com/truchot
+description: |
+  A new interactive way to create a book or other content creation (videos,
+  music, art etc..). You can write a book chapter by chapter and get feedbacks
+  from your community. This allow you to introduce your work to other people,
+  and get funds while writing your books.
+paratimes:
+  - sapphire
+languages:
+  - solidity
+  - typescript
+license: Apache-2.0
+tags:
+  - ETHDam 2024
+  - Hackathon
+  - DRM
+codeUrl: https://github.com/fifty-wei/ethdam-2024
+demoUrl: https://ethdam-2024.vercel.app/
+tutorials:
+  - Video demo: https://youtu.be/g_zqatoC1h0
+created: 2024-04-14
+lastUpdated: 2024-04-12
+maintainedByOasis: false

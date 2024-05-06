@@ -1,0 +1,50 @@
+---
+name: BoT (Blockchain of Things)
+authors:
+  - Fedor Panafidin:
+  - Merstoffe14:
+description: |
+  A Decentralized Subscription-Based Content Hosting Platform.
+  
+  Our platform
+  operates seamlessly with live data feeds, making it ideal for real-time
+  content delivery. It caters to content creators by providing an anonymous
+  channel to receive feedback, enriching the engagement without compromising
+  privacy.
+  
+  ## Problem & Solution
+
+  The blockchain world faces a critical shortage of reliable oracles which
+  connect real-world data to blockchain systems. Our solution is a
+  community-driven ecosystem that simplifies the process of creating an oracle.
+  We aim to reduce entry barriers and make operating an oracle not only feasible
+  but also lucrative.
+  
+  ## Key Features
+
+  - **Anonymous Transactions**: Both content creators and subscribers engage in
+    financial transactions and feedback sharing without revealing their
+    identities.
+  - **Incentivized Oracle Ecosystem**: Encourages the community to contribute to
+    the accuracy and reliability of data feeds.
+  - **Broad Compatibility**: Our platform supports devices as simple as Arduino
+    or Raspberry Pi, integrating them into the blockchain to deliver valuable
+    real-time data.
+paratimes:
+  - sapphire
+languages:
+  - solidity
+  - typescript
+tags:
+  - ETHDam 2024
+  - Hackathon
+  - Vue
+  - IoT
+  - Raspberry PI
+  - Arduino
+codeUrl: https://github.com/RRobotek/BoT
+tutorials:
+  - Demo slides: https://docs.google.com/presentation/d/1FH0EOex1_TIRABb91aUXZiAm1QiFMIrqAjTvb_07XBI
+created: 2024-04-14
+lastUpdated: 2024-04-12
+maintainedByOasis: false
