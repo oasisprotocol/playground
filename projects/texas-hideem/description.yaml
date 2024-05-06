@@ -1,0 +1,41 @@
+---
+name: Texas Hide'em
+authors:
+  - Greg Johns: https://devfolio.co/@GregJohns
+  - Christopher Callagan: https://github.com/ThanksSkeleton
+  - Joshua Suttenberg: https://devfolio.co/@JoshSuttenberg
+  - Dominic Letz: https://github.com/dominicletz
+description: |
+  Howdy, Partner. "Texas Hide-Em" our brand-new, fully decentralized poker
+  platform for onchain poker enthusiasts.
+  
+  By leveraging the Oasis Sapphire chain for confidentiality and randomness on
+  the contract side, and hosting the dapp webpage directly on ethstorage, we
+  present a poker dapp that has neither centralized frontend, nor a centralized
+  backend, only a fully decentralized contract. (Whip Sound Effect)
+  
+  If you have been playing online poker regularly, you can remember the scandals
+  with Absolute Poker or Ultimate Bet, where cheating superusers could view
+  other player's cards. Our solution eradicates the superuser dilemma with
+  confidential computing, keeping all cards provably secret until the showdown.
+  (Good Bad and Ugly Theme Riff)
+  
+  This is not just poker; it's the future of online gaming, combining privacy,
+  security, and fairness for all players.
+
+  Welcome to "Texas Hide-Em," Hide-em high at the mile high city, Denver,
+  Yeeeeeehaw.
+paratimes:
+  - sapphire
+languages:
+  - solidity
+  - typescript
+tags:
+  - ETHDenver 2024
+  - Hackathon
+  - RNG
+codeUrl: https://github.com/ThanksSkeleton/ethdenver_holdem
+demoUrl: https://poker.w3q.w3q-g.w3link.io
+created: 2024-02-24
+lastUpdated: 2024-03-06
+maintainedByOasis: false
