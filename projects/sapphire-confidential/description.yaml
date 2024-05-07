@@ -1,0 +1,36 @@
+---
+name: Sapphire Confidential
+authors:
+  - Jérome Rastit: https://github.com/jrastit
+description: |
+  Make yours transactions private on web3 blockchains with the power of
+  Sapphire.
+  
+  Secure Hardware like TEE, HSM, Secure Enclave, gives the possibility to handle
+  private key that are directly accessible by nobody (depending of the physical
+  security of the hardware) and that can be used for detaining assets and
+  signing transactions for the blockchain.
+
+  Using virtual addresses is smoother for mixers and remove the constraint to
+  have fix amount of asset locked and to have a long minimum time for waiting.
+
+  Oasis Sapphire blockchain give the possibility to manage private keys within a
+  private smart contract where the data are kept private into the contract with
+  secure enclave technology. and private exchange.
+paratimes:
+  - sapphire
+languages:
+  - javascript
+  - solidity
+tags:
+  - P4W3
+  - Hackathon
+  - OPL
+  - Mixer
+  - React
+codeUrl: https://github.com/jrastit/sapphire-confidential
+tutorials:
+  - Video demo: https://youtu.be/lOk41r4K0jY
+created: 2023-09-30
+lastUpdated: 2023-10-05
+maintainedByOasis: false

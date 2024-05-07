@@ -1,0 +1,60 @@
+---
+name: DSearch
+authors:
+  - Arsalaan Alam: https://www.arsalaan.bio/
+  - Krish Dhar: https://github.com/ronykris
+description: |
+  A Private Decentralized & Distributed Search Engine built on Sapphire:
+  
+  - **Privacy-Centric Search**: DSearch employs advanced encryption and
+    privacy-preserving techniques to ensure user anonymity. When a user submits
+    a search query, it is processed in a way that separates the user's identity
+    from the query itself. This means that neither DSearch nor any external
+    entity can trace the query back to the user. Additionally, DSearch doesn't
+    store user search history or use tracking cookies, guaranteeing that user
+    data remains private.
+
+  - **Decentralized Infrastructure**: DSearch operates on a decentralized
+    network of nodes, each hosting a copy of the search engine's index. This
+    decentralized architecture enhances fault tolerance and resiliency. When a
+    user submits a query, it is routed through this network, ensuring that there
+    is no single point of failure or control.
+
+  - **Anonymous Browsing**: DSearch not only prevents tracking by search engines
+    but also protects users from website tracking mechanisms. By using the Oasis
+    Privacy Layer, it acts as a privacy shield between the user and the websites
+    they visit, blocking cookies, scripts, and trackers commonly employed by
+    websites. This comprehensive approach ensures that user activity remains
+    truly private during their online journeys.
+
+  For building DSearch, we constructed a very complicated infrastructure in the
+  backend. We later realised that this infrastructure can be open-sourced and
+  will be beneficial to a lot of people building on OPL. We called this protocol
+  as API Link and DSearch serves as just one compelling use case within its
+  ecosystem. API Link is a protocol that allows Oasis Sapphire users to securely
+  invoke APIs to interact with the external world. By connecting on-chain events
+  and data with the external world, we believe that this protocol will bridge the
+  gap between the two worlds and open up a new domain of decentralized
+  applications (dApps). Here's what API Link does:
+
+  - Secure API Invocation
+  - Bridging On-Chain and Off-Chain Data
+  - Enhanced dApp Possibilities
+  - Augmenting the Oasis Network
+paratimes:
+  - sapphire
+languages:
+  - typescript
+  - javascript
+  - solidity
+tags:
+  - P4W3
+  - Hackathon
+  - Search
+codeUrl: https://github.com/ronykris/dapilink
+demoUrl: https://dsearch-dapilink.vercel.app/
+tutorials:
+  - Video demo: https://youtu.be/L8hURZ_cn5g
+created: 2023-09-07
+lastUpdated: 2023-10-06
+maintainedByOasis: false

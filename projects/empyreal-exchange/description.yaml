@@ -1,0 +1,29 @@
+---
+name: Empyreal Exchange
+authors:
+  - Unknown: https://github.com/johnny-empyreal
+description: |
+  Abstracting wallets and encryption for users to allow for private transactions
+  and encrypted data transfer.
+  
+  Fully privacy preserving implementation on Arbitrum that uses Sapphire as its
+  privacy layer. In addition, we used the lessons learned in implementing this
+  to put together a reference implementation for wallet abstraction on sapphire.
+  The wallet abstraction builds on top of the tooling developed as we built the
+  privacy preserving ERC-20 implementation.
+paratimes:
+  - sapphire
+languages:
+  - solidity
+license: Apache-2.0
+tags:
+  - P4W3
+  - Hackathon
+  - OPL
+codeUrl: https://github.com/empyrealapp/sapphire_hackathon
+demoUrl: https://beta.empyreal.app/
+tutorials:
+  - Video demo: https://vimeo.com/871000099
+created: 2023-10-04
+lastUpdated: 2023-10-09
+maintainedByOasis: false
