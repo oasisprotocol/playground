@@ -1,0 +1,46 @@
+---
+name: Cypher zer0x
+authors:
+  - Maxime Dienger: https://devpost.com/dienger-maxime
+  - Nathan Hervier: https://github.com/Elli610
+  - Thomas Hussenet: https://github.com/LeJamon
+  - Adam Dahmoul: https://www.linkedin.com/in/adam-dahmoul-556b8a184
+description: |
+  Cypher Zer0x addresses a fundamental issue in the blockchain ecosystem: the
+  lack of a privacy-focused, compliant layer for transactions. By integrating
+  natively ring Confidential transaction (RingCT) within its universal Layer 2
+  infrastructure, and due to it's design that combine plasma contract and
+  zk-rollup, it offers a robust solution for users and organizations requiring
+  both privacy and compliance in their blockchain interactions. Here are some
+  problems solved by this solution :
+
+  - **Lack of Compliant Privacy**: Traditional blockchain platforms often force
+    users to choose between privacy and compliance. Cypher Zer0x eliminates this
+    compromise, ensuring transactions remain private and fully compliant with
+    regulatory standards.
+  - **Complex Cross-Chain Transactions**: Interacting with multiple blockchains
+    typically involves complex processes that can compromise privacy and
+    security. Cypher Zer0x simplifies cross-chain transactions, making them more
+    accessible and secure.
+  - **Privacy Misconceptions**: Privacy is to often associated with malicious
+    activities. Cypher Zer0x challenges this by providing a platform where
+    privacy is a right, not a suspicion, while staying fully compliant.
+paratimes:
+  - sapphire
+languages:
+  - solidity
+  - typescript
+  - rust
+#license: https://raw.githubusercontent.com/Cypher-Zer0x/ts-client/main/LICENSE.md
+tags:
+  - ETHDenver 2024
+  - Hackathon
+  - ZK-Rollups
+  - MetaMask snap
+codeUrl: https://github.com/Cypher-Zer0x
+demoUrl: https://app.zer0x.xyz/
+tutorials:
+  - Video demo: https://youtu.be/iSfK2XsoFsA
+created: 2024-02-24
+lastUpdated: 2024-03-02
+maintainedByOasis: false

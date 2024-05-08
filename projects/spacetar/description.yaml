@@ -1,0 +1,27 @@
+---
+name: Spacetar
+authors:
+  - Donatus Prince: https://github.com/amdonatusprince
+description: |
+  A socialFI forum dApp that allows users to earn reward tokens by actively
+  participating and engaging in the community. User's earned rewards can be
+  swapped for any ERC-20 tokens on Sapphire and also rewards can be staked and
+  locked to earn more interest and incentives.
+paratimes:
+  - sapphire
+languages:
+  - javascript
+  - solidity
+tags:
+  - P4W3
+  - Hackathon
+  - Chat
+  - React
+codeUrl: https://github.com/amdonatusprince/spacetar-on-oasis
+demoUrl: https://spacetar-on-oasis.vercel.app/
+tutorials:
+  - "Building Spacetar: Step-by-Step Tutorial on Building an Encrypted SocialFi Forum dApp on the Oasis Sapphire Network": https://donatusprince.medium.com/building-spacetar-step-by-step-tutorial-on-building-an-encrypted-socialfi-forum-dapp-on-the-oasis-6a1854c835eb
+  - Video demo: https://youtu.be/MpsgqMmtJJ4
+created: 2023-09-29
+lastUpdated: 2023-10-06
+maintainedByOasis: false

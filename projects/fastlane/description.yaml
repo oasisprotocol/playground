@@ -1,0 +1,46 @@
+---
+name: Fastlane
+authors:
+  - Teja Reddy: https://github.com/narasim-teja
+  - Nathalie Nunez: https://fractilians.notion.site/Nathalie-Nunez-aka-Fractilians-f5477b6ebc5d4d63ad8c79358ef8f8c4
+  - Brett Seibert: https://brettseibert.com/
+  - C Spragu: https://devfolio.co/@spragu
+description: |
+  FastLane offers a unique and ever-evolving gameplay experience where users can
+  test their skills, own and monetize in-game assets. Players navigate a
+  dynamic, blockchain-powered road, overcoming unforeseen challenges set by
+  other players. By owning checkpoints, users can earn income and shape the
+  experience for others, fostering a collaborative and competitive environment.
+  Whether you're a seasoned gamer, a blockchain enthusiast, or simply looking
+  for something new, The Road provides an engaging platform to play, own, and
+  contribute to a unique and ever-expanding world.
+
+  FastLane is an on-chain game, here's how it makes tasks easier:
+  
+  1. Ownership and Control: Players own checkpoints on the road, represented as
+     NFTs. They can control the difficulty and experience for those traversing
+     their checkpoint by setting obstacles.
+  
+  2. Unpredictability and Engagement: Obstacles are encrypted and hidden until
+     encountered, creating a dynamic and unpredictable gameplay experience. New
+     checkpoints continuously increase the road's length and potential for
+     variation.
+  
+  3. Monetization Opportunities: Players can earn income through fees paid by
+     others attempting their checkpoints and potentially through strategic
+     placement of advertisements along the road.
+paratimes:
+  - sapphire
+languages:
+  - solidity
+  - typescript
+tags:
+  - ETHDenver 2024
+  - Hackathon
+codeUrl: https://github.com/narasim-teja/FastLane-EthDenver
+demoUrl: https://www.fastlane.run/
+tutorials:
+  - Video demo: https://youtu.be/-cKj4npXsic
+created: 2024-02-27
+lastUpdated: 2024-05-02
+maintainedByOasis: false
