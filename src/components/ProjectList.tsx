@@ -31,7 +31,7 @@ const ProjectList: React.FC = () => {
     // Open project from URL
     const projectSlugFromUrl = location.hash.substring(1);
     if (projectSlugFromUrl) {
-      const projectToOpen = projects.find((project) => project.name.toLowerCase().replace(/\s/g, '-') === projectSlugFromUrl);
+      const projectToOpen = projects.find((project) => project.slug === projectSlugFromUrl);
         if (projectToOpen) {
           setSelectedProject(projectToOpen);
           setOpenProjectDialog(true);
@@ -73,7 +73,7 @@ const ProjectList: React.FC = () => {
   };
 
   const handleProjectClick = (project: Project) => {
-    navigate(`/#${project.name.toLowerCase().replace(/\s/g, '-')}`);
+    navigate(`/#${project.slug}`);
   };
 
   const handleProjectDialogClose = () => {
