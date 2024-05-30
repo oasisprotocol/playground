@@ -28,21 +28,15 @@ const ProjectList: React.FC = () => {
   const location = useLocation();
 
   useEffect(() => {
-    const projectNameFromUrl = window.location.hash.substring(1);
-    const projectName = projectNameFromUrl.toLowerCase().replace(/\s/g, '-');
-  
-    const openProjectFromUrl = () => {
-      if (projectName && location.hash === `#${projectName}`) {
-        const projectToOpen = projects.find((project) => project.name.toLowerCase().replace(/\s/g, '-') === projectName);
-  
+    // Open project from URL
+    const projectSlugFromUrl = location.hash.substring(1);
+    if (projectSlugFromUrl) {
+      const projectToOpen = projects.find((project) => project.name.toLowerCase().replace(/\s/g, '-') === projectSlugFromUrl);
         if (projectToOpen) {
           setSelectedProject(projectToOpen);
           setOpenProjectDialog(true);
         }
       }
-    };
-  
-    openProjectFromUrl();
   }, [location.hash]);
 
   const [search, setSearch] = useState<string>('');
@@ -79,8 +73,6 @@ const ProjectList: React.FC = () => {
   };
 
   const handleProjectClick = (project: Project) => {
-    setSelectedProject(project);
-    setOpenProjectDialog(true);
     navigate(`/#${project.name.toLowerCase().replace(/\s/g, '-')}`);
   };
 
