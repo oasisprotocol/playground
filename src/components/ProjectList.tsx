@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import {
   Grid,
   Container,
@@ -27,23 +27,12 @@ const ProjectList: React.FC = () => {
   const navigate = useNavigate(); 
   const location = useLocation();
 
-  useEffect(() => {
-    // Open project from URL
-    const projectSlugFromUrl = location.hash.substring(1);
-    const projectToOpen = projects.find((project) => project.slug === projectSlugFromUrl);
-    if (projectToOpen) {
-      setSelectedProject(projectToOpen);
-      setOpenProjectDialog(true);
-    } else {
-      setOpenProjectDialog(false);
-    }
-  }, [location.hash]);
+  // Open project from URL
+  const selectedProject = projects.find((project) => project.slug === location.hash.substring(1)) ?? null
 
   const [search, setSearch] = useState<string>('');
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const [selectedLangs, setSelectedLangs] = useState<string[]>([]);
-  const [openProjectDialog, setOpenProjectDialog] = useState<boolean>(false);
-  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [maintainedByOasis, setMaintainedByOasis] = useState<boolean>(false); 
   const [selectedSources, setSelectedSources] = useState<string[]>(['Demo', 'Code', 'Tutorial']); 
   const [selectedParatimes, setSelectedParatimes] = useState<string[]>(['sapphire', 'emerald', 'cipher']);
@@ -310,7 +299,7 @@ const ProjectList: React.FC = () => {
         ))}
       </Grid>
       <ProjectDialog
-        open={openProjectDialog}
+        open={!!selectedProject}
         onClose={handleProjectDialogClose}
         project={selectedProject}
         selectedTags={selectedTags}
