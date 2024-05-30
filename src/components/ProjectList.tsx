@@ -30,13 +30,13 @@ const ProjectList: React.FC = () => {
   useEffect(() => {
     // Open project from URL
     const projectSlugFromUrl = location.hash.substring(1);
-    if (projectSlugFromUrl) {
-      const projectToOpen = projects.find((project) => project.slug === projectSlugFromUrl);
-        if (projectToOpen) {
-          setSelectedProject(projectToOpen);
-          setOpenProjectDialog(true);
-        }
-      }
+    const projectToOpen = projects.find((project) => project.slug === projectSlugFromUrl);
+    if (projectToOpen) {
+      setSelectedProject(projectToOpen);
+      setOpenProjectDialog(true);
+    } else {
+      setOpenProjectDialog(false);
+    }
   }, [location.hash]);
 
   const [search, setSearch] = useState<string>('');
@@ -72,12 +72,11 @@ const ProjectList: React.FC = () => {
     setMaintainedByOasis(!maintainedByOasis);
   };
 
-  const handleProjectClick = (project: Project) => {
-    navigate(`/#${project.slug}`);
+  const getProjectLink = (project: Project) => {
+    return `/#${project.slug}`
   };
 
   const handleProjectDialogClose = () => {
-    setOpenProjectDialog(false);
     navigate('.', { replace: true });
   };
 
@@ -300,7 +299,7 @@ const ProjectList: React.FC = () => {
             <ProjectListItem
               key={project.name}
               project={project}
-              handleProjectClick={handleProjectClick}
+              getProjectLink={getProjectLink}
               selectedTags={selectedTags}
               selectedLangs={selectedLangs}
               handleTagClick={handleTagClick}

@@ -5,10 +5,11 @@ import MaintainedByOasisIcon from '../assets/MaintainedByOasisIcon.svg';
 import ProjectItemTags from './ProjectItemTags';
 import ProjectItemLanguages from './ProjectItemLanguages';
 import ReactMarkdown from 'react-markdown';
+import { Link } from 'react-router-dom';
 
 interface ProjectListItemProps {
   project: Project;
-  handleProjectClick: (project: Project) => void;
+  getProjectLink: (project: Project) => string;
   selectedTags: string[];
   selectedLangs: string[];
   handleTagClick: (tag: string) => void;
@@ -20,7 +21,7 @@ interface ProjectListItemProps {
 
 const ProjectListItem: React.FC<ProjectListItemProps> = ({
   project,
-  handleProjectClick,
+  getProjectLink,
   selectedTags,
   selectedLangs,
   tags,
@@ -28,101 +29,101 @@ const ProjectListItem: React.FC<ProjectListItemProps> = ({
 }) => {
   const theme = useTheme();
   const isMobileScreen = useMediaQuery(theme.breakpoints.down('sm'));
-  
+
   return (
     <Grid item xs={12} sm={6} md={4} sx={{ display: 'flex' }}>
-      <Paper
-        elevation={3}
-        sx={{
-          margin: isMobileScreen ? '16px 0' : '16px',
-          cursor: 'pointer',
-          borderRadius: '15px'
-        }}
-        onClick={() => handleProjectClick(project)}
-      >
-         <img
-          src={project.screenshots[0]}
-          alt={project.name}
-          width="100%"
-          height="300px"
-          style={{
-            borderTopLeftRadius: '14px',
-            borderTopRightRadius: '14px',
-            width: '100%',
-            height: '190px',
-            objectFit: 'cover',
-            marginBottom: '8px',
-            boxShadow: '0px 3px 15px rgba(0,0,0,0.2)'
-          }}
-        ></img>
-        <Box
+      <Link to={getProjectLink(project)} style={{ textDecoration: 'none' }}>
+        <Paper
+          elevation={3}
           sx={{
-            padding: '24px',
-            paddingTop: '12px',
+            margin: isMobileScreen ? '16px 0' : '16px',
+            borderRadius: '15px',
           }}
         >
-          <Typography variant="h2" gutterBottom>
-            {project.name}
-          </Typography>
+          <img
+            src={project.screenshots[0]}
+            alt={project.name}
+            width="100%"
+            height="300px"
+            style={{
+              borderTopLeftRadius: '14px',
+              borderTopRightRadius: '14px',
+              width: '100%',
+              height: '190px',
+              objectFit: 'cover',
+              marginBottom: '8px',
+              boxShadow: '0px 3px 15px rgba(0,0,0,0.2)'
+            }}
+          ></img>
           <Box
             sx={{
-              color: '#445E77',
-              lineHeight: '130%',
-              minHeight: '60px',
-              fontFamily: "'Roboto Flex Variable',sans-serif"
+              padding: '24px',
+              paddingTop: '12px',
             }}
           >
-            <ReactMarkdown className='markdown-line-clamp'>
-              {project.description}
-            </ReactMarkdown>
-          </Box>
-          <Grid
-            container
-            spacing={2}
-                       sx={{
-              marginBottom: isMobileScreen ? '4px' : '24px', 
-              marginTop: isMobileScreen ? '8px' : '16px',
-            }}
-          >
-            <Grid item xs={12} md={10} sx={{ minHeight: isMobileScreen ? '50px' : '80px' }}>
-              <ProjectItemTags tags={tags} selectedTags={selectedTags} isLarge={false} />
-            </Grid>
-            <Grid item xs={12} md={2}>
-              {project.maintainedByOasis && (
-                <img
-                  width='48px'
-                  src={MaintainedByOasisIcon}
-                  alt="Maintained by Oasis Badge"
-                />
-              )}
-            </Grid> 
-
-            <Box sx={{display: 'block', width: '100%', paddingLeft: '16px'}}>
-              <ProjectItemLanguages langs={langs} selectedLangs={selectedLangs} isLarge={false} isInListItem={true} />
+            <Typography variant="h2" gutterBottom>
+              {project.name}
+            </Typography>
+            <Box
+              sx={{
+                color: '#445E77',
+                lineHeight: '130%',
+                minHeight: '60px',
+                fontFamily: "'Roboto Flex Variable',sans-serif"
+              }}
+            >
+              <ReactMarkdown className='markdown-line-clamp' disallowedElements={['a']}>
+                {project.description}
+              </ReactMarkdown>
             </Box>
+            <Grid
+              container
+              spacing={2}
+                        sx={{
+                marginBottom: isMobileScreen ? '4px' : '24px',
+                marginTop: isMobileScreen ? '8px' : '16px',
+              }}
+            >
+              <Grid item xs={12} md={10} sx={{ minHeight: isMobileScreen ? '50px' : '80px' }}>
+                <ProjectItemTags tags={tags} selectedTags={selectedTags} isLarge={false} />
+              </Grid>
+              <Grid item xs={12} md={2}>
+                {project.maintainedByOasis && (
+                  <img
+                    width='48px'
+                    src={MaintainedByOasisIcon}
+                    alt="Maintained by Oasis Badge"
+                  />
+                )}
+              </Grid>
 
-            <Box sx={{display: 'block', width: '100%', paddingLeft: '16px', paddingTop: '2px'}}>
-            <Typography sx={{
-              color: '#445E77',
-              fontSize: '14px'
-              }}>
-                {/* ParaTimes: {' '} */}
-                {project.paratimes.map((paratime: string, index: number) => (
-                  <Typography
-                    component="span"
-                    key={paratime}
-                    sx={{letterSpacing: '-0.03em', color: '#445E77',
-                    fontSize: '14px'}}
-                  >
-                    {paratime.charAt(0).toUpperCase() + paratime.slice(1)}
-                    {index < project.paratimes.length - 1 && ', '}
+              <Box sx={{display: 'block', width: '100%', paddingLeft: '16px'}}>
+                <ProjectItemLanguages langs={langs} selectedLangs={selectedLangs} isLarge={false} isInListItem={true} />
+              </Box>
+
+              <Box sx={{display: 'block', width: '100%', paddingLeft: '16px', paddingTop: '2px'}}>
+              <Typography sx={{
+                color: '#445E77',
+                fontSize: '14px'
+                }}>
+                  {/* ParaTimes: {' '} */}
+                  {project.paratimes.map((paratime: string, index: number) => (
+                    <Typography
+                      component="span"
+                      key={paratime}
+                      sx={{letterSpacing: '-0.03em', color: '#445E77',
+                      fontSize: '14px'}}
+                    >
+                      {paratime.charAt(0).toUpperCase() + paratime.slice(1)}
+                      {index < project.paratimes.length - 1 && ', '}
+                    </Typography>
+                  ))}
                   </Typography>
-                ))}
-                </Typography>
-            </Box>
-          </Grid>
-        </Box>
-      </Paper>
+              </Box>
+            </Grid>
+          </Box>
+        </Paper>
+      </Link>
     </Grid>
   );
 };
