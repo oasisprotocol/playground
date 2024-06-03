@@ -1,4 +1,5 @@
 export interface Project {
+  slug: string;
   name: string;
   authors: { [author: string]: string }[];
   description: string;

@@ -19,16 +19,20 @@ import '../App.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSliders } from '@fortawesome/free-solid-svg-icons';
 import { SortingOptions } from './Sorting';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 const ProjectList: React.FC = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm')); 
+  const navigate = useNavigate(); 
+  const location = useLocation();
+
+  // Open project from URL
+  const selectedProject = projects.find((project) => project.slug === location.hash.substring(1)) ?? null
 
   const [search, setSearch] = useState<string>('');
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const [selectedLangs, setSelectedLangs] = useState<string[]>([]);
-  const [openProjectDialog, setOpenProjectDialog] = useState<boolean>(false);
-  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [maintainedByOasis, setMaintainedByOasis] = useState<boolean>(false); 
   const [selectedSources, setSelectedSources] = useState<string[]>(['Demo', 'Code', 'Tutorial']); 
   const [selectedParatimes, setSelectedParatimes] = useState<string[]>(['sapphire', 'emerald', 'cipher']);
@@ -57,13 +61,12 @@ const ProjectList: React.FC = () => {
     setMaintainedByOasis(!maintainedByOasis);
   };
 
-  const handleProjectClick = (project: Project) => {
-    setSelectedProject(project);
-    setOpenProjectDialog(true);
+  const getProjectLink = (project: Project) => {
+    return `/#${project.slug}`
   };
 
   const handleProjectDialogClose = () => {
-    setOpenProjectDialog(false);
+    navigate('.', { replace: true });
   };
 
   const handleLicenseChange = (license: string) => {
@@ -282,21 +285,21 @@ const ProjectList: React.FC = () => {
         </Container>
     <Grid container spacing={1} justifyContent="start">
         {filteredAndSortedProjects.map((project) => (
-              <ProjectListItem
+            <ProjectListItem
               key={project.name}
               project={project}
-              handleProjectClick={handleProjectClick}
+              getProjectLink={getProjectLink}
               selectedTags={selectedTags}
               selectedLangs={selectedLangs}
               handleTagClick={handleTagClick}
               handleLangClick={handleLangClick}
               langs={project.languages}
               tags={project.tags}
-              />
+            />
         ))}
       </Grid>
       <ProjectDialog
-        open={openProjectDialog}
+        open={!!selectedProject}
         onClose={handleProjectDialogClose}
         project={selectedProject}
         selectedTags={selectedTags}
