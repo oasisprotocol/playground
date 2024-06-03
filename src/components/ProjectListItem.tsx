@@ -31,8 +31,8 @@ const ProjectListItem: React.FC<ProjectListItemProps> = ({
   const isMobileScreen = useMediaQuery(theme.breakpoints.down('sm'));
 
   return (
-    <Grid item xs={12} sm={6} md={4} sx={{ display: 'flex' }}>
-      <Link to={getProjectLink(project)} style={{ textDecoration: 'none' }}>
+    <Grid container xs={12} sm={6} md={4}>
+      <Link to={getProjectLink(project)} style={{ textDecoration: 'none', display: 'flex' }}>
         <Paper
           elevation={3}
           sx={{
