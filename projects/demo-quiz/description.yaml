@@ -1,0 +1,30 @@
+---
+name: Confidential Quiz
+authors:
+  - Oasis Protocol Foundation: https://oasisprotocol.org
+description: |
+  A simple confidential multiple choice quiz dApp. The questions and answer key
+  are stored on-chain. Once a user solves the quiz, they can (optionally) claim
+  a ROSE reward. The payout transaction is gasless, so they **do not require
+  MetaMask, pay gas fees or use any 3rd party oracles** to receive the reward.
+  
+  The dApp was originally developed to educate fresh developers about the Oasis
+  platform. By sending them a small amount of ROSE, they can immediately start
+  hacking and deploy their dApps on the Mainnet.
+  
+  To try out the demo, use `testCoupon1` through `testCoupon50` coupon codes.
+paratimes:
+  - sapphire
+languages:
+  - solidity
+  - typescript
+license: Apache-2.0
+tags:
+  - Gasless
+  - Vue
+  - ETHDam 2024
+codeUrl: https://github.com/oasisprotocol/demo-quiz
+demoUrl: https://playground.oasis.io/demo-quiz
+created: 2024-03-19
+lastUpdated: 2024-06-04
+maintainedByOasis: true
