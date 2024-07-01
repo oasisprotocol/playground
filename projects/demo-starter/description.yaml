@@ -35,6 +35,7 @@ tags:
   - Vue
   - SmartCon 2023
 codeUrl: https://github.com/oasisprotocol/demo-starter
+demoUrl: https://playground.oasis.io/demo-starter
 tutorials:
   - Sapphire Quickstart: https://docs.oasis.io/dapp/sapphire/quickstart
 created: 2023-09-29
