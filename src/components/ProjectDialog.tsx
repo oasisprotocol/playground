@@ -4,7 +4,7 @@ import { Close } from '@mui/icons-material';
 import ProjectItemTags from './ProjectItemTags';
 import { Project } from '../types';
 import Carousel from 'react-bootstrap/Carousel';
-import { SetStateAction, useState } from 'react';
+import { SetStateAction, useEffect, useState } from 'react';
 import MaintainedByOasisIcon from '../assets/MaintainedByOasisIcon.svg';
 import '../App.css'; 
 import { useTheme } from '@mui/material/styles';
@@ -38,6 +38,11 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
   const [carouselIndex, setCarouselIndex] = useState(0);
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+
+  useEffect(() => {
+    // Reset state after switching projects
+    setCarouselIndex(0)
+  }, [project])
 
   const handleSelectCarouselSlide = (selectedIndex: SetStateAction<number>) => {
     setCarouselIndex(selectedIndex);
