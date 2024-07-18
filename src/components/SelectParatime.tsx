@@ -20,7 +20,7 @@ const SelectParatime: React.FC<SelectParatimeProps> = ({ selectedParatime, handl
         borderRadius: '50px',
         height: '56px',
         '& .MuiSelect-root': {
-          color: '#3431AC',
+          color: '#0500E1',
           border: 'none',
           outline: 'none',
           '&:focus': {
@@ -49,7 +49,7 @@ const SelectParatime: React.FC<SelectParatimeProps> = ({ selectedParatime, handl
       }}
       inputProps={{
         style: {
-          color: '#3431AC',
+          color: '#0500E1',
           border: 'none',
         },
       }}

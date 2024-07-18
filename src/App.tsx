@@ -63,7 +63,7 @@ const paddingValue = isMobile ? '42px' : '80px';
             fontWeight: '600',
             '&:hover': {
               backgroundColor: 'white',
-              color: '#3431AC',
+              color: '#0500E1',
               borderColor: 'white'
             },
           }}

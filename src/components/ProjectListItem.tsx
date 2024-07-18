@@ -37,7 +37,9 @@ const ProjectListItem: React.FC<ProjectListItemProps> = ({
           elevation={3}
           sx={{
             margin: isMobileScreen ? '16px 0' : '16px',
-            borderRadius: '15px',
+            borderRadius: '16px',
+            border: '2px #0500E1 solid',
+            boxShadow: 'none'
           }}
         >
           <img
@@ -52,7 +54,7 @@ const ProjectListItem: React.FC<ProjectListItemProps> = ({
               height: '190px',
               objectFit: 'cover',
               marginBottom: '8px',
-              boxShadow: '0px 3px 15px rgba(0,0,0,0.2)'
+              borderBottom: '2px #0500E1 solid'
             }}
           ></img>
           <Box
@@ -66,7 +68,7 @@ const ProjectListItem: React.FC<ProjectListItemProps> = ({
             </Typography>
             <Box
               sx={{
-                color: '#445E77',
+                color: '#000000',
                 lineHeight: '130%',
                 minHeight: '60px',
                 fontFamily: "'Roboto Flex Variable',sans-serif"
@@ -103,7 +105,7 @@ const ProjectListItem: React.FC<ProjectListItemProps> = ({
 
               <Box sx={{display: 'block', width: '100%', paddingLeft: '16px', paddingTop: '2px'}}>
               <Typography sx={{
-                color: '#445E77',
+                color: '#000000',
                 fontSize: '14px'
                 }}>
                   {/* ParaTimes: {' '} */}
@@ -111,7 +113,7 @@ const ProjectListItem: React.FC<ProjectListItemProps> = ({
                     <Typography
                       component="span"
                       key={paratime}
-                      sx={{letterSpacing: '-0.03em', color: '#445E77',
+                      sx={{letterSpacing: '-0.03em', color: '#000000',
                       fontSize: '14px'}}
                     >
                       {paratime.charAt(0).toUpperCase() + paratime.slice(1)}

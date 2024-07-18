@@ -3,7 +3,7 @@ import { createTheme } from '@mui/material/styles';
 export const playgroundTheme = createTheme({
   palette: {
     primary: {
-      main: '#3431AC',
+      main: '#0500E1',
     },
   },
   typography: {
@@ -19,13 +19,13 @@ export const playgroundTheme = createTheme({
     },
     h2: {
         fontSize: '24px',
-        color: '#3431AC',
+        color: '#0500E1',
         fontWeight: 500,
         letterSpacing: '-1px',
     },
     h6: {
         fontSize: '18px',
-        color: '#3431AC',
+        color: '#0500E1',
         letterSpacing: '-0.5px',
     }
   },
@@ -33,7 +33,7 @@ export const playgroundTheme = createTheme({
     MuiInputBase: {
       styleOverrides: {
         root: {
-          color: 'grey',
+          color: '#000000',
         },
         
       },
@@ -105,7 +105,7 @@ export const playgroundTheme = createTheme({
       styleOverrides: {
         root: {
           '&.Mui-checked': {
-            color: '#3431AC',
+            color: '#0500E1',
           },
         },
       },
@@ -115,13 +115,13 @@ export const playgroundTheme = createTheme({
           root: {
             '&.MuiChip-root': {
               backgroundColor: 'transparent',
-              border: '1px solid #3431AC', 
+              border: '1px solid #0500E1', 
               fontWeight: '300',
-              color: '#3431AC',
+              color: '#0500E1',
               marginBottom: '5px'
             },
             '&.MuiChip-colorPrimary': {
-              backgroundColor: '#3431AC',
+              backgroundColor: '#0500E1',
               color: '#FFFFFF',
             },
           },

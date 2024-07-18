@@ -22,8 +22,8 @@ interface ProjectDialogProps {
 }
 
 const linkStyles = {
-  color: '#3431AC',
-  textDecorationColor: '#3431AC',
+  color: '#0500E1',
+  textDecorationColor: '#0500E1',
 };
 
 
@@ -77,7 +77,8 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
         <div style={{ padding: isMobile ? '32px 20px' : '32px' }}>
               <Typography variant="h2" sx={{ fontSize: '34px', letterSpacing: '-1.5px', paddingRight: '24px'}}>{project.name}</Typography>
               <Carousel activeIndex={carouselIndex} onSelect={handleSelectCarouselSlide}
-              style={{backgroundColor: 'lightgrey', marginTop: '24px', borderRadius: '8px', color: '#0D09E3',  boxShadow: '0px 3px 15px rgba(0,0,0,0.2)'}}
+              controls={project.screenshots.length > 1 ? true : false}
+              style={{backgroundColor: '#000000', marginTop: '24px', borderRadius: '8px', color: '#0D09E3', border: '1px solid blue'}}
               >
               {project.screenshots.map((screenshot) => (
                    <Carousel.Item key={screenshot}>
@@ -91,7 +92,6 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
                     marginBottom: '0',
                     borderRadius: '8px',
                     height: isMobile ? '263px' : '464px',
-                    boxShadow: '2px 4px 15px rgba(0,0,0,0.2)',
                     padding: '0'
                   }}
               />
@@ -101,7 +101,7 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
              <Grid container spacing={3} sx={{marginBottom: '32px', marginTop: '32px'}}>
                    <Grid item xs={12} md={6}> 
                       <Box
-                          sx={{color: '#445E77', letterSpacing: '-0.5px', marginBottom: '24px', fontFamily: "'Roboto Flex Variable',sans-serif"}}
+                          sx={{color: '#000000', letterSpacing: '-0.5px', marginBottom: '24px', fontFamily: "'Roboto Flex Variable',sans-serif"}}
                           >
                              <ReactMarkdown components={{ a: ({ node, ...props }) => modifyLinkTarget(props.href, props.title, props.children) }}>
                               {project.description}
@@ -110,10 +110,10 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
 
                       <Grid container spacing={3}>
                         <Grid item xs={6}>
-                          <Typography sx={{ color: '#445E77', letterSpacing: '-0.5px', fontSize: '14px' }}>
+                          <Typography sx={{ color: '#000000', letterSpacing: '-0.5px', fontSize: '14px' }}>
                             Last Updated:
                           </Typography>
-                          <Typography sx={{ color: '#3431AC', letterSpacing: '-0.5px', marginBottom: '16px' }}>
+                          <Typography sx={{ color: '#0500E1', letterSpacing: '-0.5px', marginBottom: '16px' }}>
                             <Typography component="span" sx={linkStyles}>
                               {new Date(project.lastUpdated).toLocaleDateString()}
                             </Typography>
@@ -121,10 +121,10 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
                         </Grid>
 
                         <Grid item xs={6}>
-                          <Typography sx={{ color: '#445E77', letterSpacing: '-0.5px', fontSize: '14px' }}>
+                          <Typography sx={{ color: '#000000', letterSpacing: '-0.5px', fontSize: '14px' }}>
                             Created:
                           </Typography>
-                          <Typography sx={{ color: '#3431AC', letterSpacing: '-0.5px', marginBottom: '24px' }}>
+                          <Typography sx={{ color: '#0500E1', letterSpacing: '-0.5px', marginBottom: '24px' }}>
                             <Typography component="span" sx={linkStyles}>
                               {new Date(project.created).toLocaleDateString()}
                             </Typography>
@@ -134,19 +134,19 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
 
                       <Grid container spacing={3}>
                         <Grid item xs={6}>
-                          <Typography sx={{ color: '#445E77', letterSpacing: '-0.5px', fontSize: '14px', marginTop: '16px' }}>
+                          <Typography sx={{ color: '#000000', letterSpacing: '-0.5px', fontSize: '14px', marginTop: '16px' }}>
                             Languages:
                           </Typography>
-                          <Box sx={{ color: '#3431AC', marginBottom: '24px' }}>
+                          <Box sx={{ color: '#0500E1', marginBottom: '24px' }}>
                             <ProjectItemLanguages langs={project.languages} selectedLangs={selectedLangs} isLarge={false} />
                           </Box>
                         </Grid>
 
                         <Grid item xs={6}>
-                          <Typography sx={{ color: '#445E77', letterSpacing: '-0.5px', fontSize: '14px', marginTop: '16px' }}>
+                          <Typography sx={{ color: '#000000', letterSpacing: '-0.5px', fontSize: '14px', marginTop: '16px' }}>
                             ParaTimes:
                           </Typography>
-                          <Box sx={{ color: '#3431AC', marginBottom: '24px' }}>
+                          <Box sx={{ color: '#0500E1', marginBottom: '24px' }}>
                             <Typography component="span">
                             {project.paratimes.map((paratime: string, index: number) => (
                               <Typography
@@ -165,7 +165,7 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
 
                       <Grid container spacing={3}>
                         <Grid item xs={12}>
-                          <Typography sx={{ color: '#445E77', letterSpacing: '-0.5px', fontSize: '14px', marginTop: '16px', marginBottom: '6px' }}>
+                          <Typography sx={{ color: '#000000', letterSpacing: '-0.5px', fontSize: '14px', marginTop: '16px', marginBottom: '6px' }}>
                             Tags:
                           </Typography>
                           <ProjectItemTags tags={project.tags} selectedTags={selectedTags} isLarge={true} />
@@ -175,7 +175,7 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
                    <Grid item xs={12} md={6}>                    
                     <Box sx={{ marginBottom: '16px'}}>
                       <Typography
-                        sx={{ color: '#445E77', letterSpacing: '-0.5px', fontSize: '14px' }}
+                        sx={{ color: '#000000', letterSpacing: '-0.5px', fontSize: '14px' }}
                       >
                         Authors:
                       </Typography>
@@ -184,7 +184,7 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
                         const authorValue = Object.values(authorObj)[0];
                         return (
                           <Typography
-                            sx={{ color: '#3431AC', letterSpacing: '-0.5px'}}
+                            sx={{ color: '#0500E1', letterSpacing: '-0.5px'}}
                             key={authorKey}
                           >
                             <Link
@@ -202,10 +202,10 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
                     </Box>
   
                       <Typography
-                      sx={{color: '#445E77', letterSpacing: '-0.5px', fontSize: '14px'}}
+                      sx={{color: '#000000', letterSpacing: '-0.5px', fontSize: '14px'}}
                       >Code:
                       </Typography>
-                        <Typography sx={{ color: '#3431AC', letterSpacing: '-0.5px', marginBottom: '16px' }}>
+                        <Typography sx={{ color: '#0500E1', letterSpacing: '-0.5px', marginBottom: '16px' }}>
                       <Link href={project.codeUrl} target="_blank" underline="always"  sx={linkStyles}>
                       Link to GitHub
                       </Link>
@@ -215,10 +215,10 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
                     {project.demoUrl &&
                     <>
                     <Typography
-                      sx={{color: '#445E77', letterSpacing: '-0.5px', fontSize: '14px'}}
+                      sx={{color: '#000000', letterSpacing: '-0.5px', fontSize: '14px'}}
                       >Demo:
                       </Typography>
-                      <Typography sx={{ color: '#3431AC', letterSpacing: '-0.5px', marginBottom: '16px' }}>
+                      <Typography sx={{ color: '#0500E1', letterSpacing: '-0.5px', marginBottom: '16px' }}>
                       <Link href={project.demoUrl} target="_blank" underline="always"  sx={linkStyles}>
                         {project.name}
                       </Link>
@@ -230,7 +230,7 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
            {project.tutorials && (
               <Box sx={{ marginBottom: '16px'}}>
                 <Typography
-                  sx={{ color: '#445E77', letterSpacing: '-0.5px', fontSize: '14px' }}
+                  sx={{ color: '#000000', letterSpacing: '-0.5px', fontSize: '14px' }}
                 >
                   Tutorials:
                 </Typography>
@@ -239,7 +239,7 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
                   const tutorialValue = Object.values(tutorialObj)[0];
                   return (
                     <Typography
-                      sx={{ color: '#3431AC', letterSpacing: '-0.5px' }}
+                      sx={{ color: '#0500E1', letterSpacing: '-0.5px' }}
                       key={tutorialKey}
                     >
                       <Link
@@ -258,11 +258,11 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
             )}
 
                       <Typography
-                      sx={{color: '#445E77', letterSpacing: '-0.5px', fontSize: '14px'}}
+                      sx={{color: '#000000', letterSpacing: '-0.5px', fontSize: '14px'}}
                       >Licence:
                       </Typography>
                       <Typography
-                        sx={{color: '#3431AC', letterSpacing: '-0.5px', marginBottom: '16px'}}>
+                        sx={{color: '#0500E1', letterSpacing: '-0.5px', marginBottom: '16px'}}>
                               {project.license}
                       </Typography>
                       
@@ -275,7 +275,7 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
                             width='48px'
                           />
                            <Typography
-                          sx={{color: '#445E77', letterSpacing: '-0.5px', paddingLeft: '16px', maxWidth: '210px', lineHeight: '1.3'}}
+                          sx={{color: '#000000', letterSpacing: '-0.5px', paddingLeft: '16px', maxWidth: '210px', lineHeight: '1.3'}}
                           >Maintained by the Oasis Protocol Foundation</Typography>
                         </Box>
                       )}

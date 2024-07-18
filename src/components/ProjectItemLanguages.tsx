@@ -16,7 +16,7 @@ const LanguagesList: React.FC<ProjectItemLanguagesProps> = ({ langs, selectedLan
   return (
     <Box
       sx={{
-        borderBottom: isInListItem ? '1px solid #3431AC': 'none',
+        borderBottom: isInListItem ? '1px solid #000000': 'none',
         paddingBottom: '2px',
         paddingTop: isMobile ? '12px' : '0'
         
@@ -30,7 +30,7 @@ const LanguagesList: React.FC<ProjectItemLanguagesProps> = ({ langs, selectedLan
             height: isLarge ? '27px' : '20px',
             fontSize: isInListItem ? '14px' : '16px',
             cursor: 'auto',
-            color: '#3431AC',
+            color: '#000000',
             fontWeight: selectedLangs.includes(lang) ? '700' : 'normal',
             letterSpacing: '-0.03em'
           }}

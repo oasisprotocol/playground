@@ -193,7 +193,7 @@ const ProjectList: React.FC = () => {
 
   return (
     <div>
-    <Container sx={{ backgroundColor: 'white', padding: paddingValue, borderRadius: '19px', position: 'relative'}}>
+    <Container sx={{ backgroundColor: 'white', border: '2px solid black', padding: paddingValue, borderRadius: '19px', position: 'relative'}}>
     <Container sx={{ padding: '0', paddingTop: '20px' }}>
           <div
             style={{
@@ -214,7 +214,7 @@ const ProjectList: React.FC = () => {
 
                   <Box
                     sx={{
-                      borderLeft: isMobile ? 'none' : '2px solid #3431AC',
+                      borderLeft: isMobile ? 'none' : '2px solid #0500E1',
                       paddingLeft: isMobile ? '0' :'30px',
                       width: isMobile ? '100%' : 'auto'
                     }}
@@ -231,15 +231,15 @@ const ProjectList: React.FC = () => {
     fontWeight: '500',
     maxWidth: isMobile ? '100%' :  '116px',
     marginLeft: 'auto',
-    border: '2px solid #3431AC',
+    border: '2px solid #0500E1',
     width: isMobile ? '100%' : 'auto',
-    backgroundColor: showFilters ? '#3431AC' : 'transparent',
-    color: showFilters ? 'white' : '#3431AC',
+    backgroundColor: showFilters ? '#0500E1' : 'transparent',
+    color: showFilters ? 'white' : '#0500E1',
     marginTop: isMobile ? '16px' : '0',
     '&:hover': {
-      backgroundColor: showFilters ? '#3431AC' : 'transparent',
-      color: showFilters ? 'white' : '#3431AC',
-      border: '2px solid #3431AC'
+      backgroundColor: showFilters ? '#000062' : 'transparent',
+      color: showFilters ? 'white' : '#0500E1',
+      border: showFilters ? '2px solid #000062' : '2px solid #0500E1'
     },
   }}
 >
