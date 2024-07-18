@@ -16,15 +16,15 @@ const ProjectItemTags: React.FC<ProjectItemTagsProps> = ({ tags, selectedTags, i
             color={selectedTags.includes(tag) ? 'primary' : 'default'}
             sx={{
               marginRight: '4px',
-              height: '20px',
-              fontSize: '12px',
+              height: 'auto',
+              fontSize: '14px',
               cursor: 'auto',
               '& .MuiChip-label': {
-                padding: '8px', 
+                padding: '4px 14px',  
+                fontWeight: '400',
               },
               ...(isLarge && {
                 height: '27px',
-                fontSize: '14px',
                 padding: '0 6px',
               }),
             }}
