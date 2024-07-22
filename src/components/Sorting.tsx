@@ -46,7 +46,7 @@ const Sorting: React.FC<SortingProps> = ({
       {filteredAndSortedProjectsLength > 0 && (
         <Grid item xs={6} md={3}>
           <Grid container spacing={1} justifyContent="end" alignItems="center">
-            <Grid item xs={12} md={8}>
+            <Grid item xs={12} md={8}> 
               <Select
                 fullWidth
                 value={sortOption}
@@ -55,8 +55,7 @@ const Sorting: React.FC<SortingProps> = ({
                 IconComponent={KeyboardArrowDown}
                 sx={{
                   borderRadius: '20px',
-                  paddingLeft: '20px',
-                  width: '170px',
+                  paddingLeft: '0',
                   paddingRight: '0',
                   textAlign: 'right',
                   borderColor: 'transparent',
