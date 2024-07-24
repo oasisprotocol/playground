@@ -1,7 +1,6 @@
 import React from 'react';
 import { Box, Button, Checkbox, FormControlLabel, Grid, Typography } from '@mui/material';
 import TagsSelector from './TagsSelector';
-import LanguagesSelector from './LanguagesSelector';
 
 interface FiltersProps {
   tags: string[];
@@ -43,7 +42,7 @@ const Filters: React.FC<FiltersProps> = ({
 }) => {
   return (
     <Grid container spacing={2} sx={{ borderBottom: '2px solid #CBC8EC', paddingBottom: '32px', paddingTop: '24px'}}>
-        <Grid item xs={12} md={3}>
+        <Grid item xs={12} md={2}>
     <Box>
       <Typography variant="h6" gutterBottom>
         Tags
@@ -52,24 +51,6 @@ const Filters: React.FC<FiltersProps> = ({
       {selectedTags.length > 0 && (
         <Button
           onClick={handleClearTags}
-          sx={{ textDecoration: 'underline', textTransform: 'none' }}
-        >
-          Clear
-        </Button>
-      )}
-    </Box>
-    <Box
-      sx={{
-        marginTop: '16px'
-      }}
-    >
-      <Typography variant="h6" gutterBottom>
-        Languages
-      </Typography>
-      <LanguagesSelector languages={langs} selectedLanguages={selectedLangs} handleLanguageClick={handleLanguageClick} />
-      {selectedLangs.length > 0 && (
-        <Button
-          onClick={handleClearLangs}
           sx={{ textDecoration: 'underline', textTransform: 'none' }}
         >
           Clear
@@ -78,40 +59,36 @@ const Filters: React.FC<FiltersProps> = ({
     </Box>
   </Grid>
 
-  <Grid item xs={12} md={3}>
-    <Box>
-      <Typography variant="h6" gutterBottom>
-        Tags
-      </Typography>
-      <TagsSelector tags={tags} selectedTags={selectedTags} handleTagClick={handleTagClick} />
-      {selectedTags.length > 0 && (
-        <Button
-          onClick={handleClearTags}
-          sx={{ textDecoration: 'underline', textTransform: 'none' }}
-        >
-          Clear
-        </Button>
-      )}
-    </Box>
-    <Box
-      sx={{
-        marginTop: '16px'
-      }}
-    >
-      <Typography variant="h6" gutterBottom>
-        Languages X
-      </Typography>
-      <LanguagesSelector languages={langs} selectedLanguages={selectedLangs} handleLanguageClick={handleLanguageClick} />
-      {selectedLangs.length > 0 && (
-        <Button
-          onClick={handleClearLangs}
-          sx={{ textDecoration: 'underline', textTransform: 'none' }}
-        >
-          Clear
-        </Button>
-      )}
-    </Box>
-  </Grid>
+  <Grid item xs={12} md={2}>
+        <Box>
+          <Typography variant="h6" gutterBottom>
+            Languages
+          </Typography>
+          {langs.map((lang) => (
+            <Box sx={{marginBottom: '-7px'}}>
+            <FormControlLabel
+              key={lang}
+              control={
+                <Checkbox
+                  checked={selectedLangs.includes(lang)}
+                  onChange={() => handleLanguageClick(lang)}
+                  color="primary"
+                />
+              }
+              label={lang}
+            />
+            </Box>
+          ))}
+          {selectedLangs.length > 0 && (
+            <Button
+              onClick={handleClearLangs}
+              sx={{ textDecoration: 'underline', textTransform: 'none', justifyContent: 'flex-start', padding: '0' }}
+            >
+              Clear
+            </Button>
+          )}
+        </Box>
+   </Grid>
 
   <Grid item xs={12} md={2}>
         <Box>
