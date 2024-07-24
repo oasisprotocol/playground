@@ -1,6 +1,6 @@
 import { Container, Typography, Box, ThemeProvider, Link, Grid, Button } from '@mui/material';
 import ProjectList from './components/ProjectList';
-import backgroundImg from './assets/PlaygroundBgGradient.webp'
+import backgroundImg from './assets/PlaygroundBgGraphic.webp'
 import { playgroundTheme } from './styles/playgroundTheme';
 import { useTheme } from '@mui/material/styles';
 import { useMediaQuery } from '@mui/material';
@@ -28,9 +28,10 @@ const paddingValue = isMobile ? '42px' : '80px';
       height: '100%',
       minHeight: '100vh',
       backgroundImage: `url(${backgroundImg})`,
-      backgroundSize: 'auto',
+      backgroundSize: 'contain',
       backgroundRepeat: 'no-repeat',
-      backgroundColor: '#1421F8',
+      backgroundColor: '#0500E1',
+      backgroundPosition: '50% 230px'
     }}>
       <Container maxWidth="lg" sx={{ paddingTop: paddingValue, paddingBottom: paddingValue }}>
       <StyledImage src={logo} alt="Oasis Playground"/>
@@ -63,7 +64,7 @@ const paddingValue = isMobile ? '42px' : '80px';
             fontWeight: '600',
             '&:hover': {
               backgroundColor: 'white',
-              color: '#3431AC',
+              color: '#0500E1',
               borderColor: 'white'
             },
           }}
@@ -75,7 +76,7 @@ const paddingValue = isMobile ? '42px' : '80px';
       <Box>    
       <ProjectList />
       </Box>
-      <Typography gutterBottom sx={{color: 'white', textAlign: 'center', fontSize: '20px', width: '100%', marginBottom: '24px', marginTop: '20px'}} >
+      <Typography gutterBottom sx={{color: 'white', textAlign: 'center', fontSize: '14px', width: '100%', marginBottom: '24px', marginTop: '20px'}} >
       Copyright © 2024 Oasis Protocol Foundation. All rights reserved.
       </Typography>
       </Container>

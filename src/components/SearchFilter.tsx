@@ -24,7 +24,7 @@ const SearchFilter: React.FC<SearchFilterProps> = ({ search, setSearch }) => {
         sx={{
           backgroundColor: 'white',
           borderRadius: '40px',
-          border: '2px solid #3431AC',
+          border: '2px solid #0500E1',
           outline: 'none',
           height: '47px'
         }}
