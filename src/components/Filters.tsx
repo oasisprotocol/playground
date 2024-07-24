@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Button, Checkbox, FormControlLabel, Grid, Switch, Typography } from '@mui/material';
+import { Box, Button, Checkbox, FormControlLabel, Grid, Typography } from '@mui/material';
 import TagsSelector from './TagsSelector';
 import LanguagesSelector from './LanguagesSelector';
 
@@ -18,7 +18,7 @@ interface FiltersProps {
   handleSourcesChange: (source: string) => void;
   handleParatimesChange: (source: string) => void;
   maintainedByOasis: boolean;
-  handleMaintainedByOasisToggle: () => void;
+  handleMaintainedByOasisToggle: () => void; 
   handleClearTags: () => void;
   handleClearLangs: () => void;
 }
@@ -65,6 +65,41 @@ const Filters: React.FC<FiltersProps> = ({
     >
       <Typography variant="h6" gutterBottom>
         Languages
+      </Typography>
+      <LanguagesSelector languages={langs} selectedLanguages={selectedLangs} handleLanguageClick={handleLanguageClick} />
+      {selectedLangs.length > 0 && (
+        <Button
+          onClick={handleClearLangs}
+          sx={{ textDecoration: 'underline', textTransform: 'none' }}
+        >
+          Clear
+        </Button>
+      )}
+    </Box>
+  </Grid>
+
+  <Grid item xs={12} md={3}>
+    <Box>
+      <Typography variant="h6" gutterBottom>
+        Tags
+      </Typography>
+      <TagsSelector tags={tags} selectedTags={selectedTags} handleTagClick={handleTagClick} />
+      {selectedTags.length > 0 && (
+        <Button
+          onClick={handleClearTags}
+          sx={{ textDecoration: 'underline', textTransform: 'none' }}
+        >
+          Clear
+        </Button>
+      )}
+    </Box>
+    <Box
+      sx={{
+        marginTop: '16px'
+      }}
+    >
+      <Typography variant="h6" gutterBottom>
+        Languages X
       </Typography>
       <LanguagesSelector languages={langs} selectedLanguages={selectedLangs} handleLanguageClick={handleLanguageClick} />
       {selectedLangs.length > 0 && (
@@ -192,12 +227,19 @@ const Filters: React.FC<FiltersProps> = ({
       </Grid>
 
       {/* Maintained By Oasis */}
-      <Grid item xs={12} md={3}>
-        <Box sx={{ display: 'flex', alignItems: 'center'}}>
+      <Grid item xs={12} md={2}>
+        <Box>
           <Typography variant="h6" gutterBottom>
-            Only OPF maintained
+            Approved by
           </Typography>
-          <Switch onClick={handleMaintainedByOasisToggle} />
+          <FormControlLabel
+            control={
+              <Checkbox
+                onChange={handleMaintainedByOasisToggle}
+              />
+            }
+            label="OPF"
+          />
         </Box>
       </Grid>
     </Grid>

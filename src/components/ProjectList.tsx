@@ -58,7 +58,7 @@ const ProjectList: React.FC = () => {
   };
 
   const handleMaintainedByOasisToggle = () => {
-    setMaintainedByOasis(!maintainedByOasis);
+    setMaintainedByOasis((prev) => !prev);
   };
 
   const getProjectLink = (project: Project) => {
