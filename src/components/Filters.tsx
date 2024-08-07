@@ -124,8 +124,8 @@ const Filters: React.FC<FiltersProps> = ({
               }}
             >
               {sortedTags.map((tag) => (
-                <MenuItem key={tag} value={tag} sx={{paddingLeft: '0'}}>
-                  <Checkbox checked={selectedTags.indexOf(tag) > -1} />
+                <MenuItem key={tag} value={tag} sx={{padding: '0'}}>
+                  <Checkbox checked={selectedTags.indexOf(tag) > -1} sx={{padding: '6px 9px'}}/>
                   <ListItemText primary={tag} />
                 </MenuItem>
               ))}

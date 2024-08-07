@@ -113,7 +113,7 @@ const ProjectList: React.FC = () => {
   
     const tagsMatch: boolean =
       selectedTags.length === 0 ||
-      selectedTags.every((tag) => project.tags.includes(tag));
+      selectedTags.some((tag) => project.tags.includes(tag));
       
     const langsMatch: boolean =
       selectedLangs.length === 0 ||
