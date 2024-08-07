@@ -35,7 +35,7 @@ const ProjectList: React.FC = () => {
   const [selectedLangs, setSelectedLangs] = useState<string[]>([]);
   const [maintainedByOasis, setMaintainedByOasis] = useState<boolean>(false); 
   const [selectedSources, setSelectedSources] = useState<string[]>([]);
-  const [selectedParatimes, setSelectedParatimes] = useState<string[]>(['sapphire', 'emerald', 'cipher']);
+  const [selectedParatimes, setSelectedParatimes] = useState<string[]>([]);
   const [showFilters, setShowFilters] = useState<boolean>(false);
 
   const licenses = Array.from(
@@ -135,7 +135,7 @@ const ProjectList: React.FC = () => {
       });
 
     const paratimeMatch: boolean =
-      selectedParatimes.length > 0 &&
+      selectedParatimes.length === 0 ||
       selectedParatimes.some(paratime =>
         project.paratimes?.includes(paratime)
       );
@@ -257,8 +257,8 @@ const ProjectList: React.FC = () => {
                 selectedLicenses={selectedLicenses}
                 handleLicenseChange={handleLicenseChange}
                 selectedSources={selectedSources}
-                selectedParatimes={selectedParatimes}
                 handleSourcesChange={handleSourcesChange}
+                selectedParatimes={selectedParatimes}
                 handleParatimesChange={handleParatimesChange}
                 maintainedByOasis={maintainedByOasis}
                 handleMaintainedByOasisToggle={handleMaintainedByOasisToggle}

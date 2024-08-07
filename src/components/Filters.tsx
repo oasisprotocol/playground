@@ -26,8 +26,8 @@ interface FiltersProps {
   selectedLicenses: string[];
   handleLicenseChange: (license: string) => void;
   selectedSources: string[];
-  selectedParatimes: string[];
   handleSourcesChange: (source: string) => void;
+  selectedParatimes: string[];
   handleParatimesChange: (source: string) => void;
   maintainedByOasis: boolean;
   handleMaintainedByOasisToggle: () => void; 
@@ -47,6 +47,10 @@ const MenuProps = {
       border: '2px solid #000000'
     },
   },
+};
+
+const capitalize = (str: string) => {
+  return str.charAt(0).toUpperCase() + str.slice(1);
 };
 
 const Filters: React.FC<FiltersProps> = ({
@@ -220,42 +224,20 @@ const Filters: React.FC<FiltersProps> = ({
           <Typography variant="h6" gutterBottom sx={{ paddingLeft: '-12px' }}>
             Paratimes
           </Typography>
-          <Box sx={{marginBottom: '-7px'}}>
-            <FormControlLabel
-              control={
-                <Checkbox
-                  checked={selectedParatimes.includes('sapphire')}
-                  onChange={() => handleParatimesChange('sapphire')}
-                />
-              }
-              label="Sapphire"
-              sx={{ marginBottom: '-7px' }}
-            />
-          </Box>
-          <Box sx={{marginBottom: '-7px'}}>
-            <FormControlLabel
-              control={
-                <Checkbox
-                  checked={selectedParatimes.includes('emerald')}
-                  onChange={() => handleParatimesChange('emerald')}
-                />
-              }
-              label="Emerald"
-              sx={{ marginBottom: '-7px' }}
-            />
-          </Box>
-          <Box sx={{marginBottom: '-7px'}}>
-            <FormControlLabel
-              control={
-                <Checkbox
-                  checked={selectedParatimes.includes('cipher')}
-                  onChange={() => handleParatimesChange('cipher')}
-                />
-              }
-              label="Cipher"
-              sx={{ marginBottom: '-7px' }}
-            />
-          </Box>
+          {['sapphire', 'emerald', 'cipher'].map((paratime) => (
+            <Box key={paratime} sx={{ marginBottom: '-7px' }}>
+              <FormControlLabel
+                control={
+                  <Checkbox
+                    checked={selectedParatimes.includes(paratime)}
+                    onChange={() => handleParatimesChange(paratime)}
+                    color="primary"
+                  />
+                }
+                label={capitalize(paratime)}
+              />
+            </Box>
+          ))}
         </Box>
       </Grid>
 
