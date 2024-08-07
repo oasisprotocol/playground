@@ -28,7 +28,7 @@ const ProjectList: React.FC = () => {
   const location = useLocation();
 
   // Open project from URL
-  const selectedProject = projects.find((project) => project.slug === location.hash.substring(1)) ?? null
+  const selectedProject = projects.find((project) => project.slug === location.hash.substring(1)) ?? null;
 
   const [search, setSearch] = useState<string>('');
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
@@ -42,8 +42,7 @@ const ProjectList: React.FC = () => {
     new Set(projects.map((project) => project.license))
   );
 
-  const [selectedLicenses, setSelectedLicenses] = useState<string[]>(licenses); 
-
+  const [selectedLicenses, setSelectedLicenses] = useState<string[]>([]); // Initially unchecked
 
   const paddingValue = isMobile ? '24px' : '34px 46px'; 
   
@@ -62,7 +61,7 @@ const ProjectList: React.FC = () => {
   };
 
   const getProjectLink = (project: Project) => {
-    return `/#${project.slug}`
+    return `/#${project.slug}`;
   };
 
   const handleProjectDialogClose = () => {
@@ -84,13 +83,9 @@ const ProjectList: React.FC = () => {
   };
 
   const handleParatimesChange = (paratime: string) => {
-    let updatedParatimes;
-    if (selectedParatimes.includes(paratime)) {
-      updatedParatimes = selectedParatimes.filter((p) => p !== paratime);
-    } else {
-      updatedParatimes = [...selectedParatimes, paratime];
-    }
-  
+    const updatedParatimes = selectedParatimes.includes(paratime)
+      ? selectedParatimes.filter((p) => p !== paratime)
+      : [...selectedParatimes, paratime];
     setSelectedParatimes(updatedParatimes);
   };
 
@@ -100,8 +95,6 @@ const ProjectList: React.FC = () => {
 
   const tags: string[] = Array.from(new Set(projects.flatMap((project) => project.tags)));
   const langs: string[] = Array.from(new Set(projects.flatMap((project) => project.languages)));
-
- 
 
   const filteredProjects: Project[] = projects.filter((project) => {
     const searchMatch: boolean =
@@ -120,7 +113,7 @@ const ProjectList: React.FC = () => {
       !maintainedByOasis || project.maintainedByOasis;
   
     const licenseMatch: boolean =
-     selectedLicenses.includes(project.license);
+      selectedLicenses.length === 0 || selectedLicenses.includes(project.license); // Match all if none selected
   
     const sourcesMatch: boolean =
       selectedSources.length === 0
@@ -142,16 +135,14 @@ const ProjectList: React.FC = () => {
             return false;
           });
 
-          const paratimeMatch: boolean =
-            selectedParatimes.length > 0 &&
-            selectedParatimes.some(paratime =>
-              project.paratimes?.includes(paratime)
-            );
+    const paratimeMatch: boolean =
+      selectedParatimes.length > 0 &&
+      selectedParatimes.some(paratime =>
+        project.paratimes?.includes(paratime)
+      );
 
-
-    return searchMatch && tagsMatch && langsMatch  && paratimeMatch && maintainedByOasisMatch && licenseMatch && sourcesMatch;
+    return searchMatch && tagsMatch && langsMatch && paratimeMatch && maintainedByOasisMatch && licenseMatch && sourcesMatch;
   });
-
 
   const handleTagClick = (tag: string) => {
     if (selectedTags.includes(tag)) {

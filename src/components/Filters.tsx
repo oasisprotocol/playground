@@ -77,6 +77,12 @@ const Filters: React.FC<FiltersProps> = ({
 
   const sortedTags = [...tags].sort();
 
+  const sortedLicenses = [...licenses].sort((a, b) => {
+    if (a === '') return 1;
+    if (b === '') return -1;
+    return a.localeCompare(b);
+  });
+
   return (
     <Grid container spacing={2} sx={{ borderBottom: '2px solid #CBC8EC', paddingBottom: '32px', paddingTop: '24px', justifyContent: 'space-between'}}>
       <Grid item>
@@ -162,13 +168,14 @@ const Filters: React.FC<FiltersProps> = ({
         </Box>
       </Grid>
 
+      {/* Licenses */}
       <Grid item>
         <Box>
           <Typography variant="h6" gutterBottom sx={{ paddingLeft: '-12px' }}>
             Licenses
           </Typography>
-          {licenses.map((license) => (
-            <Box key={license} sx={{ marginBottom: '-7px' }}>
+          {sortedLicenses.map((license) => (
+            <Box key={license || 'unspecified'} sx={{ marginBottom: '-7px' }}>
               <FormControlLabel
                 control={
                   <Checkbox
@@ -177,7 +184,7 @@ const Filters: React.FC<FiltersProps> = ({
                     color="primary"
                   />
                 }
-                label={license}
+                label={license || 'Unspecified'}
               />
             </Box>
           ))}
