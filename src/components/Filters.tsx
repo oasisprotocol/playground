@@ -197,42 +197,20 @@ const Filters: React.FC<FiltersProps> = ({
           <Typography variant="h6" gutterBottom sx={{ paddingLeft: '-12px' }}>
             Sources
           </Typography>
-          <Box sx={{marginBottom: '-7px'}}>
-            <FormControlLabel
-              control={
-                <Checkbox
-                  checked={selectedSources.includes('Demo')}
-                  onChange={() => handleSourcesChange('Demo')}
-                />
-              }
-              label="Demo"
-              sx={{ marginBottom: '-7px' }}
-            />
-          </Box>
-          <Box sx={{marginBottom: '-7px'}}>
-            <FormControlLabel
-              control={
-                <Checkbox
-                  checked={selectedSources.includes('Code')}
-                  onChange={() => handleSourcesChange('Code')}
-                />
-              }
-              label="Code"
-              sx={{ marginBottom: '-7px' }}
-            />
-          </Box>
-          <Box sx={{marginBottom: '-7px'}}>
-            <FormControlLabel
-              control={
-                <Checkbox
-                  checked={selectedSources.includes('Tutorial')}
-                  onChange={() => handleSourcesChange('Tutorial')}
-                />
-              }
-              label="Tutorial"
-              sx={{ marginBottom: '-7px' }}
-            />
-          </Box>
+          {['Demo', 'Code', 'Tutorial'].map((source) => (
+            <Box key={source} sx={{ marginBottom: '-7px' }}>
+              <FormControlLabel
+                control={
+                  <Checkbox
+                    checked={selectedSources.includes(source)}
+                    onChange={() => handleSourcesChange(source)}
+                    color="primary"
+                  />
+                }
+                label={source}
+              />
+            </Box>
+          ))}
         </Box>
       </Grid>
 

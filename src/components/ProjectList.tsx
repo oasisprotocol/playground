@@ -34,7 +34,7 @@ const ProjectList: React.FC = () => {
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const [selectedLangs, setSelectedLangs] = useState<string[]>([]);
   const [maintainedByOasis, setMaintainedByOasis] = useState<boolean>(false); 
-  const [selectedSources, setSelectedSources] = useState<string[]>(['Demo', 'Code', 'Tutorial']); 
+  const [selectedSources, setSelectedSources] = useState<string[]>([]);
   const [selectedParatimes, setSelectedParatimes] = useState<string[]>(['sapphire', 'emerald', 'cipher']);
   const [showFilters, setShowFilters] = useState<boolean>(false);
 
@@ -42,7 +42,7 @@ const ProjectList: React.FC = () => {
     new Set(projects.map((project) => project.license))
   );
 
-  const [selectedLicenses, setSelectedLicenses] = useState<string[]>([]); // Initially unchecked
+  const [selectedLicenses, setSelectedLicenses] = useState<string[]>([]);
 
   const paddingValue = isMobile ? '24px' : '34px 46px'; 
   
@@ -116,24 +116,23 @@ const ProjectList: React.FC = () => {
       selectedLicenses.length === 0 || selectedLicenses.includes(project.license); // Match all if none selected
   
     const sourcesMatch: boolean =
-      selectedSources.length === 0
-        ? false
-        : selectedSources.some((source) => {
-            if (
-              (source === 'Demo' && project.demoUrl) ||
-              (source === 'Code' && project.codeUrl)
-            ) {
-              return true;
-            }
-            if (
-              source === 'Tutorial' &&
-              Array.isArray(project.tutorials) &&
-              project.tutorials.length > 0
-            ) {
-              return true;
-            }
-            return false;
-          });
+      selectedSources.length === 0 ||
+      selectedSources.some((source) => {
+        if (
+          (source === 'Demo' && project.demoUrl) ||
+          (source === 'Code' && project.codeUrl)
+        ) {
+          return true;
+        }
+        if (
+          source === 'Tutorial' &&
+          Array.isArray(project.tutorials) &&
+          project.tutorials.length > 0
+        ) {
+          return true;
+        }
+        return false;
+      });
 
     const paratimeMatch: boolean =
       selectedParatimes.length > 0 &&
