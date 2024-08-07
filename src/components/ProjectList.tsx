@@ -34,18 +34,28 @@ const ProjectList: React.FC = () => {
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const [selectedLangs, setSelectedLangs] = useState<string[]>([]);
   const [maintainedByOasis, setMaintainedByOasis] = useState<boolean>(false); 
-  const [selectedSources, setSelectedSources] = useState<string[]>([]);
-  const [selectedParatimes, setSelectedParatimes] = useState<string[]>([]);
+  const [selectedSources, setSelectedSources] = useState<string[]>([]); // Initially unchecked
+  const [selectedParatimes, setSelectedParatimes] = useState<string[]>([]); // Initially unchecked
   const [showFilters, setShowFilters] = useState<boolean>(false);
 
   const licenses = Array.from(
     new Set(projects.map((project) => project.license))
   );
 
-  const [selectedLicenses, setSelectedLicenses] = useState<string[]>([]);
+  const [selectedLicenses, setSelectedLicenses] = useState<string[]>([]); // Initially unchecked
 
   const paddingValue = isMobile ? '24px' : '34px 46px'; 
-  
+
+  const handleClearFilters = () => {
+    setSelectedTags([]);
+    setSelectedLangs([]);
+    setSelectedLicenses([]);
+    setSelectedSources([]);
+    setSelectedParatimes([]);
+    setMaintainedByOasis(false);
+    setSearch('');
+  };
+
   const handleClearTags = () => {
     setSelectedTags([]);
     setSearch('');
@@ -183,8 +193,8 @@ const ProjectList: React.FC = () => {
 
   return (
     <div>
-    <Container sx={{ backgroundColor: 'white', border: '2px solid black', padding: paddingValue, borderRadius: '19px', position: 'relative'}}>
-    <Container sx={{ padding: '0', paddingTop: '20px' }}>
+      <Container sx={{ backgroundColor: 'white', border: '2px solid black', padding: paddingValue, borderRadius: '19px', position: 'relative'}}>
+        <Container sx={{ padding: '0', paddingTop: '20px' }}>
           <div
             style={{
               position: 'relative',
@@ -192,52 +202,49 @@ const ProjectList: React.FC = () => {
               transition: 'max-height 0.5s ease',
             }}
           >
-  
-                <Box
+            <Box
+              sx={{
+                display: 'flex',
+                justifyContent: 'space-between',
+                flexWrap: isMobile ? 'wrap' : 'nowrap'
+              }}
+            > 
+              <SearchFilter search={search} setSearch={setSearch} />
+              <Box
+                sx={{
+                  borderLeft: isMobile ? 'none' : '2px solid #0500E1',
+                  paddingLeft: isMobile ? '0' :'30px',
+                  width: isMobile ? '100%' : 'auto'
+                }}
+              >
+                <Button
+                  onClick={handleToggleFilters}
+                  startIcon={<FontAwesomeIcon icon={faSliders} />} 
+                  variant='outlined'
                   sx={{
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    flexWrap: isMobile ? 'wrap' : 'nowrap'
+                    borderRadius: '50px',
+                    height: '43px',
+                    textTransform: 'capitalize',
+                    padding: '0 25px',
+                    fontWeight: '500',
+                    maxWidth: isMobile ? '100%' :  '116px',
+                    marginLeft: 'auto',
+                    border: '2px solid #0500E1',
+                    width: isMobile ? '100%' : 'auto',
+                    backgroundColor: showFilters ? '#0500E1' : 'transparent',
+                    color: showFilters ? 'white' : '#0500E1',
+                    marginTop: isMobile ? '16px' : '0',
+                    '&:hover': {
+                      backgroundColor: showFilters ? '#000062' : 'transparent',
+                      color: showFilters ? 'white' : '#0500E1',
+                      border: showFilters ? '2px solid #000062' : '2px solid #0500E1'
+                    },
                   }}
-                > 
-                <SearchFilter search={search} setSearch={setSearch} />
-
-                  <Box
-                    sx={{
-                      borderLeft: isMobile ? 'none' : '2px solid #0500E1',
-                      paddingLeft: isMobile ? '0' :'30px',
-                      width: isMobile ? '100%' : 'auto'
-                    }}
-                  >
-                    <Button
-  onClick={handleToggleFilters}
-  startIcon={<FontAwesomeIcon icon={faSliders} />} 
-  variant='outlined'
-  sx={{
-    borderRadius: '50px',
-    height: '43px',
-    textTransform: 'capitalize',
-    padding: '0 25px',
-    fontWeight: '500',
-    maxWidth: isMobile ? '100%' :  '116px',
-    marginLeft: 'auto',
-    border: '2px solid #0500E1',
-    width: isMobile ? '100%' : 'auto',
-    backgroundColor: showFilters ? '#0500E1' : 'transparent',
-    color: showFilters ? 'white' : '#0500E1',
-    marginTop: isMobile ? '16px' : '0',
-    '&:hover': {
-      backgroundColor: showFilters ? '#000062' : 'transparent',
-      color: showFilters ? 'white' : '#0500E1',
-      border: showFilters ? '2px solid #000062' : '2px solid #0500E1'
-    },
-  }}
->
-  Filters
-  
-</Button>
-                  </Box>
-                  </Box>
+                >
+                  Filters
+                </Button>
+              </Box>
+            </Box>
             <div
               style={{
                 position: 'relative',
@@ -264,7 +271,13 @@ const ProjectList: React.FC = () => {
                 handleMaintainedByOasisToggle={handleMaintainedByOasisToggle}
                 handleClearTags={handleClearTags}
                 handleClearLangs={handleClearLangs}
-                />
+              />
+              <Button
+                onClick={handleClearFilters}
+                sx={{ textDecoration: 'underline', textTransform: 'none', display: 'block', marginTop: '16px', color: '#0500E1' }}
+              >
+                Clear all filters
+              </Button>
             </div>
           </div>
           <Sorting
@@ -273,8 +286,8 @@ const ProjectList: React.FC = () => {
             handleSortChange={handleSortChange}
           />
         </Container>
-    <Grid container spacing={1} justifyContent="start">
-        {filteredAndSortedProjects.map((project) => (
+        <Grid container spacing={1} justifyContent="start">
+          {filteredAndSortedProjects.map((project) => (
             <ProjectListItem
               key={project.name}
               project={project}
@@ -286,17 +299,17 @@ const ProjectList: React.FC = () => {
               langs={project.languages}
               tags={project.tags}
             />
-        ))}
-      </Grid>
-      <ProjectDialog
-        open={!!selectedProject}
-        onClose={handleProjectDialogClose}
-        project={selectedProject}
-        selectedTags={selectedTags}
-        selectedLangs={selectedLangs}
-        handleTagClick={handleTagClick}
-      />
-  </Container>
+          ))}
+        </Grid>
+        <ProjectDialog
+          open={!!selectedProject}
+          onClose={handleProjectDialogClose}
+          project={selectedProject}
+          selectedTags={selectedTags}
+          selectedLangs={selectedLangs}
+          handleTagClick={handleTagClick}
+        />
+      </Container>
     </div>
   );
 };

@@ -161,14 +161,6 @@ const Filters: React.FC<FiltersProps> = ({
               />
             </Box>
           ))}
-          {selectedLangs.length > 0 && (
-            <Button
-              onClick={handleClearLangs}
-              sx={{ textDecoration: 'underline', textTransform: 'none', justifyContent: 'flex-start', padding: '0' }}
-            >
-              Clear
-            </Button>
-          )}
         </Box>
       </Grid>
 
