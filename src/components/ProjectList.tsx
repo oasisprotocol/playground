@@ -34,15 +34,15 @@ const ProjectList: React.FC = () => {
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const [selectedLangs, setSelectedLangs] = useState<string[]>([]);
   const [maintainedByOasis, setMaintainedByOasis] = useState<boolean>(false); 
-  const [selectedSources, setSelectedSources] = useState<string[]>([]); // Initially unchecked
-  const [selectedParatimes, setSelectedParatimes] = useState<string[]>([]); // Initially unchecked
+  const [selectedSources, setSelectedSources] = useState<string[]>([]);
+  const [selectedParatimes, setSelectedParatimes] = useState<string[]>([]);
   const [showFilters, setShowFilters] = useState<boolean>(false);
 
   const licenses = Array.from(
     new Set(projects.map((project) => project.license))
   );
 
-  const [selectedLicenses, setSelectedLicenses] = useState<string[]>([]); // Initially unchecked
+  const [selectedLicenses, setSelectedLicenses] = useState<string[]>([]);
 
   const paddingValue = isMobile ? '24px' : '34px 46px'; 
 
@@ -123,7 +123,7 @@ const ProjectList: React.FC = () => {
       !maintainedByOasis || project.maintainedByOasis;
   
     const licenseMatch: boolean =
-      selectedLicenses.length === 0 || selectedLicenses.includes(project.license); // Match all if none selected
+      selectedLicenses.length === 0 || selectedLicenses.includes(project.license);
   
     const sourcesMatch: boolean =
       selectedSources.length === 0 ||
