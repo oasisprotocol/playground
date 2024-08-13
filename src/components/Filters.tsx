@@ -69,7 +69,6 @@ const Filters: React.FC<FiltersProps> = ({
   handleParatimesChange,
   handleMaintainedByOasisToggle,
   handleClearTags,
-  handleClearLangs,
 }) => {
   const handleTagsChange = (event: SelectChangeEvent<typeof selectedTags>) => {
     const {
