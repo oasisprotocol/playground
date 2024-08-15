@@ -67,6 +67,7 @@ const Filters: React.FC<FiltersProps> = ({
   handleSourcesChange,
   selectedParatimes,
   handleParatimesChange,
+  maintainedByOasis,
   handleMaintainedByOasisToggle,
   handleClearTags,
 }) => {
@@ -241,6 +242,7 @@ const Filters: React.FC<FiltersProps> = ({
           <FormControlLabel
             control={
               <Checkbox
+                checked={maintainedByOasis}
                 onChange={handleMaintainedByOasisToggle}
               />
             }
