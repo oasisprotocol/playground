@@ -20,7 +20,7 @@ interface FiltersProps {
   langs: string[];
   selectedTags: string[];
   selectedLangs: string[];
-  handleTagClick: (tag: string) => void;
+  handleTagClick: (tags: string[]) => void;
   handleLanguageClick: (tag: string) => void;
   licenses: string[];
   selectedLicenses: string[];
@@ -30,7 +30,7 @@ interface FiltersProps {
   selectedParatimes: string[];
   handleParatimesChange: (source: string) => void;
   maintainedByOasis: boolean;
-  handleMaintainedByOasisToggle: () => void; 
+  handleMaintainedByOasisToggle: () => void;
   handleClearTags: () => void;
   handleClearLangs: () => void;
 }
@@ -71,12 +71,12 @@ const Filters: React.FC<FiltersProps> = ({
   handleMaintainedByOasisToggle,
   handleClearTags,
 }) => {
-  const handleTagsChange = (event: SelectChangeEvent<typeof selectedTags>) => {
+  const handleTagsChange = (event: SelectChangeEvent<string[]>) => {
     const {
       target: { value },
     } = event;
-    const newTags = typeof value === 'string' ? value.split(',') : value;
-    newTags.forEach((tag: string) => handleTagClick(tag));
+
+    handleTagClick(typeof value === 'string' ? value.split(',') : value); // Ensure value is an array
   };
 
   const sortedTags = [...tags].sort();
@@ -101,7 +101,7 @@ const Filters: React.FC<FiltersProps> = ({
                 id="multiple-checkbox-label"
                 shrink={false}
                 sx={{ height: '30px', top: 'auto', bottom: '14px', color: '#D2CCCC', '&.Mui-focused': { borderColor: 'none', color: '#D2CCCC', } }}
-              >
+                >
                 Select Tags
               </InputLabel>
             )}
