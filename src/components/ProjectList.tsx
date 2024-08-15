@@ -153,12 +153,16 @@ const ProjectList: React.FC = () => {
     return searchMatch && tagsMatch && langsMatch && paratimeMatch && maintainedByOasisMatch && licenseMatch && sourcesMatch;
   });
 
-  const handleTagClick = (tag: string) => {
-    if (selectedTags.includes(tag)) {
-      setSelectedTags(selectedTags.filter((t) => t !== tag));
-    } else {
-      setSelectedTags([...selectedTags, tag]);
-    }
+  const handleTagClick = (tags: string[]) => {
+    setSelectedTags(tags);
+  };
+
+  const handleSingleTagClick = (tag: string) => {
+    handleTagClick(
+      selectedTags.includes(tag)
+        ? selectedTags.filter((t) => t !== tag)
+        : [...selectedTags, tag]
+    );
   };
 
   const handleLangClick = (lang: string) => {
@@ -288,13 +292,13 @@ const ProjectList: React.FC = () => {
         </Container>
         <Grid container spacing={1} justifyContent="start">
           {filteredAndSortedProjects.map((project) => (
-            <ProjectListItem
+              <ProjectListItem
               key={project.name}
               project={project}
               getProjectLink={getProjectLink}
               selectedTags={selectedTags}
               selectedLangs={selectedLangs}
-              handleTagClick={handleTagClick}
+              handleTagClick={handleSingleTagClick}
               handleLangClick={handleLangClick}
               langs={project.languages}
               tags={project.tags}
@@ -307,7 +311,7 @@ const ProjectList: React.FC = () => {
           project={selectedProject}
           selectedTags={selectedTags}
           selectedLangs={selectedLangs}
-          handleTagClick={handleTagClick}
+          handleTagClick={handleSingleTagClick}
         />
       </Container>
     </div>
