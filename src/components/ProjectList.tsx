@@ -117,7 +117,7 @@ const ProjectList: React.FC = () => {
       
     const langsMatch: boolean =
       selectedLangs.length === 0 ||
-      selectedLangs.every((lang) => project.languages.includes(lang));
+      selectedLangs.some((lang) => project.languages.includes(lang));
 
     const maintainedByOasisMatch: boolean =
       !maintainedByOasis || project.maintainedByOasis;
