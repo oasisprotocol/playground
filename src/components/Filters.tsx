@@ -33,6 +33,12 @@ interface FiltersProps {
   handleMaintainedByOasisToggle: () => void;
   handleClearTags: () => void;
   handleClearLangs: () => void;
+  tagCounts: Record<string, number>;
+  langCounts: Record<string, number>;
+  licenseCounts: Record<string, number>;
+  sourceCounts: Record<string, number>;
+  paratimeCounts: Record<string, number>;
+  maintainedByOasisCount: number;
 }
 
 const ITEM_HEIGHT = 48;
@@ -70,6 +76,12 @@ const Filters: React.FC<FiltersProps> = ({
   maintainedByOasis,
   handleMaintainedByOasisToggle,
   handleClearTags,
+  tagCounts,
+  langCounts,
+  licenseCounts,
+  sourceCounts,
+  paratimeCounts,
+  maintainedByOasisCount,
 }) => {
   const handleTagsChange = (event: SelectChangeEvent<string[]>) => {
     const {
@@ -101,7 +113,7 @@ const Filters: React.FC<FiltersProps> = ({
                 id="multiple-checkbox-label"
                 shrink={false}
                 sx={{ height: '30px', top: 'auto', bottom: '14px', color: '#D2CCCC', '&.Mui-focused': { borderColor: 'none', color: '#D2CCCC', } }}
-                >
+               >
                 Select Tags
               </InputLabel>
             )}
@@ -127,7 +139,7 @@ const Filters: React.FC<FiltersProps> = ({
               {sortedTags.map((tag) => (
                 <MenuItem key={tag} value={tag} sx={{padding: '0'}}>
                   <Checkbox checked={selectedTags.indexOf(tag) > -1} sx={{padding: '6px 9px'}}/>
-                  <ListItemText primary={tag} />
+                  <ListItemText primary={`${tag} (${tagCounts[tag] || 0})`} />
                 </MenuItem>
               ))}
             </Select>
@@ -158,7 +170,7 @@ const Filters: React.FC<FiltersProps> = ({
                     color="primary"
                   />
                 }
-                label={lang}
+                label={`${lang} (${langCounts[lang] || 0})`}
               />
             </Box>
           ))}
@@ -181,7 +193,7 @@ const Filters: React.FC<FiltersProps> = ({
                     color="primary"
                   />
                 }
-                label={license || 'Unspecified'}
+                label={`${license || 'Unspecified'} (${licenseCounts[license] || 0})`}
               />
             </Box>
           ))}
@@ -204,7 +216,7 @@ const Filters: React.FC<FiltersProps> = ({
                     color="primary"
                   />
                 }
-                label={source}
+                label={`${source} (${sourceCounts[source] || 0})`}
               />
             </Box>
           ))}
@@ -227,7 +239,7 @@ const Filters: React.FC<FiltersProps> = ({
                     color="primary"
                   />
                 }
-                label={capitalize(paratime)}
+                label={`${capitalize(paratime)} (${paratimeCounts[paratime] || 0})`}
               />
             </Box>
           ))}
@@ -247,7 +259,7 @@ const Filters: React.FC<FiltersProps> = ({
                 onChange={handleMaintainedByOasisToggle}
               />
             }
-            label="OPF"
+            label={`OPF (${maintainedByOasisCount})`}
           />
         </Box>
       </Grid>
