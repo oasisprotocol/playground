@@ -153,6 +153,40 @@ const ProjectList: React.FC = () => {
     return searchMatch && tagsMatch && langsMatch && paratimeMatch && maintainedByOasisMatch && licenseMatch && sourcesMatch;
   });
 
+  const tagCounts = tags.reduce((acc, tag) => {
+    acc[tag] = filteredProjects.filter((project) => project.tags.includes(tag)).length;
+    return acc;
+  }, {} as Record<string, number>);
+
+  const langCounts = langs.reduce((acc, lang) => {
+    acc[lang] = filteredProjects.filter((project) => project.languages.includes(lang)).length;
+    return acc;
+  }, {} as Record<string, number>);
+
+  const licenseCounts = licenses.reduce((acc, license) => {
+    acc[license] = filteredProjects.filter((project) => project.license === license).length;
+    return acc;
+  }, {} as Record<string, number>);
+
+  const sourceCounts = ['Demo', 'Code', 'Tutorial'].reduce((acc, source) => {
+    acc[source] = filteredProjects.filter((project) => {
+      if (source === 'Demo') return !!project.demoUrl;
+      if (source === 'Code') return !!project.codeUrl;
+      if (source === 'Tutorial') return Array.isArray(project.tutorials) && project.tutorials.length > 0;
+      return false;
+    }).length;
+    return acc;
+  }, {} as Record<string, number>);
+
+  const paratimeCounts = ['sapphire', 'emerald', 'cipher'].reduce((acc, paratime) => {
+    acc[paratime] = filteredProjects.filter((project) => project.paratimes?.includes(paratime)).length;
+    return acc;
+  }, {} as Record<string, number>);
+  
+  const maintainedByOasisCount = filteredProjects.filter(
+    (project) => project.maintainedByOasis
+  ).length;
+
   const handleTagClick = (tags: string[]) => {
     setSelectedTags(tags);
   };
@@ -275,6 +309,12 @@ const ProjectList: React.FC = () => {
                 handleMaintainedByOasisToggle={handleMaintainedByOasisToggle}
                 handleClearTags={handleClearTags}
                 handleClearLangs={handleClearLangs}
+                tagCounts={tagCounts}
+                langCounts={langCounts}
+                licenseCounts={licenseCounts}
+                sourceCounts={sourceCounts}
+                paratimeCounts={paratimeCounts}
+                maintainedByOasisCount={maintainedByOasisCount}
               />
               <Button
                 onClick={handleClearFilters}
@@ -292,7 +332,7 @@ const ProjectList: React.FC = () => {
         </Container>
         <Grid container spacing={1} justifyContent="start">
           {filteredAndSortedProjects.map((project) => (
-              <ProjectListItem
+          <ProjectListItem
               key={project.name}
               project={project}
               getProjectLink={getProjectLink}
