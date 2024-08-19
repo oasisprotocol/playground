@@ -81,6 +81,7 @@ const Filters: React.FC<FiltersProps> = ({
 
   const sortedTags = [...tags].sort();
 
+  // Sort licenses to ensure 'Unspecified' (empty string) is last
   const sortedLicenses = [...licenses].sort((a, b) => {
     if (a === '') return 1;
     if (b === '') return -1;
