@@ -227,7 +227,7 @@ const Filters: React.FC<FiltersProps> = ({
       <Grid item>
         <Box>
           <Typography variant="h6" gutterBottom sx={{ paddingLeft: '-12px' }}>
-            Paratimes
+            ParaTimes
           </Typography>
           {['sapphire', 'emerald', 'cipher'].map((paratime) => (
             <Box key={paratime} sx={{ marginBottom: '-7px' }}>
