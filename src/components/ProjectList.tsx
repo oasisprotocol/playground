@@ -187,12 +187,8 @@ const ProjectList: React.FC = () => {
     (project) => project.maintainedByOasis
   ).length;
 
-  const handleTagClick = (tags: string[]) => {
-    setSelectedTags(tags);
-  };
-
-  const handleSingleTagClick = (tag: string) => {
-    handleTagClick(
+  const handleTagClick = (tag: string) => {
+    setSelectedTags(
       selectedTags.includes(tag)
         ? selectedTags.filter((t) => t !== tag)
         : [...selectedTags, tag]
@@ -296,7 +292,7 @@ const ProjectList: React.FC = () => {
                 langs={langs}
                 selectedTags={selectedTags}
                 selectedLangs={selectedLangs}
-                handleTagClick={handleTagClick}
+                handleTagClick={setSelectedTags}
                 handleLanguageClick={handleLangClick}
                 licenses={licenses}
                 selectedLicenses={selectedLicenses}
@@ -338,7 +334,7 @@ const ProjectList: React.FC = () => {
               getProjectLink={getProjectLink}
               selectedTags={selectedTags}
               selectedLangs={selectedLangs}
-              handleTagClick={handleSingleTagClick}
+              handleTagClick={handleTagClick}
               handleLangClick={handleLangClick}
               langs={project.languages}
               tags={project.tags}
@@ -351,7 +347,7 @@ const ProjectList: React.FC = () => {
           project={selectedProject}
           selectedTags={selectedTags}
           selectedLangs={selectedLangs}
-          handleTagClick={handleSingleTagClick}
+          handleTagClick={handleTagClick}
         />
       </Container>
     </div>
