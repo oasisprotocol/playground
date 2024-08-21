@@ -1,27 +1,63 @@
 import React from 'react';
-import { Box, Button, Checkbox, FormControlLabel, Grid, Switch, Typography } from '@mui/material';
-import TagsSelector from './TagsSelector';
-import LanguagesSelector from './LanguagesSelector';
+import {
+  Box,
+  Button,
+  Checkbox,
+  FormControl,
+  FormControlLabel,
+  Grid,
+  InputLabel,
+  ListItemText,
+  MenuItem,
+  OutlinedInput,
+  Select,
+  SelectChangeEvent,
+  Typography
+} from '@mui/material';
 
 interface FiltersProps {
   tags: string[];
   langs: string[];
   selectedTags: string[];
   selectedLangs: string[];
-  handleTagClick: (tag: string) => void;
+  handleTagClick: (tags: string[]) => void;
   handleLanguageClick: (tag: string) => void;
   licenses: string[];
   selectedLicenses: string[];
   handleLicenseChange: (license: string) => void;
   selectedSources: string[];
-  selectedParatimes: string[];
   handleSourcesChange: (source: string) => void;
+  selectedParatimes: string[];
   handleParatimesChange: (source: string) => void;
   maintainedByOasis: boolean;
   handleMaintainedByOasisToggle: () => void;
   handleClearTags: () => void;
   handleClearLangs: () => void;
+  tagCounts: Record<string, number>;
+  langCounts: Record<string, number>;
+  licenseCounts: Record<string, number>;
+  sourceCounts: Record<string, number>;
+  paratimeCounts: Record<string, number>;
+  maintainedByOasisCount: number;
 }
+
+const ITEM_HEIGHT = 48;
+const ITEM_PADDING_TOP = 8;
+const MenuProps = {
+  PaperProps: {
+    style: {
+      maxHeight: ITEM_HEIGHT * 4.5 + ITEM_PADDING_TOP,
+      width: 186,
+      marginTop: '12px',
+      borderRadius: '10px',
+      border: '2px solid #000000'
+    },
+  },
+};
+
+const capitalize = (str: string) => {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+};
 
 const Filters: React.FC<FiltersProps> = ({
   langs,
@@ -37,54 +73,118 @@ const Filters: React.FC<FiltersProps> = ({
   handleSourcesChange,
   selectedParatimes,
   handleParatimesChange,
+  maintainedByOasis,
   handleMaintainedByOasisToggle,
   handleClearTags,
-  handleClearLangs,
+  tagCounts,
+  langCounts,
+  licenseCounts,
+  sourceCounts,
+  paratimeCounts,
+  maintainedByOasisCount,
 }) => {
-  return (
-    <Grid container spacing={2} sx={{ borderBottom: '2px solid #CBC8EC', paddingBottom: '32px', paddingTop: '24px'}}>
-        <Grid item xs={12} md={3}>
-    <Box>
-      <Typography variant="h6" gutterBottom>
-        Tags
-      </Typography>
-      <TagsSelector tags={tags} selectedTags={selectedTags} handleTagClick={handleTagClick} />
-      {selectedTags.length > 0 && (
-        <Button
-          onClick={handleClearTags}
-          sx={{ textDecoration: 'underline', textTransform: 'none' }}
-        >
-          Clear
-        </Button>
-      )}
-    </Box>
-    <Box
-      sx={{
-        marginTop: '16px'
-      }}
-    >
-      <Typography variant="h6" gutterBottom>
-        Languages
-      </Typography>
-      <LanguagesSelector languages={langs} selectedLanguages={selectedLangs} handleLanguageClick={handleLanguageClick} />
-      {selectedLangs.length > 0 && (
-        <Button
-          onClick={handleClearLangs}
-          sx={{ textDecoration: 'underline', textTransform: 'none' }}
-        >
-          Clear
-        </Button>
-      )}
-    </Box>
-  </Grid>
+  const handleTagsChange = (event: SelectChangeEvent<string[]>) => {
+    const {
+      target: { value },
+    } = event;
 
-  <Grid item xs={12} md={2}>
+    handleTagClick(typeof value === 'string' ? value.split(',') : value); // Ensure value is an array
+  };
+
+  const sortedTags = [...tags].sort();
+
+  // Sort licenses to ensure 'Unspecified' (empty string) is last
+  const sortedLicenses = [...licenses].sort((a, b) => {
+    if (a === '') return 1;
+    if (b === '') return -1;
+    return a.localeCompare(b);
+  });
+
+  return (
+    <Grid container spacing={2} sx={{ borderBottom: '2px solid #CBC8EC', paddingBottom: '32px', paddingTop: '24px', justifyContent: 'space-between'}}>
+      <Grid item>
+        <Box>
+          <Typography variant="h6" gutterBottom>
+            Tags
+          </Typography>
+          <FormControl sx={{ marginTop: '8px', width: '186px', border:'2px solid #000000', borderRadius: '30px' }}>
+            {!selectedTags.length && (
+              <InputLabel
+                id="multiple-checkbox-label"
+                shrink={false}
+                sx={{ height: '30px', top: 'auto', bottom: '14px', color: '#D2CCCC', '&.Mui-focused': { borderColor: 'none', color: '#D2CCCC', } }}
+               >
+                Select Tags
+              </InputLabel>
+            )}
+            <Select
+              labelId="multiple-checkbox-label"
+              id="multiple-checkbox"
+              multiple
+              value={selectedTags}
+              onChange={handleTagsChange}
+              input={<OutlinedInput label="Tags" />}
+              renderValue={(selected) => selected.join(', ')}
+              MenuProps={MenuProps}
+              sx={{
+                height: '32px',
+                '& .MuiOutlinedInput-notchedOutline': {
+                  borderColor: 'transparent',
+                },
+                '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
+                  borderColor: 'transparent',
+                },
+              }}
+            >
+              {sortedTags.map((tag) => (
+                <MenuItem key={tag} value={tag} sx={{padding: '0'}}>
+                  <Checkbox checked={selectedTags.indexOf(tag) > -1} sx={{padding: '6px 9px'}}/>
+                  <ListItemText primary={`${tag} (${tagCounts[tag] || 0})`} />
+                </MenuItem>
+              ))}
+            </Select>
+          </FormControl>
+          {selectedTags.length > 0 && (
+            <Button
+              onClick={handleClearTags}
+              sx={{ textDecoration: 'underline', textTransform: 'none', display:'block', paddingTop: '6px', paddingLeft: '0', color: '#0500E1' }}
+            >
+              Clear tags
+            </Button>
+          )}
+        </Box>
+      </Grid>
+
+      <Grid item>
+        <Box>
+          <Typography variant="h6" gutterBottom>
+            Languages
+          </Typography>
+          {langs.map((lang) => (
+            <Box key={lang} sx={{marginBottom: '-7px'}}>
+              <FormControlLabel
+                control={
+                  <Checkbox
+                    checked={selectedLangs.includes(lang)}
+                    onChange={() => handleLanguageClick(lang)}
+                    color="primary"
+                  />
+                }
+                label={`${lang} (${langCounts[lang] || 0})`}
+              />
+            </Box>
+          ))}
+        </Box>
+      </Grid>
+
+      {/* Licenses */}
+      <Grid item>
         <Box>
           <Typography variant="h6" gutterBottom sx={{ paddingLeft: '-12px' }}>
             Licenses
           </Typography>
-          {licenses.map((license) => (
-            <Box key={license} sx={{ marginBottom: '-7px' }}>
+          {sortedLicenses.map((license) => (
+            <Box key={license || 'unspecified'} sx={{ marginBottom: '-7px' }}>
               <FormControlLabel
                 control={
                   <Checkbox
@@ -93,111 +193,74 @@ const Filters: React.FC<FiltersProps> = ({
                     color="primary"
                   />
                 }
-                label={license}
+                label={`${license || 'Unspecified'} (${licenseCounts[license] || 0})`}
               />
             </Box>
-            
           ))}
         </Box>
       </Grid>
 
       {/* Sources */}
-      <Grid item xs={12} md={2}>
-  <Box>
-    <Typography variant="h6" gutterBottom sx={{ paddingLeft: '-12px' }}>
-      Sources
-    </Typography>
-    <Box sx={{marginBottom: '-7px'}}>
-    <FormControlLabel
-      control={
-        <Checkbox
-          checked={selectedSources.includes('Demo')}
-          onChange={() => handleSourcesChange('Demo')}
-        />
-      }
-      label="Demo"
-      sx={{ marginBottom: '-7px' }}
-    />
-    </Box>
-    <Box sx={{marginBottom: '-7px'}}>
-    <FormControlLabel
-      control={
-        <Checkbox
-          checked={selectedSources.includes('Code')}
-          onChange={() => handleSourcesChange('Code')}
-        />
-      }
-      label="Code"
-      sx={{ marginBottom: '-7px' }}
-    />
-    </Box>
-    <Box sx={{marginBottom: '-7px'}}>
-    <FormControlLabel
-      control={
-        <Checkbox
-          checked={selectedSources.includes('Tutorial')}
-          onChange={() => handleSourcesChange('Tutorial')}
-        />
-      }
-      label="Tutorial"
-      sx={{ marginBottom: '-7px' }}
-    />
-    </Box>
-  </Box>
+      <Grid item>
+        <Box>
+          <Typography variant="h6" gutterBottom sx={{ paddingLeft: '-12px' }}>
+            Sources
+          </Typography>
+          {['Demo', 'Code', 'Tutorial'].map((source) => (
+            <Box key={source} sx={{ marginBottom: '-7px' }}>
+              <FormControlLabel
+                control={
+                  <Checkbox
+                    checked={selectedSources.includes(source)}
+                    onChange={() => handleSourcesChange(source)}
+                    color="primary"
+                  />
+                }
+                label={`${source} (${sourceCounts[source] || 0})`}
+              />
+            </Box>
+          ))}
+        </Box>
       </Grid>
 
       {/* Paratimes */}
-      <Grid item xs={12} md={2}>
-  <Box>
-    <Typography variant="h6" gutterBottom sx={{ paddingLeft: '-12px' }}>
-      Paratimes
-    </Typography>
-    <Box sx={{marginBottom: '-7px'}}>
-    <FormControlLabel
-      control={
-        <Checkbox
-          checked={selectedParatimes.includes('sapphire')}
-          onChange={() => handleParatimesChange('sapphire')}
-        />
-      }
-      label="Sapphire"
-      sx={{ marginBottom: '-7px' }}
-    />
-    </Box>
-    <Box sx={{marginBottom: '-7px'}}>
-    <FormControlLabel
-      control={
-        <Checkbox
-          checked={selectedParatimes.includes('emerald')}
-          onChange={() => handleParatimesChange('emerald')}
-        />
-      }
-      label="Emerald"
-      sx={{ marginBottom: '-7px' }}
-    />
-    </Box>
-    <Box sx={{marginBottom: '-7px'}}>
-    <FormControlLabel
-      control={
-        <Checkbox
-          checked={selectedParatimes.includes('cipher')}
-          onChange={() => handleParatimesChange('cipher')}
-        />
-      }
-      label="Cipher"
-      sx={{ marginBottom: '-7px' }}
-    />
-    </Box>
-  </Box>
+      <Grid item>
+        <Box>
+          <Typography variant="h6" gutterBottom sx={{ paddingLeft: '-12px' }}>
+            ParaTimes
+          </Typography>
+          {['sapphire', 'emerald', 'cipher'].map((paratime) => (
+            <Box key={paratime} sx={{ marginBottom: '-7px' }}>
+              <FormControlLabel
+                control={
+                  <Checkbox
+                    checked={selectedParatimes.includes(paratime)}
+                    onChange={() => handleParatimesChange(paratime)}
+                    color="primary"
+                  />
+                }
+                label={`${capitalize(paratime)} (${paratimeCounts[paratime] || 0})`}
+              />
+            </Box>
+          ))}
+        </Box>
       </Grid>
 
       {/* Maintained By Oasis */}
-      <Grid item xs={12} md={3}>
-        <Box sx={{ display: 'flex', alignItems: 'center'}}>
+      <Grid item>
+        <Box>
           <Typography variant="h6" gutterBottom>
-            Only OPF maintained
+            Approved by
           </Typography>
-          <Switch onClick={handleMaintainedByOasisToggle} />
+          <FormControlLabel
+            control={
+              <Checkbox
+                checked={maintainedByOasis}
+                onChange={handleMaintainedByOasisToggle}
+              />
+            }
+            label={`OPF (${maintainedByOasisCount})`}
+          />
         </Box>
       </Grid>
     </Grid>

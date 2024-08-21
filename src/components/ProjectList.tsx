@@ -28,25 +28,34 @@ const ProjectList: React.FC = () => {
   const location = useLocation();
 
   // Open project from URL
-  const selectedProject = projects.find((project) => project.slug === location.hash.substring(1)) ?? null
+  const selectedProject = projects.find((project) => project.slug === location.hash.substring(1)) ?? null;
 
   const [search, setSearch] = useState<string>('');
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const [selectedLangs, setSelectedLangs] = useState<string[]>([]);
   const [maintainedByOasis, setMaintainedByOasis] = useState<boolean>(false); 
-  const [selectedSources, setSelectedSources] = useState<string[]>(['Demo', 'Code', 'Tutorial']); 
-  const [selectedParatimes, setSelectedParatimes] = useState<string[]>(['sapphire', 'emerald', 'cipher']);
+  const [selectedSources, setSelectedSources] = useState<string[]>([]);
+  const [selectedParatimes, setSelectedParatimes] = useState<string[]>([]);
   const [showFilters, setShowFilters] = useState<boolean>(false);
 
   const licenses = Array.from(
     new Set(projects.map((project) => project.license))
   );
 
-  const [selectedLicenses, setSelectedLicenses] = useState<string[]>(licenses); 
-
+  const [selectedLicenses, setSelectedLicenses] = useState<string[]>([]);
 
   const paddingValue = isMobile ? '24px' : '34px 46px'; 
-  
+
+  const handleClearFilters = () => {
+    setSelectedTags([]);
+    setSelectedLangs([]);
+    setSelectedLicenses([]);
+    setSelectedSources([]);
+    setSelectedParatimes([]);
+    setMaintainedByOasis(false);
+    setSearch('');
+  };
+
   const handleClearTags = () => {
     setSelectedTags([]);
     setSearch('');
@@ -58,11 +67,11 @@ const ProjectList: React.FC = () => {
   };
 
   const handleMaintainedByOasisToggle = () => {
-    setMaintainedByOasis(!maintainedByOasis);
+    setMaintainedByOasis((prev) => !prev);
   };
 
   const getProjectLink = (project: Project) => {
-    return `/#${project.slug}`
+    return `/#${project.slug}`;
   };
 
   const handleProjectDialogClose = () => {
@@ -84,13 +93,9 @@ const ProjectList: React.FC = () => {
   };
 
   const handleParatimesChange = (paratime: string) => {
-    let updatedParatimes;
-    if (selectedParatimes.includes(paratime)) {
-      updatedParatimes = selectedParatimes.filter((p) => p !== paratime);
-    } else {
-      updatedParatimes = [...selectedParatimes, paratime];
-    }
-  
+    const updatedParatimes = selectedParatimes.includes(paratime)
+      ? selectedParatimes.filter((p) => p !== paratime)
+      : [...selectedParatimes, paratime];
     setSelectedParatimes(updatedParatimes);
   };
 
@@ -101,8 +106,6 @@ const ProjectList: React.FC = () => {
   const tags: string[] = Array.from(new Set(projects.flatMap((project) => project.tags)));
   const langs: string[] = Array.from(new Set(projects.flatMap((project) => project.languages)));
 
- 
-
   const filteredProjects: Project[] = projects.filter((project) => {
     const searchMatch: boolean =
       project.name.toLowerCase().includes(search.toLowerCase()) ||
@@ -110,55 +113,90 @@ const ProjectList: React.FC = () => {
   
     const tagsMatch: boolean =
       selectedTags.length === 0 ||
-      selectedTags.every((tag) => project.tags.includes(tag));
+      selectedTags.some((tag) => project.tags.includes(tag));
       
     const langsMatch: boolean =
       selectedLangs.length === 0 ||
-      selectedLangs.every((lang) => project.languages.includes(lang));
+      selectedLangs.some((lang) => project.languages.includes(lang));
 
     const maintainedByOasisMatch: boolean =
       !maintainedByOasis || project.maintainedByOasis;
   
     const licenseMatch: boolean =
-     selectedLicenses.includes(project.license);
+      selectedLicenses.length === 0 || selectedLicenses.includes(project.license);
   
     const sourcesMatch: boolean =
-      selectedSources.length === 0
-        ? false
-        : selectedSources.some((source) => {
-            if (
-              (source === 'Demo' && project.demoUrl) ||
-              (source === 'Code' && project.codeUrl)
-            ) {
-              return true;
-            }
-            if (
-              source === 'Tutorial' &&
-              Array.isArray(project.tutorials) &&
-              project.tutorials.length > 0
-            ) {
-              return true;
-            }
-            return false;
-          });
+      selectedSources.length === 0 ||
+      selectedSources.some((source) => {
+        if (
+          (source === 'Demo' && project.demoUrl) ||
+          (source === 'Code' && project.codeUrl)
+        ) {
+          return true;
+        }
+        if (
+          source === 'Tutorial' &&
+          Array.isArray(project.tutorials) &&
+          project.tutorials.length > 0
+        ) {
+          return true;
+        }
+        return false;
+      });
 
-          const paratimeMatch: boolean =
-            selectedParatimes.length > 0 &&
-            selectedParatimes.some(paratime =>
-              project.paratimes?.includes(paratime)
-            );
+    const paratimeMatch: boolean =
+      selectedParatimes.length === 0 ||
+      selectedParatimes.some(paratime =>
+        project.paratimes?.includes(paratime)
+      );
 
-
-    return searchMatch && tagsMatch && langsMatch  && paratimeMatch && maintainedByOasisMatch && licenseMatch && sourcesMatch;
+    return searchMatch && tagsMatch && langsMatch && paratimeMatch && maintainedByOasisMatch && licenseMatch && sourcesMatch;
   });
 
+  const tagCounts = tags.reduce((acc, tag) => {
+    acc[tag] = filteredProjects.filter((project) => project.tags.includes(tag)).length;
+    return acc;
+  }, {} as Record<string, number>);
 
-  const handleTagClick = (tag: string) => {
-    if (selectedTags.includes(tag)) {
-      setSelectedTags(selectedTags.filter((t) => t !== tag));
-    } else {
-      setSelectedTags([...selectedTags, tag]);
-    }
+  const langCounts = langs.reduce((acc, lang) => {
+    acc[lang] = filteredProjects.filter((project) => project.languages.includes(lang)).length;
+    return acc;
+  }, {} as Record<string, number>);
+
+  const licenseCounts = licenses.reduce((acc, license) => {
+    acc[license] = filteredProjects.filter((project) => project.license === license).length;
+    return acc;
+  }, {} as Record<string, number>);
+
+  const sourceCounts = ['Demo', 'Code', 'Tutorial'].reduce((acc, source) => {
+    acc[source] = filteredProjects.filter((project) => {
+      if (source === 'Demo') return !!project.demoUrl;
+      if (source === 'Code') return !!project.codeUrl;
+      if (source === 'Tutorial') return Array.isArray(project.tutorials) && project.tutorials.length > 0;
+      return false;
+    }).length;
+    return acc;
+  }, {} as Record<string, number>);
+
+  const paratimeCounts = ['sapphire', 'emerald', 'cipher'].reduce((acc, paratime) => {
+    acc[paratime] = filteredProjects.filter((project) => project.paratimes?.includes(paratime)).length;
+    return acc;
+  }, {} as Record<string, number>);
+  
+  const maintainedByOasisCount = filteredProjects.filter(
+    (project) => project.maintainedByOasis
+  ).length;
+
+  const handleTagClick = (tags: string[]) => {
+    setSelectedTags(tags);
+  };
+
+  const handleSingleTagClick = (tag: string) => {
+    handleTagClick(
+      selectedTags.includes(tag)
+        ? selectedTags.filter((t) => t !== tag)
+        : [...selectedTags, tag]
+    );
   };
 
   const handleLangClick = (lang: string) => {
@@ -193,8 +231,8 @@ const ProjectList: React.FC = () => {
 
   return (
     <div>
-    <Container sx={{ backgroundColor: 'white', border: '2px solid black', padding: paddingValue, borderRadius: '19px', position: 'relative'}}>
-    <Container sx={{ padding: '0', paddingTop: '20px' }}>
+      <Container sx={{ backgroundColor: 'white', border: '2px solid black', padding: paddingValue, borderRadius: '19px', position: 'relative'}}>
+        <Container sx={{ padding: '0', paddingTop: '20px' }}>
           <div
             style={{
               position: 'relative',
@@ -202,52 +240,49 @@ const ProjectList: React.FC = () => {
               transition: 'max-height 0.5s ease',
             }}
           >
-  
-                <Box
+            <Box
+              sx={{
+                display: 'flex',
+                justifyContent: 'space-between',
+                flexWrap: isMobile ? 'wrap' : 'nowrap'
+              }}
+            > 
+              <SearchFilter search={search} setSearch={setSearch} />
+              <Box
+                sx={{
+                  borderLeft: isMobile ? 'none' : '2px solid #0500E1',
+                  paddingLeft: isMobile ? '0' :'30px',
+                  width: isMobile ? '100%' : 'auto'
+                }}
+              >
+                <Button
+                  onClick={handleToggleFilters}
+                  startIcon={<FontAwesomeIcon icon={faSliders} />} 
+                  variant='outlined'
                   sx={{
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    flexWrap: isMobile ? 'wrap' : 'nowrap'
+                    borderRadius: '50px',
+                    height: '43px',
+                    textTransform: 'capitalize',
+                    padding: '0 25px',
+                    fontWeight: '500',
+                    maxWidth: isMobile ? '100%' :  '116px',
+                    marginLeft: 'auto',
+                    border: '2px solid #0500E1',
+                    width: isMobile ? '100%' : 'auto',
+                    backgroundColor: showFilters ? '#0500E1' : 'transparent',
+                    color: showFilters ? 'white' : '#0500E1',
+                    marginTop: isMobile ? '16px' : '0',
+                    '&:hover': {
+                      backgroundColor: showFilters ? '#000062' : 'transparent',
+                      color: showFilters ? 'white' : '#0500E1',
+                      border: showFilters ? '2px solid #000062' : '2px solid #0500E1'
+                    },
                   }}
-                > 
-                <SearchFilter search={search} setSearch={setSearch} />
-
-                  <Box
-                    sx={{
-                      borderLeft: isMobile ? 'none' : '2px solid #0500E1',
-                      paddingLeft: isMobile ? '0' :'30px',
-                      width: isMobile ? '100%' : 'auto'
-                    }}
-                  >
-                    <Button
-  onClick={handleToggleFilters}
-  startIcon={<FontAwesomeIcon icon={faSliders} />} 
-  variant='outlined'
-  sx={{
-    borderRadius: '50px',
-    height: '43px',
-    textTransform: 'capitalize',
-    padding: '0 25px',
-    fontWeight: '500',
-    maxWidth: isMobile ? '100%' :  '116px',
-    marginLeft: 'auto',
-    border: '2px solid #0500E1',
-    width: isMobile ? '100%' : 'auto',
-    backgroundColor: showFilters ? '#0500E1' : 'transparent',
-    color: showFilters ? 'white' : '#0500E1',
-    marginTop: isMobile ? '16px' : '0',
-    '&:hover': {
-      backgroundColor: showFilters ? '#000062' : 'transparent',
-      color: showFilters ? 'white' : '#0500E1',
-      border: showFilters ? '2px solid #000062' : '2px solid #0500E1'
-    },
-  }}
->
-  Filters
-  
-</Button>
-                  </Box>
-                  </Box>
+                >
+                  Filters
+                </Button>
+              </Box>
+            </Box>
             <div
               style={{
                 position: 'relative',
@@ -267,14 +302,26 @@ const ProjectList: React.FC = () => {
                 selectedLicenses={selectedLicenses}
                 handleLicenseChange={handleLicenseChange}
                 selectedSources={selectedSources}
-                selectedParatimes={selectedParatimes}
                 handleSourcesChange={handleSourcesChange}
+                selectedParatimes={selectedParatimes}
                 handleParatimesChange={handleParatimesChange}
                 maintainedByOasis={maintainedByOasis}
                 handleMaintainedByOasisToggle={handleMaintainedByOasisToggle}
                 handleClearTags={handleClearTags}
                 handleClearLangs={handleClearLangs}
-                />
+                tagCounts={tagCounts}
+                langCounts={langCounts}
+                licenseCounts={licenseCounts}
+                sourceCounts={sourceCounts}
+                paratimeCounts={paratimeCounts}
+                maintainedByOasisCount={maintainedByOasisCount}
+              />
+              <Button
+                onClick={handleClearFilters}
+                sx={{ textDecoration: 'underline', textTransform: 'none', display: 'block', marginTop: '16px', color: '#0500E1' }}
+              >
+                Clear all filters
+              </Button>
             </div>
           </div>
           <Sorting
@@ -283,30 +330,30 @@ const ProjectList: React.FC = () => {
             handleSortChange={handleSortChange}
           />
         </Container>
-    <Grid container spacing={1} justifyContent="start">
-        {filteredAndSortedProjects.map((project) => (
-            <ProjectListItem
+        <Grid container spacing={1} justifyContent="start">
+          {filteredAndSortedProjects.map((project) => (
+          <ProjectListItem
               key={project.name}
               project={project}
               getProjectLink={getProjectLink}
               selectedTags={selectedTags}
               selectedLangs={selectedLangs}
-              handleTagClick={handleTagClick}
+              handleTagClick={handleSingleTagClick}
               handleLangClick={handleLangClick}
               langs={project.languages}
               tags={project.tags}
             />
-        ))}
-      </Grid>
-      <ProjectDialog
-        open={!!selectedProject}
-        onClose={handleProjectDialogClose}
-        project={selectedProject}
-        selectedTags={selectedTags}
-        selectedLangs={selectedLangs}
-        handleTagClick={handleTagClick}
-      />
-  </Container>
+          ))}
+        </Grid>
+        <ProjectDialog
+          open={!!selectedProject}
+          onClose={handleProjectDialogClose}
+          project={selectedProject}
+          selectedTags={selectedTags}
+          selectedLangs={selectedLangs}
+          handleTagClick={handleSingleTagClick}
+        />
+      </Container>
     </div>
   );
 };

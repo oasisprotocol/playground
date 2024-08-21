@@ -28,7 +28,7 @@ const paddingValue = isMobile ? '42px' : '80px';
       height: '100%',
       minHeight: '100vh',
       backgroundImage: `url(${backgroundImg})`,
-      backgroundSize: 'contain',
+      backgroundSize: '100vw auto',
       backgroundRepeat: 'no-repeat',
       backgroundColor: '#0500E1',
       backgroundPosition: '50% 230px'

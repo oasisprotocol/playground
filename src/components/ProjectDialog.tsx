@@ -263,7 +263,7 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
                       </Typography>
                       <Typography
                         sx={{color: '#0500E1', letterSpacing: '-0.5px', marginBottom: '16px'}}>
-                              {project.license}
+                              {project.license ? project.license : 'Unspecified'}
                       </Typography>
                       
 
