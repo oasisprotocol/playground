@@ -34,6 +34,7 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
   project,
   selectedTags,
   selectedLangs,
+  handleTagClick
 }) => {
   const [carouselIndex, setCarouselIndex] = useState(0);
   const theme = useTheme();
@@ -103,9 +104,9 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
                       <Box
                           sx={{color: '#000000', letterSpacing: '-0.5px', marginBottom: '24px', fontFamily: "'Roboto Flex Variable',sans-serif"}}
                           >
-                             <ReactMarkdown components={{ a: ({ node, ...props }) => modifyLinkTarget(props.href, props.title, props.children) }}>
-                              {project.description}
-                            </ReactMarkdown>
+                             <ReactMarkdown components={{ a: (props) => modifyLinkTarget(props.href, props.title, props.children) }}>
+                                {project.description}
+                             </ReactMarkdown>
                       </Box>
 
                       <Grid container spacing={3}>
@@ -168,7 +169,7 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
                           <Typography sx={{ color: '#000000', letterSpacing: '-0.5px', fontSize: '14px', marginTop: '16px', marginBottom: '6px' }}>
                             Tags:
                           </Typography>
-                          <ProjectItemTags tags={project.tags} selectedTags={selectedTags} isLarge={false} />
+                          <ProjectItemTags tags={project.tags} selectedTags={selectedTags} isLarge={false} handleTagClick={handleTagClick}/>
                         </Grid>
                       </Grid>
                    </Grid>

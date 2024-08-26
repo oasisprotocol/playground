@@ -25,7 +25,8 @@ const ProjectListItem: React.FC<ProjectListItemProps> = ({
   selectedTags,
   selectedLangs,
   tags,
-  langs
+  langs,
+  handleTagClick
 }) => {
   const theme = useTheme();
   const isMobileScreen = useMediaQuery(theme.breakpoints.down('sm'));
@@ -84,7 +85,7 @@ const ProjectListItem: React.FC<ProjectListItemProps> = ({
               </Box>
 
               <Box sx={{ minHeight: isMobileScreen ? '50px' : '80px', marginTop: '24px' }}>
-                  <ProjectItemTags tags={tags} selectedTags={selectedTags} isLarge={false} />
+                  <ProjectItemTags tags={tags} selectedTags={selectedTags} isLarge={false} handleTagClick={handleTagClick}/>
               </Box>
             </Grid>
 
