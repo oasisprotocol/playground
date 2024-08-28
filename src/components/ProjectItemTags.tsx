@@ -4,9 +4,10 @@ interface ProjectItemTagsProps {
   tags: string[];
   selectedTags: string[];
   isLarge: boolean;
+  handleTagClick: (tag: string) => void;
 }
 
-const ProjectItemTags: React.FC<ProjectItemTagsProps> = ({ tags, selectedTags, isLarge }) => {
+const ProjectItemTags: React.FC<ProjectItemTagsProps> = ({ tags, selectedTags, isLarge, handleTagClick }) => {
   return (
     <div>
       {tags.map((tag: string) => (
@@ -14,11 +15,15 @@ const ProjectItemTags: React.FC<ProjectItemTagsProps> = ({ tags, selectedTags, i
             label={tag}
             key={tag}
             color={selectedTags.includes(tag) ? 'primary' : 'default'}
+            onClick={(e) => {
+              e.preventDefault();
+              e.stopPropagation();
+              handleTagClick(tag);
+            }}
             sx={{
               marginRight: '4px',
               height: 'auto',
               fontSize: '14px',
-              cursor: 'auto',
               '& .MuiChip-label': {
                 padding: '4px 14px',  
                 fontWeight: '400',
