@@ -26,7 +26,8 @@ const ProjectListItem: React.FC<ProjectListItemProps> = ({
   selectedLangs,
   tags,
   langs,
-  handleTagClick
+  handleTagClick,
+  handleLangClick
 }) => {
   const theme = useTheme();
   const isMobileScreen = useMediaQuery(theme.breakpoints.down('sm'));
@@ -124,7 +125,7 @@ const ProjectListItem: React.FC<ProjectListItemProps> = ({
                 }}>
                 <Grid item xs={project.maintainedByOasis ? 10 : 12} sx={{ minHeight: isMobileScreen ? '50px' : '80px', paddingRight: '8px', paddingTop: '0' }}>
                     <Box sx={{display: 'block', width: '100%'}}>
-                      <ProjectItemLanguages langs={langs} selectedLangs={selectedLangs} isLarge={false} isInListItem={true} />
+                      <ProjectItemLanguages langs={langs} selectedLangs={selectedLangs} isLarge={false} isInListItem={true} handleLangClick={handleLangClick}/>
                     </Box>
 
                     <Box sx={{display: 'block', width: '100%', paddingTop: '2px'}}>

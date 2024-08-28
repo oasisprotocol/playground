@@ -19,6 +19,7 @@ interface ProjectDialogProps {
   selectedTags: string[];
   selectedLangs: string[];
   handleTagClick: (tag: string) => void;
+  handleLangClick: (lang: string) => void;
 }
 
 const linkStyles = {
@@ -34,7 +35,8 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
   project,
   selectedTags,
   selectedLangs,
-  handleTagClick
+  handleTagClick,
+  handleLangClick
 }) => {
   const [carouselIndex, setCarouselIndex] = useState(0);
   const theme = useTheme();
@@ -139,7 +141,7 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
                             Languages:
                           </Typography>
                           <Box sx={{ color: '#0500E1', marginBottom: '24px' }}>
-                            <ProjectItemLanguages langs={project.languages} selectedLangs={selectedLangs} isLarge={false} />
+                            <ProjectItemLanguages langs={project.languages} selectedLangs={selectedLangs} isLarge={false} handleLangClick={handleLangClick} />
                           </Box>
                         </Grid>
 

@@ -348,6 +348,7 @@ const ProjectList: React.FC = () => {
           selectedTags={selectedTags}
           selectedLangs={selectedLangs}
           handleTagClick={handleTagClick}
+          handleLangClick={handleLangClick}
         />
       </Container>
     </div>

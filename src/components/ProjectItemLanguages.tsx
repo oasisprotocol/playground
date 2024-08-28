@@ -5,11 +5,12 @@ interface ProjectItemLanguagesProps {
   selectedLangs: string[];
   isLarge: boolean;
   isInListItem?: boolean;
+  handleLangClick: (lang: string) => void;
 }
 
 
 
-const LanguagesList: React.FC<ProjectItemLanguagesProps> = ({ langs, selectedLangs, isLarge, isInListItem }) => {
+const LanguagesList: React.FC<ProjectItemLanguagesProps> = ({ langs, selectedLangs, isLarge, isInListItem, handleLangClick }) => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
   
@@ -26,10 +27,11 @@ const LanguagesList: React.FC<ProjectItemLanguagesProps> = ({ langs, selectedLan
         <Typography
           component="span"
           key={lang}
+          onClick={() => {handleLangClick(lang);}}
           sx={{
             height: isLarge ? '27px' : '20px',
             fontSize: isInListItem ? '14px' : '16px',
-            cursor: 'auto',
+            cursor: 'pointer',
             color: '#000000',
             fontWeight: selectedLangs.includes(lang) ? '700' : 'normal',
             letterSpacing: '-0.03em'
