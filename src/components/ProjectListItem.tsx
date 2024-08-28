@@ -12,8 +12,10 @@ interface ProjectListItemProps {
   getProjectLink: (project: Project) => string;
   selectedTags: string[];
   selectedLangs: string[];
+  selectedParatimes: string[];
   handleTagClick: (tag: string) => void;
   handleLangClick: (tag: string) => void;
+  handleParatimesChange: (paratime: string) => void;
   tags: string[];
   langs: string[];
 }
@@ -24,10 +26,12 @@ const ProjectListItem: React.FC<ProjectListItemProps> = ({
   getProjectLink,
   selectedTags,
   selectedLangs,
+  selectedParatimes,
   tags,
   langs,
   handleTagClick,
-  handleLangClick
+  handleLangClick,
+  handleParatimesChange
 }) => {
   const theme = useTheme();
   const isMobileScreen = useMediaQuery(theme.breakpoints.down('sm'));
@@ -138,8 +142,14 @@ const ProjectListItem: React.FC<ProjectListItemProps> = ({
                           <Typography
                             component="span"
                             key={paratime}
-                            sx={{letterSpacing: '-0.03em', color: '#000000',
-                            fontSize: '14px'}}
+                            onClick={() => handleParatimesChange(paratime)}
+                            sx={{
+                              letterSpacing: '-0.03em', 
+                              color: '#000000',
+                              fontSize: '14px',
+                              cursor: 'pointer',
+                              fontWeight: selectedParatimes.includes(paratime) ? '700' : 'normal',
+                            }}
                           >
                             {paratime.charAt(0).toUpperCase() + paratime.slice(1)}
                             {index < project.paratimes.length - 1 && ', '}

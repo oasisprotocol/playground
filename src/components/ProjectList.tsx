@@ -334,8 +334,10 @@ const ProjectList: React.FC = () => {
               getProjectLink={getProjectLink}
               selectedTags={selectedTags}
               selectedLangs={selectedLangs}
+              selectedParatimes={selectedParatimes}
               handleTagClick={handleTagClick}
               handleLangClick={handleLangClick}
+              handleParatimesChange={handleParatimesChange}
               langs={project.languages}
               tags={project.tags}
             />
