@@ -15,11 +15,7 @@ const ProjectItemTags: React.FC<ProjectItemTagsProps> = ({ tags, selectedTags, i
             label={tag}
             key={tag}
             color={selectedTags.includes(tag) ? 'primary' : 'default'}
-            onClick={(e) => {
-              e.preventDefault();
-              e.stopPropagation();
-              handleTagClick(tag);
-            }}
+            onClick={() => {handleTagClick(tag);}}
             sx={{
               marginRight: '4px',
               height: 'auto',

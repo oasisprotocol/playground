@@ -113,11 +113,11 @@ const ProjectList: React.FC = () => {
   
     const tagsMatch: boolean =
       selectedTags.length === 0 ||
-      selectedTags.some((tag) => project.tags.includes(tag));
+      selectedTags.every((tag) => project.tags.includes(tag));
       
     const langsMatch: boolean =
       selectedLangs.length === 0 ||
-      selectedLangs.some((lang) => project.languages.includes(lang));
+      selectedLangs.every((lang) => project.languages.includes(lang));
 
     const maintainedByOasisMatch: boolean =
       !maintainedByOasis || project.maintainedByOasis;
@@ -127,7 +127,7 @@ const ProjectList: React.FC = () => {
   
     const sourcesMatch: boolean =
       selectedSources.length === 0 ||
-      selectedSources.some((source) => {
+      selectedSources.every((source) => {
         if (
           (source === 'Demo' && project.demoUrl) ||
           (source === 'Code' && project.codeUrl)
@@ -146,7 +146,7 @@ const ProjectList: React.FC = () => {
 
     const paratimeMatch: boolean =
       selectedParatimes.length === 0 ||
-      selectedParatimes.some(paratime =>
+      selectedParatimes.every(paratime =>
         project.paratimes?.includes(paratime)
       );
 
@@ -334,8 +334,10 @@ const ProjectList: React.FC = () => {
               getProjectLink={getProjectLink}
               selectedTags={selectedTags}
               selectedLangs={selectedLangs}
+              selectedParatimes={selectedParatimes}
               handleTagClick={handleTagClick}
               handleLangClick={handleLangClick}
+              handleParatimesChange={handleParatimesChange}
               langs={project.languages}
               tags={project.tags}
             />
@@ -348,6 +350,7 @@ const ProjectList: React.FC = () => {
           selectedTags={selectedTags}
           selectedLangs={selectedLangs}
           handleTagClick={handleTagClick}
+          handleLangClick={handleLangClick}
         />
       </Container>
     </div>
