@@ -1,0 +1,30 @@
+---
+name: Starter Project (Go)
+authors:
+  - Oasis Protocol Foundation: https://oasisprotocol.org
+description: |
+  Skeleton repo for a backend microservice written in Go that communicates with
+  Oasis Sapphire:
+  
+    - includes a simple CLI app for building and deploying the smart contract,
+      performing queries and submitting transactions written in Go,
+    - imports the [Sapphire ParaTime Go client](https://pkg.go.dev/github.com/oasisprotocol/sapphire-paratime/clients/go)
+      package for connecting to Mainnet, Testnet or Localnet Sapphire networks,
+      using signed queries and encrypted transactions,
+    - includes a simple solidity message box smart contract with an end-to-end
+      test script.
+  
+paratimes:
+  - sapphire
+languages:
+  - go
+  - solidity
+license: Apache-2.0
+tags:
+  - CLI
+codeUrl: https://github.com/oasisprotocol/demo-starter-go
+tutorials:
+  - Sapphire Quickstart: https://docs.oasis.io/dapp/sapphire/quickstart
+created: 2024-07-03
+lastUpdated: 2024-07-19
+maintainedByOasis: true
