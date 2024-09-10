@@ -64,6 +64,8 @@ button:focus-visible {
   -webkit-line-clamp: 3;
   line-clamp: 3;
   -webkit-box-orient: vertical;
+  /* Fallback for old iOS Safari */
+  max-height: 3.9em;
 }
 
 .markdown-line-clamp p {
