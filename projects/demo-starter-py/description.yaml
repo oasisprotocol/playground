@@ -1,0 +1,30 @@
+---
+name: Starter Project (Python)
+authors:
+  - Oasis Protocol Foundation: https://oasisprotocol.org
+description: |
+  Skeleton repo for a backend microservice written in Python that communicates
+  with Oasis Sapphire:
+  
+    - includes a simple CLI app for building and deploying the smart contract,
+      performing queries and submitting transactions written in Python,
+    - imports the [Sapphire Python client](https://github.com/oasisprotocol/sapphire-paratime/tree/main/clients/py)
+      package for connecting to Mainnet, Testnet or Localnet Sapphire networks,
+      using encrypted transactions,
+    - includes a simple solidity message box smart contract with an end-to-end
+      test script.
+  
+paratimes:
+  - sapphire
+languages:
+  - python
+  - solidity
+license: Apache-2.0
+tags:
+  - CLI
+codeUrl: https://github.com/oasisprotocol/demo-starter-py
+tutorials:
+  - Sapphire Quickstart: https://docs.oasis.io/dapp/sapphire/quickstart
+created: 2024-08-01
+lastUpdated: 2024-09-09
+maintainedByOasis: true
