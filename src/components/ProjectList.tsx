@@ -109,7 +109,10 @@ const ProjectList: React.FC = () => {
   const filteredProjects: Project[] = projects.filter((project) => {
     const searchMatch: boolean =
       project.name.toLowerCase().includes(search.toLowerCase()) ||
-      project.description.toLowerCase().includes(search.toLowerCase());
+      project.description.toLowerCase().includes(search.toLowerCase()) ||
+      project.tags.some((tag) => tag.toLowerCase().includes(search.toLowerCase())) ||
+      project.languages.some((lang) => lang.toLowerCase().includes(search.toLowerCase())) ||
+      project.paratimes.some((paratime) => paratime.toLowerCase().includes(search.toLowerCase()));
   
     const tagsMatch: boolean =
       selectedTags.length === 0 ||

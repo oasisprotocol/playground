@@ -16,7 +16,7 @@ const SearchFilter: React.FC<SearchFilterProps> = ({ search, setSearch }) => {
   return (
     <Box sx={{ position: 'relative', width: 'fill-available', paddingRight: isMobile ? '0' : '30px' }}>
       <TextField
-        placeholder="Search by Title/Description"
+        placeholder="Search"
         variant="outlined"
         fullWidth
         value={search}
