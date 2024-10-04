@@ -11,7 +11,9 @@ export const projects: Project[] = Object.entries(yamls).map(([path, yaml]) => {
    const screenshotsPath = path.replace(/\/[^/]*?\.yaml$/, '/screenshots')
    parsedYaml.screenshots = Object.entries(allScreenshots).filter(([screenshotPath]) => screenshotPath.startsWith(screenshotsPath)).map(([_screenshotPath, screenshotUrl]) => screenshotUrl)
    parsedYaml.languages = parsedYaml.languages.map(getCorrectLanguageName)
-   parsedYaml.slug = parsedYaml.name.toLowerCase().replace(/\s/g, '-')
+   const folderName = path.split('/').slice(-2, -1)[0];
+   parsedYaml.slug = folderName;
+   
    return parsedYaml;
 });
 
