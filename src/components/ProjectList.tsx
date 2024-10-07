@@ -110,6 +110,7 @@ const ProjectList: React.FC = () => {
     const searchMatch: boolean =
       project.name.toLowerCase().includes(search.toLowerCase()) ||
       project.description.toLowerCase().includes(search.toLowerCase()) ||
+      project.slug.toLowerCase().replace('#', '').replace(/-/g, ' ').includes(search.toLowerCase().replace(/-/g, ' ')) ||
       project.tags.some((tag) => tag.toLowerCase().includes(search.toLowerCase())) ||
       project.languages.some((lang) => lang.toLowerCase().includes(search.toLowerCase())) ||
       project.paratimes.some((paratime) => paratime.toLowerCase().includes(search.toLowerCase()));
