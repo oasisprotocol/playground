@@ -1,50 +1,47 @@
-import { useState } from 'react';
-import {
-  Grid,
-  Container,
-  Button,
-  Box,
-} from '@mui/material';
-import { projects } from '../projectData';
-import ProjectDialog from './ProjectDialog';
-import { Project } from '../types';
-import SearchFilter from './SearchFilter';
-import Filters from './Filters';
-import Sorting from './Sorting';
-import ProjectListItem from './ProjectListItem';
-import { SelectChangeEvent } from '@mui/material/Select';
-import { useTheme } from '@mui/material/styles';
-import { useMediaQuery } from '@mui/material';
-import '../App.css'; 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSliders } from '@fortawesome/free-solid-svg-icons';
-import { SortingOptions } from './Sorting';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { Box, Button, Container, Grid } from "@mui/material";
+import { useMediaQuery } from "@mui/material";
+import type { SelectChangeEvent } from "@mui/material/Select";
+import { useTheme } from "@mui/material/styles";
+import { useState } from "react";
+import { projects } from "../projectData";
+import type { Project } from "../types";
+import Filters from "./Filters";
+import ProjectDialog from "./ProjectDialog";
+import ProjectListItem from "./ProjectListItem";
+import SearchFilter from "./SearchFilter";
+import Sorting from "./Sorting";
+import "../App.css";
+import { faSliders } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useLocation, useNavigate } from "react-router-dom";
+import { SortingOptions } from "./Sorting";
 
 const ProjectList: React.FC = () => {
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('sm')); 
-  const navigate = useNavigate(); 
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+  const navigate = useNavigate();
   const location = useLocation();
 
   // Open project from URL
-  const selectedProject = projects.find((project) => project.slug === location.hash.substring(1)) ?? null;
+  const selectedProject =
+    projects.find((project) => project.slug === location.hash.substring(1)) ??
+    null;
 
-  const [search, setSearch] = useState<string>('');
+  const [search, setSearch] = useState<string>("");
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const [selectedLangs, setSelectedLangs] = useState<string[]>([]);
-  const [maintainedByOasis, setMaintainedByOasis] = useState<boolean>(false); 
+  const [maintainedByOasis, setMaintainedByOasis] = useState<boolean>(false);
   const [selectedSources, setSelectedSources] = useState<string[]>([]);
   const [selectedParatimes, setSelectedParatimes] = useState<string[]>([]);
   const [showFilters, setShowFilters] = useState<boolean>(false);
 
   const licenses = Array.from(
-    new Set(projects.map((project) => project.license))
+    new Set(projects.map((project) => project.license)),
   );
 
   const [selectedLicenses, setSelectedLicenses] = useState<string[]>([]);
 
-  const paddingValue = isMobile ? '24px' : '34px 46px'; 
+  const paddingValue = isMobile ? "24px" : "34px 46px";
 
   const handleClearFilters = () => {
     setSelectedTags([]);
@@ -53,17 +50,17 @@ const ProjectList: React.FC = () => {
     setSelectedSources([]);
     setSelectedParatimes([]);
     setMaintainedByOasis(false);
-    setSearch('');
+    setSearch("");
   };
 
   const handleClearTags = () => {
     setSelectedTags([]);
-    setSearch('');
+    setSearch("");
   };
 
   const handleClearLangs = () => {
     setSelectedLangs([]);
-    setSearch('');
+    setSearch("");
   };
 
   const handleMaintainedByOasisToggle = () => {
@@ -75,7 +72,7 @@ const ProjectList: React.FC = () => {
   };
 
   const handleProjectDialogClose = () => {
-    navigate('.', { replace: true });
+    navigate(".", { replace: true });
   };
 
   const handleLicenseChange = (license: string) => {
@@ -103,42 +100,53 @@ const ProjectList: React.FC = () => {
     setShowFilters(!showFilters);
   };
 
-  const tags: string[] = Array.from(new Set(projects.flatMap((project) => project.tags)));
-  const langs: string[] = Array.from(new Set(projects.flatMap((project) => project.languages)));
+  const tags: string[] = Array.from(
+    new Set(projects.flatMap((project) => project.tags)),
+  );
+  const langs: string[] = Array.from(
+    new Set(projects.flatMap((project) => project.languages)),
+  );
 
   const filteredProjects: Project[] = projects.filter((project) => {
     const searchMatch: boolean =
       project.name.toLowerCase().includes(search.toLowerCase()) ||
       project.description.toLowerCase().includes(search.toLowerCase()) ||
-      project.tags.some((tag) => tag.toLowerCase().includes(search.toLowerCase())) ||
-      project.languages.some((lang) => lang.toLowerCase().includes(search.toLowerCase())) ||
-      project.paratimes.some((paratime) => paratime.toLowerCase().includes(search.toLowerCase()));
-  
+      project.tags.some((tag) =>
+        tag.toLowerCase().includes(search.toLowerCase()),
+      ) ||
+      project.languages.some((lang) =>
+        lang.toLowerCase().includes(search.toLowerCase()),
+      ) ||
+      project.paratimes.some((paratime) =>
+        paratime.toLowerCase().includes(search.toLowerCase()),
+      );
+
     const tagsMatch: boolean =
       selectedTags.length === 0 ||
       selectedTags.every((tag) => project.tags.includes(tag));
-      
+
     const langsMatch: boolean =
       selectedLangs.length === 0 ||
       selectedLangs.every((lang) => project.languages.includes(lang));
 
     const maintainedByOasisMatch: boolean =
       !maintainedByOasis || project.maintainedByOasis;
-  
+
     const licenseMatch: boolean =
-      selectedLicenses.length === 0 || selectedLicenses.includes(project.license);
-  
+      selectedLicenses.length === 0 ||
+      selectedLicenses.includes(project.license);
+
     const sourcesMatch: boolean =
       selectedSources.length === 0 ||
       selectedSources.every((source) => {
         if (
-          (source === 'Demo' && project.demoUrl) ||
-          (source === 'Code' && project.codeUrl)
+          (source === "Demo" && project.demoUrl) ||
+          (source === "Code" && project.codeUrl)
         ) {
           return true;
         }
         if (
-          source === 'Tutorial' &&
+          source === "Tutorial" &&
           Array.isArray(project.tutorials) &&
           project.tutorials.length > 0
         ) {
@@ -149,52 +157,86 @@ const ProjectList: React.FC = () => {
 
     const paratimeMatch: boolean =
       selectedParatimes.length === 0 ||
-      selectedParatimes.every(paratime =>
-        project.paratimes?.includes(paratime)
+      selectedParatimes.every((paratime) =>
+        project.paratimes?.includes(paratime),
       );
 
-    return searchMatch && tagsMatch && langsMatch && paratimeMatch && maintainedByOasisMatch && licenseMatch && sourcesMatch;
+    return (
+      searchMatch &&
+      tagsMatch &&
+      langsMatch &&
+      paratimeMatch &&
+      maintainedByOasisMatch &&
+      licenseMatch &&
+      sourcesMatch
+    );
   });
 
-  const tagCounts = tags.reduce((acc, tag) => {
-    acc[tag] = filteredProjects.filter((project) => project.tags.includes(tag)).length;
-    return acc;
-  }, {} as Record<string, number>);
+  const tagCounts = tags.reduce(
+    (acc, tag) => {
+      acc[tag] = filteredProjects.filter((project) =>
+        project.tags.includes(tag),
+      ).length;
+      return acc;
+    },
+    {} as Record<string, number>,
+  );
 
-  const langCounts = langs.reduce((acc, lang) => {
-    acc[lang] = filteredProjects.filter((project) => project.languages.includes(lang)).length;
-    return acc;
-  }, {} as Record<string, number>);
+  const langCounts = langs.reduce(
+    (acc, lang) => {
+      acc[lang] = filteredProjects.filter((project) =>
+        project.languages.includes(lang),
+      ).length;
+      return acc;
+    },
+    {} as Record<string, number>,
+  );
 
-  const licenseCounts = licenses.reduce((acc, license) => {
-    acc[license] = filteredProjects.filter((project) => project.license === license).length;
-    return acc;
-  }, {} as Record<string, number>);
+  const licenseCounts = licenses.reduce(
+    (acc, license) => {
+      acc[license] = filteredProjects.filter(
+        (project) => project.license === license,
+      ).length;
+      return acc;
+    },
+    {} as Record<string, number>,
+  );
 
-  const sourceCounts = ['Demo', 'Code', 'Tutorial'].reduce((acc, source) => {
-    acc[source] = filteredProjects.filter((project) => {
-      if (source === 'Demo') return !!project.demoUrl;
-      if (source === 'Code') return !!project.codeUrl;
-      if (source === 'Tutorial') return Array.isArray(project.tutorials) && project.tutorials.length > 0;
-      return false;
-    }).length;
-    return acc;
-  }, {} as Record<string, number>);
+  const sourceCounts = ["Demo", "Code", "Tutorial"].reduce(
+    (acc, source) => {
+      acc[source] = filteredProjects.filter((project) => {
+        if (source === "Demo") return !!project.demoUrl;
+        if (source === "Code") return !!project.codeUrl;
+        if (source === "Tutorial")
+          return (
+            Array.isArray(project.tutorials) && project.tutorials.length > 0
+          );
+        return false;
+      }).length;
+      return acc;
+    },
+    {} as Record<string, number>,
+  );
 
-  const paratimeCounts = ['sapphire', 'emerald', 'cipher'].reduce((acc, paratime) => {
-    acc[paratime] = filteredProjects.filter((project) => project.paratimes?.includes(paratime)).length;
-    return acc;
-  }, {} as Record<string, number>);
-  
+  const paratimeCounts = ["sapphire", "emerald", "cipher"].reduce(
+    (acc, paratime) => {
+      acc[paratime] = filteredProjects.filter((project) =>
+        project.paratimes?.includes(paratime),
+      ).length;
+      return acc;
+    },
+    {} as Record<string, number>,
+  );
+
   const maintainedByOasisCount = filteredProjects.filter(
-    (project) => project.maintainedByOasis
+    (project) => project.maintainedByOasis,
   ).length;
 
   const handleTagClick = (tag: string) => {
     setSelectedTags(
       selectedTags.includes(tag)
         ? selectedTags.filter((t) => t !== tag)
-        : [...selectedTags, tag]
+        : [...selectedTags, tag],
     );
   };
 
@@ -206,22 +248,39 @@ const ProjectList: React.FC = () => {
     }
   };
 
-  const [sortOption, setSortOption] = useState<SortingOptions>(SortingOptions.TITLE);
+  const [sortOption, setSortOption] = useState<SortingOptions>(
+    SortingOptions.TITLE,
+  );
 
   const sortProjects = (projects: Project[]): Project[] => {
     switch (sortOption) {
       case SortingOptions.LAST_UPDATED:
-        return projects.slice().sort((a, b) => new Date(b.lastUpdated).getTime() - new Date(a.lastUpdated).getTime());
+        return projects
+          .slice()
+          .sort(
+            (a, b) =>
+              new Date(b.lastUpdated).getTime() -
+              new Date(a.lastUpdated).getTime(),
+          );
       case SortingOptions.CREATED_DATE:
-        return projects.slice().sort((a, b) => new Date(b.created).getTime() - new Date(a.created).getTime());
+        return projects
+          .slice()
+          .sort(
+            (a, b) =>
+              new Date(b.created).getTime() - new Date(a.created).getTime(),
+          );
       case SortingOptions.NAME:
       default:
         return projects.slice().sort((a, b) => a.name.localeCompare(b.name));
     }
   };
 
-  const handleSortChange = (event: React.ChangeEvent<{ value: unknown }> | SelectChangeEvent<SortingOptions>) => {
-    if ('target' in event) {
+  const handleSortChange = (
+    event:
+      | React.ChangeEvent<{ value: unknown }>
+      | SelectChangeEvent<SortingOptions>,
+  ) => {
+    if ("target" in event) {
       setSortOption(event.target.value as SortingOptions);
     }
   };
@@ -230,51 +289,61 @@ const ProjectList: React.FC = () => {
 
   return (
     <div>
-      <Container sx={{ backgroundColor: 'white', border: '2px solid black', padding: paddingValue, borderRadius: '19px', position: 'relative'}}>
-        <Container sx={{ padding: '0', paddingTop: '20px' }}>
+      <Container
+        sx={{
+          backgroundColor: "white",
+          border: "2px solid black",
+          padding: paddingValue,
+          borderRadius: "19px",
+          position: "relative",
+        }}
+      >
+        <Container sx={{ padding: "0", paddingTop: "20px" }}>
           <div
             style={{
-              position: 'relative',
-              overflow: 'hidden',
-              transition: 'max-height 0.5s ease',
+              position: "relative",
+              overflow: "hidden",
+              transition: "max-height 0.5s ease",
             }}
           >
             <Box
               sx={{
-                display: 'flex',
-                justifyContent: 'space-between',
-                flexWrap: isMobile ? 'wrap' : 'nowrap'
+                display: "flex",
+                justifyContent: "space-between",
+                flexWrap: isMobile ? "wrap" : "nowrap",
               }}
-            > 
+            >
               <SearchFilter search={search} setSearch={setSearch} />
               <Box
                 sx={{
-                  borderLeft: isMobile ? 'none' : '2px solid #0500E1',
-                  paddingLeft: isMobile ? '0' :'30px',
-                  width: isMobile ? '100%' : 'auto'
+                  borderLeft: isMobile ? "none" : "2px solid #0500E1",
+                  paddingLeft: isMobile ? "0" : "30px",
+                  width: isMobile ? "100%" : "auto",
                 }}
               >
                 <Button
                   onClick={handleToggleFilters}
-                  startIcon={<FontAwesomeIcon icon={faSliders} />} 
-                  variant='outlined'
+                  startIcon={<FontAwesomeIcon icon={faSliders} />}
+                  variant="outlined"
                   sx={{
-                    borderRadius: '50px',
-                    height: '43px',
-                    textTransform: 'capitalize',
-                    padding: '0 25px',
-                    fontWeight: '500',
-                    maxWidth: isMobile ? '100%' :  '116px',
-                    marginLeft: 'auto',
-                    border: '2px solid #0500E1',
-                    width: isMobile ? '100%' : 'auto',
-                    backgroundColor: showFilters ? '#0500E1' : 'transparent',
-                    color: showFilters ? 'white' : '#0500E1',
-                    marginTop: isMobile ? '16px' : '0',
-                    '&:hover': {
-                      backgroundColor: showFilters ? '#000062' : 'transparent',
-                      color: showFilters ? 'white' : '#0500E1',
-                      border: showFilters ? '2px solid #000062' : '2px solid #0500E1'
+                    borderRadius: "50px",
+                    height: "43px",
+                    textTransform: "capitalize",
+                    padding: "0 25px",
+                    fontWeight: "500",
+                    maxWidth: isMobile ? "100%" : "116px",
+                    marginLeft: "auto",
+                    border: "2px solid #0500E1",
+                    width: isMobile ? "100%" : "auto",
+                    backgroundColor: showFilters ? "#0500E1" : "transparent",
+                    color: showFilters ? "white" : "#0500E1",
+                    marginTop: isMobile ? "16px" : "0",
+                    "&:hover": {
+                      backgroundColor: showFilters ? "#000062" : "transparent",
+                      color: showFilters ? "white" : "#0500E1",
+                      border: showFilters
+                        ? "2px solid #000062"
+                        : "2px solid #0500E1",
                     },
                   }}
                 >
@@ -284,10 +353,10 @@ const ProjectList: React.FC = () => {
             </Box>
             <div
               style={{
-                position: 'relative',
-                overflow: 'hidden',
-                transition: 'all 0.7s cubic-bezier(.17,.67,.83,.67)',
-                maxHeight: showFilters ? '1000px' : '0px',
+                position: "relative",
+                overflow: "hidden",
+                transition: "all 0.7s cubic-bezier(.17,.67,.83,.67)",
+                maxHeight: showFilters ? "1000px" : "0px",
               }}
             >
               <Filters
@@ -317,7 +386,13 @@ const ProjectList: React.FC = () => {
               />
               <Button
                 onClick={handleClearFilters}
-                sx={{ textDecoration: 'underline', textTransform: 'none', display: 'block', marginTop: '16px', color: '#0500E1' }}
+                sx={{
+                  textDecoration: "underline",
+                  textTransform: "none",
+                  display: "block",
+                  marginTop: "16px",
+                  color: "#0500E1",
+                }}
               >
                 Clear all filters
               </Button>
@@ -331,7 +406,7 @@ const ProjectList: React.FC = () => {
         </Container>
         <Grid container spacing={1} justifyContent="start">
           {filteredAndSortedProjects.map((project) => (
-          <ProjectListItem
+            <ProjectListItem
               key={project.name}
               project={project}
               getProjectLink={getProjectLink}

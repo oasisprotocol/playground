@@ -1,4 +1,3 @@
-import React from 'react';
 import {
   Box,
   Button,
@@ -11,9 +10,10 @@ import {
   MenuItem,
   OutlinedInput,
   Select,
-  SelectChangeEvent,
-  Typography
-} from '@mui/material';
+  type SelectChangeEvent,
+  Typography,
+} from "@mui/material";
+import type React from "react";
 
 interface FiltersProps {
   tags: string[];
@@ -48,9 +48,9 @@ const MenuProps = {
     style: {
       maxHeight: ITEM_HEIGHT * 4.5 + ITEM_PADDING_TOP,
       width: 186,
-      marginTop: '12px',
-      borderRadius: '10px',
-      border: '2px solid #000000'
+      marginTop: "12px",
+      borderRadius: "10px",
+      border: "2px solid #000000",
     },
   },
 };
@@ -88,32 +88,54 @@ const Filters: React.FC<FiltersProps> = ({
       target: { value },
     } = event;
 
-    handleTagClick(typeof value === 'string' ? value.split(',') : value); // Ensure value is an array
+    handleTagClick(typeof value === "string" ? value.split(",") : value); // Ensure value is an array
   };
 
   const sortedTags = [...tags].sort();
 
   // Sort licenses to ensure 'Unspecified' (empty string) is last
   const sortedLicenses = [...licenses].sort((a, b) => {
-    if (a === '') return 1;
-    if (b === '') return -1;
+    if (a === "") return 1;
+    if (b === "") return -1;
     return a.localeCompare(b);
   });
 
   return (
-    <Grid container spacing={2} sx={{ borderBottom: '2px solid #CBC8EC', paddingBottom: '32px', paddingTop: '24px', justifyContent: 'space-between'}}>
+    <Grid
+      container
+      spacing={2}
+      sx={{
+        borderBottom: "2px solid #CBC8EC",
+        paddingBottom: "32px",
+        paddingTop: "24px",
+        justifyContent: "space-between",
+      }}
+    >
       <Grid item>
         <Box>
           <Typography variant="h6" gutterBottom>
             Tags
           </Typography>
-          <FormControl sx={{ marginTop: '8px', width: '186px', border:'2px solid #000000', borderRadius: '30px' }}>
+          <FormControl
+            sx={{
+              marginTop: "8px",
+              width: "186px",
+              border: "2px solid #000000",
+              borderRadius: "30px",
+            }}
+          >
             {!selectedTags.length && (
               <InputLabel
                 id="multiple-checkbox-label"
                 shrink={false}
-                sx={{ height: '30px', top: 'auto', bottom: '14px', color: '#D2CCCC', '&.Mui-focused': { borderColor: 'none', color: '#D2CCCC', } }}
-               >
+                sx={{
+                  height: "30px",
+                  top: "auto",
+                  bottom: "14px",
+                  color: "#D2CCCC",
+                  "&.Mui-focused": { borderColor: "none", color: "#D2CCCC" },
+                }}
+              >
                 Select Tags
               </InputLabel>
             )}
@@ -124,21 +146,24 @@ const Filters: React.FC<FiltersProps> = ({
               value={selectedTags}
               onChange={handleTagsChange}
               input={<OutlinedInput label="Tags" />}
-              renderValue={(selected) => selected.join(', ')}
+              renderValue={(selected) => selected.join(", ")}
               MenuProps={MenuProps}
               sx={{
-                height: '32px',
-                '& .MuiOutlinedInput-notchedOutline': {
-                  borderColor: 'transparent',
+                height: "32px",
+                "& .MuiOutlinedInput-notchedOutline": {
+                  borderColor: "transparent",
                 },
-                '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
-                  borderColor: 'transparent',
+                "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
+                  borderColor: "transparent",
                 },
               }}
             >
               {sortedTags.map((tag) => (
-                <MenuItem key={tag} value={tag} sx={{padding: '0'}}>
-                  <Checkbox checked={selectedTags.indexOf(tag) > -1} sx={{padding: '6px 9px'}}/>
+                <MenuItem key={tag} value={tag} sx={{ padding: "0" }}>
+                  <Checkbox
+                    checked={selectedTags.indexOf(tag) > -1}
+                    sx={{ padding: "6px 9px" }}
+                  />
                   <ListItemText primary={`${tag} (${tagCounts[tag] || 0})`} />
                 </MenuItem>
               ))}
@@ -147,7 +172,14 @@ const Filters: React.FC<FiltersProps> = ({
           {selectedTags.length > 0 && (
             <Button
               onClick={handleClearTags}
-              sx={{ textDecoration: 'underline', textTransform: 'none', display:'block', paddingTop: '6px', paddingLeft: '0', color: '#0500E1' }}
+              sx={{
+                textDecoration: "underline",
+                textTransform: "none",
+                display: "block",
+                paddingTop: "6px",
+                paddingLeft: "0",
+                color: "#0500E1",
+              }}
             >
               Clear tags
             </Button>
@@ -161,7 +193,7 @@ const Filters: React.FC<FiltersProps> = ({
             Languages
           </Typography>
           {langs.map((lang) => (
-            <Box key={lang} sx={{marginBottom: '-7px'}}>
+            <Box key={lang} sx={{ marginBottom: "-7px" }}>
               <FormControlLabel
                 control={
                   <Checkbox
@@ -180,11 +212,11 @@ const Filters: React.FC<FiltersProps> = ({
       {/* Licenses */}
       <Grid item>
         <Box>
-          <Typography variant="h6" gutterBottom sx={{ paddingLeft: '-12px' }}>
+          <Typography variant="h6" gutterBottom sx={{ paddingLeft: "-12px" }}>
             Licenses
           </Typography>
           {sortedLicenses.map((license) => (
-            <Box key={license || 'unspecified'} sx={{ marginBottom: '-7px' }}>
+            <Box key={license || "unspecified"} sx={{ marginBottom: "-7px" }}>
               <FormControlLabel
                 control={
                   <Checkbox
@@ -193,7 +225,7 @@ const Filters: React.FC<FiltersProps> = ({
                     color="primary"
                   />
                 }
-                label={`${license || 'Unspecified'} (${licenseCounts[license] || 0})`}
+                label={`${license || "Unspecified"} (${licenseCounts[license] || 0})`}
               />
             </Box>
           ))}
@@ -203,11 +235,11 @@ const Filters: React.FC<FiltersProps> = ({
       {/* Sources */}
       <Grid item>
         <Box>
-          <Typography variant="h6" gutterBottom sx={{ paddingLeft: '-12px' }}>
+          <Typography variant="h6" gutterBottom sx={{ paddingLeft: "-12px" }}>
             Sources
           </Typography>
-          {['Demo', 'Code', 'Tutorial'].map((source) => (
-            <Box key={source} sx={{ marginBottom: '-7px' }}>
+          {["Demo", "Code", "Tutorial"].map((source) => (
+            <Box key={source} sx={{ marginBottom: "-7px" }}>
               <FormControlLabel
                 control={
                   <Checkbox
@@ -226,11 +258,11 @@ const Filters: React.FC<FiltersProps> = ({
       {/* Paratimes */}
       <Grid item>
         <Box>
-          <Typography variant="h6" gutterBottom sx={{ paddingLeft: '-12px' }}>
+          <Typography variant="h6" gutterBottom sx={{ paddingLeft: "-12px" }}>
             ParaTimes
           </Typography>
-          {['sapphire', 'emerald', 'cipher'].map((paratime) => (
-            <Box key={paratime} sx={{ marginBottom: '-7px' }}>
+          {["sapphire", "emerald", "cipher"].map((paratime) => (
+            <Box key={paratime} sx={{ marginBottom: "-7px" }}>
               <FormControlLabel
                 control={
                   <Checkbox
