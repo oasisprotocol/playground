@@ -274,7 +274,8 @@ const ProjectList: React.FC = () => {
             (a, b) =>
               new Date(b.created).getTime() - new Date(a.created).getTime(),
           );
-      default:
+      case SortingOptions.NAME:
+      case SortingOptions.TITLE:
         return projects.slice().sort((a, b) => a.name.localeCompare(b.name));
     }
   };
