@@ -39,7 +39,7 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
-  // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
+  // biome-ignore lint/correctness/useExhaustiveDependencies: project is a trigger, not a dependency
   useEffect(() => {
     // Reset state after switching projects
     setCarouselIndex(0);
