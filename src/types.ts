@@ -15,3 +15,10 @@ export interface Project {
   lastUpdated: string;
   maintainedByOasis: boolean;
 }
+
+export enum SortingOptions {
+  TITLE = 'Order by',
+  NAME = 'Name',
+  LAST_UPDATED = 'Last Updated',
+  CREATED_DATE = 'Created',
+}

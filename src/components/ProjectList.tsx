@@ -4,7 +4,7 @@ import type { SelectChangeEvent } from '@mui/material/Select';
 import { useTheme } from '@mui/material/styles';
 import { useState } from 'react';
 import { projects } from '../projectData';
-import type { Project } from '../types';
+import { type Project, SortingOptions } from '../types';
 import Filters from './Filters';
 import ProjectDialog from './ProjectDialog';
 import ProjectListItem from './ProjectListItem';
@@ -14,7 +14,6 @@ import '../App.css';
 import { faSliders } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { SortingOptions } from './Sorting';
 
 const ProjectList: React.FC = () => {
   const theme = useTheme();
