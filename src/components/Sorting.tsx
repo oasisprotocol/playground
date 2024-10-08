@@ -1,6 +1,13 @@
-import { Grid, Typography, Select, MenuItem, SelectChangeEvent, useTheme, useMediaQuery } from '@mui/material';
 import { KeyboardArrowDown } from '@mui/icons-material';
-
+import {
+  Grid,
+  MenuItem,
+  Select,
+  type SelectChangeEvent,
+  Typography,
+  useMediaQuery,
+  useTheme,
+} from '@mui/material';
 
 export enum SortingOptions {
   TITLE = 'Order by',
@@ -30,7 +37,7 @@ const Sorting: React.FC<SortingProps> = ({
       alignItems="center"
       sx={{ marginTop: '0', marginBottom: '10px' }}
     >
-            <Grid item xs={6} md={3}>
+      <Grid item xs={6} md={3}>
         {filteredAndSortedProjectsLength ? (
           <Typography gutterBottom color={'#000000'} align="left">
             {isMobileScreen ? null : 'Showing '}
@@ -46,7 +53,7 @@ const Sorting: React.FC<SortingProps> = ({
       {filteredAndSortedProjectsLength > 0 && (
         <Grid item xs={6} md={3}>
           <Grid container spacing={1} justifyContent="end" alignItems="center">
-            <Grid item xs={12} md={8}> 
+            <Grid item xs={12} md={8}>
               <Select
                 fullWidth
                 value={sortOption}
@@ -81,8 +88,8 @@ const Sorting: React.FC<SortingProps> = ({
                     },
                   },
                   '& .MuiSelect-icon': {
-                    right: '7px', 
-                    color: '#000000'
+                    right: '7px',
+                    color: '#000000',
                   },
                 }}
                 MenuProps={{
@@ -109,7 +116,12 @@ const Sorting: React.FC<SortingProps> = ({
                 }}
               >
                 {Object.values(SortingOptions).map((option, index) => (
-                  <MenuItem key={option} value={option} style={{ color: '#0500E1' }} disabled={index === 0}>
+                  <MenuItem
+                    key={option}
+                    value={option}
+                    style={{ color: '#0500E1' }}
+                    disabled={index === 0}
+                  >
                     {option}
                   </MenuItem>
                 ))}
@@ -118,7 +130,6 @@ const Sorting: React.FC<SortingProps> = ({
           </Grid>
         </Grid>
       )}
-
     </Grid>
   );
 };

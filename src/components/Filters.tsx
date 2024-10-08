@@ -1,4 +1,3 @@
-import React from 'react';
 import {
   Box,
   Button,
@@ -11,9 +10,10 @@ import {
   MenuItem,
   OutlinedInput,
   Select,
-  SelectChangeEvent,
-  Typography
+  type SelectChangeEvent,
+  Typography,
 } from '@mui/material';
+import type React from 'react';
 
 interface FiltersProps {
   tags: string[];
@@ -50,7 +50,7 @@ const MenuProps = {
       width: 186,
       marginTop: '12px',
       borderRadius: '10px',
-      border: '2px solid #000000'
+      border: '2px solid #000000',
     },
   },
 };
@@ -101,19 +101,41 @@ const Filters: React.FC<FiltersProps> = ({
   });
 
   return (
-    <Grid container spacing={2} sx={{ borderBottom: '2px solid #CBC8EC', paddingBottom: '32px', paddingTop: '24px', justifyContent: 'space-between'}}>
+    <Grid
+      container
+      spacing={2}
+      sx={{
+        borderBottom: '2px solid #CBC8EC',
+        paddingBottom: '32px',
+        paddingTop: '24px',
+        justifyContent: 'space-between',
+      }}
+    >
       <Grid item>
         <Box>
           <Typography variant="h6" gutterBottom>
             Tags
           </Typography>
-          <FormControl sx={{ marginTop: '8px', width: '186px', border:'2px solid #000000', borderRadius: '30px' }}>
+          <FormControl
+            sx={{
+              marginTop: '8px',
+              width: '186px',
+              border: '2px solid #000000',
+              borderRadius: '30px',
+            }}
+          >
             {!selectedTags.length && (
               <InputLabel
                 id="multiple-checkbox-label"
                 shrink={false}
-                sx={{ height: '30px', top: 'auto', bottom: '14px', color: '#D2CCCC', '&.Mui-focused': { borderColor: 'none', color: '#D2CCCC', } }}
-               >
+                sx={{
+                  height: '30px',
+                  top: 'auto',
+                  bottom: '14px',
+                  color: '#D2CCCC',
+                  '&.Mui-focused': { borderColor: 'none', color: '#D2CCCC' },
+                }}
+              >
                 Select Tags
               </InputLabel>
             )}
@@ -137,8 +159,11 @@ const Filters: React.FC<FiltersProps> = ({
               }}
             >
               {sortedTags.map((tag) => (
-                <MenuItem key={tag} value={tag} sx={{padding: '0'}}>
-                  <Checkbox checked={selectedTags.indexOf(tag) > -1} sx={{padding: '6px 9px'}}/>
+                <MenuItem key={tag} value={tag} sx={{ padding: '0' }}>
+                  <Checkbox
+                    checked={selectedTags.indexOf(tag) > -1}
+                    sx={{ padding: '6px 9px' }}
+                  />
                   <ListItemText primary={`${tag} (${tagCounts[tag] || 0})`} />
                 </MenuItem>
               ))}
@@ -147,7 +172,14 @@ const Filters: React.FC<FiltersProps> = ({
           {selectedTags.length > 0 && (
             <Button
               onClick={handleClearTags}
-              sx={{ textDecoration: 'underline', textTransform: 'none', display:'block', paddingTop: '6px', paddingLeft: '0', color: '#0500E1' }}
+              sx={{
+                textDecoration: 'underline',
+                textTransform: 'none',
+                display: 'block',
+                paddingTop: '6px',
+                paddingLeft: '0',
+                color: '#0500E1',
+              }}
             >
               Clear tags
             </Button>
@@ -161,7 +193,7 @@ const Filters: React.FC<FiltersProps> = ({
             Languages
           </Typography>
           {langs.map((lang) => (
-            <Box key={lang} sx={{marginBottom: '-7px'}}>
+            <Box key={lang} sx={{ marginBottom: '-7px' }}>
               <FormControlLabel
                 control={
                   <Checkbox

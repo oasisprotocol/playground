@@ -10,8 +10,8 @@ export interface Project {
   tags: string[];
   codeUrl?: string;
   demoUrl: string;
-  tutorials?: { [tutorial: string]: string }[]; 
-  created: string; 
+  tutorials?: { [tutorial: string]: string }[];
+  created: string;
   lastUpdated: string;
   maintainedByOasis: boolean;
 }

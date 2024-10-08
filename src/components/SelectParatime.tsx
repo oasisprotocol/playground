@@ -1,13 +1,15 @@
 import { KeyboardArrowDown } from '@mui/icons-material';
 import { MenuItem, Select } from '@mui/material';
 
-
 interface SelectParatimeProps {
   selectedParatime: string;
   handleParatimeChange: (value: string) => void;
 }
 
-const SelectParatime: React.FC<SelectParatimeProps> = ({ selectedParatime, handleParatimeChange }) => {
+const SelectParatime: React.FC<SelectParatimeProps> = ({
+  selectedParatime,
+  handleParatimeChange,
+}) => {
   return (
     <Select
       variant="outlined"
@@ -28,7 +30,7 @@ const SelectParatime: React.FC<SelectParatimeProps> = ({ selectedParatime, handl
           },
         },
         '& .MuiSelect-icon': {
-          right: '20px', 
+          right: '20px',
         },
       }}
       MenuProps={{
@@ -54,9 +56,7 @@ const SelectParatime: React.FC<SelectParatimeProps> = ({ selectedParatime, handl
         },
       }}
     >
-      <MenuItem value="All">
-        All Paratimes
-      </MenuItem>
+      <MenuItem value="All">All Paratimes</MenuItem>
       <MenuItem value="Sapphire">Sapphire</MenuItem>
       <MenuItem value="Emerald">Emerald</MenuItem>
       <MenuItem value="Cipher">Cipher</MenuItem>
