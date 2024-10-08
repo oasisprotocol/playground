@@ -1,24 +1,24 @@
-import { Box, Button, Container, Grid } from "@mui/material";
-import { useMediaQuery } from "@mui/material";
-import type { SelectChangeEvent } from "@mui/material/Select";
-import { useTheme } from "@mui/material/styles";
-import { useState } from "react";
-import { projects } from "../projectData";
-import type { Project } from "../types";
-import Filters from "./Filters";
-import ProjectDialog from "./ProjectDialog";
-import ProjectListItem from "./ProjectListItem";
-import SearchFilter from "./SearchFilter";
-import Sorting from "./Sorting";
-import "../App.css";
-import { faSliders } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useLocation, useNavigate } from "react-router-dom";
-import { SortingOptions } from "./Sorting";
+import { Box, Button, Container, Grid } from '@mui/material';
+import { useMediaQuery } from '@mui/material';
+import type { SelectChangeEvent } from '@mui/material/Select';
+import { useTheme } from '@mui/material/styles';
+import { useState } from 'react';
+import { projects } from '../projectData';
+import type { Project } from '../types';
+import Filters from './Filters';
+import ProjectDialog from './ProjectDialog';
+import ProjectListItem from './ProjectListItem';
+import SearchFilter from './SearchFilter';
+import Sorting from './Sorting';
+import '../App.css';
+import { faSliders } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useLocation, useNavigate } from 'react-router-dom';
+import { SortingOptions } from './Sorting';
 
 const ProjectList: React.FC = () => {
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -27,7 +27,7 @@ const ProjectList: React.FC = () => {
     projects.find((project) => project.slug === location.hash.substring(1)) ??
     null;
 
-  const [search, setSearch] = useState<string>("");
+  const [search, setSearch] = useState<string>('');
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const [selectedLangs, setSelectedLangs] = useState<string[]>([]);
   const [maintainedByOasis, setMaintainedByOasis] = useState<boolean>(false);
@@ -41,7 +41,7 @@ const ProjectList: React.FC = () => {
 
   const [selectedLicenses, setSelectedLicenses] = useState<string[]>([]);
 
-  const paddingValue = isMobile ? "24px" : "34px 46px";
+  const paddingValue = isMobile ? '24px' : '34px 46px';
 
   const handleClearFilters = () => {
     setSelectedTags([]);
@@ -50,17 +50,17 @@ const ProjectList: React.FC = () => {
     setSelectedSources([]);
     setSelectedParatimes([]);
     setMaintainedByOasis(false);
-    setSearch("");
+    setSearch('');
   };
 
   const handleClearTags = () => {
     setSelectedTags([]);
-    setSearch("");
+    setSearch('');
   };
 
   const handleClearLangs = () => {
     setSelectedLangs([]);
-    setSearch("");
+    setSearch('');
   };
 
   const handleMaintainedByOasisToggle = () => {
@@ -72,7 +72,7 @@ const ProjectList: React.FC = () => {
   };
 
   const handleProjectDialogClose = () => {
-    navigate(".", { replace: true });
+    navigate('.', { replace: true });
   };
 
   const handleLicenseChange = (license: string) => {
@@ -140,13 +140,13 @@ const ProjectList: React.FC = () => {
       selectedSources.length === 0 ||
       selectedSources.every((source) => {
         if (
-          (source === "Demo" && project.demoUrl) ||
-          (source === "Code" && project.codeUrl)
+          (source === 'Demo' && project.demoUrl) ||
+          (source === 'Code' && project.codeUrl)
         ) {
           return true;
         }
         if (
-          source === "Tutorial" &&
+          source === 'Tutorial' &&
           Array.isArray(project.tutorials) &&
           project.tutorials.length > 0
         ) {
@@ -202,12 +202,12 @@ const ProjectList: React.FC = () => {
     {} as Record<string, number>,
   );
 
-  const sourceCounts = ["Demo", "Code", "Tutorial"].reduce(
+  const sourceCounts = ['Demo', 'Code', 'Tutorial'].reduce(
     (acc, source) => {
       acc[source] = filteredProjects.filter((project) => {
-        if (source === "Demo") return !!project.demoUrl;
-        if (source === "Code") return !!project.codeUrl;
-        if (source === "Tutorial")
+        if (source === 'Demo') return !!project.demoUrl;
+        if (source === 'Code') return !!project.codeUrl;
+        if (source === 'Tutorial')
           return (
             Array.isArray(project.tutorials) && project.tutorials.length > 0
           );
@@ -218,7 +218,7 @@ const ProjectList: React.FC = () => {
     {} as Record<string, number>,
   );
 
-  const paratimeCounts = ["sapphire", "emerald", "cipher"].reduce(
+  const paratimeCounts = ['sapphire', 'emerald', 'cipher'].reduce(
     (acc, paratime) => {
       acc[paratime] = filteredProjects.filter((project) =>
         project.paratimes?.includes(paratime),
@@ -280,7 +280,7 @@ const ProjectList: React.FC = () => {
       | React.ChangeEvent<{ value: unknown }>
       | SelectChangeEvent<SortingOptions>,
   ) => {
-    if ("target" in event) {
+    if ('target' in event) {
       setSortOption(event.target.value as SortingOptions);
     }
   };
@@ -291,34 +291,34 @@ const ProjectList: React.FC = () => {
     <div>
       <Container
         sx={{
-          backgroundColor: "white",
-          border: "2px solid black",
+          backgroundColor: 'white',
+          border: '2px solid black',
           padding: paddingValue,
-          borderRadius: "19px",
-          position: "relative",
+          borderRadius: '19px',
+          position: 'relative',
         }}
       >
-        <Container sx={{ padding: "0", paddingTop: "20px" }}>
+        <Container sx={{ padding: '0', paddingTop: '20px' }}>
           <div
             style={{
-              position: "relative",
-              overflow: "hidden",
-              transition: "max-height 0.5s ease",
+              position: 'relative',
+              overflow: 'hidden',
+              transition: 'max-height 0.5s ease',
             }}
           >
             <Box
               sx={{
-                display: "flex",
-                justifyContent: "space-between",
-                flexWrap: isMobile ? "wrap" : "nowrap",
+                display: 'flex',
+                justifyContent: 'space-between',
+                flexWrap: isMobile ? 'wrap' : 'nowrap',
               }}
             >
               <SearchFilter search={search} setSearch={setSearch} />
               <Box
                 sx={{
-                  borderLeft: isMobile ? "none" : "2px solid #0500E1",
-                  paddingLeft: isMobile ? "0" : "30px",
-                  width: isMobile ? "100%" : "auto",
+                  borderLeft: isMobile ? 'none' : '2px solid #0500E1',
+                  paddingLeft: isMobile ? '0' : '30px',
+                  width: isMobile ? '100%' : 'auto',
                 }}
               >
                 <Button
@@ -326,24 +326,24 @@ const ProjectList: React.FC = () => {
                   startIcon={<FontAwesomeIcon icon={faSliders} />}
                   variant="outlined"
                   sx={{
-                    borderRadius: "50px",
-                    height: "43px",
-                    textTransform: "capitalize",
-                    padding: "0 25px",
-                    fontWeight: "500",
-                    maxWidth: isMobile ? "100%" : "116px",
-                    marginLeft: "auto",
-                    border: "2px solid #0500E1",
-                    width: isMobile ? "100%" : "auto",
-                    backgroundColor: showFilters ? "#0500E1" : "transparent",
-                    color: showFilters ? "white" : "#0500E1",
-                    marginTop: isMobile ? "16px" : "0",
-                    "&:hover": {
-                      backgroundColor: showFilters ? "#000062" : "transparent",
-                      color: showFilters ? "white" : "#0500E1",
+                    borderRadius: '50px',
+                    height: '43px',
+                    textTransform: 'capitalize',
+                    padding: '0 25px',
+                    fontWeight: '500',
+                    maxWidth: isMobile ? '100%' : '116px',
+                    marginLeft: 'auto',
+                    border: '2px solid #0500E1',
+                    width: isMobile ? '100%' : 'auto',
+                    backgroundColor: showFilters ? '#0500E1' : 'transparent',
+                    color: showFilters ? 'white' : '#0500E1',
+                    marginTop: isMobile ? '16px' : '0',
+                    '&:hover': {
+                      backgroundColor: showFilters ? '#000062' : 'transparent',
+                      color: showFilters ? 'white' : '#0500E1',
                       border: showFilters
-                        ? "2px solid #000062"
-                        : "2px solid #0500E1",
+                        ? '2px solid #000062'
+                        : '2px solid #0500E1',
                     },
                   }}
                 >
@@ -353,10 +353,10 @@ const ProjectList: React.FC = () => {
             </Box>
             <div
               style={{
-                position: "relative",
-                overflow: "hidden",
-                transition: "all 0.7s cubic-bezier(.17,.67,.83,.67)",
-                maxHeight: showFilters ? "1000px" : "0px",
+                position: 'relative',
+                overflow: 'hidden',
+                transition: 'all 0.7s cubic-bezier(.17,.67,.83,.67)',
+                maxHeight: showFilters ? '1000px' : '0px',
               }}
             >
               <Filters
@@ -387,11 +387,11 @@ const ProjectList: React.FC = () => {
               <Button
                 onClick={handleClearFilters}
                 sx={{
-                  textDecoration: "underline",
-                  textTransform: "none",
-                  display: "block",
-                  marginTop: "16px",
-                  color: "#0500E1",
+                  textDecoration: 'underline',
+                  textTransform: 'none',
+                  display: 'block',
+                  marginTop: '16px',
+                  color: '#0500E1',
                 }}
               >
                 Clear all filters

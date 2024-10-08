@@ -1,4 +1,4 @@
-import { Chip } from "@mui/material";
+import { Chip } from '@mui/material';
 
 interface TagsSelectorProps {
   tags: string[];
@@ -17,9 +17,9 @@ const TagsSelector: React.FC<TagsSelectorProps> = ({
         <Chip
           label={tag}
           key={tag}
-          color={selectedTags.includes(tag) ? "primary" : "default"}
+          color={selectedTags.includes(tag) ? 'primary' : 'default'}
           onClick={() => handleTagClick(tag)}
-          style={{ cursor: "pointer", marginRight: 4 }}
+          style={{ cursor: 'pointer', marginRight: 4 }}
         />
       ))}
     </div>

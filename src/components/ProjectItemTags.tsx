@@ -1,4 +1,4 @@
-import { Chip } from "@mui/material";
+import { Chip } from '@mui/material';
 
 interface ProjectItemTagsProps {
   tags: string[];
@@ -19,21 +19,21 @@ const ProjectItemTags: React.FC<ProjectItemTagsProps> = ({
         <Chip
           label={tag}
           key={tag}
-          color={selectedTags.includes(tag) ? "primary" : "default"}
+          color={selectedTags.includes(tag) ? 'primary' : 'default'}
           onClick={() => {
             handleTagClick(tag);
           }}
           sx={{
-            marginRight: "4px",
-            height: "auto",
-            fontSize: "14px",
-            "& .MuiChip-label": {
-              padding: "4px 14px",
-              fontWeight: "400",
+            marginRight: '4px',
+            height: 'auto',
+            fontSize: '14px',
+            '& .MuiChip-label': {
+              padding: '4px 14px',
+              fontWeight: '400',
             },
             ...(isLarge && {
-              height: "27px",
-              padding: "0 6px",
+              height: '27px',
+              padding: '0 6px',
             }),
           }}
         />
