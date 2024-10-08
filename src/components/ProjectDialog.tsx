@@ -39,6 +39,7 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
+  // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
   useEffect(() => {
     // Reset state after switching projects
     setCarouselIndex(0);
@@ -89,7 +90,7 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
           <Carousel
             activeIndex={carouselIndex}
             onSelect={handleSelectCarouselSlide}
-            controls={project.screenshots.length > 1 ? true : false}
+            controls={project.screenshots.length > 1}
             style={{
               backgroundColor: '#000000',
               marginTop: '24px',
