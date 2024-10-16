@@ -1,0 +1,48 @@
+name: Lending Sapphire
+authors:
+  - Tarun Gupta: https://github.com/Tarun-k-Gupta
+  - Bhavesh Gupta: https://github.com/barrytra
+  - Aarav Mehta: https://github.com/aaravm
+  - Abhinav Agarwalla: https://github.com/lla-dane
+description: |
+  A private, KYC-free lending platform on Oasis Sapphire. Utilizes dual-token
+  setup, ROFL (TEE) for fetching real time price feeds. Features on-chain and
+  off-chain confidentiality to ensure secure, private transactions. 
+  
+  This platform takes full advantage of the Oasis Sapphire blockchain to offer a
+  secure environment for executing EVM compatible smart contracts with enhanced
+  on-chain data confidentiality. This feature ensures that sensitive transaction
+  details such as sender and receiver information are encrypted, allowing users
+  to engage in lending and borrowing without compromising privacy. This shields
+  them from common blockchain threats like front-running, where exposed
+  transaction details could be misused by opportunistic observers.
+  
+  Moreover, we integrate off-chain confidentiality using ROFL, which
+  significantly boosts out platform's integrity and security, when paired with
+  Trusted Execution Environments (TEEs). This setup not only secures sensitive
+  operations like real-time pricing feeds but also ensures the accuracy and
+  integrity of these feeds, crucial for calculating loan values reliably. By
+  automating financial processes such as loan issuance based on collateral and
+  auto-liquidation protocols in a secure manner, out platform delivers tailored
+  and responsive financial services that preserve the inherent privacy first
+  ideals of blockchain technology.
+  
+  Check out more on the [EthGlobal project page](https://ethglobal.com/showcase/lendingsapphire-jrbsc).
+paratimes:
+  - sapphire
+languages:
+  - typescript
+  - rust
+  - solidity
+tags:
+  - ROFL
+  - DeFi
+  - React
+  - ETHGlobal Singapore 2024
+  - Hackathon
+codeUrl: https://github.com/barrytra/Lending-Sapphire
+tutorials:
+  - Video demo: https://www.loom.com/share/70a023c0110b4b1e9383c235023741cd?sid=01d5507f-3a59-4237-bd75-87fe3918cce6
+created: 2024-09-20
+lastUpdated: 2024-09-22
+maintainedByOasis: false
