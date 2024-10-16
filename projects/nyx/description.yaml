@@ -1,0 +1,38 @@
+name: Nyx
+authors:
+  - PopTony: https://github.com/PopTony
+  - knlbb: https://github.com/knlbb
+description: |
+  A therapy AI app, prioritizing user privacy with off-chain chat storage.
+  Therapists can securely access data on-chain, enhancing trust and transparency,
+  all powered by ENS for easy identification.
+  
+  Introducing a cutting-edge therapy AI app developed using the Oasis Protocol,
+  Dynamic Labs, and Ethereum Name Service (ENS). This app prioritizes user
+  privacy by leveraging the confidential AI chat bot running on Oasis ROFL,
+  ensuring that sensitive information remains secure. Therapists can request
+  access to this data on-chain, facilitated by a seamless integration with the
+  Oasis Protocol for enhanced security and scalability. With Dynamic Labs'
+  innovative features and ENS for easy user identification, this app empowers
+  both patients and therapists to engage in a trusted, transparent therapeutic
+  experience.
+  
+  Check out more on the [EthGlobal project page](https://ethglobal.com/showcase/nyx-b3j3b).
+paratimes:
+  - sapphire
+languages:
+  - javascript
+  - rust
+  - solidity
+tags:
+  - ROFL
+  - AI
+  - React
+  - ETHGlobal Singapore 2024
+  - Hackathon
+codeUrl: https://github.com/knlbb/therapyonchain
+tutorials:
+  - Video demo: https://www.loom.com/share/d733610af7a54a01a5f7d9ad1b605c1a?sid=ede26738-a492-4ab2-9bdc-51b72c14bc50
+created: 2024-09-06
+lastUpdated: 2024-09-22
+maintainedByOasis: false
