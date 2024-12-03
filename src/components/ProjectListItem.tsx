@@ -71,12 +71,14 @@ const ProjectListItem: React.FC<ProjectListItemProps> = ({
               sx={{
                 overflow: 'hidden',
                 height: '33%',
+                maxHeight: '250px',
                 borderBottom: '2px #0500E1 solid',
               }}
             >
               <Box
                 sx={{
                   transition: 'all .2s ease-in-out',
+                  height: '100%',
                   '&:hover': {
                     transform: 'scale(1.1)',
                   },
