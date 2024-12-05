@@ -2,7 +2,7 @@ import { Box, Button, Container, Grid } from '@mui/material';
 import { useMediaQuery } from '@mui/material';
 import type { SelectChangeEvent } from '@mui/material/Select';
 import { useTheme } from '@mui/material/styles';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { projects } from '../projectData';
 import { type Project, SortingOptions } from '../types';
 import Filters from './Filters';
@@ -26,19 +26,55 @@ const ProjectList: React.FC = () => {
     projects.find((project) => project.slug === location.hash.substring(1)) ??
     null;
 
-  const [search, setSearch] = useState<string>('');
-  const [selectedTags, setSelectedTags] = useState<string[]>([]);
-  const [selectedLangs, setSelectedLangs] = useState<string[]>([]);
-  const [maintainedByOasis, setMaintainedByOasis] = useState<boolean>(false);
-  const [selectedSources, setSelectedSources] = useState<string[]>([]);
-  const [selectedParatimes, setSelectedParatimes] = useState<string[]>([]);
+  const queryParams = new URLSearchParams(location.search);
+
+  const [search, setSearch] = useState<string>(queryParams.get('search') || '');
+  const [selectedTags, setSelectedTags] = useState<string[]>(
+    queryParams.get('tags')?.split(',') || []
+  );
+  const [selectedLangs, setSelectedLangs] = useState<string[]>(
+    queryParams.get('langs')?.split(',') || []
+  );
+  const [maintainedByOasis, setMaintainedByOasis] = useState<boolean>(
+    queryParams.get('maintainedByOasis') === 'true'
+  );
+  const [selectedLicenses, setSelectedLicenses] = useState<string[]>(
+    queryParams.get('licenses')?.split(',') || []
+  );
+  const [selectedSources, setSelectedSources] = useState<string[]>(
+    queryParams.get('sources')?.split(',') || []
+  );
+  const [selectedParatimes, setSelectedParatimes] = useState<string[]>(
+    queryParams.get('paratimes')?.split(',') || []
+  );
+
   const [showFilters, setShowFilters] = useState<boolean>(false);
 
   const licenses = Array.from(
     new Set(projects.map((project) => project.license)),
   );
 
-  const [selectedLicenses, setSelectedLicenses] = useState<string[]>([]);
+  useEffect(() => {
+    const params = new URLSearchParams();
+    if (search) params.set('search', search);
+    if (selectedTags.length) params.set('tags', selectedTags.join(','));
+    if (selectedLangs.length) params.set('langs', selectedLangs.join(','));
+    if (maintainedByOasis) params.set('maintainedByOasis', 'true');
+    if (selectedLicenses.length) params.set('licenses', selectedLicenses.join(','));
+    if (selectedSources.length) params.set('sources', selectedSources.join(','));
+    if (selectedParatimes.length) params.set('paratimes', selectedParatimes.join(','));
+  
+    navigate(`?${params.toString()}`, { replace: true });
+  }, [
+    search,
+    selectedTags,
+    selectedLangs,
+    maintainedByOasis,
+    selectedLicenses,
+    selectedSources,
+    selectedParatimes,
+    navigate,
+  ]);
 
   const paddingValue = isMobile ? '24px' : '34px 46px';
 
@@ -67,11 +103,13 @@ const ProjectList: React.FC = () => {
   };
 
   const getProjectLink = (project: Project) => {
-    return `/#${project.slug}`;
+    const currentParams = location.search; 
+    return `/${currentParams}#${project.slug}`; 
   };
 
   const handleProjectDialogClose = () => {
-    navigate('.', { replace: true });
+    const currentParams = location.search; 
+    navigate(`/${currentParams}`, { replace: true });
   };
 
   const handleLicenseChange = (license: string) => {
