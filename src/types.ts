@@ -11,8 +11,8 @@ export interface Project {
   codeUrl?: string;
   demoUrl: string;
   tutorials?: { [tutorial: string]: string }[];
-  created: string;
-  lastUpdated: string;
+  created: Date;
+  lastUpdated: Date;
   maintainedByOasis: boolean;
 }
 
