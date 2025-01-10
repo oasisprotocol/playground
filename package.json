@@ -7,7 +7,8 @@
     "dev": "node ./src/generate-projects-json.mjs && vite",
     "build": "node ./src/generate-projects-json.mjs && tsc && vite build",
     "lint": "biome check",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "projects": "tsx scripts/projects/projects"
   },
   "dependencies": {
     "@emotion/react": "^11.11.1",
@@ -33,11 +34,14 @@
   },
   "devDependencies": {
     "@biomejs/biome": "1.8.3",
+    "@types/node": "^22.10.5",
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
     "@vitejs/plugin-react": "^4.0.3",
     "glob": "^11.0.1",
+    "jsdom": "^26.0.0",
     "typescript": "^5.0.2",
+    "tsx": "^4.19.2",
     "vite": "^5.1.3"
   }
 }

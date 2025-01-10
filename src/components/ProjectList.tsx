@@ -15,7 +15,7 @@ import { faSliders } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useLocation, useNavigate } from 'react-router-dom';
 
-const projects = projectsJson as Project[]
+const projects = projectsJson as Project[];
 
 const ProjectList: React.FC = () => {
   const theme = useTheme();
@@ -32,22 +32,22 @@ const ProjectList: React.FC = () => {
 
   const [search, setSearch] = useState<string>(queryParams.get('search') || '');
   const [selectedTags, setSelectedTags] = useState<string[]>(
-    queryParams.get('tags')?.split(',') || []
+    queryParams.get('tags')?.split(',') || [],
   );
   const [selectedLangs, setSelectedLangs] = useState<string[]>(
-    queryParams.get('langs')?.split(',') || []
+    queryParams.get('langs')?.split(',') || [],
   );
   const [maintainedByOasis, setMaintainedByOasis] = useState<boolean>(
-    queryParams.get('maintainedByOasis') === 'true'
+    queryParams.get('maintainedByOasis') === 'true',
   );
   const [selectedLicenses, setSelectedLicenses] = useState<string[]>(
-    queryParams.get('licenses')?.split(',') || []
+    queryParams.get('licenses')?.split(',') || [],
   );
   const [selectedSources, setSelectedSources] = useState<string[]>(
-    queryParams.get('sources')?.split(',') || []
+    queryParams.get('sources')?.split(',') || [],
   );
   const [selectedParatimes, setSelectedParatimes] = useState<string[]>(
-    queryParams.get('paratimes')?.split(',') || []
+    queryParams.get('paratimes')?.split(',') || [],
   );
 
   const [showFilters, setShowFilters] = useState<boolean>(false);
@@ -62,9 +62,12 @@ const ProjectList: React.FC = () => {
     if (selectedTags.length) params.set('tags', selectedTags.join(','));
     if (selectedLangs.length) params.set('langs', selectedLangs.join(','));
     if (maintainedByOasis) params.set('maintainedByOasis', 'true');
-    if (selectedLicenses.length) params.set('licenses', selectedLicenses.join(','));
-    if (selectedSources.length) params.set('sources', selectedSources.join(','));
-    if (selectedParatimes.length) params.set('paratimes', selectedParatimes.join(','));
+    if (selectedLicenses.length)
+      params.set('licenses', selectedLicenses.join(','));
+    if (selectedSources.length)
+      params.set('sources', selectedSources.join(','));
+    if (selectedParatimes.length)
+      params.set('paratimes', selectedParatimes.join(','));
 
     const currentHash = location.hash;
     navigate(`?${params.toString()}${currentHash}`, { replace: true });
