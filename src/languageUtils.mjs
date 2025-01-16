@@ -278,12 +278,12 @@ export const LanguageMappings = {
   yang: 'YANG',
 };
 
-export const getCorrectLanguageName = (languageId: string) => {
-  const officialName = (LanguageMappings as Record<string, string>)[
-    languageId.toLowerCase()
-  ];
+/** @param {string} languageId */
+export function getCorrectLanguageName(languageId) {
+  /** @type {string | undefined} */
+  const officialName = LanguageMappings[languageId.toLowerCase()];
   if (officialName) {
     return officialName;
   }
   return languageId.substring(0, 1).toUpperCase() + languageId.substring(1);
-};
+}

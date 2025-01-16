@@ -37,8 +37,7 @@
             "/projects/0x2fa/screenshots/04-scan-invite-code.jpeg",
             "/projects/0x2fa/screenshots/05-banner.png"
         ],
-        "slug": "0x2fa",
-        "thumbnail": "https://playground.oasis.io/assets/01-landing-DaPauXGD.jpeg"
+        "slug": "0x2fa"
     },
     {
         "name": "Oasis Authenticator",
@@ -75,8 +74,7 @@
             "/projects/authzn/screenshots/01-register.png",
             "/projects/authzn/screenshots/02-sign-in.png"
         ],
-        "slug": "authzn",
-        "thumbnail": "https://playground.oasis.io/assets/01-landing-page-CRXHxPWj.png"
+        "slug": "authzn"
     },
     {
         "name": "B-Hook",
@@ -124,8 +122,7 @@
             "/projects/b-hook/screenshots/05-overview-book.png",
             "/projects/b-hook/screenshots/06-overview-book2.jpg"
         ],
-        "slug": "b-hook",
-        "thumbnail": "https://playground.oasis.io/assets/01-landing-rrJAodjE.png"
+        "slug": "b-hook"
     },
     {
         "name": "BlackSea",
@@ -165,8 +162,7 @@
         "screenshots": [
             "/projects/blacksea/screenshots/01-architecture.png"
         ],
-        "slug": "blacksea",
-        "thumbnail": "https://playground.oasis.io/assets/01-architecture-BRyUeQhy.png"
+        "slug": "blacksea"
     },
     {
         "name": "BoT (Blockchain of Things)",
@@ -206,8 +202,7 @@
         "screenshots": [
             "/projects/bot/screenshots/01-architecture.png"
         ],
-        "slug": "bot",
-        "thumbnail": "https://playground.oasis.io/assets/01-architecture-BY4NE6NI.png"
+        "slug": "bot"
     },
     {
         "name": "Cypher zer0x",
@@ -257,8 +252,7 @@
             "/projects/cypher-zer0x/screenshots/04-metamask-snap.jpeg",
             "/projects/cypher-zer0x/screenshots/05-kyc.jpeg"
         ],
-        "slug": "cypher-zer0x",
-        "thumbnail": "https://playground.oasis.io/assets/01-landing-9k6BZHEu.jpeg"
+        "slug": "cypher-zer0x"
     },
     {
         "name": "ROSE (un) wrapper",
@@ -287,8 +281,7 @@
         "screenshots": [
             "/projects/dapp-wrose/screenshots/01-landing-page.png"
         ],
-        "slug": "dapp-wrose",
-        "thumbnail": "https://playground.oasis.io/assets/01-landing-page-BIS25p9H.png"
+        "slug": "dapp-wrose"
     },
     {
         "name": "Authenticator Demo",
@@ -322,8 +315,7 @@
         "screenshots": [
             "/projects/demo-authzn/screenshots/01-landing-page.png"
         ],
-        "slug": "demo-authzn",
-        "thumbnail": "https://playground.oasis.io/assets/01-landing-page-CRXHxPWj.png"
+        "slug": "demo-authzn"
     },
     {
         "name": "E2E Proxy",
@@ -357,8 +349,7 @@
             "/projects/demo-e2eproxy/screenshots/01-test.png",
             "/projects/demo-e2eproxy/screenshots/02-encrypted-proxy.png"
         ],
-        "slug": "demo-e2eproxy",
-        "thumbnail": "https://playground.oasis.io/assets/01-test-Cunjn3Oj.png"
+        "slug": "demo-e2eproxy"
     },
     {
         "name": "Oasis Riddle",
@@ -395,8 +386,7 @@
         "screenshots": [
             "/projects/demo-oasisriddle/screenshots/1_query.png"
         ],
-        "slug": "demo-oasisriddle",
-        "thumbnail": "https://playground.oasis.io/assets/1_query-etoXofAH.png"
+        "slug": "demo-oasisriddle"
     },
     {
         "name": "Oasis Swag",
@@ -432,8 +422,7 @@
             "/projects/demo-oasisswag/screenshots/02-spin-wheel.png",
             "/projects/demo-oasisswag/screenshots/03-nft.png"
         ],
-        "slug": "demo-oasisswag",
-        "thumbnail": "https://playground.oasis.io/assets/01-landing-page-DAzHgdKf.png"
+        "slug": "demo-oasisswag"
     },
     {
         "name": "OPL Secret Ballot",
@@ -468,8 +457,7 @@
         "screenshots": [
             "/projects/demo-opl-secret-ballot/screenshots/1_new_ballot.png"
         ],
-        "slug": "demo-opl-secret-ballot",
-        "thumbnail": "https://playground.oasis.io/assets/1_new_ballot-r0k30Zs2.png"
+        "slug": "demo-opl-secret-ballot"
     },
     {
         "name": "Confidential Quiz",
@@ -503,8 +491,7 @@
             "/projects/demo-quiz/screenshots/03-payout.png",
             "/projects/demo-quiz/screenshots/04-claimed.png"
         ],
-        "slug": "demo-quiz",
-        "thumbnail": "https://playground.oasis.io/assets/01-landing-tD11pdOe.png"
+        "slug": "demo-quiz"
     },
     {
         "name": "Starter Project (Go)",
@@ -537,8 +524,7 @@
         "screenshots": [
             "/projects/demo-starter-go/screenshots/01-usage.png"
         ],
-        "slug": "demo-starter-go",
-        "thumbnail": "https://playground.oasis.io/assets/01-usage-f0_yRzBP.png"
+        "slug": "demo-starter-go"
     },
     {
         "name": "Starter Project (Python)",
@@ -571,8 +557,7 @@
         "screenshots": [
             "/projects/demo-starter-py/screenshots/01-usage.png"
         ],
-        "slug": "demo-starter-py",
-        "thumbnail": "https://playground.oasis.io/assets/01-usage-DXJPTI0f.png"
+        "slug": "demo-starter-py"
     },
     {
         "name": "Starter Project",
@@ -609,8 +594,7 @@
             "/projects/demo-starter/screenshots/02-hello-world.png",
             "/projects/demo-starter/screenshots/03-manage-deploy.png"
         ],
-        "slug": "demo-starter",
-        "thumbnail": "https://playground.oasis.io/assets/01-landing-page-BFSplWDc.png"
+        "slug": "demo-starter"
     },
     {
         "name": "Confidential Voting",
@@ -648,8 +632,7 @@
             "/projects/demo-voting/screenshots/02-vote.png",
             "/projects/demo-voting/screenshots/03-voting-closed.png"
         ],
-        "slug": "demo-voting",
-        "thumbnail": "https://playground.oasis.io/assets/01-active-polls-jRWp8-Ly.png"
+        "slug": "demo-voting"
     },
     {
         "name": "DSearch",
@@ -692,8 +675,7 @@
             "/projects/dsearch/screenshots/04-image-results.png",
             "/projects/dsearch/screenshots/05-related-results.png"
         ],
-        "slug": "dsearch",
-        "thumbnail": "https://playground.oasis.io/assets/01-landing-62GxNkS2.png"
+        "slug": "dsearch"
     },
     {
         "name": "Empyreal Exchange",
@@ -730,8 +712,7 @@
             "/projects/empyreal-exchange/screenshots/02-deposit.png",
             "/projects/empyreal-exchange/screenshots/03-withdraw.png"
         ],
-        "slug": "empyreal-exchange",
-        "thumbnail": "https://playground.oasis.io/assets/01-landing-BusYo-Pf.png"
+        "slug": "empyreal-exchange"
     },
     {
         "name": "Confidential Hello World on Cipher",
@@ -769,8 +750,7 @@
             "/projects/example-cipher-c10l-hello-world/screenshots/03-instantiate.png",
             "/projects/example-cipher-c10l-hello-world/screenshots/04-call.png"
         ],
-        "slug": "example-cipher-c10l-hello-world",
-        "thumbnail": "https://playground.oasis.io/assets/01-upload1-DNX2nGZ0.png"
+        "slug": "example-cipher-c10l-hello-world"
     },
     {
         "name": "Hello World on Cipher",
@@ -807,8 +787,7 @@
             "/projects/example-cipher-hello-world/screenshots/03-instantiate.png",
             "/projects/example-cipher-hello-world/screenshots/04-call.png"
         ],
-        "slug": "example-cipher-hello-world",
-        "thumbnail": "https://playground.oasis.io/assets/01-upload1-DNX2nGZ0.png"
+        "slug": "example-cipher-hello-world"
     },
     {
         "name": "Hardhat Sapphire Example",
@@ -842,8 +821,7 @@
         "screenshots": [
             "/projects/example-sapphire-hardhat/screenshots/01-run-vigil.png"
         ],
-        "slug": "example-sapphire-hardhat",
-        "thumbnail": "https://playground.oasis.io/assets/01-run-vigil-CCqDnDKt.png"
+        "slug": "example-sapphire-hardhat"
     },
     {
         "name": "On-Chain Signer",
@@ -877,8 +855,7 @@
         "screenshots": [
             "/projects/example-sapphire-onchain-signer/screenshots/01-comment-box-tests.png"
         ],
-        "slug": "example-sapphire-onchain-signer",
-        "thumbnail": "https://playground.oasis.io/assets/01-comment-box-tests-BvE1XR8A.png"
+        "slug": "example-sapphire-onchain-signer"
     },
     {
         "name": "Fastlane",
@@ -923,8 +900,7 @@
             "/projects/fastlane/screenshots/02-game.png",
             "/projects/fastlane/screenshots/03-obstacle.png"
         ],
-        "slug": "fastlane",
-         "thumbnail": "https://playground.oasis.io/assets/01-landing-BWLjIQnu.png"
+        "slug": "fastlane"
     },
     {
         "name": "Lending Sapphire",
@@ -973,8 +949,7 @@
             "/projects/lending-sapphire/screenshots/03-loan.jpg",
             "/projects/lending-sapphire/screenshots/04-lend.jpg"
         ],
-        "slug": "lending-sapphire",
-        "thumbnail": "https://playground.oasis.io/assets/01-landing-page-Dm4FRq0K.jpg"
+        "slug": "lending-sapphire"
     },
     {
         "name": "Nyx",
@@ -1017,8 +992,7 @@
             "/projects/nyx/screenshots/03-chat2.jpg",
             "/projects/nyx/screenshots/04-howitworks.jpg"
         ],
-        "slug": "nyx",
-        "thumbnail": "https://playground.oasis.io/assets/01-default-CnPHREWu.jpg"
+        "slug": "nyx"
     },
     {
         "name": "OasisGuard",
@@ -1064,8 +1038,7 @@
             "/projects/oasisguard/screenshots/01-screenshots.png",
             "/projects/oasisguard/screenshots/02-banner.png"
         ],
-        "slug": "oasisguard",
-        "thumbnail": "https://playground.oasis.io/assets/01-screenshots-__l3pGdp.png"
+        "slug": "oasisguard"
     },
     {
         "name": "PrivAds",
@@ -1110,8 +1083,7 @@
             "/projects/privads/screenshots/02-advertiser.png",
             "/projects/privads/screenshots/03-banner.png"
         ],
-        "slug": "privads",
-        "thumbnail": "https://playground.oasis.io/assets/01-user-BxPxUTqa.png"
+        "slug": "privads"
     },
     {
         "name": "RIP Protocol",
@@ -1150,8 +1122,7 @@
             "/projects/rip-protocol/screenshots/05-slide5.jpg",
             "/projects/rip-protocol/screenshots/06-slide6.jpg"
         ],
-        "slug": "rip-protocol",
-        "thumbnail": "https://playground.oasis.io/assets/01-slide1-vo4JUGX8.jpg"
+        "slug": "rip-protocol"
     },
     {
         "name": "Rose Derby",
@@ -1191,8 +1162,7 @@
             "/projects/rose-derby/screenshots/03-bet.png",
             "/projects/rose-derby/screenshots/04-results.png"
         ],
-        "slug": "rose-derby",
-        "thumbnail": "https://playground.oasis.io/assets/01-race-list-BBBtY7VW.png"
+        "slug": "rose-derby"
     },
     {
         "name": "Sapphire Confidential",
@@ -1228,8 +1198,7 @@
         "screenshots": [
             "/projects/sapphire-confidential/screenshots/01-transaction-in-progress.png"
         ],
-        "slug": "sapphire-confidential",
-        "thumbnail": "https://playground.oasis.io/assets/01-transaction-in-progress-BmmD1oP5.png"
+        "slug": "sapphire-confidential"
     },
     {
         "name": "Secret Bids",
@@ -1270,8 +1239,7 @@
             "/projects/secret-bids/screenshots/03-view-auction.png",
             "/projects/secret-bids/screenshots/04-view-auction2.png"
         ],
-        "slug": "secret-bids",
-        "thumbnail": "https://playground.oasis.io/assets/01-auctions-BL9klEkV.png"
+        "slug": "secret-bids"
     },
     {
         "name": "Secret Sponsor",
@@ -1314,8 +1282,7 @@
             "/projects/secret-sponsor/screenshots/04-explorer.png",
             "/projects/secret-sponsor/screenshots/05-tx-details.png"
         ],
-        "slug": "secret-sponsor",
-        "thumbnail": "https://playground.oasis.io/assets/01-home-Jj7_fDs7.png"
+        "slug": "secret-sponsor"
     },
     {
         "name": "Spacetar",
@@ -1356,8 +1323,7 @@
             "/projects/spacetar/screenshots/02-home.png",
             "/projects/spacetar/screenshots/03-chat.png"
         ],
-        "slug": "spacetar",
-        "thumbnail": "https://playground.oasis.io/assets/01-landing-D0VVsYqz.png"
+        "slug": "spacetar"
     },
     {
         "name": "SQUIDL",
@@ -1403,8 +1369,7 @@
             "/projects/squidl/screenshots/03-transactions.jpg",
             "/projects/squidl/screenshots/04-send.jpg"
         ],
-        "slug": "squidl",
-        "thumbnail": "https://playground.oasis.io/assets/01-landingpage-P-3oYeuj.jpg"
+        "slug": "squidl"
     },
     {
         "name": "Texas Hide'em",
@@ -1446,8 +1411,7 @@
             "/projects/texas-hideem/screenshots/03-start.jpeg",
             "/projects/texas-hideem/screenshots/04-gameplay.jpeg"
         ],
-        "slug": "texas-hideem",
-        "thumbnail": "https://playground.oasis.io/assets/01-join-game-BXrge-6v.jpeg"
+        "slug": "texas-hideem"
     },
     {
         "name": "Treasure Hunt",
@@ -1483,8 +1447,7 @@
         "screenshots": [
             "/projects/treasure-hunt/screenshots/01-game.png"
         ],
-        "slug": "treasure-hunt",
-        "thumbnail": "https://playground.oasis.io/assets/01-game-BQOMKVq0.png"
+        "slug": "treasure-hunt"
     },
     {
         "name": "Zeo Kuessr",
@@ -1527,7 +1490,6 @@
             "/projects/zeo-kuessr/screenshots/01-gameplay.jpg",
             "/projects/zeo-kuessr/screenshots/02-new-game.jpg"
         ],
-        "slug": "zeo-kuessr",
-        "thumbnail": "https://playground.oasis.io/assets/01-gameplay-hUuQjKgr.jpg"
+        "slug": "zeo-kuessr"
     }
 ]
