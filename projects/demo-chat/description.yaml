@@ -1,0 +1,34 @@
+authors:
+  - Oasis Protocol Foundation: https://oasisprotocol.org
+name: CraneChat 🏗
+slug: demo-chat
+description: |
+  An E2E encrypted chat with token gated group chats built on Oasis Sapphire
+  with ROFL. 
+  
+  CraneChat is a decentralized chat application that provides:
+  
+  - **Token Gated Group Chats**: Create groups that require members to hold
+  specific token amounts on supported chains to join
+  - **Direct Messaging**: Send encrypted messages directly to other users
+  - **E2E Encryption**: All messages are encrypted using Oasis Sapphire's
+  confidential smart contracts
+  - **ROFL Integration**: Automated token balance verification using ROFL
+  (Remote OFfchain Logic)
+languages:
+  - typescript
+  - solidity
+  - rust
+codeUrl: https://github.com/oasisprotocol/demo-chat
+created: '2024-11-05T14:21:56Z'
+lastUpdated: '2024-12-24T10:42:46Z'
+paratimes:
+  - sapphire
+license: apache-2.0
+tags:
+  - ROFL
+  - Next.js
+  - Chat
+demoUrl: ''
+tutorials: []
+maintainedByOasis: true
