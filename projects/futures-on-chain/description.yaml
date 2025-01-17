@@ -1,0 +1,104 @@
+name: Futures on Chain
+authors:
+  - Archit Dabral: https://dorahacks.io/hacker/U_2e18ed7762540a
+  - Asmit Rai: https://dorahacks.io/hacker/asmit27rai19khu
+description: |
+  This project delivers an on-chain futures trading solution on Oasis Sapphire,
+  using ROFL for secure trading. Users can trade ERC-20 futures linked to
+  currencies like ETH, with real-time pricing and machine learning for accurate,
+  transparent trading.
+
+  Key Features:
+  - On-Chain Futures Trading
+  - Simulated Price Fluctuations with Tamper-Proof Oracle Integration
+  - AI-Powered Trading Bot with the Long Short Term Memory (LSTM) Model for
+    Market Predictions
+  - Automated Profit and Loss Management
+  - Privacy-Preserving Execution with Trusted Execution Environments (TEEs)
+  - Trade History and Performance Tracking
+
+  ## How We Did It?
+
+  - **Contract Development**: The main contract, located at
+  `rofl-oracle/oracle/Oracle.sol`, integrates core trading functionalities with
+  Oasis Sapphire's ROFL setup. By using `Subcall` from the
+  `@oasisprotocol/sapphire-contracts`, we ensured a seamless interaction between
+  the trading logic and the ROFL environment for accurate data processing and
+  pricing.
+
+
+  - **Backend Iterations**:  The many iterations of the backend creation and
+  the logic behind it can easily be seen located at the
+  rofl-oracle/oracle/src/tasks.ts where all the main logic and trades can be
+  done via the CLI without launching the React app for a easier testing
+  environment.
+
+  ## How to Add Your Own Trading Bot
+
+  If you'd like to add a custom trading bot, follow these steps:
+
+  - **Replace the LSTM Model**: In the current setup, `rofl-oracle/Lstm
+  model/training.py` trains a basic LSTM model and generates a `model.tflite`
+  file. To use a different model, modify `training.py` with your preferred
+  algorithm, train the model, and save it as `model.tflite`.
+
+
+  - **Adapt the ROFL App**: Depending on the structure of your new model, you
+  may need to adjust `rofl-oracle/src/main.rs` to account for different inputs
+  and outputs. This might include altering the input format for the latest OHLCV
+  (Open, High, Low, Close, Volume) signals based on your data source, such as
+  CryptoCompare or any other API of your choice.
+
+
+  - **Deploy and Test**: Once configured, deploy the updated ROFL app within
+  the Oasis Sapphire environment to test the bot's performance in predicting
+  market trends and generating signals.
+
+  ## Why ROFL?
+
+  ROFL is essential to the platform’s success due to its tamper-resistant price
+  data capabilities:
+
+  - **Data Integrity**: Ensures price data authenticity, guarding against
+  manipulation and fraud in decentralized environments.
+
+  - **AI Integration**: Supports the LSTM-based trading bot, providing reliable
+  price trend predictions based on secure data feeds, essential for a
+  trustworthy trading experience.
+
+  ## Why Oasis Sapphire?
+
+  Oasis Sapphire offers privacy and scalability ideal for a futures trading
+  platform:
+
+  - **Privacy**: Trusted Execution Environments (TEEs) on Sapphire keep
+  sensitive trading data confidential.
+
+  - **Scalability**: Low latency and high transaction handling support efficient
+  trading, even under heavy load.
+
+  - **Reliability**: Sapphire’s security ensures that the platform remains
+  robust, making it an ideal choice for this privacy-focused, on-chain trading
+  solution.
+  
+  Check out more on the hackathon's [project page](https://dorahacks.io/buidl/18357).
+paratimes:
+  - sapphire
+codeUrl: https://github.com/Minimega12121/Futures-on-Chain
+tutorials:
+  - Video demo: https://www.youtube.com/watch?v=nJHYSz8WUD0
+demoUrl: null
+created: '2024-10-30T19:37:16Z'
+lastUpdated: '2024-12-02T11:14:15Z'
+license: ''
+tags:
+  - ROFL
+  - DeFi
+  - P4W3 2024
+  - Hackathon
+languages:
+  - Rust
+  - TypeScript
+  - Solidity
+  - Python
+maintainedByOasis: false

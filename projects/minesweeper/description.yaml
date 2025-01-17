@@ -1,0 +1,73 @@
+name: Minesweeper
+authors:
+  - Narasim Teja: https://dorahacks.io/hacker/narasim
+  - Zach Prater: https://dorahacks.io/hacker/U_6774bba99d676e
+  - Hemant Rajput: https://github.com/rajput-hemant
+  - Teja Reddy: https://github.com/narasim-teja
+description: |
+  The Minesweeper game on Oasis Sapphire ensures fair, tamper-proof gameplay by
+  using secure RNG for random mine placement, solving issues of trust in
+  traditional online games. On-chain betting adds transparency, allowing players
+  to bet and win confidently.
+
+  ### Key Features
+
+  #### Secure Random Number Generation (RNG)
+
+  - Oasis Sapphire’s RNG is used to randomly place mines in the grid. By using
+  on-chain, secure RNG, the game ensures fairness and verifiability,
+  guaranteeing that the placement of mines is truly random and not biased
+  against players.
+
+  - RNG uses the function Sapphire.randomBytes, generating a random seed for
+  mine placement, so each game is unique and transparent.
+
+  #### Gameplay and Betting Mechanics
+
+  - **Betting:** Players can bet 1 TEST tokens to start a game. The game sets a
+  minimum and maximum limit on bets to prevent unfair advantages or overly risky
+  plays.
+
+  - **Safe Moves and Winnings:** Players make moves to uncover grid positions.
+  If a player selects a cell without a mine, they accumulate “safe moves,” which
+  increases their winnings based on a multiplier. However, hitting a mine ends
+  the game immediately.
+
+  - **Cash Out Anytime:** Players can cash out their accumulated winnings at any
+  time, allowing for flexible gameplay and strategic risk-taking.
+
+  #### Smart Contract Logic
+
+  - **Game Setup:** The game initializes by receiving a bet from the player,
+  which starts a new session.
+
+  - **Mine Placement:** Using Oasis Sapphire’s RNG, the contract randomly
+  selects mine positions, ensuring a fair distribution on the 5x5 grid.
+
+  - **Move Validation:** When a player makes a move, the contract checks if the
+  selected position contains a mine. Safe moves increase the player’s winnings,
+  while hitting a mine ends the game.
+
+  - **Cash Out and Withdrawals:** Players can cash out their winnings at any
+  point, and accumulated balances are stored securely on-chain. They can
+  withdraw these funds directly to their wallets.
+
+  Check out more on the hackathon's [project page](https://dorahacks.io/buidl/18482).
+paratimes:
+  - sapphire
+codeUrl: https://github.com/narasim-teja/Oasis-Minesweeper
+tutorials:
+  - Video demo: >-
+      https://www.loom.com/share/876e9fd04cb343349b4a599e48de163a?sid=a2384fd7-f8fc-480d-bfa5-3d13c2218f3e
+demoUrl: https://oasis-minesweeper.vercel.app/
+created: '2024-09-15T20:39:17Z'
+lastUpdated: '2024-11-03T19:30:30Z'
+tags:
+  - RNG
+  - Gaming
+  - P4W3 2024
+  - Hackathon
+languages:
+  - javascript
+  - solidity
+maintainedByOasis: false
