@@ -1,0 +1,89 @@
+name: Compensate
+authors:
+  - Rahul Raj Sarma: https://github.com/ragingrahul
+description: |
+  Payroll dApp to revolutionize the way businesses manage and execute salary
+  payments by combining the transparency and security of blockchain with the
+  privacy-preserving power of zero-knowledge proofs.
+
+  The vision of this payroll dApp on the Oasis Sapphire blockchain is to build a
+  revolutionary platform that transforms how companies handle salary payments by
+  integrating blockchain technology and zero-knowledge proofs (ZKPs). At its
+  core, the platform aims to create a trustless, transparent, and efficient
+  payroll system that protects the privacy of employees while ensuring secure,
+  verifiable financial transactions.
+
+  ### Key Features
+  
+  - **Blockchain-Powered Payroll:** Using the Oasis Sapphire blockchain,
+  the platform guarantees immutability, transparency, and security of salary
+  transactions. Each payment is recorded on-chain, ensuring verifiable and
+  tamper-proof data without reliance on centralized systems prone to breaches
+  and inefficiencies.
+
+  - **Zero-Knowledge Proofs for Privacy:** Zero-knowledge proofs play a pivotal role
+  in safeguarding sensitive employee data. This cryptographic approach allows
+  companies to verify employee details such as identity, work history, and
+  payment eligibility without revealing personal information on the blockchain.
+  ZKPs ensure compliance with privacy regulations (like GDPR) while leveraging
+  the benefits of blockchain technology.
+
+  - **Secure Identity Verification:** Employees undergo verification through ZKP-based
+  attestations, ensuring they meet criteria like employment status or
+  eligibility for specific bonuses without exposing their full identity. This
+  process eliminates the risk of identity theft or sensitive information leakage
+  while still providing employers with verifiable proof of employment.
+
+  - **Cross-Border Payments with Minimal Fees:** Traditional payroll systems,
+  especially for international employees, are plagued by high fees, slow
+  processing times, and currency conversion issues. With the dApp’s use of
+  blockchain, global payments become swift, borderless, and cost-effective.
+  Employees can receive payments in stablecoins or other cryptocurrencies,
+  reducing transaction fees and offering instant access to funds.
+
+  - **Seamless Integration with Existing Systems:** The platform is designed for ease
+  of adoption. It can integrate with existing HR and payroll management tools,
+  minimizing disruption and allowing businesses to tap into blockchain’s
+  benefits without overhauling their processes.
+
+  - **Employee Control and Financial Inclusion:** Employees gain control over their
+  payroll data via secure wallets, providing them with real-time access to their
+  salary history, bonuses, and other compensation. This decentralized structure
+  empowers employees by offering greater financial transparency and flexibility,
+  particularly for unbanked or underbanked populations who struggle to access
+  traditional financial services.
+
+  ### Long-Term Vision
+  
+  The ultimate goal of this payroll dApp is to democratize
+  access to secure and efficient payroll services, ensuring that both employers
+  and employees benefit from the trustless, decentralized nature of blockchain
+  technology. By combining privacy-preserving mechanisms with blockchain’s
+  transparency, the platform aspires to set a new standard for payroll systems
+  globally, reducing inefficiencies, improving data security, and making salary
+  disbursement faster, fairer, and more reliable.
+
+  This project envisions becoming the go-to solution to onboard companies to
+  crypto of all sizes, offering payroll systems that are scalable,
+  cost-effective, and compliant with regulatory requirements, while advancing
+  financial inclusivity and transparency for employees worldwide.
+
+  Check out more on the hackathon's [project page](https://dorahacks.io/buidl/18469).
+paratimes:
+  - sapphire
+codeUrl: https://github.com/ragingrahul/Paw3
+tutorials:
+  - Video demo: https://youtu.be/HXQZLIdfniY
+demoUrl: null
+created: '2024-11-03T17:50:27Z'
+lastUpdated: '2024-11-03T17:54:29Z'
+tags:
+  - ZKP
+  - P4W3 2024
+  - Hackathon
+languages:
+  - typescript
+  - solidity
+  - css
+  - javascript
+maintainedByOasis: false

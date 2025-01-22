@@ -12,7 +12,7 @@ description: |
   infrastructure, and due to it's design that combine plasma contract and
   zk-rollup, it offers a robust solution for users and organizations requiring
   both privacy and compliance in their blockchain interactions. Here are some
-  problems solved by this solution :
+  problems solved by this solution:
 
   - **Lack of Compliant Privacy**: Traditional blockchain platforms often force
     users to choose between privacy and compliance. Cypher Zer0x eliminates this
