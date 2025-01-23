@@ -1,0 +1,65 @@
+name: Hancock
+authors:
+  - Kaushikh76: https://github.com/Kaushikh76
+description: |
+  Anonymous dating app where connections start with shared
+  interests, not photos or names. Match, chat, and reveal identities only when
+  ready. Powered by Oasis blockchain for top-notch privacy, Hancock offers
+  secure, meaningful, and exciting connections.
+
+  Hancock is an innovative and privacy-first dating platform that redefines how
+  people connect online. Its primary focus is ensuring users feel secure,
+  anonymous, and in control of their interactions, breaking away from the
+  traditional norms of online dating.
+
+  ## Key Features and Workflow
+
+  ### Anonymous Profiles
+
+  Unlike conventional dating apps, Hancock does not reveal user identities
+  immediately. When users sign up, they create a profile that remains anonymous.
+  This profile highlights interests, preferences, and other general attributes,
+  but it does not include identifiable details like names or photos. This
+  anonymity ensures that users are judged based on their personality and
+  interests rather than appearances.
+
+  ### Swiping Mechanism
+
+  Users browse through profiles and swipe based on the details provided. The
+  swiping interface resembles popular dating apps, offering a sense of
+  familiarity while emphasizing privacy.
+
+  ### Mutual Matches
+
+  If two users swipe right on each other, they form a match. At this stage, they
+  can begin chatting anonymously within the app. This layer of interaction
+  allows them to build a rapport and understand each other without pressure.
+
+  ### Identity Reveal
+
+  Here’s where Hancock stands out: identities remain hidden even after a match.
+  Users can continue chatting anonymously for as long as they want. If both
+  parties feel comfortable and mutually agree, they can reveal their real
+  identities. This step ensures that users progress at their own pace, fostering
+  trust and meaningful connections.
+
+  You can look up their smart contract on [Sourcify](https://repo.sourcify.dev/contracts/full_match/23295/0x6b541e26B2104507E243d1F6c8ead4645a983E79/sources/contracts/).
+  Check out more on the hackathon's [project page](https://ethglobal.com/showcase/hancock-goj8c).
+paratimes:
+  - sapphire
+codeUrl: https://github.com/Kaushikh76/hancock
+tutorials:
+  - Video demo: >-
+      https://stream.mux.com/SCqh5Tt7nnbZbg300VpJFM01xiTEore3plPjOCjlK4eXw/high.mp4
+demoUrl: ''
+created: '2024-11-16T07:25:24Z'
+lastUpdated: '2024-11-26T23:37:25Z'
+tags:
+  - Gaming
+  - React Native
+  - Privy
+  - ETHGlobal Bangkok 2024
+  - Hackathon
+languages:
+  - typescript
+maintainedByOasis: false
