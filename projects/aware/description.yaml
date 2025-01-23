@@ -1,0 +1,105 @@
+name: Aware
+authors:
+  - Kalpitha S V: https://github.com/kalpithasv
+  - Alan Christofer: https://github.com/Webxspark
+  - Pranav Vinodan: https://github.com/Pranav2456
+description: |
+  A whisper heard, A world transformed decentralized civil help
+  platform designed to empower citizens with anonymous incident reporting and
+  spread awarness.
+
+  Inspired by the Bat Signal from Batman, we’ve built something even better! A
+  decentralized civil help platform designed to empower citizens with anonymous
+  incident reporting and spread awarness.
+
+  Citizens can report any issue causing harm at a societal and civil level
+  anonymously, thanks to our robust privacy layer. Reports are verified by other
+  citizens and AI agents, ensuring authenticity. Once verified, reports are made
+  available for minting by news and media outlets, reducing their workload in
+  fact-checking.
+
+  Our AI agents analyze the severity of reports, prioritizing urgent cases for
+  immediate action. Citizens are rewarded through a points system for reporting,
+  while fake reports lead to point deductions. A minimum of 200 points is
+  required to report or contribute to others' reports, ensuring quality and
+  accountability. Plus, every citizen must verify their identity, ensuring one
+  account per person.
+
+  We’re creating a secure, transparent, and action-driven platform that puts the
+  power back into the hands of citizens!
+
+  ## How Aware Was Built
+
+  Aware was built with a unique approach to addressing urban issues while
+  maintaining user privacy. We crafted a solution that leverages multiple
+  blockchain protocols, each serving a specific purpose in our ecosystem.
+
+  ### Core Architecture & Implementation
+
+  At the heart of Aware lies a two-chain architecture that separates private
+  user data from public reports. We chose the Oasis Sapphire Network for our
+  privacy layer, handling all sensitive user information through encrypted
+  storage and secure verification processes. This network's privacy-first
+  approach ensures that user identities remain protected while still allowing
+  for verified reporting.
+
+  For the main reporting platform, we implemented our solution on various L2
+  chains and each one of those serves as a primary chain implementing a
+  multi-chain system, which handles the public aspects of our system. This
+  includes report management, our innovative point system, and community
+  interactions. The separation allows us to maintain privacy where needed while
+  keeping public data transparent and accessible.
+
+  ### Technical Innovation
+
+  What makes our implementation particularly interesting is our novel approach
+  to user verification and report management. Instead of traditional KYC, we
+  developed a privacy-preserving verification system on Sapphire that issues
+  proofs without exposing user data. Users first verify themselves on Sapphire,
+  where their sensitive information is encrypted and stored securely. Once
+  verified, they can use the same wallet to submit reports on primary chain.
+
+  Our point system is carefully crafted to encourage quality reporting while
+  deterring spam and false reports.
+
+  This creates a self-regulating ecosystem where users are incentivized to
+  submit legitimate reports and actively participate in community validation.
+
+  ### Partner Technologies Integration
+
+  - **Oasis Sapphire:** We leveraged Sapphire's privacy
+  features for our verification system. The network's ability to handle
+  encrypted data while maintaining transparency where needed perfectly suited
+  our requirements for user privacy.
+
+  - **Filecoin:** For report media storage, we integrated Filecoin. This provides
+  decentralized, permanent storage for report evidence while maintaining
+  efficient access through IPFS. The content-addressing system ensures data
+  integrity and immutability.
+
+  - **Primary Chain (Multichain Ecosystem Consisting Various L2s):** These networks
+  provide the scalability and cost-effectiveness needed for our main platform
+  operations. Their high throughput and low transaction costs make it feasible
+  for users to submit reports and interact with the platform regularly.
+
+  Check out more on the hackathon's [project
+  page](https://ethglobal.com/showcase/aware-jxv38).
+paratimes:
+  - sapphire
+codeUrl: https://github.com/Webxspark/ethbangkok-dev
+tutorials:
+  - Video demo: >-
+      https://stream.mux.com/3Q8HEsS1Z028rQkAdMEzc8F5pxqOQR1JAvdSQ5q02HroU/high.mp4
+demoUrl: https://aware-ethbangkok-2024.webxspark.com/
+created: '2024-11-14T11:53:54Z'
+lastUpdated: '2024-11-18T16:04:44Z'
+tags:
+  - React
+  - Flask
+  - ETHGlobal Bangkok 2024
+  - Hackathon
+languages:
+  - typescript
+  - solidity
+  - python
+maintainedByOasis: false

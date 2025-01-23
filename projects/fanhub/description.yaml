@@ -1,0 +1,90 @@
+name: FanHub
+authors:
+  - Taehee (Jaden) Yoon: https://github.com/thyoondev
+description: |
+  Anonymous social platform revolutionizing creator-fan connections through
+  token-gated communities. Built on Oasis Sapphire with ROFL, it enables
+  authentic, secure, and private interactions between creators and their fans.
+
+  ## Detailed Description
+
+  FanHub is a decentralized social platform redefining creator-fan interactions.
+  Built on Oasis Sapphire's privacy-focused blockchain technology, it offers
+  exclusive, token-gated communities where meaningful, private connections
+  thrive while preserving user anonymity.
+
+  FanHub combines a chat and Twitter-like message thread system, enabling fans
+  to engage with their favorite creators (Hosts) in confidential spaces. The
+  platform uses a token-gating mechanism to manage community access, ensuring
+  only those meeting specific token balance requirements can participate.
+
+  ## Key Benefits
+
+  ### For Creators
+
+  - Create exclusive communities for dedicated fans
+  - Maintain genuine connections without privacy concerns
+  - Monetize engagement through token-based access
+  - Control community membership through token requirements
+  - Interact directly with fans in a secure environment
+
+  ### For Fans
+
+  - Join exclusive communities of favorite creators
+  - Maintain anonymity while engaging with creators
+  - Participate in token-powered ecosystems
+  - Access private content and direct communications
+  - Verify authenticity of creator interactions
+  - Technical Architecture
+  
+  ## Core Technology
+
+  - Oasis Sapphire Integration: Leverages confidential smart contracts for secure,
+  private interactions
+  - ROFL (Runtime OFfchain Logic): Enables efficient off-chain token
+  balance verification
+  - End-to-End Encryption: Ensures complete privacy for all communications
+  - Token-Gating Mechanism: Smart contracts verify token holdings for community
+  access
+
+  ### Frontend
+
+  - Built with Next.js for optimal performance
+  - Integrates Wagmi for seamless Web3 functionality
+  - Responsive design for all devices
+  
+  ### Smart Contracts
+
+  - Deployed on Oasis Sapphire network
+  - Handle token-gating logic
+  - Manage community access controls
+  - Process encrypted communications
+
+  ### ROFL Service
+
+  - Performs off-chain token balance verification
+  - Ensures efficient and scalable operations
+  - Maintains system integrity
+  
+  Check out more on the hackathon's [project page](https://ethglobal.com/showcase/fanhub-u0rd9).
+paratimes:
+  - sapphire
+codeUrl: https://github.com/byzantine-fault/FanHub
+tutorials:
+  - Video demo: >-
+      https://stream.mux.com/33GKwO7005PzENvAvUblt3w00ohy01P4BtxmMmC00QaidnA/high.mp4
+demoUrl: ''
+created: '2024-11-16T19:35:46Z'
+lastUpdated: '2024-11-17T14:07:18Z'
+license: apache-2.0
+tags:
+  - Privy
+  - Next.js
+  - ROFL
+  - ETHGlobal Bangkok 2024
+  - Hackathon
+languages:
+  - typescript
+  - solidity
+  - rust
+maintainedByOasis: false
