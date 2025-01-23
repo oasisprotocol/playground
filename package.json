@@ -4,8 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
+    "dev": "node ./src/generate-projects-json.mjs && vite",
+    "build": "node ./src/generate-projects-json.mjs && tsc && vite build",
     "lint": "biome check",
     "preview": "vite preview"
   },
@@ -36,6 +36,7 @@
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
     "@vitejs/plugin-react": "^4.0.3",
+    "glob": "^11.0.1",
     "typescript": "^5.0.2",
     "vite": "^5.1.3"
   }

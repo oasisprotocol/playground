@@ -3,7 +3,7 @@ import { useMediaQuery } from '@mui/material';
 import type { SelectChangeEvent } from '@mui/material/Select';
 import { useTheme } from '@mui/material/styles';
 import { useState, useEffect } from 'react';
-import { projects } from '../projectData';
+import projectsJson from '../../public/projects.json';
 import { type Project, SortingOptions } from '../types';
 import Filters from './Filters';
 import ProjectDialog from './ProjectDialog';
@@ -14,6 +14,8 @@ import '../App.css';
 import { faSliders } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useLocation, useNavigate } from 'react-router-dom';
+
+const projects = projectsJson as Project[]
 
 const ProjectList: React.FC = () => {
   const theme = useTheme();
@@ -63,7 +65,7 @@ const ProjectList: React.FC = () => {
     if (selectedLicenses.length) params.set('licenses', selectedLicenses.join(','));
     if (selectedSources.length) params.set('sources', selectedSources.join(','));
     if (selectedParatimes.length) params.set('paratimes', selectedParatimes.join(','));
-  
+
     navigate(`?${params.toString()}`, { replace: true });
   }, [
     search,
@@ -103,12 +105,12 @@ const ProjectList: React.FC = () => {
   };
 
   const getProjectLink = (project: Project) => {
-    const currentParams = location.search; 
-    return `/${currentParams}#${project.slug}`; 
+    const currentParams = location.search;
+    return `/${currentParams}#${project.slug}`;
   };
 
   const handleProjectDialogClose = () => {
-    const currentParams = location.search; 
+    const currentParams = location.search;
     navigate(`/${currentParams}`, { replace: true });
   };
 
