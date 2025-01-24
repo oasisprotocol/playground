@@ -1,0 +1,31 @@
+---
+name: On-Chain Signer
+authors:
+  - Oasis Protocol Foundation: https://oasisprotocol.org
+description: |
+  Short example to demonstrate Sapphire's on-chain **transaction generation**
+  and **signing** capabilities.
+
+  There are two tests included: The non-confidential one can be executed on any
+  EVM-compatible chain, whereas the *confidential* test is executed only
+  on Sapphire-compatible chain (e.g. the [Sapphire's Localnet docker
+  image](https://docs.oasis.io/dapp/sapphire/guide#running-a-private-oasis-network-locally).
+
+  This example is part of the official
+  [sapphire-paratime](https://github.com/oasisprotocol/sapphire) codebase
+  tests.
+paratimes:
+  - sapphire
+languages:
+  - solidity
+  - typescript
+license: Apache-2.0
+tags:
+  - On-Chain Encryption
+  - CLI
+codeUrl: https://github.com/oasisprotocol/sapphire-paratime/tree/main/examples/onchain-signer
+tutorials:
+  - Sapphire On-Chain Signer: https://docs.oasis.io/dapp/sapphire/gasless#on-chain-signer
+created: 2023-09-14
+lastUpdated: 2023-10-19
+maintainedByOasis: true

@@ -1,0 +1,27 @@
+---
+name: Treasure Hunt
+authors:
+  - Rahul Srivastava: https://rotatingcanvas.com/
+description: |
+  A P2P treasure hunt where player 1 can hide a treasure in 8x8 maze and player
+  2 gets n number of moves to find the treasure. After each move, contract gives
+  hint to the player 2 if they are farther/nearer/at same distance from the
+  treasure. Player gets the option to bet some ROSE coins where winner gets the
+  combined money in the pot minus the development fee.
+paratimes:
+  - sapphire
+languages:
+  - typescript
+  - solidity
+license: Apache-2.0
+tags:
+  - P4W3
+  - Hackathon
+  - React
+codeUrl: https://github.com/rotcan/oasis-treasure-hunt
+demoUrl: https://rotcan.github.io/oasis-treasure-hunt/
+tutorials:
+  - Video demo: https://youtu.be/LwssTDR21Vw
+created: 2023-09-23
+lastUpdated: 2023-09-29
+maintainedByOasis: false

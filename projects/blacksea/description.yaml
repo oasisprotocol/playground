@@ -1,0 +1,33 @@
+---
+name: BlackSea
+authors:
+  - João Veiga: https://github.com/veigajoao
+  - Eduardo Gomes: https://github.com/Eduardogbg
+  - Rafael Kras: https://github.com/rafaeldkb
+description: |
+  Cross chain Dark Pool Orderbook
+  
+  An orderbook matching engine that keeps all pending and executed orders
+  private. Founders, Whales and Institutional Investors can finally trade tokens
+  onchain without being surveilled.
+  
+  By leveraging the privacy preserving properties of Oasis the contract is able
+  to receive, keep and process encrypted limit orders from different traders,
+  never sharing the information with anyone. Whenever 2 limit orders match, the
+  contract executes them without anyone but the parties involved learning about
+  the trade.
+paratimes:
+  - sapphire
+languages:
+  - solidity
+  - typescript
+tags:
+  - ETHDam 2024
+  - Hackathon
+  - DeFi
+codeUrl: https://github.com/Eduardogbg/blacksea
+tutorials:
+  - Video demo: https://youtu.be/a6OGe2k8ywM
+created: 2024-04-14
+lastUpdated: 2024-04-14
+maintainedByOasis: false

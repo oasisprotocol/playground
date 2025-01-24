@@ -37,8 +37,7 @@
             "/projects/0x2fa/screenshots/04-scan-invite-code.jpeg",
             "/projects/0x2fa/screenshots/05-banner.png"
         ],
-        "slug": "0x2fa",
-        "thumbnail": "https://playground.oasis.io/assets/01-landing-DaPauXGD.jpeg"
+        "slug": "0x2fa"
     },
     {
         "name": "Oasis Authenticator",
@@ -75,8 +74,7 @@
             "/projects/authzn/screenshots/01-register.png",
             "/projects/authzn/screenshots/02-sign-in.png"
         ],
-        "slug": "authzn",
-        "thumbnail": "https://playground.oasis.io/assets/01-register-gLx7hdiw.png"
+        "slug": "authzn"
     },
     {
         "name": "B-Hook",
@@ -124,8 +122,7 @@
             "/projects/b-hook/screenshots/05-overview-book.png",
             "/projects/b-hook/screenshots/06-overview-book2.jpg"
         ],
-        "slug": "b-hook",
-        "thumbnail": "https://playground.oasis.io/assets/01-landing-rrJAodjE.png"
+        "slug": "b-hook"
     },
     {
         "name": "BlackSea",
@@ -165,8 +162,7 @@
         "screenshots": [
             "/projects/blacksea/screenshots/01-architecture.png"
         ],
-        "slug": "blacksea",
-        "thumbnail": "https://playground.oasis.io/assets/01-architecture-BRyUeQhy.png"
+        "slug": "blacksea"
     },
     {
         "name": "BoT (Blockchain of Things)",
@@ -206,8 +202,104 @@
         "screenshots": [
             "/projects/bot/screenshots/01-architecture.png"
         ],
-        "slug": "bot",
-        "thumbnail": "https://playground.oasis.io/assets/01-architecture-BY4NE6NI.png"
+        "slug": "bot"
+    },
+    {
+        "name": "CAAI (Copyright Aware AI)",
+        "authors": [
+            {
+                "hacker501b1d9": "https://dorahacks.io/hacker/U_eb8895d6e95d98"
+            },
+            {
+                "Mohammad": "https://github.com/MohammadJamali"
+            }
+        ],
+        "description": "Empowering creators to protect, monetize, and share their unique styles\nsecurely in the age of AI-driven creativity on blockchain.\n\nThis project aims to address a major concern surrounding artificial\nintelligence: the potential threat it poses to human creativity and\noriginality. As AI rapidly improves, its ability to replicate creative works\nraises questions about copyright, originality, and fair compensation for\ncreators. In response, this project proposes a model that leverages AI and\nblockchain to protect and monetize unique creative styles.\n\n### Key concepts\n\n- **Human Creativity and AI:** Humans possess unique thoughts and creative\n  processes that AI currently lacks. However, AI can mimic artistic styles,\n  potentially devaluing the originality that artists, musicians, and writers\n  spend years honing.\n- **Monetizing Artistic Styles:** This project proposes a framework in which\n  an artist’s unique style can be licensed and sold. Using AI, we train models\n  on specific artistic styles, and users can purchase these models to generate\n  new artwork in the licensed style. This approach protects artists'\n  intellectual property and allows them to monetize their creativity.\n- **Broader Applications:** Beyond visual art, this approach extends to other\n  creative domains such as music and literature, where creators can similarly\n  protect and license their unique expressions.\n\nCheck out more on the hackathon's [project page](https://dorahacks.io/buidl/18356).\n",
+        "paratimes": [
+            "sapphire"
+        ],
+        "codeUrl": "https://github.com/MohammadJamali/Privacy4Web3",
+        "tutorials": [
+            {
+                "Video demo": "https://youtu.be/RhLGj338ols"
+            }
+        ],
+        "demoUrl": null,
+        "created": "2024-10-25T15:56:53Z",
+        "lastUpdated": "2024-11-08T20:11:49Z",
+        "tags": [
+            "ROFL",
+            "Ocean Protocol",
+            "P4W3 2024",
+            "Hackathon"
+        ],
+        "languages": [
+            "TypeScript",
+            "CSS",
+            "Python",
+            "JavaScript",
+            "Rust",
+            "Solidity",
+            "HTML"
+        ],
+        "maintainedByOasis": false,
+        "screenshots": [
+            "/projects/caai/screenshots/01-logo.jpg",
+            "/projects/caai/screenshots/02-diagram.png"
+        ],
+        "slug": "caai"
+    },
+    {
+        "name": "CLPD Stablecoin Private Transactions",
+        "slug": "clpd-private",
+        "authors": [
+            {
+                "bvdaniel": "https://dorahacks.io/hacker/bvdaniel"
+            },
+            {
+                "Oydual3": "https://dorahacks.io/hacker/U_5772489b5bcf18"
+            },
+            {
+                "Claudio Condor": "https://github.com/claucondor"
+            },
+            {
+                "Matias Palomo": "https://github.com/Matiaspp96"
+            },
+            {
+                "Juan Manuel Elias Soria": "https://github.com/ManuelElias1999"
+            }
+        ],
+        "description": "A future where stablecoin transactions is private thanks to the Oasis Network.\n\nWe'd like to advance crypto adoption in LatAm by introducing privacy-focused\ntransactions to our Chilean peso stablecoin (CLPD). With Oasis Network’s\nconfidential EVM, Sapphire, we’re integrating private transaction capabilities\nthat will give users more control over their financial data.\n\nLeveraging the Oasis platform’s Privacy Layer, our CLPD project offers a new\nlayer of security for users, allowing:\n\n- Confidential national and international transfers.\n- Safe transactions that protect financial data.\n- Access to both digital and real-world assets with full data privacy.\n\nWith support from the Oasis community and technical resources, we’re building\ntoward a future where individuals across LatAm can securely use blockchain\ntechnology in everyday transactions without compromising privacy.\n\n### Focus: Private Access to Financial Transactions  \n\nWe aim to tackle the challenge of providing private transaction options for\nLatAm users who need secure, discreet financial solutions. In a region where\nprivacy is a growing concern, our platform offers a way to make digital\ntransactions confidently and securely.\n\n### Education and Trust in Privacy Technology \n\nBeyond access, educating users about the benefits of private blockchain\ntransactions is essential. Many people in LatAm are wary of blockchain due to\nthe transparency of most public ledgers. Using Sapphire’s confidential EVM,\nwe’re helping users understand how they can benefit from privacy-enhancing\nfeatures while maintaining transparency through verified proof of reserves.\n\n### Interoperability  \n\nOur submission introduces CLPD’s private transaction feature, integrated with\nOasis Sapphire and bridged via Chainlink CCIP, allowing for secure, private\ntransfers on the Oasis Network. With CLPD’s design, users can make private\ntransactions seamlessly, knowing their financial data remains confidential.\n\nIn CLPD, we use ROFL (Runtime Oracle For Ledgers) to securely access banking\ndata through code execution in a TEE (Trusted Execution Environment). This\nallows us to obtain and verify the current balance of reserves in real-time,\nthus ensuring the constant maintenance of 1:1 parity between CLPD and CLP.\n\n### Networks and Deployments\n\n#### Sapphire Testnet \n\nCLPD Token:[ View on\nExplorer](https://explorer.oasis.io/testnet/sapphire/address/0xE65d126b56b1BF3Dd1f31057ffC1dabD53465b6e)\n\nCLPD Token ROFL: [View on\nExplorer](https://explorer.oasis.io/testnet/sapphire/address/0xd28eb2D29964127D102cD0047A1fee319B328Bca)\n\nOracle ROFL: [View on\nExplorer](https://explorer.oasis.io/testnet/sapphire/address/0xEdDa5130fD503445AB7c4520DA7ef1b55Be0372A)\n\n#### Base Sepolia\n\nCLPD Token: [View on\nExplorer](https://sepolia.basescan.org/address/0xb00C1946fFADE1Ddf40f9957E659bA3CCb8c843A)\n\n#### Base Mainnet\n\nCLPD Token: [View on\nExplorer](https://basescan.org/token/0x24460D2b3d96ee5Ce87EE401b1cf2FD01545d9b1)\n\n[See a demo video of how to aquire some\nCLPD](https://www.youtube.com/watch?v=m3C15BdIzVM&t=2s&ab_channel=DanielBeltr%C3%A1nVaras)\n\nCheck out more on the hackathon's [project\npage](https://dorahacks.io/buidl/18496).\n",
+        "paratimes": [
+            "sapphire"
+        ],
+        "codeUrl": "https://github.com/claucondor/clpd-private",
+        "tutorials": [
+            {
+                "Video demo": "https://youtu.be/DPCdYvu3G_0"
+            }
+        ],
+        "demoUrl": "https://clpd-private.vercel.app/en",
+        "created": "2024-11-02T20:23:12Z",
+        "lastUpdated": "2024-11-03T21:41:01Z",
+        "license": "",
+        "tags": [
+            "ROFL",
+            "DeFi",
+            "P4W3 2024",
+            "Hackathon"
+        ],
+        "languages": [
+            "Solidity",
+            "JavaScript",
+            "TypeScript",
+            "Python",
+            "Ruby"
+        ],
+        "maintainedByOasis": false,
+        "screenshots": [
+            "/projects/clpd-private/screenshots/01-landing.png"
+        ]
     },
     {
         "name": "Cypher zer0x",
@@ -225,7 +317,7 @@
                 "Adam Dahmoul": "https://www.linkedin.com/in/adam-dahmoul-556b8a184"
             }
         ],
-        "description": "Cypher Zer0x addresses a fundamental issue in the blockchain ecosystem: the\nlack of a privacy-focused, compliant layer for transactions. By integrating\nnatively ring Confidential transaction (RingCT) within its universal Layer 2\ninfrastructure, and due to it's design that combine plasma contract and\nzk-rollup, it offers a robust solution for users and organizations requiring\nboth privacy and compliance in their blockchain interactions. Here are some\nproblems solved by this solution :\n\n- **Lack of Compliant Privacy**: Traditional blockchain platforms often force\n  users to choose between privacy and compliance. Cypher Zer0x eliminates this\n  compromise, ensuring transactions remain private and fully compliant with\n  regulatory standards.\n- **Complex Cross-Chain Transactions**: Interacting with multiple blockchains\n  typically involves complex processes that can compromise privacy and\n  security. Cypher Zer0x simplifies cross-chain transactions, making them more\n  accessible and secure.\n- **Privacy Misconceptions**: Privacy is to often associated with malicious\n  activities. Cypher Zer0x challenges this by providing a platform where\n  privacy is a right, not a suspicion, while staying fully compliant.\n",
+        "description": "Cypher Zer0x addresses a fundamental issue in the blockchain ecosystem: the\nlack of a privacy-focused, compliant layer for transactions. By integrating\nnatively ring Confidential transaction (RingCT) within its universal Layer 2\ninfrastructure, and due to it's design that combine plasma contract and\nzk-rollup, it offers a robust solution for users and organizations requiring\nboth privacy and compliance in their blockchain interactions. Here are some\nproblems solved by this solution:\n\n- **Lack of Compliant Privacy**: Traditional blockchain platforms often force\n  users to choose between privacy and compliance. Cypher Zer0x eliminates this\n  compromise, ensuring transactions remain private and fully compliant with\n  regulatory standards.\n- **Complex Cross-Chain Transactions**: Interacting with multiple blockchains\n  typically involves complex processes that can compromise privacy and\n  security. Cypher Zer0x simplifies cross-chain transactions, making them more\n  accessible and secure.\n- **Privacy Misconceptions**: Privacy is to often associated with malicious\n  activities. Cypher Zer0x challenges this by providing a platform where\n  privacy is a right, not a suspicion, while staying fully compliant.\n",
         "paratimes": [
             "sapphire"
         ],
@@ -257,8 +349,7 @@
             "/projects/cypher-zer0x/screenshots/04-metamask-snap.jpeg",
             "/projects/cypher-zer0x/screenshots/05-kyc.jpeg"
         ],
-        "slug": "cypher-zer0x",
-        "thumbnail": "https://playground.oasis.io/assets/01-landing-9k6BZHEu.jpeg"
+        "slug": "cypher-zer0x"
     },
     {
         "name": "ROSE (un) wrapper",
@@ -287,8 +378,7 @@
         "screenshots": [
             "/projects/dapp-wrose/screenshots/01-landing-page.png"
         ],
-        "slug": "dapp-wrose",
-        "thumbnail": "https://playground.oasis.io/assets/01-landing-page-BIS25p9H.png"
+        "slug": "dapp-wrose"
     },
     {
         "name": "Authenticator Demo",
@@ -322,8 +412,44 @@
         "screenshots": [
             "/projects/demo-authzn/screenshots/01-landing-page.png"
         ],
-        "slug": "demo-authzn",
-        "thumbnail": "https://playground.oasis.io/assets/01-landing-page-CRXHxPWj.png"
+        "slug": "demo-authzn"
+    },
+    {
+        "authors": [
+            {
+                "Oasis Protocol Foundation": "https://oasisprotocol.org"
+            }
+        ],
+        "name": "CraneChat 🏗",
+        "slug": "demo-chat",
+        "description": "An E2E encrypted chat with token gated group chats built on Oasis Sapphire\nwith ROFL. \n\nCraneChat is a decentralized chat application that provides:\n\n- **Token Gated Group Chats**: Create groups that require members to hold\nspecific token amounts on supported chains to join\n- **Direct Messaging**: Send encrypted messages directly to other users\n- **E2E Encryption**: All messages are encrypted using Oasis Sapphire's\nconfidential smart contracts\n- **ROFL Integration**: Automated token balance verification using ROFL\n(Remote OFfchain Logic)\n",
+        "languages": [
+            "TypeScript",
+            "Solidity",
+            "Rust"
+        ],
+        "codeUrl": "https://github.com/oasisprotocol/demo-chat",
+        "created": "2024-11-05T14:21:56Z",
+        "lastUpdated": "2024-12-24T10:42:46Z",
+        "paratimes": [
+            "sapphire"
+        ],
+        "license": "apache-2.0",
+        "tags": [
+            "ROFL",
+            "Next.js",
+            "Chat"
+        ],
+        "demoUrl": "",
+        "tutorials": [],
+        "maintainedByOasis": true,
+        "screenshots": [
+            "/projects/demo-chat/screenshots/01-chat.png",
+            "/projects/demo-chat/screenshots/02-direct-message.png",
+            "/projects/demo-chat/screenshots/03-landing.png",
+            "/projects/demo-chat/screenshots/04-sign-in.png",
+            "/projects/demo-chat/screenshots/05-new-group.png"
+        ]
     },
     {
         "name": "E2E Proxy",
@@ -357,8 +483,7 @@
             "/projects/demo-e2eproxy/screenshots/01-test.png",
             "/projects/demo-e2eproxy/screenshots/02-encrypted-proxy.png"
         ],
-        "slug": "demo-e2eproxy",
-        "thumbnail": "https://playground.oasis.io/assets/01-test-Cunjn3Oj.png"
+        "slug": "demo-e2eproxy"
     },
     {
         "name": "Oasis Riddle",
@@ -395,8 +520,7 @@
         "screenshots": [
             "/projects/demo-oasisriddle/screenshots/1_query.png"
         ],
-        "slug": "demo-oasisriddle",
-        "thumbnail": "https://playground.oasis.io/assets/1_query-etoXofAH.png"
+        "slug": "demo-oasisriddle"
     },
     {
         "name": "Oasis Swag",
@@ -432,8 +556,7 @@
             "/projects/demo-oasisswag/screenshots/02-spin-wheel.png",
             "/projects/demo-oasisswag/screenshots/03-nft.png"
         ],
-        "slug": "demo-oasisswag",
-        "thumbnail": "https://playground.oasis.io/assets/01-landing-page-DAzHgdKf.png"
+        "slug": "demo-oasisswag"
     },
     {
         "name": "OPL Secret Ballot",
@@ -468,8 +591,7 @@
         "screenshots": [
             "/projects/demo-opl-secret-ballot/screenshots/1_new_ballot.png"
         ],
-        "slug": "demo-opl-secret-ballot",
-        "thumbnail": "https://playground.oasis.io/assets/1_new_ballot-r0k30Zs2.png"
+        "slug": "demo-opl-secret-ballot"
     },
     {
         "name": "Confidential Quiz",
@@ -503,8 +625,7 @@
             "/projects/demo-quiz/screenshots/03-payout.png",
             "/projects/demo-quiz/screenshots/04-claimed.png"
         ],
-        "slug": "demo-quiz",
-        "thumbnail": "https://playground.oasis.io/assets/01-landing-tD11pdOe.png"
+        "slug": "demo-quiz"
     },
     {
         "name": "Starter Project (Go)",
@@ -537,8 +658,7 @@
         "screenshots": [
             "/projects/demo-starter-go/screenshots/01-usage.png"
         ],
-        "slug": "demo-starter-go",
-        "thumbnail": "https://playground.oasis.io/assets/01-usage-f0_yRzBP.png"
+        "slug": "demo-starter-go"
     },
     {
         "name": "Starter Project (Python)",
@@ -571,8 +691,7 @@
         "screenshots": [
             "/projects/demo-starter-py/screenshots/01-usage.png"
         ],
-        "slug": "demo-starter-py",
-        "thumbnail": "https://playground.oasis.io/assets/01-usage-DXJPTI0f.png"
+        "slug": "demo-starter-py"
     },
     {
         "name": "Starter Project",
@@ -609,8 +728,7 @@
             "/projects/demo-starter/screenshots/02-hello-world.png",
             "/projects/demo-starter/screenshots/03-manage-deploy.png"
         ],
-        "slug": "demo-starter",
-        "thumbnail": "https://playground.oasis.io/assets/01-landing-page-BFSplWDc.png"
+        "slug": "demo-starter"
     },
     {
         "name": "Confidential Voting",
@@ -648,8 +766,7 @@
             "/projects/demo-voting/screenshots/02-vote.png",
             "/projects/demo-voting/screenshots/03-voting-closed.png"
         ],
-        "slug": "demo-voting",
-        "thumbnail": "https://playground.oasis.io/assets/01-active-polls-jRWp8-Ly.png"
+        "slug": "demo-voting"
     },
     {
         "name": "DSearch",
@@ -692,8 +809,7 @@
             "/projects/dsearch/screenshots/04-image-results.png",
             "/projects/dsearch/screenshots/05-related-results.png"
         ],
-        "slug": "dsearch",
-        "thumbnail": "https://playground.oasis.io/assets/01-landing-62GxNkS2.png"
+        "slug": "dsearch"
     },
     {
         "name": "Empyreal Exchange",
@@ -730,8 +846,7 @@
             "/projects/empyreal-exchange/screenshots/02-deposit.png",
             "/projects/empyreal-exchange/screenshots/03-withdraw.png"
         ],
-        "slug": "empyreal-exchange",
-        "thumbnail": "https://playground.oasis.io/assets/01-landing-BusYo-Pf.png"
+        "slug": "empyreal-exchange"
     },
     {
         "name": "Confidential Hello World on Cipher",
@@ -769,8 +884,7 @@
             "/projects/example-cipher-c10l-hello-world/screenshots/03-instantiate.png",
             "/projects/example-cipher-c10l-hello-world/screenshots/04-call.png"
         ],
-        "slug": "example-cipher-c10l-hello-world",
-        "thumbnail": "https://playground.oasis.io/assets/01-upload1-DNX2nGZ0.png"
+        "slug": "example-cipher-c10l-hello-world"
     },
     {
         "name": "Hello World on Cipher",
@@ -807,8 +921,7 @@
             "/projects/example-cipher-hello-world/screenshots/03-instantiate.png",
             "/projects/example-cipher-hello-world/screenshots/04-call.png"
         ],
-        "slug": "example-cipher-hello-world",
-        "thumbnail": "https://playground.oasis.io/assets/01-upload1-DNX2nGZ0.png"
+        "slug": "example-cipher-hello-world"
     },
     {
         "name": "Hardhat Sapphire Example",
@@ -842,8 +955,7 @@
         "screenshots": [
             "/projects/example-sapphire-hardhat/screenshots/01-run-vigil.png"
         ],
-        "slug": "example-sapphire-hardhat",
-        "thumbnail": "https://playground.oasis.io/assets/01-run-vigil-CCqDnDKt.png"
+        "slug": "example-sapphire-hardhat"
     },
     {
         "name": "On-Chain Signer",
@@ -877,8 +989,7 @@
         "screenshots": [
             "/projects/example-sapphire-onchain-signer/screenshots/01-comment-box-tests.png"
         ],
-        "slug": "example-sapphire-onchain-signer",
-        "thumbnail": "https://playground.oasis.io/assets/01-comment-box-tests-BvE1XR8A.png"
+        "slug": "example-sapphire-onchain-signer"
     },
     {
         "name": "Fastlane",
@@ -923,8 +1034,53 @@
             "/projects/fastlane/screenshots/02-game.png",
             "/projects/fastlane/screenshots/03-obstacle.png"
         ],
-        "slug": "fastlane",
-         "thumbnail": "https://playground.oasis.io/assets/01-landing-BWLjIQnu.png"
+        "slug": "fastlane"
+    },
+    {
+        "name": "Futures on Chain",
+        "authors": [
+            {
+                "Archit Dabral": "https://dorahacks.io/hacker/U_2e18ed7762540a"
+            },
+            {
+                "Asmit Rai": "https://dorahacks.io/hacker/asmit27rai19khu"
+            }
+        ],
+        "description": "This project delivers an on-chain futures trading solution on Oasis Sapphire,\nusing ROFL for secure trading. Users can trade ERC-20 futures linked to\ncurrencies like ETH, with real-time pricing and machine learning for accurate,\ntransparent trading.\n\nKey Features:\n- On-Chain Futures Trading\n- Simulated Price Fluctuations with Tamper-Proof Oracle Integration\n- AI-Powered Trading Bot with the Long Short Term Memory (LSTM) Model for\n  Market Predictions\n- Automated Profit and Loss Management\n- Privacy-Preserving Execution with Trusted Execution Environments (TEEs)\n- Trade History and Performance Tracking\n\n## How We Did It?\n\n- **Contract Development**: The main contract, located at\n`rofl-oracle/oracle/Oracle.sol`, integrates core trading functionalities with\nOasis Sapphire's ROFL setup. By using `Subcall` from the\n`@oasisprotocol/sapphire-contracts`, we ensured a seamless interaction between\nthe trading logic and the ROFL environment for accurate data processing and\npricing.\n\n\n- **Backend Iterations**:  The many iterations of the backend creation and\nthe logic behind it can easily be seen located at the\nrofl-oracle/oracle/src/tasks.ts where all the main logic and trades can be\ndone via the CLI without launching the React app for a easier testing\nenvironment.\n\n## How to Add Your Own Trading Bot\n\nIf you'd like to add a custom trading bot, follow these steps:\n\n- **Replace the LSTM Model**: In the current setup, `rofl-oracle/Lstm\nmodel/training.py` trains a basic LSTM model and generates a `model.tflite`\nfile. To use a different model, modify `training.py` with your preferred\nalgorithm, train the model, and save it as `model.tflite`.\n\n\n- **Adapt the ROFL App**: Depending on the structure of your new model, you\nmay need to adjust `rofl-oracle/src/main.rs` to account for different inputs\nand outputs. This might include altering the input format for the latest OHLCV\n(Open, High, Low, Close, Volume) signals based on your data source, such as\nCryptoCompare or any other API of your choice.\n\n\n- **Deploy and Test**: Once configured, deploy the updated ROFL app within\nthe Oasis Sapphire environment to test the bot's performance in predicting\nmarket trends and generating signals.\n\n## Why ROFL?\n\nROFL is essential to the platform’s success due to its tamper-resistant price\ndata capabilities:\n\n- **Data Integrity**: Ensures price data authenticity, guarding against\nmanipulation and fraud in decentralized environments.\n\n- **AI Integration**: Supports the LSTM-based trading bot, providing reliable\nprice trend predictions based on secure data feeds, essential for a\ntrustworthy trading experience.\n\n## Why Oasis Sapphire?\n\nOasis Sapphire offers privacy and scalability ideal for a futures trading\nplatform:\n\n- **Privacy**: Trusted Execution Environments (TEEs) on Sapphire keep\nsensitive trading data confidential.\n\n- **Scalability**: Low latency and high transaction handling support efficient\ntrading, even under heavy load.\n\n- **Reliability**: Sapphire’s security ensures that the platform remains\nrobust, making it an ideal choice for this privacy-focused, on-chain trading\nsolution.\n\nCheck out more on the hackathon's [project page](https://dorahacks.io/buidl/18357).\n",
+        "paratimes": [
+            "sapphire"
+        ],
+        "codeUrl": "https://github.com/Minimega12121/Futures-on-Chain",
+        "tutorials": [
+            {
+                "Video demo": "https://www.youtube.com/watch?v=nJHYSz8WUD0"
+            }
+        ],
+        "demoUrl": null,
+        "created": "2024-10-30T19:37:16Z",
+        "lastUpdated": "2024-12-02T11:14:15Z",
+        "license": "",
+        "tags": [
+            "ROFL",
+            "DeFi",
+            "P4W3 2024",
+            "Hackathon"
+        ],
+        "languages": [
+            "Rust",
+            "TypeScript",
+            "Solidity",
+            "Python"
+        ],
+        "maintainedByOasis": false,
+        "screenshots": [
+            "/projects/futures-on-chain/screenshots/01-landing.png",
+            "/projects/futures-on-chain/screenshots/02-live.png",
+            "/projects/futures-on-chain/screenshots/03-closed.png",
+            "/projects/futures-on-chain/screenshots/04-wallet.png",
+            "/projects/futures-on-chain/screenshots/05-diagram.png"
+        ],
+        "slug": "futures-on-chain"
     },
     {
         "name": "Lending Sapphire",
@@ -973,8 +1129,52 @@
             "/projects/lending-sapphire/screenshots/03-loan.jpg",
             "/projects/lending-sapphire/screenshots/04-lend.jpg"
         ],
-        "slug": "lending-sapphire",
-        "thumbnail": "https://playground.oasis.io/assets/01-landing-page-Dm4FRq0K.jpg"
+        "slug": "lending-sapphire"
+    },
+    {
+        "name": "Minesweeper",
+        "authors": [
+            {
+                "Narasim Teja": "https://dorahacks.io/hacker/narasim"
+            },
+            {
+                "Zach Prater": "https://dorahacks.io/hacker/U_6774bba99d676e"
+            },
+            {
+                "Hemant Rajput": "https://github.com/rajput-hemant"
+            },
+            {
+                "Teja Reddy": "https://github.com/narasim-teja"
+            }
+        ],
+        "description": "The Minesweeper game on Oasis Sapphire ensures fair, tamper-proof gameplay by\nusing secure RNG for random mine placement, solving issues of trust in\ntraditional online games. On-chain betting adds transparency, allowing players\nto bet and win confidently.\n\n### Key Features\n\n#### Secure Random Number Generation (RNG)\n\n- Oasis Sapphire’s RNG is used to randomly place mines in the grid. By using\non-chain, secure RNG, the game ensures fairness and verifiability,\nguaranteeing that the placement of mines is truly random and not biased\nagainst players.\n\n- RNG uses the function Sapphire.randomBytes, generating a random seed for\nmine placement, so each game is unique and transparent.\n\n#### Gameplay and Betting Mechanics\n\n- **Betting:** Players can bet 1 TEST tokens to start a game. The game sets a\nminimum and maximum limit on bets to prevent unfair advantages or overly risky\nplays.\n\n- **Safe Moves and Winnings:** Players make moves to uncover grid positions.\nIf a player selects a cell without a mine, they accumulate “safe moves,” which\nincreases their winnings based on a multiplier. However, hitting a mine ends\nthe game immediately.\n\n- **Cash Out Anytime:** Players can cash out their accumulated winnings at any\ntime, allowing for flexible gameplay and strategic risk-taking.\n\n#### Smart Contract Logic\n\n- **Game Setup:** The game initializes by receiving a bet from the player,\nwhich starts a new session.\n\n- **Mine Placement:** Using Oasis Sapphire’s RNG, the contract randomly\nselects mine positions, ensuring a fair distribution on the 5x5 grid.\n\n- **Move Validation:** When a player makes a move, the contract checks if the\nselected position contains a mine. Safe moves increase the player’s winnings,\nwhile hitting a mine ends the game.\n\n- **Cash Out and Withdrawals:** Players can cash out their winnings at any\npoint, and accumulated balances are stored securely on-chain. They can\nwithdraw these funds directly to their wallets.\n\nCheck out more on the hackathon's [project page](https://dorahacks.io/buidl/18482).\n",
+        "paratimes": [
+            "sapphire"
+        ],
+        "codeUrl": "https://github.com/narasim-teja/Oasis-Minesweeper",
+        "tutorials": [
+            {
+                "Video demo": "https://www.loom.com/share/876e9fd04cb343349b4a599e48de163a?sid=a2384fd7-f8fc-480d-bfa5-3d13c2218f3e"
+            }
+        ],
+        "demoUrl": "https://oasis-minesweeper.vercel.app/",
+        "created": "2024-09-15T20:39:17Z",
+        "lastUpdated": "2024-11-03T19:30:30Z",
+        "tags": [
+            "RNG",
+            "Gaming",
+            "P4W3 2024",
+            "Hackathon"
+        ],
+        "languages": [
+            "JavaScript",
+            "Solidity"
+        ],
+        "maintainedByOasis": false,
+        "screenshots": [
+            "/projects/minesweeper/screenshots/01-logo.png"
+        ],
+        "slug": "minesweeper"
     },
     {
         "name": "Nyx",
@@ -999,6 +1199,7 @@
             "ROFL",
             "AI",
             "React",
+            "Health",
             "ETHGlobal Singapore 2024",
             "Hackathon"
         ],
@@ -1017,8 +1218,7 @@
             "/projects/nyx/screenshots/03-chat2.jpg",
             "/projects/nyx/screenshots/04-howitworks.jpg"
         ],
-        "slug": "nyx",
-        "thumbnail": "https://playground.oasis.io/assets/01-default-CnPHREWu.jpg"
+        "slug": "nyx"
     },
     {
         "name": "OasisGuard",
@@ -1064,8 +1264,81 @@
             "/projects/oasisguard/screenshots/01-screenshots.png",
             "/projects/oasisguard/screenshots/02-banner.png"
         ],
-        "slug": "oasisguard",
-        "thumbnail": "https://playground.oasis.io/assets/01-screenshots-__l3pGdp.png"
+        "slug": "oasisguard"
+    },
+    {
+        "name": "Compensate",
+        "authors": [
+            {
+                "Rahul Raj Sarma": "https://github.com/ragingrahul"
+            }
+        ],
+        "description": "Payroll dApp to revolutionize the way businesses manage and execute salary\npayments by combining the transparency and security of blockchain with the\nprivacy-preserving power of zero-knowledge proofs.\n\nThe vision of this payroll dApp on the Oasis Sapphire blockchain is to build a\nrevolutionary platform that transforms how companies handle salary payments by\nintegrating blockchain technology and zero-knowledge proofs (ZKPs). At its\ncore, the platform aims to create a trustless, transparent, and efficient\npayroll system that protects the privacy of employees while ensuring secure,\nverifiable financial transactions.\n\n### Key Features\n\n- **Blockchain-Powered Payroll:** Using the Oasis Sapphire blockchain,\nthe platform guarantees immutability, transparency, and security of salary\ntransactions. Each payment is recorded on-chain, ensuring verifiable and\ntamper-proof data without reliance on centralized systems prone to breaches\nand inefficiencies.\n\n- **Zero-Knowledge Proofs for Privacy:** Zero-knowledge proofs play a pivotal role\nin safeguarding sensitive employee data. This cryptographic approach allows\ncompanies to verify employee details such as identity, work history, and\npayment eligibility without revealing personal information on the blockchain.\nZKPs ensure compliance with privacy regulations (like GDPR) while leveraging\nthe benefits of blockchain technology.\n\n- **Secure Identity Verification:** Employees undergo verification through ZKP-based\nattestations, ensuring they meet criteria like employment status or\neligibility for specific bonuses without exposing their full identity. This\nprocess eliminates the risk of identity theft or sensitive information leakage\nwhile still providing employers with verifiable proof of employment.\n\n- **Cross-Border Payments with Minimal Fees:** Traditional payroll systems,\nespecially for international employees, are plagued by high fees, slow\nprocessing times, and currency conversion issues. With the dApp’s use of\nblockchain, global payments become swift, borderless, and cost-effective.\nEmployees can receive payments in stablecoins or other cryptocurrencies,\nreducing transaction fees and offering instant access to funds.\n\n- **Seamless Integration with Existing Systems:** The platform is designed for ease\nof adoption. It can integrate with existing HR and payroll management tools,\nminimizing disruption and allowing businesses to tap into blockchain’s\nbenefits without overhauling their processes.\n\n- **Employee Control and Financial Inclusion:** Employees gain control over their\npayroll data via secure wallets, providing them with real-time access to their\nsalary history, bonuses, and other compensation. This decentralized structure\nempowers employees by offering greater financial transparency and flexibility,\nparticularly for unbanked or underbanked populations who struggle to access\ntraditional financial services.\n\n### Long-Term Vision\n\nThe ultimate goal of this payroll dApp is to democratize\naccess to secure and efficient payroll services, ensuring that both employers\nand employees benefit from the trustless, decentralized nature of blockchain\ntechnology. By combining privacy-preserving mechanisms with blockchain’s\ntransparency, the platform aspires to set a new standard for payroll systems\nglobally, reducing inefficiencies, improving data security, and making salary\ndisbursement faster, fairer, and more reliable.\n\nThis project envisions becoming the go-to solution to onboard companies to\ncrypto of all sizes, offering payroll systems that are scalable,\ncost-effective, and compliant with regulatory requirements, while advancing\nfinancial inclusivity and transparency for employees worldwide.\n\nCheck out more on the hackathon's [project page](https://dorahacks.io/buidl/18469).\n",
+        "paratimes": [
+            "sapphire"
+        ],
+        "codeUrl": "https://github.com/ragingrahul/Paw3",
+        "tutorials": [
+            {
+                "Video demo": "https://youtu.be/HXQZLIdfniY"
+            }
+        ],
+        "demoUrl": null,
+        "created": "2024-11-03T17:50:27Z",
+        "lastUpdated": "2024-11-03T17:54:29Z",
+        "tags": [
+            "ZKP",
+            "P4W3 2024",
+            "Hackathon"
+        ],
+        "languages": [
+            "TypeScript",
+            "Solidity",
+            "CSS",
+            "JavaScript"
+        ],
+        "maintainedByOasis": false,
+        "screenshots": [
+            "/projects/paw3/screenshots/01-landing.png"
+        ],
+        "slug": "paw3"
+    },
+    {
+        "name": "Priva Health",
+        "authors": [
+            {
+                "Chanchal Delson": "https://www.chanchaldelson.tech/"
+            }
+        ],
+        "description": "A dApp designed to transform private healthcare data management. By leveraging\nblockchain technology, PrivaHealth empowers patients with unprecedented\ncontrol over their medical records while facilitating secure collaboration\nbetween patients, doctors, and health centers with OpenAI support and\nintegration.\n\nKey Features:\n- Patient-Controlled Access: Patients have full authority over their medical\n  records.\n- Secure Data Sharing: Opt-in/out of sharing data for research purposes.\n- Collaborative Healthcare: Seamless connection between patients, doctors, and\n  health centers.\n- AI-Assisted Health Plans: Receive personalized health recommendations\n  powered by advanced AI.\n- Doctor Reviews: Manage and view doctor reviews and recommendations.\n- R&D Collaboration: Helps boost Medical R&D by collaborating with and with\n  only willing patients.\n- Blockchain Security: Utilize the Oasis Network for enhanced data protection\n  and privacy.\n\nCheck out more on the [P4W3 2024](https://dorahacks.io/buidl/17673) project\npages.\n",
+        "paratimes": [
+            "sapphire"
+        ],
+        "languages": [
+            "Solidity",
+            "TypeScript"
+        ],
+        "license": "Apache-2.0",
+        "tags": [
+            "Vue.js",
+            "Health",
+            "P4W3 2024"
+        ],
+        "codeUrl": "https://github.com/ChanX21/PrivaHealth",
+        "demoUrl": "https://priva-health.vercel.app/",
+        "tutorials": [
+            {
+                "Video demo": "https://youtu.be/vIVPKLFqt4Y"
+            }
+        ],
+        "created": "2024-10-06T00:00:00.000Z",
+        "lastUpdated": "2024-10-16T00:00:00.000Z",
+        "maintainedByOasis": false,
+        "screenshots": [
+            "/projects/priva-health/screenshots/01-landing.png",
+            "/projects/priva-health/screenshots/02-diagram.png"
+        ],
+        "slug": "priva-health"
     },
     {
         "name": "PrivAds",
@@ -1110,8 +1383,7 @@
             "/projects/privads/screenshots/02-advertiser.png",
             "/projects/privads/screenshots/03-banner.png"
         ],
-        "slug": "privads",
-        "thumbnail": "https://playground.oasis.io/assets/01-user-BxPxUTqa.png"
+        "slug": "privads"
     },
     {
         "name": "RIP Protocol",
@@ -1150,8 +1422,7 @@
             "/projects/rip-protocol/screenshots/05-slide5.jpg",
             "/projects/rip-protocol/screenshots/06-slide6.jpg"
         ],
-        "slug": "rip-protocol",
-        "thumbnail": "https://playground.oasis.io/assets/01-slide1-vo4JUGX8.jpg"
+        "slug": "rip-protocol"
     },
     {
         "name": "Rose Derby",
@@ -1191,8 +1462,7 @@
             "/projects/rose-derby/screenshots/03-bet.png",
             "/projects/rose-derby/screenshots/04-results.png"
         ],
-        "slug": "rose-derby",
-        "thumbnail": "https://playground.oasis.io/assets/01-race-list-BBBtY7VW.png"
+        "slug": "rose-derby"
     },
     {
         "name": "Sapphire Confidential",
@@ -1228,8 +1498,7 @@
         "screenshots": [
             "/projects/sapphire-confidential/screenshots/01-transaction-in-progress.png"
         ],
-        "slug": "sapphire-confidential",
-        "thumbnail": "https://playground.oasis.io/assets/01-transaction-in-progress-BmmD1oP5.png"
+        "slug": "sapphire-confidential"
     },
     {
         "name": "Secret Bids",
@@ -1270,8 +1539,7 @@
             "/projects/secret-bids/screenshots/03-view-auction.png",
             "/projects/secret-bids/screenshots/04-view-auction2.png"
         ],
-        "slug": "secret-bids",
-        "thumbnail": "https://playground.oasis.io/assets/01-auctions-BL9klEkV.png"
+        "slug": "secret-bids"
     },
     {
         "name": "Secret Sponsor",
@@ -1314,8 +1582,7 @@
             "/projects/secret-sponsor/screenshots/04-explorer.png",
             "/projects/secret-sponsor/screenshots/05-tx-details.png"
         ],
-        "slug": "secret-sponsor",
-        "thumbnail": "https://playground.oasis.io/assets/01-home-Jj7_fDs7.png"
+        "slug": "secret-sponsor"
     },
     {
         "name": "Spacetar",
@@ -1356,23 +1623,25 @@
             "/projects/spacetar/screenshots/02-home.png",
             "/projects/spacetar/screenshots/03-chat.png"
         ],
-        "slug": "spacetar",
-        "thumbnail": "https://playground.oasis.io/assets/01-landing-D0VVsYqz.png"
+        "slug": "spacetar"
     },
     {
         "name": "SQUIDL",
         "authors": [
             {
+                "Ricksen Tan": "https://dorahacks.io/hacker/ricksentnt"
+            },
+            {
                 "Kelvin Adithya": "https://github.com/kelvinkn17"
             },
             {
-                "kebabhan": "https://github.com/tfarhan00"
+                "Tengku Farhan": "https://github.com/tfarhan00"
             },
             {
                 "Buwono": "https://github.com/Dicky-27"
             }
         ],
-        "description": "A privacy-focused platform that makes managing payments simple and secure.\nWith private static payment links that also work as ENS addresses, you can\neasily accept crypto or credit card payments while keeping everything\nuntraceable.\n\nSquidl.me is a platform designed to give individuals and businesses total\ncontrol over their payments and financial transactions. By using stealth\naddresses, Squidl ensures that every transaction is private and untraceable.\nWith custom static payment links that double as ENS addresses, users can\neasily receive payments in crypto or fiat without exposing their identities or\nfinancial data. The platform offers seamless integration with various\nblockchain networks, including Ethereum, BSC, Morph, Linea, and Flow EVM,\nallowing users to accept a wide range of payment options. Additionally, credit\ncard payments are converted to USDC and bridged to BSC, ensuring both\nconvenience and privacy. Squidl also features the ability to bridge funds to\nthe Oasis Sapphire network, where transactions become completely untraceable,\nadding an extra layer of security. Squidl’s flexibility extends to asset\ntransfers as well, supporting the private transfer of NFTs, soulbound tokens,\nand liquidity tokens. With its easy-to-use interface, unified dashboard, and\npowerful SDK for developers, Squidl is the go-to platform for anyone looking\nto manage payments with privacy, flexibility, and control.\n\nCheck out more on the [EthGlobal project page](https://ethglobal.com/showcase/squidl-psquk).\n",
+        "description": "A privacy-focused platform that makes managing payments simple and secure.\nWith private static payment links that also work as ENS addresses, you can\neasily accept crypto or credit card payments while keeping everything\nuntraceable.\n\nSquidl.me is a platform designed to give individuals and businesses total\ncontrol over their payments and financial transactions. By using stealth\naddresses, Squidl ensures that every transaction is private and untraceable.\nWith custom static payment links that double as ENS addresses, users can\neasily receive payments in crypto or fiat without exposing their identities or\nfinancial data. The platform offers seamless integration with various\nblockchain networks, including Ethereum, BSC, Morph, Linea, and Flow EVM,\nallowing users to accept a wide range of payment options. Additionally, credit\ncard payments are converted to USDC and bridged to BSC, ensuring both\nconvenience and privacy. Squidl also features the ability to bridge funds to\nthe Oasis Sapphire network, where transactions become completely untraceable,\nadding an extra layer of security. Squidl’s flexibility extends to asset\ntransfers as well, supporting the private transfer of NFTs, soulbound tokens,\nand liquidity tokens. With its easy-to-use interface, unified dashboard, and\npowerful SDK for developers, Squidl is the go-to platform for anyone looking\nto manage payments with privacy, flexibility, and control.\n\nCheck out more on the [EthGlobal](https://ethglobal.com/showcase/squidl-psquk)\nand [P4W3 2024](https://dorahacks.io/buidl/18391) project pages.\n",
         "paratimes": [
             "sapphire"
         ],
@@ -1385,13 +1654,17 @@
             "Gasless",
             "React",
             "ETHGlobal Singapore 2024",
+            "P4W3 2024",
             "Hackathon"
         ],
         "codeUrl": "https://github.com/engowl/squidl",
         "demoUrl": "https://www.squidl.me/",
         "tutorials": [
             {
-                "Video demo": "https://stream.mux.com/BEUanmt0100GYnMoMMjqItzAfPxhpXFmu02XrUNcXcBZl8/high.mp4"
+                "EthGlobal Singapore 2024 demo": "https://stream.mux.com/BEUanmt0100GYnMoMMjqItzAfPxhpXFmu02XrUNcXcBZl8/high.mp4"
+            },
+            {
+                "P4W3 2024 demo": "https://www.youtube.com/watch?v=UdJHADelD3c"
             }
         ],
         "created": "2024-09-20T00:00:00.000Z",
@@ -1401,10 +1674,10 @@
             "/projects/squidl/screenshots/01-landingpage.jpg",
             "/projects/squidl/screenshots/02-balance.jpg",
             "/projects/squidl/screenshots/03-transactions.jpg",
-            "/projects/squidl/screenshots/04-send.jpg"
+            "/projects/squidl/screenshots/04-send.jpg",
+            "/projects/squidl/screenshots/05-flyer.png"
         ],
-        "slug": "squidl",
-        "thumbnail": "https://playground.oasis.io/assets/01-landingpage-P-3oYeuj.jpg"
+        "slug": "squidl"
     },
     {
         "name": "Texas Hide'em",
@@ -1446,8 +1719,7 @@
             "/projects/texas-hideem/screenshots/03-start.jpeg",
             "/projects/texas-hideem/screenshots/04-gameplay.jpeg"
         ],
-        "slug": "texas-hideem",
-        "thumbnail": "https://playground.oasis.io/assets/01-join-game-BXrge-6v.jpeg"
+        "slug": "texas-hideem"
     },
     {
         "name": "Treasure Hunt",
@@ -1483,8 +1755,7 @@
         "screenshots": [
             "/projects/treasure-hunt/screenshots/01-game.png"
         ],
-        "slug": "treasure-hunt",
-        "thumbnail": "https://playground.oasis.io/assets/01-game-BQOMKVq0.png"
+        "slug": "treasure-hunt"
     },
     {
         "name": "Zeo Kuessr",
@@ -1527,7 +1798,6 @@
             "/projects/zeo-kuessr/screenshots/01-gameplay.jpg",
             "/projects/zeo-kuessr/screenshots/02-new-game.jpg"
         ],
-        "slug": "zeo-kuessr",
-        "thumbnail": "https://playground.oasis.io/assets/01-gameplay-hUuQjKgr.jpg"
+        "slug": "zeo-kuessr"
     }
 ]

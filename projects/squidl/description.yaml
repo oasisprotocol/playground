@@ -1,0 +1,51 @@
+name: SQUIDL
+authors:
+  - Ricksen Tan: https://dorahacks.io/hacker/ricksentnt
+  - Kelvin Adithya: https://github.com/kelvinkn17
+  - Tengku Farhan: https://github.com/tfarhan00
+  - Buwono: https://github.com/Dicky-27
+description: |
+  A privacy-focused platform that makes managing payments simple and secure.
+  With private static payment links that also work as ENS addresses, you can
+  easily accept crypto or credit card payments while keeping everything
+  untraceable.
+  
+  Squidl.me is a platform designed to give individuals and businesses total
+  control over their payments and financial transactions. By using stealth
+  addresses, Squidl ensures that every transaction is private and untraceable.
+  With custom static payment links that double as ENS addresses, users can
+  easily receive payments in crypto or fiat without exposing their identities or
+  financial data. The platform offers seamless integration with various
+  blockchain networks, including Ethereum, BSC, Morph, Linea, and Flow EVM,
+  allowing users to accept a wide range of payment options. Additionally, credit
+  card payments are converted to USDC and bridged to BSC, ensuring both
+  convenience and privacy. Squidl also features the ability to bridge funds to
+  the Oasis Sapphire network, where transactions become completely untraceable,
+  adding an extra layer of security. Squidl’s flexibility extends to asset
+  transfers as well, supporting the private transfer of NFTs, soulbound tokens,
+  and liquidity tokens. With its easy-to-use interface, unified dashboard, and
+  powerful SDK for developers, Squidl is the go-to platform for anyone looking
+  to manage payments with privacy, flexibility, and control.
+  
+  Check out more on the [EthGlobal](https://ethglobal.com/showcase/squidl-psquk)
+  and [P4W3 2024](https://dorahacks.io/buidl/18391) project pages.
+paratimes:
+  - sapphire
+languages:
+  - solidity
+  - javascript
+tags:
+  - DeFi
+  - Gasless
+  - React
+  - ETHGlobal Singapore 2024
+  - P4W3 2024
+  - Hackathon
+codeUrl: https://github.com/engowl/squidl
+demoUrl: https://www.squidl.me/
+tutorials:
+  - EthGlobal Singapore 2024 demo: https://stream.mux.com/BEUanmt0100GYnMoMMjqItzAfPxhpXFmu02XrUNcXcBZl8/high.mp4
+  - P4W3 2024 demo: https://www.youtube.com/watch?v=UdJHADelD3c
+created: 2024-09-20
+lastUpdated: 2024-10-02
+maintainedByOasis: false

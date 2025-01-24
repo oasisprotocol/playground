@@ -1,0 +1,103 @@
+name: CLPD Stablecoin Private Transactions
+slug: clpd-private
+authors:
+  - bvdaniel: https://dorahacks.io/hacker/bvdaniel
+  - Oydual3: https://dorahacks.io/hacker/U_5772489b5bcf18
+  - Claudio Condor: https://github.com/claucondor
+  - Matias Palomo: https://github.com/Matiaspp96
+  - Juan Manuel Elias Soria: https://github.com/ManuelElias1999
+description: |
+  A future where stablecoin transactions is private thanks to the Oasis Network.
+
+  We'd like to advance crypto adoption in LatAm by introducing privacy-focused
+  transactions to our Chilean peso stablecoin (CLPD). With Oasis Network’s
+  confidential EVM, Sapphire, we’re integrating private transaction capabilities
+  that will give users more control over their financial data.
+
+  Leveraging the Oasis platform’s Privacy Layer, our CLPD project offers a new
+  layer of security for users, allowing:
+
+  - Confidential national and international transfers.
+  - Safe transactions that protect financial data.
+  - Access to both digital and real-world assets with full data privacy.
+
+  With support from the Oasis community and technical resources, we’re building
+  toward a future where individuals across LatAm can securely use blockchain
+  technology in everyday transactions without compromising privacy.
+
+  ### Focus: Private Access to Financial Transactions  
+
+  We aim to tackle the challenge of providing private transaction options for
+  LatAm users who need secure, discreet financial solutions. In a region where
+  privacy is a growing concern, our platform offers a way to make digital
+  transactions confidently and securely.
+
+  ### Education and Trust in Privacy Technology 
+
+  Beyond access, educating users about the benefits of private blockchain
+  transactions is essential. Many people in LatAm are wary of blockchain due to
+  the transparency of most public ledgers. Using Sapphire’s confidential EVM,
+  we’re helping users understand how they can benefit from privacy-enhancing
+  features while maintaining transparency through verified proof of reserves.
+
+  ### Interoperability  
+
+  Our submission introduces CLPD’s private transaction feature, integrated with
+  Oasis Sapphire and bridged via Chainlink CCIP, allowing for secure, private
+  transfers on the Oasis Network. With CLPD’s design, users can make private
+  transactions seamlessly, knowing their financial data remains confidential.
+
+  In CLPD, we use ROFL (Runtime Oracle For Ledgers) to securely access banking
+  data through code execution in a TEE (Trusted Execution Environment). This
+  allows us to obtain and verify the current balance of reserves in real-time,
+  thus ensuring the constant maintenance of 1:1 parity between CLPD and CLP.
+
+  ### Networks and Deployments
+
+  #### Sapphire Testnet 
+
+  CLPD Token:[ View on
+  Explorer](https://explorer.oasis.io/testnet/sapphire/address/0xE65d126b56b1BF3Dd1f31057ffC1dabD53465b6e)
+
+  CLPD Token ROFL: [View on
+  Explorer](https://explorer.oasis.io/testnet/sapphire/address/0xd28eb2D29964127D102cD0047A1fee319B328Bca)
+
+  Oracle ROFL: [View on
+  Explorer](https://explorer.oasis.io/testnet/sapphire/address/0xEdDa5130fD503445AB7c4520DA7ef1b55Be0372A)
+
+  #### Base Sepolia
+
+  CLPD Token: [View on
+  Explorer](https://sepolia.basescan.org/address/0xb00C1946fFADE1Ddf40f9957E659bA3CCb8c843A)
+
+  #### Base Mainnet
+
+  CLPD Token: [View on
+  Explorer](https://basescan.org/token/0x24460D2b3d96ee5Ce87EE401b1cf2FD01545d9b1)
+
+  [See a demo video of how to aquire some
+  CLPD](https://www.youtube.com/watch?v=m3C15BdIzVM&t=2s&ab_channel=DanielBeltr%C3%A1nVaras)
+
+  Check out more on the hackathon's [project
+  page](https://dorahacks.io/buidl/18496).
+paratimes:
+  - sapphire
+codeUrl: https://github.com/claucondor/clpd-private
+tutorials:
+  - Video demo: https://youtu.be/DPCdYvu3G_0
+demoUrl: https://clpd-private.vercel.app/en
+created: '2024-11-02T20:23:12Z'
+lastUpdated: '2024-11-03T21:41:01Z'
+license: ''
+tags:
+  - ROFL
+  - DeFi
+  - P4W3 2024
+  - Hackathon
+languages:
+  - Solidity
+  - JavaScript
+  - TypeScript
+  - Python
+  - Ruby
+maintainedByOasis: false

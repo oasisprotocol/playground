@@ -1,0 +1,50 @@
+---
+name: PrivAds
+authors:
+  - Pedro Palacios: https://github.com/palmenros
+  - Oriol Saguillo Gonzalez: https://github.com/saguillo2000
+  - Franco Sainas: https://github.com/fsainas
+description: |
+  Leverages the Oasis confidential blockchain and machine learning algorithms to
+  serve targeted advertisements while prioritizing user privacy. Traditional
+  advertising methods often compromise user data privacy, leading to concerns
+  about data leaks and unauthorized access and selling of data. PrivAd addresses
+  these concerns by ensuring that user data remains encrypted and anonymous
+  throughout the ad-serving process. The advertisers in no moment have access
+  to the user's private data, which is only used inside the confidential smart
+  contract to serve personalized ads.
+  
+  PrivAds employs a combination of smart contracts, decentralized storage
+  solutions, and machine learning models to analyze user behavior and
+  preferences without giving advertisers access to user's sensitive personal
+  information.
+
+  Key features of PrivAds include:
+
+  - Privacy-preserving targeted ads
+  - Support for anti-fraud models
+  - On-chain ML
+  - Extremely low-dimensional word embeddings
+  - User financial reward
+  - Transparent ad-serving process
+  - Advertiser cross-tracking protection
+  - IPFS storage for ad-content
+  - Opt-in participation
+paratimes:
+  - sapphire
+languages:
+  - solidity
+  - typescript
+  - python
+tags:
+  - ETHDam 2024
+  - Hackathon
+  - AI
+  - Advertising
+  - IPFS
+codeUrl: https://github.com/palmenros/private-ads
+tutorials:
+  - Video demo: https://youtu.be/DR6imetTBsk
+created: 2024-04-12
+lastUpdated: 2024-04-25
+maintainedByOasis: false

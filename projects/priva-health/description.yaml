@@ -1,0 +1,43 @@
+name: Priva Health
+authors:
+  - Chanchal Delson: https://www.chanchaldelson.tech/
+description: |
+  A dApp designed to transform private healthcare data management. By leveraging
+  blockchain technology, PrivaHealth empowers patients with unprecedented
+  control over their medical records while facilitating secure collaboration
+  between patients, doctors, and health centers with OpenAI support and
+  integration.
+  
+  Key Features:
+  - Patient-Controlled Access: Patients have full authority over their medical
+    records.
+  - Secure Data Sharing: Opt-in/out of sharing data for research purposes.
+  - Collaborative Healthcare: Seamless connection between patients, doctors, and
+    health centers.
+  - AI-Assisted Health Plans: Receive personalized health recommendations
+    powered by advanced AI.
+  - Doctor Reviews: Manage and view doctor reviews and recommendations.
+  - R&D Collaboration: Helps boost Medical R&D by collaborating with and with
+    only willing patients.
+  - Blockchain Security: Utilize the Oasis Network for enhanced data protection
+    and privacy.
+  
+  Check out more on the [P4W3 2024](https://dorahacks.io/buidl/17673) project
+  pages.
+paratimes:
+  - sapphire
+languages:
+  - solidity
+  - typescript
+license: Apache-2.0
+tags:
+  - Vue.js
+  - Health
+  - P4W3 2024
+codeUrl: https://github.com/ChanX21/PrivaHealth
+demoUrl: https://priva-health.vercel.app/
+tutorials:
+  - Video demo: https://youtu.be/vIVPKLFqt4Y
+created: 2024-10-06
+lastUpdated: 2024-10-16
+maintainedByOasis: false

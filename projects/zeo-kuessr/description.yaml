@@ -1,0 +1,40 @@
+name: Zeo Kuessr
+authors:
+  - Priyansh Rathi: https://github.com/techiepriyansh
+  - Mayank Mittal: https://github.com/MayankMittal1
+  - Anshul Singh: https://github.com/levihackerman-102
+description: |
+  GeoGuessr but decentralized and poker-ified, have fun competing against others
+  by betting on how well you know the world.
+  
+  GeoGuessr is an exciting and educational game that challenges players to
+  explore random locations on a map and guess where they are, blending geography
+  knowledge with the thrill of discovery. It's a fun way to learn about the
+  world while competing against others or testing your own skills.
+  
+  ZeoKuessr enhances this experience by introducing a competitive edge through
+  crypto staking, where players can wager on their geographical knowledge. The
+  integration of zero-knowledge proofs (ZK) and trusted execution environments
+  (TEE) ensures a fair, tamper-proof environment, making the game even more
+  engaging by adding transparency and trust to the competition. It’s a
+  next-level evolution of GeoGuessr for those looking for both fun and fairness
+  in their gameplay.
+  
+  Check out more on the [EthGlobal project page](https://ethglobal.com/showcase/zeokuessr-69vv0).
+paratimes:
+  - sapphire
+languages:
+  - solidity
+  - typescript
+  - rust
+tags:
+  - ROFL
+  - Vue
+  - ETHGlobal Singapore 2024
+  - Hackathon
+codeUrl: https://github.com/techiepriyansh/ZeoKuessr
+tutorials:
+  - Video demo: https://stream.mux.com/UsyO7X02dfxp3rKj01cFv21lWudaThkATmE7VIlgblIhc/high.mp4
+created: 2024-09-21
+lastUpdated: 2024-09-22
+maintainedByOasis: false

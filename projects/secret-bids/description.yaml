@@ -1,0 +1,34 @@
+---
+name: Secret Bids
+authors:
+  - Tristan Dinh: https://trietdinh.home.blog/
+description: |
+  An on-chain privacy-preserving auction platform that allows auctioneers to
+  launch secret auctions to sell their tokens/NFT.
+  
+  Currently, the platform offers 2 types of on-chain auctions:
+
+  - Blind auction: (sealed bid auction) is a type of auction where all bidders
+    commit their offers in sealed envelopes, without knowing the bids of the
+    other participants. The highest bid wins the auction.
+  - Lottery auction: is a type of auction where the winning bid is determined
+    randomly.
+paratimes:
+  - sapphire
+languages:
+  - javascript
+  - typescript
+  - solidity
+license: MIT
+tags:
+  - P4W3
+  - Hackathon
+  - OPL
+  - Svelte
+codeUrl: https://github.com/kryptopoo/oasis-secret-bids
+demoUrl: https://secret-bids-app.onrender.com/
+tutorials:
+  - Video demo: https://youtu.be/K0nSXa4VyDc
+created: 2023-09-16
+lastUpdated: 2023-10-05
+maintainedByOasis: false

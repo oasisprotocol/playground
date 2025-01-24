@@ -1,0 +1,53 @@
+name: CAAI (Copyright Aware AI)
+authors:
+  - hacker501b1d9: https://dorahacks.io/hacker/U_eb8895d6e95d98
+  - Mohammad: https://github.com/MohammadJamali
+description: |
+  Empowering creators to protect, monetize, and share their unique styles
+  securely in the age of AI-driven creativity on blockchain.
+
+  This project aims to address a major concern surrounding artificial
+  intelligence: the potential threat it poses to human creativity and
+  originality. As AI rapidly improves, its ability to replicate creative works
+  raises questions about copyright, originality, and fair compensation for
+  creators. In response, this project proposes a model that leverages AI and
+  blockchain to protect and monetize unique creative styles.
+
+  ### Key concepts
+  
+  - **Human Creativity and AI:** Humans possess unique thoughts and creative
+    processes that AI currently lacks. However, AI can mimic artistic styles,
+    potentially devaluing the originality that artists, musicians, and writers
+    spend years honing.
+  - **Monetizing Artistic Styles:** This project proposes a framework in which
+    an artist’s unique style can be licensed and sold. Using AI, we train models
+    on specific artistic styles, and users can purchase these models to generate
+    new artwork in the licensed style. This approach protects artists'
+    intellectual property and allows them to monetize their creativity.
+  - **Broader Applications:** Beyond visual art, this approach extends to other
+    creative domains such as music and literature, where creators can similarly
+    protect and license their unique expressions.
+
+  Check out more on the hackathon's [project page](https://dorahacks.io/buidl/18356).
+paratimes:
+  - sapphire
+codeUrl: https://github.com/MohammadJamali/Privacy4Web3
+tutorials:
+  - Video demo: https://youtu.be/RhLGj338ols
+demoUrl: null
+created: '2024-10-25T15:56:53Z'
+lastUpdated: '2024-11-08T20:11:49Z'
+tags:
+  - ROFL
+  - Ocean Protocol
+  - P4W3 2024
+  - Hackathon
+languages:
+  - typescript
+  - css
+  - python
+  - javascript
+  - rust
+  - solidity
+  - html
+maintainedByOasis: false

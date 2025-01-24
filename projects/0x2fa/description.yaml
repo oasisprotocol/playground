@@ -1,0 +1,25 @@
+---
+name: "0x2FA"
+authors:
+  - Ahmed Hamed Aly: https://ahmedhamedaly.com
+description: |
+  A decentralized solution for two-factor authentication (2FA), aiming to
+  replace traditional solutions like the Google Authenticator. By leveraging
+  Oasis, Bandada, and Near, we provide a privacy-based solution that enhances
+  the security of both web2 and web3 applications.
+paratimes:
+  - sapphire
+languages:
+  - solidity
+  - typescript
+tags:
+  - ETHDam 2024
+  - Hackathon
+  - 2FA
+codeUrl: https://github.com/0x2fa-org/0x2fa
+demoUrl: https://0x2fa.vercel.app/
+tutorials:
+  - Video demo: https://youtu.be/aNpxMg3iIq0
+created: 2024-04-12
+lastUpdated: 2024-04-14
+maintainedByOasis: false

@@ -1,0 +1,39 @@
+name: RIP Protocol
+authors:
+  - felyn: https://github.com/felynoir
+  - JernKunpittaya: https://github.com/JernKunpittaya
+description: |
+  Allows encrypted data to stay private while performing specific tasks on the
+  blockchain. Although blockchain is public, RIP ensures sensitive information
+  remains secure, letting users leverage blockchain benefits without revealing
+  personal data.
+  
+  ## Example with DNA
+  
+  Imagine you want to leave an inheritance for your children but need a way to
+  prove their identity. Using RIP Protocol, you can encrypt your DNA data on the
+  blockchain and set a condition that only someone with a matching DNA can claim
+  the inheritance. When your children provide their DNA, it is privately matched
+  with the encrypted data. No one else on the blockchain can access your DNA,
+  but the protocol verifies the match and automatically releases the assets.
+  
+  With RIP Protocol, users can securely manage private data in a decentralized
+  environment, combining the privacy of encryption with the benefits of
+  blockchain transparency.
+  
+  Check out more on the [EthGlobal project page](https://ethglobal.com/showcase/rip-protocol-jgw26).
+paratimes:
+  - sapphire
+languages:
+  - solidity
+  - typescript
+tags:
+  - ROFL
+  - React
+  - ETHGlobal Singapore 2024
+  - Hackathon
+codeUrl: https://github.com/felynoir/rip-proc
+demoUrl: https://rip-proc.vercel.app/
+created: 2024-09-21
+lastUpdated: 2024-09-25
+maintainedByOasis: false
