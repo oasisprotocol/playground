@@ -77,6 +77,53 @@
         "slug": "authzn"
     },
     {
+        "name": "Aware",
+        "authors": [
+            {
+                "Kalpitha S V": "https://github.com/kalpithasv"
+            },
+            {
+                "Alan Christofer": "https://github.com/Webxspark"
+            },
+            {
+                "Pranav Vinodan": "https://github.com/Pranav2456"
+            }
+        ],
+        "description": "A whisper heard, A world transformed decentralized civil help\nplatform designed to empower citizens with anonymous incident reporting and\nspread awarness.\n\nInspired by the Bat Signal from Batman, we’ve built something even better! A\ndecentralized civil help platform designed to empower citizens with anonymous\nincident reporting and spread awarness.\n\nCitizens can report any issue causing harm at a societal and civil level\nanonymously, thanks to our robust privacy layer. Reports are verified by other\ncitizens and AI agents, ensuring authenticity. Once verified, reports are made\navailable for minting by news and media outlets, reducing their workload in\nfact-checking.\n\nOur AI agents analyze the severity of reports, prioritizing urgent cases for\nimmediate action. Citizens are rewarded through a points system for reporting,\nwhile fake reports lead to point deductions. A minimum of 200 points is\nrequired to report or contribute to others' reports, ensuring quality and\naccountability. Plus, every citizen must verify their identity, ensuring one\naccount per person.\n\nWe’re creating a secure, transparent, and action-driven platform that puts the\npower back into the hands of citizens!\n\n## How Aware Was Built\n\nAware was built with a unique approach to addressing urban issues while\nmaintaining user privacy. We crafted a solution that leverages multiple\nblockchain protocols, each serving a specific purpose in our ecosystem.\n\n### Core Architecture & Implementation\n\nAt the heart of Aware lies a two-chain architecture that separates private\nuser data from public reports. We chose the Oasis Sapphire Network for our\nprivacy layer, handling all sensitive user information through encrypted\nstorage and secure verification processes. This network's privacy-first\napproach ensures that user identities remain protected while still allowing\nfor verified reporting.\n\nFor the main reporting platform, we implemented our solution on various L2\nchains and each one of those serves as a primary chain implementing a\nmulti-chain system, which handles the public aspects of our system. This\nincludes report management, our innovative point system, and community\ninteractions. The separation allows us to maintain privacy where needed while\nkeeping public data transparent and accessible.\n\n### Technical Innovation\n\nWhat makes our implementation particularly interesting is our novel approach\nto user verification and report management. Instead of traditional KYC, we\ndeveloped a privacy-preserving verification system on Sapphire that issues\nproofs without exposing user data. Users first verify themselves on Sapphire,\nwhere their sensitive information is encrypted and stored securely. Once\nverified, they can use the same wallet to submit reports on primary chain.\n\nOur point system is carefully crafted to encourage quality reporting while\ndeterring spam and false reports.\n\nThis creates a self-regulating ecosystem where users are incentivized to\nsubmit legitimate reports and actively participate in community validation.\n\n### Partner Technologies Integration\n\n- **Oasis Sapphire:** We leveraged Sapphire's privacy\nfeatures for our verification system. The network's ability to handle\nencrypted data while maintaining transparency where needed perfectly suited\nour requirements for user privacy.\n\n- **Filecoin:** For report media storage, we integrated Filecoin. This provides\ndecentralized, permanent storage for report evidence while maintaining\nefficient access through IPFS. The content-addressing system ensures data\nintegrity and immutability.\n\n- **Primary Chain (Multichain Ecosystem Consisting Various L2s):** These networks\nprovide the scalability and cost-effectiveness needed for our main platform\noperations. Their high throughput and low transaction costs make it feasible\nfor users to submit reports and interact with the platform regularly.\n\nCheck out more on the hackathon's [project\npage](https://ethglobal.com/showcase/aware-jxv38).\n",
+        "paratimes": [
+            "sapphire"
+        ],
+        "codeUrl": "https://github.com/Webxspark/ethbangkok-dev",
+        "tutorials": [
+            {
+                "Video demo": "https://stream.mux.com/3Q8HEsS1Z028rQkAdMEzc8F5pxqOQR1JAvdSQ5q02HroU/high.mp4"
+            }
+        ],
+        "demoUrl": "https://aware-ethbangkok-2024.webxspark.com/",
+        "created": "2024-11-14T11:53:54Z",
+        "lastUpdated": "2024-11-18T16:04:44Z",
+        "tags": [
+            "React",
+            "Flask",
+            "ETHGlobal Bangkok 2024",
+            "Hackathon"
+        ],
+        "languages": [
+            "TypeScript",
+            "Solidity",
+            "Python"
+        ],
+        "maintainedByOasis": false,
+        "screenshots": [
+            "/projects/aware/screenshots/01.jpg",
+            "/projects/aware/screenshots/02.jpg",
+            "/projects/aware/screenshots/03.jpg",
+            "/projects/aware/screenshots/04.jpg",
+            "/projects/aware/screenshots/05.jpg"
+        ],
+        "slug": "aware"
+    },
+    {
         "name": "B-Hook",
         "authors": [
             {
@@ -992,6 +1039,50 @@
         "slug": "example-sapphire-onchain-signer"
     },
     {
+        "name": "FanHub",
+        "authors": [
+            {
+                "Taehee (Jaden) Yoon": "https://github.com/thyoondev"
+            }
+        ],
+        "description": "Anonymous social platform revolutionizing creator-fan connections through\ntoken-gated communities. Built on Oasis Sapphire with ROFL, it enables\nauthentic, secure, and private interactions between creators and their fans.\n\n## Detailed Description\n\nFanHub is a decentralized social platform redefining creator-fan interactions.\nBuilt on Oasis Sapphire's privacy-focused blockchain technology, it offers\nexclusive, token-gated communities where meaningful, private connections\nthrive while preserving user anonymity.\n\nFanHub combines a chat and Twitter-like message thread system, enabling fans\nto engage with their favorite creators (Hosts) in confidential spaces. The\nplatform uses a token-gating mechanism to manage community access, ensuring\nonly those meeting specific token balance requirements can participate.\n\n## Key Benefits\n\n### For Creators\n\n- Create exclusive communities for dedicated fans\n- Maintain genuine connections without privacy concerns\n- Monetize engagement through token-based access\n- Control community membership through token requirements\n- Interact directly with fans in a secure environment\n\n### For Fans\n\n- Join exclusive communities of favorite creators\n- Maintain anonymity while engaging with creators\n- Participate in token-powered ecosystems\n- Access private content and direct communications\n- Verify authenticity of creator interactions\n- Technical Architecture\n\n## Core Technology\n\n- Oasis Sapphire Integration: Leverages confidential smart contracts for secure,\nprivate interactions\n- ROFL (Runtime OFfchain Logic): Enables efficient off-chain token\nbalance verification\n- End-to-End Encryption: Ensures complete privacy for all communications\n- Token-Gating Mechanism: Smart contracts verify token holdings for community\naccess\n\n### Frontend\n\n- Built with Next.js for optimal performance\n- Integrates Wagmi for seamless Web3 functionality\n- Responsive design for all devices\n\n### Smart Contracts\n\n- Deployed on Oasis Sapphire network\n- Handle token-gating logic\n- Manage community access controls\n- Process encrypted communications\n\n### ROFL Service\n\n- Performs off-chain token balance verification\n- Ensures efficient and scalable operations\n- Maintains system integrity\n\nCheck out more on the hackathon's [project page](https://ethglobal.com/showcase/fanhub-u0rd9).\n",
+        "paratimes": [
+            "sapphire"
+        ],
+        "codeUrl": "https://github.com/byzantine-fault/FanHub",
+        "tutorials": [
+            {
+                "Video demo": "https://stream.mux.com/33GKwO7005PzENvAvUblt3w00ohy01P4BtxmMmC00QaidnA/high.mp4"
+            }
+        ],
+        "demoUrl": "",
+        "created": "2024-11-16T19:35:46Z",
+        "lastUpdated": "2024-11-17T14:07:18Z",
+        "license": "apache-2.0",
+        "tags": [
+            "Privy",
+            "Next.js",
+            "ROFL",
+            "ETHGlobal Bangkok 2024",
+            "Hackathon"
+        ],
+        "languages": [
+            "TypeScript",
+            "Solidity",
+            "Rust"
+        ],
+        "maintainedByOasis": false,
+        "screenshots": [
+            "/projects/fanhub/screenshots/01.jpg",
+            "/projects/fanhub/screenshots/02.jpg",
+            "/projects/fanhub/screenshots/03.jpg",
+            "/projects/fanhub/screenshots/04.jpg",
+            "/projects/fanhub/screenshots/05.jpg",
+            "/projects/fanhub/screenshots/06.jpg"
+        ],
+        "slug": "fanhub"
+    },
+    {
         "name": "Fastlane",
         "authors": [
             {
@@ -1081,6 +1172,45 @@
             "/projects/futures-on-chain/screenshots/05-diagram.png"
         ],
         "slug": "futures-on-chain"
+    },
+    {
+        "name": "Hancock",
+        "authors": [
+            {
+                "Kaushikh76": "https://github.com/Kaushikh76"
+            }
+        ],
+        "description": "Anonymous dating app where connections start with shared\ninterests, not photos or names. Match, chat, and reveal identities only when\nready. Powered by Oasis blockchain for top-notch privacy, Hancock offers\nsecure, meaningful, and exciting connections.\n\nHancock is an innovative and privacy-first dating platform that redefines how\npeople connect online. Its primary focus is ensuring users feel secure,\nanonymous, and in control of their interactions, breaking away from the\ntraditional norms of online dating.\n\n## Key Features and Workflow\n\n### Anonymous Profiles\n\nUnlike conventional dating apps, Hancock does not reveal user identities\nimmediately. When users sign up, they create a profile that remains anonymous.\nThis profile highlights interests, preferences, and other general attributes,\nbut it does not include identifiable details like names or photos. This\nanonymity ensures that users are judged based on their personality and\ninterests rather than appearances.\n\n### Swiping Mechanism\n\nUsers browse through profiles and swipe based on the details provided. The\nswiping interface resembles popular dating apps, offering a sense of\nfamiliarity while emphasizing privacy.\n\n### Mutual Matches\n\nIf two users swipe right on each other, they form a match. At this stage, they\ncan begin chatting anonymously within the app. This layer of interaction\nallows them to build a rapport and understand each other without pressure.\n\n### Identity Reveal\n\nHere’s where Hancock stands out: identities remain hidden even after a match.\nUsers can continue chatting anonymously for as long as they want. If both\nparties feel comfortable and mutually agree, they can reveal their real\nidentities. This step ensures that users progress at their own pace, fostering\ntrust and meaningful connections.\n\nYou can look up their smart contract on [Sourcify](https://repo.sourcify.dev/contracts/full_match/23295/0x6b541e26B2104507E243d1F6c8ead4645a983E79/sources/contracts/).\nCheck out more on the hackathon's [project page](https://ethglobal.com/showcase/hancock-goj8c).\n",
+        "paratimes": [
+            "sapphire"
+        ],
+        "codeUrl": "https://github.com/Kaushikh76/hancock",
+        "tutorials": [
+            {
+                "Video demo": "https://stream.mux.com/SCqh5Tt7nnbZbg300VpJFM01xiTEore3plPjOCjlK4eXw/high.mp4"
+            }
+        ],
+        "demoUrl": "",
+        "created": "2024-11-16T07:25:24Z",
+        "lastUpdated": "2024-11-26T23:37:25Z",
+        "tags": [
+            "Gaming",
+            "React Native",
+            "Privy",
+            "ETHGlobal Bangkok 2024",
+            "Hackathon"
+        ],
+        "languages": [
+            "TypeScript"
+        ],
+        "maintainedByOasis": false,
+        "screenshots": [
+            "/projects/hancock/screenshots/01.jpg",
+            "/projects/hancock/screenshots/02.jpg",
+            "/projects/hancock/screenshots/03.jpg",
+            "/projects/hancock/screenshots/04.jpg"
+        ],
+        "slug": "hancock"
     },
     {
         "name": "Lending Sapphire",
@@ -1756,6 +1886,60 @@
             "/projects/treasure-hunt/screenshots/01-game.png"
         ],
         "slug": "treasure-hunt"
+    },
+    {
+        "name": "Twenty1",
+        "authors": [
+            {
+                "megabyte": "https://github.com/megabyte0x"
+            },
+            {
+                "Prakhar Goyal": "https://github.com/0xPrakharG"
+            },
+            {
+                "Ayush Agrawal": "https://github.com/Lucifer0x17"
+            },
+            {
+                "Taveesha Agarwal": "https://github.com/0xLPircy"
+            },
+            {
+                "Divyansh Goel": "https://github.com/DivyanshGoel20"
+            }
+        ],
+        "description": "A Telegram mini-app for Blackjack, with on chain game play and encrypted data.\n\nTwenty1 is a Telegram mini app where you can play the classic game of\nBlackjack with on-chain gameplay and encrypted data. Players can stake money\nand play against the dealer, earning double their stake when they win. The app\nensures fair play through transparent blockchain technology, providing a\nsecure and trustworthy gaming experience.\n\nWe built the frontend using the React as well as Node.js framework and styled\nit with Tailwind CSS. The smart contracts were developed, tested, and deployed\nusing Foundry and Solidity, ensuring a secure and reliable blockchain setup.\n\nOur project is deployed on both Flow and Oasis, and it supports the use of the\nDynamic wallet for seamless user interactions.\n\nCheck out more on the hackathon's [project\npage](https://ethglobal.com/showcase/twenty1-xg82x).\n",
+        "paratimes": [
+            "sapphire"
+        ],
+        "codeUrl": "https://github.com/DivyanshGoel20/ETHGlobal-Bangkok",
+        "tutorials": [
+            {
+                "Video demo": "https://stream.mux.com/vKLD9d5lCAC8tIWyA01Du8GnuQjjuBsgHAv3PLKnf3oU/high.mp4"
+            }
+        ],
+        "demoUrl": "https://t.me/test_twenty_1_bot",
+        "created": "2024-11-15T18:52:40Z",
+        "lastUpdated": "2024-11-25T20:38:42Z",
+        "tags": [
+            "Gaming",
+            "React",
+            "Telegram",
+            "ETHGlobal Bangkok 2024",
+            "Hackathon"
+        ],
+        "languages": [
+            "TypeScript",
+            "Solidity"
+        ],
+        "maintainedByOasis": false,
+        "screenshots": [
+            "/projects/twenty1/screenshots/01.jpg",
+            "/projects/twenty1/screenshots/02.jpg",
+            "/projects/twenty1/screenshots/03.jpg",
+            "/projects/twenty1/screenshots/04.jpg",
+            "/projects/twenty1/screenshots/05.jpg",
+            "/projects/twenty1/screenshots/06.jpg"
+        ],
+        "slug": "twenty1"
     },
     {
         "name": "Zeo Kuessr",

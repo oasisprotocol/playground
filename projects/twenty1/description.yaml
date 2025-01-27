@@ -1,0 +1,44 @@
+name: Twenty1
+authors:
+  - megabyte: https://github.com/megabyte0x
+  - Prakhar Goyal: https://github.com/0xPrakharG
+  - Ayush Agrawal: https://github.com/Lucifer0x17
+  - Taveesha Agarwal: https://github.com/0xLPircy
+  - Divyansh Goel: https://github.com/DivyanshGoel20
+description: |
+  A Telegram mini-app for Blackjack, with on chain game play and encrypted data.
+
+  Twenty1 is a Telegram mini app where you can play the classic game of
+  Blackjack with on-chain gameplay and encrypted data. Players can stake money
+  and play against the dealer, earning double their stake when they win. The app
+  ensures fair play through transparent blockchain technology, providing a
+  secure and trustworthy gaming experience.
+
+  We built the frontend using the React as well as Node.js framework and styled
+  it with Tailwind CSS. The smart contracts were developed, tested, and deployed
+  using Foundry and Solidity, ensuring a secure and reliable blockchain setup.
+
+  Our project is deployed on both Flow and Oasis, and it supports the use of the
+  Dynamic wallet for seamless user interactions.
+
+  Check out more on the hackathon's [project
+  page](https://ethglobal.com/showcase/twenty1-xg82x).
+paratimes:
+  - sapphire
+codeUrl: https://github.com/DivyanshGoel20/ETHGlobal-Bangkok
+tutorials:
+  - Video demo: >-
+      https://stream.mux.com/vKLD9d5lCAC8tIWyA01Du8GnuQjjuBsgHAv3PLKnf3oU/high.mp4
+demoUrl: https://t.me/test_twenty_1_bot
+created: '2024-11-15T18:52:40Z'
+lastUpdated: '2024-11-25T20:38:42Z'
+tags:
+  - Gaming
+  - React
+  - Telegram
+  - ETHGlobal Bangkok 2024
+  - Hackathon
+languages:
+  - typescript
+  - solidity
+maintainedByOasis: false
