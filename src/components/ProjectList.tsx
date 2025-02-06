@@ -66,7 +66,8 @@ const ProjectList: React.FC = () => {
     if (selectedSources.length) params.set('sources', selectedSources.join(','));
     if (selectedParatimes.length) params.set('paratimes', selectedParatimes.join(','));
 
-    navigate(`?${params.toString()}`, { replace: true });
+    const currentHash = location.hash;
+    navigate(`?${params.toString()}${currentHash}`, { replace: true });
   }, [
     search,
     selectedTags,
