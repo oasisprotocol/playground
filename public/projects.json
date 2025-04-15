@@ -399,6 +399,85 @@
         "slug": "cypher-zer0x"
     },
     {
+        "authors": [
+            {
+                "Oasis Protocol Foundation": "https://oasisprotocol.org"
+            }
+        ],
+        "name": "Dapp Blockvote",
+        "description": "A blockchain-based voting platform that leverages the confidentiality features\nof Oasis Sapphire ParaTime to facilitate secure and private elections. The\nplatform allows organizers to create polls where participants can cast votes\nwithout revealing their choices to other users, while still ensuring the\nintegrity and transparency of the overall voting process.\n\nBlockvote is designed as a private voting solution for DAOs and other groups\nthat need to conduct opinion polls while maintaining voter privacy. Built as a\nfork of the Oasis Demo Voting App, it provides a simple but effective way to\ngather community sentiment on proposals while protecting individual voting\ndata through Sapphire's confidential smart contracts.\n",
+        "languages": [
+            "TypeScript",
+            "Solidity",
+            "JavaScript",
+            "HTML",
+            "CSS"
+        ],
+        "codeUrl": "https://github.com/oasisprotocol/dapp-blockvote",
+        "created": "2024-03-15T12:11:32Z",
+        "lastUpdated": "2025-04-14T15:15:42Z",
+        "paratimes": [
+            "sapphire"
+        ],
+        "license": "apache-2.0",
+        "tags": [
+            "Voting",
+            "Confidential State",
+            "Gasless",
+            "React"
+        ],
+        "demoUrl": "https://vote.oasis.io/",
+        "tutorials": [],
+        "maintainedByOasis": true,
+        "screenshots": [
+            "/projects/dapp-blockvote/screenshots/01-landing.png",
+            "/projects/dapp-blockvote/screenshots/02-dashboard.png",
+            "/projects/dapp-blockvote/screenshots/03-createpoll1.png",
+            "/projects/dapp-blockvote/screenshots/04-createpoll2.png",
+            "/projects/dapp-blockvote/screenshots/05-createpoll3.png",
+            "/projects/dapp-blockvote/screenshots/06-vote1.png",
+            "/projects/dapp-blockvote/screenshots/07-vote2.png",
+            "/projects/dapp-blockvote/screenshots/08-vote3.png",
+            "/projects/dapp-blockvote/screenshots/09-vote4.png"
+        ],
+        "slug": "dapp-blockvote"
+    },
+    {
+        "authors": [
+            {
+                "Oasis Protocol Foundation": "https://oasisprotocol.org"
+            }
+        ],
+        "name": "Dapp Votee",
+        "description": "A confidential voting dApp that enables ROSE holders to participate in\ncommunity decisions on the Oasis Network. The first implementation allowed\nthe community to vote for the Oasis Network's official mascot, choosing\nbetween a Capybara (symbolizing Interoperability), a Desert Owl (symbolizing\nKnowledge), and a Fennec Fox (symbolizing Privacy).\n\nBuilt using Oasis Sapphire ParaTime, the dApp ensures vote privacy while\nmaintaining transparency in the voting process. The platform is designed to\nbe extensible for future community governance decisions beyond the initial\nmascot vote.\n",
+        "languages": [
+            "TypeScript",
+            "CSS",
+            "Solidity",
+            "JavaScript",
+            "HTML"
+        ],
+        "codeUrl": "https://github.com/oasisprotocol/dapp-votee",
+        "created": "2024-02-26T18:43:43Z",
+        "lastUpdated": "2025-04-14T15:05:21Z",
+        "paratimes": [
+            "sapphire"
+        ],
+        "license": "apache-2.0",
+        "tags": [
+            "Voting",
+            "Confidential State",
+            "React"
+        ],
+        "demoUrl": "https://votee.oasis.io/",
+        "tutorials": [],
+        "maintainedByOasis": true,
+        "screenshots": [
+            "/projects/dapp-votee/screenshots/01-landing.png"
+        ],
+        "slug": "dapp-votee"
+    },
+    {
         "name": "ROSE (un) wrapper",
         "authors": [
             {
@@ -624,7 +703,8 @@
         "tags": [
             "OPL",
             "Vue",
-            "Pinata"
+            "Pinata",
+            "Voting"
         ],
         "codeUrl": "https://github.com/oasisprotocol/demo-opl-secret-ballot",
         "tutorials": [
@@ -835,7 +915,8 @@
         "tags": [
             "Gasless",
             "Vue",
-            "EthCC 2023"
+            "EthCC 2023",
+            "Voting"
         ],
         "codeUrl": "https://github.com/oasisprotocol/demo-voting",
         "demoUrl": "https://playground.oasis.io/demo-voting",
@@ -1489,7 +1570,7 @@
         ],
         "license": "Apache-2.0",
         "tags": [
-            "Vue.js",
+            "Vue",
             "Health",
             "P4W3 2024"
         ],
