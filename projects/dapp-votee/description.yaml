@@ -1,0 +1,33 @@
+authors:
+  - Oasis Protocol Foundation: https://oasisprotocol.org
+name: Dapp Votee
+description: |
+  A confidential voting dApp that enables ROSE holders to participate in
+  community decisions on the Oasis Network. The first implementation allowed
+  the community to vote for the Oasis Network's official mascot, choosing
+  between a Capybara (symbolizing Interoperability), a Desert Owl (symbolizing
+  Knowledge), and a Fennec Fox (symbolizing Privacy).
+  
+  Built using Oasis Sapphire ParaTime, the dApp ensures vote privacy while
+  maintaining transparency in the voting process. The platform is designed to
+  be extensible for future community governance decisions beyond the initial
+  mascot vote.
+languages:
+  - typescript
+  - css
+  - solidity
+  - javascript
+  - html
+codeUrl: https://github.com/oasisprotocol/dapp-votee
+created: '2024-02-26T18:43:43Z'
+lastUpdated: '2025-04-14T15:05:21Z'
+paratimes:
+  - sapphire
+license: Apache-2.0
+tags:
+  - Voting
+  - Confidential State
+  - React
+demoUrl: 'https://votee.oasis.io/'
+tutorials: []
+maintainedByOasis: true
