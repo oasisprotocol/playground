@@ -281,7 +281,10 @@ export const LanguageMappings = {
 /** @param {string} languageId */
 export function getCorrectLanguageName(languageId) {
   /** @type {string | undefined} */
-  const officialName = LanguageMappings[languageId.toLowerCase()];
+  const officialName =
+    LanguageMappings[
+      /** @type {keyof typeof LanguageMappings} */ (languageId.toLowerCase())
+    ];
   if (officialName) {
     return officialName;
   }

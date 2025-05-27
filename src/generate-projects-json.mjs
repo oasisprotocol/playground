@@ -2,7 +2,7 @@ import { readFileSync, writeFileSync } from 'fs';
 import { globSync } from 'glob';
 import { load } from 'js-yaml';
 import { getCorrectLanguageName } from './languageUtils.mjs';
-import { sanitizeUrl } from './sanitizeUrl.ts';
+import { sanitizeUrl } from './sanitizeUrl.mjs';
 
 const yamls = globSync('./projects/*/*.yaml').sort();
 const allScreenshots = globSync(

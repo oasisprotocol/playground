@@ -9,7 +9,7 @@ import ProjectItemTags from './ProjectItemTags';
 import '../App.css';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import { sanitizeUrl } from '../sanitizeUrl';
+import { sanitizeUrl } from '../sanitizeUrl.mjs';
 import ProjectItemLanguages from './ProjectItemLanguages';
 
 interface ProjectDialogProps {
