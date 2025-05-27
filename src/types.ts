@@ -9,7 +9,7 @@ export interface Project {
   license: string;
   tags: string[];
   codeUrl: string;
-  demoUrl?: string | undefined | null;
+  demoUrl: string | null;
   tutorials?: { [tutorial: string]: string }[];
   created: string;
   lastUpdated: string;

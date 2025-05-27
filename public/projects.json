@@ -212,7 +212,8 @@
             "/projects/blacksea/screenshots/01-architecture.png"
         ],
         "license": "Unspecified",
-        "slug": "blacksea"
+        "slug": "blacksea",
+        "demoUrl": null
     },
     {
         "name": "BoT (Blockchain of Things)",
@@ -253,7 +254,8 @@
             "/projects/bot/screenshots/01-architecture.png"
         ],
         "license": "Unspecified",
-        "slug": "bot"
+        "slug": "bot",
+        "demoUrl": null
     },
     {
         "name": "CAAI (Copyright Aware AI)",
@@ -572,7 +574,7 @@
             "Next.js",
             "Chat"
         ],
-        "demoUrl": "",
+        "demoUrl": null,
         "tutorials": [],
         "maintainedByOasis": true,
         "screenshots": [
@@ -615,7 +617,8 @@
             "/projects/demo-e2eproxy/screenshots/01-test.png",
             "/projects/demo-e2eproxy/screenshots/02-encrypted-proxy.png"
         ],
-        "slug": "demo-e2eproxy"
+        "slug": "demo-e2eproxy",
+        "demoUrl": null
     },
     {
         "name": "Oasis Riddle",
@@ -652,7 +655,8 @@
         "screenshots": [
             "/projects/demo-oasisriddle/screenshots/1_query.png"
         ],
-        "slug": "demo-oasisriddle"
+        "slug": "demo-oasisriddle",
+        "demoUrl": null
     },
     {
         "name": "Oasis Swag",
@@ -724,7 +728,8 @@
         "screenshots": [
             "/projects/demo-opl-secret-ballot/screenshots/1_new_ballot.png"
         ],
-        "slug": "demo-opl-secret-ballot"
+        "slug": "demo-opl-secret-ballot",
+        "demoUrl": null
     },
     {
         "name": "Confidential Quiz",
@@ -830,7 +835,8 @@
         "screenshots": [
             "/projects/demo-starter-go/screenshots/01-usage.png"
         ],
-        "slug": "demo-starter-go"
+        "slug": "demo-starter-go",
+        "demoUrl": null
     },
     {
         "name": "Starter Project (Python)",
@@ -863,7 +869,8 @@
         "screenshots": [
             "/projects/demo-starter-py/screenshots/01-usage.png"
         ],
-        "slug": "demo-starter-py"
+        "slug": "demo-starter-py",
+        "demoUrl": null
     },
     {
         "name": "Starter Project",
@@ -900,7 +907,8 @@
             "/projects/demo-starter/screenshots/02-hello-world.png",
             "/projects/demo-starter/screenshots/03-manage-deploy.png"
         ],
-        "slug": "demo-starter"
+        "slug": "demo-starter",
+        "demoUrl": null
     },
     {
         "name": "Confidential Voting",
@@ -1058,7 +1066,8 @@
             "/projects/example-cipher-c10l-hello-world/screenshots/03-instantiate.png",
             "/projects/example-cipher-c10l-hello-world/screenshots/04-call.png"
         ],
-        "slug": "example-cipher-c10l-hello-world"
+        "slug": "example-cipher-c10l-hello-world",
+        "demoUrl": null
     },
     {
         "name": "Hello World on Cipher",
@@ -1095,7 +1104,8 @@
             "/projects/example-cipher-hello-world/screenshots/03-instantiate.png",
             "/projects/example-cipher-hello-world/screenshots/04-call.png"
         ],
-        "slug": "example-cipher-hello-world"
+        "slug": "example-cipher-hello-world",
+        "demoUrl": null
     },
     {
         "name": "Hardhat Sapphire Example",
@@ -1129,7 +1139,8 @@
         "screenshots": [
             "/projects/example-sapphire-hardhat/screenshots/01-run-vigil.png"
         ],
-        "slug": "example-sapphire-hardhat"
+        "slug": "example-sapphire-hardhat",
+        "demoUrl": null
     },
     {
         "name": "On-Chain Signer",
@@ -1163,7 +1174,8 @@
         "screenshots": [
             "/projects/example-sapphire-onchain-signer/screenshots/01-comment-box-tests.png"
         ],
-        "slug": "example-sapphire-onchain-signer"
+        "slug": "example-sapphire-onchain-signer",
+        "demoUrl": null
     },
     {
         "name": "FanHub",
@@ -1182,7 +1194,7 @@
                 "Video demo": "https://stream.mux.com/33GKwO7005PzENvAvUblt3w00ohy01P4BtxmMmC00QaidnA/high.mp4"
             }
         ],
-        "demoUrl": "",
+        "demoUrl": null,
         "created": "2024-11-16T19:35:46Z",
         "lastUpdated": "2024-11-17T14:07:18Z",
         "license": "apache-2.0",
@@ -1318,7 +1330,7 @@
                 "Video demo": "https://stream.mux.com/SCqh5Tt7nnbZbg300VpJFM01xiTEore3plPjOCjlK4eXw/high.mp4"
             }
         ],
-        "demoUrl": "",
+        "demoUrl": null,
         "created": "2024-11-16T07:25:24Z",
         "lastUpdated": "2024-11-26T23:37:25Z",
         "tags": [
@@ -1389,7 +1401,8 @@
             "/projects/lending-sapphire/screenshots/04-lend.jpg"
         ],
         "license": "Unspecified",
-        "slug": "lending-sapphire"
+        "slug": "lending-sapphire",
+        "demoUrl": null
     },
     {
         "name": "Minesweeper",
@@ -1480,7 +1493,8 @@
             "/projects/nyx/screenshots/04-howitworks.jpg"
         ],
         "license": "Unspecified",
-        "slug": "nyx"
+        "slug": "nyx",
+        "demoUrl": null
     },
     {
         "name": "OasisGuard",
@@ -1648,7 +1662,8 @@
             "/projects/privads/screenshots/03-banner.png"
         ],
         "license": "Unspecified",
-        "slug": "privads"
+        "slug": "privads",
+        "demoUrl": null
     },
     {
         "name": "RIP Protocol",
@@ -1765,7 +1780,8 @@
             "/projects/sapphire-confidential/screenshots/01-transaction-in-progress.png"
         ],
         "license": "Unspecified",
-        "slug": "sapphire-confidential"
+        "slug": "sapphire-confidential",
+        "demoUrl": null
     },
     {
         "name": "Secret Bids",
@@ -2124,6 +2140,7 @@
             "/projects/zeo-kuessr/screenshots/02-new-game.jpg"
         ],
         "license": "Unspecified",
-        "slug": "zeo-kuessr"
+        "slug": "zeo-kuessr",
+        "demoUrl": null
     }
 ]
