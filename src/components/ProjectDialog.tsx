@@ -290,9 +290,7 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
                       key={authorKey}
                     >
                       <Link
-                        href={
-                          authorValue ? sanitizeUrl(authorValue) : undefined
-                        }
+                        href={sanitizeUrl(authorValue)}
                         target="_blank"
                         underline="always"
                         sx={linkStyles}
