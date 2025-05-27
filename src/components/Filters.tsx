@@ -95,8 +95,8 @@ const Filters: React.FC<FiltersProps> = ({
 
   // Sort licenses to ensure 'Unspecified' (empty string) is last
   const sortedLicenses = [...licenses].sort((a, b) => {
-    if (a === '') return 1;
-    if (b === '') return -1;
+    if (a === 'Unspecified') return 1;
+    if (b === 'Unspecified') return -1;
     return a.localeCompare(b);
   });
 
@@ -216,7 +216,7 @@ const Filters: React.FC<FiltersProps> = ({
             Licenses
           </Typography>
           {sortedLicenses.map((license) => (
-            <Box key={license || 'unspecified'} sx={{ marginBottom: '-7px' }}>
+            <Box key={license} sx={{ marginBottom: '-7px' }}>
               <FormControlLabel
                 control={
                   <Checkbox
@@ -225,7 +225,7 @@ const Filters: React.FC<FiltersProps> = ({
                     color="primary"
                   />
                 }
-                label={`${license || 'Unspecified'} (${licenseCounts[license] || 0})`}
+                label={`${license} (${licenseCounts[license] || 0})`}
               />
             </Box>
           ))}

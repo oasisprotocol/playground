@@ -37,6 +37,7 @@
             "/projects/0x2fa/screenshots/04-scan-invite-code.jpeg",
             "/projects/0x2fa/screenshots/05-banner.png"
         ],
+        "license": "Unspecified",
         "slug": "0x2fa"
     },
     {
@@ -121,6 +122,7 @@
             "/projects/aware/screenshots/04.jpg",
             "/projects/aware/screenshots/05.jpg"
         ],
+        "license": "Unspecified",
         "slug": "aware"
     },
     {
@@ -209,6 +211,7 @@
         "screenshots": [
             "/projects/blacksea/screenshots/01-architecture.png"
         ],
+        "license": "Unspecified",
         "slug": "blacksea"
     },
     {
@@ -249,6 +252,7 @@
         "screenshots": [
             "/projects/bot/screenshots/01-architecture.png"
         ],
+        "license": "Unspecified",
         "slug": "bot"
     },
     {
@@ -294,6 +298,7 @@
             "/projects/caai/screenshots/01-logo.jpg",
             "/projects/caai/screenshots/02-diagram.png"
         ],
+        "license": "Unspecified",
         "slug": "caai"
     },
     {
@@ -329,7 +334,7 @@
         "demoUrl": "https://clpd-private.vercel.app/en",
         "created": "2024-11-02T20:23:12Z",
         "lastUpdated": "2024-11-03T21:41:01Z",
-        "license": "",
+        "license": "Unspecified",
         "tags": [
             "ROFL",
             "DeFi",
@@ -396,6 +401,7 @@
             "/projects/cypher-zer0x/screenshots/04-metamask-snap.jpeg",
             "/projects/cypher-zer0x/screenshots/05-kyc.jpeg"
         ],
+        "license": "Unspecified",
         "slug": "cypher-zer0x"
     },
     {
@@ -976,6 +982,7 @@
             "/projects/dsearch/screenshots/04-image-results.png",
             "/projects/dsearch/screenshots/05-related-results.png"
         ],
+        "license": "Unspecified",
         "slug": "dsearch"
     },
     {
@@ -1245,6 +1252,7 @@
             "/projects/fastlane/screenshots/02-game.png",
             "/projects/fastlane/screenshots/03-obstacle.png"
         ],
+        "license": "Unspecified",
         "slug": "fastlane"
     },
     {
@@ -1270,7 +1278,7 @@
         "demoUrl": null,
         "created": "2024-10-30T19:37:16Z",
         "lastUpdated": "2024-12-02T11:14:15Z",
-        "license": "",
+        "license": "Unspecified",
         "tags": [
             "ROFL",
             "DeFi",
@@ -1330,6 +1338,7 @@
             "/projects/hancock/screenshots/03.jpg",
             "/projects/hancock/screenshots/04.jpg"
         ],
+        "license": "Unspecified",
         "slug": "hancock"
     },
     {
@@ -1379,6 +1388,7 @@
             "/projects/lending-sapphire/screenshots/03-loan.jpg",
             "/projects/lending-sapphire/screenshots/04-lend.jpg"
         ],
+        "license": "Unspecified",
         "slug": "lending-sapphire"
     },
     {
@@ -1424,6 +1434,7 @@
         "screenshots": [
             "/projects/minesweeper/screenshots/01-logo.png"
         ],
+        "license": "Unspecified",
         "slug": "minesweeper"
     },
     {
@@ -1468,6 +1479,7 @@
             "/projects/nyx/screenshots/03-chat2.jpg",
             "/projects/nyx/screenshots/04-howitworks.jpg"
         ],
+        "license": "Unspecified",
         "slug": "nyx"
     },
     {
@@ -1514,6 +1526,7 @@
             "/projects/oasisguard/screenshots/01-screenshots.png",
             "/projects/oasisguard/screenshots/02-banner.png"
         ],
+        "license": "Unspecified",
         "slug": "oasisguard"
     },
     {
@@ -1551,6 +1564,7 @@
         "screenshots": [
             "/projects/paw3/screenshots/01-landing.png"
         ],
+        "license": "Unspecified",
         "slug": "paw3"
     },
     {
@@ -1633,6 +1647,7 @@
             "/projects/privads/screenshots/02-advertiser.png",
             "/projects/privads/screenshots/03-banner.png"
         ],
+        "license": "Unspecified",
         "slug": "privads"
     },
     {
@@ -1672,6 +1687,7 @@
             "/projects/rip-protocol/screenshots/05-slide5.jpg",
             "/projects/rip-protocol/screenshots/06-slide6.jpg"
         ],
+        "license": "Unspecified",
         "slug": "rip-protocol"
     },
     {
@@ -1748,6 +1764,7 @@
         "screenshots": [
             "/projects/sapphire-confidential/screenshots/01-transaction-in-progress.png"
         ],
+        "license": "Unspecified",
         "slug": "sapphire-confidential"
     },
     {
@@ -1873,6 +1890,7 @@
             "/projects/spacetar/screenshots/02-home.png",
             "/projects/spacetar/screenshots/03-chat.png"
         ],
+        "license": "Unspecified",
         "slug": "spacetar"
     },
     {
@@ -1927,6 +1945,7 @@
             "/projects/squidl/screenshots/04-send.jpg",
             "/projects/squidl/screenshots/05-flyer.png"
         ],
+        "license": "Unspecified",
         "slug": "squidl"
     },
     {
@@ -1969,6 +1988,7 @@
             "/projects/texas-hideem/screenshots/03-start.jpeg",
             "/projects/texas-hideem/screenshots/04-gameplay.jpeg"
         ],
+        "license": "Unspecified",
         "slug": "texas-hideem"
     },
     {
@@ -2059,6 +2079,7 @@
             "/projects/twenty1/screenshots/05.jpg",
             "/projects/twenty1/screenshots/06.jpg"
         ],
+        "license": "Unspecified",
         "slug": "twenty1"
     },
     {
@@ -2102,6 +2123,7 @@
             "/projects/zeo-kuessr/screenshots/01-gameplay.jpg",
             "/projects/zeo-kuessr/screenshots/02-new-game.jpg"
         ],
+        "license": "Unspecified",
         "slug": "zeo-kuessr"
     }
 ]

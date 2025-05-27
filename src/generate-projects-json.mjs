@@ -18,6 +18,7 @@ const projects = yamls.map((path) => {
     .filter((screenshotPath) => screenshotPath.startsWith(screenshotsPath))
     .map((screenshotPath) => '/' + screenshotPath);
   parsedYaml.languages = parsedYaml.languages.map(getCorrectLanguageName);
+  parsedYaml.license = parsedYaml.license || 'Unspecified';
   const folderName = path.split('/').slice(-2, -1)[0];
   parsedYaml.slug = folderName;
 
