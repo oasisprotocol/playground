@@ -1,7 +1,8 @@
-import { load } from 'js-yaml';
-import { globSync } from 'glob';
 import { readFileSync, writeFileSync } from 'fs';
+import { globSync } from 'glob';
+import { load } from 'js-yaml';
 import { getCorrectLanguageName } from './languageUtils.mjs';
+import { sanitizeUrl } from './sanitizeUrl.ts';
 
 const yamls = globSync('./projects/*/*.yaml').sort();
 const allScreenshots = globSync(
@@ -19,6 +20,21 @@ const projects = yamls.map((path) => {
   parsedYaml.languages = parsedYaml.languages.map(getCorrectLanguageName);
   const folderName = path.split('/').slice(-2, -1)[0];
   parsedYaml.slug = folderName;
+
+  parsedYaml.codeUrl = sanitizeUrl(parsedYaml.codeUrl);
+  if (parsedYaml.demoUrl) {
+    parsedYaml.demoUrl = sanitizeUrl(parsedYaml.demoUrl);
+  }
+  if (parsedYaml.authors) {
+    parsedYaml.authors = parsedYaml.authors.map((t) => ({
+      [Object.keys(t)[0]]: sanitizeUrl(Object.values(t)[0]),
+    }));
+  }
+  if (parsedYaml.tutorials) {
+    parsedYaml.tutorials = parsedYaml.tutorials.filter((t) =>
+      sanitizeUrl(Object.values(t)[0]),
+    );
+  }
 
   return parsedYaml;
 });

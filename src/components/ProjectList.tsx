@@ -2,7 +2,7 @@ import { Box, Button, Container, Grid } from '@mui/material';
 import { useMediaQuery } from '@mui/material';
 import type { SelectChangeEvent } from '@mui/material/Select';
 import { useTheme } from '@mui/material/styles';
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import projectsJson from '../../public/projects.json';
 import { type Project, SortingOptions } from '../types';
 import Filters from './Filters';

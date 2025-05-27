@@ -1,13 +1,11 @@
 /** Blocks dangerous URLs that start with "javascript:". */
 export function sanitizeUrl(url: string) {
   try {
-    if (new URL(url).protocol !== 'https:') {
-      console.error('Blocked unsafe URL:', url);
-      return undefined;
+    if (!['https:', 'http:'].includes(new URL(url).protocol)) {
+      throw new Error('sanitizeUrl encountered unsafe URL: ' + url);
     }
   } catch (err) {
-    console.error('Blocked broken URL:', url);
-    return undefined;
+    throw new Error('sanitizeUrl encountered broken URL: ' + url);
   }
   return url;
 }

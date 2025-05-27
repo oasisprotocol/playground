@@ -60,7 +60,7 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
 
     return (
       <Link
-        href={sanitizeUrl(url)}
+        href={url && sanitizeUrl(url)}
         target={target}
         title={title}
         sx={linkStyles}
@@ -372,29 +372,26 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
                   >
                     Tutorials:
                   </Typography>
-                  {project.tutorials.map(
-                    (tutorialObj: { [key: string]: string }, index: number) => {
-                      const tutorialKey = Object.keys(tutorialObj)[0];
-                      const tutorialValue = Object.values(tutorialObj)[0];
-                      return (
-                        <Typography
-                          sx={{ color: '#0500E1', letterSpacing: '-0.5px' }}
-                          key={tutorialKey}
+                  {project.tutorials.map((tutorialObj, index) => {
+                    const tutorialKey = Object.keys(tutorialObj)[0];
+                    const tutorialValue = Object.values(tutorialObj)[0];
+                    return (
+                      <Typography
+                        sx={{ color: '#0500E1', letterSpacing: '-0.5px' }}
+                        key={tutorialKey}
+                      >
+                        <Link
+                          href={sanitizeUrl(tutorialValue)}
+                          target="_blank"
+                          underline="always"
+                          sx={linkStyles}
                         >
-                          <Link
-                            href={sanitizeUrl(tutorialValue)}
-                            target="_blank"
-                            underline="always"
-                            sx={linkStyles}
-                          >
-                            {tutorialKey}
-                            {index < (project.tutorials?.length ?? 0) - 1 &&
-                              ', '}
-                          </Link>
-                        </Typography>
-                      );
-                    },
-                  )}
+                          {tutorialKey}
+                          {index < (project.tutorials?.length ?? 0) - 1 && ', '}
+                        </Link>
+                      </Typography>
+                    );
+                  })}
                 </Box>
               )}
 
