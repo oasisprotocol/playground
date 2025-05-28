@@ -1,0 +1,35 @@
+authors:
+  - Oasis Protocol Foundation: https://oasisprotocol.org
+name: Dapp Blockvote
+description: |
+  A blockchain-based voting platform that leverages the confidentiality features
+  of Oasis Sapphire ParaTime to facilitate secure and private elections. The
+  platform allows organizers to create polls where participants can cast votes
+  without revealing their choices to other users, while still ensuring the
+  integrity and transparency of the overall voting process.
+  
+  Blockvote is designed as a private voting solution for DAOs and other groups
+  that need to conduct opinion polls while maintaining voter privacy. Built as a
+  fork of the Oasis Demo Voting App, it provides a simple but effective way to
+  gather community sentiment on proposals while protecting individual voting
+  data through Sapphire's confidential smart contracts.
+languages:
+  - typescript
+  - solidity
+  - javascript
+  - html
+  - css
+codeUrl: https://github.com/oasisprotocol/dapp-blockvote
+created: '2024-03-15T12:11:32Z'
+lastUpdated: '2025-04-14T15:15:42Z'
+paratimes:
+  - sapphire
+license: Apache-2.0
+tags:
+  - Voting
+  - Confidential State
+  - Gasless
+  - React
+demoUrl: 'https://vote.oasis.io/'
+tutorials: []
+maintainedByOasis: true

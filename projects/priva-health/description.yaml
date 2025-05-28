@@ -31,7 +31,7 @@ languages:
   - typescript
 license: Apache-2.0
 tags:
-  - Vue.js
+  - Vue
   - Health
   - P4W3 2024
 codeUrl: https://github.com/ChanX21/PrivaHealth
