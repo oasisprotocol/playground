@@ -8,8 +8,8 @@ export interface Project {
   screenshots: string[];
   license: string;
   tags: string[];
-  codeUrl?: string;
-  demoUrl: string;
+  codeUrl: string;
+  demoUrl?: string | undefined | null;
   tutorials?: { [tutorial: string]: string }[];
   created: string;
   lastUpdated: string;

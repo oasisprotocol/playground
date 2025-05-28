@@ -215,10 +215,10 @@
         "name": "BoT (Blockchain of Things)",
         "authors": [
             {
-                "Fedor Panafidin": null
+                "Fedor Panafidin": "https://taikai.network/hermestrismegistus"
             },
             {
-                "Merstoffe14": null
+                "Merstoffe14": "https://taikai.network/Merstoffe14"
             }
         ],
         "description": "A Decentralized Subscription-Based Content Hosting Platform.\n\nOur platform\noperates seamlessly with live data feeds, making it ideal for real-time\ncontent delivery. It caters to content creators by providing an anonymous\nchannel to receive feedback, enriching the engagement without compromising\nprivacy.\n\n## Problem & Solution\n\nThe blockchain world faces a critical shortage of reliable oracles which\nconnect real-world data to blockchain systems. Our solution is a\ncommunity-driven ecosystem that simplifies the process of creating an oracle.\nWe aim to reduce entry barriers and make operating an oracle not only feasible\nbut also lucrative.\n\n## Key Features\n\n- **Anonymous Transactions**: Both content creators and subscribers engage in\n  financial transactions and feedback sharing without revealing their\n  identities.\n- **Incentivized Oracle Ecosystem**: Encourages the community to contribute to\n  the accuracy and reliability of data feeds.\n- **Broad Compatibility**: Our platform supports devices as simple as Arduino\n  or Raspberry Pi, integrating them into the blockchain to deliver valuable\n  real-time data.\n",

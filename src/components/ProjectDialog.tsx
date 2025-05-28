@@ -9,6 +9,7 @@ import ProjectItemTags from './ProjectItemTags';
 import '../App.css';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
+import { sanitizeUrl } from '../sanitizeUrl.mjs';
 import ProjectItemLanguages from './ProjectItemLanguages';
 
 interface ProjectDialogProps {
@@ -58,7 +59,12 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
     const linkText = typeof text === 'string' ? text : '';
 
     return (
-      <Link href={url} target={target} title={title} sx={linkStyles}>
+      <Link
+        href={url && sanitizeUrl(url)}
+        target={target}
+        title={title}
+        sx={linkStyles}
+      >
         {linkText}
       </Link>
     );
@@ -275,28 +281,26 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
                 >
                   Authors:
                 </Typography>
-                {project.authors.map(
-                  (authorObj: { [key: string]: string }, index: number) => {
-                    const authorKey = Object.keys(authorObj)[0];
-                    const authorValue = Object.values(authorObj)[0];
-                    return (
-                      <Typography
-                        sx={{ color: '#0500E1', letterSpacing: '-0.5px' }}
-                        key={authorKey}
+                {project.authors.map((authorObj, index) => {
+                  const authorKey = Object.keys(authorObj)[0];
+                  const authorValue = Object.values(authorObj)[0];
+                  return (
+                    <Typography
+                      sx={{ color: '#0500E1', letterSpacing: '-0.5px' }}
+                      key={authorKey}
+                    >
+                      <Link
+                        href={sanitizeUrl(authorValue)}
+                        target="_blank"
+                        underline="always"
+                        sx={linkStyles}
                       >
-                        <Link
-                          href={authorValue}
-                          target="_blank"
-                          underline="always"
-                          sx={linkStyles}
-                        >
-                          {authorKey}
-                          {index < (project.authors?.length ?? 0) - 1 && ', '}
-                        </Link>
-                      </Typography>
-                    );
-                  },
-                )}
+                        {authorKey}
+                        {index < (project.authors?.length ?? 0) - 1 && ', '}
+                      </Link>
+                    </Typography>
+                  );
+                })}
               </Box>
 
               <Typography
@@ -316,7 +320,7 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
                 }}
               >
                 <Link
-                  href={project.codeUrl}
+                  href={sanitizeUrl(project.codeUrl)}
                   target="_blank"
                   underline="always"
                   sx={linkStyles}
@@ -344,7 +348,7 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
                     }}
                   >
                     <Link
-                      href={project.demoUrl}
+                      href={sanitizeUrl(project.demoUrl)}
                       target="_blank"
                       underline="always"
                       sx={linkStyles}
@@ -366,29 +370,26 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
                   >
                     Tutorials:
                   </Typography>
-                  {project.tutorials.map(
-                    (tutorialObj: { [key: string]: string }, index: number) => {
-                      const tutorialKey = Object.keys(tutorialObj)[0];
-                      const tutorialValue = Object.values(tutorialObj)[0];
-                      return (
-                        <Typography
-                          sx={{ color: '#0500E1', letterSpacing: '-0.5px' }}
-                          key={tutorialKey}
+                  {project.tutorials.map((tutorialObj, index) => {
+                    const tutorialKey = Object.keys(tutorialObj)[0];
+                    const tutorialValue = Object.values(tutorialObj)[0];
+                    return (
+                      <Typography
+                        sx={{ color: '#0500E1', letterSpacing: '-0.5px' }}
+                        key={tutorialKey}
+                      >
+                        <Link
+                          href={sanitizeUrl(tutorialValue)}
+                          target="_blank"
+                          underline="always"
+                          sx={linkStyles}
                         >
-                          <Link
-                            href={tutorialValue}
-                            target="_blank"
-                            underline="always"
-                            sx={linkStyles}
-                          >
-                            {tutorialKey}
-                            {index < (project.tutorials?.length ?? 0) - 1 &&
-                              ', '}
-                          </Link>
-                        </Typography>
-                      );
-                    },
-                  )}
+                          {tutorialKey}
+                          {index < (project.tutorials?.length ?? 0) - 1 && ', '}
+                        </Link>
+                      </Typography>
+                    );
+                  })}
                 </Box>
               )}
 
