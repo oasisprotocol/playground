@@ -29,5 +29,8 @@
       "quoteStyle": "single",
       "semicolons": "always"
     }
+  },
+  "files": {
+    "ignore": ["public/projects.json"]
   }
 }

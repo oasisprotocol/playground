@@ -400,7 +400,7 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
                   fontSize: '14px',
                 }}
               >
-                Licence:
+                License:
               </Typography>
               <Typography
                 sx={{
@@ -409,7 +409,7 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
                   marginBottom: '16px',
                 }}
               >
-                {project.license ? project.license : 'Unspecified'}
+                {project.license}
               </Typography>
 
               {project.maintainedByOasis && (
