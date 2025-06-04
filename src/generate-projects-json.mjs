@@ -1,9 +1,11 @@
-import { readFileSync, writeFileSync } from "fs";
+// Usage: node generate-project-json.mjs [outputPath]
+// Defaults to "./dist/projects.json"
+
+import { readFileSync, writeFileSync, mkdirSync } from "fs";
 import { globSync } from "glob";
 import { load } from "js-yaml";
 import { getCorrectLanguageName } from "./languageUtils.mjs";
 import { sanitizeUrl } from "./sanitizeUrl.mjs";
-import { mkdirSync } from "fs";
 
 const yamls = globSync("./projects/*/*.yaml").sort();
 const allScreenshots = globSync(
@@ -27,11 +29,13 @@ const projects = yamls.map((path) => {
   parsedYaml.demoUrl = parsedYaml.demoUrl
     ? sanitizeUrl(parsedYaml.demoUrl)
     : null;
+
   if (parsedYaml.authors) {
     parsedYaml.authors = parsedYaml.authors.map((t) => ({
       [Object.keys(t)[0]]: sanitizeUrl(Object.values(t)[0]),
     }));
   }
+
   if (parsedYaml.tutorials) {
     parsedYaml.tutorials = parsedYaml.tutorials.filter((t) =>
       sanitizeUrl(Object.values(t)[0])
@@ -41,9 +45,10 @@ const projects = yamls.map((path) => {
   return parsedYaml;
 });
 
-mkdirSync("./dist", { recursive: true });
-const outputPaths = ["./public/projects.json", "./dist/projects.json"];
-
-for (const path of outputPaths) {
-  writeFileSync(path, JSON.stringify(projects, null, 4), "utf8");
+const outputPath = process.argv[2] || "./dist/projects.json";
+const outputDir = outputPath.split("/").slice(0, -1).join("/");
+if (outputDir) {
+  mkdirSync(outputDir, { recursive: true });
 }
+
+writeFileSync(outputPath, JSON.stringify(projects, null, 4), "utf8");
