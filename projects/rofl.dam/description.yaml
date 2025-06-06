@@ -1,0 +1,84 @@
+name: ROFL.DAM
+authors: []
+description: |
+  Runtime Off-chain Function Logic Decentralized Authenticated Messaging -
+  Powered by Oasis and Nostr
+
+  **ROLF.DAM**
+
+  **What**
+
+  ROFL.DAM Is a Web3-enabled chat platform running on OASIS ROFL where users can
+  create or join groups, chat via a Nostr relay, and manage group membership
+  with help from MongoDB. It includes functionalities for users to input group
+  metadata (name, description, price), chat in real-time, and for moderators to
+  manage groups. The front end handles user interactions, while MongoDB supports
+  persistent storage and Nostr ensures decentralized, censorship-resistant
+  communication. For the first time in your life, your chat-data is now
+  decentralized and unreadable!
+
+  **Problem**
+
+  ROFL.DAM (Runtime Off-chain Logic Decentralized Authenticated Messaging)
+  solves key problems of traditional chat platforms by giving users full
+  control, privacy, and resilience through decentralization. Unlike centralized
+  tools prone to censorship, surveillance, and opaque moderation, ROFL.DAM uses
+  Nostr for censorship-resistant real-time chat, MongoDB for secure group data
+  storage, and a user-friendly frontend for group creation, joining, and
+  management.
+
+  **User segment:**
+
+  **Value proposition**
+
+  **Next steps**
+
+  Some of the next steps we have in mind. To further build the Front-End and
+  search for chats, and filter for chats, pump chats, set rules for chats, Pay
+  to send messages and more.
+
+  To further develop ROFL.DAM, we'll work in increments. We start by doing
+  experiments on how the ideal user experiences the product at first.
+  Simultaneously, we'll speak with the users on what their feedback and problems
+  are, to further validate usability and explore opportunities for new features.
+  When we found proof for the use case with the ideal user group, and we can
+  create a solid business case we'll strengthen technical reliability by
+  stress-testing Nostr relays and optimizing MongoDB for secure, scalable group
+  data.&nbsp;
+
+  Later steps would include, Further improve the UX and expand on the features
+  that we discovered via testing and research. Which will be prioritized later
+  via a roadmap.
+
+  At the same time, we'll start working on building a community for ROFL.DAM
+  such that when we launch, we have a decent amount of chats ready to go on the
+  platform.
+
+  # Links
+
+  ChatAccessNFT.sol on oasis sapphire testnet
+
+  Rofl backend api endpoint + nostr on oasis sapphire testnet
+
+  Github repo
+
+  Live deployment on Vercel
+
+  Thank you!
+paratimes:
+  - sapphire
+codeUrl: https://github.com/rofl-fun/mono
+tutorials:
+  - Video demo: https://youtu.be/MgZ2gDmxN6c
+demoUrl: https://rofl-dam.vercel.app/
+created: '2025-06-06T18:07:30.827Z'
+lastUpdated: '2025-06-06T18:07:30.828Z'
+license: ''
+tags:
+  - ROFL
+  - Health
+  - Gaming
+  - ethdam2025
+  - Hackathon
+languages: []
+maintainedByOasis: false
