@@ -1,0 +1,61 @@
+name: Testament
+authors: []
+description: |
+  Last will and testament for crypto holders. Keep your will private while
+  you're alive. After you're deceased, beneficiaries can claim their share.
+
+  **Testament**
+
+  This project implements a decentralized crypto inheritance system using a
+  Testament contract on Oasis Sapphire and a Vault contract on another network.
+  The Testament keeps the will (heirs and allocations) hidden until the owner
+  dies and the executor unlocks the assets from the Vault for distribution.
+
+  https://github.com/jasny/eth3
+
+  https://www.youtube.com/watch?v=XIxbrY9pU88
+
+  https://www.youtube.com/watch?v=5Omaimr4Ydc&nbsp;(longer video)
+
+  **Live demo on https://testament.jasny.net**
+
+  ---
+
+  **"Your legacy, safe and private—until it matters most."**
+
+  You’ve built something meaningful. A family, a community, or a financial
+  legacy in the world of crypto. You want to pass it on with care. In the
+  traditional world, you would visit a notary, who holds your last will
+  securely, only to be revealed after your passing. No one could tamper with it.
+  No one could pressure you to change it. No one even knew what was inside.
+
+  **Until now, that was impossible in Web3.**
+
+  With *Testament*, we’ve brought that trusted notary model to the blockchain.
+  Using Oasis **Sapphire’s confidential smart contract execution**, your will
+  remains completely hidden—even from the network itself—until the time comes.
+  No nosy observers. No frontrunners. No risk of heirs or outsiders pressuring
+  you to reveal or amend your testament while you’re alive.
+
+  When you’re gone and no longer able to signal your presence, your testament
+  becomes available to your beneficiaries exactly as you intended. Immutable.
+  Transparent. Fair.
+
+  *It’s dignity, privacy, and finality—reimagined for the decentralized world.*
+paratimes:
+  - sapphire
+codeUrl: https://github.com/jasny/eth3https
+tutorials: []
+demoUrl: ''
+created: '2025-06-06T18:07:37.380Z'
+lastUpdated: '2025-06-06T18:07:37.380Z'
+license: ''
+tags:
+  - ROFL
+  - Health
+  - Gaming
+  - Telegram
+  - ethdam2025
+  - Hackathon
+languages: []
+maintainedByOasis: false
