@@ -16,58 +16,15 @@ description: |
   privacy and secure randomness into the gameplay, ensuring fairness and
   decentralization.
 
-  **&nbsp;Monster Encounters and Catching Mechanics**
-
-  The game client connects to a ROFL instance via WebSockets. As the player
-  moves around the grid, ROFL invokes a view function on the *MonCraft* smart
-  contract to determine if a Monster appears. This logic uses secure randomness
-  on Sapphire to make each encounter unpredictable and tamper-proof. If a
-  Monster appears, the player may choose to attempt a capture. To ensure smooth
-  gameplay, player movement is recorded off-chain in ROFL until the capture is
-  initiated. When a capture is attempted, ROFL sends a transaction to the smart
-  contract, which again uses secure randomness to decide the outcome. If
-  successful, the Monster is added to the player's current session, and the
-  player's state is synchronized on-chain. Each Monster is represented as an NFT
-  with unique attributes such as HP, attack damage, appearance rates, and
-  capture probabilities. To prevent abuse (e.g., rerolling movements to force
-  favorable outcomes), player movements are kept off-chain until a decision
-  point, minimizing the attack surface while preserving game feel.
-
-  In the following diagram, you can see how the moves are persisted only in ROFL
-  until the player attempts to catch a Monster. At that point, the moves are
-  synced on-chain and the NFT is minted.
-
-  **Game Sessions**
-
-  To lower the barrier to entry, the game supports **gasless gameplay:** no
-  wallet is required to start. When a session begins, a unique private access
-  code is generated, allowing players to return and resume progress later. ROFL
-  signs transactions on behalf of the player during gameplay.&nbsp;
-
-  Advanced users can optionally link their wallet and withdraw their Monster
-  NFTs to trade, transfer, or import them into other game sessions.
-
-  **Flights**
-
-  A game admin can create a fight between two sessions. Each player can join the
-  fight by selecting a Monster from their inventory. Once both players have
-  joined, the fight takes place off-chain in ROFL. ROFL calls a view function
-  that returns random damage caused by each Monster. It then simulates multiple
-  rounds automatically until one Monster's HP reaches zero. When that happens,
-  the winner is synced on-chain, and the losing Monster's NFT is burned.
 paratimes:
   - sapphire
 codeUrl: https://github.com/epintos/oasis-moncraft-game
-tutorials:
-  - Video demo: https://youtu.be/G7mGRyiOtKY
-demoUrl: ''
+demoUrl: https://youtu.be/G7mGRyiOtKY
 created: '2025-05-09T08:56:39Z'
 lastUpdated: '2025-05-13T07:08:10Z'
 tags:
   - ROFL
-  - Health
-  - Gaming
-  - Telegram
+  - moncraft
   - ethdam2025
   - Hackathon
 languages:

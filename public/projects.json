@@ -53,23 +53,20 @@
                 "Toufik Airane": "https://github.com/toufik-airane"
             }
         ],
-        "description": "The Activist Toolkit is a privacy-preserving infra offering proof-of-protest,\ndead man's switch, and secure tools to protect activists, verify presence, and\nresist authoritarian erasure.\n\n🛡️ **Activist Toolkit**\n\n*Protect the protest. Preserve the proof.*\n\nA decentralized, privacy-first protocol to empower activists, protect their\nidentities, and preserve immutable proof of protest — even under repressive\nregimes. Built using Oasis Sapphire and ROFL, Activist Toolkit provides\ncensorship-resistant infrastructure to verify presence, coordinate emergency\nalerts, and resist digital erasure without exposing user identities.\n\n✊ **Why Activist Toolkit?**\n\nActivist Toolkit&nbsp;is a secure, censorship-resistant system for modern\nhuman rights defenders.\n\nIn the face of growing **authoritarianism and digital surveillance,**\nactivists around the world are risking their lives — but often have&nbsp;no\nway to verify their actions, protect their communications, or prove their\ncontributions.\n\nConventional digital tools like photos or chat logs are:\n\n**Blockchain&nbsp;**isn't just useful — it's**&nbsp;essential.**It's\nthe&nbsp;only infrastructure&nbsp;that makes proof tamper-proof,\ndecentralized, and permanent.\n\n**🔍 What It Does**\n\n✅ Proof of ProtestAnonymous, geolocation-based, timestamped credentials that\nverify protest participation — without revealing personal identity.\n\n🔴 Dead Man Switch (Red Alert)A failsafe timer that triggers alerts to trusted\ncontacts if an activist goes silent or is detained.\n\n🧾 Peer Attestation SystemA decentralized verification process where trusted\nmembers vouch for presence, preventing fake participation or infiltration.\n\n**🔑 Feature Examples**\n\n✅**&nbsp;Proof of Protest**\n\n*Anonymous, verifiable presence — without needing to reveal your face or\ncontacts.*\n\nSidika&nbsp;is applying for asylum in the Netherlands. As a gender rights\nactivist from Turkey, she must prove her involvement in protests — but she\nnever appeared in photos and won't share private chats.Using Activist Toolkit,\nshe receives an&nbsp;immutable, peer-attested credential: she was present at X\nprotest, on Y date, verified by trusted witnesses.\n\nNow she has verifiable proof —&nbsp;without compromising herself or others.\n\n**🔴 Dead Man Switch**\n\n*Secure fallback for detained activists or those crossing danger zones.*\n\nAbdul&nbsp;is helping his sister cross a border into Germany. He sets\na&nbsp;6-hour timer&nbsp;in the toolkit.If he doesn't cancel in time, the app\nautomatically sends a&nbsp;prewritten message&nbsp;to his Telegram group of\nlegal and support contacts.\n\nThis feature can trigger help when silence becomes danger.\n\n**🔧 Tech Overview**\n\n✅ We use *roflEnsureAuthorizedOrigin&nbsp;*to guarantee only verified, secure\nTEE-originated data is accepted on-chain.🔧 Note: Link to code implementation\nwill be added soon.\n\n**🚧 Roadmap: Work in Progress**\n\nWe truly believe in the long-term existence of this project. We would aspire\nto continue improving the current features as well as adding more like:\n\n🪙 Anonymous FundraisingCreate and contribute to activist campaigns privately\nvia blockchain-native donations.\n\n💬 Activist Education ChatbotA conversational AI assistant trained on global\nactivist handbooks for real-time, context-aware guidance.\n\n🌐 Global Network ExpansionDevelop tools for collective resource sharing and\ndecentralized reputation systems across movements.\n\n**🏆 Hackathon Bounties**\n\nThis project qualifies for:\n\n**✅ Judging Criteria Checkpoints:**\n\n**🌐 Deployments**\n\n🧠 Team\n\nToufik | Evi | 1uiz | Migle\n",
+        "description": "The Activist Toolkit is a privacy-preserving infra offering proof-of-protest,\ndead man's switch, and secure tools to protect activists, verify presence, and\nresist authoritarian erasure.\n",
         "paratimes": [
             "sapphire"
         ],
         "codeUrl": "https://github.com/Tranquil-Flow/activist-privacy-handbook",
-        "tutorials": [],
-        "demoUrl": "https://www.canva.com/design/DAGnH2728u8/yopEnlPs3geicOp-B4W0Bw/watch?utm_content=DAGnH2728u8&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h97f9c73493",
+        "demoUrl": "https://www.canva.com/design/DAGnH2728u8/yopEnlPs3geicOp-B4W0Bw/watch?utm_content=DAGnH2728u8",
         "created": "2025-05-10T09:16:37Z",
         "lastUpdated": "2025-05-13T14:40:54Z",
         "license": "unlicense",
         "tags": [
             "ROFL",
-            "Health",
-            "Gaming",
-            "Telegram",
             "ethdam2025",
-            "Hackathon"
+            "Hackathon",
+            "activist-toolkit"
         ],
         "languages": [
             "Python",
@@ -81,10 +78,7 @@
         "maintainedByOasis": false,
         "screenshots": [
             "/projects/activist-toolkit/screenshots/01.jpg",
-            "/projects/activist-toolkit/screenshots/02.jpg",
-            "/projects/activist-toolkit/screenshots/03.jpg",
-            "/projects/activist-toolkit/screenshots/04.jpg",
-            "/projects/activist-toolkit/screenshots/05.jpg"
+            "/projects/activist-toolkit/screenshots/02.jpg"
         ],
         "slug": "activist-toolkit"
     },
@@ -1273,46 +1267,35 @@
         "name": "Farea",
         "authors": [
             {
-                "Oasis Protocol Foundation": "https://oasisprotocol.org"
+                "Armando Medina": "https://github.com/armsves"
             }
         ],
-        "description": "Private Animal Health Records on Oasis that rewards good owners with Circles\n\nThe Farea project is a decentralized application designed to manage Animal\nHealth Records privately using Sapphire Testnet and distribute rewards using\nROFL and Circles.&nbsp;\n\nYou can create Animals and add health records which are stored privately in\nthe AnimalHealth.sol contract deployed on Sapphire Testnet.\n\nYou can fetch the data signing with your wallet and trigger the decription of\nthe data to be visualized.\n\nThen you can assign rewards to a wallet that will get picked by the script\nrunning in ROFL that will trigger a token transfer of Circles from the\norganization to the designated wallet.\n\nHere are the contract addresses, app id and a github issue that I encountered\nwhile coding the project.\n\nThe github provides detailed instructions to deploy the project.\n\nAnimalsHealthRecord Contract on Sapphire Testnet:\n\n0x9Fe8bf017C062CAe35638c67EB985Ce216753403\n\nROFL app id:\n\nrofl1qphkxvyh35gvfysn04vhmp5q3ya470kprs6gz2yw\n\nGithub issue #583:\n\nhttps://github.com/oasisprotocol/sapphire-paratime/issues/583\n\nInjected wallet will fail if sapphire based chain is not selected in metamask\n#583\n",
+        "description": "Private Animal Health Records on Oasis that rewards good owners with Circles\n\nThe Farea project is a decentralized application designed to manage Animal\nHealth Records privately using Sapphire Testnet and distribute rewards using\nROFL and Circles.&nbsp;\n\nYou can create Animals and add health records which are stored privately in\nthe AnimalHealth.sol contract deployed on Sapphire Testnet.\n",
         "paratimes": [
             "sapphire"
         ],
         "codeUrl": "https://github.com/oasisprotocol/sapphire-paratime",
-        "tutorials": [
-            {
-                "Video demo": "https://youtu.be/zQh0uWNylOw"
-            }
-        ],
-        "demoUrl": null,
+        "demoUrl": "https://youtu.be/zQh0uWNylOw",
         "created": "2022-04-19T08:18:50Z",
         "lastUpdated": "2025-06-06T10:33:21Z",
         "license": "apache-2.0",
         "tags": [
             "ROFL",
-            "Health",
-            "Gaming",
+            "farea",
             "ethdam2025",
-            "Hackathon"
+            "Hackathon",
+            "circles"
         ],
         "languages": [
             "TypeScript",
             "Solidity",
-            "Python",
-            "Rust",
-            "Go",
-            "Makefile",
             "JavaScript",
-            "CSS",
-            "Shell"
+            "CSS"
         ],
-        "maintainedByOasis": true,
+        "maintainedByOasis": false,
         "screenshots": [
             "/projects/farea/screenshots/01.jpg",
-            "/projects/farea/screenshots/02.jpg",
-            "/projects/farea/screenshots/03.jpg"
+            "/projects/farea/screenshots/02.jpg"
         ],
         "slug": "farea"
     },
@@ -1450,29 +1433,37 @@
     },
     {
         "name": "HealthTrust",
-        "authors": [],
-        "description": "Privatized health data monetization. Help real people solve real problems\nwithout risking exposure.\n\n**Overview**\n\nHealthTrust turns sensitive health records into a self‑sovereign,\nprivacy‑preserving data asset that patients can safely monetize. Using\nOasis Sapphire’s confidential‑EVM and ROFL enclaves to keep raw files\ninvisible and IPFS for immutable storage. We let researchers run verifiable\ncomputations on encrypted data while patients retain absolute control. The\nresult is a legal compliance ready market for health insights that can power\nAI and help advance research, all without breaches or data hoarding.\n\n**Vision**\n\nWe envision a world where every bit of health data, from your daily steps and\nworkouts to overnight sleep patterns, is encrypted at the source and flows\ninto a secure, decentralized marketplace. Users connect their wearables once,\nretain full control over who accesses their data, and earn tokens whenever it\nfuels valuable research.\n\nMore than an MVP, HealthTrust lays the foundation for a thriving ecosystem in\nwhich personal health signals drive scientific breakthroughs and personalized\ncare, while keeping privacy and fairness front and center.\n\n**\n\n****WorkFlow of Health Trust**\n\nUsers begin by pairing their wearable accessory (e.g., a fitness tracker or\nsmartwatch) with our platform. From that moment on, all raw sensor data,heart\nrate, activity metrics, sleep patterns, etc. is encrypted in the user’s\nbrowser using the ROFL enclave’s public key, ensuring that only code running\ninside the Trusted Execution Environment can ever decrypt it.\n\nStorage on IPFS:\n\nThe encrypted data blob is pushed to IPFS, and its resulting Content\nIdentifier (CID) is recorded on-chain for future retrieval.\n\nTo aid discovery, we expose only a small set of non-sensitive metadata\n(gender, special conditions(diabetes, Asthma), BMI, etc.) in plaintext, so\nresearchers can browse and filter available datasets without seeing any\npersonal health details.\n\nData Offer &amp; Request:\n\nUsers create a “data offer” by registering the IPFS CID and metadata in a\nsmart contract, along with staking terms.\n\nWhen a researcher identifies a dataset of interest, they submit their analysis\ncode (e.g., an aggregate calculation) and stake tokens to the same contract.\nThis emits an on-chain event signaling the ROFL enclave to begin processing.\n\nConfidential Computation in ROFL:\n\nAn off-chain relayer feeds the event to the ROFL module. Inside the enclave,\nthe sequence is:\n\nFetch encrypted blobs from IPFS.\n\nDecrypt using the participant’s symmetric key.\n\nRun the researcher’s submitted code.\n\nEncrypt the result with the researcher’s public key.\n\nResult Delivery &amp; Settlement:\n\nThe enclave uploads the encrypted result back to IPFS and submits the new CID\non-chain.\n\nOnce the smart contract verifies the result hash, it automatically releases\nthe staked tokens to the data contributors.\n\nThe researcher retrieves the final ciphertext from IPFS and decrypts it\nlocally, confident that at no point was any personal data exposed outside the\nTEEs.\n\nThis workflow guarantees end-to-end confidentiality, transparent marketplace\ndiscovery, and aligned economic incentives, letting users effortlessly\nmonetize their wearable data while preserving absolute control over its\nprivacy.\n\n**Development Remarks**\n\nSingle ROFL Key PairTo avoid managing many user keys and on-chain lookups, all\ndata is encrypted with one ROFL public key; only the enclave holds the secret\nkey.\n\nEvent-Driven ExecutionRather than researchers calling ROFL directly, the\nenclave now listens for smart-contract JobRequested events to trigger\nconfidential computations.\n\n**Links**\n\nContracts, and ROFL\n\nFrontend\n\n**Contact**\n\nE-mail: [email&nbsp;protected]\n",
+        "authors": [
+            {
+                "Giorgos Kyriakou": "https://taikai.network/giorgoskyr"
+            },
+            {
+                "Leonardo Iara": "https://taikai.network/leoryuta"
+            }
+        ],
+        "description": "Privatized health data monetization. Help real people solve real problems\nwithout risking exposure.\n\nHealthTrust turns sensitive health records into a self‑sovereign,\nprivacy‑preserving data asset that patients can safely monetize. Using\nOasis Sapphire’s confidential‑EVM and ROFL enclaves to keep raw files\ninvisible and IPFS for immutable storage. We let researchers run verifiable\ncomputations on encrypted data while patients retain absolute control. The\nresult is a legal compliance ready market for health insights that can power\nAI and help advance research, all without breaches or data hoarding.\n\n**Vision**\n\nWe envision a world where every bit of health data, from your daily steps and\nworkouts to overnight sleep patterns, is encrypted at the source and flows\ninto a secure, decentralized marketplace. Users connect their wearables once,\nretain full control over who accesses their data, and earn tokens whenever it\nfuels valuable research.\n",
         "paratimes": [
             "sapphire"
         ],
         "codeUrl": "https://github.com/LeonardoRyuta/HealthTrust",
-        "tutorials": [
-            {
-                "Video demo": "https://youtu.be/WvF-DgKCgEE"
-            }
-        ],
-        "demoUrl": null,
+        "demoUrl": "https://youtu.be/WvF-DgKCgEE",
         "created": "2025-06-06T18:07:35.516Z",
         "lastUpdated": "2025-06-06T18:07:35.516Z",
         "license": "Unspecified",
         "tags": [
             "ROFL",
             "Health",
-            "Gaming",
             "ethdam2025",
-            "Hackathon"
+            "Hackathon",
+            "healthtrust"
         ],
-        "languages": [],
+        "languages": [
+            "TypeScript",
+            "Solidity",
+            "JavaScript",
+            "Go",
+            "Docker"
+        ],
         "maintainedByOasis": false,
         "screenshots": [
             "/projects/healthtrust/screenshots/01.jpg"
@@ -1586,24 +1577,17 @@
                 "Fede": "https://github.com/federava"
             }
         ],
-        "description": "Catch monsters in a Pokémon-style game powered by on-chain randomness,\nprivacy, and ROFL.\n\n**Implementation details**\n\nMonCraft is a retro-inspired, top-down RPG where players explore a grid-based\nworld, encounter wild Monsters, and attempt to catch them — blending on-chain\nprivacy with real-time gameplay.\n\nThe game leverages **Oasis Sapphire** and **ROFL** to introduce on-chain\nprivacy and secure randomness into the gameplay, ensuring fairness and\ndecentralization.\n\n**&nbsp;Monster Encounters and Catching Mechanics**\n\nThe game client connects to a ROFL instance via WebSockets. As the player\nmoves around the grid, ROFL invokes a view function on the *MonCraft* smart\ncontract to determine if a Monster appears. This logic uses secure randomness\non Sapphire to make each encounter unpredictable and tamper-proof. If a\nMonster appears, the player may choose to attempt a capture. To ensure smooth\ngameplay, player movement is recorded off-chain in ROFL until the capture is\ninitiated. When a capture is attempted, ROFL sends a transaction to the smart\ncontract, which again uses secure randomness to decide the outcome. If\nsuccessful, the Monster is added to the player's current session, and the\nplayer's state is synchronized on-chain. Each Monster is represented as an NFT\nwith unique attributes such as HP, attack damage, appearance rates, and\ncapture probabilities. To prevent abuse (e.g., rerolling movements to force\nfavorable outcomes), player movements are kept off-chain until a decision\npoint, minimizing the attack surface while preserving game feel.\n\nIn the following diagram, you can see how the moves are persisted only in ROFL\nuntil the player attempts to catch a Monster. At that point, the moves are\nsynced on-chain and the NFT is minted.\n\n**Game Sessions**\n\nTo lower the barrier to entry, the game supports **gasless gameplay:** no\nwallet is required to start. When a session begins, a unique private access\ncode is generated, allowing players to return and resume progress later. ROFL\nsigns transactions on behalf of the player during gameplay.&nbsp;\n\nAdvanced users can optionally link their wallet and withdraw their Monster\nNFTs to trade, transfer, or import them into other game sessions.\n\n**Flights**\n\nA game admin can create a fight between two sessions. Each player can join the\nfight by selecting a Monster from their inventory. Once both players have\njoined, the fight takes place off-chain in ROFL. ROFL calls a view function\nthat returns random damage caused by each Monster. It then simulates multiple\nrounds automatically until one Monster's HP reaches zero. When that happens,\nthe winner is synced on-chain, and the losing Monster's NFT is burned.\n",
+        "description": "Catch monsters in a Pokémon-style game powered by on-chain randomness,\nprivacy, and ROFL.\n\n**Implementation details**\n\nMonCraft is a retro-inspired, top-down RPG where players explore a grid-based\nworld, encounter wild Monsters, and attempt to catch them — blending on-chain\nprivacy with real-time gameplay.\n\nThe game leverages **Oasis Sapphire** and **ROFL** to introduce on-chain\nprivacy and secure randomness into the gameplay, ensuring fairness and\ndecentralization.\n",
         "paratimes": [
             "sapphire"
         ],
         "codeUrl": "https://github.com/epintos/oasis-moncraft-game",
-        "tutorials": [
-            {
-                "Video demo": "https://youtu.be/G7mGRyiOtKY"
-            }
-        ],
-        "demoUrl": null,
+        "demoUrl": "https://youtu.be/G7mGRyiOtKY",
         "created": "2025-05-09T08:56:39Z",
         "lastUpdated": "2025-05-13T07:08:10Z",
         "tags": [
             "ROFL",
-            "Health",
-            "Gaming",
-            "Telegram",
+            "moncraft",
             "ethdam2025",
             "Hackathon"
         ],
@@ -1619,9 +1603,7 @@
         "screenshots": [
             "/projects/moncraft/screenshots/01.jpg",
             "/projects/moncraft/screenshots/02.jpg",
-            "/projects/moncraft/screenshots/03.jpg",
-            "/projects/moncraft/screenshots/04.jpg",
-            "/projects/moncraft/screenshots/05.jpg"
+            "/projects/moncraft/screenshots/03.jpg"
         ],
         "license": "Unspecified",
         "slug": "moncraft"
@@ -1883,8 +1865,21 @@
     },
     {
         "name": "ROFL.DAM",
-        "authors": [],
-        "description": "Runtime Off-chain Function Logic Decentralized Authenticated Messaging -\nPowered by Oasis and Nostr\n\n**ROLF.DAM**\n\n**What**\n\nROFL.DAM Is a Web3-enabled chat platform running on OASIS ROFL where users can\ncreate or join groups, chat via a Nostr relay, and manage group membership\nwith help from MongoDB. It includes functionalities for users to input group\nmetadata (name, description, price), chat in real-time, and for moderators to\nmanage groups. The front end handles user interactions, while MongoDB supports\npersistent storage and Nostr ensures decentralized, censorship-resistant\ncommunication. For the first time in your life, your chat-data is now\ndecentralized and unreadable!\n\n**Problem**\n\nROFL.DAM (Runtime Off-chain Logic Decentralized Authenticated Messaging)\nsolves key problems of traditional chat platforms by giving users full\ncontrol, privacy, and resilience through decentralization. Unlike centralized\ntools prone to censorship, surveillance, and opaque moderation, ROFL.DAM uses\nNostr for censorship-resistant real-time chat, MongoDB for secure group data\nstorage, and a user-friendly frontend for group creation, joining, and\nmanagement.\n\n**User segment:**\n\n**Value proposition**\n\n**Next steps**\n\nSome of the next steps we have in mind. To further build the Front-End and\nsearch for chats, and filter for chats, pump chats, set rules for chats, Pay\nto send messages and more.\n\nTo further develop ROFL.DAM, we'll work in increments. We start by doing\nexperiments on how the ideal user experiences the product at first.\nSimultaneously, we'll speak with the users on what their feedback and problems\nare, to further validate usability and explore opportunities for new features.\nWhen we found proof for the use case with the ideal user group, and we can\ncreate a solid business case we'll strengthen technical reliability by\nstress-testing Nostr relays and optimizing MongoDB for secure, scalable group\ndata.&nbsp;\n\nLater steps would include, Further improve the UX and expand on the features\nthat we discovered via testing and research. Which will be prioritized later\nvia a roadmap.\n\nAt the same time, we'll start working on building a community for ROFL.DAM\nsuch that when we launch, we have a decent amount of chats ready to go on the\nplatform.\n\n# Links\n\nChatAccessNFT.sol on oasis sapphire testnet\n\nRofl backend api endpoint + nostr on oasis sapphire testnet\n\nGithub repo\n\nLive deployment on Vercel\n\nThank you!\n",
+        "authors": [
+            {
+                "pitycake": "https://taikai.network/pitycake"
+            },
+            {
+                "arjanjohan": "https://github.com/arjanjohan"
+            },
+            {
+                "Mart": "https://taikai.network/Mart"
+            },
+            {
+                "Jack Smith Insulander": "https://taikai.network/jacksmithinsulander"
+            }
+        ],
+        "description": "Runtime Off-chain Function Logic Decentralized Authenticated Messaging -\nPowered by Oasis and Nostr.\n\nROFL.DAM Is a Web3-enabled chat platform running on OASIS ROFL where users can\ncreate or join groups, chat via a Nostr relay, and manage group membership\nwith help from MongoDB. It includes functionalities for users to input group\nmetadata (name, description, price), chat in real-time, and for moderators to\nmanage groups. The front end handles user interactions, while MongoDB supports\npersistent storage and Nostr ensures decentralized, censorship-resistant\ncommunication. For the first time in your life, your chat-data is now\ndecentralized and unreadable!\n",
         "paratimes": [
             "sapphire"
         ],
@@ -1900,12 +1895,15 @@
         "license": "Unspecified",
         "tags": [
             "ROFL",
-            "Health",
-            "Gaming",
+            "MCP",
             "ethdam2025",
-            "Hackathon"
+            "Hackathon",
+            "ethdam-rope"
         ],
-        "languages": [],
+        "languages": [
+            "TypeScript",
+            "Rust"
+        ],
         "maintainedByOasis": false,
         "screenshots": [
             "/projects/rofl.dam/screenshots/01.jpg",
@@ -1958,8 +1956,24 @@
     },
     {
         "name": "RØPE",
-        "authors": [],
-        "description": "Trust-minimized on/offramp solution deployed as an MCP server. \n\nNo KYC, no middleman, no payment verification risk. Just verifiable execution\nwith ROFL &amp; private data handling via OPL.\n\nToday, getting crypto with your fiat means trusting someone a centralized\nexchange, a counterparty, or a Telegram stranger. You send the money, and you\nhope it works. If it doesn’t? Good luck.\n\n**RØPE** changes that.\n\nWe built a system where trust is no longer part of the equation. You send fiat\nfrom a Web2 app -like Wise or Modulr - and receive crypto in your wallet on\nyour chosen chain, within seconds. No KYC. No middlemen. No \"waiting for\nconfirmation.\" Just a smooth, verifiable experience.\n\nWhen you send a fiat payment, the request is handled by an agent deployed as\nan MCP server. This agent acts like an automated operator: it verifies that\nthe payment actually happened, keeps your private data secure, and once\neverything checks out, it sends the corresponding crypto directly to your\nwallet on-chain.\n\nWith**&nbsp;zkTLS**, the system verifies your fiat payment cryptographically.\n**No screenshots**, no API polling, no trust.&nbsp;\n\nThis proof feeds directly into the flow and ensures that the payment actually\nhappened before anything moves.\n\nMeanwhile, your sensitive information -wallet addresses, access credentials-\nis protected on-chain using**&nbsp;Sapphire&nbsp;**and **Oasis Privacy\nLayer&nbsp;**(OPL).&nbsp;\n\nOnce the payment is verified, the agent -running securely inside a TEE using\nROFL- triggers the crypto side of the transaction. It interacts with services\nlike Modulr (Wise alternative), Uniswap to perform the onramp, swap or bridge.\nAnd then the equivalent asset, say USDC, lands directly on your wallet on\nBase, or any supported chain and token.\n\nYou don’t lose money. Nothing breaks. The system just waits.This isn’t an\nescrow. It’s not a swap platform. It’s a verifiable automation layer that\nconnects fiat and crypto with trust-minimized assumptions.\n\nSo&nbsp;**RØPE&nbsp;**is not just an on/offramp — it’s the shortest, safest,\nand most verifiable path between money you have and money you use.\n\nGithub - ROFL\n\ndiscord: @feyyazcigim - telegram: @berilbektas&nbsp;\n",
+        "authors": [
+            {
+                "Yasir KILINÇ": "https://taikai.network/extypen"
+            },
+            {
+                "murat karan": "https://taikai.network/1muratkrn"
+            },
+            {
+                "gokhans": "https://taikai.network/gokhans"
+            },
+            {
+                "Feyyazcigim": "https://taikai.network/Feyyazcigim"
+            },
+            {
+                "0xberil": "https://taikai.network/0xberil"
+            }
+        ],
+        "description": "Trust-minimized on/offramp solution deployed as an MCP server. \n\nNo KYC, no middleman, no payment verification risk. Just verifiable execution\nwith ROFL &amp; private data handling via OPL.\n",
         "paratimes": [
             "sapphire"
         ],
@@ -1969,7 +1983,6 @@
                 "Video demo": "https://youtu.be/tl1rkJJPGPA"
             }
         ],
-        "demoUrl": null,
         "created": "2025-06-06T18:07:39.491Z",
         "lastUpdated": "2025-06-06T18:07:39.491Z",
         "license": "Unspecified",
@@ -1985,12 +1998,10 @@
         "maintainedByOasis": false,
         "screenshots": [
             "/projects/røpe/screenshots/01.jpg",
-            "/projects/røpe/screenshots/02.jpg",
-            "/projects/røpe/screenshots/03.jpg",
-            "/projects/røpe/screenshots/04.jpg",
-            "/projects/røpe/screenshots/05.jpg"
+            "/projects/røpe/screenshots/02.jpg"
         ],
-        "slug": "røpe"
+        "slug": "røpe",
+        "demoUrl": null
     },
     {
         "name": "Sapphire Confidential",
@@ -2213,31 +2224,43 @@
     },
     {
         "name": "Testament",
-        "authors": [],
-        "description": "Last will and testament for crypto holders. Keep your will private while\nyou're alive. After you're deceased, beneficiaries can claim their share.\n\n**Testament**\n\nThis project implements a decentralized crypto inheritance system using a\nTestament contract on Oasis Sapphire and a Vault contract on another network.\nThe Testament keeps the will (heirs and allocations) hidden until the owner\ndies and the executor unlocks the assets from the Vault for distribution.\n\nhttps://github.com/jasny/eth3\n\nhttps://www.youtube.com/watch?v=XIxbrY9pU88\n\nhttps://www.youtube.com/watch?v=5Omaimr4Ydc&nbsp;(longer video)\n\n**Live demo on https://testament.jasny.net**\n\n---\n\n**\"Your legacy, safe and private—until it matters most.\"**\n\nYou’ve built something meaningful. A family, a community, or a financial\nlegacy in the world of crypto. You want to pass it on with care. In the\ntraditional world, you would visit a notary, who holds your last will\nsecurely, only to be revealed after your passing. No one could tamper with it.\nNo one could pressure you to change it. No one even knew what was inside.\n\n**Until now, that was impossible in Web3.**\n\nWith *Testament*, we’ve brought that trusted notary model to the blockchain.\nUsing Oasis **Sapphire’s confidential smart contract execution**, your will\nremains completely hidden—even from the network itself—until the time comes.\nNo nosy observers. No frontrunners. No risk of heirs or outsiders pressuring\nyou to reveal or amend your testament while you’re alive.\n\nWhen you’re gone and no longer able to signal your presence, your testament\nbecomes available to your beneficiaries exactly as you intended. Immutable.\nTransparent. Fair.\n\n*It’s dignity, privacy, and finality—reimagined for the decentralized world.*\n",
+        "authors": [
+            {
+                "jasny": "https://taikai.network/jasny"
+            }
+        ],
+        "description": "Last will and testament for crypto holders. Keep your will private while\nyou're alive. After you're deceased, beneficiaries can claim their share.\n\nThis project implements a decentralized crypto inheritance system using a\nTestament contract on Oasis Sapphire and a Vault contract on another network.\nThe Testament keeps the will (heirs and allocations) hidden until the owner\ndies and the executor unlocks the assets from the Vault for distribution.\n",
         "paratimes": [
             "sapphire"
         ],
-        "codeUrl": "https://github.com/jasny/eth3https",
-        "tutorials": [],
-        "demoUrl": null,
+        "codeUrl": "https://github.com/jasny/eth3",
+        "tutorials": [
+            {
+                "Video demo 1": "https://www.youtube.com/watch?v=XIxbrY9pU88"
+            },
+            {
+                "Video demo 2": "https://www.youtube.com/watch?v=5Omaimr4Ydc"
+            }
+        ],
+        "demoUrl": "https://testament.jasny.net",
         "created": "2025-06-06T18:07:37.380Z",
         "lastUpdated": "2025-06-06T18:07:37.380Z",
         "license": "Unspecified",
         "tags": [
             "ROFL",
-            "Health",
-            "Gaming",
-            "Telegram",
             "ethdam2025",
-            "Hackathon"
+            "Hackathon",
+            "testament"
         ],
-        "languages": [],
+        "languages": [
+            "TypeScript",
+            "Solidity",
+            "CSS"
+        ],
         "maintainedByOasis": false,
         "screenshots": [
             "/projects/testament/screenshots/01.jpg",
-            "/projects/testament/screenshots/02.jpg",
-            "/projects/testament/screenshots/03.jpg"
+            "/projects/testament/screenshots/02.jpg"
         ],
         "slug": "testament"
     },
@@ -2422,31 +2445,40 @@
     },
     {
         "name": "ZK-Pal",
-        "authors": [],
-        "description": "On-ramps/Off-ramps system using Paypal\n\nAccess to cryptocurrencies is becoming increasingly restrictive. Users must\nnow go through centralized exchanges, complete KYC procedures, and wait for\nvalidation. ZK-Pal aims to restore trustless peer-to-peer exchange using\nPayPal as a fiat bridge.\n\nOur objective is to offer an alternative aligned with the foundational\nprinciples of blockchain: decentralization and peer-to-peer exchange. By\nleveraging an existing payment system like PayPal, we aimed to enable users to\nbuy and sell crypto without relying on centralized intermediaries. Through\nthis project, we introduce an on-ramp/off-ramp mechanism where users can\ncreate and fulfill USDC offers in exchange for PayPal transfers.\n\nThe process begins when a user creates an offer on a smart contract deployed\non Oasis Sapphire. This contract allows the user to lock a specified amount of\nUSDC and securely store sensitive information, such as their PayPal handle,\nusing Sapphire’s confidential features. Another user, interested in purchasing\nthe USDC, can subscribe to this offer through the contract. After subscribing,\nthe buyer must send the agreed amount via PayPal to the seller and retrieve\nthe confirmation email from PayPal for this transaction.\n\nThe buyer forwards the PayPal confirmation email to a dedicated email address,\naccessible only by ROFL container. This container operates within a trusted\nexecution environment (TEE) using Oasis's ROFL system. Its role is to\nautomatically fetch incoming emails, verify their authenticity, extract the\nrelevant details—such as the PayPal handle and transferred amount—and, upon\nsuccessful validation, interact with the Sapphire smart contract to release\nthe locked USDC to the buyer.\n\nIssues raised:\n\nhttps://github.com/oasisprotocol/demo-rofl-chatbot/issues/18\n\nhttps://github.com/oasisprotocol/oasis-sdk/issues/2211\n",
+        "authors": [
+            {
+                "Régis": "https://taikai.network/regisgraptin"
+            },
+            {
+                "spoyte117": "https://taikai.network/spoyte117"
+            }
+        ],
+        "description": "On-ramps/Off-ramps system using Paypal\n\nAccess to cryptocurrencies is becoming increasingly restrictive. Users must\nnow go through centralized exchanges, complete KYC procedures, and wait for\nvalidation. ZK-Pal aims to restore trustless peer-to-peer exchange using\nPayPal as a fiat bridge.\n\nOur objective is to offer an alternative aligned with the foundational\nprinciples of blockchain: decentralization and peer-to-peer exchange. By\nleveraging an existing payment system like PayPal, we aimed to enable users to\nbuy and sell crypto without relying on centralized intermediaries. Through\nthis project, we introduce an on-ramp/off-ramp mechanism where users can\ncreate and fulfill USDC offers in exchange for PayPal transfers.\n",
         "paratimes": [
             "sapphire"
         ],
         "codeUrl": "https://github.com/oasisprotocol/demo-rofl-chatbot",
-        "tutorials": [],
-        "demoUrl": null,
+        "demoUrl": "https://www.youtube.com/watch?v=W9V_S_5Lqsk",
         "created": "2025-06-06T18:07:32.630Z",
         "lastUpdated": "2025-06-06T18:07:32.630Z",
         "license": "Unspecified",
         "tags": [
             "ROFL",
-            "Health",
-            "Gaming",
+            "zk-pal",
             "ethdam2025",
             "Hackathon"
         ],
-        "languages": [],
+        "languages": [
+            "TypeScript",
+            "Python",
+            "Noir",
+            "Solidity",
+            "Makefile"
+        ],
         "maintainedByOasis": true,
         "screenshots": [
             "/projects/zk-pal/screenshots/01.jpg",
-            "/projects/zk-pal/screenshots/02.jpg",
-            "/projects/zk-pal/screenshots/03.jpg",
-            "/projects/zk-pal/screenshots/04.jpg"
+            "/projects/zk-pal/screenshots/02.jpg"
         ],
         "slug": "zk-pal"
     }

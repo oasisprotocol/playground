@@ -1,5 +1,7 @@
 name: ZK-Pal
-authors: []
+authors:
+  - Régis: https://taikai.network/regisgraptin
+  - spoyte117: https://taikai.network/spoyte117
 description: |
   On-ramps/Off-ramps system using Paypal
 
@@ -15,40 +17,22 @@ description: |
   this project, we introduce an on-ramp/off-ramp mechanism where users can
   create and fulfill USDC offers in exchange for PayPal transfers.
 
-  The process begins when a user creates an offer on a smart contract deployed
-  on Oasis Sapphire. This contract allows the user to lock a specified amount of
-  USDC and securely store sensitive information, such as their PayPal handle,
-  using Sapphire’s confidential features. Another user, interested in purchasing
-  the USDC, can subscribe to this offer through the contract. After subscribing,
-  the buyer must send the agreed amount via PayPal to the seller and retrieve
-  the confirmation email from PayPal for this transaction.
-
-  The buyer forwards the PayPal confirmation email to a dedicated email address,
-  accessible only by ROFL container. This container operates within a trusted
-  execution environment (TEE) using Oasis's ROFL system. Its role is to
-  automatically fetch incoming emails, verify their authenticity, extract the
-  relevant details—such as the PayPal handle and transferred amount—and, upon
-  successful validation, interact with the Sapphire smart contract to release
-  the locked USDC to the buyer.
-
-  Issues raised:
-
-  https://github.com/oasisprotocol/demo-rofl-chatbot/issues/18
-
-  https://github.com/oasisprotocol/oasis-sdk/issues/2211
 paratimes:
   - sapphire
 codeUrl: https://github.com/oasisprotocol/demo-rofl-chatbot
-tutorials: []
-demoUrl: ''
+demoUrl: 'https://www.youtube.com/watch?v=W9V_S_5Lqsk'
 created: '2025-06-06T18:07:32.630Z'
 lastUpdated: '2025-06-06T18:07:32.630Z'
 license: ''
 tags:
   - ROFL
-  - Health
-  - Gaming
+  - zk-pal
   - ethdam2025
   - Hackathon
-languages: []
-maintainedByOasis: true
+languages:
+  - typescript
+  - python
+  - noir
+  - solidity
+  - makefile
+maintainedByOasis: false

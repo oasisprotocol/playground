@@ -1,6 +1,6 @@
 name: Farea
 authors:
-  - Oasis Protocol Foundation: https://oasisprotocol.org
+  - Armando Medina: https://github.com/armsves
 description: |
   Private Animal Health Records on Oasis that rewards good owners with Circles
 
@@ -11,55 +11,22 @@ description: |
   You can create Animals and add health records which are stored privately in
   the AnimalHealth.sol contract deployed on Sapphire Testnet.
 
-  You can fetch the data signing with your wallet and trigger the decription of
-  the data to be visualized.
-
-  Then you can assign rewards to a wallet that will get picked by the script
-  running in ROFL that will trigger a token transfer of Circles from the
-  organization to the designated wallet.
-
-  Here are the contract addresses, app id and a github issue that I encountered
-  while coding the project.
-
-  The github provides detailed instructions to deploy the project.
-
-  AnimalsHealthRecord Contract on Sapphire Testnet:
-
-  0x9Fe8bf017C062CAe35638c67EB985Ce216753403
-
-  ROFL app id:
-
-  rofl1qphkxvyh35gvfysn04vhmp5q3ya470kprs6gz2yw
-
-  Github issue #583:
-
-  https://github.com/oasisprotocol/sapphire-paratime/issues/583
-
-  Injected wallet will fail if sapphire based chain is not selected in metamask
-  #583
 paratimes:
   - sapphire
 codeUrl: https://github.com/oasisprotocol/sapphire-paratime
-tutorials:
-  - Video demo: https://youtu.be/zQh0uWNylOw
-demoUrl: ''
+demoUrl: 'https://youtu.be/zQh0uWNylOw'
 created: '2022-04-19T08:18:50Z'
 lastUpdated: '2025-06-06T10:33:21Z'
 license: apache-2.0
 tags:
   - ROFL
-  - Health
-  - Gaming
+  - farea
   - ethdam2025
   - Hackathon
+  - circles
 languages:
   - typescript
   - solidity
-  - python
-  - rust
-  - go
-  - makefile
   - javascript
   - css
-  - shell
-maintainedByOasis: true
+maintainedByOasis: false
