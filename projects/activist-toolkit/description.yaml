@@ -1,0 +1,127 @@
+name: Activist Toolkit
+authors:
+  - Evi Nova: https://github.com/Tranquil-Flow
+  - Migle: https://github.com/Rakymi
+  - Toufik Airane: https://github.com/toufik-airane
+description: |
+  The Activist Toolkit is a privacy-preserving infra offering proof-of-protest,
+  dead man's switch, and secure tools to protect activists, verify presence, and
+  resist authoritarian erasure.
+
+  🛡️ **Activist Toolkit**
+
+  *Protect the protest. Preserve the proof.*
+
+  A decentralized, privacy-first protocol to empower activists, protect their
+  identities, and preserve immutable proof of protest — even under repressive
+  regimes. Built using Oasis Sapphire and ROFL, Activist Toolkit provides
+  censorship-resistant infrastructure to verify presence, coordinate emergency
+  alerts, and resist digital erasure without exposing user identities.
+
+  ✊ **Why Activist Toolkit?**
+
+  Activist Toolkit&nbsp;is a secure, censorship-resistant system for modern
+  human rights defenders.
+
+  In the face of growing **authoritarianism and digital surveillance,**
+  activists around the world are risking their lives — but often have&nbsp;no
+  way to verify their actions, protect their communications, or prove their
+  contributions.
+
+  Conventional digital tools like photos or chat logs are:
+
+  **Blockchain&nbsp;**isn't just useful — it's**&nbsp;essential.**It's
+  the&nbsp;only infrastructure&nbsp;that makes proof tamper-proof,
+  decentralized, and permanent.
+
+  **🔍 What It Does**
+
+  ✅ Proof of ProtestAnonymous, geolocation-based, timestamped credentials that
+  verify protest participation — without revealing personal identity.
+
+  🔴 Dead Man Switch (Red Alert)A failsafe timer that triggers alerts to trusted
+  contacts if an activist goes silent or is detained.
+
+  🧾 Peer Attestation SystemA decentralized verification process where trusted
+  members vouch for presence, preventing fake participation or infiltration.
+
+  **🔑 Feature Examples**
+
+  ✅**&nbsp;Proof of Protest**
+
+  *Anonymous, verifiable presence — without needing to reveal your face or
+  contacts.*
+
+  Sidika&nbsp;is applying for asylum in the Netherlands. As a gender rights
+  activist from Turkey, she must prove her involvement in protests — but she
+  never appeared in photos and won't share private chats.Using Activist Toolkit,
+  she receives an&nbsp;immutable, peer-attested credential: she was present at X
+  protest, on Y date, verified by trusted witnesses.
+
+  Now she has verifiable proof —&nbsp;without compromising herself or others.
+
+  **🔴 Dead Man Switch**
+
+  *Secure fallback for detained activists or those crossing danger zones.*
+
+  Abdul&nbsp;is helping his sister cross a border into Germany. He sets
+  a&nbsp;6-hour timer&nbsp;in the toolkit.If he doesn't cancel in time, the app
+  automatically sends a&nbsp;prewritten message&nbsp;to his Telegram group of
+  legal and support contacts.
+
+  This feature can trigger help when silence becomes danger.
+
+  **🔧 Tech Overview**
+
+  ✅ We use *roflEnsureAuthorizedOrigin&nbsp;*to guarantee only verified, secure
+  TEE-originated data is accepted on-chain.🔧 Note: Link to code implementation
+  will be added soon.
+
+  **🚧 Roadmap: Work in Progress**
+
+  We truly believe in the long-term existence of this project. We would aspire
+  to continue improving the current features as well as adding more like:
+
+  🪙 Anonymous FundraisingCreate and contribute to activist campaigns privately
+  via blockchain-native donations.
+
+  💬 Activist Education ChatbotA conversational AI assistant trained on global
+  activist handbooks for real-time, context-aware guidance.
+
+  🌐 Global Network ExpansionDevelop tools for collective resource sharing and
+  decentralized reputation systems across movements.
+
+  **🏆 Hackathon Bounties**
+
+  This project qualifies for:
+
+  **✅ Judging Criteria Checkpoints:**
+
+  **🌐 Deployments**
+
+  🧠 Team
+
+  Toufik | Evi | 1uiz | Migle
+paratimes:
+  - sapphire
+codeUrl: https://github.com/Tranquil-Flow/activist-privacy-handbook
+tutorials: []
+demoUrl: >-
+  https://www.canva.com/design/DAGnH2728u8/yopEnlPs3geicOp-B4W0Bw/watch?utm_content=DAGnH2728u8&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h97f9c73493
+created: '2025-05-10T09:16:37Z'
+lastUpdated: '2025-05-13T14:40:54Z'
+license: unlicense
+tags:
+  - ROFL
+  - Health
+  - Gaming
+  - Telegram
+  - ethdam2025
+  - Hackathon
+languages:
+  - python
+  - typescript
+  - solidity
+  - javascript
+  - dockerfile
+maintainedByOasis: false

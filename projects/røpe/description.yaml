@@ -1,0 +1,69 @@
+name: RØPE
+authors: []
+description: |
+  Trust-minimized on/offramp solution deployed as an MCP server. 
+
+  No KYC, no middleman, no payment verification risk. Just verifiable execution
+  with ROFL &amp; private data handling via OPL.
+
+  Today, getting crypto with your fiat means trusting someone a centralized
+  exchange, a counterparty, or a Telegram stranger. You send the money, and you
+  hope it works. If it doesn’t? Good luck.
+
+  **RØPE** changes that.
+
+  We built a system where trust is no longer part of the equation. You send fiat
+  from a Web2 app -like Wise or Modulr - and receive crypto in your wallet on
+  your chosen chain, within seconds. No KYC. No middlemen. No "waiting for
+  confirmation." Just a smooth, verifiable experience.
+
+  When you send a fiat payment, the request is handled by an agent deployed as
+  an MCP server. This agent acts like an automated operator: it verifies that
+  the payment actually happened, keeps your private data secure, and once
+  everything checks out, it sends the corresponding crypto directly to your
+  wallet on-chain.
+
+  With**&nbsp;zkTLS**, the system verifies your fiat payment cryptographically.
+  **No screenshots**, no API polling, no trust.&nbsp;
+
+  This proof feeds directly into the flow and ensures that the payment actually
+  happened before anything moves.
+
+  Meanwhile, your sensitive information -wallet addresses, access credentials-
+  is protected on-chain using**&nbsp;Sapphire&nbsp;**and **Oasis Privacy
+  Layer&nbsp;**(OPL).&nbsp;
+
+  Once the payment is verified, the agent -running securely inside a TEE using
+  ROFL- triggers the crypto side of the transaction. It interacts with services
+  like Modulr (Wise alternative), Uniswap to perform the onramp, swap or bridge.
+  And then the equivalent asset, say USDC, lands directly on your wallet on
+  Base, or any supported chain and token.
+
+  You don’t lose money. Nothing breaks. The system just waits.This isn’t an
+  escrow. It’s not a swap platform. It’s a verifiable automation layer that
+  connects fiat and crypto with trust-minimized assumptions.
+
+  So&nbsp;**RØPE&nbsp;**is not just an on/offramp — it’s the shortest, safest,
+  and most verifiable path between money you have and money you use.
+
+  Github - ROFL
+
+  discord: @feyyazcigim - telegram: @berilbektas&nbsp;
+paratimes:
+  - sapphire
+codeUrl: https://github.com/itublockchain/ethdam-rope
+tutorials:
+  - Video demo: https://youtu.be/tl1rkJJPGPA
+demoUrl: ''
+created: '2025-06-06T18:07:39.491Z'
+lastUpdated: '2025-06-06T18:07:39.491Z'
+license: ''
+tags:
+  - ROFL
+  - Health
+  - Gaming
+  - Telegram
+  - ethdam2025
+  - Hackathon
+languages: []
+maintainedByOasis: false
