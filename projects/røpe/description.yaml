@@ -11,6 +11,8 @@ description: |
   No KYC, no middleman, no payment verification risk. Just verifiable execution
   with ROFL &amp; private data handling via OPL.
 
+  Check out more on the hackathon's [project page](https://taikai.network/cryptocanal/hackathons/ethdam2025/projects/cmaix7zwt01hli8o9fr4ycpub).
+
 paratimes:
   - sapphire
 codeUrl: https://github.com/itublockchain/ethdam-rope
@@ -21,10 +23,8 @@ lastUpdated: '2025-06-06T18:07:39.491Z'
 license: ''
 tags:
   - ROFL
-  - Health
-  - Gaming
-  - Telegram
-  - ethdam2025
+  - Røpe
+  - ETHDam 2025
   - Hackathon
 languages: []
 maintainedByOasis: false

@@ -10,23 +10,25 @@ description: |
 
   You can create Animals and add health records which are stored privately in
   the AnimalHealth.sol contract deployed on Sapphire Testnet.
+  
+  Check out more on the hackathon's [project page](https://taikai.network/cryptocanal/hackathons/ethdam2025/projects/cmaivfkl601h710wsuqkj0x3d).
 
 paratimes:
   - sapphire
-codeUrl: https://github.com/oasisprotocol/sapphire-paratime
-demoUrl: 'https://youtu.be/zQh0uWNylOw'
+codeUrl: https://github.com/armsves/animalsHealthandRewards/
+tutorials:
+  - Video demo: https://youtu.be/zQh0uWNylOw'
 created: '2022-04-19T08:18:50Z'
 lastUpdated: '2025-06-06T10:33:21Z'
 license: apache-2.0
 tags:
   - ROFL
   - farea
-  - ethdam2025
+  - ETHDam 2025
   - Hackathon
   - circles
 languages:
   - typescript
   - solidity
-  - javascript
   - css
 maintainedByOasis: false

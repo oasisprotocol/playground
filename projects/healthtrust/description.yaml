@@ -22,23 +22,24 @@ description: |
   retain full control over who accesses their data, and earn tokens whenever it
   fuels valuable research.
 
+  Check out more on the hackathon's [project page](https://taikai.network/cryptocanal/hackathons/ethdam2025/projects/cmaj53mzs01jui8o9hnlkttxy).
+
 paratimes:
   - sapphire
 codeUrl: https://github.com/LeonardoRyuta/HealthTrust
-demoUrl: https://youtu.be/WvF-DgKCgEE
+tutorials:
+  - Video demo: https://youtu.be/WvF-DgKCgEE
 created: '2025-06-06T18:07:35.516Z'
 lastUpdated: '2025-06-06T18:07:35.516Z'
 license: ''
 tags:
   - ROFL
   - Health
-  - ethdam2025
+  - ETHDam 2025
   - Hackathon
   - healthtrust
 languages:
   - typescript
   - solidity
-  - javascript
   - go
-  - dockerfile
 maintainedByOasis: false

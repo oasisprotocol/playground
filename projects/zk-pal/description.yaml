@@ -17,17 +17,20 @@ description: |
   this project, we introduce an on-ramp/off-ramp mechanism where users can
   create and fulfill USDC offers in exchange for PayPal transfers.
 
+  Check out more on the hackathon's [project page](https://taikai.network/cryptocanal/hackathons/ethdam2025/projects/cmai9r0db00xii8o9daaz8rbn).
+
 paratimes:
   - sapphire
 codeUrl: https://github.com/oasisprotocol/demo-rofl-chatbot
-demoUrl: 'https://www.youtube.com/watch?v=W9V_S_5Lqsk'
+tutorials:
+  - Video demo: https://www.youtube.com/watch?v=W9V_S_5Lqsk
 created: '2025-06-06T18:07:32.630Z'
 lastUpdated: '2025-06-06T18:07:32.630Z'
 license: ''
 tags:
   - ROFL
   - zk-pal
-  - ethdam2025
+  - ETHDam 2025
   - Hackathon
 languages:
   - typescript

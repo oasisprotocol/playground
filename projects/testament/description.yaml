@@ -10,6 +10,8 @@ description: |
   The Testament keeps the will (heirs and allocations) hidden until the owner
   dies and the executor unlocks the assets from the Vault for distribution.
 
+  Check out more on the hackathon's [project page](https://taikai.network/cryptocanal/hackathons/ethdam2025/projects/cmaj27ry801bb3pl1gam5jvq9).
+
 paratimes:
   - sapphire
 codeUrl: https://github.com/jasny/eth3
@@ -22,7 +24,7 @@ lastUpdated: '2025-06-06T18:07:37.380Z'
 license: ''
 tags:
   - ROFL
-  - ethdam2025
+  - ETHDam 2025
   - Hackathon
   - testament
 languages:

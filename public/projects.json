@@ -53,32 +53,37 @@
                 "Toufik Airane": "https://github.com/toufik-airane"
             }
         ],
-        "description": "The Activist Toolkit is a privacy-preserving infra offering proof-of-protest,\ndead man's switch, and secure tools to protect activists, verify presence, and\nresist authoritarian erasure.\n",
+        "description": "The Activist Toolkit is a privacy-preserving infra offering proof-of-protest,\ndead man's switch, and secure tools to protect activists, verify presence, and\nresist authoritarian erasure.\nCheck out more on the hackathon's [project page](https://taikai.network/cryptocanal/hackathons/ethdam2025/projects/cmail56tw011w3pl1sp1b4ot7 ).\n",
         "paratimes": [
             "sapphire"
         ],
         "codeUrl": "https://github.com/Tranquil-Flow/activist-privacy-handbook",
-        "demoUrl": "https://www.canva.com/design/DAGnH2728u8/yopEnlPs3geicOp-B4W0Bw/watch?utm_content=DAGnH2728u8",
+        "demoUrl": "https://v0-create-protest-feature-blue.vercel.app/",
+        "tutorials": [
+            {
+                "Video demo": "https://www.canva.com/design/DAGnH2728u8/yopEnlPs3geicOp-B4W0Bw/watch?utm_content=DAGnH2728u8"
+            }
+        ],
         "created": "2025-05-10T09:16:37Z",
         "lastUpdated": "2025-05-13T14:40:54Z",
         "license": "unlicense",
         "tags": [
             "ROFL",
-            "ethdam2025",
+            "ETHDam 2025",
             "Hackathon",
-            "activist-toolkit"
+            "activist"
         ],
         "languages": [
             "Python",
             "TypeScript",
-            "Solidity",
-            "JavaScript",
-            "Docker"
+            "Solidity"
         ],
         "maintainedByOasis": false,
         "screenshots": [
-            "/projects/activist-toolkit/screenshots/01.jpg",
-            "/projects/activist-toolkit/screenshots/02.jpg"
+            "/projects/activist-toolkit/screenshots/e26e7d60-2e3d-11f0-bb1c-6d18f81c1c2d1st TA Pitchdeck.png",
+            "/projects/activist-toolkit/screenshots/e861c650-2e3d-11f0-bb1c-6d18f81c1c2d2 Pitchdeck.png",
+            "/projects/activist-toolkit/screenshots/ecafc3b0-2e3d-11f0-bb1c-6d18f81c1c2d3.png",
+            "/projects/activist-toolkit/screenshots/ef433fd0-2e3d-11f0-bb4a-17964d1063034.png"
         ],
         "slug": "activist-toolkit"
     },
@@ -1270,34 +1275,40 @@
                 "Armando Medina": "https://github.com/armsves"
             }
         ],
-        "description": "Private Animal Health Records on Oasis that rewards good owners with Circles\n\nThe Farea project is a decentralized application designed to manage Animal\nHealth Records privately using Sapphire Testnet and distribute rewards using\nROFL and Circles.&nbsp;\n\nYou can create Animals and add health records which are stored privately in\nthe AnimalHealth.sol contract deployed on Sapphire Testnet.\n",
+        "description": "Private Animal Health Records on Oasis that rewards good owners with Circles\n\nThe Farea project is a decentralized application designed to manage Animal\nHealth Records privately using Sapphire Testnet and distribute rewards using\nROFL and Circles.&nbsp;\n\nYou can create Animals and add health records which are stored privately in\nthe AnimalHealth.sol contract deployed on Sapphire Testnet.\n\nCheck out more on the hackathon's [project page](https://taikai.network/cryptocanal/hackathons/ethdam2025/projects/cmaivfkl601h710wsuqkj0x3d).\n",
         "paratimes": [
             "sapphire"
         ],
-        "codeUrl": "https://github.com/oasisprotocol/sapphire-paratime",
-        "demoUrl": "https://youtu.be/zQh0uWNylOw",
+        "codeUrl": "https://github.com/armsves/animalsHealthandRewards/",
+        "tutorials": [
+            {
+                "Video demo": "https://youtu.be/zQh0uWNylOw'"
+            }
+        ],
         "created": "2022-04-19T08:18:50Z",
         "lastUpdated": "2025-06-06T10:33:21Z",
         "license": "apache-2.0",
         "tags": [
             "ROFL",
             "farea",
-            "ethdam2025",
+            "ETHDam 2025",
             "Hackathon",
             "circles"
         ],
         "languages": [
             "TypeScript",
             "Solidity",
-            "JavaScript",
             "CSS"
         ],
         "maintainedByOasis": false,
         "screenshots": [
-            "/projects/farea/screenshots/01.jpg",
-            "/projects/farea/screenshots/02.jpg"
+            "/projects/farea/screenshots/d7532230-2e26-11f0-bb1c-6d18f81c1c2dfarea1.png",
+            "/projects/farea/screenshots/d996a990-2e26-11f0-bb1c-6d18f81c1c2dfarea2.png",
+            "/projects/farea/screenshots/db3e1800-2e26-11f0-bb1c-6d18f81c1c2dfarea3.png",
+            "/projects/farea/screenshots/dcb32bd0-2e26-11f0-bb1c-6d18f81c1c2dfarea4.png"
         ],
-        "slug": "farea"
+        "slug": "farea",
+        "demoUrl": null
     },
     {
         "name": "Fastlane",
@@ -1441,34 +1452,41 @@
                 "Leonardo Iara": "https://taikai.network/leoryuta"
             }
         ],
-        "description": "Privatized health data monetization. Help real people solve real problems\nwithout risking exposure.\n\nHealthTrust turns sensitive health records into a self‑sovereign,\nprivacy‑preserving data asset that patients can safely monetize. Using\nOasis Sapphire’s confidential‑EVM and ROFL enclaves to keep raw files\ninvisible and IPFS for immutable storage. We let researchers run verifiable\ncomputations on encrypted data while patients retain absolute control. The\nresult is a legal compliance ready market for health insights that can power\nAI and help advance research, all without breaches or data hoarding.\n\n**Vision**\n\nWe envision a world where every bit of health data, from your daily steps and\nworkouts to overnight sleep patterns, is encrypted at the source and flows\ninto a secure, decentralized marketplace. Users connect their wearables once,\nretain full control over who accesses their data, and earn tokens whenever it\nfuels valuable research.\n",
+        "description": "Privatized health data monetization. Help real people solve real problems\nwithout risking exposure.\n\nHealthTrust turns sensitive health records into a self‑sovereign,\nprivacy‑preserving data asset that patients can safely monetize. Using\nOasis Sapphire’s confidential‑EVM and ROFL enclaves to keep raw files\ninvisible and IPFS for immutable storage. We let researchers run verifiable\ncomputations on encrypted data while patients retain absolute control. The\nresult is a legal compliance ready market for health insights that can power\nAI and help advance research, all without breaches or data hoarding.\n\n**Vision**\n\nWe envision a world where every bit of health data, from your daily steps and\nworkouts to overnight sleep patterns, is encrypted at the source and flows\ninto a secure, decentralized marketplace. Users connect their wearables once,\nretain full control over who accesses their data, and earn tokens whenever it\nfuels valuable research.\n\nCheck out more on the hackathon's [project page](https://taikai.network/cryptocanal/hackathons/ethdam2025/projects/cmaj53mzs01jui8o9hnlkttxy).\n",
         "paratimes": [
             "sapphire"
         ],
         "codeUrl": "https://github.com/LeonardoRyuta/HealthTrust",
-        "demoUrl": "https://youtu.be/WvF-DgKCgEE",
+        "tutorials": [
+            {
+                "Video demo": "https://youtu.be/WvF-DgKCgEE"
+            }
+        ],
         "created": "2025-06-06T18:07:35.516Z",
         "lastUpdated": "2025-06-06T18:07:35.516Z",
         "license": "Unspecified",
         "tags": [
             "ROFL",
             "Health",
-            "ethdam2025",
+            "ETHDam 2025",
             "Hackathon",
             "healthtrust"
         ],
         "languages": [
             "TypeScript",
             "Solidity",
-            "JavaScript",
-            "Go",
-            "Docker"
+            "Go"
         ],
         "maintainedByOasis": false,
         "screenshots": [
-            "/projects/healthtrust/screenshots/01.jpg"
+            "/projects/healthtrust/screenshots/01.jpg",
+            "/projects/healthtrust/screenshots/41dfb320-2e31-11f0-aaf7-09e20aed0032Screenshot 2025-05-11 082802.png",
+            "/projects/healthtrust/screenshots/44e6ffb0-2e31-11f0-bb1c-6d18f81c1c2dScreenshot 2025-05-11 082814.png",
+            "/projects/healthtrust/screenshots/48425fb0-2e31-11f0-bb1c-6d18f81c1c2dScreenshot 2025-05-11 082838.png",
+            "/projects/healthtrust/screenshots/4b1b4940-2e31-11f0-bb1c-6d18f81c1c2dScreenshot 2025-05-11 082859.png"
         ],
-        "slug": "healthtrust"
+        "slug": "healthtrust",
+        "demoUrl": null
     },
     {
         "name": "Lending Sapphire",
@@ -1577,36 +1595,40 @@
                 "Fede": "https://github.com/federava"
             }
         ],
-        "description": "Catch monsters in a Pokémon-style game powered by on-chain randomness,\nprivacy, and ROFL.\n\n**Implementation details**\n\nMonCraft is a retro-inspired, top-down RPG where players explore a grid-based\nworld, encounter wild Monsters, and attempt to catch them — blending on-chain\nprivacy with real-time gameplay.\n\nThe game leverages **Oasis Sapphire** and **ROFL** to introduce on-chain\nprivacy and secure randomness into the gameplay, ensuring fairness and\ndecentralization.\n",
+        "description": "Catch monsters in a Pokémon-style game powered by on-chain randomness,\nprivacy, and ROFL.\n\n**Implementation details**\n\nMonCraft is a retro-inspired, top-down RPG where players explore a grid-based\nworld, encounter wild Monsters, and attempt to catch them — blending on-chain\nprivacy with real-time gameplay.\n\nThe game leverages **Oasis Sapphire** and **ROFL** to introduce on-chain\nprivacy and secure randomness into the gameplay, ensuring fairness and\ndecentralization.\n\nCheck out more on the hackathon's [project page](https://taikai.network/cryptocanal/hackathons/ethdam2025/projects/cmaikn82p011a3pl1fpe6ntfm).\n",
         "paratimes": [
             "sapphire"
         ],
         "codeUrl": "https://github.com/epintos/oasis-moncraft-game",
-        "demoUrl": "https://youtu.be/G7mGRyiOtKY",
+        "tutorials": [
+            {
+                "Video demo": "https://youtu.be/G7mGRyiOtKY"
+            }
+        ],
         "created": "2025-05-09T08:56:39Z",
         "lastUpdated": "2025-05-13T07:08:10Z",
         "tags": [
             "ROFL",
             "moncraft",
-            "ethdam2025",
+            "ETHDam 2025",
             "Hackathon"
         ],
         "languages": [
             "Solidity",
-            "JavaScript",
             "TypeScript",
             "HTML",
-            "CSS",
-            "Docker"
+            "CSS"
         ],
         "maintainedByOasis": false,
         "screenshots": [
             "/projects/moncraft/screenshots/01.jpg",
             "/projects/moncraft/screenshots/02.jpg",
-            "/projects/moncraft/screenshots/03.jpg"
+            "/projects/moncraft/screenshots/03.jpg",
+            "/projects/moncraft/screenshots/ad837c10-2e1d-11f0-aaf7-09e20aed0032NFT collection.png"
         ],
         "license": "Unspecified",
-        "slug": "moncraft"
+        "slug": "moncraft",
+        "demoUrl": null
     },
     {
         "name": "Nyx",
@@ -1879,7 +1901,7 @@
                 "Jack Smith Insulander": "https://taikai.network/jacksmithinsulander"
             }
         ],
-        "description": "Runtime Off-chain Function Logic Decentralized Authenticated Messaging -\nPowered by Oasis and Nostr.\n\nROFL.DAM Is a Web3-enabled chat platform running on OASIS ROFL where users can\ncreate or join groups, chat via a Nostr relay, and manage group membership\nwith help from MongoDB. It includes functionalities for users to input group\nmetadata (name, description, price), chat in real-time, and for moderators to\nmanage groups. The front end handles user interactions, while MongoDB supports\npersistent storage and Nostr ensures decentralized, censorship-resistant\ncommunication. For the first time in your life, your chat-data is now\ndecentralized and unreadable!\n",
+        "description": "Runtime Off-chain Function Logic Decentralized Authenticated Messaging -\nPowered by Oasis and Nostr.\n\nROFL.DAM Is a Web3-enabled chat platform running on OASIS ROFL where users can\ncreate or join groups, chat via a Nostr relay, and manage group membership\nwith help from MongoDB. It includes functionalities for users to input group\nmetadata (name, description, price), chat in real-time, and for moderators to\nmanage groups. The front end handles user interactions, while MongoDB supports\npersistent storage and Nostr ensures decentralized, censorship-resistant\ncommunication. For the first time in your life, your chat-data is now\ndecentralized and unreadable!\n\nCheck out more on the hackathon's [project page](https://taikai.network/cryptocanal/hackathons/ethdam2025/projects/cmagrj6sa0m94ne4u3tgfgz47).\n",
         "paratimes": [
             "sapphire"
         ],
@@ -1896,9 +1918,9 @@
         "tags": [
             "ROFL",
             "MCP",
-            "ethdam2025",
+            "ETHDam 2025",
             "Hackathon",
-            "ethdam-rope"
+            "rofl.dam"
         ],
         "languages": [
             "TypeScript",
@@ -1910,7 +1932,15 @@
             "/projects/rofl.dam/screenshots/02.jpg",
             "/projects/rofl.dam/screenshots/03.jpg",
             "/projects/rofl.dam/screenshots/04.jpg",
-            "/projects/rofl.dam/screenshots/05.jpg"
+            "/projects/rofl.dam/screenshots/05.jpg",
+            "/projects/rofl.dam/screenshots/14d14da0-2de4-11f0-aaf7-09e20aed0032Logo_png.png",
+            "/projects/rofl.dam/screenshots/1a4d1210-2de3-11f0-bb1c-6d18f81c1c2dUsps.png",
+            "/projects/rofl.dam/screenshots/76a2eb20-2de3-11f0-aaf7-09e20aed0032Dragon.png",
+            "/projects/rofl.dam/screenshots/a6175b20-2de3-11f0-bb4a-17964d106303chat.png",
+            "/projects/rofl.dam/screenshots/c3018180-2de2-11f0-bb4a-17964d106303Flow.png",
+            "/projects/rofl.dam/screenshots/dd48d790-2de3-11f0-bb4a-17964d106303Sloth.png",
+            "/projects/rofl.dam/screenshots/df819ea0-2de5-11f0-aaf7-09e20aed0032backend.png",
+            "/projects/rofl.dam/screenshots/f132fd20-2dd5-11f0-bb1c-6d18f81c1c2duserflowchart.png"
         ],
         "slug": "rofl.dam"
     },
@@ -1973,7 +2003,7 @@
                 "0xberil": "https://taikai.network/0xberil"
             }
         ],
-        "description": "Trust-minimized on/offramp solution deployed as an MCP server. \n\nNo KYC, no middleman, no payment verification risk. Just verifiable execution\nwith ROFL &amp; private data handling via OPL.\n",
+        "description": "Trust-minimized on/offramp solution deployed as an MCP server. \n\nNo KYC, no middleman, no payment verification risk. Just verifiable execution\nwith ROFL &amp; private data handling via OPL.\n\nCheck out more on the hackathon's [project page](https://taikai.network/cryptocanal/hackathons/ethdam2025/projects/cmaix7zwt01hli8o9fr4ycpub).\n",
         "paratimes": [
             "sapphire"
         ],
@@ -1988,17 +2018,16 @@
         "license": "Unspecified",
         "tags": [
             "ROFL",
-            "Health",
-            "Gaming",
-            "Telegram",
-            "ethdam2025",
+            "Røpe",
+            "ETHDam 2025",
             "Hackathon"
         ],
         "languages": [],
         "maintainedByOasis": false,
         "screenshots": [
             "/projects/røpe/screenshots/01.jpg",
-            "/projects/røpe/screenshots/02.jpg"
+            "/projects/røpe/screenshots/02.jpg",
+            "/projects/røpe/screenshots/27f1edc0-2e3b-11f0-bb4a-17964d106303ropemcp.jpeg"
         ],
         "slug": "røpe",
         "demoUrl": null
@@ -2229,7 +2258,7 @@
                 "jasny": "https://taikai.network/jasny"
             }
         ],
-        "description": "Last will and testament for crypto holders. Keep your will private while\nyou're alive. After you're deceased, beneficiaries can claim their share.\n\nThis project implements a decentralized crypto inheritance system using a\nTestament contract on Oasis Sapphire and a Vault contract on another network.\nThe Testament keeps the will (heirs and allocations) hidden until the owner\ndies and the executor unlocks the assets from the Vault for distribution.\n",
+        "description": "Last will and testament for crypto holders. Keep your will private while\nyou're alive. After you're deceased, beneficiaries can claim their share.\n\nThis project implements a decentralized crypto inheritance system using a\nTestament contract on Oasis Sapphire and a Vault contract on another network.\nThe Testament keeps the will (heirs and allocations) hidden until the owner\ndies and the executor unlocks the assets from the Vault for distribution.\n\nCheck out more on the hackathon's [project page](https://taikai.network/cryptocanal/hackathons/ethdam2025/projects/cmaj27ry801bb3pl1gam5jvq9).\n",
         "paratimes": [
             "sapphire"
         ],
@@ -2248,7 +2277,7 @@
         "license": "Unspecified",
         "tags": [
             "ROFL",
-            "ethdam2025",
+            "ETHDam 2025",
             "Hackathon",
             "testament"
         ],
@@ -2453,19 +2482,23 @@
                 "spoyte117": "https://taikai.network/spoyte117"
             }
         ],
-        "description": "On-ramps/Off-ramps system using Paypal\n\nAccess to cryptocurrencies is becoming increasingly restrictive. Users must\nnow go through centralized exchanges, complete KYC procedures, and wait for\nvalidation. ZK-Pal aims to restore trustless peer-to-peer exchange using\nPayPal as a fiat bridge.\n\nOur objective is to offer an alternative aligned with the foundational\nprinciples of blockchain: decentralization and peer-to-peer exchange. By\nleveraging an existing payment system like PayPal, we aimed to enable users to\nbuy and sell crypto without relying on centralized intermediaries. Through\nthis project, we introduce an on-ramp/off-ramp mechanism where users can\ncreate and fulfill USDC offers in exchange for PayPal transfers.\n",
+        "description": "On-ramps/Off-ramps system using Paypal\n\nAccess to cryptocurrencies is becoming increasingly restrictive. Users must\nnow go through centralized exchanges, complete KYC procedures, and wait for\nvalidation. ZK-Pal aims to restore trustless peer-to-peer exchange using\nPayPal as a fiat bridge.\n\nOur objective is to offer an alternative aligned with the foundational\nprinciples of blockchain: decentralization and peer-to-peer exchange. By\nleveraging an existing payment system like PayPal, we aimed to enable users to\nbuy and sell crypto without relying on centralized intermediaries. Through\nthis project, we introduce an on-ramp/off-ramp mechanism where users can\ncreate and fulfill USDC offers in exchange for PayPal transfers.\n\nCheck out more on the hackathon's [project page](https://taikai.network/cryptocanal/hackathons/ethdam2025/projects/cmai9r0db00xii8o9daaz8rbn).\n",
         "paratimes": [
             "sapphire"
         ],
         "codeUrl": "https://github.com/oasisprotocol/demo-rofl-chatbot",
-        "demoUrl": "https://www.youtube.com/watch?v=W9V_S_5Lqsk",
+        "tutorials": [
+            {
+                "Video demo": "https://www.youtube.com/watch?v=W9V_S_5Lqsk"
+            }
+        ],
         "created": "2025-06-06T18:07:32.630Z",
         "lastUpdated": "2025-06-06T18:07:32.630Z",
         "license": "Unspecified",
         "tags": [
             "ROFL",
             "zk-pal",
-            "ethdam2025",
+            "ETHDam 2025",
             "Hackathon"
         ],
         "languages": [
@@ -2475,11 +2508,14 @@
             "Solidity",
             "Makefile"
         ],
-        "maintainedByOasis": true,
+        "maintainedByOasis": false,
         "screenshots": [
             "/projects/zk-pal/screenshots/01.jpg",
-            "/projects/zk-pal/screenshots/02.jpg"
+            "/projects/zk-pal/screenshots/02.jpg",
+            "/projects/zk-pal/screenshots/da028830-2dcd-11f0-bb4a-17964d106303Capture d’écran du 2025-05-10 20-36-25.png",
+            "/projects/zk-pal/screenshots/ecf59b30-2dcd-11f0-bb4a-17964d106303Capture d’écran du 2025-05-10 20-38-00.png"
         ],
-        "slug": "zk-pal"
+        "slug": "zk-pal",
+        "demoUrl": null
     }
 ]

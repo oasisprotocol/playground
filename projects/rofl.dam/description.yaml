@@ -17,6 +17,8 @@ description: |
   communication. For the first time in your life, your chat-data is now
   decentralized and unreadable!
 
+  Check out more on the hackathon's [project page](https://taikai.network/cryptocanal/hackathons/ethdam2025/projects/cmagrj6sa0m94ne4u3tgfgz47).
+
 paratimes:
   - sapphire
 codeUrl: https://github.com/rofl-fun/mono
@@ -29,9 +31,9 @@ license: ''
 tags:
   - ROFL
   - MCP
-  - ethdam2025
+  - ETHDam 2025
   - Hackathon
-  - ethdam-rope
+  - rofl.dam
 languages:
   - typescript
   - rust
