@@ -13,16 +13,48 @@ export class TaikaiImporter implements Importer {
     const document: Document = dom.window.document;
     console.log('Document loaded, title:', document.title);
 
-    // Get project name from h1
+    // Get project name from h1.
     const nameElement = document.querySelector('h1');
     const name = nameElement?.textContent?.trim() || projectId;
 
-    // Get project description - extract content and convert HTML to markdown
-    const descriptionDiv = document.querySelector('div[class*="sc-"]') || document.querySelector('.xxmyC');
+    // Get GitHub URL from the GitHub button.
+    const githubButton = document.querySelector('a[href*="github.com"]') as HTMLAnchorElement;
+    const codeUrl = githubButton?.href || '';
+
+    // Get team members. TODO: Need headless browser to load dynamic content (buttons and attachments).
+    const teamHeading = Array.from(document.querySelectorAll('h3')).find(h3 => h3.textContent?.trim() === 'Team');
+    console.log('Found team heading:', teamHeading?.textContent);
+    const teamList = teamHeading?.nextElementSibling?.querySelector('ul');
+    console.log('Found team list:', teamList?.innerHTML);
+    const authors: { [key: string]: string }[] = [];
+    if (teamList) {
+      const teamMembers = teamList.querySelectorAll('li');
+      console.log('Found team members:', teamMembers.length);
+      for (const member of Array.from(teamMembers)) {
+        const nameElement = member.querySelector('span');
+        const name = nameElement?.textContent?.trim();
+        console.log('Processing team member:', name);
+        if (name) {
+          // Get their Taikai profile URL.
+          const profileLink = (member.querySelector('a') as HTMLAnchorElement)?.href;
+          console.log('Found profile link:', profileLink);
+          authors.push({
+            [name]: profileLink || ''
+          });
+        }
+      }
+    }
+    console.log('Final authors array:', authors);
+
+    // Get project description - extract content and convert HTML to markdown.
+    const descriptionDiv = document.querySelector('div.fr-view');
     let description = '';
+
+    // Get all text content for later use.
+    const allText = document.body.textContent || '';
     
     if (descriptionDiv) {
-      // Get all paragraphs from the description div
+      // Get all paragraphs from the description div.
       const paragraphs = descriptionDiv.querySelectorAll('p');
       let descriptionParts: string[] = [];
       
@@ -30,7 +62,7 @@ export class TaikaiImporter implements Importer {
         const text = p.textContent?.trim();
         if (!text) continue;
         
-        // Skip metadata paragraphs
+        // Skip metadata paragraphs.
         if (text.startsWith('Repository:') || 
             text.startsWith('Video:') || 
             text.startsWith('Contact:') ||
@@ -39,13 +71,11 @@ export class TaikaiImporter implements Importer {
           continue;
         }
         
-        // Convert strong tags to markdown bold
+        // Keep the original HTML content, just convert basic formatting.
         let content = p.innerHTML
           .replace(/<strong>(.*?)<\/strong>/gi, '**$1**')
           .replace(/<em>(.*?)<\/em>/gi, '*$1*')
-          .replace(/<br\s*\/?>/gi, '\n')
-          .replace(/<[^>]+>/g, '') // Remove all other HTML tags
-          .trim();
+          .replace(/<br\s*\/?>/gi, '\n');
         
         if (content) {
           descriptionParts.push(content);
@@ -55,29 +85,16 @@ export class TaikaiImporter implements Importer {
       description = descriptionParts.join('\n\n');
     }
     
-    // Fallback if we can't find the description div
+    // Fallback if we can't find the description div.
     if (!description) {
-      const allText = document.body.textContent || '';
       const paragraphs = Array.from(document.querySelectorAll('p')).map(p => p.textContent?.trim()).filter(Boolean);
       description = paragraphs.find(p => p && p.length > 50) || name;
     }
 
-    // Extract repository URL from text - be more specific about GitHub URL format
-    const allText = document.body.textContent || '';
-    const githubMatch = allText.match(/Repository:\s*(https:\/\/github\.com\/[\w\-\.]+\/[\w\-\.]+)/i) || 
-                       allText.match(/(https:\/\/github\.com\/[\w\-\.]+\/[\w\-\.]+)/i);
-    let codeUrl = '';
-    if (githubMatch) {
-      // Clean the URL to ensure it's just the repo URL
-      codeUrl = githubMatch[1].replace(/[^a-zA-Z0-9\-\.:\/]/g, '');
-      // Additional cleaning - remove anything after common patterns
-      codeUrl = codeUrl.split(/(?:Video|Contact|Discord|Telegram)/i)[0];
-      // Ensure it ends properly (no trailing punctuation except for valid URL chars)
-      codeUrl = codeUrl.replace(/[^a-zA-Z0-9\-]$/, '');
-    }
-    const maintainedByOasis = codeUrl.includes('oasisprotocol');
+    // Add the hackathon project page link at the end.
+    description += `\n\nCheck out more on the hackathon's [project page](${projectUrl}).`;
 
-    // Extract video URL - be more specific about YouTube URL format
+    // Extract video URL - be more specific about YouTube URL format.
     const videoMatch = allText.match(/Video:\s*(https:\/\/youtu\.be\/[\w\-]+)/i) ||
                       allText.match(/(https:\/\/youtu\.be\/[\w\-]+)/i);
     let videoTutorial = '';
@@ -87,7 +104,7 @@ export class TaikaiImporter implements Importer {
     }
     const tutorials = videoTutorial ? [{ 'Video demo': videoTutorial }] : [];
 
-    // Get demo URL - look for actual demo links, not just any link
+    // Get demo URL - look for actual demo links, not just any link.
     const demoUrlElement = Array.from(document.querySelectorAll('a')).find(
       (el: HTMLAnchorElement): boolean => {
         const text = el.textContent?.toLowerCase() || '';
@@ -100,25 +117,62 @@ export class TaikaiImporter implements Importer {
     );
     const demoUrl = demoUrlElement?.href || '';
 
-    // Get screenshots
-    const allImages = document.querySelectorAll('img');
-    const screenshots = Array.from(allImages)
-      .map(img => img.getAttribute('src'))
-      .filter((src): src is string => !!src && src.includes('taikai.azureedge.net'))
-      .slice(0, 5); // Limit to first 5 screenshots
+    // Get screenshots from both description and attachments.
+    const screenshots: string[] = [];
 
-    // Get hackathon name from URL path
+    // Get images from description.
+    const descriptionImages = document.querySelectorAll('div.fr-view img');
+    console.log('Found description images:', descriptionImages.length);
+    Array.from(descriptionImages).forEach(img => {
+      const src = img.getAttribute('src');
+      console.log('Description image src:', src);
+      if (src && src.includes('taikai.azureedge.net')) {
+        screenshots.push(src);
+      }
+    });
+
+    // TODO: Need headless browser to work properly.
+    // // Get images from attachments section.
+    // const attachmentsHeading = Array.from(document.querySelectorAll('h3')).find(h3 => h3.textContent?.trim() === 'Attachments');
+    // console.log('Found attachments heading:', attachmentsHeading?.textContent);
+    // const attachmentsDiv = attachmentsHeading?.parentElement;
+    // console.log('Found attachments container:', attachmentsDiv?.outerHTML);
+
+    // // Search entire document for storage.googleapis.com links
+    // const allLinks = document.querySelectorAll('a[href*="storage.googleapis.com"]');
+    // console.log('Found storage.googleapis.com links in entire document:', allLinks.length);
+    // Array.from(allLinks).forEach((link, index) => {
+    //   console.log(`Link ${index + 1}:`, {
+    //     href: (link as HTMLAnchorElement).href,
+    //     text: link.textContent,
+    //     parentHTML: link.parentElement?.outerHTML
+    //   });
+    // });
+
+    // Also search for any href attributes containing the URL
+    const allElements = document.querySelectorAll('*');
+    const storageUrls = Array.from(allElements)
+      .map(el => el.getAttribute('href'))
+      .filter((href): href is string => !!href && href.includes('storage.googleapis.com'));
+    console.log('Found storage.googleapis.com URLs in any href attribute:', storageUrls);
+
+    console.log('Final screenshots array:', screenshots);
+
+    // Remove duplicates and limit to first 5 screenshots.
+    const uniqueScreenshots = [...new Set(screenshots)].slice(0, 5);
+
+    // Get hackathon name from URL path.
     const hackathonMatch = projectUrl.match(/\/hackathons\/([^\/]+)\//);
     const hackathonName = hackathonMatch ? hackathonMatch[1] : 'Taikai Hackathon';
 
-    // Detect tags and paratimes
+    // Detect tags and paratimes.
     const tags: string[] = detectTags(description + ' ' + allText);
     tags.push(hackathonName);
     tags.push('Hackathon');
 
     const paratimes: string[] = detectParatimes(description + ' ' + allText);
 
-    // Try to get GitHub project info if available
+    // Try to get GitHub project info if available.
     let ghProject: Project | undefined = undefined;
     if (codeUrl) {
       try {
@@ -132,9 +186,9 @@ export class TaikaiImporter implements Importer {
     return {
       name,
       slug: name.toLowerCase().replace(/\s+/g, '-'),
-      authors: ghProject ? ghProject.authors : [],
+      authors,
       description,
-      screenshots,
+      screenshots: uniqueScreenshots,
       paratimes,
       codeUrl,
       tutorials,
@@ -144,7 +198,7 @@ export class TaikaiImporter implements Importer {
       license: ghProject ? ghProject.license : '',
       tags,
       languages: ghProject ? ghProject.languages : [],
-      maintainedByOasis,
+      maintainedByOasis: codeUrl.includes('oasisprotocol'),
     };
   }
 } 
