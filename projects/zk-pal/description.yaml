@@ -36,5 +36,4 @@ languages:
   - python
   - noir
   - solidity
-  - makefile
 maintainedByOasis: false

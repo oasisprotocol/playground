@@ -70,8 +70,7 @@
         "tags": [
             "ROFL",
             "ETHDam 2025",
-            "Hackathon",
-            "activist"
+            "Hackathon"
         ],
         "languages": [
             "Python",
@@ -80,10 +79,10 @@
         ],
         "maintainedByOasis": false,
         "screenshots": [
-            "/projects/activist-toolkit/screenshots/e26e7d60-2e3d-11f0-bb1c-6d18f81c1c2d1st TA Pitchdeck.png",
-            "/projects/activist-toolkit/screenshots/e861c650-2e3d-11f0-bb1c-6d18f81c1c2d2 Pitchdeck.png",
-            "/projects/activist-toolkit/screenshots/ecafc3b0-2e3d-11f0-bb1c-6d18f81c1c2d3.png",
-            "/projects/activist-toolkit/screenshots/ef433fd0-2e3d-11f0-bb4a-17964d1063034.png"
+            "/projects/activist-toolkit/screenshots/01.png",
+            "/projects/activist-toolkit/screenshots/02.png",
+            "/projects/activist-toolkit/screenshots/03.png",
+            "/projects/activist-toolkit/screenshots/04.png"
         ],
         "slug": "activist-toolkit"
     },
@@ -1287,13 +1286,11 @@
         ],
         "created": "2022-04-19T08:18:50Z",
         "lastUpdated": "2025-06-06T10:33:21Z",
-        "license": "apache-2.0",
+        "license": "Apache-2.0",
         "tags": [
             "ROFL",
-            "farea",
             "ETHDam 2025",
-            "Hackathon",
-            "circles"
+            "Hackathon"
         ],
         "languages": [
             "TypeScript",
@@ -1302,10 +1299,10 @@
         ],
         "maintainedByOasis": false,
         "screenshots": [
-            "/projects/farea/screenshots/d7532230-2e26-11f0-bb1c-6d18f81c1c2dfarea1.png",
-            "/projects/farea/screenshots/d996a990-2e26-11f0-bb1c-6d18f81c1c2dfarea2.png",
-            "/projects/farea/screenshots/db3e1800-2e26-11f0-bb1c-6d18f81c1c2dfarea3.png",
-            "/projects/farea/screenshots/dcb32bd0-2e26-11f0-bb1c-6d18f81c1c2dfarea4.png"
+            "/projects/farea/screenshots/01.png",
+            "/projects/farea/screenshots/02.png",
+            "/projects/farea/screenshots/03.png",
+            "/projects/farea/screenshots/04.png"
         ],
         "slug": "farea",
         "demoUrl": null
@@ -1464,13 +1461,11 @@
         ],
         "created": "2025-06-06T18:07:35.516Z",
         "lastUpdated": "2025-06-06T18:07:35.516Z",
-        "license": "Unspecified",
         "tags": [
             "ROFL",
             "Health",
             "ETHDam 2025",
-            "Hackathon",
-            "healthtrust"
+            "Hackathon"
         ],
         "languages": [
             "TypeScript",
@@ -1480,11 +1475,12 @@
         "maintainedByOasis": false,
         "screenshots": [
             "/projects/healthtrust/screenshots/01.jpg",
-            "/projects/healthtrust/screenshots/41dfb320-2e31-11f0-aaf7-09e20aed0032Screenshot 2025-05-11 082802.png",
-            "/projects/healthtrust/screenshots/44e6ffb0-2e31-11f0-bb1c-6d18f81c1c2dScreenshot 2025-05-11 082814.png",
-            "/projects/healthtrust/screenshots/48425fb0-2e31-11f0-bb1c-6d18f81c1c2dScreenshot 2025-05-11 082838.png",
-            "/projects/healthtrust/screenshots/4b1b4940-2e31-11f0-bb1c-6d18f81c1c2dScreenshot 2025-05-11 082859.png"
+            "/projects/healthtrust/screenshots/02.png",
+            "/projects/healthtrust/screenshots/03.png",
+            "/projects/healthtrust/screenshots/04.png",
+            "/projects/healthtrust/screenshots/05.png"
         ],
+        "license": "Unspecified",
         "slug": "healthtrust",
         "demoUrl": null
     },
@@ -1609,7 +1605,6 @@
         "lastUpdated": "2025-05-13T07:08:10Z",
         "tags": [
             "ROFL",
-            "moncraft",
             "ETHDam 2025",
             "Hackathon"
         ],
@@ -1624,7 +1619,7 @@
             "/projects/moncraft/screenshots/01.jpg",
             "/projects/moncraft/screenshots/02.jpg",
             "/projects/moncraft/screenshots/03.jpg",
-            "/projects/moncraft/screenshots/ad837c10-2e1d-11f0-aaf7-09e20aed0032NFT collection.png"
+            "/projects/moncraft/screenshots/04.png"
         ],
         "license": "Unspecified",
         "slug": "moncraft",
@@ -1914,13 +1909,11 @@
         "demoUrl": "https://rofl-dam.vercel.app/",
         "created": "2025-06-06T18:07:30.827Z",
         "lastUpdated": "2025-06-06T18:07:30.828Z",
-        "license": "Unspecified",
         "tags": [
             "ROFL",
             "MCP",
             "ETHDam 2025",
-            "Hackathon",
-            "rofl.dam"
+            "Hackathon"
         ],
         "languages": [
             "TypeScript",
@@ -1933,15 +1926,16 @@
             "/projects/rofl.dam/screenshots/03.jpg",
             "/projects/rofl.dam/screenshots/04.jpg",
             "/projects/rofl.dam/screenshots/05.jpg",
-            "/projects/rofl.dam/screenshots/14d14da0-2de4-11f0-aaf7-09e20aed0032Logo_png.png",
-            "/projects/rofl.dam/screenshots/1a4d1210-2de3-11f0-bb1c-6d18f81c1c2dUsps.png",
-            "/projects/rofl.dam/screenshots/76a2eb20-2de3-11f0-aaf7-09e20aed0032Dragon.png",
-            "/projects/rofl.dam/screenshots/a6175b20-2de3-11f0-bb4a-17964d106303chat.png",
-            "/projects/rofl.dam/screenshots/c3018180-2de2-11f0-bb4a-17964d106303Flow.png",
-            "/projects/rofl.dam/screenshots/dd48d790-2de3-11f0-bb4a-17964d106303Sloth.png",
-            "/projects/rofl.dam/screenshots/df819ea0-2de5-11f0-aaf7-09e20aed0032backend.png",
-            "/projects/rofl.dam/screenshots/f132fd20-2dd5-11f0-bb1c-6d18f81c1c2duserflowchart.png"
+            "/projects/rofl.dam/screenshots/06.png",
+            "/projects/rofl.dam/screenshots/07.png",
+            "/projects/rofl.dam/screenshots/08.png",
+            "/projects/rofl.dam/screenshots/09.png",
+            "/projects/rofl.dam/screenshots/10.png",
+            "/projects/rofl.dam/screenshots/11.png",
+            "/projects/rofl.dam/screenshots/12.png",
+            "/projects/rofl.dam/screenshots/13.png"
         ],
+        "license": "Unspecified",
         "slug": "rofl.dam"
     },
     {
@@ -2015,10 +2009,8 @@
         ],
         "created": "2025-06-06T18:07:39.491Z",
         "lastUpdated": "2025-06-06T18:07:39.491Z",
-        "license": "Unspecified",
         "tags": [
             "ROFL",
-            "Røpe",
             "ETHDam 2025",
             "Hackathon"
         ],
@@ -2027,8 +2019,9 @@
         "screenshots": [
             "/projects/røpe/screenshots/01.jpg",
             "/projects/røpe/screenshots/02.jpg",
-            "/projects/røpe/screenshots/27f1edc0-2e3b-11f0-bb4a-17964d106303ropemcp.jpeg"
+            "/projects/røpe/screenshots/03.jpeg"
         ],
+        "license": "Unspecified",
         "slug": "røpe",
         "demoUrl": null
     },
@@ -2274,12 +2267,10 @@
         "demoUrl": "https://testament.jasny.net",
         "created": "2025-06-06T18:07:37.380Z",
         "lastUpdated": "2025-06-06T18:07:37.380Z",
-        "license": "Unspecified",
         "tags": [
             "ROFL",
             "ETHDam 2025",
-            "Hackathon",
-            "testament"
+            "Hackathon"
         ],
         "languages": [
             "TypeScript",
@@ -2291,6 +2282,7 @@
             "/projects/testament/screenshots/01.jpg",
             "/projects/testament/screenshots/02.jpg"
         ],
+        "license": "Unspecified",
         "slug": "testament"
     },
     {
@@ -2494,10 +2486,8 @@
         ],
         "created": "2025-06-06T18:07:32.630Z",
         "lastUpdated": "2025-06-06T18:07:32.630Z",
-        "license": "Unspecified",
         "tags": [
             "ROFL",
-            "zk-pal",
             "ETHDam 2025",
             "Hackathon"
         ],
@@ -2512,9 +2502,10 @@
         "screenshots": [
             "/projects/zk-pal/screenshots/01.jpg",
             "/projects/zk-pal/screenshots/02.jpg",
-            "/projects/zk-pal/screenshots/da028830-2dcd-11f0-bb4a-17964d106303Capture d’écran du 2025-05-10 20-36-25.png",
-            "/projects/zk-pal/screenshots/ecf59b30-2dcd-11f0-bb4a-17964d106303Capture d’écran du 2025-05-10 20-38-00.png"
+            "/projects/zk-pal/screenshots/03.png",
+            "/projects/zk-pal/screenshots/04.png"
         ],
+        "license": "Unspecified",
         "slug": "zk-pal",
         "demoUrl": null
     }
