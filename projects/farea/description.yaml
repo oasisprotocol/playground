@@ -20,13 +20,12 @@ tutorials:
   - Video demo: https://youtu.be/zQh0uWNylOw'
 created: '2022-04-19T08:18:50Z'
 lastUpdated: '2025-06-06T10:33:21Z'
-license: apache-2.0
+license: Apache-2.0
 tags:
   - ROFL
-  - farea
   - ETHDam 2025
   - Hackathon
-  - circles
+
 languages:
   - typescript
   - solidity

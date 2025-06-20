@@ -27,13 +27,12 @@ tutorials:
 demoUrl: https://rofl-dam.vercel.app/
 created: '2025-06-06T18:07:30.827Z'
 lastUpdated: '2025-06-06T18:07:30.828Z'
-license: ''
 tags:
   - ROFL
   - MCP
   - ETHDam 2025
   - Hackathon
-  - rofl.dam
+
 languages:
   - typescript
   - rust

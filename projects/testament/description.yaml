@@ -21,12 +21,11 @@ tutorials:
 demoUrl: 'https://testament.jasny.net'
 created: '2025-06-06T18:07:37.380Z'
 lastUpdated: '2025-06-06T18:07:37.380Z'
-license: ''
 tags:
   - ROFL
   - ETHDam 2025
   - Hackathon
-  - testament
+
 languages:
   - typescript
   - solidity
