@@ -17,9 +17,26 @@ export class TaikaiImporter implements Importer {
     const nameElement = document.querySelector('h1');
     const name = nameElement?.textContent?.trim() || projectId;
 
-    // Get GitHub URL from the GitHub button.
+    // Get GitHub URL from the GitHub button or description text.
     const githubButton = document.querySelector('a[href*="github.com"]') as HTMLAnchorElement;
-    const codeUrl = githubButton?.href || '';
+    let codeUrl = githubButton?.href || '';
+    
+    // If no GitHub button found, search for GitHub URLs in the text content
+    if (!codeUrl) {
+      const allText = document.body.textContent || '';
+      const githubUrlMatch = allText.match(/https?:\/\/github\.com\/[\w\-\.]+\/[\w\-\.]+/i);
+      if (githubUrlMatch) {
+        codeUrl = githubUrlMatch[0];
+      }
+    }
+    
+    // Prune the GitHub URL to get just the base repository URL
+    if (codeUrl) {
+      // Remove anything after the repo name (like /tree/main, /blob/main, etc.)
+      codeUrl = codeUrl.replace(/\/(tree|blob|commits?)\/.*$/, '');
+      // Also remove trailing slash if present
+      codeUrl = codeUrl.replace(/\/$/, '');
+    }
 
     // Get team members. TODO: Need headless browser to load dynamic content (buttons and attachments).
     const teamHeading = Array.from(document.querySelectorAll('h3')).find(h3 => h3.textContent?.trim() === 'Team');
@@ -121,14 +138,12 @@ export class TaikaiImporter implements Importer {
     const screenshots: string[] = [];
 
     // Get images from description.
-    const descriptionImages = document.querySelectorAll('div.fr-view img');
+    const descriptionImages = document.querySelectorAll('img');
     console.log('Found description images:', descriptionImages.length);
     Array.from(descriptionImages).forEach(img => {
       const src = img.getAttribute('src');
       console.log('Description image src:', src);
-      if (src && src.includes('taikai.azureedge.net')) {
-        screenshots.push(src);
-      }
+      if (src) screenshots.push(src);
     });
 
     // TODO: Need headless browser to work properly.
@@ -149,17 +164,8 @@ export class TaikaiImporter implements Importer {
     //   });
     // });
 
-    // Also search for any href attributes containing the URL
-    const allElements = document.querySelectorAll('*');
-    const storageUrls = Array.from(allElements)
-      .map(el => el.getAttribute('href'))
-      .filter((href): href is string => !!href && href.includes('storage.googleapis.com'));
-    console.log('Found storage.googleapis.com URLs in any href attribute:', storageUrls);
 
     console.log('Final screenshots array:', screenshots);
-
-    // Remove duplicates and limit to first 5 screenshots.
-    const uniqueScreenshots = [...new Set(screenshots)].slice(0, 5);
 
     // Get hackathon name from URL path.
     const hackathonMatch = projectUrl.match(/\/hackathons\/([^\/]+)\//);
@@ -188,7 +194,7 @@ export class TaikaiImporter implements Importer {
       slug: name.toLowerCase().replace(/\s+/g, '-'),
       authors,
       description,
-      screenshots: uniqueScreenshots,
+      screenshots: screenshots,
       paratimes,
       codeUrl,
       tutorials,
