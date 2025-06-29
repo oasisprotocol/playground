@@ -1,0 +1,2 @@
+import{d as n,h as o,c as a,b as e,t as c,u as r,o as i}from"./index.9e23188a.js";const _={class:"404"},l={class:"text-white text-center text-2xl"},u=n({__name:"404View",setup(x){const{t:s}=o();return(d,t)=>(i(),a("div",_,[t[0]||(t[0]=e("h1",{class:"text-white text-center text-3xl mb-4"},"404",-1)),e("h1",l,c(r(s)("not_found")),1)]))}});export{u as default};
+//# sourceMappingURL=404View.9d3f5dc4.js.map
