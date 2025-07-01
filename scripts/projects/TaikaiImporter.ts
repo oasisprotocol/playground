@@ -170,25 +170,6 @@ export class TaikaiImporter implements Importer {
       if (src) screenshots.push(src);
     });
 
-    // TODO: Need headless browser to work properly.
-    // // Get images from attachments section.
-    // const attachmentsHeading = Array.from(document.querySelectorAll('h3')).find(h3 => h3.textContent?.trim() === 'Attachments');
-    // console.log('Found attachments heading:', attachmentsHeading?.textContent);
-    // const attachmentsDiv = attachmentsHeading?.parentElement;
-    // console.log('Found attachments container:', attachmentsDiv?.outerHTML);
-
-    // // Search entire document for storage.googleapis.com links.
-    // const allLinks = document.querySelectorAll('a[href*="storage.googleapis.com"]');
-    // console.log('Found storage.googleapis.com links in entire document:', allLinks.length);
-    // Array.from(allLinks).forEach((link, index) => {
-    //   console.log(`Link ${index + 1}:`, {
-    //     href: (link as HTMLAnchorElement).href,
-    //     text: link.textContent,
-    //     parentHTML: link.parentElement?.outerHTML
-    //   });
-    // });
-
-
     console.log('Final screenshots array:', screenshots);
 
     // Get hackathon name from URL path.
