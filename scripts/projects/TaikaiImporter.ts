@@ -21,7 +21,7 @@ export class TaikaiImporter implements Importer {
     const githubButton = document.querySelector('a[href*="github.com"]') as HTMLAnchorElement;
     let codeUrl = githubButton?.href || '';
     
-    // If no GitHub button found, search for GitHub URLs in the text content
+    // If no GitHub button found, search for GitHub URLs in the text content.
     if (!codeUrl) {
       const allText = document.body.textContent || '';
       const githubUrlMatch = allText.match(/https?:\/\/github\.com\/[\w\-\.]+\/[\w\-\.]+/i);
@@ -30,33 +30,57 @@ export class TaikaiImporter implements Importer {
       }
     }
     
-    // Prune the GitHub URL to get just the base repository URL
+    // Prune the GitHub URL to get just the base repository URL.
     if (codeUrl) {
-      // Remove anything after the repo name (like /tree/main, /blob/main, etc.)
+      // Remove anything after the repo name (like /tree/main, /blob/main, etc.).
       codeUrl = codeUrl.replace(/\/(tree|blob|commits?)\/.*$/, '');
-      // Also remove trailing slash if present
+      // Also remove trailing slash if present.
       codeUrl = codeUrl.replace(/\/$/, '');
     }
 
-    // Get team members. TODO: Need headless browser to load dynamic content (buttons and attachments).
+    // Get team members - updated to handle the actual DOM structure.
     const teamHeading = Array.from(document.querySelectorAll('h3')).find(h3 => h3.textContent?.trim() === 'Team');
     console.log('Found team heading:', teamHeading?.textContent);
-    const teamList = teamHeading?.nextElementSibling?.querySelector('ul');
+
+    // Look for ul within the same parent container as the h3.
+    let teamList: Element | null = null;
+    if (teamHeading) {
+      // Check if ul is a sibling within the same parent.
+      teamList = teamHeading.parentElement?.querySelector('ul') || null;
+      
+      // If not found, try looking in the next sibling.
+      if (!teamList) {
+        teamList = teamHeading.nextElementSibling?.querySelector('ul') || null;
+      }
+    }
+
     console.log('Found team list:', teamList?.innerHTML);
     const authors: { [key: string]: string }[] = [];
+
     if (teamList) {
       const teamMembers = teamList.querySelectorAll('li');
       console.log('Found team members:', teamMembers.length);
+      
       for (const member of Array.from(teamMembers)) {
-        const nameElement = member.querySelector('span');
+        // Look for the anchor tag first.
+        const profileLinkElement = member.querySelector('a') as HTMLAnchorElement;
+        
+        // Get the username from the first span within the anchor's nested structure.
+        const nameElement = profileLinkElement?.querySelector('div > span');
         const name = nameElement?.textContent?.trim();
+        
         console.log('Processing team member:', name);
-        if (name) {
-          // Get their Taikai profile URL.
-          const profileLink = (member.querySelector('a') as HTMLAnchorElement)?.href;
+        
+        if (name && profileLinkElement) {
+          // Construct full profile URL if it's a relative path.
+          let profileLink = profileLinkElement.href;
+          if (profileLink.startsWith('/')) {
+            profileLink = 'https://taikai.network' + profileLink;
+          }
+          
           console.log('Found profile link:', profileLink);
           authors.push({
-            [name]: profileLink || ''
+            [name]: profileLink
           });
         }
       }
@@ -153,7 +177,7 @@ export class TaikaiImporter implements Importer {
     // const attachmentsDiv = attachmentsHeading?.parentElement;
     // console.log('Found attachments container:', attachmentsDiv?.outerHTML);
 
-    // // Search entire document for storage.googleapis.com links
+    // // Search entire document for storage.googleapis.com links.
     // const allLinks = document.querySelectorAll('a[href*="storage.googleapis.com"]');
     // console.log('Found storage.googleapis.com links in entire document:', allLinks.length);
     // Array.from(allLinks).forEach((link, index) => {
