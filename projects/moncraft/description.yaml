@@ -1,0 +1,34 @@
+name: MonCraft
+authors:
+  - Esteban: https://github.com/epintos
+  - Fede: https://github.com/federava
+description: |
+  Catch monsters in a Pokémon-style game powered by on-chain randomness,
+  privacy, and ROFL.
+
+  **Implementation details**
+
+  MonCraft is a retro-inspired, top-down RPG where players explore a grid-based
+  world, encounter wild Monsters, and attempt to catch them — blending on-chain
+  privacy with real-time gameplay.
+
+  The game leverages **Oasis Sapphire** and **ROFL** to introduce on-chain
+  privacy and secure randomness into the gameplay, ensuring fairness and
+  decentralization.
+
+  Check out more on the hackathon's [project page](https://taikai.network/cryptocanal/hackathons/ethdam2025/projects/cmaikn82p011a3pl1fpe6ntfm).
+paratimes:
+  - sapphire
+codeUrl: https://github.com/epintos/oasis-moncraft-game
+tutorials:
+  - Video demo: https://youtu.be/G7mGRyiOtKY
+created: '2025-05-09T08:56:39Z'
+lastUpdated: '2025-05-13T07:08:10Z'
+tags:
+  - ROFL
+  - ETHDam 2025
+  - Hackathon
+languages:
+  - solidity
+  - typescript
+maintainedByOasis: false

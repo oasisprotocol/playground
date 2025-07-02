@@ -1,0 +1,43 @@
+name: HealthTrust
+authors:
+  - Giorgos Kyriakou: https://taikai.network/giorgoskyr
+  - Leonardo Iara: https://taikai.network/leoryuta
+description: |
+  Privatized health data monetization. Help real people solve real problems
+  without risking exposure.
+
+  HealthTrust turns sensitive health records into a self‑sovereign,
+  privacy‑preserving data asset that patients can safely monetize. Using
+  Oasis Sapphire’s confidential‑EVM and ROFL enclaves to keep raw files
+  invisible and IPFS for immutable storage. We let researchers run verifiable
+  computations on encrypted data while patients retain absolute control. The
+  result is a legal compliance ready market for health insights that can power
+  AI and help advance research, all without breaches or data hoarding.
+
+  **Vision**
+
+  We envision a world where every bit of health data, from your daily steps and
+  workouts to overnight sleep patterns, is encrypted at the source and flows
+  into a secure, decentralized marketplace. Users connect their wearables once,
+  retain full control over who accesses their data, and earn tokens whenever it
+  fuels valuable research.
+
+  Check out more on the hackathon's [project page](https://taikai.network/cryptocanal/hackathons/ethdam2025/projects/cmaj53mzs01jui8o9hnlkttxy).
+
+paratimes:
+  - sapphire
+codeUrl: https://github.com/LeonardoRyuta/HealthTrust
+tutorials:
+  - Video demo: https://youtu.be/WvF-DgKCgEE
+created: '2025-06-06T18:07:35.516Z'
+lastUpdated: '2025-06-06T18:07:35.516Z'
+tags:
+  - ROFL
+  - Health
+  - ETHDam 2025
+  - Hackathon
+languages:
+  - typescript
+  - solidity
+  - go
+maintainedByOasis: false
