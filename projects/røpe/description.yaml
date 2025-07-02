@@ -1,0 +1,28 @@
+name: RØPE
+authors:
+  - Yasir KILINÇ: https://taikai.network/extypen
+  - murat karan: https://taikai.network/1muratkrn
+  - gokhans: https://taikai.network/gokhans
+  - Feyyazcigim: https://taikai.network/Feyyazcigim
+  - 0xberil: https://taikai.network/0xberil
+description: |
+  Trust-minimized on/offramp solution deployed as an MCP server. 
+
+  No KYC, no middleman, no payment verification risk. Just verifiable execution
+  with ROFL &amp; private data handling via OPL.
+
+  Check out more on the hackathon's [project page](https://taikai.network/cryptocanal/hackathons/ethdam2025/projects/cmaix7zwt01hli8o9fr4ycpub).
+
+paratimes:
+  - sapphire
+codeUrl: https://github.com/itublockchain/ethdam-rope
+tutorials:
+  - Video demo: https://youtu.be/tl1rkJJPGPA
+created: '2025-06-06T18:07:39.491Z'
+lastUpdated: '2025-06-06T18:07:39.491Z'
+tags:
+  - ROFL
+  - ETHDam 2025
+  - Hackathon
+languages: []
+maintainedByOasis: false

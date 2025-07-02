@@ -1,0 +1,32 @@
+name: Farea
+authors:
+  - Armando Medina: https://github.com/armsves
+description: |
+  Private Animal Health Records on Oasis that rewards good owners with Circles
+
+  The Farea project is a decentralized application designed to manage Animal
+  Health Records privately using Sapphire Testnet and distribute rewards using
+  ROFL and Circles.&nbsp;
+
+  You can create Animals and add health records which are stored privately in
+  the AnimalHealth.sol contract deployed on Sapphire Testnet.
+  
+  Check out more on the hackathon's [project page](https://taikai.network/cryptocanal/hackathons/ethdam2025/projects/cmaivfkl601h710wsuqkj0x3d).
+
+paratimes:
+  - sapphire
+codeUrl: https://github.com/armsves/animalsHealthandRewards/
+tutorials:
+  - Video demo: https://youtu.be/zQh0uWNylOw'
+created: '2022-04-19T08:18:50Z'
+lastUpdated: '2025-06-06T10:33:21Z'
+license: Apache-2.0
+tags:
+  - ROFL
+  - ETHDam 2025
+  - Hackathon
+
+languages:
+  - typescript
+  - solidity
+maintainedByOasis: false
