@@ -11,6 +11,7 @@ These scripts help you import projects from different sources and generate a con
 - **GitHub Importer**: Imports projects from GitHub repositories
 - **DoraHacks Importer**: Imports projects from DoraHacks hackathon submissions
 - **EthGlobal Importer**: Imports projects from ETHGlobal hackathon submissions
+- **Taikai Importer**: Imports projects from EthDam hackathon submissions
 
 ## Usage
 
@@ -23,7 +24,7 @@ yarn projects add <url> [directory]
 ```
 
 Where:
-- `<url>`: The URL of the project (GitHub repo, DoraHacks project, or ETHGlobal project)
+- `<url>`: The URL of the project (GitHub repo, DoraHacks project, ETHGlobal project or Taikai project)
 - `[directory]`: (Optional) Custom directory name for the project. If not provided, it will use the project's slug.
 
 #### Examples:
@@ -69,3 +70,4 @@ When you import a project, the script will:
 - GitHub: `https://github.com/username/repository`
 - DoraHacks: `https://dorahacks.io/...`
 - ETHGlobal: `https://ethglobal.com/...`
+- TaikaiNetwork: `https://taikai.network/...`
