@@ -1,0 +1,33 @@
+name: Universal Basic AI
+authors:
+  - Kristjan Grm: https://taikai.network/kristjan.grm1
+  - Jonas Heinz: https://taikai.network/jonas.a.heinz
+description: |
+  A revolutionary platform implementing Universal Basic AI (UBAI) - ensuring
+  every human has access to AI compute power as a fundamental right. Built on
+  Oasis Protocol for complete privacy and anonymity
+
+  Universal Basic AI in a future where AI becomes essential for education, work,
+  and daily life, we risk creating a world where only the wealthy have access to
+  advanced AI capabilities. **Universal Basic AI** prevents this dystopia by
+  guaranteeing every person a fair allocation of AI compute power based on their
+  country of origin.
+
+  Check out more on the hackathon's [project
+  page](https://taikai.network/ethbelgrade/hackathons/eth-belgrade-hackathon-3/projects/cmbiolem200b4pppcoc2qi8mu/).
+paratimes:
+  - sapphire
+codeUrl: https://github.com/grmkris/eth-belgrade-2025-universal-basic-ai
+created: '2025-06-03T15:31:44Z'
+lastUpdated: '2025-06-05T07:50:32Z'
+tags:
+  - ROFL
+  - ETHBelgrade 2025
+  - Hackathon
+languages:
+  - solidity
+  - typescript
+  - python
+  - ruby
+  - go
+maintainedByOasis: false

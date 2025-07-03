@@ -1536,6 +1536,46 @@
         "demoUrl": null
     },
     {
+        "name": "MedVault",
+        "authors": [
+            {
+                "BranislavStojkovic": "https://taikai.network/BranislavStojkovic"
+            },
+            {
+                "Милош Чутурић": "https://taikai.network/miloscuturic8"
+            }
+        ],
+        "description": "MedVault is a privacy-preserving decentralized application that gives patients\nfull control over their medical data. It allows users to encrypt and upload\nhealth records, store them on IPFS, and selectively share access with doctors\nusing time-limited tokens. Leveraging Oasis Sapphire confidential smart\ncontracts and ROFL secure compute, MedVault ensures that sensitive information\nis never exposed.\n\nCheck out more on the hackathon's [project page](https://taikai.network/ethbelgrade/hackathons/eth-belgrade-hackathon-3/projects/cmbj1auw200iypppcogxskup1/).\n",
+        "paratimes": [
+            "sapphire"
+        ],
+        "codeUrl": "https://github.com/branislavstojkovic70/ETH-Belgrade-MedVault",
+        "tutorials": [
+            {
+                "Video demo": "https://youtu.be/g0qKmuO0wYM"
+            }
+        ],
+        "demoUrl": "https://taikai.network/ethbelgrade/hackathons/eth-belgrade-hackathon-3/projects/cmbj1auw200iypppcogxskup1/",
+        "created": "2025-06-03T09:16:04Z",
+        "lastUpdated": "2025-06-05T07:02:55Z",
+        "tags": [
+            "ROFL",
+            "eth-belgrade-hackathon-3",
+            "Hackathon"
+        ],
+        "languages": [
+            "TypeScript",
+            "Solidity"
+        ],
+        "maintainedByOasis": false,
+        "screenshots": [
+            "/projects/medvault/screenshots/02.jpg",
+            "/projects/medvault/screenshots/03.jpg"
+        ],
+        "license": "Unspecified",
+        "slug": "medvault"
+    },
+    {
         "name": "Minesweeper",
         "authors": [
             {
@@ -1582,48 +1622,53 @@
         "slug": "minesweeper"
     },
     {
-        "name": "MonCraft",
+        "name": "MyMesh",
         "authors": [
             {
-                "Esteban": "https://github.com/epintos"
+                "1uiz": "https://taikai.network/1uiz"
             },
             {
-                "Fede": "https://github.com/federava"
+                "ArthurJ": "https://taikai.network/ArthurJ"
+            },
+            {
+                "VaristyShark": "https://taikai.network/principursa"
+            },
+            {
+                "Pedro Dandrea Rosalba": "https://taikai.network/pedro.dandrea.rpd"
             }
         ],
-        "description": "Catch monsters in a Pokémon-style game powered by on-chain randomness,\nprivacy, and ROFL.\n\n**Implementation details**\n\nMonCraft is a retro-inspired, top-down RPG where players explore a grid-based\nworld, encounter wild Monsters, and attempt to catch them — blending on-chain\nprivacy with real-time gameplay.\n\nThe game leverages **Oasis Sapphire** and **ROFL** to introduce on-chain\nprivacy and secure randomness into the gameplay, ensuring fairness and\ndecentralization.\n\nCheck out more on the hackathon's [project page](https://taikai.network/cryptocanal/hackathons/ethdam2025/projects/cmaikn82p011a3pl1fpe6ntfm).\n",
+        "description": "A seamless, privacy-first platform that provides cryptographic authenticity\nverification for crypto creators through community-driven mesh networks built\non OASIS. When centralized systems fail and accounts get compromised, MyMesh\ndelivers mathematical certainty instead of community confusion. All while\nprotecting sensitive data through OASIS's confidential computing technology.\n\nCheck out more on the hackathon's [project\npage](https://taikai.network/ethbelgrade/hackathons/eth-belgrade-hackathon-3/projects/cmbiyh5qu00eipppc48m7vu2y).\n",
         "paratimes": [
             "sapphire"
         ],
-        "codeUrl": "https://github.com/epintos/oasis-moncraft-game",
-        "tutorials": [
-            {
-                "Video demo": "https://youtu.be/G7mGRyiOtKY"
-            }
-        ],
-        "created": "2025-05-09T08:56:39Z",
-        "lastUpdated": "2025-05-13T07:08:10Z",
+        "codeUrl": "https://github.com/1uizeth/mymesh",
+        "demoUrl": "https://v0-ethb-elgrade.vercel.app/",
+        "created": "2025-06-04T17:12:25Z",
+        "lastUpdated": "2025-06-05T21:04:08Z",
         "tags": [
             "ROFL",
-            "ETHDam 2025",
+            "eth-belgrade-hackathon-3",
             "Hackathon"
         ],
         "languages": [
-            "Solidity",
-            "TypeScript",
-            "HTML",
-            "CSS"
+            "TypeScript"
         ],
         "maintainedByOasis": false,
         "screenshots": [
-            "/projects/moncraft/screenshots/01.jpg",
-            "/projects/moncraft/screenshots/02.jpg",
-            "/projects/moncraft/screenshots/03.jpg",
-            "/projects/moncraft/screenshots/04.png"
+            "/projects/mymesh/screenshots/01.jpg",
+            "/projects/mymesh/screenshots/02.jpg",
+            "/projects/mymesh/screenshots/03.jpg",
+            "/projects/mymesh/screenshots/04.jpg",
+            "/projects/mymesh/screenshots/05.jpg",
+            "/projects/mymesh/screenshots/06.png",
+            "/projects/mymesh/screenshots/07.png",
+            "/projects/mymesh/screenshots/08.png",
+            "/projects/mymesh/screenshots/09.png",
+            "/projects/mymesh/screenshots/10.png",
+            "/projects/mymesh/screenshots/11.png"
         ],
         "license": "Unspecified",
-        "slug": "moncraft",
-        "demoUrl": null
+        "slug": "mymesh"
     },
     {
         "name": "Nyx",
@@ -2418,6 +2463,53 @@
         ],
         "license": "Unspecified",
         "slug": "twenty1"
+    },
+    {
+        "name": "Universal Basic AI",
+        "authors": [
+            {
+                "Kristjan Grm": "https://taikai.network/kristjan.grm1"
+            },
+            {
+                "Jonas Heinz": "https://taikai.network/jonas.a.heinz"
+            }
+        ],
+        "description": "A revolutionary platform implementing Universal Basic AI (UBAI) - ensuring\nevery human has access to AI compute power as a fundamental right. Built on\nOasis Protocol for complete privacy and anonymity\n\nUniversal Basic AI in a future where AI becomes essential for education, work,\nand daily life, we risk creating a world where only the wealthy have access to\nadvanced AI capabilities. **Universal Basic AI** prevents this dystopia by\nguaranteeing every person a fair allocation of AI compute power based on their\ncountry of origin.\n\nCheck out more on the hackathon's [project\npage](https://taikai.network/ethbelgrade/hackathons/eth-belgrade-hackathon-3/projects/cmbiolem200b4pppcoc2qi8mu/).\n",
+        "paratimes": [
+            "sapphire"
+        ],
+        "codeUrl": "https://github.com/grmkris/eth-belgrade-2025-universal-basic-ai",
+        "created": "2025-06-03T15:31:44Z",
+        "lastUpdated": "2025-06-05T07:50:32Z",
+        "tags": [
+            "ROFL",
+            "eth-belgrade-hackathon-3",
+            "Hackathon"
+        ],
+        "languages": [
+            "Solidity",
+            "TypeScript",
+            "Python",
+            "Ruby",
+            "Go"
+        ],
+        "maintainedByOasis": false,
+        "screenshots": [
+            "/projects/universal-basic-ai/screenshots/02.jpg",
+            "/projects/universal-basic-ai/screenshots/03.jpg",
+            "/projects/universal-basic-ai/screenshots/04.png",
+            "/projects/universal-basic-ai/screenshots/05.png",
+            "/projects/universal-basic-ai/screenshots/06.png",
+            "/projects/universal-basic-ai/screenshots/07.png",
+            "/projects/universal-basic-ai/screenshots/08.png",
+            "/projects/universal-basic-ai/screenshots/09.png",
+            "/projects/universal-basic-ai/screenshots/10.png",
+            "/projects/universal-basic-ai/screenshots/11.png",
+            "/projects/universal-basic-ai/screenshots/12.png"
+        ],
+        "license": "Unspecified",
+        "slug": "universal-basic-ai",
+        "demoUrl": null
     },
     {
         "name": "Zeo Kuessr",

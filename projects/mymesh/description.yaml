@@ -1,0 +1,29 @@
+name: MyMesh
+authors:
+  - 1uiz: https://taikai.network/1uiz
+  - ArthurJ: https://taikai.network/ArthurJ
+  - VaristyShark: https://taikai.network/principursa
+  - Pedro Dandrea Rosalba: https://taikai.network/pedro.dandrea.rpd
+description: |
+  A seamless, privacy-first platform that provides cryptographic authenticity
+  verification for crypto creators through community-driven mesh networks built
+  on OASIS. When centralized systems fail and accounts get compromised, MyMesh
+  delivers mathematical certainty instead of community confusion. All while
+  protecting sensitive data through OASIS's confidential computing technology.
+
+  Check out more on the hackathon's [project
+  page](https://taikai.network/ethbelgrade/hackathons/eth-belgrade-hackathon-3/projects/cmbiyh5qu00eipppc48m7vu2y).
+
+paratimes:
+  - sapphire
+codeUrl: https://github.com/1uizeth/mymesh
+demoUrl: 'https://v0-ethb-elgrade.vercel.app/'
+created: '2025-06-04T17:12:25Z'
+lastUpdated: '2025-06-05T21:04:08Z'
+tags:
+  - ROFL
+  - ETHBelgrade 2025
+  - Hackathon
+languages:
+  - typescript
+maintainedByOasis: false
