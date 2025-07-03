@@ -1,0 +1,29 @@
+name: MedVault
+authors:
+  - BranislavStojkovic: https://taikai.network/BranislavStojkovic
+  - Milosh Chuturic: https://taikai.network/miloscuturic8
+description: |
+  MedVault is a privacy-preserving decentralized application that gives patients
+  full control over their medical data. It allows users to encrypt and upload
+  health records, store them on IPFS, and selectively share access with doctors
+  using time-limited tokens. Leveraging Oasis Sapphire confidential smart
+  contracts and ROFL secure compute, MedVault ensures that sensitive information
+  is never exposed.
+
+  Check out more on the hackathon's [project page](https://taikai.network/ethbelgrade/hackathons/eth-belgrade-hackathon-3/projects/cmbj1auw200iypppcogxskup1/).
+paratimes:
+  - sapphire
+codeUrl: https://github.com/branislavstojkovic70/ETH-Belgrade-MedVault
+tutorials:
+  - Video demo: https://youtu.be/g0qKmuO0wYM
+demoUrl: 'https://taikai.network/ethbelgrade/hackathons/eth-belgrade-hackathon-3/projects/cmbj1auw200iypppcogxskup1/'
+created: '2025-06-03T09:16:04Z'
+lastUpdated: '2025-06-05T07:02:55Z'
+tags:
+  - ROFL
+  - ETHBelgrade 2025
+  - Hackathon
+languages:
+  - typescript
+  - solidity
+maintainedByOasis: false
