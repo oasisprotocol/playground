@@ -5,7 +5,7 @@ authors:
 description: |
   A short example of how a contract can relay an end-to-end encrypted
   transactions on Oasis Sapphire, so the relayer cannot see which contract is
-  being invoked or what the parameters are. This is usefull for services such
+  being invoked or what the parameters are. This is useful for services such
   as the gas station network or other gasless services.
 
   By using the [@oasis-protocol/sapphire-contracts](https://www.npmjs.com/package/@oasisprotocol/sapphire-contracts)
