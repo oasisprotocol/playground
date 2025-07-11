@@ -1,0 +1,38 @@
+name: Enclimate
+authors: []
+description: |
+  A weather insurance protocol that automatically settled with TEE.
+
+  The project develops a weather insurance protocol. To build it, it develops a
+  weather oracle, specifically, a temperature oracle framework for a specific
+  location, by running a program that fetches weather data from different APIs
+  (3 in the deployed version) and computes median within TEE. It leverages the
+  oracle data to further develop the insurance protocol that allows
+  weather-sensitive parties like farmers, airline operators or any
+  weather-related businesses to purchase insurance against unexpected weather
+  condition directly on-chain and without worry of settlement risk and ambiguity
+  of legal documents since the insurance fund is locked on-chain and settled
+  automatically by data provided by TEE and through smart contract on Sapphire.
+  It also implements fair pricing for the insurance in the TEE and dynamically
+  adjust the payoff based on the different condition users select on-chain. Only
+  the specific ROFL app that's run inside the TEE is allowed to update these
+  parameters. Through open-source and verifiable build, the logic of pricing in
+  TEE can be verified and publicly audited in a more transparent way than
+  traditional insurances.
+
+  Check out more on the hackathon's [project page](https://ethglobal.com/showcase/enclimate-ixdef).
+paratimes:
+  - sapphire
+tutorials:
+  - Video demo: >-
+      https://stream.mux.com/4OfbYX27Uvqq1zJKDvFwi4bOAhjWTnb522DnCHImLV4/high.mp4
+demoUrl: ''
+created: 2025-07-11T20:50:28.008Z
+lastUpdated: 2025-07-11T20:50:28.008Z
+license: ''
+tags:
+  - ROFL
+  - EthGlobal Cannes 2025
+  - Hackathon
+languages: []
+maintainedByOasis: false
