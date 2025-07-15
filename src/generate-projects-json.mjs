@@ -18,12 +18,14 @@ const projects = yamls.map((path) => {
     .filter((screenshotPath) => screenshotPath.startsWith(screenshotsPath))
     .map((screenshotPath) => '/' + screenshotPath);
   parsedYaml.languages = parsedYaml.languages.map(getCorrectLanguageName);
-  parsedYaml.license = parsedYaml.license || 'Unspecified';
   const folderName = path.split('/').slice(-2, -1)[0];
   parsedYaml.slug = folderName;
 
-  parsedYaml.codeUrl = sanitizeUrl(parsedYaml.codeUrl);
-  parsedYaml.demoUrl = parsedYaml.demoUrl
+  // Fix URL sanitization to handle undefined/empty values
+  parsedYaml.codeUrl = parsedYaml.codeUrl && parsedYaml.codeUrl.trim()
+    ? sanitizeUrl(parsedYaml.codeUrl)
+    : '';
+  parsedYaml.demoUrl = parsedYaml.demoUrl && parsedYaml.demoUrl.trim()
     ? sanitizeUrl(parsedYaml.demoUrl)
     : null;
   if (parsedYaml.authors) {
