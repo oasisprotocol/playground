@@ -60,6 +60,7 @@ const capitalize = (str: string) => {
 };
 
 const formatLicense = (license: string) => {
+  if (!license) return 'Unspecified';
   if (license.toLowerCase() === 'mit') return 'MIT License';
   if (license.toLowerCase() === 'apache-2.0') return 'Apache License 2.0';
   if (license.toLowerCase() === 'gpl-3.0') return 'GNU General Public License v3.0';

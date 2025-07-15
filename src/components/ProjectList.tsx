@@ -3,7 +3,7 @@ import { useMediaQuery } from '@mui/material';
 import type { SelectChangeEvent } from '@mui/material/Select';
 import { useTheme } from '@mui/material/styles';
 import { useEffect, useState } from 'react';
-import projectsJson from '../../public/projects.json';
+import projectsJson from '../projects.json';
 import { type Project, SortingOptions } from '../types';
 import Filters from './Filters';
 import ProjectDialog from './ProjectDialog';

@@ -43,7 +43,7 @@ const projects = yamls.map((path) => {
 });
 
 writeFileSync(
-  './public/projects.json',
+  './src/projects.json',
   JSON.stringify(projects, null, 4),
   'utf8',
 );
