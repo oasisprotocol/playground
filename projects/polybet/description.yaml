@@ -1,0 +1,37 @@
+name: PolyBet
+authors:
+  - ad0ll: https://github.com/ad0ll
+  - Windsor Chan: https://github.com/windsorchan
+  - 0xJMC: https://github.com/JulioMCruz
+  - Kevin Gelpes: https://github.com/kgelpes
+  - dayu-jindo: https://github.com/dayu-jindo
+description: |
+  AI powered, privacy enforcing, prediction market smart router
+
+  PolyBets represents a sophisticated evolution in the prediction market
+  ecosystem, functioning as a decentralized aggregator that unifies multiple
+  betting platforms into a single, privacy-preserving interface. At its core,
+  the platform addresses a fundamental inefficiency in the current prediction
+  market landscape: the fragmentation of liquidity and pricing across numerous
+  isolated platforms.
+
+  Check out more on the hackathon's [project page](https://ethglobal.com/showcase/polybet-p884n).
+paratimes:
+  - sapphire
+codeUrl: https://github.com/ethglobal-cannes-polybets/polybets-monorepo
+tutorials:
+  - Video demo: >-
+      https://stream.mux.com/ZI51dbuH9qWhFqLFGdusIxeo8Xl400TN1ATE8e9uur2Y/high.mp4
+demoUrl: https://polybets-web3.vercel.app/
+created: '2025-07-04T19:47:01Z'
+lastUpdated: '2025-07-06T07:54:55Z'
+tags:
+  - ROFL
+  - EthGlobal Cannes 2025
+  - Hackathon
+  - Defi
+languages:
+  - typescript
+  - python
+  - solidity
+maintainedByOasis: false

@@ -37,7 +37,6 @@
             "/projects/0x2fa/screenshots/04-scan-invite-code.jpeg",
             "/projects/0x2fa/screenshots/05-banner.png"
         ],
-        "license": "Unspecified",
         "slug": "0x2fa"
     },
     {
@@ -168,7 +167,6 @@
             "/projects/aware/screenshots/04.jpg",
             "/projects/aware/screenshots/05.jpg"
         ],
-        "license": "Unspecified",
         "slug": "aware"
     },
     {
@@ -257,7 +255,6 @@
         "screenshots": [
             "/projects/blacksea/screenshots/01-architecture.png"
         ],
-        "license": "Unspecified",
         "slug": "blacksea",
         "demoUrl": null
     },
@@ -299,7 +296,6 @@
         "screenshots": [
             "/projects/bot/screenshots/01-architecture.png"
         ],
-        "license": "Unspecified",
         "slug": "bot",
         "demoUrl": null
     },
@@ -346,7 +342,6 @@
             "/projects/caai/screenshots/01-logo.jpg",
             "/projects/caai/screenshots/02-diagram.png"
         ],
-        "license": "Unspecified",
         "slug": "caai"
     },
     {
@@ -382,7 +377,7 @@
         "demoUrl": "https://clpd-private.vercel.app/en",
         "created": "2024-11-02T20:23:12Z",
         "lastUpdated": "2024-11-03T21:41:01Z",
-        "license": "Unspecified",
+        "license": "",
         "tags": [
             "ROFL",
             "DeFi",
@@ -449,7 +444,6 @@
             "/projects/cypher-zer0x/screenshots/04-metamask-snap.jpeg",
             "/projects/cypher-zer0x/screenshots/05-kyc.jpeg"
         ],
-        "license": "Unspecified",
         "slug": "cypher-zer0x"
     },
     {
@@ -996,6 +990,50 @@
         "slug": "demo-voting"
     },
     {
+        "name": "Doctor Delta",
+        "authors": [
+            {
+                "Ferdinand Martini": "https://github.com/FerdiMarti"
+            },
+            {
+                "0xFudrick": "https://github.com/0xFudrick"
+            }
+        ],
+        "description": "Doctor Delta is an oracle & delta-neutral strategy for Euler enabling users to\nearn dual-yield.\n\nDoctor Delta allows users to set and forget USDC earning dual yield by hedging\nout the delta on GMX futures when funding rates allow for this to be\nprofitable. Doctor Delta gets data from the Lab Assistant which is an oracle\nrunning in a TEE on ROFL comparing the supply and borrow APYs on Euler with\nfunding rates on GMX to execute positions. When the rates reverse and holding\nthis position becomes less profitable than just supplying USDC, Doctor Delta\nwill unwind and revert to just supplying USDC until the next window of\nopportunity emerges.\n\nCheck out more on the hackathon's [project page](https://ethglobal.com/showcase/doctor-delta-cdccv).\n",
+        "paratimes": [
+            "sapphire"
+        ],
+        "codeUrl": "https://github.com/FerdiMarti/doctor-delta",
+        "tutorials": [
+            {
+                "Video demo": "https://stream.mux.com/xcRgepsd7wAOvWey0200XF55LRZVEWgxYNsLolOQsSIFs/high.mp4"
+            }
+        ],
+        "demoUrl": "https://doctor-delta.robin.markets/",
+        "created": "2025-07-05T15:15:27Z",
+        "lastUpdated": "2025-07-06T14:09:39Z",
+        "tags": [
+            "ROFL",
+            "EthGlobal Cannes 2025",
+            "Hackathon",
+            "Defi"
+        ],
+        "languages": [
+            "TypeScript",
+            "Solidity"
+        ],
+        "maintainedByOasis": false,
+        "screenshots": [
+            "/projects/doctor-delta/screenshots/01.jpg",
+            "/projects/doctor-delta/screenshots/02.jpg",
+            "/projects/doctor-delta/screenshots/03.jpg",
+            "/projects/doctor-delta/screenshots/04.jpg",
+            "/projects/doctor-delta/screenshots/05.jpg",
+            "/projects/doctor-delta/screenshots/06.jpg"
+        ],
+        "slug": "doctor-delta"
+    },
+    {
         "name": "DSearch",
         "authors": [
             {
@@ -1036,7 +1074,6 @@
             "/projects/dsearch/screenshots/04-image-results.png",
             "/projects/dsearch/screenshots/05-related-results.png"
         ],
-        "license": "Unspecified",
         "slug": "dsearch"
     },
     {
@@ -1075,6 +1112,38 @@
             "/projects/empyreal-exchange/screenshots/03-withdraw.png"
         ],
         "slug": "empyreal-exchange"
+    },
+    {
+        "name": "Enclimate",
+        "authors": [],
+        "description": "A weather insurance protocol that automatically settled with TEE.\n\nThe project develops a weather insurance protocol. To build it, it develops a\nweather oracle, specifically, a temperature oracle framework for a specific\nlocation, by running a program that fetches weather data from different APIs\n(3 in the deployed version) and computes median within TEE. It leverages the\noracle data to further develop the insurance protocol that allows\nweather-sensitive parties like farmers, airline operators or any\nweather-related businesses to purchase insurance against unexpected weather\ncondition directly on-chain and without worry of settlement risk and ambiguity\nof legal documents since the insurance fund is locked on-chain and settled\nautomatically by data provided by TEE and through smart contract on Sapphire.\nIt also implements fair pricing for the insurance in the TEE and dynamically\nadjust the payoff based on the different condition users select on-chain. Only\nthe specific ROFL app that's run inside the TEE is allowed to update these\nparameters. Through open-source and verifiable build, the logic of pricing in\nTEE can be verified and publicly audited in a more transparent way than\ntraditional insurances.\n\nCheck out more on the hackathon's [project page](https://ethglobal.com/showcase/enclimate-ixdef).\n",
+        "paratimes": [
+            "sapphire"
+        ],
+        "tutorials": [
+            {
+                "Video demo": "https://stream.mux.com/4OfbYX27Uvqq1zJKDvFwi4bOAhjWTnb522DnCHImLV4/high.mp4"
+            }
+        ],
+        "demoUrl": null,
+        "created": "2025-07-11T20:50:28.008Z",
+        "lastUpdated": "2025-07-11T20:50:28.008Z",
+        "license": "",
+        "tags": [
+            "ROFL",
+            "EthGlobal Cannes 2025",
+            "Hackathon"
+        ],
+        "languages": [],
+        "maintainedByOasis": false,
+        "screenshots": [
+            "/projects/enclimate/screenshots/01.jpg",
+            "/projects/enclimate/screenshots/02.jpg",
+            "/projects/enclimate/screenshots/03.jpg",
+            "/projects/enclimate/screenshots/04.jpg"
+        ],
+        "slug": "enclimate",
+        "codeUrl": ""
     },
     {
         "name": "Confidential Hello World on Cipher",
@@ -1349,7 +1418,6 @@
             "/projects/fastlane/screenshots/02-game.png",
             "/projects/fastlane/screenshots/03-obstacle.png"
         ],
-        "license": "Unspecified",
         "slug": "fastlane"
     },
     {
@@ -1375,7 +1443,7 @@
         "demoUrl": null,
         "created": "2024-10-30T19:37:16Z",
         "lastUpdated": "2024-12-02T11:14:15Z",
-        "license": "Unspecified",
+        "license": "",
         "tags": [
             "ROFL",
             "DeFi",
@@ -1435,7 +1503,6 @@
             "/projects/hancock/screenshots/03.jpg",
             "/projects/hancock/screenshots/04.jpg"
         ],
-        "license": "Unspecified",
         "slug": "hancock"
     },
     {
@@ -1479,7 +1546,6 @@
             "/projects/healthtrust/screenshots/04.png",
             "/projects/healthtrust/screenshots/05.png"
         ],
-        "license": "Unspecified",
         "slug": "healthtrust",
         "demoUrl": null
     },
@@ -1530,7 +1596,6 @@
             "/projects/lending-sapphire/screenshots/03-loan.jpg",
             "/projects/lending-sapphire/screenshots/04-lend.jpg"
         ],
-        "license": "Unspecified",
         "slug": "lending-sapphire",
         "demoUrl": null
     },
@@ -1570,7 +1635,6 @@
         "screenshots": [
             "/projects/medvault/screenshots/01.png"
         ],
-        "license": "Unspecified",
         "slug": "medvault"
     },
     {
@@ -1616,7 +1680,6 @@
         "screenshots": [
             "/projects/minesweeper/screenshots/01-logo.png"
         ],
-        "license": "Unspecified",
         "slug": "minesweeper"
     },
     {
@@ -1657,7 +1720,6 @@
             "/projects/moncraft/screenshots/03.jpg",
             "/projects/moncraft/screenshots/04.png"
         ],
-        "license": "Unspecified",
         "slug": "moncraft",
         "demoUrl": null
     },
@@ -1705,8 +1767,48 @@
             "/projects/mymesh/screenshots/08.png",
             "/projects/mymesh/screenshots/09.png"
         ],
-        "license": "Unspecified",
         "slug": "mymesh"
+    },
+    {
+        "name": "NYAnCAT",
+        "authors": [
+            {
+                "dev.bo": "https://github.com/devdotbo"
+            }
+        ],
+        "description": "NYAnCAT: The cutest and sharpest AI personal banking cat that brings you\nlow-risk returns\n\nNYAnCAT is a World APP Mini App that can serve four roles: AI banking advisor,\nfund manager, AI news source, and governance tool.\n\n- As a personal banking AI advisor,  it can use ML to search for low-risk\n  investment opportunities on CEXs.\n\n- As a fund manager, it can execute strategies and collect revenues.\n\n- As an AI news source, it can collect the latest market trends and present\n  them to you in a few words.\n\n- As a governance tool, you can use it to vote for your favourite strategies.  \n\nCheck out more on the hackathon's [project page](https://ethglobal.com/showcase/nyancat-p11d3).\n",
+        "paratimes": [
+            "sapphire"
+        ],
+        "codeUrl": "https://github.com/NYANCAT-IO/NYANCAT-CORE",
+        "tutorials": [
+            {
+                "Video demo": "https://stream.mux.com/oUZXp7edpSNoKSVHfHDRLh1Gv7wNmxZk6wGW1zfiixU/high.mp4"
+            }
+        ],
+        "demoUrl": "https://nyancat.finance/",
+        "created": "2025-07-05T13:24:06Z",
+        "lastUpdated": "2025-07-06T07:00:58Z",
+        "tags": [
+            "ROFL",
+            "EthGlobal Cannes 2025",
+            "Hackathon",
+            "Defi"
+        ],
+        "languages": [
+            "TypeScript",
+            "Solidity"
+        ],
+        "maintainedByOasis": false,
+        "screenshots": [
+            "/projects/nyancat/screenshots/01.jpg",
+            "/projects/nyancat/screenshots/02.jpg",
+            "/projects/nyancat/screenshots/03.jpg",
+            "/projects/nyancat/screenshots/04.jpg",
+            "/projects/nyancat/screenshots/05.jpg",
+            "/projects/nyancat/screenshots/06.jpg"
+        ],
+        "slug": "nyancat"
     },
     {
         "name": "Nyx",
@@ -1750,7 +1852,6 @@
             "/projects/nyx/screenshots/03-chat2.jpg",
             "/projects/nyx/screenshots/04-howitworks.jpg"
         ],
-        "license": "Unspecified",
         "slug": "nyx",
         "demoUrl": null
     },
@@ -1798,7 +1899,6 @@
             "/projects/oasisguard/screenshots/01-screenshots.png",
             "/projects/oasisguard/screenshots/02-banner.png"
         ],
-        "license": "Unspecified",
         "slug": "oasisguard"
     },
     {
@@ -1836,8 +1936,61 @@
         "screenshots": [
             "/projects/paw3/screenshots/01-landing.png"
         ],
-        "license": "Unspecified",
         "slug": "paw3"
+    },
+    {
+        "name": "PolyBet",
+        "authors": [
+            {
+                "ad0ll": "https://github.com/ad0ll"
+            },
+            {
+                "Windsor Chan": "https://github.com/windsorchan"
+            },
+            {
+                "0xJMC": "https://github.com/JulioMCruz"
+            },
+            {
+                "Kevin Gelpes": "https://github.com/kgelpes"
+            },
+            {
+                "dayu-jindo": "https://github.com/dayu-jindo"
+            }
+        ],
+        "description": "AI powered, privacy enforcing, prediction market smart router\n\nPolyBets represents a sophisticated evolution in the prediction market\necosystem, functioning as a decentralized aggregator that unifies multiple\nbetting platforms into a single, privacy-preserving interface. At its core,\nthe platform addresses a fundamental inefficiency in the current prediction\nmarket landscape: the fragmentation of liquidity and pricing across numerous\nisolated platforms.\n\nCheck out more on the hackathon's [project page](https://ethglobal.com/showcase/polybet-p884n).\n",
+        "paratimes": [
+            "sapphire"
+        ],
+        "codeUrl": "https://github.com/ethglobal-cannes-polybets/polybets-monorepo",
+        "tutorials": [
+            {
+                "Video demo": "https://stream.mux.com/ZI51dbuH9qWhFqLFGdusIxeo8Xl400TN1ATE8e9uur2Y/high.mp4"
+            }
+        ],
+        "demoUrl": "https://polybets-web3.vercel.app/",
+        "created": "2025-07-04T19:47:01Z",
+        "lastUpdated": "2025-07-06T07:54:55Z",
+        "tags": [
+            "ROFL",
+            "EthGlobal Cannes 2025",
+            "Hackathon",
+            "Defi"
+        ],
+        "languages": [
+            "TypeScript",
+            "Python",
+            "Solidity"
+        ],
+        "maintainedByOasis": false,
+        "screenshots": [
+            "/projects/polybet/screenshots/01.jpg",
+            "/projects/polybet/screenshots/02.jpg",
+            "/projects/polybet/screenshots/03.jpg",
+            "/projects/polybet/screenshots/04.jpg",
+            "/projects/polybet/screenshots/05.jpg",
+            "/projects/polybet/screenshots/06.jpg"
+        ],
+        "slug": "polybet"
     },
     {
         "name": "Priva Health",
@@ -1919,9 +2072,48 @@
             "/projects/privads/screenshots/02-advertiser.png",
             "/projects/privads/screenshots/03-banner.png"
         ],
-        "license": "Unspecified",
         "slug": "privads",
         "demoUrl": null
+    },
+    {
+        "name": "Resonant",
+        "authors": [
+            {
+                "HLiu": "https://github.com/0xHLiu"
+            }
+        ],
+        "description": "Get paid for your voice! We are building the world's first voice monetization\nplatform.\n\nHave you seen the \"Hawk Tuah\" meme? From just a few seconds of viral content,\nthe woman in the clip turned her unexpected fame into a growing business, with\npodcasts, merch, and more. This is a perfect example of the rise of\nuser-generated content (UGC) and how some are smart in monetizing their fame.\n\nOur project helps creators get paid for their voice. Specifically, we enable\nthem to lend their voice to text-to-speech (TTS) models, and earn 90% of\nprofits.\n\nCheck out more on the hackathon's [project page](https://ethglobal.com/showcase/resonant-a4m2g).\n",
+        "paratimes": [
+            "sapphire"
+        ],
+        "codeUrl": "https://github.com/0xHLiu/Resonant",
+        "tutorials": [
+            {
+                "Video demo": "https://stream.mux.com/AdZ01fxoMxu0077fSmmv7t4u3jPndDLC00QG018WleA00WY8/high.mp4"
+            }
+        ],
+        "demoUrl": null,
+        "created": "2025-07-04T19:08:32Z",
+        "lastUpdated": "2025-07-06T09:11:31Z",
+        "license": "mit",
+        "tags": [
+            "ROFL",
+            "EthGlobal Cannes 2025",
+            "Hackathon"
+        ],
+        "languages": [
+            "Python"
+        ],
+        "maintainedByOasis": false,
+        "screenshots": [
+            "/projects/resonant/screenshots/01.jpg",
+            "/projects/resonant/screenshots/02.jpg",
+            "/projects/resonant/screenshots/03.jpg",
+            "/projects/resonant/screenshots/04.jpg",
+            "/projects/resonant/screenshots/05.jpg",
+            "/projects/resonant/screenshots/06.jpg"
+        ],
+        "slug": "resonant"
     },
     {
         "name": "RIP Protocol",
@@ -1960,7 +2152,6 @@
             "/projects/rip-protocol/screenshots/05-slide5.jpg",
             "/projects/rip-protocol/screenshots/06-slide6.jpg"
         ],
-        "license": "Unspecified",
         "slug": "rip-protocol"
     },
     {
@@ -2018,7 +2209,6 @@
             "/projects/rofl.dam/screenshots/12.png",
             "/projects/rofl.dam/screenshots/13.png"
         ],
-        "license": "Unspecified",
         "slug": "rofl.dam"
     },
     {
@@ -2104,7 +2294,6 @@
             "/projects/røpe/screenshots/02.jpg",
             "/projects/røpe/screenshots/03.jpeg"
         ],
-        "license": "Unspecified",
         "slug": "røpe",
         "demoUrl": null
     },
@@ -2142,7 +2331,6 @@
         "screenshots": [
             "/projects/sapphire-confidential/screenshots/01-transaction-in-progress.png"
         ],
-        "license": "Unspecified",
         "slug": "sapphire-confidential",
         "demoUrl": null
     },
@@ -2269,7 +2457,6 @@
             "/projects/spacetar/screenshots/02-home.png",
             "/projects/spacetar/screenshots/03-chat.png"
         ],
-        "license": "Unspecified",
         "slug": "spacetar"
     },
     {
@@ -2324,8 +2511,49 @@
             "/projects/squidl/screenshots/04-send.jpg",
             "/projects/squidl/screenshots/05-flyer.png"
         ],
-        "license": "Unspecified",
         "slug": "squidl"
+    },
+    {
+        "name": "SwappaTEE",
+        "authors": [
+            {
+                "Luka Skeledzija": "https://github.com/lukaske"
+            }
+        ],
+        "description": "A Fusion+ powered cross-chain swap between any EVM-supported chain and XRP\nLedger\n\nSwappaTEE enables trustless token swaps between XRPL and Ethereum chains\nwithout intermediaries. It is powered by 1Inch's Fusion+ protocol and a TEE\nimplementation of the escrow contracts on the XRPL side.\n\nInstead of using centralized exchanges or risky bridge protocols, users get\ndirect wallet-to-wallet swaps between XRPL and Ethereum. The TEE ensures\nescrow contracts execute correctly without requiring trust in any\nintermediary.\n\nCheck out more on the hackathon's [project page](https://ethglobal.com/showcase/swappatee-j0ovm).\n",
+        "paratimes": [
+            "sapphire"
+        ],
+        "codeUrl": "https://github.com/505-solutions/SwappaTEE",
+        "tutorials": [
+            {
+                "Video demo": "https://stream.mux.com/OORc6mqvL3OVtZswGmYFTNMxCc4ddnX901UC9LBKhgI4/high.mp4"
+            }
+        ],
+        "demoUrl": "https://github.com/505-solutions/SwappaTEE/tree/main/xrpl-tee",
+        "created": "2025-07-04T22:06:29Z",
+        "lastUpdated": "2025-07-06T08:38:47Z",
+        "tags": [
+            "ROFL",
+            "EthGlobal Cannes 2025",
+            "Hackathon",
+            "Defi"
+        ],
+        "languages": [
+            "Solidity",
+            "Python",
+            "TypeScript"
+        ],
+        "maintainedByOasis": false,
+        "screenshots": [
+            "/projects/swappatee/screenshots/01.jpg",
+            "/projects/swappatee/screenshots/02.jpg",
+            "/projects/swappatee/screenshots/03.jpg",
+            "/projects/swappatee/screenshots/04.jpg",
+            "/projects/swappatee/screenshots/05.jpg",
+            "/projects/swappatee/screenshots/06.jpg"
+        ],
+        "slug": "swappatee"
     },
     {
         "name": "Testament",
@@ -2364,7 +2592,6 @@
             "/projects/testament/screenshots/01.jpg",
             "/projects/testament/screenshots/02.jpg"
         ],
-        "license": "Unspecified",
         "slug": "testament"
     },
     {
@@ -2407,8 +2634,47 @@
             "/projects/texas-hideem/screenshots/03-start.jpeg",
             "/projects/texas-hideem/screenshots/04-gameplay.jpeg"
         ],
-        "license": "Unspecified",
         "slug": "texas-hideem"
+    },
+    {
+        "name": "The Purpose",
+        "authors": [
+            {
+                "Otto G": "https://github.com/ottodevs"
+            }
+        ],
+        "description": "Turn video insights into action. Earn NFTs, join group challenges & win crypto\nfrom Monthly  Pool\n\nThe Purpose is a self-growth game powered by AI and Web3. Users pick any\ninspiring YouTube video, and our AI transforms it into a 7-level\ntransformation journey-  from reflection and real-life action to group\ncollaboration and public sharing.\n\nAt Level 5, users pay a fee to enter a team challenge. If their group\ncompletes all 7 levels, each validated user earns a NFT that grants access to\na monthly staking Reward pool.\n\nThe TEE repository is available [here](https://github.com/ThePurpose-ETH-Global-Cannes/the-purpose-tee).\n\nCheck out more on the hackathon's [project page](https://ethglobal.com/showcase/the-purpose-ihxka).\n",
+        "paratimes": [
+            "sapphire"
+        ],
+        "codeUrl": "https://github.com/ThePurpose-ETH-Global-Cannes/the-purpose-app",
+        "tutorials": [
+            {
+                "Video demo": "https://stream.mux.com/kRBpbTQDQsAM01WlAEkqgM5DDSr7aDPpt5dsDMcsqFv8/high.mp4"
+            }
+        ],
+        "demoUrl": "https://www.thepurpose.is/",
+        "created": "2025-07-05T13:19:26Z",
+        "lastUpdated": "2025-07-06T06:35:20Z",
+        "tags": [
+            "EthGlobal Cannes 2025",
+            "Hackathon",
+            "ROFL"
+        ],
+        "languages": [
+            "TypeScript",
+            "Solidity"
+        ],
+        "maintainedByOasis": false,
+        "screenshots": [
+            "/projects/the-purpose/screenshots/01.jpg",
+            "/projects/the-purpose/screenshots/02.jpg",
+            "/projects/the-purpose/screenshots/03.jpg",
+            "/projects/the-purpose/screenshots/04.jpg",
+            "/projects/the-purpose/screenshots/05.jpg",
+            "/projects/the-purpose/screenshots/06.jpg"
+        ],
+        "slug": "the-purpose"
     },
     {
         "name": "Treasure Hunt",
@@ -2445,6 +2711,44 @@
             "/projects/treasure-hunt/screenshots/01-game.png"
         ],
         "slug": "treasure-hunt"
+    },
+    {
+        "name": "TRIGO",
+        "authors": [
+            {
+                "Mattia Careddu": "https://github.com/iskyd"
+            }
+        ],
+        "description": "Trustless fair-play gambling using TEE and Oasis Sapphire — no cheating, just\nthe game\n\nTR.I.G.O. (Trustless Implementation of Gambling Online) is a blockchain-based\nframework that ensures fairness and transparency in online gambling. It\naddresses the critical issue of trust in digital casinos, where players\ncurrently have no guarantee that games are not rigged or manipulated by the\nhouse.\n\nBy leveraging Oasis Sapphire, a privacy-focused blockchain platform that\nintegrates Trusted Execution Environments (TEE), and ROFL, an EVM-compatible\nchain supporting verifiable randomness and confidential smart contracts,\nTR.I.G.O. eliminates the possibility of tampering, peeking, or cheating by\ncentralized operators.\n\nCheck out more on the hackathon's [project page](https://ethglobal.com/showcase/trigo-g71xa).\n",
+        "paratimes": [
+            "sapphire"
+        ],
+        "codeUrl": "https://github.com/pavesini/trigo",
+        "tutorials": [
+            {
+                "Video demo": "https://stream.mux.com/a1M7SwPEnRxQmCGbflfENv2mQce02JCCR8oX9qgId8cs/high.mp4"
+            }
+        ],
+        "demoUrl": null,
+        "created": "2025-07-04T20:36:52Z",
+        "lastUpdated": "2025-07-06T01:50:01Z",
+        "tags": [
+            "ROFL",
+            "EthGlobal Cannes 2025",
+            "Hackathon"
+        ],
+        "languages": [
+            "Python",
+            "Solidity",
+            "TypeScript"
+        ],
+        "maintainedByOasis": false,
+        "screenshots": [
+            "/projects/trigo/screenshots/01.jpg",
+            "/projects/trigo/screenshots/02.jpg",
+            "/projects/trigo/screenshots/03.jpg"
+        ],
+        "slug": "trigo"
     },
     {
         "name": "Twenty1",
@@ -2498,7 +2802,6 @@
             "/projects/twenty1/screenshots/05.jpg",
             "/projects/twenty1/screenshots/06.jpg"
         ],
-        "license": "Unspecified",
         "slug": "twenty1"
     },
     {
@@ -2542,9 +2845,82 @@
             "/projects/universal-basic-ai/screenshots/08.png",
             "/projects/universal-basic-ai/screenshots/09.png"
         ],
-        "license": "Unspecified",
         "slug": "universal-basic-ai",
         "demoUrl": null
+    },
+    {
+        "name": "walrusTee",
+        "authors": [
+            {
+                "protocolwhisper.eth": "https://github.com/protocolwhisper"
+            }
+        ],
+        "description": "Trusted Rust compiler that uploads encrypted projects to Walrus storage \n\nIs a secure Rust compiler system that enables privacy-preserving code\nexecution through decentralized storage. The system works by uploading\nencrypted Rust projects (packaged as tar.gz files) to Walrus decentralized\nstorage, where they receive a unique blob ID. Users can then retrieve these\nencrypted projects using the blob ID and execute them in an isolated\nenvironment, maintaining source code confidentiality throughout the entire\nprocess. The system integrates with ROFL (TEEs) on the Oasis Sapphire testnet\nfor confidential computing capabilities, allowing developers to compile and\nrun Rust code without exposing their intellectual property. While currently\nsupporting only Rust, the goal is to expand support to multiple programming\nlanguages in the future.\n\nWe first use TEEs (Trusted Execution Environments) as secure enclaves provided\nby Oasis, and therefore we put a Rust compiler inside them for having\nattestation and to be sure that this is being executed in a secure\nenvironment. For providing the Rust projects, we used Walrus for encrypting\nthem, achieving that only the TEE will know the code and it can't be extracted\nfrom it\n\nCheck out more on the hackathon's [project page](https://ethglobal.com/showcase/walrustee-ug3rc).\n",
+        "paratimes": [
+            "sapphire"
+        ],
+        "codeUrl": "https://github.com/protocolwhisper/walrusTee",
+        "tutorials": [
+            {
+                "Video demo": "https://stream.mux.com/jve5wILNC8m1fe1vJj5bXUYzLsWI6N01X5G02DupKyla8/high.mp4"
+            }
+        ],
+        "demoUrl": null,
+        "created": "2025-07-05T11:58:37Z",
+        "lastUpdated": "2025-07-06T04:44:54Z",
+        "tags": [
+            "ROFL",
+            "EthGlobal Cannes 2025",
+            "Hackathon"
+        ],
+        "languages": [
+            "Rust",
+            "TypeScript"
+        ],
+        "maintainedByOasis": false,
+        "screenshots": [
+            "/projects/walrustee/screenshots/01.jpg",
+            "/projects/walrustee/screenshots/02.jpg",
+            "/projects/walrustee/screenshots/03.jpg"
+        ],
+        "slug": "walrustee"
+    },
+    {
+        "name": "Yap2Win",
+        "authors": [
+            {
+                "Albert_Cheng": "https://github.com/cheng-chun-yuan"
+            }
+        ],
+        "description": "Telegram bot leveraging ROFL to store keys, judge, and distribute rewards\n\n\nYap2Win is the first AI-powered Telegram engagement platform that uses\nblockchain technology to fairly reward quality community contributions. It\ncombines GPT-4 content evaluation, Oasis ROFL security, and smart contract\nautomation to create trustless community rewards.\n\nCheck out more on the hackathon's [project page](https://ethglobal.com/showcase/yap2win-7nuo2).\n",
+        "paratimes": [
+            "sapphire"
+        ],
+        "codeUrl": "https://github.com/cheng-chun-yuan/yap2win",
+        "tutorials": [
+            {
+                "Video demo": "https://stream.mux.com/sJGF9tLy7HaSE7lY7hcmcpVtKTub00qSmkARVkbKHicA/high.mp4"
+            }
+        ],
+        "demoUrl": "https://t.me/talkfi_bot",
+        "created": "2025-07-04T19:13:00Z",
+        "lastUpdated": "2025-07-08T09:21:03Z",
+        "tags": [
+            "ROFL",
+            "EthGlobal Cannes 2025",
+            "Hackathon",
+            "Telegram"
+        ],
+        "languages": [
+            "Python"
+        ],
+        "maintainedByOasis": false,
+        "screenshots": [
+            "/projects/yap2win/screenshots/01.jpg",
+            "/projects/yap2win/screenshots/02.jpg",
+            "/projects/yap2win/screenshots/03.jpg"
+        ],
+        "slug": "yap2win"
     },
     {
         "name": "Zeo Kuessr",
@@ -2587,7 +2963,6 @@
             "/projects/zeo-kuessr/screenshots/01-gameplay.jpg",
             "/projects/zeo-kuessr/screenshots/02-new-game.jpg"
         ],
-        "license": "Unspecified",
         "slug": "zeo-kuessr",
         "demoUrl": null
     },
@@ -2631,7 +3006,6 @@
             "/projects/zk-pal/screenshots/03.png",
             "/projects/zk-pal/screenshots/04.png"
         ],
-        "license": "Unspecified",
         "slug": "zk-pal",
         "demoUrl": null
     }

@@ -1,0 +1,38 @@
+name: TRIGO
+authors:
+  - Mattia Careddu: https://github.com/iskyd
+description: |
+  Trustless fair-play gambling using TEE and Oasis Sapphire — no cheating, just
+  the game
+
+  TR.I.G.O. (Trustless Implementation of Gambling Online) is a blockchain-based
+  framework that ensures fairness and transparency in online gambling. It
+  addresses the critical issue of trust in digital casinos, where players
+  currently have no guarantee that games are not rigged or manipulated by the
+  house.
+
+  By leveraging Oasis Sapphire, a privacy-focused blockchain platform that
+  integrates Trusted Execution Environments (TEE), and ROFL, an EVM-compatible
+  chain supporting verifiable randomness and confidential smart contracts,
+  TR.I.G.O. eliminates the possibility of tampering, peeking, or cheating by
+  centralized operators.
+
+  Check out more on the hackathon's [project page](https://ethglobal.com/showcase/trigo-g71xa).
+paratimes:
+  - sapphire
+codeUrl: https://github.com/pavesini/trigo
+tutorials:
+  - Video demo: >-
+      https://stream.mux.com/a1M7SwPEnRxQmCGbflfENv2mQce02JCCR8oX9qgId8cs/high.mp4
+demoUrl: ''
+created: '2025-07-04T20:36:52Z'
+lastUpdated: '2025-07-06T01:50:01Z'
+tags:
+  - ROFL
+  - EthGlobal Cannes 2025
+  - Hackathon
+languages:
+  - python
+  - solidity
+  - typescript
+maintainedByOasis: false

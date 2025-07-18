@@ -1,0 +1,36 @@
+name: The Purpose
+authors:
+  - Otto G: https://github.com/ottodevs
+description: |
+  Turn video insights into action. Earn NFTs, join group challenges & win crypto
+  from Monthly  Pool
+
+  The Purpose is a self-growth game powered by AI and Web3. Users pick any
+  inspiring YouTube video, and our AI transforms it into a 7-level
+  transformation journey-  from reflection and real-life action to group
+  collaboration and public sharing.
+
+  At Level 5, users pay a fee to enter a team challenge. If their group
+  completes all 7 levels, each validated user earns a NFT that grants access to
+  a monthly staking Reward pool.
+
+  The TEE repository is available [here](https://github.com/ThePurpose-ETH-Global-Cannes/the-purpose-tee).
+
+  Check out more on the hackathon's [project page](https://ethglobal.com/showcase/the-purpose-ihxka).
+paratimes:
+  - sapphire
+codeUrl: https://github.com/ThePurpose-ETH-Global-Cannes/the-purpose-app
+tutorials:
+  - Video demo: >-
+      https://stream.mux.com/kRBpbTQDQsAM01WlAEkqgM5DDSr7aDPpt5dsDMcsqFv8/high.mp4
+demoUrl: https://www.thepurpose.is/
+created: '2025-07-05T13:19:26Z'
+lastUpdated: '2025-07-06T06:35:20Z'
+tags:
+  - EthGlobal Cannes 2025
+  - Hackathon
+  - ROFL
+languages:
+  - typescript
+  - solidity
+maintainedByOasis: false

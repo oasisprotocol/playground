@@ -1,0 +1,34 @@
+name: Resonant
+authors:
+  - HLiu: https://github.com/0xHLiu
+description: |
+  Get paid for your voice! We are building the world's first voice monetization
+  platform.
+
+  Have you seen the "Hawk Tuah" meme? From just a few seconds of viral content,
+  the woman in the clip turned her unexpected fame into a growing business, with
+  podcasts, merch, and more. This is a perfect example of the rise of
+  user-generated content (UGC) and how some are smart in monetizing their fame.
+
+  Our project helps creators get paid for their voice. Specifically, we enable
+  them to lend their voice to text-to-speech (TTS) models, and earn 90% of
+  profits.
+
+  Check out more on the hackathon's [project page](https://ethglobal.com/showcase/resonant-a4m2g).
+paratimes:
+  - sapphire
+codeUrl: https://github.com/0xHLiu/Resonant
+tutorials:
+  - Video demo: >-
+      https://stream.mux.com/AdZ01fxoMxu0077fSmmv7t4u3jPndDLC00QG018WleA00WY8/high.mp4
+demoUrl: ''
+created: '2025-07-04T19:08:32Z'
+lastUpdated: '2025-07-06T09:11:31Z'
+license: mit
+tags:
+  - ROFL
+  - EthGlobal Cannes 2025
+  - Hackathon
+languages:
+  - python
+maintainedByOasis: false
