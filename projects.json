@@ -374,7 +374,6 @@
                 "Video demo": "https://youtu.be/DPCdYvu3G_0"
             }
         ],
-        "demoUrl": "https://clpd-private.vercel.app/en",
         "created": "2024-11-02T20:23:12Z",
         "lastUpdated": "2024-11-03T21:41:01Z",
         "license": "",
@@ -394,7 +393,8 @@
         "maintainedByOasis": false,
         "screenshots": [
             "/projects/clpd-private/screenshots/01-landing.png"
-        ]
+        ],
+        "demoUrl": null
     },
     {
         "name": "Cypher zer0x",
