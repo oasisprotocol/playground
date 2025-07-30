@@ -75,7 +75,7 @@ description: |
   CLPD Token: [View on
   Explorer](https://basescan.org/token/0x24460D2b3d96ee5Ce87EE401b1cf2FD01545d9b1)
 
-  [See a demo video of how to acquire some
+  [See a demo video of how to aquire some
   CLPD](https://www.youtube.com/watch?v=m3C15BdIzVM&t=2s&ab_channel=DanielBeltr%C3%A1nVaras)
 
   Check out more on the hackathon's [project
@@ -85,6 +85,7 @@ paratimes:
 codeUrl: https://github.com/claucondor/clpd-private
 tutorials:
   - Video demo: https://youtu.be/DPCdYvu3G_0
+demoUrl: https://clpd-private.vercel.app/en
 created: '2024-11-02T20:23:12Z'
 lastUpdated: '2024-11-03T21:41:01Z'
 license: ''

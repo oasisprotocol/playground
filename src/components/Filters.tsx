@@ -59,15 +59,6 @@ const capitalize = (str: string) => {
   return str.charAt(0).toUpperCase() + str.slice(1);
 };
 
-const formatLicense = (license: string) => {
-  if (!license) return 'Unspecified';
-  if (license.toLowerCase() === 'mit') return 'MIT License';
-  if (license.toLowerCase() === 'apache-2.0') return 'Apache License 2.0';
-  if (license.toLowerCase() === 'gpl-3.0') return 'GNU General Public License v3.0';
-  if (license.toLowerCase() === 'bsd-3-clause') return 'BSD 3-Clause License';
-  return license;
-};
-
 const Filters: React.FC<FiltersProps> = ({
   langs,
   tags,
@@ -234,7 +225,7 @@ const Filters: React.FC<FiltersProps> = ({
                     color="primary"
                   />
                 }
-                label={`${formatLicense(license)} (${licenseCounts[license] || 0})`}
+                label={`${license} (${licenseCounts[license] || 0})`}
               />
             </Box>
           ))}

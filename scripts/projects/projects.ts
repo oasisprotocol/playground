@@ -6,14 +6,12 @@ import { Project } from '../../src/types';
 import { DoraHacksImporter } from './DoraHacksImporter';
 import { EthGlobalImporter } from './EthGlobalImporter';
 import { GithubImporter } from './GithubImporter';
-import { TaikaiImporter } from './TaikaiImporter';
 import { Importer } from './Importer';
 
 const registeredImporters: Map<RegExp, Importer> = new Map();
 registeredImporters.set(/github\.com/i, new GithubImporter());
 registeredImporters.set(/dorahacks\.io/i, new DoraHacksImporter());
 registeredImporters.set(/ethglobal\.com/i, new EthGlobalImporter());
-registeredImporters.set(/taikai\.network/i, new TaikaiImporter());
 
 const [, , command, ...args] = process.argv;
 
@@ -90,13 +88,7 @@ switch (command) {
           const response = await fetch(url);
           if (!response.ok) throw new Error(`Failed to fetch ${url}`);
 
-          // Better extension extraction for complex URLs
-          const urlParts = url.split('/');
-          const lastPart = urlParts[urlParts.length - 1];
-          const extension = lastPart.includes('.') ? 
-            lastPart.split('.').pop()?.toLowerCase() || 'jpg' : 
-            'jpg';
-          
+          const extension = url.split('.').pop()?.toLowerCase() || 'jpg';
           const paddedIndex = String(index + 1).padStart(2, '0');
           const filepath = `${screenshotsDir}/${paddedIndex}.${extension}`;
 

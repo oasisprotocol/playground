@@ -12,15 +12,6 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import { sanitizeUrl } from '../sanitizeUrl.mjs';
 import ProjectItemLanguages from './ProjectItemLanguages';
 
-const formatLicense = (license: string) => {
-  if (!license) return 'Unspecified';
-  if (license.toLowerCase() === 'mit') return 'MIT License';
-  if (license.toLowerCase() === 'apache-2.0') return 'Apache License 2.0';
-  if (license.toLowerCase() === 'gpl-3.0') return 'GNU General Public License v3.0';
-  if (license.toLowerCase() === 'bsd-3-clause') return 'BSD 3-Clause License';
-  return license;
-};
-
 interface ProjectDialogProps {
   open: boolean;
   onClose: () => void;
@@ -418,7 +409,7 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
                   marginBottom: '16px',
                 }}
               >
-                {formatLicense(project.license)}
+                {project.license}
               </Typography>
 
               {project.maintainedByOasis && (
