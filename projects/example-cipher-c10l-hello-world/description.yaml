@@ -24,7 +24,7 @@ tags:
   - CLI
 codeUrl: https://github.com/oasisprotocol/oasis-sdk/tree/main/examples/contract-sdk/c10l-hello-world
 tutorials:
-  - Cipher Confidential Hello World: https://docs.oasis.io/dapp/cipher/confidential-smart-contract
+  - Cipher Confidential Hello World: https://docs.oasis.io/build/tools/other-paratimes/cipher/confidential-smart-contract
 created: 2022-10-03
 lastUpdated: 2023-12-21
 maintainedByOasis: true
