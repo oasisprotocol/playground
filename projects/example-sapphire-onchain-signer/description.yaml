@@ -12,7 +12,7 @@ description: |
   image](https://docs.oasis.io/dapp/sapphire/guide#running-a-private-oasis-network-locally).
 
   This example is part of the official
-  [sapphire-paratime](https://github.com/oasisprotocol/sapphire) codebase
+  [sapphire-paratime](https://github.com/oasisprotocol/sapphire-paratime) codebase
   tests.
 paratimes:
   - sapphire

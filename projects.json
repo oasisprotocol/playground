@@ -227,7 +227,7 @@
                 "Eduardo Gomes": "https://github.com/Eduardogbg"
             },
             {
-                "Rafael Kras": "https://github.com/rafaeldkb"
+                "Rafael Kras": "https://github.com/rafamilkz"
             }
         ],
         "description": "Cross chain Dark Pool Orderbook\n\nAn orderbook matching engine that keeps all pending and executed orders\nprivate. Founders, Whales and Institutional Investors can finally trade tokens\nonchain without being surveilled.\n\nBy leveraging the privacy preserving properties of Oasis the contract is able\nto receive, keep and process encrypted limit orders from different traders,\nnever sharing the information with anyone. Whenever 2 limit orders match, the\ncontract executes them without anyone but the parties involved learning about\nthe trade.\n",
@@ -1009,7 +1009,6 @@
                 "Video demo": "https://stream.mux.com/xcRgepsd7wAOvWey0200XF55LRZVEWgxYNsLolOQsSIFs/high.mp4"
             }
         ],
-        "demoUrl": "https://doctor-delta.robin.markets/",
         "created": "2025-07-05T15:15:27Z",
         "lastUpdated": "2025-07-06T14:09:39Z",
         "tags": [
@@ -1031,13 +1030,14 @@
             "/projects/doctor-delta/screenshots/05.jpg",
             "/projects/doctor-delta/screenshots/06.jpg"
         ],
-        "slug": "doctor-delta"
+        "slug": "doctor-delta",
+        "demoUrl": null
     },
     {
         "name": "DSearch",
         "authors": [
             {
-                "Arsalaan Alam": "https://www.arsalaan.bio/"
+                "Arsalaan Alam": "https://github.com/Arsalaan-Alam"
             },
             {
                 "Krish Dhar": "https://github.com/ronykris"
@@ -1097,7 +1097,6 @@
             "OPL"
         ],
         "codeUrl": "https://github.com/empyrealapp/sapphire_hackathon",
-        "demoUrl": "https://beta.empyreal.app/",
         "tutorials": [
             {
                 "Video demo": "https://vimeo.com/871000099"
@@ -1111,7 +1110,8 @@
             "/projects/empyreal-exchange/screenshots/02-deposit.png",
             "/projects/empyreal-exchange/screenshots/03-withdraw.png"
         ],
-        "slug": "empyreal-exchange"
+        "slug": "empyreal-exchange",
+        "demoUrl": null
     },
     {
         "name": "Enclimate",
@@ -1169,7 +1169,7 @@
         "codeUrl": "https://github.com/oasisprotocol/oasis-sdk/tree/main/examples/contract-sdk/c10l-hello-world",
         "tutorials": [
             {
-                "Cipher Confidential Hello World": "https://docs.oasis.io/dapp/cipher/confidential-smart-contract"
+                "Cipher Confidential Hello World": "https://docs.oasis.io/build/tools/other-paratimes/cipher/confidential-smart-contract"
             }
         ],
         "created": "2022-10-03T00:00:00.000Z",
@@ -1207,7 +1207,7 @@
         "codeUrl": "https://github.com/oasisprotocol/oasis-sdk/tree/main/examples/contract-sdk/hello-world",
         "tutorials": [
             {
-                "Cipher Hello World": "https://docs.oasis.io/dapp/cipher/hello-world"
+                "Cipher Hello World": "https://docs.oasis.io/build/tools/other-paratimes/cipher/hello-world"
             }
         ],
         "created": "2022-10-03T00:00:00.000Z",
@@ -1264,7 +1264,7 @@
                 "Oasis Protocol Foundation": "https://oasisprotocol.org"
             }
         ],
-        "description": "Short example to demonstrate Sapphire's on-chain **transaction generation**\nand **signing** capabilities.\n\nThere are two tests included: The non-confidential one can be executed on any\nEVM-compatible chain, whereas the *confidential* test is executed only\non Sapphire-compatible chain (e.g. the [Sapphire's Localnet docker\nimage](https://docs.oasis.io/dapp/sapphire/guide#running-a-private-oasis-network-locally).\n\nThis example is part of the official\n[sapphire-paratime](https://github.com/oasisprotocol/sapphire) codebase\ntests.\n",
+        "description": "Short example to demonstrate Sapphire's on-chain **transaction generation**\nand **signing** capabilities.\n\nThere are two tests included: The non-confidential one can be executed on any\nEVM-compatible chain, whereas the *confidential* test is executed only\non Sapphire-compatible chain (e.g. the [Sapphire's Localnet docker\nimage](https://docs.oasis.io/dapp/sapphire/guide#running-a-private-oasis-network-locally).\n\nThis example is part of the official\n[sapphire-paratime](https://github.com/oasisprotocol/sapphire-paratime) codebase\ntests.\n",
         "paratimes": [
             "sapphire"
         ],
@@ -1556,7 +1556,7 @@
                 "Tarun Gupta": "https://github.com/Tarun-k-Gupta"
             },
             {
-                "Bhavesh Gupta": "https://github.com/barrytra"
+                "Bhavesh Gupta": "https://github.com/bhaveshg16"
             },
             {
                 "Aarav Mehta": "https://github.com/aaravm"
@@ -1581,7 +1581,7 @@
             "ETHGlobal Singapore 2024",
             "Hackathon"
         ],
-        "codeUrl": "https://github.com/barrytra/Lending-Sapphire",
+        "codeUrl": "https://github.com/bhaveshg16/Lending-Sapphire",
         "tutorials": [
             {
                 "Video demo": "https://www.loom.com/share/70a023c0110b4b1e9383c235023741cd?sid=01d5507f-3a59-4237-bd75-87fe3918cce6"
@@ -1886,7 +1886,6 @@
             "Password manager"
         ],
         "codeUrl": "https://github.com/itublockchain/ethdam-oasis-guard",
-        "demoUrl": "https://oasisguard.xyz/",
         "tutorials": [
             {
                 "Video demo": "https://www.youtube.com/watch?v=muluwPB6a9w"
@@ -1899,7 +1898,8 @@
             "/projects/oasisguard/screenshots/01-screenshots.png",
             "/projects/oasisguard/screenshots/02-banner.png"
         ],
-        "slug": "oasisguard"
+        "slug": "oasisguard",
+        "demoUrl": null
     },
     {
         "name": "Compensate",
@@ -2400,7 +2400,6 @@
             "React"
         ],
         "codeUrl": "https://github.com/taijusanagi/opl-secret-sponsor",
-        "demoUrl": "https://opl-secret-sponsor.vercel.app/",
         "tutorials": [
             {
                 "Video demo": "https://youtu.be/JnP3FGQu4ds"
@@ -2416,7 +2415,8 @@
             "/projects/secret-sponsor/screenshots/04-explorer.png",
             "/projects/secret-sponsor/screenshots/05-tx-details.png"
         ],
-        "slug": "secret-sponsor"
+        "slug": "secret-sponsor",
+        "demoUrl": null
     },
     {
         "name": "Spacetar",
@@ -2492,7 +2492,6 @@
             "Hackathon"
         ],
         "codeUrl": "https://github.com/engowl/squidl",
-        "demoUrl": "https://www.squidl.me/",
         "tutorials": [
             {
                 "EthGlobal Singapore 2024 demo": "https://stream.mux.com/BEUanmt0100GYnMoMMjqItzAfPxhpXFmu02XrUNcXcBZl8/high.mp4"
@@ -2511,7 +2510,8 @@
             "/projects/squidl/screenshots/04-send.jpg",
             "/projects/squidl/screenshots/05-flyer.png"
         ],
-        "slug": "squidl"
+        "slug": "squidl",
+        "demoUrl": null
     },
     {
         "name": "SwappaTEE",
@@ -2566,7 +2566,7 @@
         "paratimes": [
             "sapphire"
         ],
-        "codeUrl": "https://github.com/jasny/eth3",
+        "codeUrl": "https://github.com/jasny/ethdam3",
         "tutorials": [
             {
                 "Video demo 1": "https://www.youtube.com/watch?v=XIxbrY9pU88"
@@ -2624,7 +2624,6 @@
             "RNG"
         ],
         "codeUrl": "https://github.com/ThanksSkeleton/ethdenver_holdem",
-        "demoUrl": "https://poker.w3q.w3q-g.w3link.io",
         "created": "2024-02-24T00:00:00.000Z",
         "lastUpdated": "2024-03-06T00:00:00.000Z",
         "maintainedByOasis": false,
@@ -2634,7 +2633,8 @@
             "/projects/texas-hideem/screenshots/03-start.jpeg",
             "/projects/texas-hideem/screenshots/04-gameplay.jpeg"
         ],
-        "slug": "texas-hideem"
+        "slug": "texas-hideem",
+        "demoUrl": null
     },
     {
         "name": "The Purpose",
