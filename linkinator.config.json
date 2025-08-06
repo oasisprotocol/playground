@@ -1,0 +1,14 @@
+{
+  "concurrency": 1,
+  "recurse": true,
+  "skip": [
+    "www.linkedin.com",
+    "basescan.org",
+    "sepolia.basescan.org",
+    "www.canva.com"
+  ],
+  "verbosity": "error",
+  "timeout": 10000,
+  "markdown": true,
+  "retry": false
+}
