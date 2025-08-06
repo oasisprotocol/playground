@@ -22,7 +22,7 @@ tags:
   - CLI
 codeUrl: https://github.com/oasisprotocol/oasis-sdk/tree/main/examples/contract-sdk/hello-world
 tutorials:
-  - Cipher Hello World: https://docs.oasis.io/dapp/cipher/hello-world
+  - Cipher Hello World: https://docs.oasis.io/build/tools/other-paratimes/cipher/hello-world
 created: 2022-10-03
 lastUpdated: 2023-12-21
 maintainedByOasis: true
