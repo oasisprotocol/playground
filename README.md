@@ -1,5 +1,8 @@
 # Oasis Playground
 
+[![CI links status](https://github.com/oasisprotocol/playground/actions/workflows/ci-links.yml/badge.svg)](https://github.com/oasisprotocol/playground/actions/workflows/ci-links.yml)
+[![Deployment status](https://github.com/oasisprotocol/playground/actions/workflows/ci-build-deploy.yml/badge.svg)](https://github.com/oasisprotocol/playground/actions/workflows/ci-build-deploy.yml)
+
 This repository contains an index of notable dApps running on the Oasis
 platform. The index is primarily tailored, but not limited to, technology
 showcases and educational material—hence the name "Playground".

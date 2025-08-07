@@ -1,0 +1,30 @@
+# NOTE: This name appears in GitHub's Checks API and in workflow's status badge.
+name: ci-links
+
+on:
+  workflow_dispatch: # Allow manual triggering.
+  schedule:
+    # Check for broken links every day at 7:00 AM.
+    - cron:  '0 7 * * *'
+
+jobs:
+  links:
+    # NOTE: This name appears in GitHub's Checks API.
+    name: links
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: yarn
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Check links
+        run: |
+          yarn blc
