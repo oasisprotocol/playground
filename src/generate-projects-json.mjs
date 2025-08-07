@@ -9,6 +9,16 @@ const allScreenshots = globSync(
   './projects/*/screenshots/*.{png,jpg,jpeg}',
 ).sort();
 
+/** @param {string | undefined} license */
+const formatLicense = (license) => {
+  if (!license) return 'Unspecified';
+  if (license.toLowerCase() === 'mit') return 'MIT License';
+  if (license.toLowerCase() === 'apache-2.0') return 'Apache License 2.0';
+  if (license.toLowerCase() === 'gpl-3.0') return 'GNU General Public License v3.0';
+  if (license.toLowerCase() === 'bsd-3-clause') return 'BSD 3-Clause License';
+  return license;
+};
+
 /** @type {import('./types').Project[]} */
 const projects = yamls.map((path) => {
   const yaml = readFileSync(path, 'utf8');
@@ -38,6 +48,7 @@ const projects = yamls.map((path) => {
       sanitizeUrl(Object.values(t)[0]),
     );
   }
+  parsedYaml.license = formatLicense(parsedYaml.license);
 
   return parsedYaml;
 });
