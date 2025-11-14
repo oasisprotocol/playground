@@ -1,0 +1,34 @@
+name: Receipt-fi (發粿池)
+authors:
+  - Chen Chi-chun: https://github.com/june-in-exile
+  - Malingshu: https://github.com/Toby1009
+description: |
+  A Web3 platform built on a "Unified Invoice Pool System." Users upload
+  their e-invoice carrier receipts to the blockchain and contribute them to
+  designated "invoice pools" (each pool corresponds to a charity organization).
+  After winning, smart contracts automatically distribute prize money according to
+  each holder’s donation ratio (minimum 25%). Users set donation ratios when
+  registering invoice carriers and receive NFT certificates (IVC) as verifiable
+  proof. Privacy protection and verifiable credentials are foundational.
+
+  Check out more on the hackathon's [project page](https://github.com/june-in-exile/Invoice-RWA).
+
+paratimes:
+  - sapphire
+languages:
+  - solidity
+  - typescript
+tags:
+  - ROFL
+  - Zircuit
+  - Hackathon
+  - Taiwan RWA
+codeUrl: 'https://github.com/june-in-exile/Invoice-RWA'
+tutorials: 
+  - Video demo: https://github.com/user-attachments/assets/efd8b6f9-fd0e-402d-bb33-6d0f4bfda100
+demoUrl: ''
+created: 2025-11-01
+lastUpdated: 2025-11-01
+maintainedByOasis: false
+
+

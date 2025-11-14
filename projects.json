@@ -2147,6 +2147,47 @@
         "demoUrl": null
     },
     {
+        "name": "Receipt-fi (發粿池)",
+        "authors": [
+            {
+                "Chen Chi-chun": "https://github.com/june-in-exile"
+            },
+            {
+                "Malingshu": "https://github.com/Toby1009"
+            }
+        ],
+        "description": "A Web3 platform built on a \"Unified Invoice Pool System.\" Users upload\ntheir e-invoice carrier receipts to the blockchain and contribute them to\ndesignated \"invoice pools\" (each pool corresponds to a charity organization).\nAfter winning, smart contracts automatically distribute prize money according to\neach holder’s donation ratio (minimum 25%). Users set donation ratios when\nregistering invoice carriers and receive NFT certificates (IVC) as verifiable\nproof. Privacy protection and verifiable credentials are foundational.\n\nCheck out more on the hackathon's [project page](https://github.com/june-in-exile/Invoice-RWA).\n",
+        "paratimes": [
+            "sapphire"
+        ],
+        "languages": [
+            "Solidity",
+            "TypeScript"
+        ],
+        "tags": [
+            "ROFL",
+            "Zircuit",
+            "Hackathon",
+            "Taiwan RWA"
+        ],
+        "codeUrl": "https://github.com/june-in-exile/Invoice-RWA",
+        "tutorials": [
+            {
+                "Video demo": "https://github.com/user-attachments/assets/efd8b6f9-fd0e-402d-bb33-6d0f4bfda100"
+            }
+        ],
+        "demoUrl": null,
+        "created": "2025-11-01T00:00:00.000Z",
+        "lastUpdated": "2025-11-01T00:00:00.000Z",
+        "maintainedByOasis": false,
+        "screenshots": [
+            "/projects/receipt-fi/screenshots/01.png",
+            "/projects/receipt-fi/screenshots/02.png",
+            "/projects/receipt-fi/screenshots/03.png"
+        ],
+        "slug": "receipt-fi"
+    },
+    {
         "name": "Resonant",
         "authors": [
             {
