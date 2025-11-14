@@ -1,0 +1,39 @@
+name: PredaMark
+authors:
+  -  Siddhant Mehrotra : https://github.com/SavvySID
+description: |
+  PredaMark is a confidential prediction market that allows users to place bets on real-world events, such as elections, 
+  sports, or crypto price movements, while keeping their predictions private until resolution. 
+  Bets are encrypted on-chain using Oasis Sapphire, ensuring no one can see which side a user chose. 
+  Once the outcome is verified via Oasis ROFL, the system automatically decrypts and pays out winners in a trust-minimized way.
+
+  Traditional prediction markets suffer from two major issues:
+
+  - Lack of privacy – Every bet is public, which can discourage participation or lead to herd behavior.
+
+  - Trust in oracles – Outcomes depend on centralized feeds that may be biased or manipulated.
+
+  PredaMark solves these problems by:
+
+  - Encrypting predictions on-chain so no one can view them until the event is resolved.
+
+  - Using ROFL secure enclaves to fetch and verify real-world outcomes in a trusted, verifiable manner.
+
+  Check out more on the hackathon's [project page](https://app.akindo.io/communities/peW1noEwpia44mzd/products/7m1zlZa1jfdmgz4mJ).
+paratimes: 
+  - sapphire
+languages:
+  - javascript
+  - solidity
+  - python
+tags:
+  - ROFL
+  - Hackathon
+  - Pre-ETHGlobal New Delhi
+codeUrl: "https://github.com/SavvySID/Prediction-Market"
+tutorials:
+  - Video demo: https://www.youtube.com/watch?v=2_5YulfWmys
+demoUrl: null
+created: 2025-09-24
+lastUpdated: 2025-09-24
+maintainedByOasis: false

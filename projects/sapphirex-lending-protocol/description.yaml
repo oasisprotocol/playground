@@ -1,0 +1,33 @@
+name: "SapphireX: Lending Protocol"
+authors: 
+  - Anirudh Singh Chouhan : https://github.com/AnirudhSingh07
+description: |
+  SaphireX is a private, KYC-free lending protocol built on the Oasis Sapphire confidential EVM runtime. 
+  It leverages ROFL (Runtime Oracles for Layered Finance) to fetch real-time price feeds securely inside a Trusted Execution Environment (TEE).
+  With SaphireX, users can lend and borrow assets without exposing sensitive financial information publicly. 
+  Borrowing terms, collateral ratios, and loan health remain confidential on-chain, ensuring both transparency of execution and privacy of data.
+
+  Key features:
+    - Confidential Lending & Borrowing – Keep loan data private on-chain.
+    - TEE-powered Oracles (ROFL) – Reliable real-time price feeds within enclaves.
+    - Dual-token architecture – Lending assets + governance/stability token for protocol operations.
+    - KYC-free access – Permissionless, private lending without identity exposure.
+  
+  Check out more on the hackathon's [project page](https://app.akindo.io/communities/X4ZGXPaz9TOVG4VB/products/93vVlGOmQsQvRE6o7).
+paratimes: 
+  - sapphire
+languages:
+  - javascript
+  - solidity
+tags:
+  - ROFL
+  - DeFi
+  - Hackathon
+  - Pre-ETHGlobal New Delhi
+codeUrl: "https://github.com/AnirudhSingh07/SapphireX"
+demoUrl: null
+tutorials:
+  - Video demo: https://youtu.be/_e4P_g_JuRA
+created: 2025-09-24
+lastUpdated: 2025-09-24
+maintainedByOasis: false

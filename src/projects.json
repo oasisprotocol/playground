@@ -1638,39 +1638,6 @@
         "slug": "medvault"
     },
     {
-        "name": "MinePlay",
-        "authors": [
-            {
-                "tmanas06": "https://github.com/tmanas06"
-            }
-        ],
-        "description": "\nThis Minesweeper project takes the classic logic game and builds it on the Oasis Sapphire blockchain network,\nintroducing transparency and fairness through secure, verifiable randomness. \nPlayers navigate a 5x5 grid with randomly placed mines, betting with TEST tokens to avoid mines, and winning based on safe moves.\nThe problem it solves\n\nIt addresses fairness concerns in online gaming by ensuring that mine placements are random, private, and resistant to tampering. \nUsing Oasis Sapphire’s RNG (Random Number Generator), players can trust that the game outcome is unbiased and secure.\n\nCheck out more on the hackathon's [project page](https://app.akindo.io/communities/nPZgeVMqGU0JAkVA3/products/VwZazZWJ7c1erJj7).\n",
-        "paratimes": [
-            "sapphire"
-        ],
-        "languages": [
-            "JavaScript",
-            "Solidity"
-        ],
-        "tags": [
-            "Pre-ETHGlobal-New-Delhi-Buildathon",
-            "Hackathon"
-        ],
-        "codeUrl": "https://github.com/tmanas06/MineSweepGame_Oasis_hackathon",
-        "demoUrl": "https://mine-sweep-game-oasis-hackathon.vercel.app/",
-        "created": "2025-09-24T00:00:00.000Z",
-        "lastUpdated": "2025-09-24T00:00:00.000Z",
-        "maintainedByOasis": false,
-        "screenshots": [
-            "/projects/mineplay/screenshots/01.png",
-            "/projects/mineplay/screenshots/02.png",
-            "/projects/mineplay/screenshots/03.png",
-            "/projects/mineplay/screenshots/04.png",
-            "/projects/mineplay/screenshots/05.png"
-        ],
-        "slug": "mineplay"
-    },
-    {
         "name": "Minesweeper",
         "authors": [
             {
@@ -2026,44 +1993,6 @@
         "slug": "polybet"
     },
     {
-        "name": "PredaMark",
-        "authors": [
-            {
-                "Siddhant Mehrotra": "https://github.com/SavvySID"
-            }
-        ],
-        "description": "PredaMark is a confidential prediction market that allows users to place bets on real-world events, such as elections, \nsports, or crypto price movements, while keeping their predictions private until resolution. \nBets are encrypted on-chain using Oasis Sapphire, ensuring no one can see which side a user chose. \nOnce the outcome is verified via Oasis ROFL, the system automatically decrypts and pays out winners in a trust-minimized way.\n\nTraditional prediction markets suffer from two major issues:\n\n- Lack of privacy – Every bet is public, which can discourage participation or lead to herd behavior.\n\n- Trust in oracles – Outcomes depend on centralized feeds that may be biased or manipulated.\n\nPredaMark solves these problems by:\n\n- Encrypting predictions on-chain so no one can view them until the event is resolved.\n\n- Using ROFL secure enclaves to fetch and verify real-world outcomes in a trusted, verifiable manner.\n\nCheck out more on the hackathon's [project page](https://app.akindo.io/communities/peW1noEwpia44mzd/products/7m1zlZa1jfdmgz4mJ).\n",
-        "paratimes": [
-            "sapphire"
-        ],
-        "languages": [
-            "JavaScript",
-            "Solidity",
-            "Python"
-        ],
-        "tags": [
-            "ROFL",
-            "Hackathon",
-            "Pre-ETHGlobal-New-Delhi-Buildathon"
-        ],
-        "codeUrl": "https://github.com/SavvySID/Prediction-Market",
-        "tutorials": [
-            {
-                "Video demo": "https://www.youtube.com/watch?v=2_5YulfWmys"
-            }
-        ],
-        "demoUrl": null,
-        "created": "2025-09-24T00:00:00.000Z",
-        "lastUpdated": "2025-09-24T00:00:00.000Z",
-        "maintainedByOasis": false,
-        "screenshots": [
-            "/projects/predamark/screenshots/01.png",
-            "/projects/predamark/screenshots/02.png",
-            "/projects/predamark/screenshots/03.png"
-        ],
-        "slug": "predamark"
-    },
-    {
         "name": "Priva Health",
         "authors": [
             {
@@ -2406,46 +2335,6 @@
         "demoUrl": null
     },
     {
-        "name": "SapphireX: Lending Protocol",
-        "authors": [
-            {
-                "Anirudh Singh Chouhan": "https://github.com/AnirudhSingh07"
-            }
-        ],
-        "description": "SaphireX is a private, KYC-free lending protocol built on the Oasis Sapphire confidential EVM runtime. \nIt leverages ROFL (Runtime Oracles for Layered Finance) to fetch real-time price feeds securely inside a Trusted Execution Environment (TEE).\nWith SaphireX, users can lend and borrow assets without exposing sensitive financial information publicly. \nBorrowing terms, collateral ratios, and loan health remain confidential on-chain, ensuring both transparency of execution and privacy of data.\n\nKey features:\n  - Confidential Lending & Borrowing – Keep loan data private on-chain.\n  - TEE-powered Oracles (ROFL) – Reliable real-time price feeds within enclaves.\n  - Dual-token architecture – Lending assets + governance/stability token for protocol operations.\n  - KYC-free access – Permissionless, private lending without identity exposure.\n",
-        "paratimes": [
-            "sapphire"
-        ],
-        "languages": [
-            "JavaScript",
-            "Solidity"
-        ],
-        "tags": [
-            "ROFL",
-            "DeFi",
-            "Hackathon",
-            "Pre-ETHGlobal-New-Delhi-Buildathon"
-        ],
-        "codeUrl": "https://github.com/AnirudhSingh07/SapphireX",
-        "demoUrl": null,
-        "tutorials": [
-            {
-                "Video demo": "https://youtu.be/_e4P_g_JuRA"
-            }
-        ],
-        "created": "2025-09-24T00:00:00.000Z",
-        "lastUpdated": "2025-09-24T00:00:00.000Z",
-        "maintainedByOasis": false,
-        "screenshots": [
-            "/projects/sapphirex-lending-protocol/screenshots/01.png",
-            "/projects/sapphirex-lending-protocol/screenshots/02.png",
-            "/projects/sapphirex-lending-protocol/screenshots/03.png",
-            "/projects/sapphirex-lending-protocol/screenshots/04.png",
-            "/projects/sapphirex-lending-protocol/screenshots/05.png"
-        ],
-        "slug": "sapphirex-lending-protocol"
-    },
-    {
         "name": "Secret Bids",
         "authors": [
             {
@@ -2528,70 +2417,6 @@
             "/projects/secret-sponsor/screenshots/05-tx-details.png"
         ],
         "slug": "secret-sponsor"
-    },
-    {
-        "name": "Sentibot",
-        "authors": [],
-        "description": "Sentibot is an AI-powered bot that tracks, analyzes, and summarizes sentiment\nacross crypto communities, social feeds, and developer channels to help teams\nreact quickly with data‑driven insights.\n\nIt aggregates high-signal conversations and market chatter into succinct\nupdates, highlighting trend shifts and anomalies so projects can respond in\nminutes, not hours.\n\nWhat it does:\n\n- Real‑time sentiment tracking across multiple sources\n- Summaries and alerts for spikes, anomalies, and notable topics\n- Lightweight dashboards for teams and community managers\n\nWhy Oasis:\n\n- Puts user and community privacy first while still enabling useful insights\n- Can leverage confidential compute for sensitive data handling\n\nSee the Akindo page for more details and updates.\n",
-        "paratimes": [],
-        "languages": [],
-        "license": "Unknown",
-        "tags": [
-            "Akindo",
-            "Community"
-        ],
-        "codeUrl": "",
-        "demoUrl": "https://app.akindo.io/communities/xKWknzrrWCmd2JpeP/products/4e9BlqL07Cm3WxX0",
-        "created": "2025-11-04T00:00:00.000Z",
-        "lastUpdated": "2025-11-04T00:00:00.000Z",
-        "maintainedByOasis": false,
-        "screenshots": [
-            "/projects/sentibot/screenshots/01.png",
-            "/projects/sentibot/screenshots/02.png",
-            "/projects/sentibot/screenshots/03.png",
-            "/projects/sentibot/screenshots/04.png",
-            "/projects/sentibot/screenshots/05.png"
-        ],
-        "slug": "sentibot"
-    },
-    {
-        "name": "Shadeswap",
-        "authors": [
-            {
-                "Sarthak Gupta": "https://github.com/XSTRANGER-7"
-            }
-        ],
-        "description": "Shapeshifter DEX is a privacy-first decentralized exchange that allows users to trade cryptocurrencies using multiple anonymous personas. \nUsers can create encrypted identities, switch between them seamlessly, and execute trades on Uniswap while maintaining complete anonymity. \nThe platform leverages Oasis Sapphire's confidential computation to ensure that persona data remains encrypted and private, even from the blockchain itself.\n\nTraditional DEXs expose user trading patterns and wallet addresses, creating privacy concerns and potential front-running vulnerabilities. \nUsers often want to:\n\n- Trade anonymously without revealing their main wallet identity\n- Separate different trading strategies across multiple personas\n- Prevent MEV (Maximal Extractable Value) attacks by obfuscating trading patterns\n- Maintain privacy while still accessing DeFi liquidity\n\nShapeshifter DEX solves these issues by allowing users to create multiple encrypted personas that can trade independently while keeping their real identity completely private.\n\nCheck out more on the hackathon's [project page](https://app.akindo.io/communities/Mzj3mmXVWcEde2WZ/products/gXAzBgdkAHde89Dm).\n",
-        "paratimes": [
-            "sapphire"
-        ],
-        "languages": [
-            "JavaScript",
-            "Solidity"
-        ],
-        "tutorials": [
-            {
-                "Video demo": "https://youtu.be/oLePnGVfcPM"
-            }
-        ],
-        "tags": [
-            "Uniswap",
-            "Hackathon",
-            "Pre-ETHGlobal-New-Delhi-Buildathon"
-        ],
-        "codeUrl": "https://github.com/XSTRANGER-7/shadeswap",
-        "demoUrl": null,
-        "created": "2025-09-24T00:00:00.000Z",
-        "lastUpdated": "2025-09-24T00:00:00.000Z",
-        "maintainedByOasis": false,
-        "screenshots": [
-            "/projects/shadeswap/screenshots/01.png",
-            "/projects/shadeswap/screenshots/02.png",
-            "/projects/shadeswap/screenshots/03.png",
-            "/projects/shadeswap/screenshots/04.png",
-            "/projects/shadeswap/screenshots/05.png"
-        ],
-        "slug": "shadeswap"
     },
     {
         "name": "Spacetar",
@@ -2980,40 +2805,6 @@
         "slug": "twenty1"
     },
     {
-        "name": "Unipoll",
-        "authors": [],
-        "description": "What it does\n  - GroupSwap enables social group trades on Uniswap v4.\n  - Users pool ERC20 deposits, vote (weighted by deposit), and execute a collective swap when quorum and end time conditions are met.\n  - A Uniswap v4 hook enforces that only GroupSwap-approved swaps can execute.\n  - Optional Oasis Sapphire integration adds private voting with signature verification via Sapphire precompiles.\n\nThe problem it solves\n\n  - Coordinating group trades is hard: scattered approvals, unclear thresholds, and trust issues.\n  - GroupSwap provides a transparent, on-chain governance flow for a one-shot trade:\n    - Clear proposal window and quorum.\n    - Weighted voting by capital committed.\n    - Enforcement via a hook that prevents unauthorized swaps.\n  - With Sapphire, sensitive vote choices can be kept private while still verifiable on-chain.\n\nCheck out more on the hackathon's [project page](https://app.akindo.io/communities/63damjWkXSPgdmgE/products/3d7Xlan1jc9wVBw).\n",
-        "paratimes": [
-            "sapphire"
-        ],
-        "languages": [
-            "Solidity"
-        ],
-        "license": "Unknown",
-        "tags": [
-            "Uniswap",
-            "Hackathon",
-            "Pre-ETHGlobal-New-Delhi-Buildathon"
-        ],
-        "codeUrl": "https://github.com/shivanshxyz/unipoll",
-        "demoUrl": null,
-        "tutorials": [
-            {
-                "Video demo": "https://www.youtube.com/watch?v=nfzYRVlOBTo"
-            }
-        ],
-        "created": "2025-11-04T00:00:00.000Z",
-        "lastUpdated": "2025-11-04T00:00:00.000Z",
-        "maintainedByOasis": false,
-        "screenshots": [
-            "/projects/unipoll/screenshots/01.png",
-            "/projects/unipoll/screenshots/02.png",
-            "/projects/unipoll/screenshots/03.png",
-            "/projects/unipoll/screenshots/04.png"
-        ],
-        "slug": "unipoll"
-    },
-    {
         "name": "Universal Basic AI",
         "authors": [
             {
@@ -3174,46 +2965,6 @@
         ],
         "slug": "zeo-kuessr",
         "demoUrl": null
-    },
-    {
-        "name": "zk-oasis-sdk",
-        "authors": [
-            {
-                "jatinsahijwani": "https://github.com/jatinsahijwani"
-            }
-        ],
-        "description": "\nzk-oasis-sdk is a developer toolkit that compiles Circom circuits, generates zkSNARK proofs, and auto-deploys Solidity verifiers to Oasis Sapphire. \nIt abstracts away complex workflows so developers can add privacy-preserving verification to their dApps with a single command.\n\nBuilding ZK applications is complex—requiring multiple tools, cryptography expertise, and manual deployments. \nOn top of that, deploying to Sapphire means dealing with TEEs and confidential execution. zk-oasis-sdk unifies these processes into a seamless, automated pipeline.\n\nCheck out more on the hackathon's [project page](https://app.akindo.io/communities/q34EL31MBuj2NOon/products/eae8VRlZ0u7wJ93P).\n",
-        "paratimes": [
-            "sapphire"
-        ],
-        "languages": [
-            "TypeScript",
-            "Solidity"
-        ],
-        "license": "Unknown",
-        "tutorials": [
-            {
-                "Video demo": "https://www.youtube.com/watch?v=S7TD2E8-Sdc"
-            }
-        ],
-        "tags": [
-            "zkSync",
-            "Hackathon",
-            "Pre-ETHGlobal-New-Delhi-Buildathon"
-        ],
-        "codeUrl": "https://github.com/jatinsahijwani/zk-oasis-sdk",
-        "demoUrl": null,
-        "created": "2025-09-24T00:00:00.000Z",
-        "lastUpdated": "2025-09-24T00:00:00.000Z",
-        "maintainedByOasis": false,
-        "screenshots": [
-            "/projects/zk-oasis-sdk/screenshots/01.png",
-            "/projects/zk-oasis-sdk/screenshots/02.png",
-            "/projects/zk-oasis-sdk/screenshots/03.png",
-            "/projects/zk-oasis-sdk/screenshots/04.png",
-            "/projects/zk-oasis-sdk/screenshots/05.png"
-        ],
-        "slug": "zk-oasis-sdk"
     },
     {
         "name": "ZK-Pal",

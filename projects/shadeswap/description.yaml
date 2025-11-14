@@ -1,0 +1,36 @@
+name: Shadeswap
+authors:
+  - Sarthak Gupta: https://github.com/XSTRANGER-7
+description: |
+  Shapeshifter DEX is a privacy-first decentralized exchange that allows users to trade cryptocurrencies using multiple anonymous personas. 
+  Users can create encrypted identities, switch between them seamlessly, and execute trades on Uniswap while maintaining complete anonymity. 
+  The platform leverages Oasis Sapphire's confidential computation to ensure that persona data remains encrypted and private, even from the blockchain itself.
+
+  Traditional DEXs expose user trading patterns and wallet addresses, creating privacy concerns and potential front-running vulnerabilities. 
+  Users often want to:
+
+  - Trade anonymously without revealing their main wallet identity
+  - Separate different trading strategies across multiple personas
+  - Prevent MEV (Maximal Extractable Value) attacks by obfuscating trading patterns
+  - Maintain privacy while still accessing DeFi liquidity
+
+  Shapeshifter DEX solves these issues by allowing users to create multiple encrypted personas that can trade independently while keeping their real identity completely private.
+
+  Check out more on the hackathon's [project page](https://app.akindo.io/communities/Mzj3mmXVWcEde2WZ/products/gXAzBgdkAHde89Dm).
+paratimes: 
+  - sapphire
+languages:
+  - javascript
+  - solidity
+tutorials:
+  - Video demo: https://youtu.be/oLePnGVfcPM
+tags:
+  - Uniswap
+  - Defi
+  - Hackathon
+  - Pre-ETHGlobal New Delhi
+codeUrl: "https://github.com/XSTRANGER-7/shadeswap"
+demoUrl: null
+created: 2025-09-24
+lastUpdated: 2025-09-24
+maintainedByOasis: false
