@@ -25,14 +25,14 @@ description: |
   toward a future where individuals across LatAm can securely use blockchain
   technology in everyday transactions without compromising privacy.
 
-  ### Focus: Private Access to Financial Transactions  
+  ### Focus: Private Access to Financial Transactions
 
   We aim to tackle the challenge of providing private transaction options for
   LatAm users who need secure, discreet financial solutions. In a region where
   privacy is a growing concern, our platform offers a way to make digital
   transactions confidently and securely.
 
-  ### Education and Trust in Privacy Technology 
+  ### Education and Trust in Privacy Technology
 
   Beyond access, educating users about the benefits of private blockchain
   transactions is essential. Many people in LatAm are wary of blockchain due to
@@ -40,7 +40,7 @@ description: |
   we’re helping users understand how they can benefit from privacy-enhancing
   features while maintaining transparency through verified proof of reserves.
 
-  ### Interoperability  
+  ### Interoperability
 
   Our submission introduces CLPD’s private transaction feature, integrated with
   Oasis Sapphire and bridged via Chainlink CCIP, allowing for secure, private
@@ -54,7 +54,7 @@ description: |
 
   ### Networks and Deployments
 
-  #### Sapphire Testnet 
+  #### Sapphire Testnet
 
   CLPD Token:[ View on
   Explorer](https://explorer.oasis.io/testnet/sapphire/address/0xE65d126b56b1BF3Dd1f31057ffC1dabD53465b6e)
@@ -87,7 +87,6 @@ tutorials:
   - Video demo: https://youtu.be/DPCdYvu3G_0
 created: '2024-11-02T20:23:12Z'
 lastUpdated: '2024-11-03T21:41:01Z'
-license: ''
 tags:
   - ROFL
   - DeFi

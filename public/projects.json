@@ -37,7 +37,8 @@
             "/projects/0x2fa/screenshots/04-scan-invite-code.jpeg",
             "/projects/0x2fa/screenshots/05-banner.png"
         ],
-        "slug": "0x2fa"
+        "slug": "0x2fa",
+        "license": "Unspecified"
     },
     {
         "name": "Activist Toolkit",
@@ -65,7 +66,7 @@
         ],
         "created": "2025-05-10T09:16:37Z",
         "lastUpdated": "2025-05-13T14:40:54Z",
-        "license": "unlicense",
+        "license": "Unlicense",
         "tags": [
             "ROFL",
             "ETHDam 2025",
@@ -167,7 +168,8 @@
             "/projects/aware/screenshots/04.jpg",
             "/projects/aware/screenshots/05.jpg"
         ],
-        "slug": "aware"
+        "slug": "aware",
+        "license": "Unspecified"
     },
     {
         "name": "B-Hook",
@@ -227,7 +229,7 @@
                 "Eduardo Gomes": "https://github.com/Eduardogbg"
             },
             {
-                "Rafael Kras": "https://github.com/rafaeldkb"
+                "Rafael Kras": "https://github.com/rafamilkz"
             }
         ],
         "description": "Cross chain Dark Pool Orderbook\n\nAn orderbook matching engine that keeps all pending and executed orders\nprivate. Founders, Whales and Institutional Investors can finally trade tokens\nonchain without being surveilled.\n\nBy leveraging the privacy preserving properties of Oasis the contract is able\nto receive, keep and process encrypted limit orders from different traders,\nnever sharing the information with anyone. Whenever 2 limit orders match, the\ncontract executes them without anyone but the parties involved learning about\nthe trade.\n",
@@ -256,7 +258,8 @@
             "/projects/blacksea/screenshots/01-architecture.png"
         ],
         "slug": "blacksea",
-        "demoUrl": null
+        "demoUrl": null,
+        "license": "Unspecified"
     },
     {
         "name": "BoT (Blockchain of Things)",
@@ -297,7 +300,8 @@
             "/projects/bot/screenshots/01-architecture.png"
         ],
         "slug": "bot",
-        "demoUrl": null
+        "demoUrl": null,
+        "license": "Unspecified"
     },
     {
         "name": "CAAI (Copyright Aware AI)",
@@ -342,7 +346,8 @@
             "/projects/caai/screenshots/01-logo.jpg",
             "/projects/caai/screenshots/02-diagram.png"
         ],
-        "slug": "caai"
+        "slug": "caai",
+        "license": "Unspecified"
     },
     {
         "name": "CLPD Stablecoin Private Transactions",
@@ -364,7 +369,7 @@
                 "Juan Manuel Elias Soria": "https://github.com/ManuelElias1999"
             }
         ],
-        "description": "A future where stablecoin transactions is private thanks to the Oasis Network.\n\nWe'd like to advance crypto adoption in LatAm by introducing privacy-focused\ntransactions to our Chilean peso stablecoin (CLPD). With Oasis Network’s\nconfidential EVM, Sapphire, we’re integrating private transaction capabilities\nthat will give users more control over their financial data.\n\nLeveraging the Oasis platform’s Privacy Layer, our CLPD project offers a new\nlayer of security for users, allowing:\n\n- Confidential national and international transfers.\n- Safe transactions that protect financial data.\n- Access to both digital and real-world assets with full data privacy.\n\nWith support from the Oasis community and technical resources, we’re building\ntoward a future where individuals across LatAm can securely use blockchain\ntechnology in everyday transactions without compromising privacy.\n\n### Focus: Private Access to Financial Transactions  \n\nWe aim to tackle the challenge of providing private transaction options for\nLatAm users who need secure, discreet financial solutions. In a region where\nprivacy is a growing concern, our platform offers a way to make digital\ntransactions confidently and securely.\n\n### Education and Trust in Privacy Technology \n\nBeyond access, educating users about the benefits of private blockchain\ntransactions is essential. Many people in LatAm are wary of blockchain due to\nthe transparency of most public ledgers. Using Sapphire’s confidential EVM,\nwe’re helping users understand how they can benefit from privacy-enhancing\nfeatures while maintaining transparency through verified proof of reserves.\n\n### Interoperability  \n\nOur submission introduces CLPD’s private transaction feature, integrated with\nOasis Sapphire and bridged via Chainlink CCIP, allowing for secure, private\ntransfers on the Oasis Network. With CLPD’s design, users can make private\ntransactions seamlessly, knowing their financial data remains confidential.\n\nIn CLPD, we use ROFL (Runtime Oracle For Ledgers) to securely access banking\ndata through code execution in a TEE (Trusted Execution Environment). This\nallows us to obtain and verify the current balance of reserves in real-time,\nthus ensuring the constant maintenance of 1:1 parity between CLPD and CLP.\n\n### Networks and Deployments\n\n#### Sapphire Testnet \n\nCLPD Token:[ View on\nExplorer](https://explorer.oasis.io/testnet/sapphire/address/0xE65d126b56b1BF3Dd1f31057ffC1dabD53465b6e)\n\nCLPD Token ROFL: [View on\nExplorer](https://explorer.oasis.io/testnet/sapphire/address/0xd28eb2D29964127D102cD0047A1fee319B328Bca)\n\nOracle ROFL: [View on\nExplorer](https://explorer.oasis.io/testnet/sapphire/address/0xEdDa5130fD503445AB7c4520DA7ef1b55Be0372A)\n\n#### Base Sepolia\n\nCLPD Token: [View on\nExplorer](https://sepolia.basescan.org/address/0xb00C1946fFADE1Ddf40f9957E659bA3CCb8c843A)\n\n#### Base Mainnet\n\nCLPD Token: [View on\nExplorer](https://basescan.org/token/0x24460D2b3d96ee5Ce87EE401b1cf2FD01545d9b1)\n\n[See a demo video of how to acquire some\nCLPD](https://www.youtube.com/watch?v=m3C15BdIzVM&t=2s&ab_channel=DanielBeltr%C3%A1nVaras)\n\nCheck out more on the hackathon's [project\npage](https://dorahacks.io/buidl/18496).\n",
+        "description": "A future where stablecoin transactions is private thanks to the Oasis Network.\n\nWe'd like to advance crypto adoption in LatAm by introducing privacy-focused\ntransactions to our Chilean peso stablecoin (CLPD). With Oasis Network’s\nconfidential EVM, Sapphire, we’re integrating private transaction capabilities\nthat will give users more control over their financial data.\n\nLeveraging the Oasis platform’s Privacy Layer, our CLPD project offers a new\nlayer of security for users, allowing:\n\n- Confidential national and international transfers.\n- Safe transactions that protect financial data.\n- Access to both digital and real-world assets with full data privacy.\n\nWith support from the Oasis community and technical resources, we’re building\ntoward a future where individuals across LatAm can securely use blockchain\ntechnology in everyday transactions without compromising privacy.\n\n### Focus: Private Access to Financial Transactions\n\nWe aim to tackle the challenge of providing private transaction options for\nLatAm users who need secure, discreet financial solutions. In a region where\nprivacy is a growing concern, our platform offers a way to make digital\ntransactions confidently and securely.\n\n### Education and Trust in Privacy Technology\n\nBeyond access, educating users about the benefits of private blockchain\ntransactions is essential. Many people in LatAm are wary of blockchain due to\nthe transparency of most public ledgers. Using Sapphire’s confidential EVM,\nwe’re helping users understand how they can benefit from privacy-enhancing\nfeatures while maintaining transparency through verified proof of reserves.\n\n### Interoperability\n\nOur submission introduces CLPD’s private transaction feature, integrated with\nOasis Sapphire and bridged via Chainlink CCIP, allowing for secure, private\ntransfers on the Oasis Network. With CLPD’s design, users can make private\ntransactions seamlessly, knowing their financial data remains confidential.\n\nIn CLPD, we use ROFL (Runtime Oracle For Ledgers) to securely access banking\ndata through code execution in a TEE (Trusted Execution Environment). This\nallows us to obtain and verify the current balance of reserves in real-time,\nthus ensuring the constant maintenance of 1:1 parity between CLPD and CLP.\n\n### Networks and Deployments\n\n#### Sapphire Testnet\n\nCLPD Token:[ View on\nExplorer](https://explorer.oasis.io/testnet/sapphire/address/0xE65d126b56b1BF3Dd1f31057ffC1dabD53465b6e)\n\nCLPD Token ROFL: [View on\nExplorer](https://explorer.oasis.io/testnet/sapphire/address/0xd28eb2D29964127D102cD0047A1fee319B328Bca)\n\nOracle ROFL: [View on\nExplorer](https://explorer.oasis.io/testnet/sapphire/address/0xEdDa5130fD503445AB7c4520DA7ef1b55Be0372A)\n\n#### Base Sepolia\n\nCLPD Token: [View on\nExplorer](https://sepolia.basescan.org/address/0xb00C1946fFADE1Ddf40f9957E659bA3CCb8c843A)\n\n#### Base Mainnet\n\nCLPD Token: [View on\nExplorer](https://basescan.org/token/0x24460D2b3d96ee5Ce87EE401b1cf2FD01545d9b1)\n\n[See a demo video of how to acquire some\nCLPD](https://www.youtube.com/watch?v=m3C15BdIzVM&t=2s&ab_channel=DanielBeltr%C3%A1nVaras)\n\nCheck out more on the hackathon's [project\npage](https://dorahacks.io/buidl/18496).\n",
         "paratimes": [
             "sapphire"
         ],
@@ -374,10 +379,8 @@
                 "Video demo": "https://youtu.be/DPCdYvu3G_0"
             }
         ],
-        "demoUrl": "https://clpd-private.vercel.app/en",
         "created": "2024-11-02T20:23:12Z",
         "lastUpdated": "2024-11-03T21:41:01Z",
-        "license": "",
         "tags": [
             "ROFL",
             "DeFi",
@@ -394,7 +397,9 @@
         "maintainedByOasis": false,
         "screenshots": [
             "/projects/clpd-private/screenshots/01-landing.png"
-        ]
+        ],
+        "demoUrl": null,
+        "license": "Unspecified"
     },
     {
         "name": "Cypher zer0x",
@@ -444,7 +449,8 @@
             "/projects/cypher-zer0x/screenshots/04-metamask-snap.jpeg",
             "/projects/cypher-zer0x/screenshots/05-kyc.jpeg"
         ],
-        "slug": "cypher-zer0x"
+        "slug": "cypher-zer0x",
+        "license": "Unspecified"
     },
     {
         "authors": [
@@ -596,7 +602,7 @@
         ],
         "name": "CraneChat 🏗",
         "slug": "demo-chat",
-        "description": "An E2E encrypted chat with token gated group chats built on Oasis Sapphire\nwith ROFL. \n\nCraneChat is a decentralized chat application that provides:\n\n- **Token Gated Group Chats**: Create groups that require members to hold\nspecific token amounts on supported chains to join\n- **Direct Messaging**: Send encrypted messages directly to other users\n- **E2E Encryption**: All messages are encrypted using Oasis Sapphire's\nconfidential smart contracts\n- **ROFL Integration**: Automated token balance verification using ROFL\n(Remote OFfchain Logic)\n",
+        "description": "An E2E encrypted chat with token gated group chats built on Oasis Sapphire\nwith ROFL.\n\nCraneChat is a decentralized chat application that provides:\n\n- **Token Gated Group Chats**: Create groups that require members to hold\nspecific token amounts on supported chains to join\n- **Direct Messaging**: Send encrypted messages directly to other users\n- **E2E Encryption**: All messages are encrypted using Oasis Sapphire's\nconfidential smart contracts\n- **ROFL Integration**: Automated token balance verification using ROFL\n(Remote OFfchain Logic)\n",
         "languages": [
             "TypeScript",
             "Solidity",
@@ -608,7 +614,7 @@
         "paratimes": [
             "sapphire"
         ],
-        "license": "apache-2.0",
+        "license": "Apache-2.0",
         "tags": [
             "ROFL",
             "Next.js",
@@ -1009,7 +1015,6 @@
                 "Video demo": "https://stream.mux.com/xcRgepsd7wAOvWey0200XF55LRZVEWgxYNsLolOQsSIFs/high.mp4"
             }
         ],
-        "demoUrl": "https://doctor-delta.robin.markets/",
         "created": "2025-07-05T15:15:27Z",
         "lastUpdated": "2025-07-06T14:09:39Z",
         "tags": [
@@ -1031,13 +1036,15 @@
             "/projects/doctor-delta/screenshots/05.jpg",
             "/projects/doctor-delta/screenshots/06.jpg"
         ],
-        "slug": "doctor-delta"
+        "slug": "doctor-delta",
+        "demoUrl": null,
+        "license": "Unspecified"
     },
     {
         "name": "DSearch",
         "authors": [
             {
-                "Arsalaan Alam": "https://www.arsalaan.bio/"
+                "Arsalaan Alam": "https://github.com/Arsalaan-Alam"
             },
             {
                 "Krish Dhar": "https://github.com/ronykris"
@@ -1074,7 +1081,8 @@
             "/projects/dsearch/screenshots/04-image-results.png",
             "/projects/dsearch/screenshots/05-related-results.png"
         ],
-        "slug": "dsearch"
+        "slug": "dsearch",
+        "license": "Unspecified"
     },
     {
         "name": "Empyreal Exchange",
@@ -1097,7 +1105,6 @@
             "OPL"
         ],
         "codeUrl": "https://github.com/empyrealapp/sapphire_hackathon",
-        "demoUrl": "https://beta.empyreal.app/",
         "tutorials": [
             {
                 "Video demo": "https://vimeo.com/871000099"
@@ -1111,7 +1118,8 @@
             "/projects/empyreal-exchange/screenshots/02-deposit.png",
             "/projects/empyreal-exchange/screenshots/03-withdraw.png"
         ],
-        "slug": "empyreal-exchange"
+        "slug": "empyreal-exchange",
+        "demoUrl": null
     },
     {
         "name": "Enclimate",
@@ -1128,7 +1136,6 @@
         "demoUrl": null,
         "created": "2025-07-11T20:50:28.008Z",
         "lastUpdated": "2025-07-11T20:50:28.008Z",
-        "license": "",
         "tags": [
             "ROFL",
             "EthGlobal Cannes 2025",
@@ -1143,7 +1150,8 @@
             "/projects/enclimate/screenshots/04.jpg"
         ],
         "slug": "enclimate",
-        "codeUrl": ""
+        "codeUrl": "",
+        "license": "Unspecified"
     },
     {
         "name": "Confidential Hello World on Cipher",
@@ -1169,7 +1177,7 @@
         "codeUrl": "https://github.com/oasisprotocol/oasis-sdk/tree/main/examples/contract-sdk/c10l-hello-world",
         "tutorials": [
             {
-                "Cipher Confidential Hello World": "https://docs.oasis.io/dapp/cipher/confidential-smart-contract"
+                "Cipher Confidential Hello World": "https://docs.oasis.io/build/tools/other-paratimes/cipher/confidential-smart-contract"
             }
         ],
         "created": "2022-10-03T00:00:00.000Z",
@@ -1207,7 +1215,7 @@
         "codeUrl": "https://github.com/oasisprotocol/oasis-sdk/tree/main/examples/contract-sdk/hello-world",
         "tutorials": [
             {
-                "Cipher Hello World": "https://docs.oasis.io/dapp/cipher/hello-world"
+                "Cipher Hello World": "https://docs.oasis.io/build/tools/other-paratimes/cipher/hello-world"
             }
         ],
         "created": "2022-10-03T00:00:00.000Z",
@@ -1264,7 +1272,7 @@
                 "Oasis Protocol Foundation": "https://oasisprotocol.org"
             }
         ],
-        "description": "Short example to demonstrate Sapphire's on-chain **transaction generation**\nand **signing** capabilities.\n\nThere are two tests included: The non-confidential one can be executed on any\nEVM-compatible chain, whereas the *confidential* test is executed only\non Sapphire-compatible chain (e.g. the [Sapphire's Localnet docker\nimage](https://docs.oasis.io/dapp/sapphire/guide#running-a-private-oasis-network-locally).\n\nThis example is part of the official\n[sapphire-paratime](https://github.com/oasisprotocol/sapphire) codebase\ntests.\n",
+        "description": "Short example to demonstrate Sapphire's on-chain **transaction generation**\nand **signing** capabilities.\n\nThere are two tests included: The non-confidential one can be executed on any\nEVM-compatible chain, whereas the *confidential* test is executed only\non Sapphire-compatible chain (e.g. the [Sapphire's Localnet docker\nimage](https://docs.oasis.io/dapp/sapphire/guide#running-a-private-oasis-network-locally).\n\nThis example is part of the official\n[sapphire-paratime](https://github.com/oasisprotocol/sapphire-paratime) codebase\ntests.\n",
         "paratimes": [
             "sapphire"
         ],
@@ -1312,7 +1320,7 @@
         "demoUrl": null,
         "created": "2024-11-16T19:35:46Z",
         "lastUpdated": "2024-11-17T14:07:18Z",
-        "license": "apache-2.0",
+        "license": "Apache-2.0",
         "tags": [
             "Privy",
             "Next.js",
@@ -1418,7 +1426,8 @@
             "/projects/fastlane/screenshots/02-game.png",
             "/projects/fastlane/screenshots/03-obstacle.png"
         ],
-        "slug": "fastlane"
+        "slug": "fastlane",
+        "license": "Unspecified"
     },
     {
         "name": "Futures on Chain",
@@ -1443,7 +1452,6 @@
         "demoUrl": null,
         "created": "2024-10-30T19:37:16Z",
         "lastUpdated": "2024-12-02T11:14:15Z",
-        "license": "",
         "tags": [
             "ROFL",
             "DeFi",
@@ -1464,7 +1472,8 @@
             "/projects/futures-on-chain/screenshots/04-wallet.png",
             "/projects/futures-on-chain/screenshots/05-diagram.png"
         ],
-        "slug": "futures-on-chain"
+        "slug": "futures-on-chain",
+        "license": "Unspecified"
     },
     {
         "name": "Hancock",
@@ -1503,7 +1512,8 @@
             "/projects/hancock/screenshots/03.jpg",
             "/projects/hancock/screenshots/04.jpg"
         ],
-        "slug": "hancock"
+        "slug": "hancock",
+        "license": "Unspecified"
     },
     {
         "name": "HealthTrust",
@@ -1547,7 +1557,8 @@
             "/projects/healthtrust/screenshots/05.png"
         ],
         "slug": "healthtrust",
-        "demoUrl": null
+        "demoUrl": null,
+        "license": "Unspecified"
     },
     {
         "name": "Lending Sapphire",
@@ -1556,7 +1567,7 @@
                 "Tarun Gupta": "https://github.com/Tarun-k-Gupta"
             },
             {
-                "Bhavesh Gupta": "https://github.com/barrytra"
+                "Bhavesh Gupta": "https://github.com/bhaveshg16"
             },
             {
                 "Aarav Mehta": "https://github.com/aaravm"
@@ -1581,7 +1592,7 @@
             "ETHGlobal Singapore 2024",
             "Hackathon"
         ],
-        "codeUrl": "https://github.com/barrytra/Lending-Sapphire",
+        "codeUrl": "https://github.com/bhaveshg16/Lending-Sapphire",
         "tutorials": [
             {
                 "Video demo": "https://www.loom.com/share/70a023c0110b4b1e9383c235023741cd?sid=01d5507f-3a59-4237-bd75-87fe3918cce6"
@@ -1597,7 +1608,8 @@
             "/projects/lending-sapphire/screenshots/04-lend.jpg"
         ],
         "slug": "lending-sapphire",
-        "demoUrl": null
+        "demoUrl": null,
+        "license": "Unspecified"
     },
     {
         "name": "MedVault",
@@ -1635,7 +1647,8 @@
         "screenshots": [
             "/projects/medvault/screenshots/01.png"
         ],
-        "slug": "medvault"
+        "slug": "medvault",
+        "license": "Unspecified"
     },
     {
         "name": "MinePlay",
@@ -1653,7 +1666,7 @@
             "Solidity"
         ],
         "tags": [
-            "Pre-ETHGlobal-New-Delhi-Buildathon",
+            "Pre-ETHGlobal New Delhi",
             "Hackathon"
         ],
         "codeUrl": "https://github.com/tmanas06/MineSweepGame_Oasis_hackathon",
@@ -1668,7 +1681,8 @@
             "/projects/mineplay/screenshots/04.png",
             "/projects/mineplay/screenshots/05.png"
         ],
-        "slug": "mineplay"
+        "slug": "mineplay",
+        "license": "Unspecified"
     },
     {
         "name": "Minesweeper",
@@ -1713,7 +1727,8 @@
         "screenshots": [
             "/projects/minesweeper/screenshots/01-logo.png"
         ],
-        "slug": "minesweeper"
+        "slug": "minesweeper",
+        "license": "Unspecified"
     },
     {
         "name": "MonCraft",
@@ -1754,7 +1769,8 @@
             "/projects/moncraft/screenshots/04.png"
         ],
         "slug": "moncraft",
-        "demoUrl": null
+        "demoUrl": null,
+        "license": "Unspecified"
     },
     {
         "name": "MyMesh",
@@ -1800,7 +1816,8 @@
             "/projects/mymesh/screenshots/08.png",
             "/projects/mymesh/screenshots/09.png"
         ],
-        "slug": "mymesh"
+        "slug": "mymesh",
+        "license": "Unspecified"
     },
     {
         "name": "NYAnCAT",
@@ -1841,7 +1858,8 @@
             "/projects/nyancat/screenshots/05.jpg",
             "/projects/nyancat/screenshots/06.jpg"
         ],
-        "slug": "nyancat"
+        "slug": "nyancat",
+        "license": "Unspecified"
     },
     {
         "name": "Nyx",
@@ -1886,7 +1904,8 @@
             "/projects/nyx/screenshots/04-howitworks.jpg"
         ],
         "slug": "nyx",
-        "demoUrl": null
+        "demoUrl": null,
+        "license": "Unspecified"
     },
     {
         "name": "OasisGuard",
@@ -1919,7 +1938,6 @@
             "Password manager"
         ],
         "codeUrl": "https://github.com/itublockchain/ethdam-oasis-guard",
-        "demoUrl": "https://oasisguard.xyz/",
         "tutorials": [
             {
                 "Video demo": "https://www.youtube.com/watch?v=muluwPB6a9w"
@@ -1932,7 +1950,9 @@
             "/projects/oasisguard/screenshots/01-screenshots.png",
             "/projects/oasisguard/screenshots/02-banner.png"
         ],
-        "slug": "oasisguard"
+        "slug": "oasisguard",
+        "demoUrl": null,
+        "license": "Unspecified"
     },
     {
         "name": "Compensate",
@@ -1969,7 +1989,8 @@
         "screenshots": [
             "/projects/paw3/screenshots/01-landing.png"
         ],
-        "slug": "paw3"
+        "slug": "paw3",
+        "license": "Unspecified"
     },
     {
         "name": "PolyBet",
@@ -2023,7 +2044,8 @@
             "/projects/polybet/screenshots/05.jpg",
             "/projects/polybet/screenshots/06.jpg"
         ],
-        "slug": "polybet"
+        "slug": "polybet",
+        "license": "Unspecified"
     },
     {
         "name": "PredaMark",
@@ -2044,7 +2066,7 @@
         "tags": [
             "ROFL",
             "Hackathon",
-            "Pre-ETHGlobal-New-Delhi-Buildathon"
+            "Pre-ETHGlobal New Delhi"
         ],
         "codeUrl": "https://github.com/SavvySID/Prediction-Market",
         "tutorials": [
@@ -2061,7 +2083,8 @@
             "/projects/predamark/screenshots/02.png",
             "/projects/predamark/screenshots/03.png"
         ],
-        "slug": "predamark"
+        "slug": "predamark",
+        "license": "Unspecified"
     },
     {
         "name": "Priva Health",
@@ -2144,7 +2167,50 @@
             "/projects/privads/screenshots/03-banner.png"
         ],
         "slug": "privads",
-        "demoUrl": null
+        "demoUrl": null,
+        "license": "Unspecified"
+    },
+    {
+        "name": "Receipt-fi (發粿池)",
+        "authors": [
+            {
+                "Chen Chi-chun": "https://github.com/june-in-exile"
+            },
+            {
+                "Malingshu": "https://github.com/Toby1009"
+            }
+        ],
+        "description": "A Web3 platform built on a \"Unified Invoice Pool System.\" Users upload\ntheir e-invoice carrier receipts to the blockchain and contribute them to\ndesignated \"invoice pools\" (each pool corresponds to a charity organization).\nAfter winning, smart contracts automatically distribute prize money according to\neach holder’s donation ratio (minimum 25%). Users set donation ratios when\nregistering invoice carriers and receive NFT certificates (IVC) as verifiable\nproof. Privacy protection and verifiable credentials are foundational.\n\nCheck out more on the hackathon's [project page](https://github.com/june-in-exile/Invoice-RWA).\n",
+        "paratimes": [
+            "sapphire"
+        ],
+        "languages": [
+            "Solidity",
+            "TypeScript"
+        ],
+        "tags": [
+            "ROFL",
+            "Zircuit",
+            "Hackathon",
+            "Taiwan RWA"
+        ],
+        "codeUrl": "https://github.com/june-in-exile/Invoice-RWA",
+        "tutorials": [
+            {
+                "Video demo": "https://github.com/user-attachments/assets/efd8b6f9-fd0e-402d-bb33-6d0f4bfda100"
+            }
+        ],
+        "demoUrl": null,
+        "created": "2025-11-01T00:00:00.000Z",
+        "lastUpdated": "2025-11-01T00:00:00.000Z",
+        "maintainedByOasis": false,
+        "screenshots": [
+            "/projects/receipt-fi/screenshots/01.png",
+            "/projects/receipt-fi/screenshots/02.png",
+            "/projects/receipt-fi/screenshots/03.png"
+        ],
+        "slug": "receipt-fi",
+        "license": "Unspecified"
     },
     {
         "name": "Resonant",
@@ -2166,7 +2232,7 @@
         "demoUrl": null,
         "created": "2025-07-04T19:08:32Z",
         "lastUpdated": "2025-07-06T09:11:31Z",
-        "license": "mit",
+        "license": "MIT",
         "tags": [
             "ROFL",
             "EthGlobal Cannes 2025",
@@ -2223,7 +2289,8 @@
             "/projects/rip-protocol/screenshots/05-slide5.jpg",
             "/projects/rip-protocol/screenshots/06-slide6.jpg"
         ],
-        "slug": "rip-protocol"
+        "slug": "rip-protocol",
+        "license": "Unspecified"
     },
     {
         "name": "ROFL.DAM",
@@ -2280,7 +2347,8 @@
             "/projects/rofl.dam/screenshots/12.png",
             "/projects/rofl.dam/screenshots/13.png"
         ],
-        "slug": "rofl.dam"
+        "slug": "rofl.dam",
+        "license": "Unspecified"
     },
     {
         "name": "Rose Derby",
@@ -2366,7 +2434,8 @@
             "/projects/røpe/screenshots/03.jpeg"
         ],
         "slug": "røpe",
-        "demoUrl": null
+        "demoUrl": null,
+        "license": "Unspecified"
     },
     {
         "name": "Sapphire Confidential",
@@ -2403,7 +2472,8 @@
             "/projects/sapphire-confidential/screenshots/01-transaction-in-progress.png"
         ],
         "slug": "sapphire-confidential",
-        "demoUrl": null
+        "demoUrl": null,
+        "license": "Unspecified"
     },
     {
         "name": "SapphireX: Lending Protocol",
@@ -2412,7 +2482,7 @@
                 "Anirudh Singh Chouhan": "https://github.com/AnirudhSingh07"
             }
         ],
-        "description": "SaphireX is a private, KYC-free lending protocol built on the Oasis Sapphire confidential EVM runtime. \nIt leverages ROFL (Runtime Oracles for Layered Finance) to fetch real-time price feeds securely inside a Trusted Execution Environment (TEE).\nWith SaphireX, users can lend and borrow assets without exposing sensitive financial information publicly. \nBorrowing terms, collateral ratios, and loan health remain confidential on-chain, ensuring both transparency of execution and privacy of data.\n\nKey features:\n  - Confidential Lending & Borrowing – Keep loan data private on-chain.\n  - TEE-powered Oracles (ROFL) – Reliable real-time price feeds within enclaves.\n  - Dual-token architecture – Lending assets + governance/stability token for protocol operations.\n  - KYC-free access – Permissionless, private lending without identity exposure.\n",
+        "description": "SaphireX is a private, KYC-free lending protocol built on the Oasis Sapphire confidential EVM runtime. \nIt leverages ROFL (Runtime Oracles for Layered Finance) to fetch real-time price feeds securely inside a Trusted Execution Environment (TEE).\nWith SaphireX, users can lend and borrow assets without exposing sensitive financial information publicly. \nBorrowing terms, collateral ratios, and loan health remain confidential on-chain, ensuring both transparency of execution and privacy of data.\n\nKey features:\n  - Confidential Lending & Borrowing – Keep loan data private on-chain.\n  - TEE-powered Oracles (ROFL) – Reliable real-time price feeds within enclaves.\n  - Dual-token architecture – Lending assets + governance/stability token for protocol operations.\n  - KYC-free access – Permissionless, private lending without identity exposure.\n\nCheck out more on the hackathon's [project page](https://app.akindo.io/communities/X4ZGXPaz9TOVG4VB/products/93vVlGOmQsQvRE6o7).\n",
         "paratimes": [
             "sapphire"
         ],
@@ -2424,7 +2494,7 @@
             "ROFL",
             "DeFi",
             "Hackathon",
-            "Pre-ETHGlobal-New-Delhi-Buildathon"
+            "Pre-ETHGlobal New Delhi"
         ],
         "codeUrl": "https://github.com/AnirudhSingh07/SapphireX",
         "demoUrl": null,
@@ -2443,7 +2513,8 @@
             "/projects/sapphirex-lending-protocol/screenshots/04.png",
             "/projects/sapphirex-lending-protocol/screenshots/05.png"
         ],
-        "slug": "sapphirex-lending-protocol"
+        "slug": "sapphirex-lending-protocol",
+        "license": "Unspecified"
     },
     {
         "name": "Secret Bids",
@@ -2511,7 +2582,6 @@
             "React"
         ],
         "codeUrl": "https://github.com/taijusanagi/opl-secret-sponsor",
-        "demoUrl": "https://opl-secret-sponsor.vercel.app/",
         "tutorials": [
             {
                 "Video demo": "https://youtu.be/JnP3FGQu4ds"
@@ -2527,21 +2597,38 @@
             "/projects/secret-sponsor/screenshots/04-explorer.png",
             "/projects/secret-sponsor/screenshots/05-tx-details.png"
         ],
-        "slug": "secret-sponsor"
+        "slug": "secret-sponsor",
+        "demoUrl": null
     },
     {
         "name": "Sentibot",
-        "authors": [],
-        "description": "Sentibot is an AI-powered bot that tracks, analyzes, and summarizes sentiment\nacross crypto communities, social feeds, and developer channels to help teams\nreact quickly with data‑driven insights.\n\nIt aggregates high-signal conversations and market chatter into succinct\nupdates, highlighting trend shifts and anomalies so projects can respond in\nminutes, not hours.\n\nWhat it does:\n\n- Real‑time sentiment tracking across multiple sources\n- Summaries and alerts for spikes, anomalies, and notable topics\n- Lightweight dashboards for teams and community managers\n\nWhy Oasis:\n\n- Puts user and community privacy first while still enabling useful insights\n- Can leverage confidential compute for sensitive data handling\n\nSee the Akindo page for more details and updates.\n",
-        "paratimes": [],
-        "languages": [],
-        "license": "Unknown",
-        "tags": [
-            "Akindo",
-            "Community"
+        "authors": [
+            {
+                "Rishik Rajesh Kumar Pulhani": "https://github.com/Rishikpulhani"
+            }
         ],
-        "codeUrl": "",
-        "demoUrl": "https://app.akindo.io/communities/xKWknzrrWCmd2JpeP/products/4e9BlqL07Cm3WxX0",
+        "description": "Sentibot is an AI-powered bot that tracks, analyzes, and summarizes sentiment\nacross crypto communities, social feeds, and developer channels to help teams\nreact quickly with data‑driven insights.\n\nIt aggregates high-signal conversations and market chatter into succinct\nupdates, highlighting trend shifts and anomalies so projects can respond in\nminutes, not hours.\n\nWhat it does:\n\n- Real‑time sentiment tracking across multiple sources\n- Summaries and alerts for spikes, anomalies, and notable topics\n- Lightweight dashboards for teams and community managers\n\nWhy Oasis:\n\n- Puts user and community privacy first while still enabling useful insights\n- Can leverage confidential compute for sensitive data handling\n\nCheck out more on the hackathon's [project page](https://app.akindo.io/communities/xKWknzrrWCmd2JpeP/products/4e9BlqL07Cm3WxX0).\n",
+        "paratimes": [
+            "sapphire"
+        ],
+        "languages": [
+            "TypeScript",
+            "Python",
+            "Solidity",
+            "Perl"
+        ],
+        "tags": [
+            "Community",
+            "Hackathon",
+            "Pre-ETHGlobal New Delhi"
+        ],
+        "codeUrl": "https://github.com/Rishikpulhani/sentibot",
+        "tutorials": [
+            {
+                "Video demo": "https://www.youtube.com/watch?v=4CsOljMCAjw"
+            }
+        ],
+        "demoUrl": null,
         "created": "2025-11-04T00:00:00.000Z",
         "lastUpdated": "2025-11-04T00:00:00.000Z",
         "maintainedByOasis": false,
@@ -2552,7 +2639,8 @@
             "/projects/sentibot/screenshots/04.png",
             "/projects/sentibot/screenshots/05.png"
         ],
-        "slug": "sentibot"
+        "slug": "sentibot",
+        "license": "Unspecified"
     },
     {
         "name": "Shadeswap",
@@ -2576,8 +2664,9 @@
         ],
         "tags": [
             "Uniswap",
+            "Defi",
             "Hackathon",
-            "Pre-ETHGlobal-New-Delhi-Buildathon"
+            "Pre-ETHGlobal New Delhi"
         ],
         "codeUrl": "https://github.com/XSTRANGER-7/shadeswap",
         "demoUrl": null,
@@ -2591,7 +2680,8 @@
             "/projects/shadeswap/screenshots/04.png",
             "/projects/shadeswap/screenshots/05.png"
         ],
-        "slug": "shadeswap"
+        "slug": "shadeswap",
+        "license": "Unspecified"
     },
     {
         "name": "Spacetar",
@@ -2632,7 +2722,8 @@
             "/projects/spacetar/screenshots/02-home.png",
             "/projects/spacetar/screenshots/03-chat.png"
         ],
-        "slug": "spacetar"
+        "slug": "spacetar",
+        "license": "Unspecified"
     },
     {
         "name": "SQUIDL",
@@ -2667,7 +2758,6 @@
             "Hackathon"
         ],
         "codeUrl": "https://github.com/engowl/squidl",
-        "demoUrl": "https://www.squidl.me/",
         "tutorials": [
             {
                 "EthGlobal Singapore 2024 demo": "https://stream.mux.com/BEUanmt0100GYnMoMMjqItzAfPxhpXFmu02XrUNcXcBZl8/high.mp4"
@@ -2686,7 +2776,9 @@
             "/projects/squidl/screenshots/04-send.jpg",
             "/projects/squidl/screenshots/05-flyer.png"
         ],
-        "slug": "squidl"
+        "slug": "squidl",
+        "demoUrl": null,
+        "license": "Unspecified"
     },
     {
         "name": "SwappaTEE",
@@ -2728,7 +2820,8 @@
             "/projects/swappatee/screenshots/05.jpg",
             "/projects/swappatee/screenshots/06.jpg"
         ],
-        "slug": "swappatee"
+        "slug": "swappatee",
+        "license": "Unspecified"
     },
     {
         "name": "Testament",
@@ -2741,7 +2834,7 @@
         "paratimes": [
             "sapphire"
         ],
-        "codeUrl": "https://github.com/jasny/eth3",
+        "codeUrl": "https://github.com/jasny/ethdam3",
         "tutorials": [
             {
                 "Video demo 1": "https://www.youtube.com/watch?v=XIxbrY9pU88"
@@ -2767,7 +2860,8 @@
             "/projects/testament/screenshots/01.jpg",
             "/projects/testament/screenshots/02.jpg"
         ],
-        "slug": "testament"
+        "slug": "testament",
+        "license": "Unspecified"
     },
     {
         "name": "Texas Hide'em",
@@ -2799,7 +2893,6 @@
             "RNG"
         ],
         "codeUrl": "https://github.com/ThanksSkeleton/ethdenver_holdem",
-        "demoUrl": "https://poker.w3q.w3q-g.w3link.io",
         "created": "2024-02-24T00:00:00.000Z",
         "lastUpdated": "2024-03-06T00:00:00.000Z",
         "maintainedByOasis": false,
@@ -2809,7 +2902,9 @@
             "/projects/texas-hideem/screenshots/03-start.jpeg",
             "/projects/texas-hideem/screenshots/04-gameplay.jpeg"
         ],
-        "slug": "texas-hideem"
+        "slug": "texas-hideem",
+        "demoUrl": null,
+        "license": "Unspecified"
     },
     {
         "name": "The Purpose",
@@ -2849,7 +2944,8 @@
             "/projects/the-purpose/screenshots/05.jpg",
             "/projects/the-purpose/screenshots/06.jpg"
         ],
-        "slug": "the-purpose"
+        "slug": "the-purpose",
+        "license": "Unspecified"
     },
     {
         "name": "Treasure Hunt",
@@ -2923,7 +3019,8 @@
             "/projects/trigo/screenshots/02.jpg",
             "/projects/trigo/screenshots/03.jpg"
         ],
-        "slug": "trigo"
+        "slug": "trigo",
+        "license": "Unspecified"
     },
     {
         "name": "Twenty1",
@@ -2977,11 +3074,16 @@
             "/projects/twenty1/screenshots/05.jpg",
             "/projects/twenty1/screenshots/06.jpg"
         ],
-        "slug": "twenty1"
+        "slug": "twenty1",
+        "license": "Unspecified"
     },
     {
         "name": "Unipoll",
-        "authors": [],
+        "authors": [
+            {
+                "Shivansh Yadav": "https://github.com/shivanshxyz"
+            }
+        ],
         "description": "What it does\n  - GroupSwap enables social group trades on Uniswap v4.\n  - Users pool ERC20 deposits, vote (weighted by deposit), and execute a collective swap when quorum and end time conditions are met.\n  - A Uniswap v4 hook enforces that only GroupSwap-approved swaps can execute.\n  - Optional Oasis Sapphire integration adds private voting with signature verification via Sapphire precompiles.\n\nThe problem it solves\n\n  - Coordinating group trades is hard: scattered approvals, unclear thresholds, and trust issues.\n  - GroupSwap provides a transparent, on-chain governance flow for a one-shot trade:\n    - Clear proposal window and quorum.\n    - Weighted voting by capital committed.\n    - Enforcement via a hook that prevents unauthorized swaps.\n  - With Sapphire, sensitive vote choices can be kept private while still verifiable on-chain.\n\nCheck out more on the hackathon's [project page](https://app.akindo.io/communities/63damjWkXSPgdmgE/products/3d7Xlan1jc9wVBw).\n",
         "paratimes": [
             "sapphire"
@@ -2989,11 +3091,10 @@
         "languages": [
             "Solidity"
         ],
-        "license": "Unknown",
         "tags": [
             "Uniswap",
             "Hackathon",
-            "Pre-ETHGlobal-New-Delhi-Buildathon"
+            "Pre-ETHGlobal New Delhi"
         ],
         "codeUrl": "https://github.com/shivanshxyz/unipoll",
         "demoUrl": null,
@@ -3011,7 +3112,8 @@
             "/projects/unipoll/screenshots/03.png",
             "/projects/unipoll/screenshots/04.png"
         ],
-        "slug": "unipoll"
+        "slug": "unipoll",
+        "license": "Unspecified"
     },
     {
         "name": "Universal Basic AI",
@@ -3055,7 +3157,8 @@
             "/projects/universal-basic-ai/screenshots/09.png"
         ],
         "slug": "universal-basic-ai",
-        "demoUrl": null
+        "demoUrl": null,
+        "license": "Unspecified"
     },
     {
         "name": "walrusTee",
@@ -3092,7 +3195,8 @@
             "/projects/walrustee/screenshots/02.jpg",
             "/projects/walrustee/screenshots/03.jpg"
         ],
-        "slug": "walrustee"
+        "slug": "walrustee",
+        "license": "Unspecified"
     },
     {
         "name": "Yap2Win",
@@ -3129,7 +3233,8 @@
             "/projects/yap2win/screenshots/02.jpg",
             "/projects/yap2win/screenshots/03.jpg"
         ],
-        "slug": "yap2win"
+        "slug": "yap2win",
+        "license": "Unspecified"
     },
     {
         "name": "Zeo Kuessr",
@@ -3173,7 +3278,8 @@
             "/projects/zeo-kuessr/screenshots/02-new-game.jpg"
         ],
         "slug": "zeo-kuessr",
-        "demoUrl": null
+        "demoUrl": null,
+        "license": "Unspecified"
     },
     {
         "name": "zk-oasis-sdk",
@@ -3182,7 +3288,7 @@
                 "jatinsahijwani": "https://github.com/jatinsahijwani"
             }
         ],
-        "description": "\nzk-oasis-sdk is a developer toolkit that compiles Circom circuits, generates zkSNARK proofs, and auto-deploys Solidity verifiers to Oasis Sapphire. \nIt abstracts away complex workflows so developers can add privacy-preserving verification to their dApps with a single command.\n\nBuilding ZK applications is complex—requiring multiple tools, cryptography expertise, and manual deployments. \nOn top of that, deploying to Sapphire means dealing with TEEs and confidential execution. zk-oasis-sdk unifies these processes into a seamless, automated pipeline.\n\nCheck out more on the hackathon's [project page](https://app.akindo.io/communities/q34EL31MBuj2NOon/products/eae8VRlZ0u7wJ93P).\n",
+        "description": "\nzk-oasis-sdk is a developer toolkit that compiles Circom circuits, generates zkSNARK proofs, and auto-deploys Solidity verifiers to Oasis Sapphire.\nIt abstracts away complex workflows so developers can add privacy-preserving verification to their dApps with a single command.\n\nBuilding ZK applications is complex—requiring multiple tools, cryptography expertise, and manual deployments.\nOn top of that, deploying to Sapphire means dealing with TEEs and confidential execution. zk-oasis-sdk unifies these processes into a seamless, automated pipeline.\n\nCheck out more on the hackathon's [project page](https://app.akindo.io/communities/q34EL31MBuj2NOon/products/eae8VRlZ0u7wJ93P).\n",
         "paratimes": [
             "sapphire"
         ],
@@ -3190,16 +3296,15 @@
             "TypeScript",
             "Solidity"
         ],
-        "license": "Unknown",
         "tutorials": [
             {
                 "Video demo": "https://www.youtube.com/watch?v=S7TD2E8-Sdc"
             }
         ],
         "tags": [
-            "zkSync",
+            "ZKP",
             "Hackathon",
-            "Pre-ETHGlobal-New-Delhi-Buildathon"
+            "Pre-ETHGlobal New Delhi"
         ],
         "codeUrl": "https://github.com/jatinsahijwani/zk-oasis-sdk",
         "demoUrl": null,
@@ -3213,7 +3318,8 @@
             "/projects/zk-oasis-sdk/screenshots/04.png",
             "/projects/zk-oasis-sdk/screenshots/05.png"
         ],
-        "slug": "zk-oasis-sdk"
+        "slug": "zk-oasis-sdk",
+        "license": "Unspecified"
     },
     {
         "name": "ZK-Pal",
@@ -3256,6 +3362,7 @@
             "/projects/zk-pal/screenshots/04.png"
         ],
         "slug": "zk-pal",
-        "demoUrl": null
+        "demoUrl": null,
+        "license": "Unspecified"
     }
 ]
