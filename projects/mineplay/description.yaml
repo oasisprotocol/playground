@@ -1,0 +1,27 @@
+name: MinePlay
+authors: 
+ - tmanas06: https://github.com/tmanas06
+description: |
+
+  This Minesweeper project takes the classic logic game and builds it on the Oasis Sapphire blockchain network,
+  introducing transparency and fairness through secure, verifiable randomness. 
+  Players navigate a 5x5 grid with randomly placed mines, betting with TEST tokens to avoid mines, and winning based on safe moves.
+  The problem it solves
+
+  It addresses fairness concerns in online gaming by ensuring that mine placements are random, private, and resistant to tampering. 
+  Using Oasis Sapphire’s RNG (Random Number Generator), players can trust that the game outcome is unbiased and secure.
+
+  Check out more on the hackathon's [project page](https://app.akindo.io/communities/nPZgeVMqGU0JAkVA3/products/VwZazZWJ7c1erJj7).
+paratimes: 
+  - sapphire
+languages:
+  - javascript
+  - solidity
+tags:
+  - Pre-ETHGlobal New Delhi
+  - Hackathon
+codeUrl: "https://github.com/tmanas06/MineSweepGame_Oasis_hackathon"
+demoUrl: https://mine-sweep-game-oasis-hackathon.vercel.app/
+created: 2025-09-24
+lastUpdated: 2025-09-24
+maintainedByOasis: false

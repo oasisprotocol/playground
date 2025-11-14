@@ -1,0 +1,36 @@
+name: Unipoll
+authors:
+  - Shivansh Yadav : https://github.com/shivanshxyz
+description: |
+  What it does
+    - GroupSwap enables social group trades on Uniswap v4.
+    - Users pool ERC20 deposits, vote (weighted by deposit), and execute a collective swap when quorum and end time conditions are met.
+    - A Uniswap v4 hook enforces that only GroupSwap-approved swaps can execute.
+    - Optional Oasis Sapphire integration adds private voting with signature verification via Sapphire precompiles.
+
+  The problem it solves
+
+    - Coordinating group trades is hard: scattered approvals, unclear thresholds, and trust issues.
+    - GroupSwap provides a transparent, on-chain governance flow for a one-shot trade:
+      - Clear proposal window and quorum.
+      - Weighted voting by capital committed.
+      - Enforcement via a hook that prevents unauthorized swaps.
+    - With Sapphire, sensitive vote choices can be kept private while still verifiable on-chain.
+  
+  Check out more on the hackathon's [project page](https://app.akindo.io/communities/63damjWkXSPgdmgE/products/3d7Xlan1jc9wVBw).
+paratimes: 
+  - sapphire
+languages:
+  - solidity
+license: Unknown
+tags:
+  - Uniswap
+  - Hackathon
+  - Pre-ETHGlobal New Delhi
+codeUrl: "https://github.com/shivanshxyz/unipoll"
+demoUrl: null
+tutorials:
+  - Video demo: https://www.youtube.com/watch?v=nfzYRVlOBTo
+created: 2025-11-04
+lastUpdated: 2025-11-04
+maintainedByOasis: false

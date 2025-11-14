@@ -1,0 +1,29 @@
+name: zk-oasis-sdk
+authors: 
+  - jatinsahijwani: https://github.com/jatinsahijwani
+description: |
+
+  zk-oasis-sdk is a developer toolkit that compiles Circom circuits, generates zkSNARK proofs, and auto-deploys Solidity verifiers to Oasis Sapphire. 
+  It abstracts away complex workflows so developers can add privacy-preserving verification to their dApps with a single command.
+
+  Building ZK applications is complex—requiring multiple tools, cryptography expertise, and manual deployments. 
+  On top of that, deploying to Sapphire means dealing with TEEs and confidential execution. zk-oasis-sdk unifies these processes into a seamless, automated pipeline.
+
+  Check out more on the hackathon's [project page](https://app.akindo.io/communities/q34EL31MBuj2NOon/products/eae8VRlZ0u7wJ93P).
+paratimes: 
+  - sapphire
+languages:
+  - typescript
+  - solidity
+license: Unknown
+tutorials:
+  - Video demo: https://www.youtube.com/watch?v=S7TD2E8-Sdc
+tags:
+  - ZKP
+  - Hackathon
+  - Pre-ETHGlobal New Delhi
+codeUrl: "https://github.com/jatinsahijwani/zk-oasis-sdk"
+demoUrl: null
+created: 2025-09-24
+lastUpdated: 2025-09-24
+maintainedByOasis: false

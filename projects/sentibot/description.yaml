@@ -1,0 +1,42 @@
+name: Sentibot
+authors: 
+  - Rishik Rajesh Kumar Pulhani : https://github.com/Rishikpulhani
+description: |
+  Sentibot is an AI-powered bot that tracks, analyzes, and summarizes sentiment
+  across crypto communities, social feeds, and developer channels to help teams
+  react quickly with data‑driven insights.
+
+  It aggregates high-signal conversations and market chatter into succinct
+  updates, highlighting trend shifts and anomalies so projects can respond in
+  minutes, not hours.
+
+  What it does:
+
+  - Real‑time sentiment tracking across multiple sources
+  - Summaries and alerts for spikes, anomalies, and notable topics
+  - Lightweight dashboards for teams and community managers
+
+  Why Oasis:
+
+  - Puts user and community privacy first while still enabling useful insights
+  - Can leverage confidential compute for sensitive data handling
+
+  Check out more on the hackathon's [project page](https://app.akindo.io/communities/xKWknzrrWCmd2JpeP/products/4e9BlqL07Cm3WxX0).
+paratimes: 
+  - sapphire
+languages:
+  - typescript
+  - python
+  - solidity
+  - perl
+tags:
+  - Community
+  - Hackathon
+  - Pre-ETHGlobal New Delhi
+codeUrl: "https://github.com/Rishikpulhani/sentibot"
+tutorials:
+  - Video demo: https://www.youtube.com/watch?v=4CsOljMCAjw
+demoUrl: null
+created: 2025-11-04
+lastUpdated: 2025-11-04
+maintainedByOasis: false
