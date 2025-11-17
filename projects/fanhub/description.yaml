@@ -36,7 +36,7 @@ description: |
   - Access private content and direct communications
   - Verify authenticity of creator interactions
   - Technical Architecture
-  
+
   ## Core Technology
 
   - Oasis Sapphire Integration: Leverages confidential smart contracts for secure,
@@ -52,7 +52,7 @@ description: |
   - Built with Next.js for optimal performance
   - Integrates Wagmi for seamless Web3 functionality
   - Responsive design for all devices
-  
+
   ### Smart Contracts
 
   - Deployed on Oasis Sapphire network
@@ -65,7 +65,7 @@ description: |
   - Performs off-chain token balance verification
   - Ensures efficient and scalable operations
   - Maintains system integrity
-  
+
   Check out more on the hackathon's [project page](https://ethglobal.com/showcase/fanhub-u0rd9).
 paratimes:
   - sapphire
@@ -76,7 +76,7 @@ tutorials:
 demoUrl: ''
 created: '2024-11-16T19:35:46Z'
 lastUpdated: '2024-11-17T14:07:18Z'
-license: apache-2.0
+license: Apache-2.0
 tags:
   - Privy
   - Next.js
