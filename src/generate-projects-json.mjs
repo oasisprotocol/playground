@@ -38,6 +38,7 @@ const projects = yamls.map((path) => {
       sanitizeUrl(Object.values(t)[0]),
     );
   }
+  parsedYaml.license ??= 'Unspecified'
 
   return parsedYaml;
 });

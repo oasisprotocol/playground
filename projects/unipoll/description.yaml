@@ -16,13 +16,12 @@ description: |
       - Weighted voting by capital committed.
       - Enforcement via a hook that prevents unauthorized swaps.
     - With Sapphire, sensitive vote choices can be kept private while still verifiable on-chain.
-  
+
   Check out more on the hackathon's [project page](https://app.akindo.io/communities/63damjWkXSPgdmgE/products/3d7Xlan1jc9wVBw).
-paratimes: 
+paratimes:
   - sapphire
 languages:
   - solidity
-license: Unknown
 tags:
   - Uniswap
   - Hackathon

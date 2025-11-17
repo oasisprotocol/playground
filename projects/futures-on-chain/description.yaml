@@ -80,7 +80,7 @@ description: |
   - **Reliability**: Sapphire’s security ensures that the platform remains
   robust, making it an ideal choice for this privacy-focused, on-chain trading
   solution.
-  
+
   Check out more on the hackathon's [project page](https://dorahacks.io/buidl/18357).
 paratimes:
   - sapphire
@@ -90,7 +90,6 @@ tutorials:
 demoUrl: null
 created: '2024-10-30T19:37:16Z'
 lastUpdated: '2024-12-02T11:14:15Z'
-license: ''
 tags:
   - ROFL
   - DeFi
