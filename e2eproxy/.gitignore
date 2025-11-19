@@ -1,0 +1,8 @@
+node_modules
+.cache
+.local
+pnpm-lock.yaml
+typechain-types
+cache
+artifacts
+.bash_history
