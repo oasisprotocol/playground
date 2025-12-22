@@ -1,0 +1,37 @@
+name: Chain of Thought
+authors:
+  - notzhiwei: https://github.com/Avoisavo
+  - markC-jit: https://github.com/markC-jit
+  - FilthyCheezy: https://github.com/FilthyCheezy
+  - pudaoo: https://github.com/pudaoo
+description: |
+  Chain of Thought is a private mental-health assistant designed to reduce
+  stigma around seeking help. It encrypts conversations and stores them in
+  user-controlled smart contracts on Oasis Sapphire, while ROFL executes AI
+  assistance inside TEEs so sensitive data never leaves the enclave.
+
+  Users can access a confidential history of their sessions without exposing
+  information to providers or platforms, enabling safer support workflows.
+
+  Check out more on the hackathon's [project
+  page](https://devfolio.co/submissions/steamboat-6deb).
+paratimes:
+  - sapphire
+codeUrl: https://github.com/Avoisavo/devmatch8_3A
+tutorials:
+  - Video demo: https://youtu.be/Cg866M_7zrM
+  - Walkthrough: https://www.loom.com/share/9b955018742d46c3ad9fd6ff1d41d99f?sid=c42c69a8-84f6-4b0f-a9bd-6761d81c2fd2
+  - Walkthrough (alt): https://www.loom.com/share/b1b8e2351f0e45f98206e61240fc0914?sid=df5ac516-05c8-4a74-aa4a-9ef2a7c417f7
+demoUrl: null
+created: '2025-08-05T08:34:47Z'
+lastUpdated: '2025-08-10T06:58:07Z'
+license: MIT
+tags:
+  - ROFL
+  - DEVMatch Hackathon 2025
+  - Hackathon
+languages:
+  - rust
+  - typescript
+  - solidity
+maintainedByOasis: false

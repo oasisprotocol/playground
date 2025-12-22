@@ -1,0 +1,33 @@
+name: GuardianChain
+authors:
+  - JasonDoe: https://github.com/Thafoxes
+  - Harith Bennet: https://github.com/rithbennet
+description: |
+  GuardianChain is a privacy-preserving whistleblowing platform built on Oasis
+  Sapphire, designed to align with Malaysia's Whistleblower Protection Act 2010
+  (Act 711). It lets reporters submit anonymous, encrypted disclosures and
+  evidence, while giving investigators a tamper-proof audit trail and secure
+  communication.
+
+  Optional identity verification and role-based workflows help organizations
+  handle cases without exposing sensitive data. The system keeps reports
+  confidential yet verifiable, reducing retaliation risk and improving trust in
+  investigations.
+
+  Check out more on the hackathon's [project
+  page](https://devfolio.co/submissions/httpsgithubcomthafoxesguardianchain-7d41).
+paratimes:
+  - sapphire
+codeUrl: https://github.com/Thafoxes/GuardianChain
+tutorials:
+  - Video demo: https://www.youtube.com/watch?v=QQ-pFyFwflk
+demoUrl: https://guardianchain-eua8.onrender.com/
+created: '2025-08-08T03:24:30Z'
+lastUpdated: '2025-08-10T04:02:42Z'
+tags:
+  - DEVMatch Hackathon 2025
+  - Hackathon
+languages:
+  - typescript
+  - solidity
+maintainedByOasis: false
