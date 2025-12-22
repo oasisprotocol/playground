@@ -1,0 +1,42 @@
+name: Void Wallet
+authors:
+  - 0xkutluer: https://github.com/batikankutluer
+  - Yasir KILINÇ: https://github.com/exTypen
+  - UYUYANMARUL: https://github.com/UYUYANMARUL
+description: |
+  Privacy-first wallet for confidential, compliant, and cryptographically secure
+  transactions.
+
+  Void Wallet is a privacy-preserving wallet built on a hybrid architecture that
+  combines Trusted Execution Environments (TEEs), Zero-Knowledge Proofs, and
+  Sparse Merkle Trees. It delivers confidential transactions at a fraction of
+  the cost of pure ZK solutions while giving users complete control over their
+  compliance.
+
+  Key features:
+
+  - Confidential computation via Oasis ROFL TEEs for off-chain transaction
+    processing
+  - User-controlled compliance with ZK proofs that don't reveal transaction
+    history
+  - Cryptographic safety net with Sparse Merkle Trees for emergency withdrawals
+
+  Check out more on the hackathon's [project page](https://ethglobal.com/showcase/void-wallet-2xnha).
+paratimes:
+  - sapphire
+codeUrl: https://github.com/itublockchain/ethglobal-buenos-void
+tutorials:
+  - Video demo: >-
+      https://stream.mux.com/MvdT3dzkCn3Nxbf6pJLvicq2N3grzjY9q00zxVNM00moM/high.mp4
+demoUrl: https://void-wallet.vercel.app/
+created: '2025-11-22T01:31:35Z'
+lastUpdated: '2025-11-25T17:29:21Z'
+tags:
+  - ROFL
+  - ETHGlobal Buenos Aires
+  - Hackathon
+languages:
+  - typescript
+  - noir
+  - solidity
+maintainedByOasis: false

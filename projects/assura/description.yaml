@@ -1,0 +1,38 @@
+name: Assura
+authors:
+  - Vivek Sahu: https://github.com/vwakesahu
+  - Mihir Sahu: https://github.com/0xmihirsahu
+  - Swayam: https://github.com/DevSwayam
+description: |
+  A compliance layer enabling developers to easily integrate compliance into
+  smart contracts.
+
+  Assura Network simplifies regulatory compliance for blockchain applications.
+  Developers can integrate Assura in under an hour by importing contracts and
+  adding a modifier—no need to build KYC systems or manage user databases.
+  Assura's Oasis TEE evaluates users off-chain and provides cryptographically
+  signed attestations verified on-chain.
+
+  Core features include a 0-1000 confidence score based on wallet activity and
+  KYC status, time-based bypass for users who prefer time-locks over KYC, and
+  ENS subdomain integration for efficient tracking of compliant users.
+
+  Check out more on the hackathon's [project page](https://ethglobal.com/showcase/assura-ovpn7).
+paratimes:
+  - sapphire
+codeUrl: https://github.com/Assura-Network/assura-monorepo
+tutorials:
+  - Video demo: >-
+      https://stream.mux.com/xB9OnVHZHQZ2npnwYa4UjLSLxNR5lWiIpqXw9u24GeI/high.mp4
+demoUrl: https://assura.network/
+created: '2025-11-22T15:37:12Z'
+lastUpdated: '2025-11-23T12:02:06Z'
+tags:
+  - ROFL
+  - ETHGlobal Buenos Aires
+  - Hackathon
+languages:
+  - typescript
+  - solidity
+  - python
+maintainedByOasis: false

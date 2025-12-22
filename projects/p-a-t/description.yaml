@@ -1,0 +1,40 @@
+name: P.A.T
+authors:
+  - Suryansh Chauhan: https://github.com/Suryansh-23
+  - Yash Goyal: https://github.com/Ericselvig
+  - Sarthak Dengre: https://github.com/DengreSarthak
+description: |
+  Proprietary Automated Market Maker launchpad built on top of Uniswap V4 using
+  TEEs.
+
+  P.A.T builds on Uniswap v4 hooks to create a prop AMM launchpad on Ethereum.
+  Prop AMMs are popular with market makers on Solana but haven't existed on
+  Ethereum due to EVM limitations. We combine Oasis TEEs with oracle-driven
+  pricing to enable complex off-chain price computation with on-chain settlement
+  guarantees.
+
+  Orders are grouped into batches inside a TEE using Oasis Runtime's offchain
+  logic, where proprietary strategies run safely. Market makers can use our
+  default oracle-driven strategy (powered by Pyth price feeds) or plug in custom
+  strategy contracts.
+
+  Check out more on the hackathon's [project page](https://ethglobal.com/showcase/p-a-t-s0c42).
+paratimes:
+  - sapphire
+codeUrl: https://github.com/Suryansh-23/p.a.t
+tutorials:
+  - Video demo: >-
+      https://stream.mux.com/dDy8jIgIyHxXAEbfkLRPPymL8ToFT004QYD01a4rFIEM00/high.mp4
+demoUrl: https://pat-psi.vercel.app/
+created: '2025-11-22T01:36:50Z'
+lastUpdated: '2025-12-10T11:42:18Z'
+license: MIT
+tags:
+  - ROFL
+  - DeFi
+  - ETHGlobal Buenos Aires
+  - Hackathon
+languages:
+  - typescript
+  - solidity
+maintainedByOasis: false
