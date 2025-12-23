@@ -87,6 +87,88 @@
         "slug": "activist-toolkit"
     },
     {
+        "name": "AgentCred",
+        "authors": [
+            {
+                "Luís": "https://github.com/filipexyz"
+            }
+        ],
+        "description": "On-chain credit scores and slashing for AI agents audited in Oasis ROFL TEEs.\n\nAgentCred is an accountability layer for AI agents. Each agent has an NFT\nidentity (ERC-8004 aligned), staked tokens, and a public reputation score.\nWhen an agent produces sensitive output, it's verified inside an Oasis ROFL\nTEE against hard rules and real data.\n\nSmart contracts on Oasis Sapphire record results, update reputation, and\nautomatically slash 0-15% of the agent's stake based on the score. The goal\nis to let DAOs and protocols approve or reject AI agents based on verifiable\nbehavior—good agents build track records, bad agents lose money on-chain.\n\nCheck out more on the hackathon's [project page](https://ethglobal.com/showcase/agentcred-2debg).\n",
+        "paratimes": [
+            "sapphire"
+        ],
+        "codeUrl": "https://github.com/agentcred/agentcred",
+        "tutorials": [],
+        "demoUrl": "https://agentcred.org/",
+        "created": "2025-11-22T01:33:52Z",
+        "lastUpdated": "2025-11-23T12:07:10Z",
+        "license": "MIT",
+        "tags": [
+            "ROFL",
+            "ETHGlobal Buenos Aires",
+            "Hackathon"
+        ],
+        "languages": [
+            "TypeScript",
+            "Solidity"
+        ],
+        "maintainedByOasis": false,
+        "screenshots": [
+            "/projects/agentcred/screenshots/01.png",
+            "/projects/agentcred/screenshots/02.png",
+            "/projects/agentcred/screenshots/03.png"
+        ],
+        "slug": "agentcred"
+    },
+    {
+        "name": "Assura",
+        "authors": [
+            {
+                "Vivek Sahu": "https://github.com/vwakesahu"
+            },
+            {
+                "Mihir Sahu": "https://github.com/0xmihirsahu"
+            },
+            {
+                "Swayam": "https://github.com/DevSwayam"
+            }
+        ],
+        "description": "A compliance layer enabling developers to easily integrate compliance into\nsmart contracts.\n\nAssura Network simplifies regulatory compliance for blockchain applications.\nDevelopers can integrate Assura in under an hour by importing contracts and\nadding a modifier—no need to build KYC systems or manage user databases.\nAssura's Oasis TEE evaluates users off-chain and provides cryptographically\nsigned attestations verified on-chain.\n\nCore features include a 0-1000 confidence score based on wallet activity and\nKYC status, time-based bypass for users who prefer time-locks over KYC, and\nENS subdomain integration for efficient tracking of compliant users.\n\nCheck out more on the hackathon's [project page](https://ethglobal.com/showcase/assura-ovpn7).\n",
+        "paratimes": [
+            "sapphire"
+        ],
+        "codeUrl": "https://github.com/Assura-Network/assura-monorepo",
+        "tutorials": [
+            {
+                "Video demo": "https://stream.mux.com/xB9OnVHZHQZ2npnwYa4UjLSLxNR5lWiIpqXw9u24GeI/high.mp4"
+            }
+        ],
+        "demoUrl": "https://assura.network/",
+        "created": "2025-11-22T15:37:12Z",
+        "lastUpdated": "2025-11-23T12:02:06Z",
+        "tags": [
+            "ROFL",
+            "ETHGlobal Buenos Aires",
+            "Hackathon"
+        ],
+        "languages": [
+            "TypeScript",
+            "Solidity",
+            "Python"
+        ],
+        "maintainedByOasis": false,
+        "screenshots": [
+            "/projects/assura/screenshots/01.png",
+            "/projects/assura/screenshots/02.png",
+            "/projects/assura/screenshots/03.png",
+            "/projects/assura/screenshots/04.png",
+            "/projects/assura/screenshots/05.png",
+            "/projects/assura/screenshots/06.png"
+        ],
+        "slug": "assura",
+        "license": "Unspecified"
+    },
+    {
         "name": "Oasis Authenticator",
         "authors": [
             {
@@ -1021,7 +1103,7 @@
             "ROFL",
             "EthGlobal Cannes 2025",
             "Hackathon",
-            "Defi"
+            "DeFi"
         ],
         "languages": [
             "TypeScript",
@@ -1612,6 +1694,57 @@
         "license": "Unspecified"
     },
     {
+        "name": "Linda",
+        "authors": [
+            {
+                "JK": "https://github.com/OwnerOfJK"
+            },
+            {
+                "Juan Cruz Larraya": "https://github.com/juan-LARRAYA"
+            },
+            {
+                "Serhas": "https://github.com/SerxaS"
+            },
+            {
+                "Armanc": "https://github.com/ozgurarmanc"
+            }
+        ],
+        "description": "Linda is a private and human-first location-based social app that connects\nfriends.\n\nLinda combines proof-of-humanity authentication with private real-time\nlocation streaming. Every account requires Self Protocol's passport-based ZK\nverification—eliminating bots and fake profiles. Location data processes\ninside Oasis ROFL TEEs, so even the app operators can't access coordinates.\n\nThe architecture uses a React Native frontend, Self Protocol for identity on\nCelo, and Oasis ROFL containers running in Intel TDX enclaves for location\nprocessing. TEE encrypts and stores data in Sapphire confidential contracts,\nnotifying users when friends are nearby without exposing raw locations.\n\nCheck out more on the hackathon's [project page](https://ethglobal.com/showcase/linda-svad9).\n",
+        "paratimes": [
+            "sapphire"
+        ],
+        "codeUrl": "https://github.com/OwnerOfJK/linda",
+        "tutorials": [
+            {
+                "Video demo": "https://stream.mux.com/jL014302o35pWrB8r4GP8x4AaxdkkI1FTIodgo201Th31c/high.mp4"
+            }
+        ],
+        "demoUrl": null,
+        "created": "2025-11-22T00:03:54Z",
+        "lastUpdated": "2025-11-26T15:11:06Z",
+        "tags": [
+            "ROFL",
+            "React",
+            "ETHGlobal Buenos Aires",
+            "Hackathon"
+        ],
+        "languages": [
+            "TypeScript",
+            "Solidity"
+        ],
+        "maintainedByOasis": false,
+        "screenshots": [
+            "/projects/linda/screenshots/01.jpg",
+            "/projects/linda/screenshots/02.jpg",
+            "/projects/linda/screenshots/03.jpg",
+            "/projects/linda/screenshots/04.jpg",
+            "/projects/linda/screenshots/05.jpg",
+            "/projects/linda/screenshots/06.jpg"
+        ],
+        "slug": "linda",
+        "license": "Unspecified"
+    },
+    {
         "name": "MedVault",
         "authors": [
             {
@@ -1843,7 +1976,7 @@
             "ROFL",
             "EthGlobal Cannes 2025",
             "Hackathon",
-            "Defi"
+            "DeFi"
         ],
         "languages": [
             "TypeScript",
@@ -1955,6 +2088,54 @@
         "license": "Unspecified"
     },
     {
+        "name": "P.A.T",
+        "authors": [
+            {
+                "Suryansh Chauhan": "https://github.com/Suryansh-23"
+            },
+            {
+                "Yash Goyal": "https://github.com/Ericselvig"
+            },
+            {
+                "Sarthak Dengre": "https://github.com/DengreSarthak"
+            }
+        ],
+        "description": "Proprietary Automated Market Maker launchpad built on top of Uniswap V4 using\nTEEs.\n\nP.A.T builds on Uniswap v4 hooks to create a prop AMM launchpad on Ethereum.\nProp AMMs are popular with market makers on Solana but haven't existed on\nEthereum due to EVM limitations. We combine Oasis TEEs with oracle-driven\npricing to enable complex off-chain price computation with on-chain settlement\nguarantees.\n\nOrders are grouped into batches inside a TEE using Oasis Runtime's offchain\nlogic, where proprietary strategies run safely. Market makers can use our\ndefault oracle-driven strategy (powered by Pyth price feeds) or plug in custom\nstrategy contracts.\n\nCheck out more on the hackathon's [project page](https://ethglobal.com/showcase/p-a-t-s0c42).\n",
+        "paratimes": [
+            "sapphire"
+        ],
+        "codeUrl": "https://github.com/Suryansh-23/p.a.t",
+        "tutorials": [
+            {
+                "Video demo": "https://stream.mux.com/dDy8jIgIyHxXAEbfkLRPPymL8ToFT004QYD01a4rFIEM00/high.mp4"
+            }
+        ],
+        "demoUrl": "https://pat-psi.vercel.app/",
+        "created": "2025-11-22T01:36:50Z",
+        "lastUpdated": "2025-12-10T11:42:18Z",
+        "license": "MIT",
+        "tags": [
+            "ROFL",
+            "DeFi",
+            "ETHGlobal Buenos Aires",
+            "Hackathon"
+        ],
+        "languages": [
+            "TypeScript",
+            "Solidity"
+        ],
+        "maintainedByOasis": false,
+        "screenshots": [
+            "/projects/p-a-t/screenshots/01.png",
+            "/projects/p-a-t/screenshots/02.png",
+            "/projects/p-a-t/screenshots/03.png",
+            "/projects/p-a-t/screenshots/04.png",
+            "/projects/p-a-t/screenshots/05.png",
+            "/projects/p-a-t/screenshots/06.png"
+        ],
+        "slug": "p-a-t"
+    },
+    {
         "name": "Compensate",
         "authors": [
             {
@@ -2028,7 +2209,7 @@
             "ROFL",
             "EthGlobal Cannes 2025",
             "Hackathon",
-            "Defi"
+            "DeFi"
         ],
         "languages": [
             "TypeScript",
@@ -2664,7 +2845,7 @@
         ],
         "tags": [
             "Uniswap",
-            "Defi",
+            "DeFi",
             "Hackathon",
             "Pre-ETHGlobal New Delhi"
         ],
@@ -2804,7 +2985,7 @@
             "ROFL",
             "EthGlobal Cannes 2025",
             "Hackathon",
-            "Defi"
+            "DeFi"
         ],
         "languages": [
             "Solidity",
@@ -3158,6 +3339,52 @@
         ],
         "slug": "universal-basic-ai",
         "demoUrl": null,
+        "license": "Unspecified"
+    },
+    {
+        "name": "Void Wallet",
+        "authors": [
+            {
+                "0xkutluer": "https://github.com/batikankutluer"
+            },
+            {
+                "Yasir KILINÇ": "https://github.com/exTypen"
+            },
+            {
+                "UYUYANMARUL": "https://github.com/UYUYANMARUL"
+            }
+        ],
+        "description": "Privacy-first wallet for confidential, compliant, and cryptographically secure\ntransactions.\n\nVoid Wallet is a privacy-preserving wallet built on a hybrid architecture that\ncombines Trusted Execution Environments (TEEs), Zero-Knowledge Proofs, and\nSparse Merkle Trees. It delivers confidential transactions at a fraction of\nthe cost of pure ZK solutions while giving users complete control over their\ncompliance.\n\nKey features:\n\n- Confidential computation via Oasis ROFL TEEs for off-chain transaction\n  processing\n- User-controlled compliance with ZK proofs that don't reveal transaction\n  history\n- Cryptographic safety net with Sparse Merkle Trees for emergency withdrawals\n\nCheck out more on the hackathon's [project page](https://ethglobal.com/showcase/void-wallet-2xnha).\n",
+        "paratimes": [
+            "sapphire"
+        ],
+        "codeUrl": "https://github.com/itublockchain/ethglobal-buenos-void",
+        "tutorials": [
+            {
+                "Video demo": "https://stream.mux.com/MvdT3dzkCn3Nxbf6pJLvicq2N3grzjY9q00zxVNM00moM/high.mp4"
+            }
+        ],
+        "demoUrl": "https://void-wallet.vercel.app/",
+        "created": "2025-11-22T01:31:35Z",
+        "lastUpdated": "2025-11-25T17:29:21Z",
+        "tags": [
+            "ROFL",
+            "ETHGlobal Buenos Aires",
+            "Hackathon"
+        ],
+        "languages": [
+            "TypeScript",
+            "Noir",
+            "Solidity"
+        ],
+        "maintainedByOasis": false,
+        "screenshots": [
+            "/projects/void-wallet/screenshots/01.png",
+            "/projects/void-wallet/screenshots/02.png",
+            "/projects/void-wallet/screenshots/03.png",
+            "/projects/void-wallet/screenshots/04.png"
+        ],
+        "slug": "void-wallet",
         "license": "Unspecified"
     },
     {

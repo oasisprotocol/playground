@@ -1,0 +1,33 @@
+name: AgentCred
+authors:
+  - Luís: https://github.com/filipexyz
+description: |
+  On-chain credit scores and slashing for AI agents audited in Oasis ROFL TEEs.
+
+  AgentCred is an accountability layer for AI agents. Each agent has an NFT
+  identity (ERC-8004 aligned), staked tokens, and a public reputation score.
+  When an agent produces sensitive output, it's verified inside an Oasis ROFL
+  TEE against hard rules and real data.
+
+  Smart contracts on Oasis Sapphire record results, update reputation, and
+  automatically slash 0-15% of the agent's stake based on the score. The goal
+  is to let DAOs and protocols approve or reject AI agents based on verifiable
+  behavior—good agents build track records, bad agents lose money on-chain.
+
+  Check out more on the hackathon's [project page](https://ethglobal.com/showcase/agentcred-2debg).
+paratimes:
+  - sapphire
+codeUrl: https://github.com/agentcred/agentcred
+tutorials: []
+demoUrl: https://agentcred.org/
+created: '2025-11-22T01:33:52Z'
+lastUpdated: '2025-11-23T12:07:10Z'
+license: MIT
+tags:
+  - ROFL
+  - ETHGlobal Buenos Aires
+  - Hackathon
+languages:
+  - typescript
+  - solidity
+maintainedByOasis: false

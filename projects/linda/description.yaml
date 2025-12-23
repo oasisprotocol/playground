@@ -1,0 +1,39 @@
+name: Linda
+authors:
+  - JK: https://github.com/OwnerOfJK
+  - Juan Cruz Larraya: https://github.com/juan-LARRAYA
+  - Serhas: https://github.com/SerxaS
+  - Armanc: https://github.com/ozgurarmanc
+description: |
+  Linda is a private and human-first location-based social app that connects
+  friends.
+
+  Linda combines proof-of-humanity authentication with private real-time
+  location streaming. Every account requires Self Protocol's passport-based ZK
+  verification—eliminating bots and fake profiles. Location data processes
+  inside Oasis ROFL TEEs, so even the app operators can't access coordinates.
+
+  The architecture uses a React Native frontend, Self Protocol for identity on
+  Celo, and Oasis ROFL containers running in Intel TDX enclaves for location
+  processing. TEE encrypts and stores data in Sapphire confidential contracts,
+  notifying users when friends are nearby without exposing raw locations.
+
+  Check out more on the hackathon's [project page](https://ethglobal.com/showcase/linda-svad9).
+paratimes:
+  - sapphire
+codeUrl: https://github.com/OwnerOfJK/linda
+tutorials:
+  - Video demo: >-
+      https://stream.mux.com/jL014302o35pWrB8r4GP8x4AaxdkkI1FTIodgo201Th31c/high.mp4
+demoUrl: null
+created: '2025-11-22T00:03:54Z'
+lastUpdated: '2025-11-26T15:11:06Z'
+tags:
+  - ROFL
+  - React
+  - ETHGlobal Buenos Aires
+  - Hackathon
+languages:
+  - typescript
+  - solidity
+maintainedByOasis: false
