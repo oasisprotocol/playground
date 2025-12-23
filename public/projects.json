@@ -432,6 +432,58 @@
         "license": "Unspecified"
     },
     {
+        "name": "Chain of Thought",
+        "authors": [
+            {
+                "notzhiwei": "https://github.com/Avoisavo"
+            },
+            {
+                "markC-jit": "https://github.com/markC-jit"
+            },
+            {
+                "FilthyCheezy": "https://github.com/FilthyCheezy"
+            },
+            {
+                "pudaoo": "https://github.com/pudaoo"
+            }
+        ],
+        "description": "Chain of Thought is a private mental-health assistant designed to reduce\nstigma around seeking help. It encrypts conversations and stores them in\nuser-controlled smart contracts on Oasis Sapphire, while ROFL executes AI\nassistance inside TEEs so sensitive data never leaves the enclave.\n\nUsers can access a confidential history of their sessions without exposing\ninformation to providers or platforms, enabling safer support workflows.\n\nCheck out more on the hackathon's [project\npage](https://devfolio.co/submissions/steamboat-6deb).\n",
+        "paratimes": [
+            "sapphire"
+        ],
+        "codeUrl": "https://github.com/Avoisavo/devmatch8_3A",
+        "tutorials": [
+            {
+                "Video demo": "https://youtu.be/Cg866M_7zrM"
+            },
+            {
+                "Walkthrough": "https://www.loom.com/share/9b955018742d46c3ad9fd6ff1d41d99f?sid=c42c69a8-84f6-4b0f-a9bd-6761d81c2fd2"
+            },
+            {
+                "Walkthrough (alt)": "https://www.loom.com/share/b1b8e2351f0e45f98206e61240fc0914?sid=df5ac516-05c8-4a74-aa4a-9ef2a7c417f7"
+            }
+        ],
+        "demoUrl": null,
+        "created": "2025-08-05T08:34:47Z",
+        "lastUpdated": "2025-08-10T06:58:07Z",
+        "license": "MIT",
+        "tags": [
+            "ROFL",
+            "DEVMatch Hackathon 2025",
+            "Hackathon"
+        ],
+        "languages": [
+            "Rust",
+            "TypeScript",
+            "Solidity"
+        ],
+        "maintainedByOasis": false,
+        "screenshots": [
+            "/projects/chain-of-thought/screenshots/01.jpg"
+        ],
+        "slug": "chain-of-thought"
+    },
+    {
         "name": "CLPD Stablecoin Private Transactions",
         "slug": "clpd-private",
         "authors": [
@@ -641,6 +693,51 @@
             "/projects/dapp-wrose/screenshots/01-landing-page.png"
         ],
         "slug": "dapp-wrose"
+    },
+    {
+        "name": "Declima",
+        "authors": [
+            {
+                "03grade": "https://github.com/03grade"
+            },
+            {
+                "Yvonnechann": "https://github.com/Yvonnechann"
+            }
+        ],
+        "description": "Declima is a decentralized climate-data platform that rewards contributors\nwith ROSE for sharing sensor data. Built on Oasis Sapphire with ROFL, it\nencrypts data on-chain, supports privacy-preserving storage, and enables DAO\ngovernance for incentives.\n\nData providers can mint sensors and earn rewards, while researchers and\nactivists access open datasets and AI-driven insights for climate analysis.\n\nCheck out more on the hackathon's [project\npage](https://devfolio.co/submissions/declima-a533).\n",
+        "paratimes": [
+            "sapphire"
+        ],
+        "codeUrl": "https://github.com/03grade/DevmatchDeclima2025",
+        "tutorials": [
+            {
+                "Video demo": "https://youtu.be/pWEWKmmR_AE"
+            },
+            {
+                "Pitch deck": "https://docs.google.com/presentation/d/1-dKBOXbZxXjfDkJ-0xpyR6VFiMVozz1t/edit?usp=sharing&ouid=107290106139600006187&rtpof=true&sd=true"
+            }
+        ],
+        "demoUrl": "https://devmatch-ver3-1754623251501.chatand.build/dao",
+        "created": "2025-08-09T22:50:01Z",
+        "lastUpdated": "2025-09-02T15:58:13Z",
+        "tags": [
+            "ROFL",
+            "DEVMatch Hackathon 2025",
+            "Hackathon"
+        ],
+        "languages": [
+            "TypeScript",
+            "Solidity",
+            "Python"
+        ],
+        "maintainedByOasis": false,
+        "screenshots": [
+            "/projects/declima/screenshots/01.png",
+            "/projects/declima/screenshots/02.png",
+            "/projects/declima/screenshots/03.png"
+        ],
+        "slug": "declima",
+        "license": "Unspecified"
     },
     {
         "name": "Authenticator Demo",
@@ -1236,6 +1333,54 @@
         "license": "Unspecified"
     },
     {
+        "name": "Ethclbet",
+        "authors": [
+            {
+                "Cedctf": "https://github.com/Cedctf"
+            },
+            {
+                "Qun Jie": "https://github.com/Jay-366"
+            },
+            {
+                "Lee Wai Yee": "https://github.com/wwaiyyee"
+            },
+            {
+                "1c3man": "https://github.com/Czeh0210"
+            },
+            {
+                "Lim Fang Yee": "https://github.com/TisuPaper"
+            }
+        ],
+        "description": "Ethclbet is a privacy-preserving prediction-market aggregator. It pulls market\ndata from multiple platforms, computes optimal allocations, and executes bets\nwhile keeping strategies private.\n\nSensitive calculations run in Oasis ROFL and bets are stored via Sapphire\nsmart contracts, enabling confidential optimization and settlement tracking.\n\nCheck out more on the hackathon's [project\npage](https://devfolio.co/submissions/ethclbet-13a8).\n",
+        "paratimes": [
+            "sapphire"
+        ],
+        "codeUrl": "https://github.com/Cedctf/ethclbet",
+        "tutorials": [
+            {
+                "Video demo": "https://youtu.be/etJsDybutJM?si=Al-YmVBAnr7cdvr7"
+            }
+        ],
+        "demoUrl": null,
+        "created": "2025-08-05T15:42:31Z",
+        "lastUpdated": "2025-11-25T11:01:46Z",
+        "license": "MIT",
+        "tags": [
+            "ROFL",
+            "DEVMatch Hackathon 2025",
+            "Hackathon"
+        ],
+        "languages": [
+            "TypeScript",
+            "Solidity"
+        ],
+        "maintainedByOasis": false,
+        "screenshots": [
+            "/projects/ethclbet/screenshots/01.png"
+        ],
+        "slug": "ethclbet"
+    },
+    {
         "name": "Confidential Hello World on Cipher",
         "authors": [
             {
@@ -1555,6 +1700,98 @@
             "/projects/futures-on-chain/screenshots/05-diagram.png"
         ],
         "slug": "futures-on-chain",
+        "license": "Unspecified"
+    },
+    {
+        "name": "Grand Warden",
+        "authors": [
+            {
+                "Marcus Tan": "https://github.com/Marcussy34"
+            },
+            {
+                "rougegez": "https://github.com/rougegez"
+            },
+            {
+                "Ivy Chung": "https://github.com/ICAS03"
+            }
+        ],
+        "description": "Grand Warden is a privacy-first password manager that combines decentralized\nstorage (Walrus), client-side encryption (Seal), and confidential computing.\nCredentials stay off centralized servers, and breach checks run inside Oasis\nROFL TEEs so passwords are never exposed.\n\nThe app adds AI-assisted risk analysis and on-chain attestations to help users\nunderstand and improve their security posture. It aims to make credential\nmanagement proactive, verifiable, and user-controlled.\n\nCheck out more on the hackathon's [project\npage](https://devfolio.co/submissions/grand-warden-e082).\n",
+        "paratimes": [
+            "sapphire"
+        ],
+        "codeUrl": "https://github.com/Marcussy34/apudevmatch2025",
+        "tutorials": [
+            {
+                "Video demo": "https://youtu.be/ir0vNm6ZuCE"
+            },
+            {
+                "Additional demo": "https://youtu.be/3yT2e3QP3YM"
+            },
+            {
+                "Pitch deck": "https://www.canva.com/design/DAGvmhtc3DQ/_jLEgYXFFiyF2haeohfxVg"
+            }
+        ],
+        "demoUrl": null,
+        "created": "2025-08-01T17:53:53Z",
+        "lastUpdated": "2025-08-10T02:50:59Z",
+        "tags": [
+            "ROFL",
+            "DEVMatch Hackathon 2025",
+            "Hackathon"
+        ],
+        "languages": [
+            "JavaScript",
+            "Rust",
+            "Move"
+        ],
+        "maintainedByOasis": false,
+        "screenshots": [
+            "/projects/grand-warden/screenshots/01.jpg",
+            "/projects/grand-warden/screenshots/02.jpg",
+            "/projects/grand-warden/screenshots/03.jpg",
+            "/projects/grand-warden/screenshots/04.jpg",
+            "/projects/grand-warden/screenshots/05.jpg",
+            "/projects/grand-warden/screenshots/06.jpg"
+        ],
+        "slug": "grand-warden",
+        "license": "Unspecified"
+    },
+    {
+        "name": "GuardianChain",
+        "authors": [
+            {
+                "JasonDoe": "https://github.com/Thafoxes"
+            },
+            {
+                "Harith Bennet": "https://github.com/rithbennet"
+            }
+        ],
+        "description": "GuardianChain is a privacy-preserving whistleblowing platform built on Oasis\nSapphire, designed to align with Malaysia's Whistleblower Protection Act 2010\n(Act 711). It lets reporters submit anonymous, encrypted disclosures and\nevidence, while giving investigators a tamper-proof audit trail and secure\ncommunication.\n\nOptional identity verification and role-based workflows help organizations\nhandle cases without exposing sensitive data. The system keeps reports\nconfidential yet verifiable, reducing retaliation risk and improving trust in\ninvestigations.\n\nCheck out more on the hackathon's [project\npage](https://devfolio.co/submissions/httpsgithubcomthafoxesguardianchain-7d41).\n",
+        "paratimes": [
+            "sapphire"
+        ],
+        "codeUrl": "https://github.com/Thafoxes/GuardianChain",
+        "tutorials": [
+            {
+                "Video demo": "https://www.youtube.com/watch?v=QQ-pFyFwflk"
+            }
+        ],
+        "demoUrl": "https://guardianchain-eua8.onrender.com/",
+        "created": "2025-08-08T03:24:30Z",
+        "lastUpdated": "2025-08-10T04:02:42Z",
+        "tags": [
+            "DEVMatch Hackathon 2025",
+            "Hackathon"
+        ],
+        "languages": [
+            "TypeScript",
+            "Solidity"
+        ],
+        "maintainedByOasis": false,
+        "screenshots": [
+            "/projects/guardianchain/screenshots/01.png"
+        ],
+        "slug": "guardianchain",
         "license": "Unspecified"
     },
     {
@@ -2862,6 +3099,46 @@
             "/projects/shadeswap/screenshots/05.png"
         ],
         "slug": "shadeswap",
+        "license": "Unspecified"
+    },
+    {
+        "name": "sp3akUP",
+        "authors": [
+            {
+                "Alonnn": "https://github.com/Marlon-id"
+            }
+        ],
+        "description": "sp3akUP provides a safe, anonymous way for harassment victims to file reports.\nIt uses Oasis Sapphire confidential smart contracts to encrypt reports and\nensure tamper-proof storage, while an empathetic AI assistant guides users\nthrough creating a clear, chronological account.\n\nA gasless transaction flow removes the need for users to manage crypto. The\nresult is a secure, accessible reporting workflow where only the reporter\ncontrols access to their data.\n\nCheck out more on the hackathon's [project\npage](https://devfolio.co/submissions/hushr-c1e6).\n",
+        "paratimes": [
+            "sapphire"
+        ],
+        "codeUrl": "https://github.com/ziming8431/aman-report-blockchain-dapp",
+        "tutorials": [
+            {
+                "Video demo": "https://youtu.be/jul_k2Dm5kM"
+            },
+            {
+                "Pitch deck": "https://cloudmails-my.sharepoint.com/:p:/g/personal/tp071039_mail_apu_edu_my/EVWyWwWNV-xHpUhO2-d1zEwBiGFe_HsFdOyIHpuqUttV0Q?e=IHK8Cz"
+            }
+        ],
+        "demoUrl": null,
+        "created": "2025-08-09T17:49:29Z",
+        "lastUpdated": "2025-08-10T03:03:58Z",
+        "tags": [
+            "DEVMatch Hackathon 2025",
+            "Hackathon"
+        ],
+        "languages": [
+            "TypeScript",
+            "Solidity"
+        ],
+        "maintainedByOasis": false,
+        "screenshots": [
+            "/projects/sp3akup/screenshots/01.jpg",
+            "/projects/sp3akup/screenshots/02.jpg",
+            "/projects/sp3akup/screenshots/03.jpg"
+        ],
+        "slug": "sp3akup",
         "license": "Unspecified"
     },
     {

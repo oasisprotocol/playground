@@ -1,0 +1,34 @@
+name: Ethclbet
+authors:
+  - Cedctf: https://github.com/Cedctf
+  - Qun Jie: https://github.com/Jay-366
+  - Lee Wai Yee: https://github.com/wwaiyyee
+  - 1c3man: https://github.com/Czeh0210
+  - Lim Fang Yee: https://github.com/TisuPaper
+description: |
+  Ethclbet is a privacy-preserving prediction-market aggregator. It pulls market
+  data from multiple platforms, computes optimal allocations, and executes bets
+  while keeping strategies private.
+
+  Sensitive calculations run in Oasis ROFL and bets are stored via Sapphire
+  smart contracts, enabling confidential optimization and settlement tracking.
+
+  Check out more on the hackathon's [project
+  page](https://devfolio.co/submissions/ethclbet-13a8).
+paratimes:
+  - sapphire
+codeUrl: https://github.com/Cedctf/ethclbet
+tutorials:
+  - Video demo: https://youtu.be/etJsDybutJM?si=Al-YmVBAnr7cdvr7
+demoUrl: null
+created: '2025-08-05T15:42:31Z'
+lastUpdated: '2025-11-25T11:01:46Z'
+license: MIT
+tags:
+  - ROFL
+  - DEVMatch Hackathon 2025
+  - Hackathon
+languages:
+  - typescript
+  - solidity
+maintainedByOasis: false
