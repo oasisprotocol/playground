@@ -1,0 +1,33 @@
+name: Declima
+authors:
+  - 03grade: https://github.com/03grade
+  - Yvonnechann: https://github.com/Yvonnechann
+description: |
+  Declima is a decentralized climate-data platform that rewards contributors
+  with ROSE for sharing sensor data. Built on Oasis Sapphire with ROFL, it
+  encrypts data on-chain, supports privacy-preserving storage, and enables DAO
+  governance for incentives.
+
+  Data providers can mint sensors and earn rewards, while researchers and
+  activists access open datasets and AI-driven insights for climate analysis.
+
+  Check out more on the hackathon's [project
+  page](https://devfolio.co/submissions/declima-a533).
+paratimes:
+  - sapphire
+codeUrl: https://github.com/03grade/DevmatchDeclima2025
+tutorials:
+  - Video demo: https://youtu.be/pWEWKmmR_AE
+  - Pitch deck: https://docs.google.com/presentation/d/1-dKBOXbZxXjfDkJ-0xpyR6VFiMVozz1t/edit?usp=sharing&ouid=107290106139600006187&rtpof=true&sd=true
+demoUrl: https://devmatch-ver3-1754623251501.chatand.build/dao
+created: '2025-08-09T22:50:01Z'
+lastUpdated: '2025-09-02T15:58:13Z'
+tags:
+  - ROFL
+  - DEVMatch Hackathon 2025
+  - Hackathon
+languages:
+  - typescript
+  - solidity
+  - python
+maintainedByOasis: false

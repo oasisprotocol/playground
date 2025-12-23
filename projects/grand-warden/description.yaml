@@ -1,0 +1,36 @@
+name: Grand Warden
+authors:
+  - Marcus Tan: https://github.com/Marcussy34
+  - rougegez: https://github.com/rougegez
+  - Ivy Chung: https://github.com/ICAS03
+description: |
+  Grand Warden is a privacy-first password manager that combines decentralized
+  storage (Walrus), client-side encryption (Seal), and confidential computing.
+  Credentials stay off centralized servers, and breach checks run inside Oasis
+  ROFL TEEs so passwords are never exposed.
+
+  The app adds AI-assisted risk analysis and on-chain attestations to help users
+  understand and improve their security posture. It aims to make credential
+  management proactive, verifiable, and user-controlled.
+
+  Check out more on the hackathon's [project
+  page](https://devfolio.co/submissions/grand-warden-e082).
+paratimes:
+  - sapphire
+codeUrl: https://github.com/Marcussy34/apudevmatch2025
+tutorials:
+  - Video demo: https://youtu.be/ir0vNm6ZuCE
+  - Additional demo: https://youtu.be/3yT2e3QP3YM
+  - Pitch deck: https://www.canva.com/design/DAGvmhtc3DQ/_jLEgYXFFiyF2haeohfxVg
+demoUrl: null
+created: '2025-08-01T17:53:53Z'
+lastUpdated: '2025-08-10T02:50:59Z'
+tags:
+  - ROFL
+  - DEVMatch Hackathon 2025
+  - Hackathon
+languages:
+  - javascript
+  - rust
+  - move
+maintainedByOasis: false

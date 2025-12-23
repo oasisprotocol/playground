@@ -1,0 +1,31 @@
+name: sp3akUP
+authors:
+  - Alonnn: https://github.com/Marlon-id
+description: |
+  sp3akUP provides a safe, anonymous way for harassment victims to file reports.
+  It uses Oasis Sapphire confidential smart contracts to encrypt reports and
+  ensure tamper-proof storage, while an empathetic AI assistant guides users
+  through creating a clear, chronological account.
+
+  A gasless transaction flow removes the need for users to manage crypto. The
+  result is a secure, accessible reporting workflow where only the reporter
+  controls access to their data.
+
+  Check out more on the hackathon's [project
+  page](https://devfolio.co/submissions/hushr-c1e6).
+paratimes:
+  - sapphire
+codeUrl: https://github.com/ziming8431/aman-report-blockchain-dapp
+tutorials:
+  - Video demo: https://youtu.be/jul_k2Dm5kM
+  - Pitch deck: https://cloudmails-my.sharepoint.com/:p:/g/personal/tp071039_mail_apu_edu_my/EVWyWwWNV-xHpUhO2-d1zEwBiGFe_HsFdOyIHpuqUttV0Q?e=IHK8Cz
+demoUrl: null
+created: '2025-08-09T17:49:29Z'
+lastUpdated: '2025-08-10T03:03:58Z'
+tags:
+  - DEVMatch Hackathon 2025
+  - Hackathon
+languages:
+  - typescript
+  - solidity
+maintainedByOasis: false
