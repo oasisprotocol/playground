@@ -684,10 +684,10 @@
   resolved "https://registry.yarnpkg.com/@floating-ui/utils/-/utils-0.1.6.tgz#22958c042e10b67463997bd6ea7115fe28cbcaf9"
   integrity sha512-OfX7E2oUDYxtBvsuS4e/jSn4Q9Qb6DzgeYtsAdkPZ47znpoNsMgZw0+tVijiv3uGNR6dgNlty6r9rzIzHjtd/A==
 
-"@fontsource-variable/roboto-flex@^5.0.14":
-  version "5.0.14"
-  resolved "https://registry.yarnpkg.com/@fontsource-variable/roboto-flex/-/roboto-flex-5.0.14.tgz#b54d0f8397926b2e4fe2357a40e4cfa839c56990"
-  integrity sha512-8zW1gdBzYp2jUzeN8JcUL4keOnrNLfcqYoXQZ+HTmHd3GmCYmwb2VBfpDBadkeCbxloVjghxbYaNbJ40fbt1Rg==
+"@fontsource-variable/roboto-flex@^5.2.8":
+  version "5.2.8"
+  resolved "https://registry.yarnpkg.com/@fontsource-variable/roboto-flex/-/roboto-flex-5.2.8.tgz#ee29ae8601708dba34e6e64721513d6be9079a3d"
+  integrity sha512-Q9zbz+P2VrDeIxBu9YAIG+eYpLmQF5FIJEEwAWn8En9Lao1TOISnoYcywGV+jSv7LGsHEndCR8hveXPnvCBEQQ==
 
 "@fortawesome/fontawesome-common-types@6.5.1":
   version "6.5.1"
