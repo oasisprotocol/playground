@@ -1,7 +1,7 @@
-@import '@fontsource-variable/roboto-flex';
+@import '@fontsource-variable/geist';
 
 body {
-  font-family: 'Roboto Flex Variable', sans-serif;
+  font-family: 'Geist Variable', sans-serif;
 }
 
 *,

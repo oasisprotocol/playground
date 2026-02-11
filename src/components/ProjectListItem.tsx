@@ -131,7 +131,7 @@ const ProjectListItem: React.FC<ProjectListItemProps> = ({
                   color: '#000000',
                   lineHeight: '130%',
                   minHeight: '60px',
-                  fontFamily: "'Roboto Flex Variable',sans-serif",
+                  fontFamily: "'Geist Variable',sans-serif",
                 }}
               >
                 <ReactMarkdown
