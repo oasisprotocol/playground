@@ -13,14 +13,6 @@ import backgroundImg from './assets/PlaygroundBgGraphic.webp';
 import ProjectList from './components/ProjectList';
 import { playgroundTheme } from './styles/playgroundTheme';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { styled } from '@mui/material/styles';
-import logo from './assets/Playground Logo White.svg';
-
-const StyledImage = styled('img')({
-  maxWidth: '360px',
-  maxHeight: '60px',
-  marginBottom: '50px',
-});
 
 function App() {
   const theme = useTheme();
@@ -46,7 +38,19 @@ function App() {
           maxWidth="lg"
           sx={{ paddingTop: paddingValue, paddingBottom: paddingValue }}
         >
-          <StyledImage src={logo} alt="Oasis Playground" />
+          <Typography
+            gutterBottom
+            sx={{
+              color: 'white',
+              fontSize: '48px',
+              fontWeight: '600',
+              width: '100%',
+              maxWidth: '750px',
+              marginBottom: isMobile ? '16px' : '24px',
+            }}
+          >
+            Oasis Demos
+          </Typography>
           <Grid
             container
             spacing={2}
@@ -65,10 +69,10 @@ function App() {
                   marginBottom: isMobile ? '16px' : '24px',
                 }}
               >
-                Discover the frontier of Web3 privacy through the projects and
-                applications that are powered by the Oasis Network’s
-                cutting-edge production-ready confidentiality technology. Become
-                a contributor by adding your dApp to the Playground{' '}
+                Explore real-world demo applications built with the Oasis
+                privacy stack.Access production-ready repositories and video
+                walkthroughs to see how global builders are implementing
+                trustless privacy. Contribute by adding your app{' '}
                 <Link
                   href="https://github.com/oasisprotocol/demos/blob/main/CONTRIBUTING.md"
                   sx={{
