@@ -1,17 +1,17 @@
-# Oasis Playground
+# Oasis Demos
 
 [![CI links status](https://github.com/oasisprotocol/playground/actions/workflows/ci-links.yml/badge.svg)](https://github.com/oasisprotocol/playground/actions/workflows/ci-links.yml)
 [![Deployment status](https://github.com/oasisprotocol/playground/actions/workflows/ci-build-deploy.yml/badge.svg)](https://github.com/oasisprotocol/playground/actions/workflows/ci-build-deploy.yml)
 
 This repository contains an index of notable dApps running on the Oasis
 platform. The index is primarily tailored, but not limited to, technology
-showcases and educational material—hence the name "Playground".
+showcases and educational material.
 
-The Oasis Playground is publicly accessible at https://playground.oasis.io.
+The Oasis Demos is publicly accessible at https://playground.oasis.io.
 
 ## Running Locally
 
-To run the Oasis Playground webapp on your local machine:
+To run the Oasis Demos webapp on your local machine:
 
 1. Install dependencies:
    ```bash
@@ -31,7 +31,7 @@ To run the Oasis Playground webapp on your local machine:
 ## Contributing
 
 **Developers are encouraged to contribute their dApps to the Oasis
-Playground!**
+Demos!**
 
 **See [CONTRIBUTING.md](./CONTRIBUTING.md) for details.**
 

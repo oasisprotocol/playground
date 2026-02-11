@@ -70,7 +70,7 @@ function App() {
                 cutting-edge production-ready confidentiality technology. Become
                 a contributor by adding your dApp to the Playground{' '}
                 <Link
-                  href="https://github.com/oasisprotocol/playground/blob/main/CONTRIBUTING.md"
+                  href="https://github.com/oasisprotocol/demos/blob/main/CONTRIBUTING.md"
                   sx={{
                     color: 'white',
                     textDecorationColor: 'white',
@@ -88,7 +88,7 @@ function App() {
             </Grid>
             <Grid item>
               <Button
-                href="https://github.com/oasisprotocol/playground/blob/main/CONTRIBUTING.md"
+                href="https://github.com/oasisprotocol/demos/blob/main/CONTRIBUTING.md"
                 target="_blank"
                 color="inherit"
                 variant="outlined"
