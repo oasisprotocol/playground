@@ -29,10 +29,10 @@ function App() {
           height: '100%',
           minHeight: '100vh',
           backgroundImage: `url(${backgroundImg})`,
-          backgroundSize: '100vw auto',
-          backgroundRepeat: 'no-repeat',
-          backgroundColor: '#0500E1',
-          backgroundPosition: '50% 230px',
+          backgroundSize: '2000px auto',
+          backgroundRepeat: 'repeat',
+          backgroundColor: '#EDEAE4',
+          backgroundPosition: '50% 0',
         }}
       >
         <Container
