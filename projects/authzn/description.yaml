@@ -18,7 +18,7 @@ description: |
        device-level authentication methods.
     2. Your ID will be stored on the Sapphire chain.
     3. Log in to one of the services which support the Oasis Authenticator (for
-       example the [Authzn Demo app](https://playground.oasis.io/authzn-demo/).
+       example the [Authzn Demo app](https://demos.oasis.io/authzn-demo/).
     4. The app will receive a valid token from the smart contract, if the
        logging in via the Oasis Authenticator is successful.
 paratimes:
@@ -32,7 +32,7 @@ tags:
   - On-Chain Encryption
   - React
 codeUrl: https://github.com/oasisprotocol/demo-authzn
-demoUrl: https://playground.oasis.io/authzn
+demoUrl: https://demos.oasis.io/authzn
 tutorials:
   - View-Call Authentication: https://docs.oasis.io/dapp/sapphire/authentication
 created: 2023-06-17
