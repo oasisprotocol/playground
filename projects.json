@@ -175,7 +175,7 @@
                 "Oasis Protocol Foundation": "https://oasisprotocol.org"
             }
         ],
-        "description": "This project demonstrates how to use WebAuthN on Oasis Sapphire.\nThis allows users to use strong device-level authentication, such as TouchID,\nYubiKey, Android biometric, Windows Hello etc.\n\nCurrently it only supports SEC P256 R1 credentials, and additional work will\nbe needed to adapt it to your specific use-case.\n\nAlso includes the code for TOTP authentication.\n\nUsage:\n\n  1. Register at the Oasis Authenticator by using one of the strong\n     device-level authentication methods.\n  2. Your ID will be stored on the Sapphire chain.\n  3. Log in to one of the services which support the Oasis Authenticator (for\n     example the [Authzn Demo app](https://playground.oasis.io/authzn-demo/).\n  4. The app will receive a valid token from the smart contract, if the\n     logging in via the Oasis Authenticator is successful.\n",
+        "description": "This project demonstrates how to use WebAuthN on Oasis Sapphire.\nThis allows users to use strong device-level authentication, such as TouchID,\nYubiKey, Android biometric, Windows Hello etc.\n\nCurrently it only supports SEC P256 R1 credentials, and additional work will\nbe needed to adapt it to your specific use-case.\n\nAlso includes the code for TOTP authentication.\n\nUsage:\n\n  1. Register at the Oasis Authenticator by using one of the strong\n     device-level authentication methods.\n  2. Your ID will be stored on the Sapphire chain.\n  3. Log in to one of the services which support the Oasis Authenticator (for\n     example the [Authzn Demo app](https://demos.oasis.io/authzn-demo/).\n  4. The app will receive a valid token from the smart contract, if the\n     logging in via the Oasis Authenticator is successful.\n",
         "paratimes": [
             "sapphire"
         ],
@@ -190,7 +190,7 @@
             "React"
         ],
         "codeUrl": "https://github.com/oasisprotocol/demo-authzn",
-        "demoUrl": "https://playground.oasis.io/authzn",
+        "demoUrl": "https://demos.oasis.io/authzn",
         "tutorials": [
             {
                 "View-Call Authentication": "https://docs.oasis.io/dapp/sapphire/authentication"
@@ -685,7 +685,7 @@
             "React"
         ],
         "codeUrl": "https://github.com/oasisprotocol/dapp-wrose/tree/authzn",
-        "demoUrl": "https://playground.oasis.io/wrose-authzn/",
+        "demoUrl": "https://demos.oasis.io/wrose-authzn/",
         "created": "2023-11-10T00:00:00.000Z",
         "lastUpdated": "2023-11-30T00:00:00.000Z",
         "maintainedByOasis": true,
@@ -759,7 +759,7 @@
             "React"
         ],
         "codeUrl": "https://github.com/oasisprotocol/demo-authzn/tree/main/demo",
-        "demoUrl": "https://playground.oasis.io/authzn-demo",
+        "demoUrl": "https://demos.oasis.io/authzn-demo",
         "tutorials": [
             {
                 "View-Call Authentication": "https://docs.oasis.io/dapp/sapphire/authentication"
@@ -908,7 +908,7 @@
             "EthCC 2023"
         ],
         "codeUrl": "https://github.com/oasisprotocol/demo-oasisswag",
-        "demoUrl": "https://playground.oasis.io/oasisswag",
+        "demoUrl": "https://demos.oasis.io/oasisswag",
         "created": "2023-04-18T00:00:00.000Z",
         "lastUpdated": "2023-09-13T00:00:00.000Z",
         "maintainedByOasis": true,
@@ -978,7 +978,7 @@
             "ETHDam 2024"
         ],
         "codeUrl": "https://github.com/oasisprotocol/demo-quiz",
-        "demoUrl": "https://playground.oasis.io/demo-quiz",
+        "demoUrl": "https://demos.oasis.io/demo-quiz",
         "created": "2024-03-19T00:00:00.000Z",
         "lastUpdated": "2024-06-04T00:00:00.000Z",
         "maintainedByOasis": true,
@@ -1018,7 +1018,7 @@
             "TDX",
             "React"
         ],
-        "demoUrl": "https://playground.oasis.io/demo-rofl-chatbot",
+        "demoUrl": "https://demos.oasis.io/demo-rofl-chatbot",
         "tutorials": [
             {
                 "Build ROFL App": "https://docs.oasis.io/build/rofl/"
@@ -1158,7 +1158,7 @@
             "Voting"
         ],
         "codeUrl": "https://github.com/oasisprotocol/demo-voting",
-        "demoUrl": "https://playground.oasis.io/demo-voting",
+        "demoUrl": "https://demos.oasis.io/demo-voting",
         "tutorials": [
             {
                 "Official Oasis Documentation": "https://docs.oasis.io/dapp/sapphire/gasless"
