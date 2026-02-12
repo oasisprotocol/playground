@@ -94,6 +94,7 @@ export const playgroundTheme = createTheme({
     MuiDialog: {
       styleOverrides: {
         paper: {
+          backgroundColor: '#EDEAE4',
           padding: '24px',
           maxWidth: '878px',
           margin: 'auto',

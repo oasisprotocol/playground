@@ -91,12 +91,11 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
       </IconButton>
 
       {project && (
-        <div style={{ padding: isMobile ? '32px 20px' : '32px' }}>
+        <div style={{ padding: isMobile ? '32px 20px' : '24px' }}>
           <Typography
             variant="h2"
             sx={{
               fontSize: '34px',
-              letterSpacing: '-1.5px',
               paddingRight: '24px',
             }}
           >
@@ -107,11 +106,11 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
             onSelect={handleSelectCarouselSlide}
             controls={project.screenshots.length > 1}
             style={{
-              backgroundColor: '#000000',
+              backgroundColor: '#d9d9d9',
               marginTop: '24px',
               borderRadius: '8px',
-              color: '#0D09E3',
-              border: '1px solid blue',
+              color: '#003CD8',
+              border: '1px solid #d9d9d9',
             }}
           >
             {project.screenshots.map((screenshot) => (
@@ -140,7 +139,7 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
             <Grid item xs={12} md={6}>
               <Box
                 sx={{
-                  color: '#000000',
+                  color: '#777572',
                   letterSpacing: '-0.5px',
                   marginBottom: '24px',
                   fontFamily: "'Geist Variable',sans-serif",
@@ -160,7 +159,7 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
                 <Grid item xs={6}>
                   <Typography
                     sx={{
-                      color: '#000000',
+                      color: '#777572',
                       letterSpacing: '-0.5px',
                       fontSize: '14px',
                     }}
@@ -183,7 +182,7 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
                 <Grid item xs={6}>
                   <Typography
                     sx={{
-                      color: '#000000',
+                      color: '#777572',
                       letterSpacing: '-0.5px',
                       fontSize: '14px',
                     }}
@@ -208,7 +207,7 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
                 <Grid item xs={6}>
                   <Typography
                     sx={{
-                      color: '#000000',
+                      color: '#777572',
                       letterSpacing: '-0.5px',
                       fontSize: '14px',
                       marginTop: '16px',
@@ -229,7 +228,7 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
                 <Grid item xs={6}>
                   <Typography
                     sx={{
-                      color: '#000000',
+                      color: '#777572',
                       letterSpacing: '-0.5px',
                       fontSize: '14px',
                       marginTop: '16px',
@@ -261,7 +260,7 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
                 <Grid item xs={12}>
                   <Typography
                     sx={{
-                      color: '#000000',
+                      color: '#777572',
                       letterSpacing: '-0.5px',
                       fontSize: '14px',
                       marginTop: '16px',
@@ -283,7 +282,7 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
               <Box sx={{ marginBottom: '16px' }}>
                 <Typography
                   sx={{
-                    color: '#000000',
+                    color: '#777572',
                     letterSpacing: '-0.5px',
                     fontSize: '14px',
                   }}
@@ -314,7 +313,7 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
 
               <Typography
                 sx={{
-                  color: '#000000',
+                  color: '#777572',
                   letterSpacing: '-0.5px',
                   fontSize: '14px',
                 }}
@@ -342,7 +341,7 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
                 <>
                   <Typography
                     sx={{
-                      color: '#000000',
+                      color: '#777572',
                       letterSpacing: '-0.5px',
                       fontSize: '14px',
                     }}
@@ -372,7 +371,7 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
                 <Box sx={{ marginBottom: '16px' }}>
                   <Typography
                     sx={{
-                      color: '#000000',
+                      color: '#777572',
                       letterSpacing: '-0.5px',
                       fontSize: '14px',
                     }}
@@ -404,7 +403,7 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
 
               <Typography
                 sx={{
-                  color: '#000000',
+                  color: '#777572',
                   letterSpacing: '-0.5px',
                   fontSize: '14px',
                 }}
@@ -436,7 +435,7 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
                   />
                   <Typography
                     sx={{
-                      color: '#000000',
+                      color: '#777572',
                       letterSpacing: '-0.5px',
                       paddingLeft: '16px',
                       maxWidth: '210px',
