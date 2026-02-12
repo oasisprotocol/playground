@@ -43,19 +43,21 @@ const ProjectListItem: React.FC<ProjectListItemProps> = ({
   const isMobileScreen = useMediaQuery(theme.breakpoints.down('sm'));
 
   return (
-    <Grid container xs={12} sm={6} md={4}>
+    <Grid container xs={12} sm={6} md={4} sx={{backgroundColor: '#EDEAE4', marginBottom: isMobileScreen ? '16px' : '24px', border: '1px solid #d9d9d9',  borderLeft:'none',
+           '&:nth-of-type(3n)': {
+              borderRight: 'none!important',
+            } }}>
       <Box
-        sx={{ display: 'flex', marginBottom: isMobileScreen ? '20px' : '0' }}
+        sx={{ display: 'flex'}}
       >
         <Paper
           elevation={3}
           sx={{
             margin: isMobileScreen ? '16px 0' : '16px',
-            borderRadius: '16px',
-            border: '2px #003CD8 solid',
             boxShadow: 'none',
             height: isMobileScreen ? '100%' : 'auto',
             overflow: 'hidden',
+            backgroundColor: 'transparent'
           }}
         >
           <Link
@@ -63,8 +65,6 @@ const ProjectListItem: React.FC<ProjectListItemProps> = ({
             style={{
               textDecoration: 'none',
               width: '100%',
-              borderTopLeftRadius: '14px',
-              borderTopRightRadius: '14px',
             }}
           >
             <Box
@@ -72,7 +72,6 @@ const ProjectListItem: React.FC<ProjectListItemProps> = ({
                 overflow: 'hidden',
                 height: '33%',
                 maxHeight: '250px',
-                borderBottom: '2px #003CD8 solid',
               }}
             >
               <Box
@@ -92,6 +91,7 @@ const ProjectListItem: React.FC<ProjectListItemProps> = ({
                     height: '100%',
                     objectFit: 'cover',
                     marginBottom: '8px',
+                    borderRadius: '20px'
                   }}
                 />
               </Box>
@@ -104,7 +104,7 @@ const ProjectListItem: React.FC<ProjectListItemProps> = ({
             wrap={'nowrap'}
             height={'66%'}
             sx={{
-              padding: '24px',
+              padding: '0',
               paddingTop: '12px',
             }}
           >
@@ -128,7 +128,7 @@ const ProjectListItem: React.FC<ProjectListItemProps> = ({
               </Link>
               <Box
                 sx={{
-                  color: '#000000',
+                  color: '#777572',
                   lineHeight: '130%',
                   minHeight: '60px',
                   fontFamily: "'Geist Variable',sans-serif",
@@ -191,7 +191,7 @@ const ProjectListItem: React.FC<ProjectListItemProps> = ({
                 >
                   <Typography
                     sx={{
-                      color: '#000000',
+                      color: '#777572',
                       fontSize: '14px',
                     }}
                   >
@@ -204,7 +204,7 @@ const ProjectListItem: React.FC<ProjectListItemProps> = ({
                           onClick={() => handleParatimesChange(paratime)}
                           sx={{
                             letterSpacing: '-0.03em',
-                            color: '#000000',
+                            color: '#777572',
                             fontSize: '14px',
                             cursor: 'pointer',
                             fontWeight: selectedParatimes.includes(paratime)

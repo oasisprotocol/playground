@@ -18,8 +18,8 @@ export const playgroundTheme = createTheme({
       },
     },
     h2: {
-      fontSize: '24px',
-      color: '#003CD8',
+      fontSize: '20px',
+      color: '#000000',
       fontWeight: 500,
       letterSpacing: '-1px',
     },
@@ -113,10 +113,11 @@ export const playgroundTheme = createTheme({
       styleOverrides: {
         root: {
           '&.MuiChip-root': {
-            backgroundColor: 'transparent',
-            border: '1px solid #003CD8',
+            backgroundColor: '#d9d9d9',
+            border: 'none',
             fontWeight: '300',
-            color: '#003CD8',
+            borderRadius: 0,
+            color: '#777572',
             marginBottom: '5px',
           },
           '&.MuiChip-colorPrimary': {
