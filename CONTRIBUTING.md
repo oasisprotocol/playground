@@ -16,6 +16,6 @@ to list your dApp, follow the steps:
 5. Create a Pull Request and wait for a member of the Oasis engineering team to
    review it.
 6. Once your Pull Request is approved and merged, your dApp will be listed at
-   https://playground.oasis.io.
+   https://demos.oasis.io.
 
 [OSI-approved]: https://opensource.org/licenses/
