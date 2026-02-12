@@ -143,7 +143,7 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
                   color: '#000000',
                   letterSpacing: '-0.5px',
                   marginBottom: '24px',
-                  fontFamily: "'Roboto Flex Variable',sans-serif",
+                  fontFamily: "'Geist Variable',sans-serif",
                 }}
               >
                 <ReactMarkdown

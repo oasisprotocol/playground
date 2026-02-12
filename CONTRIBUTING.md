@@ -1,6 +1,6 @@
-# Contributing to the Oasis Playground
+# Contributing to the Oasis Demos
 
-Developers are encouraged to add their dApps to the Oasis Playground. In order
+Developers are encouraged to add their dApps to the Oasis Demos. In order
 to list your dApp, follow the steps:
 
 1. Make sure your dApp is licensed under the one of the [OSI-approved]
