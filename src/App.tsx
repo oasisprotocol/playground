@@ -19,6 +19,7 @@ function App() {
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
   const paddingValue = isMobile ? '42px' : '80px';
+  const currentYear = new Date().getFullYear();
   return (
     <ThemeProvider theme={playgroundTheme}>
       <Box
@@ -120,7 +121,7 @@ function App() {
           <Typography
             gutterBottom
             sx={{
-              color: 'white',
+              color: '#777572',
               textAlign: 'center',
               fontSize: '14px',
               width: '100%',
@@ -128,7 +129,7 @@ function App() {
               marginTop: '20px',
             }}
           >
-            Copyright © 2024 Oasis Protocol Foundation. All rights reserved.
+            Copyright © {currentYear} Oasis Protocol Foundation. All rights reserved.
           </Typography>
         </Container>
       </Box>
