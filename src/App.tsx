@@ -35,13 +35,12 @@ function App() {
         }}
       >
         <Container
-          maxWidth="lg"
-          sx={{ paddingTop: paddingValue, paddingBottom: paddingValue }}
+          sx={{ padding: `${paddingValue} 0!important`, width: '100%', maxWidth: '1080px!important' }}
         >
           <Typography
             gutterBottom
             sx={{
-              color: 'white',
+              color: '#000000',
               fontSize: '48px',
               fontWeight: '600',
               width: '100%',
@@ -62,7 +61,7 @@ function App() {
               <Typography
                 gutterBottom
                 sx={{
-                  color: 'white',
+                  color: '#3b3b39',
                   fontSize: '20px',
                   width: '100%',
                   maxWidth: '750px',
@@ -76,10 +75,10 @@ function App() {
                 <Link
                   href="https://github.com/oasisprotocol/demos/blob/main/CONTRIBUTING.md"
                   sx={{
-                    color: 'white',
-                    textDecorationColor: 'white',
+                    color: '#3b3b39',
+                    textDecorationColor: '#3b3b39',
                     '&:hover': {
-                      color: 'white',
+                      color: '#003CD8',
                     },
                   }}
                   target="_blank"
@@ -97,16 +96,17 @@ function App() {
                 color="inherit"
                 variant="outlined"
                 sx={{
-                  borderRadius: '30px',
+                  borderRadius: '25px',
                   color: 'white',
-                  borderColor: 'white',
+                  backgroundColor: '#003CD8',
                   textTransform: 'none',
-                  fontSize: '16px',
-                  fontWeight: '600',
+                  fontSize: '14px',
+                  fontWeight: '500',
+                  borderColor: 'transparent',
                   '&:hover': {
-                    backgroundColor: 'white',
-                    color: '#0500E1',
-                    borderColor: 'white',
+                    color: '#003CD8',
+                    borderColor: '#003CD8',
+                    backgroundColor: '#EDEAE4'
                   },
                 }}
               >
