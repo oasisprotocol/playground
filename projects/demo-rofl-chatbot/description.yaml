@@ -35,7 +35,7 @@ tags:
   - ROFL
   - TDX
   - React
-demoUrl: https://playground.oasis.io/demo-rofl-chatbot
+demoUrl: https://demos.oasis.io/demo-rofl-chatbot
 tutorials:
   - Build ROFL App: https://docs.oasis.io/build/rofl/
 maintainedByOasis: true

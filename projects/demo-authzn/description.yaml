@@ -14,7 +14,7 @@ tags:
   - AuthZN
   - React
 codeUrl: https://github.com/oasisprotocol/demo-authzn/tree/main/demo
-demoUrl: https://playground.oasis.io/authzn-demo
+demoUrl: https://demos.oasis.io/authzn-demo
 tutorials:
   - View-Call Authentication: https://docs.oasis.io/dapp/sapphire/authentication
 created: 2023-11-02
