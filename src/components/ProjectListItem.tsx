@@ -52,7 +52,7 @@ const ProjectListItem: React.FC<ProjectListItemProps> = ({
           sx={{
             margin: isMobileScreen ? '16px 0' : '16px',
             borderRadius: '16px',
-            border: '2px #0500E1 solid',
+            border: '2px #003CD8 solid',
             boxShadow: 'none',
             height: isMobileScreen ? '100%' : 'auto',
             overflow: 'hidden',
@@ -72,7 +72,7 @@ const ProjectListItem: React.FC<ProjectListItemProps> = ({
                 overflow: 'hidden',
                 height: '33%',
                 maxHeight: '250px',
-                borderBottom: '2px #0500E1 solid',
+                borderBottom: '2px #003CD8 solid',
               }}
             >
               <Box

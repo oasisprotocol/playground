@@ -15,7 +15,7 @@
 }
 
 a {
-  color: #0500e1;
+  color: #003CD8;
   text-decoration: underline;
 }
 a:hover {
@@ -55,7 +55,7 @@ button:hover {
 }
 button:focus,
 button:focus-visible {
-  outline: 4px auto #0500e1;
+  outline: 4px auto #003CD8;
 }
 
 .markdown-line-clamp {

@@ -32,8 +32,8 @@ interface ProjectDialogProps {
 }
 
 const linkStyles = {
-  color: '#0500E1',
-  textDecorationColor: '#0500E1',
+  color: '#003CD8',
+  textDecorationColor: '#003CD8',
 };
 
 const ProjectDialog: React.FC<ProjectDialogProps> = ({
@@ -169,7 +169,7 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
                   </Typography>
                   <Typography
                     sx={{
-                      color: '#0500E1',
+                      color: '#003CD8',
                       letterSpacing: '-0.5px',
                       marginBottom: '16px',
                     }}
@@ -192,7 +192,7 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
                   </Typography>
                   <Typography
                     sx={{
-                      color: '#0500E1',
+                      color: '#003CD8',
                       letterSpacing: '-0.5px',
                       marginBottom: '24px',
                     }}
@@ -216,7 +216,7 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
                   >
                     Languages:
                   </Typography>
-                  <Box sx={{ color: '#0500E1', marginBottom: '24px' }}>
+                  <Box sx={{ color: '#003CD8', marginBottom: '24px' }}>
                     <ProjectItemLanguages
                       langs={project.languages}
                       selectedLangs={selectedLangs}
@@ -237,7 +237,7 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
                   >
                     ParaTimes:
                   </Typography>
-                  <Box sx={{ color: '#0500E1', marginBottom: '24px' }}>
+                  <Box sx={{ color: '#003CD8', marginBottom: '24px' }}>
                     <Typography component="span">
                       {project.paratimes.map(
                         (paratime: string, index: number) => (
@@ -295,7 +295,7 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
                   const authorValue = Object.values(authorObj)[0];
                   return (
                     <Typography
-                      sx={{ color: '#0500E1', letterSpacing: '-0.5px' }}
+                      sx={{ color: '#003CD8', letterSpacing: '-0.5px' }}
                       key={authorKey}
                     >
                       <Link
@@ -323,7 +323,7 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
               </Typography>
               <Typography
                 sx={{
-                  color: '#0500E1',
+                  color: '#003CD8',
                   letterSpacing: '-0.5px',
                   marginBottom: '16px',
                 }}
@@ -351,7 +351,7 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
                   </Typography>
                   <Typography
                     sx={{
-                      color: '#0500E1',
+                      color: '#003CD8',
                       letterSpacing: '-0.5px',
                       marginBottom: '16px',
                     }}
@@ -384,7 +384,7 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
                     const tutorialValue = Object.values(tutorialObj)[0];
                     return (
                       <Typography
-                        sx={{ color: '#0500E1', letterSpacing: '-0.5px' }}
+                        sx={{ color: '#003CD8', letterSpacing: '-0.5px' }}
                         key={tutorialKey}
                       >
                         <Link
@@ -413,7 +413,7 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
               </Typography>
               <Typography
                 sx={{
-                  color: '#0500E1',
+                  color: '#003CD8',
                   letterSpacing: '-0.5px',
                   marginBottom: '16px',
                 }}

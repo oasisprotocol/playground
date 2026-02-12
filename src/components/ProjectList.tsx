@@ -82,8 +82,6 @@ const ProjectList: React.FC = () => {
     navigate,
   ]);
 
-  const paddingValue = isMobile ? '24px' : '34px 46px';
-
   const handleClearFilters = () => {
     setSelectedTags([]);
     setSelectedLangs([]);
@@ -339,19 +337,20 @@ const ProjectList: React.FC = () => {
     <div>
       <Container
         sx={{
-          backgroundColor: 'white',
-          border: '2px solid black',
-          padding: paddingValue,
-          borderRadius: '19px',
+          border: '1px solid #d9d9d9',
           position: 'relative',
+          padding: '0!important'
         }}
       >
-        <Container sx={{ padding: '0', paddingTop: '20px' }}>
+        <Container sx={{ padding: '0!important' }}>
           <div
             style={{
               position: 'relative',
               overflow: 'hidden',
               transition: 'max-height 0.5s ease',
+              borderBottom: '1px solid #d9d9d9',
+              padding: '16px',
+              backgroundColor: '#EDEAE4'
             }}
           >
             <Box
@@ -364,7 +363,6 @@ const ProjectList: React.FC = () => {
               <SearchFilter search={search} setSearch={setSearch} />
               <Box
                 sx={{
-                  borderLeft: isMobile ? 'none' : '2px solid #0500E1',
                   paddingLeft: isMobile ? '0' : '30px',
                   width: isMobile ? '100%' : 'auto',
                 }}
@@ -375,23 +373,23 @@ const ProjectList: React.FC = () => {
                   variant="outlined"
                   sx={{
                     borderRadius: '50px',
-                    height: '43px',
+                    height: '40px',
                     textTransform: 'capitalize',
                     padding: '0 25px',
                     fontWeight: '500',
                     maxWidth: isMobile ? '100%' : '116px',
                     marginLeft: 'auto',
-                    border: '2px solid #0500E1',
+                    border: '1px solid #003CD8',
                     width: isMobile ? '100%' : 'auto',
-                    backgroundColor: showFilters ? '#0500E1' : 'transparent',
-                    color: showFilters ? 'white' : '#0500E1',
+                    backgroundColor: showFilters ? '#003CD8' : 'transparent',
+                    color: showFilters ? 'white' : '#003CD8',
                     marginTop: isMobile ? '16px' : '0',
                     '&:hover': {
                       backgroundColor: showFilters ? '#000062' : 'transparent',
-                      color: showFilters ? 'white' : '#0500E1',
+                      color: showFilters ? 'white' : '#003CD8',
                       border: showFilters
-                        ? '2px solid #000062'
-                        : '2px solid #0500E1',
+                        ? '1px solid #000062'
+                        : '1px solid #003CD8',
                     },
                   }}
                 >
@@ -439,7 +437,7 @@ const ProjectList: React.FC = () => {
                   textTransform: 'none',
                   display: 'block',
                   marginTop: '16px',
-                  color: '#0500E1',
+                  color: '#003CD8',
                 }}
               >
                 Clear all filters
@@ -452,7 +450,7 @@ const ProjectList: React.FC = () => {
             handleSortChange={handleSortChange}
           />
         </Container>
-        <Grid container spacing={1} justifyContent="start">
+        <Grid container spacing={0} justifyContent="start">
           {filteredAndSortedProjects.map((project) => (
             <ProjectListItem
               key={project.name}

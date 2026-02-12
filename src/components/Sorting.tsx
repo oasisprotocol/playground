@@ -29,23 +29,23 @@ const Sorting: React.FC<SortingProps> = ({
       spacing={2}
       justifyContent="space-between"
       alignItems="center"
-      sx={{ marginTop: '0', marginBottom: '10px' }}
+      sx={{ marginLeft: '0', padding: '0 16px', width: '100%', margin: '0!important', backgroundColor: '#EDEAE4' }}
     >
-      <Grid item xs={6} md={3}>
+      <Grid item xs={6} md={3} sx={{ padding: '0!important'}}>
         {filteredAndSortedProjectsLength ? (
-          <Typography gutterBottom color={'#000000'} align="left">
+          <Typography gutterBottom color={'#777572'} sx={{ fontSize: '14px'}}>
             {isMobileScreen ? null : 'Showing '}
             {filteredAndSortedProjectsLength}{' '}
             {filteredAndSortedProjectsLength === 1 ? 'result' : 'results'}
           </Typography>
         ) : (
-          <Typography gutterBottom color={'#000000'} align="left">
+          <Typography gutterBottom color={'#777572'} sx={{ fontSize: '14px'}}>
             No Results {isMobileScreen ? null : 'found'}
           </Typography>
         )}
       </Grid>
       {filteredAndSortedProjectsLength > 0 && (
-        <Grid item xs={6} md={3}>
+        <Grid item xs={6} md={3} sx={{ padding: '0!important'}}>
           <Grid container spacing={1} justifyContent="end" alignItems="center">
             <Grid item xs={12} md={8}>
               <Select
@@ -55,7 +55,8 @@ const Sorting: React.FC<SortingProps> = ({
                 variant="outlined"
                 IconComponent={KeyboardArrowDown}
                 sx={{
-                  borderRadius: '20px',
+                  borderRadius: '8px',
+                  fontSize: '14px',
                   paddingLeft: '0',
                   paddingRight: '0',
                   textAlign: 'right',
@@ -66,8 +67,9 @@ const Sorting: React.FC<SortingProps> = ({
                   flexBasis: '0',
                   marginLeft: 'auto',
                   display: 'flex',
+                  color: '#777572',
                   '& .MuiSelect-root': {
-                    color: '#0500E1',
+                    color: '#003CD8',
                     border: 'none',
                     outline: 'none',
                     borderColor: 'transparent',
@@ -83,7 +85,7 @@ const Sorting: React.FC<SortingProps> = ({
                   },
                   '& .MuiSelect-icon': {
                     right: '7px',
-                    color: '#000000',
+                    color: '#777572',
                   },
                 }}
                 MenuProps={{
@@ -104,7 +106,7 @@ const Sorting: React.FC<SortingProps> = ({
                 }}
                 inputProps={{
                   style: {
-                    color: '#0500E1',
+                    color: '#003CD8',
                     border: 'none',
                   },
                 }}
@@ -113,7 +115,7 @@ const Sorting: React.FC<SortingProps> = ({
                   <MenuItem
                     key={option}
                     value={option}
-                    style={{ color: '#0500E1' }}
+                    style={{ color: '#003CD8' }}
                     disabled={index === 0}
                   >
                     {option}
