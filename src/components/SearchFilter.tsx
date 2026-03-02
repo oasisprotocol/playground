@@ -19,7 +19,7 @@ const SearchFilter: React.FC<SearchFilterProps> = ({ search, setSearch }) => {
         position: 'relative',
         width: '100%',
         paddingRight: isMobile ? '0' : '30px',
-        maxWidth: '326px'
+        maxWidth: isMobile ? '100%' : '326px'
       }}
     >
       <TextField

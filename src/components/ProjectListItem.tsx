@@ -53,7 +53,7 @@ const ProjectListItem: React.FC<ProjectListItemProps> = ({
         <Paper
           elevation={3}
           sx={{
-            margin: isMobileScreen ? '16px 0' : '16px',
+            margin: '16px',
             boxShadow: 'none',
             height: isMobileScreen ? '100%' : 'auto',
             overflow: 'hidden',

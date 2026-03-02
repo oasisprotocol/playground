@@ -9,10 +9,9 @@ export const playgroundTheme = createTheme({
   typography: {
     fontFamily: "'Geist Variable', sans-serif",
     h1: {
-      fontSize: '56px',
+      fontSize: '48px',
       fontWeight: 500,
       color: 'white',
-      letterSpacing: '-2.84px',
       '@media (max-width:600px)': {
         fontSize: '40px',
       },

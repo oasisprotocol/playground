@@ -91,7 +91,7 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
       </IconButton>
 
       {project && (
-        <div style={{ padding: isMobile ? '32px 20px' : '24px' }}>
+        <div style={{ padding: isMobile ? '32px 0' : '24px' }}>
           <Typography
             variant="h2"
             sx={{

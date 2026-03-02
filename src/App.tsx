@@ -36,13 +36,13 @@ function App() {
         }}
       >
         <Container
-          sx={{ padding: `${paddingValue} 0!important`, width: '100%', maxWidth: '1080px!important' }}
+          sx={{ padding: isMobile ? '16px' : `${paddingValue} 0!important`, width: '100%', maxWidth: '1080px!important' }}
         >
           <Typography
             gutterBottom
             sx={{
               color: '#000000',
-              fontSize: '48px',
+              fontSize: isMobile ? '40px' : '48px',
               fontWeight: '600',
               width: '100%',
               maxWidth: '750px',
@@ -63,7 +63,7 @@ function App() {
                 gutterBottom
                 sx={{
                   color: '#3b3b39',
-                  fontSize: '20px',
+                  fontSize: isMobile ? '16px' : '20px',
                   width: '100%',
                   maxWidth: '750px',
                   marginBottom: isMobile ? '16px' : '24px',
