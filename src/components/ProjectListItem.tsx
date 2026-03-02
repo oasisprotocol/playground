@@ -43,13 +43,11 @@ const ProjectListItem: React.FC<ProjectListItemProps> = ({
   const isMobileScreen = useMediaQuery(theme.breakpoints.down('sm'));
 
   return (
-    <Grid container xs={12} sm={6} md={4} sx={{backgroundColor: '#EDEAE4', marginBottom: isMobileScreen ? '16px' : '24px', border: '1px solid #d9d9d9',  borderLeft:'none',
+    <Grid item xs={12} sm={6} md={4} sx={{display: 'flex', backgroundColor: '#EDEAE4', marginBottom: isMobileScreen ? '16px' : '24px', border: '1px solid #d9d9d9',  borderLeft:'none',
            '&:nth-of-type(3n)': {
               borderRight: 'none!important',
             } }}>
-      <Box
-        sx={{ display: 'flex'}}
-      >
+     
         <Paper
           elevation={3}
           sx={{
@@ -57,7 +55,10 @@ const ProjectListItem: React.FC<ProjectListItemProps> = ({
             boxShadow: 'none',
             height: isMobileScreen ? '100%' : 'auto',
             overflow: 'hidden',
-            backgroundColor: 'transparent'
+            backgroundColor: 'transparent',
+            flex: 1,
+            display: 'flex', 
+            flexDirection: 'column',
           }}
         >
           <Link
@@ -69,9 +70,11 @@ const ProjectListItem: React.FC<ProjectListItemProps> = ({
           >
             <Box
               sx={{
+                width: '100%', 
+                aspectRatio: '16 / 9', 
+                maxHeight: 250, 
                 overflow: 'hidden',
-                height: '33%',
-                maxHeight: '250px',
+                borderRadius: '20px',
               }}
             >
               <Box
@@ -91,21 +94,17 @@ const ProjectListItem: React.FC<ProjectListItemProps> = ({
                     height: '100%',
                     objectFit: 'cover',
                     marginBottom: '8px',
-                    borderRadius: '20px'
                   }}
                 />
               </Box>
             </Box>
           </Link>
-          <Grid
-            container
-            flexDirection={'column'}
-            justifyContent={'space-between'}
-            wrap={'nowrap'}
-            height={'66%'}
+          <Box
             sx={{
-              padding: '0',
-              paddingTop: '12px',
+              pt: '12px',
+              flex: 1,
+              display: 'flex',
+              flexDirection: 'column',
             }}
           >
             <Grid item>
@@ -157,69 +156,66 @@ const ProjectListItem: React.FC<ProjectListItemProps> = ({
               </Box>
             </Grid>
 
-            <Grid
-              item
-              container
-              spacing={2}
-              justifyContent={'space-between'}
-              sx={{
-                marginBottom: isMobileScreen ? '4px' : '0',
-                marginTop: '0',
-              }}
-            >
+            <Box sx={{ mt: 'auto' }}>
               <Grid
-                item
-                xs={project.maintainedByOasis ? 10 : 12}
-                sx={{
-                  minHeight: isMobileScreen ? '50px' : '80px',
-                  paddingRight: '8px',
-                  paddingTop: '0',
-                }}
+                container
+                spacing={2}
+                justifyContent="space-between"
+                sx={{ mb: isMobileScreen ? '4px' : 0, mt: 0 }}
               >
-                <Box sx={{ display: 'block', width: '100%' }}>
-                  <ProjectItemLanguages
-                    langs={langs}
-                    selectedLangs={selectedLangs}
-                    isLarge={false}
-                    isInListItem={true}
-                    handleLangClick={handleLangClick}
-                  />
-                </Box>
-
-                <Box
-                  sx={{ display: 'block', width: '100%', paddingTop: '2px' }}
+                <Grid
+                  item
+                  xs={project.maintainedByOasis ? 10 : 12}
+                  sx={{
+                    minHeight: isMobileScreen ? '50px' : '80px',
+                    paddingRight: '8px',
+                    paddingTop: '0',
+                  }}
                 >
-                  <Typography
-                    sx={{
-                      color: '#777572',
-                      fontSize: '14px',
-                    }}
+                  <Box sx={{ display: 'block', width: '100%' }}>
+                    <ProjectItemLanguages
+                      langs={langs}
+                      selectedLangs={selectedLangs}
+                      isLarge={false}
+                      isInListItem={true}
+                      handleLangClick={handleLangClick}
+                    />
+                  </Box>
+
+                  <Box
+                    sx={{ display: 'block', width: '100%', paddingTop: '2px' }}
                   >
-                    {/* ParaTimes: {' '} */}
-                    {project.paratimes.map(
-                      (paratime: string, index: number) => (
-                        <Typography
-                          component="span"
-                          key={paratime}
-                          onClick={() => handleParatimesChange(paratime)}
-                          sx={{
-                            letterSpacing: '-0.03em',
-                            color: '#777572',
-                            fontSize: '14px',
-                            cursor: 'pointer',
-                            fontWeight: selectedParatimes.includes(paratime)
-                              ? '700'
-                              : 'normal',
-                          }}
-                        >
-                          {paratime.charAt(0).toUpperCase() + paratime.slice(1)}
-                          {index < project.paratimes.length - 1 && ', '}
-                        </Typography>
-                      ),
-                    )}
-                  </Typography>
-                </Box>
-              </Grid>
+                    <Typography
+                      sx={{
+                        color: '#777572',
+                        fontSize: '14px',
+                      }}
+                    >
+                      {/* ParaTimes: {' '} */}
+                      {project.paratimes.map(
+                        (paratime: string, index: number) => (
+                          <Typography
+                            component="span"
+                            key={paratime}
+                            onClick={() => handleParatimesChange(paratime)}
+                            sx={{
+                              letterSpacing: '-0.03em',
+                              color: '#777572',
+                              fontSize: '14px',
+                              cursor: 'pointer',
+                              fontWeight: selectedParatimes.includes(paratime)
+                                ? '700'
+                                : 'normal',
+                            }}
+                          >
+                            {paratime.charAt(0).toUpperCase() + paratime.slice(1)}
+                            {index < project.paratimes.length - 1 && ', '}
+                          </Typography>
+                        ),
+                      )}
+                    </Typography>
+                  </Box>
+                </Grid>
               {project.maintainedByOasis && (
                 <Grid
                   item
@@ -237,11 +233,11 @@ const ProjectListItem: React.FC<ProjectListItemProps> = ({
                     style={{ marginTop: isMobileScreen ? '16px' : '0' }}
                   />
                 </Grid>
-              )}
-            </Grid>
-          </Grid>
+                )}
+              </Grid>
+            </Box>
+          </Box>
         </Paper>
-      </Box>
     </Grid>
   );
 };

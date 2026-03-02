@@ -450,7 +450,7 @@ const ProjectList: React.FC = () => {
             handleSortChange={handleSortChange}
           />
         </Container>
-        <Grid container spacing={0} justifyContent="start">
+        <Grid container spacing={0} alignItems="stretch">
           {filteredAndSortedProjects.map((project) => (
             <ProjectListItem
               key={project.name}
