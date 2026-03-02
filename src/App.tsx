@@ -111,7 +111,7 @@ function App() {
                   },
                 }}
               >
-                Add your dApp
+                Add your app
               </Button>
             </Grid>
           </Grid>
