@@ -22,22 +22,29 @@ const projects = yamls.map((path) => {
   parsedYaml.slug = folderName;
 
   // Fix URL sanitization to handle undefined/empty values
-  parsedYaml.codeUrl = parsedYaml.codeUrl && parsedYaml.codeUrl.trim()
-    ? sanitizeUrl(parsedYaml.codeUrl)
-    : '';
-  parsedYaml.demoUrl = parsedYaml.demoUrl && parsedYaml.demoUrl.trim()
-    ? sanitizeUrl(parsedYaml.demoUrl)
-    : null;
+  parsedYaml.codeUrl = sanitizeUrl(parsedYaml.codeUrl) ?? '';
+  parsedYaml.demoUrl = sanitizeUrl(parsedYaml.demoUrl) ?? null;
+
   if (parsedYaml.authors) {
-    parsedYaml.authors = parsedYaml.authors.map((t) => ({
-      [Object.keys(t)[0]]: sanitizeUrl(Object.values(t)[0]),
-    }));
-  }
-  if (parsedYaml.tutorials) {
-    parsedYaml.tutorials = parsedYaml.tutorials.filter((t) =>
-      sanitizeUrl(Object.values(t)[0]),
+  parsedYaml.authors = parsedYaml.authors.map((t) => {
+    const name = Object.keys(t)[0];
+    const url = Object.values(t)[0];
+    return { [name]: sanitizeUrl(url) ?? '' }; // satisfies string type
+  });
+}
+if (parsedYaml.tutorials) {
+  parsedYaml.tutorials = parsedYaml.tutorials
+    .map((t) => {
+      const title = Object.keys(t)[0];
+      const url = Object.values(t)[0];
+      const safe = sanitizeUrl(url);
+      return safe ? { [title]: safe } : null;
+    })
+    .filter(
+      /** @returns {t is {[tutorial: string]: string}} */
+      (t) => t !== null
     );
-  }
+}
   parsedYaml.license ??= 'Unspecified'
 
   return parsedYaml;

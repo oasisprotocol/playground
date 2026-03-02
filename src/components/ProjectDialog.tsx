@@ -59,18 +59,24 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
     setCarouselIndex(selectedIndex);
   };
 
+
   const modifyLinkTarget = (
     url?: string,
     title?: string,
     text?: React.ReactNode,
   ) => {
-    const target = url?.startsWith('http') ? '_blank' : undefined;
-    const linkText = typeof text === 'string' ? text : '';
+    const safeHref = sanitizeUrl(url) ?? undefined;
+    const linkText = text ?? '';
+
+    if (!safeHref) {
+      return <>{linkText}</>;
+    }
 
     return (
       <Link
-        href={url && sanitizeUrl(url)}
-        target={target}
+        href={safeHref}
+        target="_blank"
+        rel="noreferrer"
         title={title}
         sx={linkStyles}
       >
@@ -297,15 +303,20 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
                       sx={{ color: '#003CD8', letterSpacing: '-0.5px' }}
                       key={authorKey}
                     >
-                      <Link
-                        href={sanitizeUrl(authorValue)}
-                        target="_blank"
-                        underline="always"
-                        sx={linkStyles}
-                      >
-                        {authorKey}
-                        {index < (project.authors?.length ?? 0) - 1 && ', '}
-                      </Link>
+                      {sanitizeUrl(authorValue) ? (
+                        <Link
+                          href={sanitizeUrl(authorValue) ?? undefined}
+                          target="_blank"
+                          rel="noreferrer"
+                          underline="always"
+                          sx={linkStyles}
+                        >
+                          {authorKey}
+                        </Link>
+                      ) : (
+                        <>{authorKey}</>
+                      )}
+                      {index < (project.authors?.length ?? 0) - 1 && ', '}
                     </Typography>
                   );
                 })}
@@ -327,14 +338,17 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
                   marginBottom: '16px',
                 }}
               >
-                <Link
-                  href={sanitizeUrl(project.codeUrl)}
-                  target="_blank"
-                  underline="always"
-                  sx={linkStyles}
-                >
-                  Link to GitHub
-                </Link>
+                {sanitizeUrl(project.codeUrl) && (
+                  <Link
+                    href={sanitizeUrl(project.codeUrl) ?? undefined}
+                    target="_blank"
+                    rel="noreferrer"
+                    underline="always"
+                    sx={linkStyles}
+                  >
+                    Link to GitHub
+                  </Link>
+                )}
               </Typography>
 
               {project.demoUrl && (
@@ -355,14 +369,17 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
                       marginBottom: '16px',
                     }}
                   >
-                    <Link
-                      href={sanitizeUrl(project.demoUrl)}
-                      target="_blank"
-                      underline="always"
-                      sx={linkStyles}
-                    >
-                      {project.name}
-                    </Link>
+                    {sanitizeUrl(project.demoUrl) && (
+                      <Link
+                        href={sanitizeUrl(project.demoUrl) ?? undefined}
+                        target="_blank"
+                        rel="noreferrer"
+                        underline="always"
+                        sx={linkStyles}
+                      >
+                        {project.name}
+                      </Link>
+                    )}
                   </Typography>
                 </>
               )}
@@ -386,15 +403,20 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
                         sx={{ color: '#003CD8', letterSpacing: '-0.5px' }}
                         key={tutorialKey}
                       >
-                        <Link
-                          href={sanitizeUrl(tutorialValue)}
-                          target="_blank"
-                          underline="always"
-                          sx={linkStyles}
-                        >
-                          {tutorialKey}
-                          {index < (project.tutorials?.length ?? 0) - 1 && ', '}
-                        </Link>
+                        {sanitizeUrl(tutorialValue) ? (
+                          <Link
+                            href={sanitizeUrl(tutorialValue) ?? undefined}
+                            target="_blank"
+                            rel="noreferrer"
+                            underline="always"
+                            sx={linkStyles}
+                          >
+                            {tutorialKey}
+                          </Link>
+                        ) : (
+                          <>{tutorialKey}</>
+                        )}
+                        {index < (project.tutorials?.length ?? 0) - 1 && ', '}
                       </Typography>
                     );
                   })}
