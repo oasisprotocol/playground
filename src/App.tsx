@@ -19,6 +19,7 @@ function App() {
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
   const paddingValue = isMobile ? '42px' : '80px';
+  const currentYear = new Date().getFullYear();
   return (
     <ThemeProvider theme={playgroundTheme}>
       <Box
@@ -28,21 +29,20 @@ function App() {
           height: '100%',
           minHeight: '100vh',
           backgroundImage: `url(${backgroundImg})`,
-          backgroundSize: '100vw auto',
-          backgroundRepeat: 'no-repeat',
-          backgroundColor: '#0500E1',
-          backgroundPosition: '50% 230px',
+          backgroundSize: '2000px auto',
+          backgroundRepeat: 'repeat',
+          backgroundColor: '#EDEAE4',
+          backgroundPosition: '50% 0',
         }}
       >
         <Container
-          maxWidth="lg"
-          sx={{ paddingTop: paddingValue, paddingBottom: paddingValue }}
+          sx={{ padding: isMobile ? '16px' : `${paddingValue} 0!important`, width: '100%', maxWidth: '1080px!important' }}
         >
           <Typography
             gutterBottom
             sx={{
-              color: 'white',
-              fontSize: '48px',
+              color: '#000000',
+              fontSize: isMobile ? '40px' : '48px',
               fontWeight: '600',
               width: '100%',
               maxWidth: '750px',
@@ -62,8 +62,8 @@ function App() {
               <Typography
                 gutterBottom
                 sx={{
-                  color: 'white',
-                  fontSize: '20px',
+                  color: '#3b3b39',
+                  fontSize: isMobile ? '16px' : '20px',
                   width: '100%',
                   maxWidth: '750px',
                   marginBottom: isMobile ? '16px' : '24px',
@@ -76,10 +76,10 @@ function App() {
                 <Link
                   href="https://github.com/oasisprotocol/demos/blob/main/CONTRIBUTING.md"
                   sx={{
-                    color: 'white',
-                    textDecorationColor: 'white',
+                    color: '#3b3b39',
+                    textDecorationColor: '#3b3b39',
                     '&:hover': {
-                      color: 'white',
+                      color: '#003CD8',
                     },
                   }}
                   target="_blank"
@@ -97,20 +97,21 @@ function App() {
                 color="inherit"
                 variant="outlined"
                 sx={{
-                  borderRadius: '30px',
+                  borderRadius: '25px',
                   color: 'white',
-                  borderColor: 'white',
+                  backgroundColor: '#003CD8',
                   textTransform: 'none',
-                  fontSize: '16px',
-                  fontWeight: '600',
+                  fontSize: '14px',
+                  fontWeight: '500',
+                  borderColor: 'transparent',
                   '&:hover': {
-                    backgroundColor: 'white',
-                    color: '#0500E1',
-                    borderColor: 'white',
+                    color: '#003CD8',
+                    borderColor: '#003CD8',
+                    backgroundColor: '#EDEAE4'
                   },
                 }}
               >
-                Add your dApp
+                Add your app
               </Button>
             </Grid>
           </Grid>
@@ -120,7 +121,7 @@ function App() {
           <Typography
             gutterBottom
             sx={{
-              color: 'white',
+              color: '#777572',
               textAlign: 'center',
               fontSize: '14px',
               width: '100%',
@@ -128,7 +129,7 @@ function App() {
               marginTop: '20px',
             }}
           >
-            Copyright © 2024 Oasis Protocol Foundation. All rights reserved.
+            Copyright © {currentYear} Oasis Protocol Foundation. All rights reserved.
           </Typography>
         </Container>
       </Box>

@@ -49,8 +49,8 @@ const MenuProps = {
       maxHeight: ITEM_HEIGHT * 4.5 + ITEM_PADDING_TOP,
       width: 186,
       marginTop: '12px',
-      borderRadius: '10px',
-      border: '2px solid #000000',
+      borderRadius: '4px',
+      border: '1px solid #d9d9d9',
     },
   },
 };
@@ -114,10 +114,11 @@ const Filters: React.FC<FiltersProps> = ({
       container
       spacing={2}
       sx={{
-        borderBottom: '2px solid #CBC8EC',
-        paddingBottom: '32px',
-        paddingTop: '24px',
+        paddingBottom: '16px',
+        paddingTop: '16px',
         justifyContent: 'space-between',
+        marginTop: '16px',
+        borderTop: '1px solid #d9d9d9'
       }}
     >
       <Grid item>
@@ -129,7 +130,7 @@ const Filters: React.FC<FiltersProps> = ({
             sx={{
               marginTop: '8px',
               width: '186px',
-              border: '2px solid #000000',
+              border: '1px solid #000000',
               borderRadius: '30px',
             }}
           >
@@ -141,8 +142,8 @@ const Filters: React.FC<FiltersProps> = ({
                   height: '30px',
                   top: 'auto',
                   bottom: '14px',
-                  color: '#D2CCCC',
-                  '&.Mui-focused': { borderColor: 'none', color: '#D2CCCC' },
+                  color: '#000000',
+                  '&.Mui-focused': { borderColor: 'none', color: '#000000' },
                 }}
               >
                 Select Tags
@@ -187,7 +188,7 @@ const Filters: React.FC<FiltersProps> = ({
                 display: 'block',
                 paddingTop: '6px',
                 paddingLeft: '0',
-                color: '#0500E1',
+                color: '#003CD8',
               }}
             >
               Clear tags

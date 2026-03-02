@@ -1,14 +1,26 @@
 /**
- * Blocks dangerous URLs that start with "javascript:".
- * @param {string} url
+ * Allow only http(s) absolute URLs.
+ * Returns a sanitized string or null if invalid/unsafe.
+ * Never throws.
+ * @param {string | undefined | null} url
+ * @returns {string | null}
  */
 export function sanitizeUrl(url) {
+  if (!url) return null;
+
+  const trimmed = String(url).trim();
+  if (!trimmed) return null;
+
   try {
-    if (!['https:', 'http:'].includes(new URL(url).protocol)) {
-      throw new Error('sanitizeUrl encountered unsafe URL: ' + url);
+    const parsed = new URL(trimmed);
+
+    if (parsed.protocol !== 'https:' && parsed.protocol !== 'http:') {
+      return null;
     }
-  } catch (err) {
-    throw new Error('sanitizeUrl encountered broken URL: ' + url);
+
+    // Return normalized absolute URL string
+    return parsed.toString();
+  } catch {
+    return null;
   }
-  return url;
 }

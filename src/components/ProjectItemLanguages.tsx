@@ -21,7 +21,7 @@ const LanguagesList: React.FC<ProjectItemLanguagesProps> = ({
   return (
     <Box
       sx={{
-        borderBottom: isInListItem ? '1px solid #000000' : 'none',
+        borderBottom: isInListItem ? '1px solid #777572' : 'none',
         paddingBottom: '2px',
         paddingTop: isMobile ? '12px' : '0',
       }}
@@ -37,7 +37,7 @@ const LanguagesList: React.FC<ProjectItemLanguagesProps> = ({
             height: isLarge ? '27px' : '20px',
             fontSize: isInListItem ? '14px' : '16px',
             cursor: 'pointer',
-            color: '#000000',
+            color: '#777572',
             fontWeight: selectedLangs.includes(lang) ? '700' : 'normal',
             letterSpacing: '-0.03em',
           }}

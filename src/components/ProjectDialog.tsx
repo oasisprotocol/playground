@@ -32,8 +32,8 @@ interface ProjectDialogProps {
 }
 
 const linkStyles = {
-  color: '#0500E1',
-  textDecorationColor: '#0500E1',
+  color: '#003CD8',
+  textDecorationColor: '#003CD8',
 };
 
 const ProjectDialog: React.FC<ProjectDialogProps> = ({
@@ -59,18 +59,24 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
     setCarouselIndex(selectedIndex);
   };
 
+
   const modifyLinkTarget = (
     url?: string,
     title?: string,
     text?: React.ReactNode,
   ) => {
-    const target = url?.startsWith('http') ? '_blank' : undefined;
-    const linkText = typeof text === 'string' ? text : '';
+    const safeHref = sanitizeUrl(url) ?? undefined;
+    const linkText = text ?? '';
+
+    if (!safeHref) {
+      return <>{linkText}</>;
+    }
 
     return (
       <Link
-        href={url && sanitizeUrl(url)}
-        target={target}
+        href={safeHref}
+        target="_blank"
+        rel="noreferrer"
         title={title}
         sx={linkStyles}
       >
@@ -91,12 +97,11 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
       </IconButton>
 
       {project && (
-        <div style={{ padding: isMobile ? '32px 20px' : '32px' }}>
+        <div style={{ padding: isMobile ? '32px 0' : '24px' }}>
           <Typography
             variant="h2"
             sx={{
               fontSize: '34px',
-              letterSpacing: '-1.5px',
               paddingRight: '24px',
             }}
           >
@@ -107,11 +112,11 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
             onSelect={handleSelectCarouselSlide}
             controls={project.screenshots.length > 1}
             style={{
-              backgroundColor: '#000000',
+              backgroundColor: '#d9d9d9',
               marginTop: '24px',
               borderRadius: '8px',
-              color: '#0D09E3',
-              border: '1px solid blue',
+              color: '#003CD8',
+              border: '1px solid #d9d9d9',
             }}
           >
             {project.screenshots.map((screenshot) => (
@@ -140,7 +145,7 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
             <Grid item xs={12} md={6}>
               <Box
                 sx={{
-                  color: '#000000',
+                  color: '#777572',
                   letterSpacing: '-0.5px',
                   marginBottom: '24px',
                   fontFamily: "'Geist Variable',sans-serif",
@@ -160,7 +165,7 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
                 <Grid item xs={6}>
                   <Typography
                     sx={{
-                      color: '#000000',
+                      color: '#777572',
                       letterSpacing: '-0.5px',
                       fontSize: '14px',
                     }}
@@ -169,7 +174,7 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
                   </Typography>
                   <Typography
                     sx={{
-                      color: '#0500E1',
+                      color: '#003CD8',
                       letterSpacing: '-0.5px',
                       marginBottom: '16px',
                     }}
@@ -183,7 +188,7 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
                 <Grid item xs={6}>
                   <Typography
                     sx={{
-                      color: '#000000',
+                      color: '#777572',
                       letterSpacing: '-0.5px',
                       fontSize: '14px',
                     }}
@@ -192,7 +197,7 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
                   </Typography>
                   <Typography
                     sx={{
-                      color: '#0500E1',
+                      color: '#003CD8',
                       letterSpacing: '-0.5px',
                       marginBottom: '24px',
                     }}
@@ -208,7 +213,7 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
                 <Grid item xs={6}>
                   <Typography
                     sx={{
-                      color: '#000000',
+                      color: '#777572',
                       letterSpacing: '-0.5px',
                       fontSize: '14px',
                       marginTop: '16px',
@@ -216,7 +221,7 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
                   >
                     Languages:
                   </Typography>
-                  <Box sx={{ color: '#0500E1', marginBottom: '24px' }}>
+                  <Box sx={{ color: '#003CD8', marginBottom: '24px' }}>
                     <ProjectItemLanguages
                       langs={project.languages}
                       selectedLangs={selectedLangs}
@@ -229,7 +234,7 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
                 <Grid item xs={6}>
                   <Typography
                     sx={{
-                      color: '#000000',
+                      color: '#777572',
                       letterSpacing: '-0.5px',
                       fontSize: '14px',
                       marginTop: '16px',
@@ -237,7 +242,7 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
                   >
                     ParaTimes:
                   </Typography>
-                  <Box sx={{ color: '#0500E1', marginBottom: '24px' }}>
+                  <Box sx={{ color: '#003CD8', marginBottom: '24px' }}>
                     <Typography component="span">
                       {project.paratimes.map(
                         (paratime: string, index: number) => (
@@ -261,7 +266,7 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
                 <Grid item xs={12}>
                   <Typography
                     sx={{
-                      color: '#000000',
+                      color: '#777572',
                       letterSpacing: '-0.5px',
                       fontSize: '14px',
                       marginTop: '16px',
@@ -283,7 +288,7 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
               <Box sx={{ marginBottom: '16px' }}>
                 <Typography
                   sx={{
-                    color: '#000000',
+                    color: '#777572',
                     letterSpacing: '-0.5px',
                     fontSize: '14px',
                   }}
@@ -295,18 +300,23 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
                   const authorValue = Object.values(authorObj)[0];
                   return (
                     <Typography
-                      sx={{ color: '#0500E1', letterSpacing: '-0.5px' }}
+                      sx={{ color: '#003CD8', letterSpacing: '-0.5px' }}
                       key={authorKey}
                     >
-                      <Link
-                        href={sanitizeUrl(authorValue)}
-                        target="_blank"
-                        underline="always"
-                        sx={linkStyles}
-                      >
-                        {authorKey}
-                        {index < (project.authors?.length ?? 0) - 1 && ', '}
-                      </Link>
+                      {sanitizeUrl(authorValue) ? (
+                        <Link
+                          href={sanitizeUrl(authorValue) ?? undefined}
+                          target="_blank"
+                          rel="noreferrer"
+                          underline="always"
+                          sx={linkStyles}
+                        >
+                          {authorKey}
+                        </Link>
+                      ) : (
+                        <>{authorKey}</>
+                      )}
+                      {index < (project.authors?.length ?? 0) - 1 && ', '}
                     </Typography>
                   );
                 })}
@@ -314,7 +324,7 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
 
               <Typography
                 sx={{
-                  color: '#000000',
+                  color: '#777572',
                   letterSpacing: '-0.5px',
                   fontSize: '14px',
                 }}
@@ -323,26 +333,29 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
               </Typography>
               <Typography
                 sx={{
-                  color: '#0500E1',
+                  color: '#003CD8',
                   letterSpacing: '-0.5px',
                   marginBottom: '16px',
                 }}
               >
-                <Link
-                  href={sanitizeUrl(project.codeUrl)}
-                  target="_blank"
-                  underline="always"
-                  sx={linkStyles}
-                >
-                  Link to GitHub
-                </Link>
+                {sanitizeUrl(project.codeUrl) && (
+                  <Link
+                    href={sanitizeUrl(project.codeUrl) ?? undefined}
+                    target="_blank"
+                    rel="noreferrer"
+                    underline="always"
+                    sx={linkStyles}
+                  >
+                    Link to GitHub
+                  </Link>
+                )}
               </Typography>
 
               {project.demoUrl && (
                 <>
                   <Typography
                     sx={{
-                      color: '#000000',
+                      color: '#777572',
                       letterSpacing: '-0.5px',
                       fontSize: '14px',
                     }}
@@ -351,19 +364,22 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
                   </Typography>
                   <Typography
                     sx={{
-                      color: '#0500E1',
+                      color: '#003CD8',
                       letterSpacing: '-0.5px',
                       marginBottom: '16px',
                     }}
                   >
-                    <Link
-                      href={sanitizeUrl(project.demoUrl)}
-                      target="_blank"
-                      underline="always"
-                      sx={linkStyles}
-                    >
-                      {project.name}
-                    </Link>
+                    {sanitizeUrl(project.demoUrl) && (
+                      <Link
+                        href={sanitizeUrl(project.demoUrl) ?? undefined}
+                        target="_blank"
+                        rel="noreferrer"
+                        underline="always"
+                        sx={linkStyles}
+                      >
+                        {project.name}
+                      </Link>
+                    )}
                   </Typography>
                 </>
               )}
@@ -372,7 +388,7 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
                 <Box sx={{ marginBottom: '16px' }}>
                   <Typography
                     sx={{
-                      color: '#000000',
+                      color: '#777572',
                       letterSpacing: '-0.5px',
                       fontSize: '14px',
                     }}
@@ -384,18 +400,23 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
                     const tutorialValue = Object.values(tutorialObj)[0];
                     return (
                       <Typography
-                        sx={{ color: '#0500E1', letterSpacing: '-0.5px' }}
+                        sx={{ color: '#003CD8', letterSpacing: '-0.5px' }}
                         key={tutorialKey}
                       >
-                        <Link
-                          href={sanitizeUrl(tutorialValue)}
-                          target="_blank"
-                          underline="always"
-                          sx={linkStyles}
-                        >
-                          {tutorialKey}
-                          {index < (project.tutorials?.length ?? 0) - 1 && ', '}
-                        </Link>
+                        {sanitizeUrl(tutorialValue) ? (
+                          <Link
+                            href={sanitizeUrl(tutorialValue) ?? undefined}
+                            target="_blank"
+                            rel="noreferrer"
+                            underline="always"
+                            sx={linkStyles}
+                          >
+                            {tutorialKey}
+                          </Link>
+                        ) : (
+                          <>{tutorialKey}</>
+                        )}
+                        {index < (project.tutorials?.length ?? 0) - 1 && ', '}
                       </Typography>
                     );
                   })}
@@ -404,7 +425,7 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
 
               <Typography
                 sx={{
-                  color: '#000000',
+                  color: '#777572',
                   letterSpacing: '-0.5px',
                   fontSize: '14px',
                 }}
@@ -413,7 +434,7 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
               </Typography>
               <Typography
                 sx={{
-                  color: '#0500E1',
+                  color: '#003CD8',
                   letterSpacing: '-0.5px',
                   marginBottom: '16px',
                 }}
@@ -436,7 +457,7 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
                   />
                   <Typography
                     sx={{
-                      color: '#000000',
+                      color: '#777572',
                       letterSpacing: '-0.5px',
                       paddingLeft: '16px',
                       maxWidth: '210px',

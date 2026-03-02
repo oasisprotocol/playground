@@ -17,22 +17,27 @@ const SearchFilter: React.FC<SearchFilterProps> = ({ search, setSearch }) => {
     <Box
       sx={{
         position: 'relative',
-        width: 'fill-available',
+        width: '100%',
         paddingRight: isMobile ? '0' : '30px',
+        maxWidth: isMobile ? '100%' : '326px'
       }}
     >
       <TextField
-        placeholder="Search"
+        placeholder="Search..."
         variant="outlined"
         fullWidth
         value={search}
         onChange={(e) => setSearch(e.target.value)}
         sx={{
-          backgroundColor: 'white',
-          borderRadius: '40px',
-          border: '2px solid #0500E1',
+          backgroundColor: '#FAF7F0',
+          borderRadius: '3px',
+          border: '1px solid #d9d9d9',
           outline: 'none',
           height: '47px',
+          '& .MuiInputBase-input::placeholder': {
+            color: '#AFADA8',
+            opacity: 1,
+          },
         }}
       />
       {search.length > 0 ? (
@@ -45,6 +50,7 @@ const SearchFilter: React.FC<SearchFilterProps> = ({ search, setSearch }) => {
             top: '12px',
             padding: '0',
             minWidth: 'auto',
+            color: '#AFADA8'
           }}
         />
       ) : (
@@ -54,6 +60,7 @@ const SearchFilter: React.FC<SearchFilterProps> = ({ search, setSearch }) => {
             right: isMobile ? '19px' : '49px',
             top: '12px',
             padding: '0',
+            color: '#AFADA8',
           }}
         />
       )}
