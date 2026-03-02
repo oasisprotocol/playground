@@ -3,7 +3,7 @@
         "name": "0x2FA",
         "authors": [
             {
-                "Ahmed Hamed Aly": "https://ahmedhamedaly.com"
+                "Ahmed Hamed Aly": "https://ahmedhamedaly.com/"
             }
         ],
         "description": "A decentralized solution for two-factor authentication (2FA), aiming to\nreplace traditional solutions like the Google Authenticator. By leveraging\nOasis, Bandada, and Near, we provide a privacy-based solution that enhances\nthe security of both web2 and web3 applications.\n",
@@ -172,7 +172,7 @@
         "name": "Oasis Authenticator",
         "authors": [
             {
-                "Oasis Protocol Foundation": "https://oasisprotocol.org"
+                "Oasis Protocol Foundation": "https://oasisprotocol.org/"
             }
         ],
         "description": "This project demonstrates how to use WebAuthN on Oasis Sapphire.\nThis allows users to use strong device-level authentication, such as TouchID,\nYubiKey, Android biometric, Windows Hello etc.\n\nCurrently it only supports SEC P256 R1 credentials, and additional work will\nbe needed to adapt it to your specific use-case.\n\nAlso includes the code for TOTP authentication.\n\nUsage:\n\n  1. Register at the Oasis Authenticator by using one of the strong\n     device-level authentication methods.\n  2. Your ID will be stored on the Sapphire chain.\n  3. Log in to one of the services which support the Oasis Authenticator (for\n     example the [Authzn Demo app](https://demos.oasis.io/authzn-demo/).\n  4. The app will receive a valid token from the smart contract, if the\n     logging in via the Oasis Authenticator is successful.\n",
@@ -589,7 +589,7 @@
     {
         "authors": [
             {
-                "Oasis Protocol Foundation": "https://oasisprotocol.org"
+                "Oasis Protocol Foundation": "https://oasisprotocol.org/"
             }
         ],
         "name": "Dapp Blockvote",
@@ -633,7 +633,7 @@
     {
         "authors": [
             {
-                "Oasis Protocol Foundation": "https://oasisprotocol.org"
+                "Oasis Protocol Foundation": "https://oasisprotocol.org/"
             }
         ],
         "name": "Dapp Votee",
@@ -669,7 +669,7 @@
         "name": "ROSE (un) wrapper using WebAuthn",
         "authors": [
             {
-                "Oasis Protocol Foundation": "https://oasisprotocol.org"
+                "Oasis Protocol Foundation": "https://oasisprotocol.org/"
             }
         ],
         "description": "A dApp that lets you wrap or unwrap ROSE on an Oasis EVM-compatible ParaTime\n(the deployed version uses Sapphire). Connects to your Oasis Authenticator\naccount.\n",
@@ -743,7 +743,7 @@
         "name": "Authenticator Demo",
         "authors": [
             {
-                "Oasis Protocol Foundation": "https://oasisprotocol.org"
+                "Oasis Protocol Foundation": "https://oasisprotocol.org/"
             }
         ],
         "description": "A short demo which connects to the Oasis Authenticator and obtains the user\nID stored on Sapphire, if the authentication is successful.\n",
@@ -776,7 +776,7 @@
     {
         "authors": [
             {
-                "Oasis Protocol Foundation": "https://oasisprotocol.org"
+                "Oasis Protocol Foundation": "https://oasisprotocol.org/"
             }
         ],
         "name": "CraneChat 🏗",
@@ -814,7 +814,7 @@
         "name": "E2E Proxy",
         "authors": [
             {
-                "Oasis Protocol Foundation": "https://oasisprotocol.org"
+                "Oasis Protocol Foundation": "https://oasisprotocol.org/"
             }
         ],
         "description": "A short example of how a contract can relay an end-to-end encrypted\ntransactions on Oasis Sapphire, so the relayer cannot see which contract is\nbeing invoked or what the parameters are. This is useful for services such\nas the gas station network or other gasless services.\n\nBy using the [@oasis-protocol/sapphire-contracts](https://www.npmjs.com/package/@oasisprotocol/sapphire-contracts)\nlibrary the E2EProxy contract generates a long-term X25519 keypair which\nallows users to submit a Deoxys-II encrypted payload (with forward secrecy)\ncontaining the contract address to invoke and the calldata to pass.\n",
@@ -849,7 +849,7 @@
         "name": "Oasis Riddle",
         "authors": [
             {
-                "Oasis Protocol Foundation": "https://oasisprotocol.org"
+                "Oasis Protocol Foundation": "https://oasisprotocol.org/"
             }
         ],
         "description": "This dApp demonstrates the power of the Sapphire confidential storage and\ntries to empower new developers to start building. The dApp stores a set of\nquestions and expected answers on Sapphire. It also stores a set of coupon\ncodes together with the private key unlocking the reward—ROSE or other tokens\non a production chain.\n\nUsage:\n\nCoupon codes are handed over to potential developers on different occasions\nsuch as the blockchain conferences, hackathons, programming competitions etc.\nThe developer needs to set up local Sapphire development environment, query\nfor the question passing their coupon code and finally submit the answer.\nThen, they can reclaim the rewarding private key.\n",
@@ -887,7 +887,7 @@
         "name": "Oasis Swag",
         "authors": [
             {
-                "Oasis Protocol Foundation": "https://oasisprotocol.org"
+                "Oasis Protocol Foundation": "https://oasisprotocol.org/"
             }
         ],
         "description": "A wheel of fortune tailored towards the swag picking at the conference booth.\n\nUsage:\n\nThe swag is selected based on the user's Ethereum address. The randomization\nseed is generated when the contract is initially created and is kept\nconfidential on Oasis Sapphire. The user can also add the elected swag to\ntheir NFT collection.\n",
@@ -923,7 +923,7 @@
         "name": "OPL Secret Ballot",
         "authors": [
             {
-                "Oasis Protocol Foundation": "https://oasisprotocol.org"
+                "Oasis Protocol Foundation": "https://oasisprotocol.org/"
             }
         ],
         "description": "This is a simple dApp demonstrating Oasis Privacy Layer functionality for\ncross-chain confidential voting.\n",
@@ -960,7 +960,7 @@
         "name": "Confidential Quiz",
         "authors": [
             {
-                "Oasis Protocol Foundation": "https://oasisprotocol.org"
+                "Oasis Protocol Foundation": "https://oasisprotocol.org/"
             }
         ],
         "description": "A simple confidential multiple choice quiz dApp. The questions and answer key\nare stored on-chain. Once a user solves the quiz, they can (optionally) claim\na ROSE reward. The payout transaction is gasless, so they **do not require\nMetaMask, pay gas fees or use any 3rd party oracles** to receive the reward.\n\nThe dApp was originally developed to educate fresh developers about the Oasis\nplatform. By sending them a small amount of ROSE, they can immediately start\nhacking and deploy their dApps on the Mainnet.\n\nTo try out the demo, use `testCoupon1` through `testCoupon50` coupon codes.\n",
@@ -993,7 +993,7 @@
     {
         "authors": [
             {
-                "Oasis Protocol Foundation": "https://oasisprotocol.org"
+                "Oasis Protocol Foundation": "https://oasisprotocol.org/"
             }
         ],
         "name": "Demo ROFL Chatbot",
@@ -1033,7 +1033,7 @@
         "name": "Starter Project (Go)",
         "authors": [
             {
-                "Oasis Protocol Foundation": "https://oasisprotocol.org"
+                "Oasis Protocol Foundation": "https://oasisprotocol.org/"
             }
         ],
         "description": "Skeleton repo for a backend microservice written in Go that communicates with\nOasis Sapphire:\n\n  - includes a simple CLI app for building and deploying the smart contract,\n    performing queries and submitting transactions written in Go,\n  - imports the [Sapphire ParaTime Go client](https://pkg.go.dev/github.com/oasisprotocol/sapphire-paratime/clients/go)\n    package for connecting to Mainnet, Testnet or Localnet Sapphire networks,\n    using signed queries and encrypted transactions,\n  - includes a simple solidity message box smart contract with an end-to-end\n    test script.\n",
@@ -1067,7 +1067,7 @@
         "name": "Starter Project (Python)",
         "authors": [
             {
-                "Oasis Protocol Foundation": "https://oasisprotocol.org"
+                "Oasis Protocol Foundation": "https://oasisprotocol.org/"
             }
         ],
         "description": "Skeleton repo for a backend microservice written in Python that communicates\nwith Oasis Sapphire:\n\n  - includes a simple CLI app for building and deploying the smart contract,\n    performing queries and submitting transactions written in Python,\n  - imports the [Sapphire Python client](https://github.com/oasisprotocol/sapphire-paratime/tree/main/clients/py)\n    package for connecting to Mainnet, Testnet or Localnet Sapphire networks,\n    using encrypted transactions,\n  - includes a simple solidity message box smart contract with an end-to-end\n    test script.\n",
@@ -1101,7 +1101,7 @@
         "name": "Starter Project",
         "authors": [
             {
-                "Oasis Protocol Foundation": "https://oasisprotocol.org"
+                "Oasis Protocol Foundation": "https://oasisprotocol.org/"
             }
         ],
         "description": "Skeleton monorepo for a typical modern EVM-compatible confidential dApp built\non Oasis.\n\nContains the **backend** package which:\n\n  - includes a simple solidity message box smart contract with tests written\n    in TypeScript,\n  - imports the [@oasisprotocol/sapphire-contracts](https://www.npmjs.com/package/@oasisprotocol/sapphire-contracts)\n    solidity package for on-chain encryption and other Sapphire-specific primitives,\n  - imports the [@oasisprotocol/sapphire-hardhat](https://www.npmjs.com/package/@oasisprotocol/sapphire-hardhat)\n    package for connecting to Mainnet, Testnet or Localnet Sapphire networks\n    and deploying the contract.\n\nThe **frontend** package:\n\n  - is written in TypeScript and Vue,\n  - imports the [@oasisprotocol/sapphire-paratime](https://www.npmjs.com/package/@oasisprotocol/sapphire-paratime)\n    package for encrypting the transactions and signing the contract view calls,\n  - supports MetaMask, Brave or other EIP-1193-compatible wallet.\n\nUses `pnpm` to manage the monorepo.\n",
@@ -1139,7 +1139,7 @@
         "name": "Confidential Voting",
         "authors": [
             {
-                "Oasis Protocol Foundation": "https://oasisprotocol.org"
+                "Oasis Protocol Foundation": "https://oasisprotocol.org/"
             }
         ],
         "description": "This is a simple dApp for confidential voting. It exposes\nthe latest Oasis confidentiality features such as Sapphire,\nOPL and gasless transactions.\n",
@@ -1384,7 +1384,7 @@
         "name": "Confidential Hello World on Cipher",
         "authors": [
             {
-                "Oasis Protocol Foundation": "https://oasisprotocol.org"
+                "Oasis Protocol Foundation": "https://oasisprotocol.org/"
             }
         ],
         "description": "Minimal **confidential** smart contract written in rust which uses the\nOasis Contracts SDK including the contract encryption of specific fields and\ntransaction end-to-end encryption.\n\nThe contract code can be uploaded to Cipher Mainnet, Testnet or Localnet,\ninstantiated and transacted with the [Oasis CLI](https://github.com/oasisprotocol/cli).\n\nThis example is part of the official [Oasis SDK](https://github.com/oasisprotocol/oasis-sdk)\ncodebase tests.\n",
@@ -1423,7 +1423,7 @@
         "name": "Hello World on Cipher",
         "authors": [
             {
-                "Oasis Protocol Foundation": "https://oasisprotocol.org"
+                "Oasis Protocol Foundation": "https://oasisprotocol.org/"
             }
         ],
         "description": "Minimal non-confidential smart contract written in rust which uses the Oasis\nContracts SDK.\n\nThe contract code can be uploaded to Cipher Mainnet, Testnet or Localnet,\ninstantiated and transacted with the [Oasis CLI](https://github.com/oasisprotocol/cli).\n\nThis example is part of the official [Oasis SDK](https://github.com/oasisprotocol/oasis-sdk)\ncodebase tests.\n",
@@ -1461,7 +1461,7 @@
         "name": "Hardhat Sapphire Example",
         "authors": [
             {
-                "Oasis Protocol Foundation": "https://oasisprotocol.org"
+                "Oasis Protocol Foundation": "https://oasisprotocol.org/"
             }
         ],
         "description": "A simple example which uses Hardhat for connecting to Sapphire and use its\nconfidential state to implement a [dead-man switch](https://en.wikipedia.org/wiki/Dead_man%27s_switch)\napp which stores a *secret ingredient*.\n\nThis example is part of the official [sapphire-paratime](https://github.com/oasisprotocol/sapphire-paratime)\ncodebase tests.\n",
@@ -1496,7 +1496,7 @@
         "name": "On-Chain Signer",
         "authors": [
             {
-                "Oasis Protocol Foundation": "https://oasisprotocol.org"
+                "Oasis Protocol Foundation": "https://oasisprotocol.org/"
             }
         ],
         "description": "Short example to demonstrate Sapphire's on-chain **transaction generation**\nand **signing** capabilities.\n\nThere are two tests included: The non-confidential one can be executed on any\nEVM-compatible chain, whereas the *confidential* test is executed only\non Sapphire-compatible chain (e.g. the [Sapphire's Localnet docker\nimage](https://docs.oasis.io/dapp/sapphire/guide#running-a-private-oasis-network-locally).\n\nThis example is part of the official\n[sapphire-paratime](https://github.com/oasisprotocol/sapphire-paratime) codebase\ntests.\n",
@@ -3301,7 +3301,7 @@
                 "Video demo 2": "https://www.youtube.com/watch?v=5Omaimr4Ydc"
             }
         ],
-        "demoUrl": "https://testament.jasny.net",
+        "demoUrl": "https://testament.jasny.net/",
         "created": "2025-06-06T18:07:37.380Z",
         "lastUpdated": "2025-06-06T18:07:37.380Z",
         "tags": [
