@@ -1,0 +1,37 @@
+{
+    "name": "e2eproxy-sapphire",
+    "version": "0.1.0",
+    "description": "End-to-End encryption between Client and Sapphire EVM contract using X25519 and Deoxys-II-256-128",
+    "main": "lib/index.js",
+    "keywords": [
+        "oasis",
+        "sapphire",
+        "e2e",
+        "encryption",
+        "evm",
+        "x25519",
+        "deoxys-ii"
+    ],
+    "directories": {
+        "test": "tests"
+    },
+    "author": "CedarMist",
+    "license": "CC-PDDC",
+    "devDependencies": {
+        "@ethersproject/abi": "^5.7.0",
+        "@nomicfoundation/hardhat-network-helpers": "^1.0.8",
+        "@nomicfoundation/hardhat-toolbox": "^2.0.2",
+        "@nomiclabs/hardhat-ethers": "^2.2.3",
+        "@oasisprotocol/sapphire-hardhat": "^1.0.3",
+        "@types/node": "^18.16.0",
+        "hardhat": "^2.14.0",
+        "ts-node": "^10.9.1",
+        "typescript": "^5.0.4"
+    },
+    "dependencies": {
+        "@ethersproject/providers": "^5.7.2",
+        "@oasisprotocol/sapphire-contracts": "^0.2.1",
+        "@oasisprotocol/sapphire-paratime": "^1.0.15",
+        "ethers": "^5.7.2"
+    }
+}
